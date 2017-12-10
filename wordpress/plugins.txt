@@ -1,0 +1,13 @@
+all-in-one-seo-pack
+contact-form-7
+crayon-syntax-highlighter
+disable-emojis
+google-authenticator
+jetpack-markdown
+really-simple-captcha
+simple-login-lockdown
+wordpress-https
+wp-maintenance-mode
+wp-multibyte-patch
+wp-remove-category-base
+wp-mail-smtp

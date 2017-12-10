@@ -1,0 +1,49 @@
+version: "2.1"
+
+services:
+  wordpress:
+    build: ./wordpress
+    links:
+      - database
+    volumes:
+      - ./wordpress:/var/www/html
+      - ./flattie/dist:/var/www/html/wp-content/themes/flattie
+    environment:
+      - WORDPRESS_DB_HOST=database:3306
+      - WORDPRESS_DB_NAME=wordpress
+      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_PASSWORD=wordpress
+
+  build:
+    image: node:8.8
+    working_dir: /usr/src/app
+    command: npm run watch
+    volumes:
+      - ./flattie:/usr/src/app
+
+  web:
+    image: nginx:1.12
+    links:
+      - wordpress
+    ports:
+      - "${CHITOKUJP_PORT-9000}:80"
+    volumes:
+      - ./conf:/etc/nginx/conf.d
+      - ./wordpress:/var/www/html
+      - ./flattie/dist:/var/www/html/wp-content/themes/flattie
+
+  database:
+    image: mysql:5.7
+    command: [--character-set-server=utf8]
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
+      - database:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_USER=wordpress
+      - MYSQL_PASSWORD=wordpress
+      - MYSQL_ROOT_PASSWORD=wordpress
+
+volumes:
+  database:
+    driver: local

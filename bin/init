@@ -1,0 +1,17 @@
+#!/bin/env bash
+set -e
+
+docker-compose run --rm wordpress bash -c '
+  set -e; \
+  cd /var/www/html; \
+  wp --allow-root core update; \
+  wp --allow-root language core install --activate ja; \
+  wp --allow-root language core update; \
+  wp --allow-root plugin update --all; \
+  wp --allow-root plugin install --activate $(cat plugins.txt)
+'
+docker-compose run --rm build bash -c '
+  set -e; \
+  npm install
+'
+docker-compose stop database
