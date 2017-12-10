@@ -1,0 +1,3 @@
+[submodule "flattie"]
+	path = flattie
+	url = git@github.com:chitoku-k/Flattie.git
