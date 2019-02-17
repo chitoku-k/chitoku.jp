@@ -1,0 +1,3 @@
+code: 0x800200db
+category: カーネルエラー
+message: ブロックのサイズ変更失敗

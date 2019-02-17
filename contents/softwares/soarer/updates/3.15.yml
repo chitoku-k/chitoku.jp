@@ -1,0 +1,7 @@
+date: '2014-02-04'
+version: '3.15'
+history:
+  - title: 画像添付に関する不具合を修正
+  - title: ショートカットキーに関する不具合を修正
+  - title: "「常に手前に表示」に関する不具合を修正"
+file: soarer315.zip

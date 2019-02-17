@@ -1,0 +1,6 @@
+date: '2014-07-28'
+version: '3.31'
+history:
+  - title: Google Chrome からの画像のドラッグ追加に対応
+  - title: 画像プレビューからの画像のドラッグ保存に対応
+file: soarer331.zip

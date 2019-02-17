@@ -1,0 +1,7 @@
+{
+  "name": "historia-taxonomy-plugin",
+  "version": "1.0.0",
+  "dependencies": {
+    "remove-markdown": "^0.3.0"
+  }
+}

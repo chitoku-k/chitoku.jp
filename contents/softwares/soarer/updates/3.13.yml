@@ -1,0 +1,6 @@
+date: '2014-01-26'
+version: '3.13'
+history:
+  - title: ショートカットキーを追加
+  - title: 不正終了の不具合を一部修正
+file: soarer313.zip

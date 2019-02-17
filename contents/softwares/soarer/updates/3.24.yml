@@ -1,0 +1,9 @@
+date: '2014-05-16'
+version: '3.24'
+history:
+  - title: マルチディスプレイに対応
+    message: 画像プレビューで表示されるウィンドウが常にプライマリディスプレイに表示される仕様を修正しました。
+  - title: 正しく起動できない不具合を修正
+  - title: Vine のプレビュー再生をサポート
+  - title: Gyazo における不具合を修正
+file: soarer324.zip

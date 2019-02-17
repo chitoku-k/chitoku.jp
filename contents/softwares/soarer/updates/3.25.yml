@@ -1,0 +1,10 @@
+date: '2014-06-06'
+version: '3.25'
+history:
+  - title: Windows Media Player に対応
+    message: NowPlaying で Windows Media Player に対応し、 iTunes で終了時処理を修正しました。
+  - title: 画像追加時の不具合を修正
+    message: 画像を追加したときにウィンドウのサイズが正しく変更されない不具合を修正しました。
+  - title: プレビュー画像のサイズを変更
+    message: Twitter にアップロードされた画像のプレビューで表示される画像を原寸サイズのものに変更しました。
+file: soarer325.zip

@@ -1,0 +1,37 @@
+.main-content {
+  &.about {
+    p {
+      font-size: inherit;
+      padding: 0;
+      margin-bottom: 0;
+    }
+    div {
+      @include media-tablet {
+        padding: 0;
+      }
+    }
+    img {
+      @include media-tablet {
+        max-width: 33% !important;
+        margin-bottom: 20px;
+      }
+      @include media-sp {
+        max-width: 50% !important;
+      }
+    }
+    td {
+      @include media-tablet {
+        padding-right: 0;
+      }
+    }
+    table.table {
+      margin: 0;
+      width: auto;
+      > tbody > tr {
+        > th, > td {
+          white-space: normal;
+        }
+      }
+    }
+  }
+}

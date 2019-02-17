@@ -1,0 +1,3 @@
+code: 0x800202cb
+category: カーネルエラー
+message: リンクリストバッファの空きが足りない

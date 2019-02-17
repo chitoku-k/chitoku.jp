@@ -1,0 +1,3 @@
+code: 0x800200e0
+category: カーネルエラー
+message: CHUNK用空き領域が存在しない

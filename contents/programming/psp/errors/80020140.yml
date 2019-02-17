@@ -1,0 +1,3 @@
+code: 0x80020140
+category: カーネルエラー
+message: offset 引数の値が不正

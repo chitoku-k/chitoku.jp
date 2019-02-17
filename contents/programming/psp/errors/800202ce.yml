@@ -1,0 +1,3 @@
+code: 0x800202ce
+category: カーネルエラー
+message: 転送可能なデータサイズを超えている

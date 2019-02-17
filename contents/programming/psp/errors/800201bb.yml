@@ -1,0 +1,3 @@
+code: 0x800201bb
+category: カーネルエラー
+message: 指定した type は正しくない

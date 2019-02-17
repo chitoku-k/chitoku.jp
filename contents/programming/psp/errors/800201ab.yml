@@ -1,0 +1,3 @@
+code: 0x800201ab
+category: カーネルエラー
+message: WAIT状態はコールバックによって解除された

@@ -1,0 +1,3 @@
+code: 0x800200c8
+category: カーネルエラー
+message: 既に指定の名前の型は存在する

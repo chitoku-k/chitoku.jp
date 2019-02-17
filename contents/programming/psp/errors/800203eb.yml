@@ -1,0 +1,3 @@
+code: 0x800203eb
+category: カーネルエラー
+message: STDIOファイルがオープンされていない

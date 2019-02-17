@@ -1,0 +1,82 @@
+title: プロフィール
+name: ちとく
+occupation: 大学生
+icon:
+  name: '@ReKriel'
+  url: https://twitter.com/ReKriel
+  src: /media/icon.png
+interests:
+  - type: プログラミング
+    items:
+      - name: C#
+      - name: WPF
+      - name: C
+      - name: JavaScript
+      - name: PHP
+  - type: エディター
+    items:
+      - name: Vim
+  - type: アニメ
+    items:
+      - name: ゆるゆり
+        url: https://yuruyuri.com/
+      - name: ご注文はうさぎですか？
+        url: http://www.gochiusa.com/
+      - name: WORKING!!
+        url: https://www.wagnaria.com/
+      - name: 這いよれ！ニャル子さん
+        url: https://www.nyaruko.com/
+      - name: 日常
+        url: http://www.shinonome-lab.com/
+      - name: ガヴリールドロップアウト
+        url: http://gabdro.com/
+      - name: 小林さんちのメイドラゴン
+        url: http://maidragon.jp/
+      - name: ひなこのーと
+        url: http://hinakonote.jp/
+contacts:
+  - service: Twitter
+    primary: true
+    accounts:
+    - name: '@java_shit'
+      url: https://twitter.com/java_shit
+    - name: '@soarer_windows'
+      url: https://twitter.com/soarer_windows
+  - service: Mastodon
+    primary: true
+    accounts:
+    - name: '@chitoku@mstdn.jp'
+      url: https://mstdn.jp/@chitoku
+    - name: '@chitoppig@don.gomasy.jp'
+      url: https://don.gomasy.jp/@citoppig
+  - service: Skype
+    accounts:
+      - name: '@java_shit'
+        url: https://join.skype.com/REed04RD8XDs
+  - service: GitHub
+    primary: true
+    accounts:
+      - name: chitoku-k
+        url: https://github.com/chitoku-k
+  - service: teratail
+    primary: true
+    accounts:
+      - name: chitoku
+        url: https://teratail.com/users/chitoku
+  - service: はてな
+    accounts:
+      - name: chitoku_k
+        url: http://profile.hatena.ne.jp/chitoku_k/
+  - service: ask.fm
+    accounts:
+      - name: java_shit
+        url: https://ask.fm/java_shit
+  - service: Qiita
+    primary: true
+    accounts:
+      - name: chitoku
+        url: https://qiita.com/chitoku
+  - service: Facebook
+    accounts:
+      - name: アカウントを聞いてみる
+        url: 'https://twitter.com/intent/tweet?screen_name=java_shit&text=Facebook%20のアカウント教えて〜'

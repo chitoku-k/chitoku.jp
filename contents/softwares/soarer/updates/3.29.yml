@@ -1,0 +1,7 @@
+date: '2014-07-27'
+version: '3.29'
+history:
+  - title: GIF アニメーションの表示に対応（公開アカウントのみ）
+    message: 非公開になっていないアカウントからの GIF アニメーションつきツイートに対応しました。
+  - title: YouTube プレビューにおける再生画質を変更
+file: soarer329.zip

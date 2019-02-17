@@ -1,0 +1,3 @@
+code: 0x800200cf
+category: カーネルエラー
+message: UIDには既に保持関係が設定されている

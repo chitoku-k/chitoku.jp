@@ -1,0 +1,5 @@
+date: '2014-04-19'
+version: '3.23'
+history:
+  - title: 起動時の動作を改善
+file: soarer323.zip

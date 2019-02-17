@@ -1,0 +1,3 @@
+code: 0x80020098
+category: カーネルエラー
+message: source の指定が異常

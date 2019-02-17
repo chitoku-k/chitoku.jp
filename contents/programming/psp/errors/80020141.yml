@@ -1,0 +1,3 @@
+code: 0x80020141
+category: カーネルエラー
+message: option->position 引数の値が不正

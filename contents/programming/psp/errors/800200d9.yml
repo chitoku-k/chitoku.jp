@@ -1,0 +1,3 @@
+code: 0x800200d9
+category: カーネルエラー
+message: ブロックの割り当てに失敗

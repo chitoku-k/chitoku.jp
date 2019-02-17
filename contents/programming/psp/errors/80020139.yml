@@ -1,0 +1,3 @@
+code: 0x80020139
+category: カーネルエラー
+message: EXCLUSIVE_LOADな同名モジュールが存在する

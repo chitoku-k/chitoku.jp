@@ -1,0 +1,8 @@
+{
+  "name": "historia-compat-plugin",
+  "version": "1.0.0",
+  "dependencies": {
+    "url-search-params-polyfill": "^5.0.0",
+    "whatwg-fetch": "^3.0.0"
+  }
+}

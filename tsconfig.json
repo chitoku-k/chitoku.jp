@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "*",
+        "typings/*"
+      ],
+      "components/*": [
+        "src/components/*"
+      ]
+    },
+    "target": "es2015",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "skipLibCheck": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "removeComments": false,
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "src/**/*",
+    "typings/**/*.d.ts",
+    "node_modules/babel-plugin-react-intl-auto/**/*.d.ts"
+  ]
+}

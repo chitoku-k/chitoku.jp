@@ -1,0 +1,17 @@
+[submodule "static/softwares/superflat"]
+	path = static/softwares/superflat
+	url = https://github.com/chitoku-k/minecraft-superflat-editor.git
+[submodule "plugins/gatsby"]
+	# https://github.com/gatsbyjs/gatsby/pull/11237
+	path = plugins/gatsby
+	url = https://github.com/chitoku-k/gatsby.git
+	branch = feature/transformer-remark
+[submodule "plugins/gatsby-remark-embed-gist"]
+	# https://github.com/weirdpattern/gatsby-remark-embed-gist/pull/9
+	path = plugins/gatsby-remark-embed-gist
+	url = https://github.com/weirdpattern/gatsby-remark-embed-gist.git
+[submodule "plugins/gatsby-remark-component"]
+	# https://github.com/Hebilicious/gatsby-remark-component/pull/11
+	path = plugins/gatsby-remark-component
+	url = https://github.com/Hebilicious/gatsby-remark-component.git
+	ignore = dirty

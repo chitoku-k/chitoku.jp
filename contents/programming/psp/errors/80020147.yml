@@ -1,0 +1,3 @@
+code: 0x80020147
+category: カーネルエラー
+message: LoadExecが禁止されているデバイスです

@@ -1,0 +1,3 @@
+code: 0x80020195
+category: カーネルエラー
+message: mode引数の値が不正

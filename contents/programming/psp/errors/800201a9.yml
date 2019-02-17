@@ -1,0 +1,3 @@
+code: 0x800201a9
+category: カーネルエラー
+message: WAIT状態はキャンセルされた

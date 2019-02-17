@@ -1,0 +1,3 @@
+code: 0x800202c0
+category: カーネルエラー
+message: 当該DMAオペレーションはすでに転送処理中

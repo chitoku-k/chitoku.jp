@@ -1,0 +1,44 @@
+.share-button {
+  color: white;
+  width: 45px;
+  min-height: 22px;
+  border-radius: 6px;
+  margin-right: 7px;
+  padding: 5px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .3s;
+
+  &, .fa {
+    box-sizing: content-box;
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  .fa {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  $services: (
+    twitter: (#00b0ed, #009cd9),
+    facebook: (#315096, #1d3c82),
+    google-plus: (#dd4b39, #c93725),
+    hatena: (#008fde, #007bca),
+    tumblr: (#35465c, #213248),
+  );
+
+  @each $service, $hover in $services {
+    &.#{$service}-icon {
+      @include hover($hover...);
+    }
+  }
+}
+.fa-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold;
+  word-wrap: initial;
+}

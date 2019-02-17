@@ -1,0 +1,3 @@
+code: 0x800201c1
+category: カーネルエラー
+message: これ以上KTLSは確保できない

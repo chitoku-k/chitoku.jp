@@ -1,0 +1,3 @@
+code: 0x80020192
+category: カーネルエラー
+message: スレッドの entry アドレスが不正

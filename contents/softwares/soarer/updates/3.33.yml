@@ -1,0 +1,12 @@
+date: '2014-10-20'
+version: '3.33'
+history:
+  - title: Vine の仕様変更に対応
+  - title: Instagram の仕様変更に対応
+  - title: Twitter の仕様変更に対応
+    message: ツイートの削除、ユーザーのフォロワーの知り合い取得に関して修正しました。
+  - title: NowPlaying で曲のアーティストに対応
+    message: アルバムアーティストと曲のアーティストを別々に取得できるようになりました。
+  - title: アップデートサーバーの変更
+    message: ホームページの移転に伴う変更です。
+file: soarer333.zip

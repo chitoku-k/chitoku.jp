@@ -1,0 +1,6 @@
+date: '2014-07-28'
+version: '3.32'
+history:
+  - title: 画像のドラッグ追加後の挙動を変更
+  - title: 画像ファイルのクリップボードからの貼付けに対応
+file: soarer332.zip

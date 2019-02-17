@@ -1,0 +1,3 @@
+code: 0x800202c8
+category: カーネルエラー
+message: 指定されたDMAC物理チャネルは特定のDREQのために予約されている

@@ -1,0 +1,5 @@
+date: '2013-06-26'
+version: '2.06'
+history:
+  - title: 画像がアップロードできない不具合を修正
+    message: Twitpic の URL 取得失敗

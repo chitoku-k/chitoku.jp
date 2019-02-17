@@ -1,0 +1,3 @@
+code: 0x8002032d
+category: カーネルエラー
+message: ファイル名が長すぎる

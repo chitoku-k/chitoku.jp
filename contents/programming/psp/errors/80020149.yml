@@ -1,0 +1,3 @@
+code: 0x80020149
+category: カーネルエラー
+message: 許可されていないAPIを呼び出しました

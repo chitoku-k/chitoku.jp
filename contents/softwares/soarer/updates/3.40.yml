@@ -1,0 +1,5 @@
+date: '2014-11-24'
+version: '3.40'
+history:
+  - title: ミュートに関する不具合を修正
+file: soarer340.zip

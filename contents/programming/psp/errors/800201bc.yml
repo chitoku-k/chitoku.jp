@@ -1,0 +1,3 @@
+code: 0x800201bc
+category: カーネルエラー
+message: 指定した size は正しくない

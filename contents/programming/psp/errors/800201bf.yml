@@ -1,0 +1,3 @@
+code: 0x800201bf
+category: カーネルエラー
+message: 指定の仮想タイマーIDは正しくない

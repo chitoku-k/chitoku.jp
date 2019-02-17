@@ -1,0 +1,3 @@
+code: 0x8011038a
+category: セーブデータエラー
+message: セーブデータ保存時に違うUMDが入っている

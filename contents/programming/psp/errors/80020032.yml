@@ -1,0 +1,3 @@
+code: 0x80020032
+category: カーネルエラー
+message: excode の値が不正

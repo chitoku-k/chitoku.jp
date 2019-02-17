@@ -1,0 +1,3 @@
+code: 0x8002032b
+category: カーネルエラー
+message: デバイスは既に登録されている

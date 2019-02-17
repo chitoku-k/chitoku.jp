@@ -1,0 +1,3 @@
+code: 0x800200d7
+category: カーネルエラー
+message: パーティションは既に使用中

@@ -1,0 +1,3 @@
+code: 0x800201aa
+category: カーネルエラー
+message: WAIT状態は強制解除された

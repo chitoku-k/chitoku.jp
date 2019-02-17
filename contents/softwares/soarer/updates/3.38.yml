@@ -1,0 +1,5 @@
+date: '2014-11-23'
+version: '3.38'
+history:
+  - title: パフォーマンスに関する問題を修正
+file: soarer338.zip

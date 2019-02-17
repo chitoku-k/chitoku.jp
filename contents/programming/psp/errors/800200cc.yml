@@ -1,0 +1,3 @@
+code: 0x800200cc
+category: カーネルエラー
+message: UID の型が不正

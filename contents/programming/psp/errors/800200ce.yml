@@ -1,0 +1,3 @@
+code: 0x800200ce
+category: カーネルエラー
+message: UID に該当の機能がない

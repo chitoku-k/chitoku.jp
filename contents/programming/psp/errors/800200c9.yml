@@ -1,0 +1,3 @@
+code: 0x800200c9
+category: カーネルエラー
+message: 指定の名前の型は存在しない

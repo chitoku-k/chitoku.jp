@@ -1,0 +1,3 @@
+code: 0x800201ad
+category: カーネルエラー
+message: セマフォの資源が獲得できない

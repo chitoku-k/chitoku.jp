@@ -1,0 +1,3 @@
+code: 0x800200da
+category: カーネルエラー
+message: ブロックのサイズ変更は禁止されている

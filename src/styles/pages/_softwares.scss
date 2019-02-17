@@ -1,0 +1,29 @@
+.main-content {
+  &.page-softwares {
+    h2 {
+      margin: 0;
+      padding: 0;
+      background: none;
+      border: none;
+      > a {
+        display: inline-flex;
+        align-items: center;
+        > .gatsby-resp-image-wrapper {
+          width: 48px;
+          height: 48px;
+          max-width: none !important;
+          margin-left: 0 !important;
+          margin-right: 12px !important;
+        }
+      }
+    }
+    p {
+      @include media-small-pc {
+        margin-left: 44px;
+      }
+      @include media-sp {
+        padding-left: 60px;
+      }
+    }
+  }
+}

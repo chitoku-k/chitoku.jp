@@ -1,0 +1,3 @@
+code: 0x80020196
+category: カーネルエラー
+message: mask引数の値が不正

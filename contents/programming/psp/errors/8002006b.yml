@@ -1,0 +1,3 @@
+code: 0x8002006b
+category: カーネルエラー
+message: IntrHandlerOptionParam のサイズが不正

@@ -1,0 +1,3 @@
+code: 0x8002014b
+category: カーネルエラー
+message: LoadExec対象バッファの指定が正しくない

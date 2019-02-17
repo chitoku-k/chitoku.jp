@@ -1,0 +1,22 @@
+# Created by https://www.gitignore.io/api/node
+# Edit at https://www.gitignore.io/?templates=node
+
+### Environment ###
+.env*
+
+### Gatsby ###
+public/
+.cache
+
+### Node ###
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# End of https://www.gitignore.io/api/node

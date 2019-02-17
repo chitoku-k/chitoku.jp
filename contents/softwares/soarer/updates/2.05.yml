@@ -1,0 +1,5 @@
+date: '2013-06-25'
+version: '2.05'
+history:
+  - title: API 1.1 の影響で起動できない不具合を修正
+    message: Twitter API 1.1 における非公開 API の仕様変更

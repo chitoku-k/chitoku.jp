@@ -1,0 +1,3 @@
+code: 0x800202c9
+category: カーネルエラー
+message: 指定されたDMAC物理チャネルはDMACマネージャの管理下にない

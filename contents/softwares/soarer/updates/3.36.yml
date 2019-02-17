@@ -1,0 +1,5 @@
+date: '2014-11-05'
+version: '3.36'
+history:
+  - title: 一部の画像を表示することができない不具合を修正
+file: soarer336.zip

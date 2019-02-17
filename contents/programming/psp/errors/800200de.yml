@@ -1,0 +1,3 @@
+code: 0x800200de
+category: カーネルエラー
+message: CHUNK指定の範囲ミス

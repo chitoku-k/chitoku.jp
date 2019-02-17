@@ -1,0 +1,3 @@
+code: 0x800201a3
+category: カーネルエラー
+message: 対象のスレッドは SUSPEND状態だった

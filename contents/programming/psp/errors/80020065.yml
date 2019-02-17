@@ -1,0 +1,3 @@
+code: 0x80020065
+category: カーネルエラー
+message: 割り込み要因番号が不正

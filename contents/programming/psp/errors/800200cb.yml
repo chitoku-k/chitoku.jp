@@ -1,0 +1,3 @@
+code: 0x800200cb
+category: カーネルエラー
+message: UID の値が不正

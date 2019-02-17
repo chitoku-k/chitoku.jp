@@ -1,0 +1,3 @@
+code: 0x80020321
+category: カーネルエラー
+message: デバイスが存在しない

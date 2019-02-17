@@ -1,0 +1,3 @@
+code: 0x80020144
+category: カーネルエラー
+message: 指定した flag は正しくない

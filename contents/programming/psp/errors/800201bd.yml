@@ -1,0 +1,3 @@
+code: 0x800201bd
+category: カーネルエラー
+message: 指定した count は正しくない

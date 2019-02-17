@@ -1,0 +1,13 @@
+{
+  "presets": [
+    ["gatsby"],
+    ["@babel/preset-env"]
+  ],
+  "plugins": [
+    ["@babel/plugin-transform-typescript"],
+    ["@babel/plugin-transform-runtime"],
+    ["@babel/plugin-proposal-class-properties"],
+    ["react-intl-auto", { "removePrefix": "src/" }],
+    ["styled-components"]
+  ]
+}

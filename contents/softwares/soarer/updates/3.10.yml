@@ -1,0 +1,5 @@
+date: '2014-01-25'
+version: '3.10'
+history:
+  - title: キーワードミュートが利用できない不具合を修正
+file: soarer310.zip

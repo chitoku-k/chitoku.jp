@@ -1,0 +1,3 @@
+code: 0x8002014c
+category: カーネルエラー
+message: LoadExec対象ファイルの指定が正しくない

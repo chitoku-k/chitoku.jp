@@ -1,0 +1,3 @@
+code: 0x800202c4
+category: カーネルエラー
+message: 当該DMAオペレーションは使用済み

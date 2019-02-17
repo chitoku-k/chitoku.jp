@@ -1,0 +1,3 @@
+code: 0x800201ba
+category: カーネルエラー
+message: スクラッチパットRAMは使用中ではない

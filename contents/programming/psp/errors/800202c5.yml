@@ -1,0 +1,3 @@
+code: 0x800202c5
+category: カーネルエラー
+message: 空きDMAオペレーションを確保できない

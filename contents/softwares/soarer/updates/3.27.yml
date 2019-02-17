@@ -1,0 +1,7 @@
+date: '2014-06-28'
+version: '3.27'
+history:
+  - title: Twitter 公式の複数画像投稿に対応
+  - title: 仕様変更により複数画像表示に再対応
+  - title: ツイートを選択してキーワードをミュートする機能を追加
+file: soarer327.zip

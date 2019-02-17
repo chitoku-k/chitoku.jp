@@ -1,0 +1,20 @@
+---
+title: PSP プログラミング
+category: PSP プログラミング
+---
+<div class="alert alert-info text-center" style="border-radius: 0;">
+
+現在記事の移行作業中です。
+[移転元のページ](http://chitoku.symphonic-net.com/pspprograming/)もあわせてご覧ください。
+</div>
+
+## 目次
+
+- [動作環境とプログラムの種類](/programming/psp/environment)
+- [開発環境の構築](/programming/psp/dev)
+- [開発環境の構築: psptoolchain](/programming/psp/psptoolchain)
+
+## 資料
+
+- [PSP の性能](/programming/psp/spec)
+- [エラーコード一覧](/programming/psp/error-codes)

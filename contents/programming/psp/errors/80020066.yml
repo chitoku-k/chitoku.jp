@@ -1,0 +1,3 @@
+code: 0x80020066
+category: カーネルエラー
+message: 既に割り込み禁止だった

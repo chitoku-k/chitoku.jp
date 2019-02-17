@@ -1,0 +1,3 @@
+code: 0x800200d6
+category: カーネルエラー
+message: パーティションid が正しくない

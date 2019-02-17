@@ -1,0 +1,3 @@
+code: 0x800202c7
+category: カーネルエラー
+message: 当該DMAオペレーションはエラー終了した状態

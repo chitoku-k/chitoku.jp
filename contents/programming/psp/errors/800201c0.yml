@@ -1,0 +1,3 @@
+code: 0x800201c0
+category: カーネルエラー
+message: 指定のKTLSIDは正しくない

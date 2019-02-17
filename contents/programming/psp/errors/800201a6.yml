@@ -1,0 +1,3 @@
+code: 0x800201a6
+category: カーネルエラー
+message: 対象のスレッドは WAIT状態ではなかった

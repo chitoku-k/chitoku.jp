@@ -1,0 +1,3 @@
+code: 0x800201b7
+category: カーネルエラー
+message: メモリのサイズ指定が不正

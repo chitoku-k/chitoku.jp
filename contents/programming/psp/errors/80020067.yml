@@ -1,0 +1,3 @@
+code: 0x80020067
+category: カーネルエラー
+message: ハンドラは登録済だった

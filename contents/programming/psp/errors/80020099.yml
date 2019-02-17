@@ -1,0 +1,3 @@
+code: 0x80020099
+category: カーネルエラー
+message: prescaleの設定値が不正

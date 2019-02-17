@@ -1,0 +1,3 @@
+code: 0x800201be
+category: カーネルエラー
+message: 対象仮想タイマーが存在しない

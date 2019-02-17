@@ -1,0 +1,3 @@
+code: 0x80020191
+category: カーネルエラー
+message: attr の指定が不正

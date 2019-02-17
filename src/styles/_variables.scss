@@ -1,0 +1,13 @@
+$fa-font-path: "../../node_modules/font-awesome/fonts";
+$font-family-base:
+  // Safari for macOS and iOS
+  -apple-system,
+  // Chrome for macOS
+  BlinkMacSystemFont,
+  // Android
+  Roboto,
+  // Windows
+  Verdana, Meiryo,
+  // macOS
+  "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3",
+  sans-serif;

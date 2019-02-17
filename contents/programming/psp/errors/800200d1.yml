@@ -1,0 +1,3 @@
+code: 0x800200d1
+category: カーネルエラー
+message: 許可属性が正しくない
