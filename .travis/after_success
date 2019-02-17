@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
 if [[ "$TRAVIS_BRANCH" = "master" ]] && [[ "$TRAVIS_PULL_REQUEST" = "false" ]]; then
+    echo 'Cleaning...'
+    ssh deploy rm -rf /srv/http/vhosts/chitoku.jp/historia/*
+    echo 'Cleaned!'
+
     echo 'Uploading...'
-    rsync public/ deploy:/srv/http/vhosts/chitoku.jp/historia
+    rsync -rz public/ deploy:/srv/http/vhosts/chitoku.jp/historia
     echo 'Uploaded!'
 fi
