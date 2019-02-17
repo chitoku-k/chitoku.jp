@@ -1,6 +1,8 @@
 chitoku.jp
 ==========
 
+[![][travis-badge]][travis-link]
+
 [ちとくのホームページ](https://chitoku.jp)の Gatsby テンプレートとコンテンツです。
 
 ## 構成
@@ -28,3 +30,6 @@ export GATSBY_ALGOLIA_INDEXNAME=
 $ git clone https://github.com/chitoku-k/chitoku.jp.git --recursive
 $ yarn install
 ```
+
+[travis-link]:          https://travis-ci.org/chitoku-k/chitoku.jp
+[travis-badge]:         https://img.shields.io/travis/chitoku-k/chitoku.jp.svg?style=flat-square
