@@ -39,6 +39,7 @@
     "gatsby-plugin-ts-loader": "^0.1.0",
     "gatsby-remark-attr": "^0.0.2",
     "gatsby-remark-copy-linked-files": "^2.0.9",
+    "gatsby-remark-embed-gist": "^1.1.6",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-grid-tables": "^0.0.3",
     "gatsby-remark-images": "^3.0.3",
@@ -77,13 +78,12 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "i18n": "extract-messages -o translations -l=ja -d=ja -f yaml 'src/**/*.ts'",
-    "postinstall": "yarn --cwd plugins/gatsby-remark-component build && yarn --cwd plugins/gatsby-remark-embed-gist build && yarn --cwd plugins/gatsby/packages/gatsby-transformer-remark build",
+    "postinstall": "yarn --cwd plugins/gatsby-remark-component build && yarn --cwd plugins/gatsby/packages/gatsby-transformer-remark build",
     "start": "gatsby develop"
   },
   "workspaces": [
     "plugins/gatsby/packages/gatsby-transformer-remark",
     "plugins/gatsby-remark-component",
-    "plugins/gatsby-remark-embed-gist",
     "plugins/historia-compat-plugin",
     "plugins/historia-feed-plugin",
     "plugins/historia-recotw-plugin",
