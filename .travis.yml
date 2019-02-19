@@ -2,6 +2,10 @@ language: node_js
 node_js:
   - '11'
 
+env:
+  global:
+    - TZ=Asia/Tokyo
+
 cache:
   directories:
     - node_modules
@@ -9,10 +13,7 @@ cache:
     - plugins/gatsby-remark-component
 
 before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.13.0
-  - export PATH="$HOME/.yarn/bin:$PATH"
-  - yarn global add full-icu
-  - export NODE_ICU_DATA=$(node-full-icu-path)
+  - .travis/before_install
 
 before_script:
   - .travis/before_script
