@@ -104,6 +104,10 @@ module.exports = {
       resolve: 'historia-taxonomy-plugin',
       options: {
         limit: 5,
+        exclude: [
+          '/softwares/soarer/download',
+          '/softwares/soarer/history',
+        ],
       },
     },
     { resolve: 'historia-soarer-update-plugin' },

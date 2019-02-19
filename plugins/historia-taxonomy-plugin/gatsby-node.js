@@ -8,7 +8,8 @@ exports.createPages = async ({
   },
 }, {
   limit = 3,
+  exclude = [],
 }) => {
   await createTaxonomies({ graphql, createPage, limit })
-  await createArticles({ graphql, createPage })
+  await createArticles({ graphql, createPage, exclude })
 }

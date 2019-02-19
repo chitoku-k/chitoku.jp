@@ -3,6 +3,7 @@ const path = require('path')
 const createArticles = async ({
   graphql,
   createPage,
+  exclude,
 }) => {
   const {
     data: {
@@ -64,11 +65,16 @@ const createArticles = async ({
         continue
       }
 
+      const fullPath = '/' + path.join(directory, file.name)
       const prev = items[index - 1]
       const next = items[index + 1]
 
+      if (exclude.includes(fullPath)) {
+        continue
+      }
+
       createPage({
-        path: path.join(directory, file.name),
+        path: fullPath,
         component: path.resolve('src/templates/article.tsx'),
         context: {
           id,
