@@ -13,17 +13,19 @@ module.exports = {
     'UpdatesYaml.file': 'File.base',
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-algolia',
-      options: {
-        appId: process.env.GATSBY_ALGOLIA_APPID,
-        apiKey: process.env.GATSBY_ALGOLIA_APIKEY,
-        indexName: process.env.GATSBY_ALGOLIA_INDEXNAME,
-        queries: [
-          createQuery(),
-        ],
+    ...(process.env.GATSBY_UPDATE_INDEX === 'true' ? [
+      {
+        resolve: 'gatsby-plugin-algolia',
+        options: {
+          appId: process.env.GATSBY_ALGOLIA_APPID,
+          apiKey: process.env.GATSBY_ALGOLIA_APIKEY,
+          indexName: process.env.GATSBY_ALGOLIA_INDEXNAME,
+          queries: [
+            createQuery(),
+          ],
+        },
       },
-    },
+    ] : []),
     { resolve: 'gatsby-plugin-catch-links' },
     {
       resolve: 'gatsby-plugin-google-analytics',
