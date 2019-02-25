@@ -19,6 +19,7 @@ before_script:
   - source .travis/before_script
 
 script:
+  - yarn lint
   - yarn build
 
 after_success:

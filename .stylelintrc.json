@@ -1,9 +1,11 @@
 {
   "plugins": ["stylelint-scss"],
-  "extends": ["stylelint-config-recommended"],
+  "extends": ["stylelint-config-standard"],
   "rules": {
+    "at-rule-empty-line-before": null,
     "at-rule-no-unknown": null,
     "no-descending-specificity": null,
+    "rule-empty-line-before": "never",
     "scss/at-rule-no-unknown": true
   }
 }
