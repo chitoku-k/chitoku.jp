@@ -14,9 +14,6 @@ const IconContainer = styled.div`
   margin-bottom: .8em;
 `
 
-const Icon = styled(ImageZoom)`
-`
-
 const Table = styled.table`
   border-bottom-color: #dddddd;
   border-bottom-width: 1px;

@@ -1,4 +1,4 @@
-import React, { FunctionComponent, createContext, useState } from 'react'
+import React, { FunctionComponent, createContext } from 'react'
 import { Helmet } from 'react-helmet'
 import { injectIntl } from 'react-intl'
 import { graphql, StaticQuery } from 'gatsby'
@@ -108,7 +108,7 @@ const Metadata = injectIntl<MetadataProps & MetadataItem>(function Metadata({
             .flatMap(contact => contact.accounts)
             .map(({ url }, index) => (
               <link key={index} rel="me" href={url as string} />
-          ))}
+            ))}
           {children}
         </Helmet>
       )}

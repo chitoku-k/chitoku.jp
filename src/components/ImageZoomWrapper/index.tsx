@@ -3,7 +3,6 @@ import ImageZoom from 'react-medium-image-zoom'
 
 const ImageZoomWrapper: FunctionComponent<ImageZoomWrapperProps> = ({
   image,
-  zoomImage,
 }) => (
   <ImageZoom image={JSON.parse(image)} shouldRespectMaxDimension={true} />
 )

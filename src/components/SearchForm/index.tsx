@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { injectIntl, InjectedIntlProps } from 'react-intl'
@@ -25,7 +25,6 @@ const SearchForm = injectIntl(connectSearchBox<SearchFormProps>(function SearchF
   openSearch,
   closeSearch,
   refine,
-  currentRefinement,
   intl: {
     formatMessage,
   },
@@ -33,18 +32,18 @@ const SearchForm = injectIntl(connectSearchBox<SearchFormProps>(function SearchF
   const [ text, setText ] = useState(null as string | null)
   const input = useRef<HTMLInputElement>(null)
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement | React.Component>) => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement | React.Component>): void => {
     e.preventDefault()
   }
 
-  const onFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+  const onFocus = (): void => {
     openSearch()
     if (getSearchText(location) === false) {
       setText('')
     }
   }
 
-  const onBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+  const onBlur = (): void => {
   }
 
   useEffect(() => {

@@ -1,16 +1,15 @@
-import React, { FunctionComponent, Fragment } from 'react'
+import React from 'react'
 import { injectIntl, InjectedIntlProps, FormattedMessage } from 'react-intl'
 import { WindowLocation } from '@reach/router'
 import { Hit, StateResultsProvided } from 'react-instantsearch-core'
-import { connectStateResults, Hits, HitsProps, PoweredBy } from 'react-instantsearch-dom'
+import { connectStateResults, Hits, PoweredBy } from 'react-instantsearch-dom'
 import Highlighter from 'react-highlight-words'
 import styled from 'styled-components'
 import addVoicedMarks from 'jaco/lib/fn/addVoicedMarks'
 import addSemivoicedMarks from 'jaco/lib/fn/addSemivoicedMarks'
 
-import { Container, ArticleContainer, ArticleHeader } from 'components/Layout'
+import { ArticleContainer, ArticleHeader } from 'components/Layout'
 import { ArticleCategoryItem, ArticleTagItem } from 'components/Article'
-import Metadata from 'components/Metadata'
 import Link from 'components/Link'
 import messages from './messages'
 
@@ -19,7 +18,7 @@ export const getSearchText = (location: WindowLocation | Location): string | boo
   return params.get('s') || params.has('s')
 }
 
-const convertMatchedWords = (matchedWords: string[]) => {
+const convertMatchedWords = (matchedWords: string[]): string[] => {
   return [
     ...new Set([
       ...matchedWords,

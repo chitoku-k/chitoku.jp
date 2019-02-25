@@ -12,11 +12,11 @@ import { NavigationLinkItem } from 'components/Navbar'
 import { PaginationContainer, SimplePagination } from 'components/Pagination'
 import { ArticleContainer, ArticleHeader } from 'components/Layout'
 
-export const getPathFromArticleFile = (file: ArticleFile) => (
+export const getPathFromArticleFile = (file: ArticleFile): string => (
   `/${file.directory.replace(/^posts\//, '')}/${file.name === 'index' ? '' : file.name}`
 )
 
-export const getClassNameFromArticleFile = (file: ArticleFile) => (
+export const getClassNameFromArticleFile = (file: ArticleFile): string => (
   [
     'page',
     file.directory.replace(/^posts\//, '').replace(/\//g, '-'),

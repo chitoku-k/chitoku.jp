@@ -8,7 +8,7 @@ export interface ShareServiceItem {
   url: string
 }
 
-export const getShareItems: (title: string | null, url: string) => ShareServiceItem[] = (title, url) => [
+export const getShareItems = (title: string | null, url: string): ShareServiceItem[] => [
   {
     name: 'twitter',
     font: 'twitter',

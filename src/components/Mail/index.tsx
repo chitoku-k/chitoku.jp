@@ -59,7 +59,7 @@ const Mail = injectIntl(function Mail({
   const siteApi = process.env.GATSBY_MAIL_API as string
   const siteKey = process.env.GATSBY_MAIL_SITE_KEY as string
 
-  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     const form = new FormData(e.currentTarget)
     form.append('g-recaptcha-response', token)
 

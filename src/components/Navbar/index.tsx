@@ -7,7 +7,6 @@ import styled from 'styled-components'
 
 import SearchForm from 'components/SearchForm'
 import NavItem from 'components/NavItem'
-import { getSearchText } from 'components/SearchResult'
 
 const query = graphql`
   query {
@@ -36,15 +35,15 @@ const Navbar: FunctionComponent<NavbarProps> = ({
 }) => {
   const [ search, setSearch ] = useState(false)
 
-  const openSearch = () => setSearch(true)
-  const closeSearch = () => setSearch(false)
+  const openSearch = (): void => setSearch(true)
+  const closeSearch = (): void => setSearch(false)
 
   return (
     <div id="nav-container">
       <Bootstrap.Navbar className={search ? 'search' : ''}>
         <ul className="nav navbar-nav">
           {items.filter(item => item.menu).map((item, index) => (
-            <NavItem key={index} children={item.items} {...item} dropdown={true} />
+            <NavItem key={index} {...item} dropdown={true}>{item.items}</NavItem>
           ))}
           <SearchIcon className="nav-icon" onClick={openSearch}>
             <a className="search-icon">
