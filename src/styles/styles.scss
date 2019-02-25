@@ -717,7 +717,9 @@ footer {
 // IE Workaround
 @-ms-viewport {
   width: auto;
+  /* stylelint-disable property-no-unknown */
   initial-scale: 1;
+  /* stylelint-enable */
 }
 .pagination-wrapper .pagination {
   > .active > span .sr-only {
