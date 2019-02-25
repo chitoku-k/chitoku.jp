@@ -1,8 +1,7 @@
-import React, { FunctionComponent, useState } from 'react'
+import React, { FunctionComponent } from 'react'
 import FontAwesome from 'react-fontawesome'
 import * as Bootstrap from 'react-bootstrap'
 import { graphql, StaticQuery } from 'gatsby'
-import { Helmet } from 'react-helmet'
 import { injectIntl } from 'react-intl'
 import { Location, LinkProps } from '@reach/router'
 

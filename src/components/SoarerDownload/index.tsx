@@ -64,10 +64,10 @@ const SoarerDownload = injectIntl<SoarerDownloadProps>(function SoarerDownload({
     <>
       <SoarerDownloadContainer>
         <SoarerDownloadIcon src={icon} />
-          <SoarerDownloadTitle className="no-border">
-            <span>Soarer for Windows </span><br />
-            <span>ver {update.version}</span>
-          </SoarerDownloadTitle>
+        <SoarerDownloadTitle className="no-border">
+          <span>Soarer for Windows </span><br />
+          <span>ver {update.version}</span>
+        </SoarerDownloadTitle>
       </SoarerDownloadContainer>
       <SoarerDownloadDescription className="description">
         {update.file ? (

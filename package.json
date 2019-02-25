@@ -18,11 +18,15 @@
     "@types/react-instantsearch-dom": "^5.2.2",
     "@types/react-intl": "^2.3.16",
     "@types/styled-components": "^4.1.8",
+    "@typescript-eslint/eslint-plugin": "^1.4.1",
+    "@typescript-eslint/parser": "^1.4.1",
     "@weknow/gatsby-remark-twitter": "^0.2.0",
     "algoliasearch": "^3.32.0",
     "babel-plugin-react-intl-auto": "^1.6.0",
     "babel-plugin-styled-components": "^1.10.0",
     "bootstrap-sass": "^3.4.0",
+    "eslint": "^5.14.1",
+    "eslint-plugin-react": "^7.12.4",
     "extract-react-intl-messages": "^0.14.0",
     "font-awesome": "^4.7.0",
     "gatsby": "^2.0.118",
@@ -47,10 +51,11 @@
     "gatsby-source-filesystem": "^2.0.20",
     "gatsby-transformer-sharp": "^2.1.13",
     "gatsby-transformer-yaml": "^2.1.8",
+    "husky": "^1.3.1",
     "is-url": "^1.2.4",
     "jaco": "^2.1.0",
+    "lint-staged": "^8.1.4",
     "node-sass": "^4.11.0",
-    "prettier": "^1.16.4",
     "prismjs": "^1.15.0",
     "react": "^16.8.1",
     "react-bootstrap": "^0.32.4",
@@ -66,6 +71,11 @@
     "rehype-react": "^3.1.0",
     "schema-dts": "^0.3.1",
     "styled-components": "^4.1.3",
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.5.2",
+    "stylelint-scss": "^3.5.4",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "typescript": "^3.3.3",
     "yaml-flat-loader": "^0.1.0"
@@ -80,6 +90,25 @@
     "i18n": "extract-messages -o translations -l=ja -d=ja -f yaml 'src/**/*.ts'",
     "postinstall": "yarn --cwd plugins/gatsby-remark-component build && yarn --cwd plugins/gatsby/packages/gatsby-transformer-remark build",
     "start": "gatsby develop"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.tsx": [
+      "stylelint --fix --config .stylelintrc.styled.json",
+      "git add"
+    ],
+    "*.scss": [
+      "stylelint --fix",
+      "git add"
+    ]
   },
   "workspaces": [
     "plugins/gatsby/packages/gatsby-transformer-remark",

@@ -24,12 +24,12 @@ const HTML: FunctionComponent<HTMLProps> = ({
 )
 
 interface HTMLProps {
-  htmlAttributes: DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLHtmlElement>, HTMLHtmlElement>,
-  headComponents: ReactNode[],
-  bodyAttributes: DetailedHTMLProps<React.HTMLAttributes<HTMLBodyElement>, HTMLBodyElement>,
-  preBodyComponents: ReactNode[],
-  body: string,
-  postBodyComponents: ReactNode[],
+  htmlAttributes: DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLHtmlElement>, HTMLHtmlElement>
+  headComponents: ReactNode[]
+  bodyAttributes: DetailedHTMLProps<React.HTMLAttributes<HTMLBodyElement>, HTMLBodyElement>
+  preBodyComponents: ReactNode[]
+  body: string
+  postBodyComponents: ReactNode[]
 }
 
 export default HTML

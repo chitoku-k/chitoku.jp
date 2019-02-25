@@ -48,7 +48,9 @@ export const pageQuery = graphql`
   }
 `
 
-const TaxonomyPagination = ({ page }: { page: Page }) => (
+const TaxonomyPagination: FunctionComponent<{ page: Page }> = ({
+  page,
+}) => (
   hasPreviousPage(page) || hasNextPage(page) ? (
     <ArticleContainer>
       <PaginationContainer>

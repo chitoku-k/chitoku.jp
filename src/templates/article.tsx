@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
-import { BreadcrumbList, ListItem } from 'schema-dts'
+import { BreadcrumbList } from 'schema-dts'
 import { JsonLd } from 'react-schemaorg'
 
 import Layout, { Container } from 'components/Layout'

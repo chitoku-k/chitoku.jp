@@ -4,7 +4,17 @@ import { injectIntl } from 'react-intl'
 
 import messages from './messages'
 
-const getVisibility = (className: string, visible: boolean) => [ className, visible ? 'visible' : 'hidden' ].join(' ')
+export const isFirstPage = (page: Page): boolean => page.current === 1
+export const isLastPage = (page: Page): boolean => page.current === page.total
+
+export const hasPreviousPage = (page: Page): boolean => page.current > 1
+export const hasNextPage = (page: Page): boolean => page.current < page.total
+
+export const getPagePath = (num: number): string => './' + (num === 1 ? '' : num)
+export const getPreviousPagePath = (page: Page): string => hasPreviousPage(page) ? getPagePath(page.current - 1) : '#'
+export const getNextPagePath = (page: Page): string => hasNextPage(page) ? getPagePath(page.current + 0) : '#'
+
+const getVisibility = (className: string, visible: boolean): string => [ className, visible ? 'visible' : 'hidden' ].join(' ')
 
 const Pagination = injectIntl<PaginationProps>(function Pagination({
   page,
@@ -64,16 +74,6 @@ export const SimplePagination = injectIntl<HTMLProps<Bootstrap.Pagination> & Sim
     </Bootstrap.Pagination>
   )
 })
-
-export const isFirstPage = (page: Page) => page.current === 1
-export const isLastPage = (page: Page) => page.current === page.total
-
-export const hasPreviousPage = (page: Page) => page.current > 1
-export const hasNextPage = (page: Page) => page.current < page.total
-
-export const getPagePath = (num: number) => './' + (num === 1 ? '' : num)
-export const getPreviousPagePath = (page: Page) => hasPreviousPage(page) ? getPagePath(page.current - 1) : '#'
-export const getNextPagePath = (page: Page) => hasNextPage(page) ? getPagePath(page.current + 1) : '#'
 
 export interface Page {
   current: number

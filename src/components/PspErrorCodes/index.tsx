@@ -40,7 +40,7 @@ const PspErrorCodes = injectIntl<PspErrorCodesProps>(function PspErrorCodes({
 
   return (
     <div>
-      {group.map(({ items, title }, index) => (
+      {group.map(({ items, title }) => (
         <React.Fragment key={title}>
           <h2>{title}</h2>
           <Bootstrap.Table striped condensed hover>

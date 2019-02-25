@@ -6,7 +6,7 @@ import { NavigationLinkItem } from 'components/Navbar'
 import NavDropdown from 'components/NavDropdown'
 import Link from 'components/Link'
 
-const getClassName = (active: boolean, dropdown: boolean | undefined, className: string) => {
+const getClassName = (active: boolean, dropdown: boolean | undefined, className: string): NavItemAttributes => {
   return {
     bsClass: dropdown ? 'dropdown' : 'sub',
     className: [ active ? 'active' : '', className ].filter(x => x).join(' '),
@@ -16,12 +16,14 @@ const getClassName = (active: boolean, dropdown: boolean | undefined, className:
 const NavItem: FunctionComponent<NavItemProps & BootstrapNavItemProps & NavigationLinkItem> = ({
   name,
   to,
-  menu,
   items,
   dropdown,
   className = '',
+  /* eslint-disable @typescript-eslint/no-unused-vars */
+  menu,
   activeHref,
   activeKey,
+  /* eslint-enable @typescript-eslint/no-unused-vars */
   ...rest
 }) => (
   <Location>
@@ -50,6 +52,11 @@ const NavItem: FunctionComponent<NavItemProps & BootstrapNavItemProps & Navigati
 
 interface NavContentProps {
   arrow?: boolean | NavigationLinkItem[]
+}
+
+interface NavItemAttributes {
+  bsClass: 'dropdown' | 'sub'
+  className: string
 }
 
 interface BootstrapNavItemProps {
