@@ -2,7 +2,7 @@
   "name": "historia-feed-plugin",
   "version": "1.0.0",
   "dependencies": {
-    "feed": "^2.0.2",
+    "feed": "^2.0.4",
     "remove-markdown": "^0.3.0"
   }
 }
