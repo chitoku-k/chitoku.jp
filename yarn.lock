@@ -4969,10 +4969,10 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
-feed@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/feed/-/feed-2.0.2.tgz#8b6cc2f4d9187eac6f6fada8322de43c414c17aa"
-  integrity sha512-AskLRGhPuY82HQbRDV3DLG/2f/jicqT6naUgrWm/PsIIsA36ErCr1yRcw2sMMcPcef6MZGylKTq32vaHLT15lw==
+feed@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/feed/-/feed-2.0.4.tgz#14cd71b3bae1e965b81f7e0c5927e8941de996f8"
+  integrity sha512-sWatfulDP6d18qVaWcu34qmq9ml6UeN6nHSBJpNZ2muBqxjPAdT375whPYAHP+gqLfyabtYU5qf2Dv4nqtlp0w==
   dependencies:
     luxon "^1.3.3"
     xml "^1.0.1"
@@ -11156,9 +11156,9 @@ remark-attr@0.8.0, remark-attr@^0.8.0:
     md-attr-parser "^1.2.0"
 
 remark-grid-tables@^1.2.0, remark-grid-tables@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/remark-grid-tables/-/remark-grid-tables-1.4.0.tgz#a3cacbb78e03098059474543b3baaf2c1bd7e396"
-  integrity sha512-dHgr/46MSiHi2zQB/DtKlBPF18h0sHXg5D+gMEi2PSP4cUD9rHgfPMY0BYugwBfkD8vSbFRe+6ksvdXaWMnMjQ==
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/remark-grid-tables/-/remark-grid-tables-1.5.0.tgz#fdb0f1a202a83bcd511debcede226438e44297ad"
+  integrity sha512-u9i2swuK7ivOIgVggYa0gsXZFx45VC7Tc15pRdaOC/sc7qf1OPsSrs/C/bdVzNHoDTX62fAVutd38HiTROBplA==
   dependencies:
     "@nxmix/is-full-width" "^0.1.0"
     grapheme-splitter "^1.0.4"
