@@ -5,7 +5,6 @@ import { GatsbyLinkProps } from 'gatsby-link'
 import styled from 'styled-components'
 
 import messages from './messages'
-import { media } from 'components/Layout'
 import Link from 'components/Link'
 
 interface ShareButtonProps {
@@ -23,8 +22,10 @@ interface ShareLinkProps extends GatsbyLinkProps<{}> {
 
 const ShareLink: FunctionComponent<ShareLinkProps> = ({
   children,
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   color,
   hover,
+  /* eslint-enable @typescript-eslint/no-unused-vars */
   ...props
 }) => (
   <Link {...props}>

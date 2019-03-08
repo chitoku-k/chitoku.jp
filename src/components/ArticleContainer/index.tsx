@@ -22,9 +22,9 @@ const MainContent = styled.article`
 
 const ArticleContainer: FunctionComponent<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>> = ({
   children,
-  /* eslint-disable @typescript-eslint/no-unsed-vars */
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   ref,
-  /* eslint-enable @typescript-eslint/no-unsed-vars */
+  /* eslint-enable @typescript-eslint/no-unused-vars */
   ...rest
 }) => (
   <MainContent {...rest}>

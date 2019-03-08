@@ -1,9 +1,8 @@
 import React, { FunctionComponent } from 'react'
-import FontAwesome from 'react-fontawesome'
 import * as Bootstrap from 'react-bootstrap'
 import { graphql, StaticQuery } from 'gatsby'
 import { injectIntl } from 'react-intl'
-import { Location, LinkProps } from '@reach/router'
+import { Location } from '@reach/router'
 import styled from 'styled-components'
 
 import messages from './messages'
