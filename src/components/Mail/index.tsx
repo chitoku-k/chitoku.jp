@@ -5,7 +5,9 @@ import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3'
 import FontAwesome from 'react-fontawesome'
 import styled from 'styled-components'
 
-import { Container, ArticleContainer, ArticleHeader } from 'components/Layout'
+import Container from 'components/Container'
+import ArticleContainer from 'components/ArticleContainer'
+import ArticleHeader from 'components/ArticleHeader'
 import Metadata from 'components/Metadata'
 import Link from 'components/Link'
 import messages from './messages'
@@ -30,6 +32,11 @@ const ErrorIcon = styled(FontAwesome)`
 
 const ProcessingIcon = styled(FontAwesome)`
   margin-right: 5px;
+`
+
+const Input = styled(Bootstrap.FormControl)`
+  font-size: 16px;
+  resize: vertical;
 `
 
 const Label = injectIntl<MailLabelProps>(({
@@ -60,7 +67,11 @@ const Mail = injectIntl(function Mail({
   const siteKey = process.env.GATSBY_MAIL_SITE_KEY as string
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
-    const form = new FormData(e.currentTarget)
+    const form = new FormData()
+    for (const name of ['name', 'email', 'subject', 'body']) {
+      const elm = e.currentTarget.elements.namedItem(name) as HTMLInputElement | HTMLTextAreaElement
+      form.append(name, elm.value)
+    }
     form.append('g-recaptcha-response', token)
 
     e.preventDefault()
@@ -108,19 +119,19 @@ const Mail = injectIntl(function Mail({
         <form onSubmit={onSubmit}>
           <Bootstrap.FormGroup>
             <Label required>{formatMessage(messages.name)}</Label>
-            <Bootstrap.FormControl name="name" size={40} required readOnly={readOnly} />
+            <Input name="name" size={40} required readOnly={readOnly} />
           </Bootstrap.FormGroup>
           <Bootstrap.FormGroup>
             <Label>{formatMessage(messages.mail)}</Label>
-            <Bootstrap.FormControl name="email" size={40} readOnly={readOnly} />
+            <Input name="email" size={40} readOnly={readOnly} />
           </Bootstrap.FormGroup>
           <Bootstrap.FormGroup>
             <Label required>{formatMessage(messages.subject)}</Label>
-            <Bootstrap.FormControl name="subject" size={40} required readOnly={readOnly} />
+            <Input name="subject" size={40} required readOnly={readOnly} />
           </Bootstrap.FormGroup>
           <Bootstrap.FormGroup>
             <Label required>{formatMessage(messages.message)}</Label>
-            <Bootstrap.FormControl componentClass="textarea" name="body" cols={40} rows={10} required readOnly={readOnly} />
+            <Input name="body" componentClass="textarea" cols={40} rows={10} required readOnly={readOnly} />
           </Bootstrap.FormGroup>
           <ReCaptcha action="mail" sitekey={siteKey} verifyCallback={setToken} />
           <div className="text-center">

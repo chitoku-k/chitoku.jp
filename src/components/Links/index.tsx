@@ -4,7 +4,9 @@ import { injectIntl } from 'react-intl'
 import messages from './messages'
 import Metadata from 'components/Metadata'
 import Link from 'components/Link'
-import { Container, ArticleContainer, ArticleHeader } from 'components/Layout'
+import Container from 'components/Container'
+import ArticleContainer from 'components/ArticleContainer'
+import ArticleHeader from 'components/ArticleHeader'
 
 const Links = injectIntl<LinksProps>(({
   links: {

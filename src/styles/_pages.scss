@@ -1,24 +1,24 @@
-.main-content {
-  &.page-softwares, &.page-programming, &.page-others {
-    a {
-      color: #333333;
+.page-softwares,
+.page-programming,
+.page-others {
+  a {
+    color: #333;
+  }
+  img {
+    margin-right: 6px;
+    @include media-small-pc {
+      margin-right: 12px;
     }
-    img {
-      margin-right: 6px;
-      @include media-small-pc {
-        margin-right: 12px;
-      }
+  }
+  p {
+    padding-top: 0;
+    @include media-small-pc {
+      margin-left: 44px;
     }
-    p {
-      padding-top: 0;
-      @include media-small-pc {
-        margin-left: 44px;
-      }
-    }
-    h2 {
-      @include media-tablet {
-        margin-top: -15px;
-      }
+  }
+  h2 {
+    @include media-tablet {
+      margin-top: -15px;
     }
   }
 }

@@ -1,12 +1,30 @@
 import React, { FunctionComponent } from 'react'
+import styled from 'styled-components'
 
+import { media } from 'components/Layout'
 import Sidebar from 'components/Sidebar'
+
+const Container = styled.div`
+  padding: 0;
+  ${media.greaterThan('small-pc')`
+    padding: 0 15px;
+  `}
+  ${media.greaterThan('normal-pc')`
+    padding-bottom: 60px;
+  `}
+  ${media.lessThan('tablet')`
+    padding: 15px;
+    &.sidebar {
+      padding: 15px;
+    }
+  `}
+`
 
 const Content: FunctionComponent<ContentProps> = ({
   children,
   sidebar = true,
 }) => (
-  <div id="main-container" className={[
+  <Container className={[
     'container',
     sidebar ? 'sidebar' : '',
   ].filter(x => x).join(' ')}>
@@ -14,7 +32,7 @@ const Content: FunctionComponent<ContentProps> = ({
     {sidebar ? (
       <Sidebar />
     ) : null}
-  </div>
+  </Container>
 )
 
 interface ContentProps {

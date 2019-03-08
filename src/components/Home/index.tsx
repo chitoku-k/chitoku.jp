@@ -1,7 +1,10 @@
 import React, { FunctionComponent, Fragment } from 'react'
 import * as Bootstrap from 'react-bootstrap'
+import styled from 'styled-components'
 
-import { Container, ArticleContainer } from 'components/Layout'
+import { media } from 'components/Layout'
+import Container from 'components/Container'
+import ArticleContainer from 'components/ArticleContainer'
 import Metadata from 'components/Metadata'
 import Link from 'components/Link'
 import PspProgrammingIcon from '../../assets/pspprogramming.svg'
@@ -20,6 +23,109 @@ const icons: HomeIcon = {
   ProgrammingIcon,
 }
 
+const HomeMenuItem = styled(Bootstrap.Col)`
+  padding: 10px 0 0 0;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  ${media.lessThan('sp')`
+    width: 100%;
+    margin-bottom: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #efefef;
+    text-align: left;
+    &:first-child {
+      padding-top: 0;
+    }
+    &:nth-last-child(3) {
+      padding-bottom: 0;
+      border: none;
+      margin-bottom: 6px;
+    }
+  `}
+`
+
+const HomeMenuItemLink = styled(Link)`
+  color: #333;
+  display: inline-block;
+  svg {
+    transition: fill 0.3s;
+    width: 175px;
+    height: 175px;
+    margin: 0 auto;
+    &.pspprogramming {
+      fill: #39bc75;
+      &:hover {
+        fill: #21a160;
+      }
+    }
+    &.soarer {
+      fill: #48a9e2;
+      &:hover {
+        fill: #308ecd;
+      }
+    }
+    &.recotw {
+      fill: #6e587e;
+      &:hover {
+        fill: #563d69;
+      }
+    }
+    &.windows {
+      fill: #e73c3c;
+      &:hover {
+        fill: #cf2424;
+      }
+    }
+    &.psp-smartphone {
+      fill: #e67e22;
+      &:hover {
+        fill: #ce660a;
+      }
+    }
+    &.programming {
+      fill: #f1c40f;
+      &:hover {
+        fill: #d9ac00;
+      }
+    }
+    ${media.lessThan('sp')`
+      float: left;
+      width: 44px;
+      height: 44px;
+    `}
+  }
+  ${media.lessThan('sp')`
+    margin: 0;
+  `}
+`
+
+const HomeMenuItemTitle = styled.h2`
+  margin: 18px 0 14px;
+  padding: 0;
+  background: none;
+  color: #333;
+  border: none;
+  font-size: 140%;
+  ${media.lessThan('sp')`
+    float: left;
+    margin: 10px 8px;
+  `}
+`
+
+const HomeMeneuItemDescription = styled.p`
+  margin-bottom: 0;
+  padding: 0 12px;
+  line-height: 1.4;
+  font-size: 14px;
+  text-align: left;
+  ${media.lessThan('sp')`
+    padding: 6px 0 0;
+    clear: both;
+  `}
+`
+
 const Home: FunctionComponent<HomeProps> = ({
   home: {
     items,
@@ -27,7 +133,7 @@ const Home: FunctionComponent<HomeProps> = ({
 }) => (
   <Container>
     <Metadata title={null} />
-    <ArticleContainer className="home">
+    <ArticleContainer>
       {items.map(({
         id,
         component,
@@ -38,13 +144,13 @@ const Home: FunctionComponent<HomeProps> = ({
         const Icon = icons[component]
         return (
           <Fragment key={name}>
-            <Bootstrap.Col className="home-menu-link" xs={6} md={4}>
-              <Link to={to} id={id} className="home-menu-link-image" title={name}>
-                <Icon viewBox="0 0 175 175" />
-                <h2>{name}</h2>
-              </Link>
-              <p>{description}</p>
-            </Bootstrap.Col>
+            <HomeMenuItem xs={6} md={4}>
+              <HomeMenuItemLink to={to} title={name}>
+                <Icon className={id} viewBox="0 0 175 175" />
+                <HomeMenuItemTitle>{name}</HomeMenuItemTitle>
+              </HomeMenuItemLink>
+              <HomeMeneuItemDescription>{description}</HomeMeneuItemDescription>
+            </HomeMenuItem>
             {(index + 1) % 2 === 0 ? (
               <Bootstrap.Clearfix visibleSmBlock visibleXsBlock />
             ) : null}

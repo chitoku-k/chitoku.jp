@@ -8,7 +8,8 @@ import styled from 'styled-components'
 import addVoicedMarks from 'jaco/fn/addVoicedMarks'
 import addSemivoicedMarks from 'jaco/fn/addSemivoicedMarks'
 
-import { ArticleContainer, ArticleHeader } from 'components/Layout'
+import ArticleContainer from 'components/ArticleContainer'
+import ArticleHeader from 'components/ArticleHeader'
 import { ArticleCategoryItem, ArticleTagItem } from 'components/Article'
 import Link from 'components/Link'
 import messages from './messages'
@@ -30,6 +31,67 @@ const convertMatchedWords = (matchedWords: string[]): string[] => {
   ]
 }
 
+const SearchResultContainer = styled(ArticleContainer)`
+  .ais-Hits-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+`
+
+const SearchResultHeader = styled(ArticleHeader)`
+  h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .ais-PoweredBy {
+      display: inline-flex;
+      font-size: 10pt;
+      font-weight: normal;
+      align-items: center;
+      .ais-PoweredBy-text {
+        margin-right: 5px;
+      }
+    }
+  }
+`
+
+const SearchHitContainer = styled.div`
+  & + li {
+    margin-top: 25px;
+  }
+  mark {
+    padding: 0;
+    background-color: inherit;
+    color: inherit;
+    font-weight: bold;
+  }
+  p {
+    margin-top: 4px;
+    font-size: 95%;
+    line-height: 1.6;
+  }
+`
+
+const SearchHitHeader = styled.h2`
+  color: inherit;
+  margin-bottom: 2px;
+  font-weight: normal;
+  font-size: 120%;
+`
+
+const SearchHitLink = styled(Link)`
+  display: inline-block;
+  text-decoration: none;
+  &:hover h2 {
+    text-decoration: underline;
+  }
+`
+
+const SearchHitPath = styled.span`
+  color: #4f7f4d;
+`
+
 const NoHits = styled.div`
   line-height: 1.8;
 `
@@ -47,25 +109,25 @@ const SearchHit = injectIntl<SearchHitProps<SearchDocument>>(function SearchHit(
   },
 }) {
   return (
-    <div>
-      <Link to={path}>
-        <h2 className="no-border">
+    <SearchHitContainer>
+      <SearchHitLink to={path}>
+        <SearchHitHeader className="no-border">
           {highlight.title && highlight.title.matchLevel !== 'none' ? (
             <Highlighter searchWords={convertMatchedWords(highlight.title.matchedWords)} textToHighlight={title} />
           ) : title}
-        </h2>
+        </SearchHitHeader>
         {category ? (
-          <span className="path">{formatMessage(messages.breadcrumb_category, { category: category.name })}</span>
+          <SearchHitPath>{formatMessage(messages.breadcrumb_category, { category: category.name })}</SearchHitPath>
         ) : (
-          <span className="path">{formatMessage(messages.breadcrumb_path, { path })}</span>
+          <SearchHitPath>{formatMessage(messages.breadcrumb_path, { path })}</SearchHitPath>
         )}
-      </Link>
+      </SearchHitLink>
       <p>
         {highlight.excerpt && highlight.excerpt.matchLevel !== 'none' ? (
           <Highlighter searchWords={convertMatchedWords(highlight.excerpt.matchedWords)} textToHighlight={excerpt} />
         ) : excerpt}
       </p>
-    </div>
+    </SearchHitContainer>
   )
 })
 
@@ -79,8 +141,8 @@ const SearchResult = injectIntl(connectStateResults<SearchResultProps, SearchDoc
   },
 }) {
   return (
-    <ArticleContainer className="search-result">
-      <ArticleHeader title={
+    <SearchResultContainer className="search-result">
+      <SearchResultHeader title={
         <>
           {text ? formatMessage(messages.title_text, { text }) : formatMessage(messages.title)}
           <PoweredBy />
@@ -101,7 +163,7 @@ const SearchResult = injectIntl(connectStateResults<SearchResultProps, SearchDoc
       ) : (
         formatMessage(messages.how_to_search)
       )}
-    </ArticleContainer>
+    </SearchResultContainer>
   )
 }))
 
