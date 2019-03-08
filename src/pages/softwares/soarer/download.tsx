@@ -1,7 +1,8 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 
-import Layout, { Container } from 'components/Layout'
+import Layout from 'components/Layout'
+import Container from 'components/Container'
 import Metadata from 'components/Metadata'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'

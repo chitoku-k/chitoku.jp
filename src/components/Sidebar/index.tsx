@@ -1,15 +1,22 @@
 import React, { FunctionComponent } from 'react'
-import FontAwesome from 'react-fontawesome'
 import * as Bootstrap from 'react-bootstrap'
 import { graphql, StaticQuery } from 'gatsby'
 import { injectIntl } from 'react-intl'
-import { Location, LinkProps } from '@reach/router'
+import { Location } from '@reach/router'
+import styled from 'styled-components'
 
 import messages from './messages'
-import { getShareItems, ShareServiceItem } from './services'
+import {
+  TwitterShareButton,
+  FacebookShareButton,
+  GooglePlusShareButton,
+  HatenaShareButton,
+  TumblrShareButton,
+} from './buttons'
 import { ArticleItem, getPathFromArticleFile } from 'components/Article'
 import { NavigationLinkItem } from 'components/Navbar'
 import { withMetadata, WithMetadataProps, MetadataProvider } from 'components/Metadata'
+import { media } from 'components/Layout'
 import NavItem from 'components/NavItem'
 import Link from 'components/Link'
 
@@ -49,18 +56,65 @@ const query = graphql`
   }
 `
 
-const ShareLink: FunctionComponent<ShareLinkProps> = ({
-  service: {
-    url,
-    font,
-    name,
-  },
-  ...rest
-}) => (
-  <Link to={url} className={`share-button ${name}-icon`} {...rest}>
-    <FontAwesome name={font} />
-  </Link>
-)
+const SidebarContainer = styled(Bootstrap.Col)`
+  padding-left: 20px;
+  padding-right: 0;
+  width: 30%;
+  top: 15px;
+  position: sticky;
+  ${media.lessThan('tablet')`
+    width: auto;
+    padding: 0;
+  `}
+`
+
+const SidebarItem = styled.div`
+  margin-bottom: 20px;
+  padding: 20px;
+  background: white;
+  color: #111;
+  box-shadow: 0 2px 4px 0 #c1c1c1;
+  border-radius: 3px;
+  &:last-child {
+    overflow: auto;
+    min-height: 250px;
+    -webkit-overflow-scrolling: touch;
+  }
+  ${media.lessThan('tablet')`
+    margin: 15px 0 0 0;
+    padding: 15px;
+  `}
+`
+
+const SidebarItemTitle = styled.h2`
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  padding-left: 8px;
+  border-left: 1em solid #e11010;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  a {
+    color: #333;
+  }
+`
+
+const SidebarItemList = styled.ul`
+  padding-left: 30px;
+  margin-bottom: 0;
+  li {
+    margin-bottom: 3px;
+  }
+  ${media.greaterThan('small-pc')`
+    padding-left: 28px;
+  `}
+`
+
+const ShareButtonContainer = styled.div`
+  padding: 5px 0 0;
+  display: flex;
+  justify-content: center;
+`
 
 const Sidebar = injectIntl<SidebarProps>(withMetadata(function Sidebar({
   metadata: {
@@ -80,20 +134,29 @@ const Sidebar = injectIntl<SidebarProps>(withMetadata(function Sidebar({
   },
 }) {
   return (
-    <Bootstrap.Col md={3} componentClass="aside" id="sub-content-container" className="sticky">
-      <div>
-        <h2>{formatMessage(messages.share)}</h2>
-        <div className="share-buttons-container">
+    <SidebarContainer md={3} componentClass="aside">
+      <SidebarItem>
+        <SidebarItemTitle>{formatMessage(messages.share)}</SidebarItemTitle>
+        <ShareButtonContainer>
           <Location>
-            {({ location }) => getShareItems(title, siteUrl + location.pathname).map((item, index) => (
-              <ShareLink key={index} service={item} title={formatMessage(messages.share_on, { service: formatMessage(item.service) })} />
-            ))}
+            {({ location }) => {
+              const url = siteUrl + location.pathname
+              return (
+                <>
+                  <TwitterShareButton title={title} url={url} />
+                  <FacebookShareButton url={url} />
+                  <GooglePlusShareButton url={url} />
+                  <HatenaShareButton url={url} />
+                  <TumblrShareButton url={url} />
+                </>
+              )
+            }}
           </Location>
-        </div>
-      </div>
-      <div>
-        <h2>{formatMessage(messages.latest_articles)}</h2>
-        <ul className="menu-container">
+        </ShareButtonContainer>
+      </SidebarItem>
+      <SidebarItem>
+        <SidebarItemTitle>{formatMessage(messages.latest_articles)}</SidebarItemTitle>
+        <SidebarItemList>
           {latest.items.map(({ article }, index) => (
             <li key={index}>
               <Link to={getPathFromArticleFile(article.file)}>
@@ -101,17 +164,17 @@ const Sidebar = injectIntl<SidebarProps>(withMetadata(function Sidebar({
               </Link>
             </li>
           ))}
-        </ul>
-      </div>
-      <div>
-        <h2>{formatMessage(messages.links)}</h2>
-        <ul className="menu-container">
+        </SidebarItemList>
+      </SidebarItem>
+      <SidebarItem>
+        <SidebarItemTitle>{formatMessage(messages.links)}</SidebarItemTitle>
+        <SidebarItemList>
           {items.map(item => (
             <NavItem key={item.name} {...item} />
           ))}
-        </ul>
-      </div>
-    </Bootstrap.Col>
+        </SidebarItemList>
+      </SidebarItem>
+    </SidebarContainer>
   )
 }))
 
@@ -129,10 +192,6 @@ interface SidebarProps {
       article: ArticleItem
     }[]
   }
-}
-
-interface ShareLinkProps extends LinkProps<{}> {
-  service: ShareServiceItem
 }
 
 const QueryableSidebar: FunctionComponent = () => (

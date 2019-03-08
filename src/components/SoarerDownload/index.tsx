@@ -7,6 +7,7 @@ import styled from 'styled-components'
 
 import messages from './messages'
 import icon from './icon.png'
+import { media } from 'components/Layout'
 import { SoarerHistoryItem } from 'components/SoarerHistory'
 
 const query = graphql`
@@ -38,16 +39,42 @@ const SoarerDownloadContainer = styled.div`
 const SoarerDownloadIcon = styled.img`
   width: 48px;
   margin: 0 15px !important;
+  ${media.lessThan('sp')`
+    margin-left: 0 !important;
+  `}
 `
 
 const SoarerDownloadTitle = styled.h2`
   margin: 0 !important;
   font-size: 24px !important;
+  br {
+    display: none;
+  }
+  ${media.lessThan('sp')`
+    font-size: 120% !important;
+    line-height: 1.2;
+    br {
+      display: inline;
+    }
+  `}
 `
 
 const SoarerDownloadDescription = styled.div`
   margin-top: 10px;
   margin-left: 78px;
+  .btn,
+  .btn .fa {
+    margin-right: 8px;
+  }
+  ${media.lessThan('sp')`
+    margin-top: 20px;
+    margin-left: 0;
+    .btn {
+      font-size: 100%;
+      margin-bottom: 5px;
+      padding: 7px 14px;
+    }
+  `}
 `
 
 const SoarerDownload = injectIntl<SoarerDownloadProps>(function SoarerDownload({

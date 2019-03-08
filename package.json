@@ -76,13 +76,15 @@
     "rehype-react": "^3.1.0",
     "schema-dts": "^0.3.1",
     "styled-components": "^4.1.3",
+    "styled-media-query": "^2.1.1",
     "stylelint": "^9.10.1",
-    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-standard": "^18.2.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.5.2",
     "stylelint-scss": "^3.5.4",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "typescript": "^3.3.3333",
+    "utility-types": "^3.4.1",
     "yaml-flat-loader": "^0.1.0"
   },
   "resolutions": {
@@ -93,6 +95,10 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "i18n": "extract-messages -o translations -l=ja -d=ja -f yaml 'src/**/*.ts'",
+    "lint": "yarn lint:ts && yarn lint:css && yarn lint:styled",
+    "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:css": "stylelint 'src/**/*.scss'",
+    "lint:styled": "stylelint --config .stylelintrc.styled.json 'src/**/*.tsx'",
     "postinstall": "yarn --cwd plugins/gatsby-remark-component build",
     "start": "gatsby develop"
   },

@@ -1,30 +1,30 @@
 items:
-  - id: pspprogramming-link
+  - id: pspprogramming
     component: PspProgrammingIcon
     name: PSP プログラミング
     to: /programming/psp/
     description: SONY のゲーム機、PSP で動作するソフトウェアを作成するためのプログラミング講座です。放置された PSP、活用するなら今しかありません！
-  - id: soarer-link
+  - id: soarer
     component: SoarerIcon
     name: Soarer for Windows
     to: /softwares/soarer/
     description: Windows 用の Twitter クライアントです。小さなウィンドウでも快適に Twitter を楽しむことができます。現在鋭意開発続行中です！
-  - id: recotw-link
+  - id: recotw
     component: RecoTwIcon
     name: RecoTw Explorer
     to: https://recotw.chitoku.jp
     description: RecoTw の閲覧 / 登録用 Web アプリケーションです。RecoTw は G2 氏制作の黒歴史ツイート登録サービスです。
-  - id: windows-link
+  - id: windows
     component: WindowsIcon
     name: Windows
     to: /windows/
     description: Windows のデスクトップ向けフリーソフトの紹介コーナーです。でも最近は Windows を使っていません……。
-  - id: psp-smartphone-link
+  - id: psp-smartphone
     component: GadgetsIcon
     name: ガジェット
     to: /gadgets/
     description: 周辺機器やガジェットを使ってみた感想を書いてみます。
-  - id: programming-link
+  - id: programming
     component: ProgrammingIcon
     name: プログラミング
     to: /programming/
