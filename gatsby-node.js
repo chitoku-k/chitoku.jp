@@ -36,6 +36,10 @@ exports.onCreatePage = async ({
 }) => {
   const { dir, name } = path.parse(page.path)
 
+  if (page.path === '/') {
+    return
+  }
+
   // Force trailing slash for index pages
   if (name === 'index') {
     deletePage(page)
