@@ -96,7 +96,7 @@
     "develop": "gatsby develop",
     "i18n": "extract-messages -o translations -l=ja -d=ja -f yaml 'src/**/*.ts'",
     "lint": "yarn lint:ts && yarn lint:css && yarn lint:styled",
-    "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:ts": "eslint 'src/**/*.{js,ts,tsx}'",
     "lint:css": "stylelint 'src/**/*.scss'",
     "lint:styled": "stylelint --config .stylelintrc.styled.json 'src/**/*.tsx'",
     "postinstall": "yarn --cwd plugins/gatsby-remark-component build",
@@ -108,7 +108,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*.{js,ts,tsx}": [
       "eslint --fix",
       "git add"
     ],
