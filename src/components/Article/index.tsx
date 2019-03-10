@@ -263,6 +263,12 @@ const ArticleBody = styled.div`
   :not(pre) > code[class*="language-"] {
     padding: 2px 4px;
   }
+  .monospace {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      font-family: "MS Gothic", "Osaka-mono", monospace;
+    }
+  }
   .gatsby-highlight {
     .token.operator {
       background: none;
