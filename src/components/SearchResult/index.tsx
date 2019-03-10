@@ -5,8 +5,6 @@ import { Hit, StateResultsProvided } from 'react-instantsearch-core'
 import { connectStateResults, Hits, PoweredBy } from 'react-instantsearch-dom'
 import Highlighter from 'react-highlight-words'
 import styled from 'styled-components'
-import addVoicedMarks from 'jaco/fn/addVoicedMarks'
-import addSemivoicedMarks from 'jaco/fn/addSemivoicedMarks'
 
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
@@ -17,18 +15,6 @@ import messages from './messages'
 export const getSearchText = (location: WindowLocation | Location): string | boolean => {
   const params = new URLSearchParams(location.search.slice(1))
   return params.get('s') || params.has('s')
-}
-
-const convertMatchedWords = (matchedWords: string[]): string[] => {
-  return [
-    ...new Set([
-      ...matchedWords,
-      ...matchedWords.map(x => [
-        addVoicedMarks(x),
-        addSemivoicedMarks(x),
-      ]).flatMap(x => x),
-    ]),
-  ]
 }
 
 const SearchResultContainer = styled(ArticleContainer)`
@@ -113,7 +99,7 @@ const SearchHit = injectIntl<SearchHitProps<SearchDocument>>(function SearchHit(
       <SearchHitLink to={path}>
         <SearchHitHeader className="no-border">
           {highlight.title && highlight.title.matchLevel !== 'none' ? (
-            <Highlighter searchWords={convertMatchedWords(highlight.title.matchedWords)} textToHighlight={title} />
+            <Highlighter searchWords={highlight.title.matchedWords} textToHighlight={title} />
           ) : title}
         </SearchHitHeader>
         {category ? (
@@ -124,7 +110,7 @@ const SearchHit = injectIntl<SearchHitProps<SearchDocument>>(function SearchHit(
       </SearchHitLink>
       <p>
         {highlight.excerpt && highlight.excerpt.matchLevel !== 'none' ? (
-          <Highlighter searchWords={convertMatchedWords(highlight.excerpt.matchedWords)} textToHighlight={excerpt} />
+          <Highlighter searchWords={highlight.excerpt.matchedWords} textToHighlight={excerpt} />
         ) : excerpt}
       </p>
     </SearchHitContainer>
