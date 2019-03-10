@@ -68,7 +68,7 @@ const SearchHitHeader = styled.h2`
 
 const SearchHitLink = styled(Link)`
   display: inline-block;
-  text-decoration: none;
+  text-decoration: none !important;
   &:hover h2 {
     text-decoration: underline;
   }
