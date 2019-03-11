@@ -61,6 +61,7 @@ const SidebarContainer = styled(Bootstrap.Col)`
   padding-right: 0;
   width: 30%;
   top: 15px;
+  position: static;
   position: sticky;
   ${media.lessThan('tablet')`
     width: auto;
