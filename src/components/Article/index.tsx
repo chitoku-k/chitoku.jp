@@ -225,8 +225,10 @@ const ArticleBody = styled.div`
     }
   }
   .footnotes {
-    hr,
-    .footnote-backref {
+    p {
+      display: inline;
+    }
+    hr {
       display: none;
     }
   }
