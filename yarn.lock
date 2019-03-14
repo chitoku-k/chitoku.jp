@@ -5699,10 +5699,10 @@ gatsby-transformer-yaml@^2.1.10:
     lodash "^4.17.10"
     unist-util-select "^1.5.0"
 
-gatsby@^2.1.31:
-  version "2.1.31"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.31.tgz#6f65fc903607292f95a4518f2aeefe791aa9daf4"
-  integrity sha512-PYa6cGojhmNweepbZ90VXMLbEPA9GUA6GWWHVjJnm2twxrJWk5C5/T/q2grRrUpmGeKwcP9Mjcc/AtN4GHsf2w==
+gatsby@^2.1.33:
+  version "2.1.33"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.33.tgz#56351949ae7da0741b19b8ebbf339087139cde8d"
+  integrity sha512-nwb6ja64lvB+Ssnu3WRfAOnelgQdphyOpVD9zTi9qnUBpW4HDcBAfU5+s/CWddQiKU1H8up62539QX6hLZeSlQ==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
