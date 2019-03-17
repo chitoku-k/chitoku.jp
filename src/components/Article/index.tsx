@@ -1,4 +1,4 @@
-import React, { ReactNode, ComponentType } from 'react'
+import React, { ReactNode } from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { injectIntl } from 'react-intl'
@@ -189,7 +189,7 @@ const Article = injectIntl<ArticleProps>(function Article({
         ) : null}
         <ArticleBody ast={excerptAst || htmlAst || {}} components={{
           ...components,
-          'image-zoom': ImageZoomWrapper,
+          'historia-image': ImageZoomWrapper,
           'historia-link': Link,
         }} />
         {excerpted ? (

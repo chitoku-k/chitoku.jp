@@ -107,6 +107,7 @@ module.exports = {
       options: {
         limit: 5,
         exclude: [
+          '/programming/psp/error-codes',
           '/softwares/soarer/download',
           '/softwares/soarer/history',
         ],
