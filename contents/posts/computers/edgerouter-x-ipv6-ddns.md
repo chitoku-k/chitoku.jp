@@ -29,6 +29,8 @@ tags:
 EdgeRouter に搭載されている DDNS クライアントは [ddclient](https://sourceforge.net/projects/ddclient/) です。  
 IPv6 サポートのためには Perl ライブラリーである [IO::Socket:INET6](https://packages.debian.org/jessie/libio-socket-inet6-perl) のインストールが必要で、事前準備のほかファームウェアのアップデートの際にも以下を実行する必要があります。
 
+<!-- more -->
+
 ```bash
 $ sudo apt-get update
 $ sudo apt-get install libio-socket-inet6-perl
