@@ -32,7 +32,7 @@ let metadata: MetadataItem = {
   title: '',
   keywords: [],
   description: '',
-  thumbnailUrl: '',
+  thumbnail: '',
 }
 
 const { Provider, Consumer } = createContext(metadata)
@@ -97,8 +97,8 @@ const Metadata = injectIntl<MetadataProps & MetadataItem>(function Metadata({
           {metadata.description && ['og:description', 'description'].map(property => (
             <meta key={property} property={property} content={metadata.description} />
           ))}
-          {metadata.thumbnailUrl && ['og:image', 'twitter:image'].map(property => (
-            <meta key={property} property={property} content={metadata.thumbnailUrl} />
+          {metadata.thumbnail && ['og:image', 'twitter:image'].map(property => (
+            <meta key={property} property={property} content={siteUrl + metadata.thumbnail} />
           ))}
           {metadata.keywords && metadata.keywords.length ? (
             <meta name="keywords" content={metadata.keywords.join()} />
@@ -136,7 +136,7 @@ interface MetadataItem {
   title: string | null
   keywords?: string[]
   description?: string
-  thumbnailUrl?: string
+  thumbnail?: string
 }
 
 const QueryableMetadata: FunctionComponent<MetadataItem> = ({

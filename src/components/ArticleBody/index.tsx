@@ -115,6 +115,7 @@ const ArticleContent = styled.div`
           line-height: 1.42857;
           vertical-align: top;
           border-top: 1px solid #ddd;
+          border-bottom: 1px solid #ddd;
           p {
             padding: 0;
             margin-bottom: 0;

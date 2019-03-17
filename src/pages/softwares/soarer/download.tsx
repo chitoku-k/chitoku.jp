@@ -38,7 +38,7 @@ const SoarerDownloadPage: FunctionComponent<SoarerDownloadPageProps> = ({
   },
 }) => (
   <Layout>
-    <Metadata title={article.attributes.title} />
+    <Metadata title={article.attributes.title} thumbnail="/thumbnails/soarer.png" />
     <Header />
     <Navbar />
     <Content sidebar={article.attributes.sidebar !== false}>

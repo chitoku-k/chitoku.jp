@@ -56,6 +56,7 @@ export const pageQuery = graphql`
   fragment Category on CategoriesYaml {
     name
     path
+    thumbnail
   }
   fragment FileNode on File {
     directory: relativeDirectory
@@ -96,7 +97,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
   },
 }) => (
   <Layout>
-    <Metadata title={article.attributes.title} />
+    <Metadata title={article.attributes.title} thumbnail={article.attributes.category && article.attributes.category.thumbnail || '/thumbnails/default.png'} />
     <JsonLd<BreadcrumbList> item={{
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
