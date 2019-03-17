@@ -23,7 +23,11 @@ ConoHa はキャラクターが可愛いことが主な特徴ですが、ぼく�
 
 ## ハマったところ
 
-さくらの VPS のコントロールパネルで [OS インストール] → [ISO イメージインストール] を選択してインストール作業に入る際に [VirtIO を有効にする] にチェックが入っていると、`SQUASHFS error: Unable to read fragment cache entry` と出てパーティションを切る作業が進められませんでした。
+さくらの VPS のコントロールパネルで [OS インストール] → [ISO イメージインストール] を選択してインストール作業に入る際に [VirtIO を有効にする] にチェックが入っていると、以下のようなエラーが出てパーティションを切る作業が進められませんでした。
+
+```
+SQUASHFS error: Unable to read fragment cache entry
+```
 
 ![](../media/sakura-vps-os-install-iso.png)
 
