@@ -96,11 +96,11 @@ const Metadata = injectIntl<MetadataProps & MetadataItem>(function Metadata({
           {['og:title', 'twitter:title'].map(property => (
             <meta key={property} property={property} content={metadata.title || ''} />
           ))}
+          {['og:image', 'twitter:image'].map(property => (
+            <meta key={property} property={property} content={siteUrl + (metadata.thumbnail || THUMBNAIL_DEFAULT)} />
+          ))}
           {metadata.description && ['og:description', 'description'].map(property => (
             <meta key={property} property={property} content={metadata.description} />
-          ))}
-          {metadata.thumbnail && ['og:image', 'twitter:image'].map(property => (
-            <meta key={property} property={property} content={siteUrl + (metadata.thumbnail || THUMBNAIL_DEFAULT)} />
           ))}
           {metadata.keywords && metadata.keywords.length ? (
             <meta name="keywords" content={metadata.keywords.join()} />
