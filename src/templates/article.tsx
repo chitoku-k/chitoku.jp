@@ -97,7 +97,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
   },
 }) => (
   <Layout>
-    <Metadata title={article.attributes.title} thumbnail={article.attributes.category && article.attributes.category.thumbnail || '/thumbnails/default.png'} />
+    <Metadata title={article.attributes.title} thumbnail={article.attributes.category && article.attributes.category.thumbnail} />
     <JsonLd<BreadcrumbList> item={{
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',

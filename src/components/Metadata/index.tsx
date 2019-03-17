@@ -7,6 +7,8 @@ import { Location } from '@reach/router'
 import messages from './messages'
 import { AboutContactItem } from 'components/About'
 
+const THUMBNAIL_DEFAULT = '/thumbnails/default.png'
+
 const query = graphql`
   query {
     site {
@@ -98,7 +100,7 @@ const Metadata = injectIntl<MetadataProps & MetadataItem>(function Metadata({
             <meta key={property} property={property} content={metadata.description} />
           ))}
           {metadata.thumbnail && ['og:image', 'twitter:image'].map(property => (
-            <meta key={property} property={property} content={siteUrl + metadata.thumbnail} />
+            <meta key={property} property={property} content={siteUrl + (metadata.thumbnail || THUMBNAIL_DEFAULT)} />
           ))}
           {metadata.keywords && metadata.keywords.length ? (
             <meta name="keywords" content={metadata.keywords.join()} />
@@ -136,7 +138,7 @@ interface MetadataItem {
   title: string | null
   keywords?: string[]
   description?: string
-  thumbnail?: string
+  thumbnail?: string | null
 }
 
 const QueryableMetadata: FunctionComponent<MetadataItem> = ({
