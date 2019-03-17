@@ -38,7 +38,7 @@ const PspErrorCodesPage: FunctionComponent<PspErrorCodesPageProps> = ({
   },
 }) => (
   <Layout>
-    <Metadata title={article.attributes.title} />
+    <Metadata title={article.attributes.title} thumbnail="/thumbnails/pspprogramming.png" />
     <Header />
     <Navbar />
     <Content sidebar={article.attributes.sidebar !== false}>

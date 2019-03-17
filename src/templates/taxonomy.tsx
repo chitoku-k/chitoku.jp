@@ -75,7 +75,7 @@ const TaxonomyPage: FunctionComponent<TaxonomyPageProps> = ({
   },
 }) => (
   <Layout>
-    <Metadata title={category ? category.name : tag ? tag.name : null}>
+    <Metadata title={category ? category.name : tag ? tag.name : null} thumbnail={category && category.thumbnail || '/thumbnails/default.png'}>
       {hasPreviousPage(page) ? (
         <link rel="prev" href={getPreviousPagePath(page)} />
       ) : null}

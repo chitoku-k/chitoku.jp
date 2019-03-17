@@ -246,6 +246,7 @@ interface ArticleFile {
 export interface ArticleCategoryItem {
   name: string
   path: string
+  thumbnail: string | null
 }
 
 export interface ArticleTagItem {
