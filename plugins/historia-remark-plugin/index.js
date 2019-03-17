@@ -57,13 +57,13 @@ module.exports = ({
     })(parent)
   })
 
-  // Replace <img /> with <image-zoom />
+  // Replace <img /> with <historia-image />
   for (const { $, node, children } of images) {
     // Pass attributes as JSON property
     // HTML properties are converted to React properties
     children.each(function () {
       $(this).replaceWith(
-        $('<image-zoom />').attr({
+        $('<historia-image />').attr({
           image: JSON.stringify(attributesToProps(this.attribs)),
         })
       )
