@@ -32,4 +32,4 @@ $ yarn install
 ```
 
 [travis-link]:          https://travis-ci.org/chitoku-k/chitoku.jp
-[travis-badge]:         https://img.shields.io/travis/chitoku-k/chitoku.jp.svg?style=flat-square
+[travis-badge]:         https://img.shields.io/travis/chitoku-k/chitoku.jp/master.svg?style=flat-square
