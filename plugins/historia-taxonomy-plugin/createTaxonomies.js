@@ -22,22 +22,24 @@ const createTaxonomies = async ({
     },
   } = await graphql(`
     query {
-      categories: allMarkdownRemark(
-        filter: { frontmatter: { created: { ne: null } } }
-        sort: { fields: [ frontmatter___created ], order: DESC }
-      ) {
-        group(field: frontmatter___category) {
-          name: fieldValue
-          ...ArticleNode
+      categories: allCategoriesYaml {
+        items: nodes {
+          id
+          name
+          path
+          articles {
+            ...Article
+          }
         }
       }
-      tags: allMarkdownRemark(
-        filter: { frontmatter: { created: { ne: null } } }
-        sort: { fields: [ frontmatter___created ], order: DESC }
-      ) {
-        group(field: frontmatter___tags) {
-          name: fieldValue
-          ...ArticleNode
+      tags: allTagsYaml {
+        items: nodes {
+          id
+          name
+          slug
+          articles {
+            ...Article
+          }
         }
       }
     }
@@ -49,13 +51,6 @@ const createTaxonomies = async ({
         }
         tags {
           ...Tag
-        }
-      }
-    }
-    fragment ArticleNode on markdownRemarkGroupConnectionConnection {
-      items: edges {
-        article: node {
-          ...Article
         }
       }
     }
@@ -71,13 +66,9 @@ const createTaxonomies = async ({
     }
   `)
 
-  for (const { name, items } of categories && categories.group || []) {
-    const category = items.map(x => x.article.attributes.category).filter(x => x).find(x => x.name === name)
-    if (!category) {
-      continue
-    }
+  for (const { articles, ...category } of categories && categories.items || []) {
+    const pages = splitPages(articles, limit)
 
-    const pages = splitPages(items, limit)
     for (const [ num, page ] of pages.entries()) {
       createPage({
         path: path.join(category.path, num ? String(num + 1) : 'index'),
@@ -85,7 +76,7 @@ const createTaxonomies = async ({
         context: {
           category,
           tag: null,
-          ids: page.flatMap(x => x.article.id),
+          ids: page.flatMap(x => x.id),
           page: {
             current: num + 1,
             total: pages.length,
@@ -95,13 +86,9 @@ const createTaxonomies = async ({
     }
   }
 
-  for (const { name, items } of tags && tags.group || []) {
-    const tag = items.flatMap(x => x.article.attributes.tags).filter(x => x).find(x => x.name === name)
-    if (!tag) {
-      continue
-    }
+  for (const { articles, ...tag } of tags && tags.items || []) {
+    const pages = splitPages(articles, limit)
 
-    const pages = splitPages(items, limit)
     for (const [ num, page ] of pages.entries()) {
       createPage({
         path: path.join('tag', tag.slug, num ? String(num + 1) : 'index'),
@@ -109,7 +96,7 @@ const createTaxonomies = async ({
         context: {
           category: null,
           tag,
-          ids: page.flatMap(x => x.article.id),
+          ids: page.flatMap(x => x.id),
           page: {
             current: num + 1,
             total: pages.length,

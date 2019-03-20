@@ -7,15 +7,15 @@ const createArticles = async ({
 }) => {
   const {
     data: {
-      pages,
+      categories,
     },
   } = await graphql(`
     query {
-      pages: allMarkdownRemark(
-        sort: { fields: [ frontmatter___created ], order: ASC }
-      ) {
-        group(field: frontmatter___category) {
-          ...ArticleNode
+      categories: allCategoriesYaml {
+        items: nodes {
+          articles {
+            ...Article
+          }
         }
       }
     }
@@ -24,20 +24,7 @@ const createArticles = async ({
       ...File
       attributes: frontmatter {
         created
-        category {
-          ...Category
-        }
       }
-    }
-    fragment ArticleNode on markdownRemarkGroupConnectionConnection {
-      items: edges {
-        article: node {
-          ...Article
-        }
-      }
-    }
-    fragment Category on CategoriesYaml {
-      id
     }
     fragment FileNode on File {
       directory: relativeDirectory
@@ -50,14 +37,11 @@ const createArticles = async ({
     }
   `)
 
-  for (const { items } of pages && pages.group || []) {
-    for (const [ index, { article } ] of items.entries()) {
+  for (const { articles } of categories && categories.items || []) {
+    for (const [ index, article ] of articles.entries()) {
       const {
         id,
         file,
-        attributes: {
-          category,
-        },
       } = article
 
       const directory = file.directory.replace(/^posts(\/|$)/, '')
@@ -66,8 +50,8 @@ const createArticles = async ({
       }
 
       const fullPath = '/' + path.join(directory, file.name)
-      const prev = items[index - 1]
-      const next = items[index + 1]
+      const prev = articles[index + 1]
+      const next = articles[index - 1]
 
       if (exclude.includes(fullPath)) {
         continue
@@ -78,8 +62,8 @@ const createArticles = async ({
         component: path.resolve('src/templates/article.tsx'),
         context: {
           id,
-          prev: prev && prev.article.attributes.created ? prev.article.id : null,
-          next: next && next.article.attributes.created ? next.article.id : null,
+          prev: prev && prev.attributes.created ? prev.id : null,
+          next: next && next.attributes.created ? next.id : null,
         },
       })
     }
