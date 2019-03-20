@@ -7,7 +7,7 @@
     "@babel/core": "^7.4.0",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/plugin-transform-runtime": "^7.3.4",
-    "@babel/plugin-transform-typescript": "^7.3.2",
+    "@babel/plugin-transform-typescript": "^7.4.0",
     "@babel/preset-env": "^7.4.1",
     "@types/algoliasearch": "^3.30.7",
     "@types/is-url": "^1.2.28",
