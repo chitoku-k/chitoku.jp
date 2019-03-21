@@ -88,7 +88,7 @@ exports.onCreateWebpackConfig = ({
 
 Algolia ではこの問題に対して個別で設定を変更するようになっています。日本語圏では Algolia のダッシュボードの [Indices] > [Configuration] > [Relevance optimizations] > [Special characters] > [Keep diacritics on characters] に以下のように濁点・半濁点の文字を書き並べると期待したように「ハック」と「バック」が区別され、検索/表示されるようになりました。
 
-```text
+```
 がぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポ
 ```
 

@@ -32,7 +32,7 @@ category: プログラミング
 <p style="margin: 100px 0;">このフリーズした TweetDeck はお前の人生そのものだ。</p>
 </div>
 
-```plaintext
+```
 (node:43816) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection
 WebDriverError: chrome not reachable
   (Session info: chrome=58.0.3013.3)

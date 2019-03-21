@@ -12,9 +12,10 @@ const splitPages = (items, limit) => {
 
 const createTaxonomies = async ({
   graphql,
-  createPage,
   limit,
 }) => {
+  const taxonomies = []
+
   const {
     data: {
       categories,
@@ -70,7 +71,7 @@ const createTaxonomies = async ({
     const pages = splitPages(articles, limit)
 
     for (const [ num, page ] of pages.entries()) {
-      createPage({
+      taxonomies.push({
         path: path.join(category.path, num ? String(num + 1) : 'index'),
         component: path.resolve('src/templates/taxonomy.tsx'),
         context: {
@@ -90,7 +91,7 @@ const createTaxonomies = async ({
     const pages = splitPages(articles, limit)
 
     for (const [ num, page ] of pages.entries()) {
-      createPage({
+      taxonomies.push({
         path: path.join('tag', tag.slug, num ? String(num + 1) : 'index'),
         component: path.resolve('src/templates/taxonomy.tsx'),
         context: {
@@ -105,6 +106,8 @@ const createTaxonomies = async ({
       })
     }
   }
+
+  return taxonomies
 }
 
 module.exports = createTaxonomies

@@ -18,7 +18,9 @@ Google Chrome はアップデートが自動的に行われますが、バージ
 <!-- more -->
 
 1. Google Chrome で次のページを開く（文字をコピーしてアドレスバーに貼り付け、Enter を押す）
-`chrome://flags/#enable-npapi`
+```
+chrome://flags/#enable-npapi
+```
 1. [NPAPI を有効にする] と書かれた項目の [有効にする] をクリックする
 1. 画面の指示に従って再起動を行う
 
