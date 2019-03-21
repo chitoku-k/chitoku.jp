@@ -2,9 +2,10 @@ const path = require('path')
 
 const createArticles = async ({
   graphql,
-  createPage,
   exclude,
 }) => {
+  const pages = []
+
   const {
     data: {
       categories,
@@ -53,11 +54,7 @@ const createArticles = async ({
       const prev = articles[index + 1]
       const next = articles[index - 1]
 
-      if (exclude.includes(fullPath)) {
-        continue
-      }
-
-      createPage({
+      pages.push({
         path: fullPath,
         component: path.resolve('src/templates/article.tsx'),
         context: {
@@ -68,6 +65,8 @@ const createArticles = async ({
       })
     }
   }
+
+  return pages
 }
 
 module.exports = createArticles

@@ -10,8 +10,19 @@ exports.createPages = async ({
   limit = 3,
   exclude = [],
 }) => {
-  await createTaxonomies({ graphql, createPage, limit })
-  await createArticles({ graphql, createPage, exclude })
+  const paths = new Set()
+  const pages = [
+    ...await createArticles({ graphql }),
+    ...await createTaxonomies({ graphql, limit }),
+  ]
+
+  for (const page of pages) {
+    if (paths.has(page.path) || exclude.includes(page.path)) {
+      continue
+    }
+    createPage(page)
+    paths.add(page)
+  }
 }
 
 const sortArticles = (a, b) => {
