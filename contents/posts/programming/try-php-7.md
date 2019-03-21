@@ -32,7 +32,7 @@ $ vim /usr/local/share/php-build/default_configure_options
 
 3.  次の行を追加（apxs の位置は環境依存）
 
-```plaintext
+```
 --with-apxs2=/usr/bin/apxs
 --enable-mysqlnd
 --with-pdo-mysql=mysqlnd
