@@ -33,6 +33,7 @@ export const pageQuery = graphql`
   }
   fragment Article on MarkdownRemark {
     ...File
+    excerpted
     attributes: frontmatter {
       title
       created
@@ -154,7 +155,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
     <Navbar />
     <Content sidebar={article.attributes.sidebar !== false}>
       <Container>
-        <Article article={article} prev={prev} next={next} excerpted={false} />
+        <Article article={article} prev={prev} next={next} />
       </Container>
     </Content>
     <Footer />
