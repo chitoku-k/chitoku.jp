@@ -150,7 +150,7 @@ chitoku.jp では gatsby-remark-component というプラグインを使って�
 
 <div style="max-width: 500px; margin: 0 auto 30px;" class="monospace">
 
-```text
+```
 +--------------+------------------+--------------------+
 | **ちとくのホームページ年表**                         |
 +--------------+------------------+--------------------+
@@ -189,7 +189,7 @@ chitoku.jp では gatsby-remark-component というプラグインを使って�
 
 <div style="max-width: 500px; margin: 0 auto 10px;" class="monospace">
 
-```text
+```
 +-------+
 | abcde |
 +-------+
