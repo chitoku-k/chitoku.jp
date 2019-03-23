@@ -125,7 +125,7 @@ export const HatenaShareButton = injectIntl<ShareButtonProps>(function HatenaSha
 }) {
   const to = `https://b.hatena.ne.jp/add?mode=confirm&url=${encodeURIComponent(url)}`
   return (
-    <ShareButton to={to} color="#008fde" hover="#008fde" title={formatMessage(messages.share_on, { service: formatMessage(messages.hatena) })}>
+    <ShareButton to={to} color="#008fde" hover="#007bca" title={formatMessage(messages.share_on, { service: formatMessage(messages.hatena) })}>
       <HatenaShareButtonIcon name="hatena" />
     </ShareButton>
   )

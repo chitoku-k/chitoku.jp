@@ -3,6 +3,7 @@ import * as Bootstrap from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { injectIntl } from 'react-intl'
 import { Location } from '@reach/router'
+import FontAwesome from 'react-fontawesome'
 import styled from 'styled-components'
 
 import messages from './messages'
@@ -88,6 +89,7 @@ const SidebarItem = styled.div`
 `
 
 const SidebarItemTitle = styled.h2`
+  display: inline-flex;
   margin: 0 0 10px 0;
   font-size: 20px;
   padding-left: 8px;
@@ -117,6 +119,27 @@ const ShareButtonContainer = styled.div`
   justify-content: center;
 `
 
+const FeedIconLink = styled(Link)`
+  background-color: #f76204;
+  color: white !important;
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  padding: 4px 8px;
+  margin-left: 12px;
+  border-radius: 4px;
+  text-decoration: none !important;
+  transition: background-color 0.3s;
+  font-weight: normal;
+  &:hover {
+    background-color: #e34e00;
+  }
+`
+
+const FeedIcon = styled(FontAwesome)`
+  margin: 0 3px -1px;
+`
+
 const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
   metadata: {
     title,
@@ -140,7 +163,9 @@ const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
   return (
     <SidebarContainer md={3} componentClass="aside">
       <SidebarItem>
-        <SidebarItemTitle>{formatMessage(messages.share)}</SidebarItemTitle>
+        <SidebarItemTitle>
+          {formatMessage(messages.share)}
+        </SidebarItemTitle>
         <ShareButtonContainer>
           <Location>
             {({ location }) => {
@@ -159,7 +184,15 @@ const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
         </ShareButtonContainer>
       </SidebarItem>
       <SidebarItem>
-        <SidebarItemTitle>{formatMessage(messages.latest_articles)}</SidebarItemTitle>
+        <SidebarItemTitle>
+          <Link to="/latest">
+            {formatMessage(messages.latest_articles)}
+          </Link>
+          <FeedIconLink to="/feed/atom/">
+            <FeedIcon name="rss" />
+            RSS
+          </FeedIconLink>
+        </SidebarItemTitle>
         <SidebarItemList>
           {latest.items.map(({ article }, index) => (
             <li key={index}>
@@ -171,7 +204,9 @@ const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
         </SidebarItemList>
       </SidebarItem>
       <SidebarItem>
-        <SidebarItemTitle>{formatMessage(messages.links)}</SidebarItemTitle>
+        <SidebarItemTitle>
+          {formatMessage(messages.links)}
+        </SidebarItemTitle>
         <SidebarItemList>
           {items.map(item => (
             <NavItem key={item.name} {...item} />

@@ -1,5 +1,6 @@
 import React from 'react'
 import { injectIntl } from 'react-intl'
+import styled from 'styled-components'
 
 import messages from './messages'
 import Metadata from 'components/Metadata'
@@ -7,6 +8,10 @@ import Link from 'components/Link'
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
+
+const LinksContainer = styled.ul`
+  line-height: 1.8;
+`
 
 const Links = injectIntl<LinksProps>(({
   links: {
@@ -22,13 +27,13 @@ const Links = injectIntl<LinksProps>(({
     </Metadata>
     <ArticleContainer>
       <ArticleHeader title={formatMessage(messages.title)} />
-      <ul>
+      <LinksContainer>
         {items.map(({ name, url }, index) => (
           <li key={index}>
             <Link to={url} title={name}>{name}</Link>
           </li>
         ))}
-      </ul>
+      </LinksContainer>
     </ArticleContainer>
   </Container>
 ))
