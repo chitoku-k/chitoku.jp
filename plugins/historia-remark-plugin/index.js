@@ -6,12 +6,12 @@ const attributesToProps = require('html-react-parser/lib/attributes-to-props')
 
 module.exports = ({
   markdownAST,
-}, pluginOptions) => {
+}) => {
   const definition = definitions(markdownAST)
   const images = []
 
   // Traverse through HTML nodes
-  visit(markdownAST, 'html', (node, ancestors) => {
+  visit(markdownAST, 'html', node => {
     const $ = cheerio.load(node.value)
 
     if ($('img').length) {
