@@ -62,11 +62,8 @@ exports.onPostBuild = async ({
   const feed = new Feed({
     id: siteUrl,
     title: description,
+    link: siteUrl,
     copyright: author,
-    feedLinks: {
-      atom: siteUrl + '/feed/atom/',
-      rss: siteUrl + '/feed/rss2/',
-    },
   })
 
   for (const { article } of items) {
@@ -94,21 +91,25 @@ exports.onPostBuild = async ({
   await fs.mkdir(path.resolve('public/feed/atom'), { recursive: true })
   await fs.mkdir(path.resolve('public/feed/rss2'), { recursive: true })
 
-  const atom = feed.atom1()
-  const rss = feed.rss2()
+  const createFeed = url => {
+    feed.options.feedLinks = {
+      atom: siteUrl + url,
+    }
+    return feed
+  }
 
   await Promise.all([
     fs.writeFile(
       path.resolve('public/feed/index.xml'),
-      rss,
+      createFeed('/feed/').rss2(),
     ),
     fs.writeFile(
       path.resolve('public/feed/atom/index.xml'),
-      atom,
+      createFeed('/feed/atom/').atom1(),
     ),
     fs.writeFile(
       path.resolve('public/feed/rss2/index.xml'),
-      rss,
+      createFeed('/feed/rss2/').rss2(),
     ),
   ])
 }
