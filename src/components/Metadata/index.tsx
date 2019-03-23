@@ -1,7 +1,7 @@
 import React, { FunctionComponent, createContext } from 'react'
 import { Helmet } from 'react-helmet'
 import { injectIntl } from 'react-intl'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { Location } from '@reach/router'
 
 import messages from './messages'
@@ -61,21 +61,24 @@ export function withMetadata<T>(
   }
 }
 
-const Metadata = injectIntl<MetadataProps & MetadataItem>(function Metadata({
+const Metadata = injectIntl<MetadataItem>(function Metadata({
   children,
-  about: {
-    contacts,
-  },
-  site: {
-    siteMetadata: {
-      siteUrl,
-    },
-  },
   intl: {
     formatMessage,
   },
   ...newState
 }) {
+  const {
+    site: {
+      siteMetadata: {
+        siteUrl,
+      },
+    },
+    about: {
+      contacts,
+    },
+  } = useStaticQuery(query) as MetadataQueryResult
+
   metadata = {
     ...metadata,
     ...newState,
@@ -122,7 +125,7 @@ export interface WithMetadataProps {
   metadata: MetadataItem
 }
 
-interface MetadataProps {
+interface MetadataQueryResult {
   site: {
     siteMetadata: {
       siteUrl: string
@@ -141,14 +144,4 @@ interface MetadataItem {
   thumbnail?: string | null
 }
 
-const QueryableMetadata: FunctionComponent<MetadataItem> = ({
-  ...rest
-}) => (
-  <StaticQuery query={query}>
-    {({ about, site }: MetadataProps) => (
-      <Metadata about={about} site={site} {...rest} />
-    )}
-  </StaticQuery>
-)
-
-export default QueryableMetadata
+export default Metadata

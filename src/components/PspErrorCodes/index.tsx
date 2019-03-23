@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import * as Bootstrap from 'react-bootstrap'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { injectIntl } from 'react-intl'
 import styled from 'styled-components'
 
@@ -28,14 +28,17 @@ const query = graphql`
   }
 `
 
-const PspErrorCodes = injectIntl<PspErrorCodesProps>(function PspErrorCodes({
-  errors: {
-    group,
-  },
+const PspErrorCodes = injectIntl(function PspErrorCodes({
   intl: {
     formatMessage,
   },
 }) {
+  const {
+    errors: {
+      group,
+    },
+  } = useStaticQuery(query) as PspErrorCodesQueryResult
+
   group.sort(({ items: [ a ] }, { items: [ b ] }) => a.error.code - b.error.code)
 
   return (
@@ -65,7 +68,7 @@ const PspErrorCodes = injectIntl<PspErrorCodesProps>(function PspErrorCodes({
   )
 })
 
-interface PspErrorCodesProps {
+interface PspErrorCodesQueryResult {
   errors: {
     group: {
       title: string
@@ -82,12 +85,4 @@ interface PspErrorItem {
   message: string
 }
 
-const QueryablePspErrorCodes: FunctionComponent = () => (
-  <StaticQuery query={query}>
-    {({ errors }: PspErrorCodesProps) => (
-      <PspErrorCodes errors={errors} />
-    )}
-  </StaticQuery>
-)
-
-export default QueryablePspErrorCodes
+export default PspErrorCodes
