@@ -43,7 +43,7 @@ const SoarerDownloadPage: FunctionComponent<SoarerDownloadPageProps> = ({
     <Navbar />
     <Content sidebar={article.attributes.sidebar !== false}>
       <Container>
-        <Article article={article} excerpted={false} components={{
+        <Article article={article} components={{
           'soarer-download': SoarerDownload,
         }} />
       </Container>

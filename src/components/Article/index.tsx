@@ -117,7 +117,6 @@ const isTag = (tag: ArticleTagItem | null): tag is ArticleTagItem => Boolean(tag
 
 const Article = injectIntl<ArticleProps>(function Article({
   children,
-  excerpted,
   components = {},
   article: {
     file,
@@ -130,6 +129,7 @@ const Article = injectIntl<ArticleProps>(function Article({
     },
     htmlAst,
     excerptAst,
+    excerpted,
   },
   prev,
   next,
@@ -192,7 +192,7 @@ const Article = injectIntl<ArticleProps>(function Article({
           'historia-image': ImageZoomWrapper,
           'historia-link': Link,
         }} />
-        {excerpted ? (
+        {excerpted && excerptAst ? (
           <ReadMoreContainer>
             <ReadMoreButton to={path}>{formatMessage(messages.more)}</ReadMoreButton>
           </ReadMoreContainer>
@@ -226,6 +226,7 @@ interface ArticleItemBase {
   file: ArticleFile
   htmlAst?: {}
   excerptAst?: {}
+  excerpted: boolean
 }
 
 export interface FullArticleItem extends ArticleItemBase {
@@ -258,7 +259,6 @@ interface ArticleProps {
   article: ArticleItem
   prev?: ArticleItem | null
   next?: ArticleItem | null
-  excerpted: boolean
   components?: ArticleComponentCollection
 }
 

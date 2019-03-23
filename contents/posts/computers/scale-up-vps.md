@@ -13,8 +13,6 @@ SSD の容量とかスペックが足りなくなってきたのでスケール�
 1. [さくらのVPS ディスク拡張手順 (標準OS CentOS7.2) – さくらのVPSニュース](http://vps-news.sakura.ad.jp/scaleup/disk-expansion_centos7/) を読む
 1. 祈りながら再起動する
 
-<!-- more -->
-
 ## メモ
 
 `fdisk` はパーティションテーブルが GPT だと使えないので代わりに `gdisk` を使う。

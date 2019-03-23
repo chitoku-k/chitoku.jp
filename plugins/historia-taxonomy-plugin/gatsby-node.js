@@ -71,5 +71,14 @@ exports.createResolvers = ({
         },
       },
     },
+    MarkdownRemark: {
+      excerpted: {
+        type: 'Boolean',
+        resolve(source, args, context, info) {
+          // TODO: read excerpt_separator setting
+          return source.rawMarkdownBody.includes('\n<!-- more -->\n')
+        },
+      },
+    },
   })
 }

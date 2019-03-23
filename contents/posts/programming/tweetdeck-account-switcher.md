@@ -18,8 +18,6 @@ TweetDeck はアカウントの選択が複数選択可能な方式ですが、�
 
 ![](../media/tweetdeck_account_switcher_enabled.gif)
 
-<!-- more -->
-
 ## ソース
 
 提供の終了につき Issue や Pull Requests の受付は停止しています。  
