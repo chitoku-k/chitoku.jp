@@ -1,15 +1,17 @@
 const createTaxonomies = require('./createTaxonomies')
 const createArticles = require('./createArticles')
 
-exports.createPages = async ({
-  graphql,
-  actions: {
-    createPage,
+exports.createPages = async (
+  {
+    graphql,
+    actions: {
+      createPage,
+    },
+  }, {
+    limit = 3,
+    exclude = [],
   },
-}, {
-  limit = 3,
-  exclude = [],
-}) => {
+) => {
   const paths = new Set()
   const pages = [
     ...await createArticles({ graphql }),
@@ -44,7 +46,7 @@ exports.createResolvers = ({
         type: [
           'MarkdownRemark',
         ],
-        resolve(source, args, context, info) {
+        resolve(source, args, context) {
           const articles = context.nodeModel.getAllNodes({
             type: 'MarkdownRemark',
           })
@@ -60,7 +62,7 @@ exports.createResolvers = ({
         type: [
           'MarkdownRemark',
         ],
-        resolve(source, args, context, info) {
+        resolve(source, args, context) {
           const articles = context.nodeModel.getAllNodes({
             type: 'MarkdownRemark',
           })
@@ -74,7 +76,7 @@ exports.createResolvers = ({
     MarkdownRemark: {
       excerpted: {
         type: 'Boolean',
-        resolve(source, args, context, info) {
+        resolve(source) {
           // TODO: read excerpt_separator setting
           return source.rawMarkdownBody.includes('\n<!-- more -->\n')
         },

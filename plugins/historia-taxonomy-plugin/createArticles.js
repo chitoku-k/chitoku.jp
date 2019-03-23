@@ -2,7 +2,6 @@ const path = require('path')
 
 const createArticles = async ({
   graphql,
-  exclude,
 }) => {
   const pages = []
 
