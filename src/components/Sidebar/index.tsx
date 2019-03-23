@@ -188,7 +188,7 @@ const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
           <Link to="/latest">
             {formatMessage(messages.latest_articles)}
           </Link>
-          <FeedIconLink to="/feed/atom/">
+          <FeedIconLink to={siteUrl + '/feed/atom/'} target="_blank">
             <FeedIcon name="rss" />
             RSS
           </FeedIconLink>

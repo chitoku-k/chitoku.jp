@@ -115,6 +115,8 @@ const Metadata = injectIntl<MetadataItem>(function Metadata({
               <link key={index} rel="me" href={url as string} />
             ))}
           {children}
+          <link rel="alternate" type="application/rss+xml" href={siteUrl + '/feed/rss2/'} />
+          <link rel="alternate" type="application/atom+xml" href={siteUrl + '/feed/atom/'} />
         </Helmet>
       )}
     </Location>
