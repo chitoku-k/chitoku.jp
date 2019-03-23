@@ -1,7 +1,7 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { injectIntl } from 'react-intl'
 import styled from 'styled-components'
 
@@ -46,15 +46,18 @@ const query = graphql`
   }
 `
 
-const SoarerHistory = injectIntl<SoarerHistoryProps>(function SoarerHistory({
-  updates: {
-    items,
-  },
+const SoarerHistory = injectIntl<SoarerHistoryQueryResult>(function SoarerHistory({
   intl: {
     formatMessage,
     formatDate,
   },
 }) {
+  const {
+    updates: {
+      items,
+    },
+  } = useStaticQuery(query) as SoarerHistoryQueryResult
+
   return (
     <>
       {items.map(({ update }) => (
@@ -93,7 +96,7 @@ const SoarerHistory = injectIntl<SoarerHistoryProps>(function SoarerHistory({
   )
 })
 
-interface SoarerHistoryProps {
+interface SoarerHistoryQueryResult {
   updates: {
     items: {
       update: SoarerHistoryItem
@@ -116,12 +119,4 @@ export interface SoarerHistoryItem {
   }[]
 }
 
-const QueryableSoarerHistory: FunctionComponent = () => (
-  <StaticQuery query={query}>
-    {({ updates }: SoarerHistoryProps) => (
-      <SoarerHistory updates={updates} />
-    )}
-  </StaticQuery>
-)
-
-export default QueryableSoarerHistory
+export default SoarerHistory

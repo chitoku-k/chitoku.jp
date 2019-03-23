@@ -1,7 +1,7 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { injectIntl } from 'react-intl'
 import styled from 'styled-components'
 
@@ -77,16 +77,19 @@ const SoarerDownloadDescription = styled.div`
   `}
 `
 
-const SoarerDownload = injectIntl<SoarerDownloadProps>(function SoarerDownload({
-  updates: {
-    items: [
-      { update },
-    ],
-  },
+const SoarerDownload = injectIntl<SoarerDownloadQueryResult>(function SoarerDownload({
   intl: {
     formatMessage,
   },
 }) {
+  const {
+    updates: {
+      items: [
+        { update },
+      ],
+    },
+  } = useStaticQuery(query) as SoarerDownloadQueryResult
+
   return (
     <>
       <SoarerDownloadContainer>
@@ -113,7 +116,7 @@ const SoarerDownload = injectIntl<SoarerDownloadProps>(function SoarerDownload({
   )
 })
 
-interface SoarerDownloadProps {
+interface SoarerDownloadQueryResult {
   updates: {
     items: {
       update: SoarerHistoryItem
@@ -121,12 +124,4 @@ interface SoarerDownloadProps {
   }
 }
 
-const QueryableSoarerDownload: FunctionComponent = () => (
-  <StaticQuery query={query}>
-    {({ updates }: SoarerDownloadProps) => (
-      <SoarerDownload updates={updates} />
-    )}
-  </StaticQuery>
-)
-
-export default QueryableSoarerDownload
+export default SoarerDownload

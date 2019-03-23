@@ -1,6 +1,6 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import * as Bootstrap from 'react-bootstrap'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { injectIntl } from 'react-intl'
 import { Location } from '@reach/router'
 import styled from 'styled-components'
@@ -15,7 +15,7 @@ import {
 } from './buttons'
 import { ArticleItem, getPathFromArticleFile } from 'components/Article'
 import { NavigationLinkItem } from 'components/Navbar'
-import { withMetadata, WithMetadataProps, MetadataProvider } from 'components/Metadata'
+import { withMetadata } from 'components/Metadata'
 import { media } from 'components/Layout'
 import NavItem from 'components/NavItem'
 import Link from 'components/Link'
@@ -117,23 +117,26 @@ const ShareButtonContainer = styled.div`
   justify-content: center;
 `
 
-const Sidebar = injectIntl<SidebarProps>(withMetadata(function Sidebar({
+const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
   metadata: {
     title,
   },
-  site: {
-    siteMetadata: {
-      siteUrl,
-    },
-  },
-  navigation: {
-    items,
-  },
-  latest,
   intl: {
     formatMessage,
   },
 }) {
+  const {
+    site: {
+      siteMetadata: {
+        siteUrl,
+      },
+    },
+    navigation: {
+      items,
+    },
+    latest,
+  } = useStaticQuery(query) as SidebarQueryResult
+
   return (
     <SidebarContainer md={3} componentClass="aside">
       <SidebarItem>
@@ -179,7 +182,7 @@ const Sidebar = injectIntl<SidebarProps>(withMetadata(function Sidebar({
   )
 }))
 
-interface SidebarProps {
+interface SidebarQueryResult {
   site: {
     siteMetadata: {
       siteUrl: string
@@ -195,14 +198,4 @@ interface SidebarProps {
   }
 }
 
-const QueryableSidebar: FunctionComponent = () => (
-  <StaticQuery query={query}>
-    {({ ...props }: WithMetadataProps & SidebarProps) => (
-      <MetadataProvider>
-        <Sidebar {...props} />
-      </MetadataProvider>
-    )}
-  </StaticQuery>
-)
-
-export default QueryableSidebar
+export default Sidebar

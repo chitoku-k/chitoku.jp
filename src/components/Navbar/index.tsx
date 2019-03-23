@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState } from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { Location } from '@reach/router'
 import styled from 'styled-components'
 
@@ -99,11 +99,13 @@ const SearchIcon = styled.li`
   `}
 `
 
-const Navbar: FunctionComponent<NavbarProps> = ({
-  navigation: {
-    items,
-  },
-}) => {
+const Navbar: FunctionComponent = () => {
+  const {
+    navigation: {
+      items,
+    },
+  } = useStaticQuery(query) as NavbarQueryResult
+
   const [ search, setSearch ] = useState(false)
 
   const openSearch = (): void => setSearch(true)
@@ -139,18 +141,10 @@ export interface NavigationLinkItem {
   items?: NavigationLinkItem[]
 }
 
-interface NavbarProps {
+interface NavbarQueryResult {
   navigation: {
     items: NavigationLinkItem[]
   }
 }
 
-const QueryableNavbar: FunctionComponent = () => (
-  <StaticQuery query={query}>
-    {({ navigation }: NavbarProps) => (
-      <Navbar navigation={navigation} />
-    )}
-  </StaticQuery>
-)
-
-export default QueryableNavbar
+export default Navbar
