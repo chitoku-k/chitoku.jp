@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { injectIntl } from 'react-intl'
