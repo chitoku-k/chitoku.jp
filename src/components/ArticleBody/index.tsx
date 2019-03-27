@@ -101,6 +101,11 @@ const ArticleContent = styled.div`
     &:not(.gatsby-resp-image-image) {
       max-width: 100%;
     }
+    &.emoji {
+      margin-top: 0;
+      width: 1.25em;
+      height: auto;
+    }
   }
   table:not(.highlight) {
     margin: 20px 0 10px;
@@ -198,6 +203,9 @@ const ArticleContent = styled.div`
     pre[class*="language-"],
     code[class*="language-"] {
       font-family: monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      img.emoji {
+        width: 1em;
+      }
     }
   }
 `

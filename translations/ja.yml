@@ -25,6 +25,8 @@ components:
     title: リンク
   Article:
     more: 続きを読む »
+  Latest:
+    title: 最近の投稿
   NotFound:
     try: 次の方法をお試しください。
     home: トップページ
