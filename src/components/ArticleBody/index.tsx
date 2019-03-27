@@ -103,7 +103,7 @@ const ArticleContent = styled.div`
     }
     &.emoji {
       margin-top: 0;
-      width: 1em;
+      width: 1.25em;
       height: auto;
     }
   }
@@ -203,6 +203,9 @@ const ArticleContent = styled.div`
     pre[class*="language-"],
     code[class*="language-"] {
       font-family: monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      img.emoji {
+        width: 1em;
+      }
     }
   }
 `
