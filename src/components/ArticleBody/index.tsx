@@ -101,6 +101,11 @@ const ArticleContent = styled.div`
     &:not(.gatsby-resp-image-image) {
       max-width: 100%;
     }
+    &.emoji {
+      margin-top: 0;
+      width: 1em;
+      height: auto;
+    }
   }
   table:not(.highlight) {
     margin: 20px 0 10px;
