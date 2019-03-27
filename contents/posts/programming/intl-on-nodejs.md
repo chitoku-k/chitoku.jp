@@ -1,6 +1,6 @@
 ---
 title: Node.js の Intl などが CI 上でも動くようにする
-created: 2019-03-26T00:22:45+0900
+created: 2019-03-26T00:22:45+09:00
 category: プログラミング
 tags:
   - JavaScript

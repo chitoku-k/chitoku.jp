@@ -1,6 +1,6 @@
 ---
 title: 'Vim で Markdown の改行をおしゃれにする'
-created: 2019-03-17T23:21:21+0900
+created: 2019-03-17T23:21:21+09:00
 category: コンピューター
 tags:
   - Vim

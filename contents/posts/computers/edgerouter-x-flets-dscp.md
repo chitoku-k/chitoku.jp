@@ -1,6 +1,6 @@
 ---
 title: EdgeRouter X のファイアウォールでフレッツ光 の IPv6 から SSH が繫がらない問題を解決する
-created: 2019-03-23T16:55:37+0900
+created: 2019-03-23T16:55:37+09:00
 category: コンピューター
 tags:
   - EdgeRouter
