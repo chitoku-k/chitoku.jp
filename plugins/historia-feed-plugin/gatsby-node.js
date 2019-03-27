@@ -2,7 +2,7 @@ const { description, author } = require('../../package.json')
 const { Feed } = require('feed')
 const fs = require('fs').promises
 const path = require('path')
-const removeMd = require('remove-markdown')
+const stripHtml = require('string-strip-html')
 
 exports.onPostBuild = async ({
   graphql,
@@ -34,7 +34,7 @@ exports.onPostBuild = async ({
       }
     }
     fragment Article on MarkdownRemark {
-      excerpt
+      excerpt(format: HTML)
       ...File
       attributes: frontmatter {
         title
@@ -83,7 +83,7 @@ exports.onPostBuild = async ({
       id: url,
       link: url,
       title: attributes.title,
-      content: removeMd(excerpt),
+      content: stripHtml(excerpt),
       date: new Date(attributes.created),
     })
   }
