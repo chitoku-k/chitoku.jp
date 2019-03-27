@@ -187,13 +187,12 @@ const ArticleContent = styled.div`
   *:not(pre) > code[class*="language-"] {
     padding: 2px 4px;
   }
-  .monospace {
-    pre[class*="language-"],
-    code[class*="language-"] {
-      font-family: "MS Gothic", "Osaka-mono", monospace;
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    .monospace & {
+      font-family: "MS Gothic", "Osaka-mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     }
-  }
-  .gatsby-highlight {
     .token.operator {
       background: none;
     }
