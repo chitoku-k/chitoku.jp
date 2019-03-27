@@ -10,4 +10,7 @@ $font-family-base:
   Verdana, Meiryo,
   // macOS
   "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3",
-  sans-serif;
+  // Fallback
+  sans-serif,
+  // Emoji
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

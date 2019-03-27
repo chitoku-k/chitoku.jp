@@ -187,15 +187,17 @@ const ArticleContent = styled.div`
   *:not(pre) > code[class*="language-"] {
     padding: 2px 4px;
   }
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    .token.operator {
+      background: none;
+    }
+  }
   .monospace {
     pre[class*="language-"],
     code[class*="language-"] {
-      font-family: "MS Gothic", "Osaka-mono", monospace;
-    }
-  }
-  .gatsby-highlight {
-    .token.operator {
-      background: none;
+      font-family: monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     }
   }
 `
