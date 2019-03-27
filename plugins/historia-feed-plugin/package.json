@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "dependencies": {
     "feed": "^2.0.4",
-    "remove-markdown": "^0.3.0"
+    "string-strip-html": "^4.0.10"
   }
 }
