@@ -1,6 +1,6 @@
 ---
 title: EdgeRouter X の DDNS で Cloudflare DNS の IPv6 アドレスを更新させる
-created: 2019-03-13T23:50:49+0900
+created: 2019-03-13T23:50:49+09:00
 category: コンピューター
 tags:
   - EdgeRouter
