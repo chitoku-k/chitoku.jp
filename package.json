@@ -63,7 +63,7 @@
     "prismjs": "^1.16.0",
     "react": "^16.8.5",
     "react-bootstrap": "^0.32.4",
-    "react-dom": "^16.8.5",
+    "react-dom": "^16.8.6",
     "react-fontawesome": "^1.6.1",
     "react-helmet": "^6.0.0-beta",
     "react-highlight-words": "^0.16.0",
