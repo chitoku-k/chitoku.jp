@@ -61,7 +61,7 @@
     "lint-staged": "^8.1.5",
     "node-sass": "^4.11.0",
     "prismjs": "^1.16.0",
-    "react": "^16.8.5",
+    "react": "^16.8.6",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.8.5",
     "react-fontawesome": "^1.6.1",
