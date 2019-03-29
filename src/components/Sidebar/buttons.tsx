@@ -15,6 +15,10 @@ interface TwitterShareButtonProps extends ShareButtonProps {
   title: string | null
 }
 
+interface PocketShareButtonProps extends ShareButtonProps {
+  title: string | null
+}
+
 interface ShareLinkProps extends GatsbyLinkProps<{}> {
   color: string
   hover: string
@@ -103,16 +107,17 @@ export const FacebookShareButton = injectIntl<ShareButtonProps>(function Faceboo
   )
 })
 
-export const GooglePlusShareButton = injectIntl<ShareButtonProps>(function GooglePlusShareButton({
+export const PocketShareButton = injectIntl<PocketShareButtonProps>(function PocketShareButtonProps({
   url,
+  title,
   intl: {
     formatMessage,
   },
 }) {
-  const to = `https://plus.google.com/share?url=${encodeURIComponent(url)}`
+  const to = `https://getpocket.com/edit?title=${encodeURIComponent(title || '')}&url=${encodeURIComponent(url)}`
   return (
-    <ShareButton to={to} color="#dd4b39" hover="#c93725" title={formatMessage(messages.share_on, { service: formatMessage(messages.google_plus) })}>
-      <ShareButtonIcon name="google-plus" />
+    <ShareButton to={to} color="#ff2651" hover="#eb126e" title={formatMessage(messages.share_on, { service: formatMessage(messages.pocket) })}>
+      <ShareButtonIcon name="get-pocket" />
     </ShareButton>
   )
 })

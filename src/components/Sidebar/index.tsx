@@ -10,7 +10,7 @@ import messages from './messages'
 import {
   TwitterShareButton,
   FacebookShareButton,
-  GooglePlusShareButton,
+  PocketShareButton,
   HatenaShareButton,
   TumblrShareButton,
 } from './buttons'
@@ -213,7 +213,7 @@ const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
                 <>
                   <TwitterShareButton title={title} url={url} />
                   <FacebookShareButton url={url} />
-                  <GooglePlusShareButton url={url} />
+                  <PocketShareButton title={title} url={url} />
                   <HatenaShareButton url={url} />
                   <TumblrShareButton url={url} />
                 </>
