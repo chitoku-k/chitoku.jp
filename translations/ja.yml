@@ -39,7 +39,7 @@ components:
     administrator: 管理人
     complain_to_administrator: '{administrator}に文句を言う'
   Sidebar:
-    links: リンク
+    links: 投稿リンク
     share: 共有
     hatena: はてなブックマーク
     pocket: Pocket

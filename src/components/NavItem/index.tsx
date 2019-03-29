@@ -82,7 +82,6 @@ const NavItem: FunctionComponent<NavItemProps & BootstrapNavItemProps & Navigati
   dropdown,
   className = '',
   /* eslint-disable @typescript-eslint/no-unused-vars */
-  menu,
   activeHref,
   activeKey,
   /* eslint-enable @typescript-eslint/no-unused-vars */

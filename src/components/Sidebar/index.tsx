@@ -29,10 +29,9 @@ const query = graphql`
       }
     }
     navigation: navigationsYaml {
-      items {
+      sidebar {
         name
         to
-        menu
         items {
           name
           to
@@ -112,6 +111,10 @@ const SidebarItemList = styled.ul`
     margin-bottom: 3px;
     &.iconless {
       list-style: none;
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
   ${media.greaterThan('small-pc')`
@@ -194,7 +197,7 @@ const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
       },
     },
     navigation: {
-      items,
+      sidebar,
     },
     latest,
   } = useStaticQuery(query) as SidebarQueryResult
@@ -267,7 +270,7 @@ const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
           {formatMessage(messages.links)}
         </SidebarItemTitle>
         <SidebarItemList>
-          {items.map(item => (
+          {sidebar.map(item => (
             <NavItem key={item.name} {...item} />
           ))}
         </SidebarItemList>
@@ -283,7 +286,7 @@ interface SidebarQueryResult {
     }
   }
   navigation: {
-    items: NavigationLinkItem[]
+    sidebar: NavigationLinkItem[]
   }
   latest: {
     items: {
