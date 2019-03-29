@@ -49,6 +49,9 @@ const query = graphql`
           attributes: frontmatter {
             title
             created
+            category {
+              ...Category
+            }
           }
           ...File
         }
@@ -107,10 +110,45 @@ const SidebarItemList = styled.ul`
   margin-bottom: 0;
   li {
     margin-bottom: 3px;
+    &.iconless {
+      list-style: none;
+    }
   }
   ${media.greaterThan('small-pc')`
     padding-left: 28px;
   `}
+`
+
+const SidebarItemListIcon = styled(FontAwesome)`
+  margin-left: -1.75em;
+  padding-right: 1.75em;
+  width: 1.5em;
+`
+
+const SidebarItemAttribute = styled.div`
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 4px;
+  margin: 4px 4px 4px 0;
+  padding: 4px 8px;
+  font-size: 75%;
+  font-variant-numeric: tabular-nums;
+  .fa {
+    margin-right: 4px;
+  }
+`
+
+const SidebarItemDate = styled(SidebarItemAttribute)`
+  border-color: #337ab7;
+  color: #337ab7;
+`
+
+const SidebarItemCategory = styled(SidebarItemAttribute)`
+  border-color: #346b4a;
+  &,
+  a {
+    color: #346b4a;
+  }
 `
 
 const ShareButtonContainer = styled.div`
@@ -145,6 +183,7 @@ const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
     title,
   },
   intl: {
+    formatDate,
     formatMessage,
   },
 }) {
@@ -195,10 +234,30 @@ const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
         </SidebarItemTitle>
         <SidebarItemList>
           {latest.items.map(({ article }, index) => (
-            <li key={index}>
+            <li className="iconless" key={index}>
+              <SidebarItemListIcon name="coffee" />
               <Link to={getPathFromArticleFile(article.file)}>
                 {article.attributes.title}
               </Link>
+              <br />
+              <SidebarItemDate>
+                <FontAwesome name="calendar-o" />
+                {article.attributes.created ? (
+                  formatDate(article.attributes.created, {
+                    year: 'numeric',
+                    month: 'narrow',
+                    day: 'numeric',
+                  })
+                ) : null}
+              </SidebarItemDate>
+              <SidebarItemCategory>
+                <FontAwesome name="folder-open-o" />
+                {article.attributes.category ? (
+                  <Link to={article.attributes.category.path}>
+                    {article.attributes.category.name}
+                  </Link>
+                ) : null}
+              </SidebarItemCategory>
             </li>
           ))}
         </SidebarItemList>
