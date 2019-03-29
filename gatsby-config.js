@@ -68,6 +68,12 @@ module.exports = {
         excerpt_separator: '<!-- more -->',
         plugins: [
           { resolve: 'gatsby-remark-attr' },
+          {
+            resolve: 'gatsby-remark-autolink-headers',
+            options: {
+              offsetY: 10,
+            },
+          },
           { resolve: 'gatsby-remark-component' },
           { resolve: 'gatsby-remark-copy-linked-files' },
           { resolve: 'gatsby-remark-external-links' },

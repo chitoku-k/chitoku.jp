@@ -44,6 +44,10 @@ const ArticleContent = styled.div`
       padding: 6px 0;
     `}
   }
+  a.anchor {
+    margin-left: -65px;
+    width: 55px;
+  }
   p {
     font-size: 11pt;
     line-height: 1.8;
