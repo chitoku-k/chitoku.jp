@@ -7,6 +7,7 @@ import { media } from 'components/Layout'
 import SearchResult, { getSearchText } from 'components/SearchResult'
 
 const MainContentContainer = styled(Bootstrap.Col)`
+  position: static;
   padding: 0;
   width: 100%;
   .sidebar & {

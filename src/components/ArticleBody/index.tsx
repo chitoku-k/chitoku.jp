@@ -44,6 +44,15 @@ const ArticleContent = styled.div`
       padding: 6px 0;
     `}
   }
+  a.anchor {
+    margin-left: -65px;
+    width: 55px;
+    ${media.lessThan('sp')`
+      margin-left: 0;
+      width: auto;
+      float: right;
+    `}
+  }
   p {
     font-size: 11pt;
     line-height: 1.8;
@@ -194,7 +203,8 @@ const ArticleContent = styled.div`
   }
   pre[class*="language-"],
   code[class*="language-"] {
-    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    -webkit-overflow-scrolling: touch;
+    font-family: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     .token.operator {
       background: none;
     }

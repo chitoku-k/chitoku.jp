@@ -29,7 +29,7 @@ module.exports = ({
 
     modifyChildren((node, index, parent) => {
       const ctx = node.type === 'link' ? node : definition(node.identifier)
-      if (!ctx) {
+      if (!ctx || (ctx.data && ctx.data.hProperties && ctx.data.hProperties['aria-label'])) {
         return
       }
 
