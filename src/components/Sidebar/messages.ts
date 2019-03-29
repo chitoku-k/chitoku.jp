@@ -6,7 +6,7 @@ export default defineMessages({
   share_on: '{service} で共有',
   twitter: 'Twitter',
   facebook: 'Facebook',
-  google_plus: 'Google+',
+  pocket: 'Pocket',
   hatena: 'はてなブックマーク',
   tumblr: 'Tumblr',
   latest_articles: '最近の投稿',

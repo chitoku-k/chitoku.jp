@@ -42,11 +42,11 @@ components:
     links: リンク
     share: 共有
     hatena: はてなブックマーク
+    pocket: Pocket
     tumblr: Tumblr
     twitter: Twitter
     facebook: Facebook
     share_on: '{service} で共有'
-    google_plus: Google+
     latest_articles: 最近の投稿
   Metadata:
     title: ちとくのホームページ
