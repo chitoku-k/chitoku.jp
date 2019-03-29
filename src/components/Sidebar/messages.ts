@@ -1,7 +1,7 @@
 import { defineMessages } from 'react-intl'
 
 export default defineMessages({
-  links: 'リンク',
+  links: '投稿リンク',
   share: '共有',
   share_on: '{service} で共有',
   twitter: 'Twitter',

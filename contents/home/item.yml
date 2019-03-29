@@ -13,7 +13,7 @@ items:
     component: RecoTwIcon
     name: RecoTw Explorer
     to: https://recotw.chitoku.jp
-    description: RecoTw の閲覧 / 登録用 Web アプリケーションです。RecoTw は G2 氏制作の黒歴史ツイート登録サービスです。
+    description: RecoTw の閲覧/登録用 Web アプリケーションです。RecoTw は G2 氏制作の黒歴史ツイート登録サービスです。
   - id: windows
     component: WindowsIcon
     name: Windows

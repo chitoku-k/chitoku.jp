@@ -12,10 +12,9 @@ import NavItem, { NavLink } from 'components/NavItem'
 const query = graphql`
   query {
     navigation: navigationsYaml {
-      items {
+      nav {
         name
         to
-        menu
         items {
           name
           to
@@ -102,7 +101,7 @@ const SearchIcon = styled.li`
 const Navbar: FunctionComponent = () => {
   const {
     navigation: {
-      items,
+      nav,
     },
   } = useStaticQuery(query) as NavbarQueryResult
 
@@ -115,7 +114,7 @@ const Navbar: FunctionComponent = () => {
     <NavContainer>
       <NavbarCore className={search ? 'search' : ''}>
         <Nav className="nav navbar-nav">
-          {items.filter(item => item.menu).map((item, index) => (
+          {nav.map((item, index) => (
             <NavItem key={index} {...item} dropdown={true}>{item.items}</NavItem>
           ))}
           <SearchIcon onClick={openSearch}>
@@ -137,13 +136,12 @@ const Navbar: FunctionComponent = () => {
 export interface NavigationLinkItem {
   name: string
   to: string
-  menu?: true
   items?: NavigationLinkItem[]
 }
 
 interface NavbarQueryResult {
   navigation: {
-    items: NavigationLinkItem[]
+    nav: NavigationLinkItem[]
   }
 }
 

@@ -1,13 +1,10 @@
-items:
+nav:
   - name: ホーム
     to: /
-    menu: true
   - name: メール
     to: /mail
-    menu: true
   - name: プロフィール
     to: /about
-    menu: true
     items:
       - name: mstdn.jp
         to: https://mstdn.jp/@chitoku
@@ -19,24 +16,8 @@ items:
         to: https://github.com/chitoku-k
       - name: teratail
         to: https://teratail.com/users/chitoku
-  - name: Web
-    to: /web/
-  - name: ガジェット
-    to: /gadgets/
-  - name: コンピューター
-    to: /computers/
-  - name: プログラミング
-    to: /programming/
-    items:
-      - name: C#
-        to: /tag/csharp
-      - name: PHP
-        to: /tag/php
-      - name: PSPSDK
-        to: /programming/psp/
   - name: ソフトウェア
     to: /softwares/
-    menu: true
     items:
       - name: Soarer for Windows
         to: /softwares/soarer/
@@ -46,5 +27,32 @@ items:
         to: https://homo.chitoku.jp:4545
       - name: TweetDeck Accounts Switcher
         to: /programming/tweetdeck-account-switcher
+sidebar:
+  - name: コンピューター
+    to: /computers/
+    items:
+      - name: Vim
+        to: /tag/vim/
+      - name: EdgeRouter
+        to: /tag/edgerouter/
+  - name: プログラミング
+    to: /programming/
+    items:
+      - name: PHP
+        to: /tag/php/
+      - name: JavaScript
+        to: /tag/javascript/
+      - name: C#
+        to: /tag/csharp/
+      - name: PSPSDK
+        to: /programming/psp/
+  - name: Windows
+    to: /windows/
+  - name: Web
+    to: /web/
+  - name: ガジェット
+    to: /gadgets/
+  - name: ソフトウェア
+    to: /softwares/
   - name: リンク
     to: /links
