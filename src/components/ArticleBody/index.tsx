@@ -47,6 +47,11 @@ const ArticleContent = styled.div`
   a.anchor {
     margin-left: -65px;
     width: 55px;
+    ${media.lessThan('sp')`
+      margin-left: 0;
+      width: auto;
+      float: right;
+    `}
   }
   p {
     font-size: 11pt;
