@@ -12,6 +12,9 @@
     "node": true
   },
   "rules": {
+    "@typescript-eslint/explicit-function-return-type": ["warning", {
+      "allowTypedFunctionExpressions": true
+    }],
     "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/member-delimiter-style": ["error", {
       "multiline": {
