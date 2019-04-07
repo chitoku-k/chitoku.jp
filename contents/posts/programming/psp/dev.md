@@ -8,25 +8,25 @@ category: PSP プログラミング
 現在では、有志により PSP 専用の開発ツール群である psptoolchain が用意されており、一般的には psptoolchain またはその移植版を使用するのが主流です。
 使用している OS に合った開発環境をセットアップしてください。
 
-## psptoolchain
+## [psptoolchain](/programming/psp/psptoolchain)
 
 UNIX 系 OS 用の PSP 開発ツール群を自動構成するスクリプトで、このスクリプトないしはその移植版が PSP 開発においては広く利用されています。
 コンパイラーとして psp-gcc をインストールするほか、PSPSDK と各種ライブラリ群も自動でセットアップされます。
 
 Linux や macOS 上で開発する場合はこのツールを使用してください。
 
-## Minimalist PSPSDK
+## [Minimalist PSPSDK](/programming/psp/minimalist-pspsdk)
 
 psptoolchain で構成される環境を Windows に移植したソフトウェアです。
 
-Windows 上で開発する場合はこのツールか次の devkitPro を使用してください。
+Windows 上で開発する場合はこのツールか次の [devkitPro](/programming/psp/devkitpro) を使用してください。
 
-## devkitPro
+## [devkitPro](/programming/psp/devkitpro)
 
 psptoolchain で構成される環境を Windows に移植したソフトウェアを含むツール群です。
 devkitPro は Wii や DS、ゲームボーイアドバンスなどの自作ソフトのための開発環境で、PSP 用がこのツールに含まれています。
 
-Windows 上で開発する場合はこのツールか前の Minimalist PSPSDK を使用してください。
+Windows 上で開発する場合はこのツールか前の [Minimalist PSPSDK](/programming/psp/minimalist-pspsdk) を使用してください。
 
 ## PS2dev & outpatch & elf2pbp3
 
@@ -35,7 +35,7 @@ PlayStation 2 用の実行ファイルを outpatch を用いて PSP 用に変換
 SDK が付属していないため、API 定義が必要になるほか、現在ではファイルの入手が困難なためオススメできません。
 PSP 開発の黎明期に利用されていたツールで、現在ではほとんど利用されていません。
 
-通常は psptoolchain、Minimalist PSPSDK、devkitPro のどれかを選択してください。
+通常は [psptoolchain](/programming/psp/psptoolchain)、[Minimalist PSPSDK](/programming/psp/minimalist-pspsdk)、[devkitPro](/programming/psp/devkitpro) のどれかを選択してください。
 
 ## PSPLINK
 

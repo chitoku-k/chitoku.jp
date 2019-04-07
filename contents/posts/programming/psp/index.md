@@ -13,6 +13,8 @@ category: PSP プログラミング
 - [動作環境とプログラムの種類](/programming/psp/environment)
 - [開発環境の構築](/programming/psp/dev)
 - [開発環境の構築: psptoolchain](/programming/psp/psptoolchain)
+- [開発環境の構築: Minimalist PSPSDK & Visual Studio](/programming/psp/minimalist-pspsdk)
+- [開発環境の構築: devkitPro & Visual Studio](/programming/psp/devkitpro)
 
 ## 資料
 
