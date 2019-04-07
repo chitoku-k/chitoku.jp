@@ -20,7 +20,7 @@
     "@types/react-highlight-words": "^0.16.0",
     "@types/react-instantsearch-dom": "^5.2.3",
     "@types/react-intl": "^2.3.17",
-    "@types/styled-components": "^4.1.12",
+    "@types/styled-components": "^4.1.13",
     "@typescript-eslint/eslint-plugin": "^1.6.0",
     "@typescript-eslint/parser": "^1.6.0",
     "@weknow/gatsby-remark-twitter": "^0.2.1",
