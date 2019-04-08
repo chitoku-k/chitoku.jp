@@ -9,6 +9,8 @@ SDK が付属していないため、API 定義が必要になります。
 PSP 開発の黎明期に利用されていたツールで、現在ではほとんど利用されていません。
 またファイルの入手も難しいため、入手先のリンクなどは掲載していません。
 
+通常は [psptoolchain](/programming/psp/psptoolchain)、[Minimalist PSPSDK](/programming/psp/minimalist-pspsdk)、[devkitPro](/programming/psp/devkitpro) のどれかを選択してください。
+
 1. ps2dev をダウンロードします。  
 ファイル名: `PS2DevWin32.zip`
 1. elf2pbp3 をダウンロードします。  

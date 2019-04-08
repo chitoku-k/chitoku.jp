@@ -28,7 +28,7 @@ devkitPro は Wii や DS、ゲームボーイアドバンスなどの自作ソ�
 
 Windows 上で開発する場合はこのツールか前の [Minimalist PSPSDK](/programming/psp/minimalist-pspsdk) を使用してください。
 
-## PS2dev & outpatch & elf2pbp3
+## [PS2dev & outpatch & elf2pbp3](/programming/psp/ps2dev)
 
 PlayStation 2 の開発環境を利用して PSP の開発を行うツール群です。
 PlayStation 2 用の実行ファイルを outpatch を用いて PSP 用に変換し、それを elf2pbp3 で実行ファイルに変換します。
