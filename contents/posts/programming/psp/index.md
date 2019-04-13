@@ -17,6 +17,7 @@ category: PSP プログラミング
 - [開発環境の構築: devkitPro & Visual Studio](/programming/psp/devkitpro)
 - [開発環境の構築: PS2dev & outpatch & elf2pbp3](/programming/psp/ps2dev)
 - [Makefile の作成](/programming/psp/makefile)
+- [プロジェクトの作成](/programming/psp/build)
 
 ## 資料
 
