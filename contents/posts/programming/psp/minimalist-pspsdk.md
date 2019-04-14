@@ -2,6 +2,8 @@
 title: '開発環境の構築: Minimalist PSPSDK & Visual Studio'
 created: 2013-08-22T02:00:10+09:00
 category: PSP プログラミング
+prev: /programming/psp/dev
+next: /programming/psp/makefile
 ---
 Minimalist PSPSDK は UNIX 上で動作する psptoolchain の Windows 版です。  
 開発に使用するコンピューターが UNIX を実行している場合は、[psptoolchain](/programming/psp/psptoolchain) を参照します。

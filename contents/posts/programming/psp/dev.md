@@ -2,6 +2,8 @@
 title: 開発環境の構築
 created: 2014-10-10T22:54:04+09:00
 category: PSP プログラミング
+prev: /programming/psp/environment
+next: /programming/psp/makefile
 ---
 実際にコードを書く前に、まずは開発に必要なツールを準備します。
 書いたコードを PSP が実行できる形式に変換するソフトウェアとして、コンパイラーなどが必要になります。

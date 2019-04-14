@@ -2,6 +2,8 @@
 title: '開発環境の構築: PS2dev & outpatch & elf2pbp3'
 created: 2013-08-22T02:00:10+09:00
 category: PSP プログラミング
+prev: /programming/psp/dev
+next: /programming/psp/makefile
 ---
 PlayStation 2 の開発環境を利用して PSP の開発を行うツール群です。
 PlayStation 2 用の実行ファイルを outpatch を用いて PSP 用に変換し、それを elf2pbp3 で実行ファイルに変換します。

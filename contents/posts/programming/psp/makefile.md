@@ -2,6 +2,8 @@
 title: Makefile の作成
 created: 2013-08-22T02:00:10+09:00
 category: PSP プログラミング
+prev: /programming/psp/dev
+next: /programming/psp/build
 ---
 それではプログラムを作る準備をしていきましょう。  
 今回はコンパイラーやリンカーへ指示を行うファイルを作成します。

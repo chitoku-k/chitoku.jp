@@ -179,9 +179,9 @@ const ArticleContent = styled.div`
   /* Images */
   .gatsby-resp-image-wrapper {
     width: 100%;
-    li > & {
-      margin-bottom: 1.8em;
-    }
+  }
+  li > .gatsby-resp-image-wrapper {
+    margin: 0.9em 0 1.8em;
   }
 
   /* Prism.js */
