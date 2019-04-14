@@ -104,17 +104,17 @@ const SimplePaginationItem = styled(PaginationItem)`
   }
   .pagination > &.prev {
     > a {
-      justify-content: flex-end;
+      justify-content: flex-start;
       .icon {
-        margin-left: 10px;
+        margin-right: 10px;
       }
     }
   }
   .pagination > &.next {
     > a {
-      justify-content: flex-start;
+      justify-content: flex-end;
       .icon {
-        margin-right: 10px;
+        margin-left: 10px;
       }
     }
   }
@@ -159,19 +159,19 @@ export const SimplePagination = injectIntl<HTMLProps<Bootstrap.Pagination> & Sim
 }) {
   return (
     <SimplePaginationCore {...rest}>
-      <SimplePaginationItem className={getVisibility('next', !!next)} href={next && next.to || '#'}>
-        {next ? (
-          <>
-            <span className="icon">{formatMessage(messages.next)}</span>
-            <span>{next.title}</span>
-          </>
-        ) : null}
-      </SimplePaginationItem>
       <SimplePaginationItem className={getVisibility('prev', !!prev)} href={prev && prev.to || '#'}>
         {prev ? (
           <>
-            <span>{prev.title}</span>
             <span className="icon">{formatMessage(messages.prev)}</span>
+            <span>{prev.title}</span>
+          </>
+        ) : null}
+      </SimplePaginationItem>
+      <SimplePaginationItem className={getVisibility('next', !!next)} href={next && next.to || '#'}>
+        {next ? (
+          <>
+            <span>{next.title}</span>
+            <span className="icon">{formatMessage(messages.next)}</span>
           </>
         ) : null}
       </SimplePaginationItem>

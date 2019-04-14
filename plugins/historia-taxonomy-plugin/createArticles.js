@@ -22,6 +22,12 @@ const createArticles = async ({
     }
     fragment Article on MarkdownRemark {
       id
+      prev {
+        id
+      }
+      next {
+        id
+      }
       ...File
       attributes: frontmatter {
         created
@@ -45,17 +51,22 @@ const createArticles = async ({
         file,
       } = article
 
-      const fullPath = getPath(file, 'index')
-      const prev = articles[index + 1]
-      const next = articles[index - 1]
+      let prev, next
+      if (article.prev || article.next) {
+        prev = article.prev
+        next = article.next
+      } else {
+        prev = articles[index - 1]
+        next = articles[index + 1]
+      }
 
       pages.push({
-        path: fullPath,
+        path: getPath(file, 'index'),
         component: path.resolve('src/templates/article.tsx'),
         context: {
           id,
-          prev: prev && prev.attributes.created ? prev.id : null,
-          next: next && next.attributes.created ? next.id : null,
+          prev: prev && (!prev.attributes || prev.attributes.created) ? prev.id : null,
+          next: next && (!next.attributes || next.attributes.created) ? next.id : null,
         },
       })
     }
