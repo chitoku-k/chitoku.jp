@@ -15,16 +15,8 @@ import ArticleBody, { ArticleComponentCollection } from 'components/ArticleBody'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
 
-export const getPathFromArticleFile = (file: ArticleFile): string => (
-  `/${file.directory.replace(/^posts\//, '')}/${file.name === 'index' ? '' : file.name}`
-)
-
-export const getClassNameFromArticleFile = (file: ArticleFile): string => (
-  [
-    'page',
-    file.directory.replace(/^posts\//, '').replace(/\//g, '-'),
-    ...(file.name === 'index' ? [] : [ file.name ]),
-  ].join('-')
+export const getClassNameFromPath = (path: string): string => (
+  'page' + path.replace(/\//g, '-').replace(/-$/, '')
 )
 
 const ArticleHeaderAttributes = styled.p`
@@ -119,7 +111,7 @@ const Article = injectIntl<ArticleProps>(function Article({
   children,
   components = {},
   article: {
-    file,
+    path,
     attributes: {
       title,
       created,
@@ -138,11 +130,9 @@ const Article = injectIntl<ArticleProps>(function Article({
     formatDate,
   },
 }) {
-  const path = getPathFromArticleFile(file)
-
   return (
     <>
-      <ArticleContainer className={getClassNameFromArticleFile(file)}>
+      <ArticleContainer className={getClassNameFromPath(path)}>
         <ArticleHeader title={<Link to={path}>{title}</Link>}>
           <ArticleHeaderAttributes>
             {category ? (
@@ -204,8 +194,8 @@ const Article = injectIntl<ArticleProps>(function Article({
           <PaginationContainer>
             <SimplePagination
               className="simple-pagination"
-              prev={prev ? { title: prev.attributes.title, to: getPathFromArticleFile(prev.file) } : null}
-              next={next ? { title: next.attributes.title, to: getPathFromArticleFile(next.file) } : null}
+              prev={prev ? { title: prev.attributes.title, to: prev.path } : null}
+              next={next ? { title: next.attributes.title, to: next.path } : null}
             />
           </PaginationContainer>
         </ArticleContainer>
@@ -223,7 +213,7 @@ interface ArticleItemBase {
     tags?: (ArticleTagItem | null)[]
     navigation?: NavigationLinkItem[] | null
   }
-  file: ArticleFile
+  path: string
   htmlAst?: {}
   excerptAst?: {}
   excerpted: boolean
@@ -238,11 +228,6 @@ export interface ExcerptedArticleItem extends ArticleItemBase {
 }
 
 export type ArticleItem = FullArticleItem | ExcerptedArticleItem
-
-interface ArticleFile {
-  directory: string
-  name: string
-}
 
 export interface ArticleCategoryItem {
   name: string
