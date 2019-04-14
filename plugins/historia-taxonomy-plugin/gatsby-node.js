@@ -88,6 +88,40 @@ exports.createResolvers = ({
           return getPath(context.nodeModel.getNodeById({ id: source.parent }))
         },
       },
+      prev: {
+        type: 'MarkdownRemark',
+        resolve(source, args, context) {
+          if (!source.frontmatter.prev) {
+            return
+          }
+
+          const files = context.nodeModel.getAllNodes({
+            type: 'File',
+          })
+
+          const target = files.find(file => getPath(file) === source.frontmatter.prev)
+          return context.nodeModel.getNodeById({
+            id: target.children[0],
+          })
+        },
+      },
+      next: {
+        type: 'MarkdownRemark',
+        resolve(source, args, context) {
+          if (!source.frontmatter.next) {
+            return
+          }
+
+          const files = context.nodeModel.getAllNodes({
+            type: 'File',
+          })
+
+          const target = files.find(file => getPath(file) === source.frontmatter.next)
+          return context.nodeModel.getNodeById({
+            id: target.children[0],
+          })
+        },
+      },
     },
   })
 }

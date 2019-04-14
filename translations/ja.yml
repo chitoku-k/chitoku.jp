@@ -52,8 +52,8 @@ components:
     title: ちとくのホームページ
     titleTemplate: '{title} – ちとくのホームページ'
   Pagination:
-    next: «
-    prev: »
+    next: »
+    prev: «
     next_page: 次へ »
     prev_page: « 前へ
   Footer:

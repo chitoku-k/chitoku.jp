@@ -1,4 +1,3 @@
-const path = require('path')
 const removeMd = require('remove-markdown')
 const { getPath } = require('./utils')
 
