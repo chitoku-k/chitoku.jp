@@ -1,14 +1,6 @@
 const path = require('path')
 const removeMd = require('remove-markdown')
-
-const getPath = file => {
-  const directory = file.directory.replace(/^posts(\/|$)/, '/')
-  if (!directory) {
-    return
-  }
-
-  return path.join(directory, file.name === 'index' ? '/' : file.name)
-}
+const { getPath } = require('./utils')
 
 module.exports = () => ({
   query: `
@@ -52,7 +44,7 @@ module.exports = () => ({
       path
     }
     fragment FileNode on File {
-      directory: relativeDirectory
+      relativeDirectory
       name
     }
     fragment File on Node {

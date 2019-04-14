@@ -1,4 +1,5 @@
 const path = require('path')
+const { getPath } = require('./utils')
 
 const createArticles = async ({
   graphql,
@@ -27,7 +28,7 @@ const createArticles = async ({
       }
     }
     fragment FileNode on File {
-      directory: relativeDirectory
+      relativeDirectory
       name
     }
     fragment File on Node {
@@ -44,12 +45,7 @@ const createArticles = async ({
         file,
       } = article
 
-      const directory = file.directory.replace(/^posts(\/|$)/, '')
-      if (!directory) {
-        continue
-      }
-
-      const fullPath = '/' + path.join(directory, file.name)
+      const fullPath = getPath(file, 'index')
       const prev = articles[index + 1]
       const next = articles[index - 1]
 

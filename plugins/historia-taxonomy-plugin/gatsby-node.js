@@ -1,5 +1,6 @@
 const createTaxonomies = require('./createTaxonomies')
 const createArticles = require('./createArticles')
+const { getPath } = require('./utils')
 
 exports.createPages = async (
   {
@@ -23,7 +24,7 @@ exports.createPages = async (
       continue
     }
     createPage(page)
-    paths.add(page)
+    paths.add(page.path)
   }
 }
 
@@ -79,6 +80,12 @@ exports.createResolvers = ({
         resolve(source) {
           // TODO: read excerpt_separator setting
           return source.rawMarkdownBody.includes('\n<!-- more -->\n')
+        },
+      },
+      path: {
+        type: 'String',
+        resolve(source, args, context) {
+          return getPath(context.nodeModel.getNodeById({ id: source.parent }))
         },
       },
     },

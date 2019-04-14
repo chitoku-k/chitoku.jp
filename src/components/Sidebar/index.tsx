@@ -14,7 +14,7 @@ import {
   HatenaShareButton,
   TumblrShareButton,
 } from './buttons'
-import { ArticleItem, getPathFromArticleFile } from 'components/Article'
+import { ArticleItem } from 'components/Article'
 import { NavigationLinkItem } from 'components/Navbar'
 import { withMetadata } from 'components/Metadata'
 import { media } from 'components/Layout'
@@ -45,6 +45,7 @@ const query = graphql`
     ) {
       items: edges {
         article: node {
+          path
           attributes: frontmatter {
             title
             created
@@ -52,7 +53,6 @@ const query = graphql`
               ...Category
             }
           }
-          ...File
         }
       }
     }
@@ -239,7 +239,7 @@ const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
           {latest.items.map(({ article }, index) => (
             <li className="iconless" key={index}>
               <SidebarItemListIcon name="coffee" />
-              <Link to={getPathFromArticleFile(article.file)}>
+              <Link to={article.path}>
                 {article.attributes.title}
               </Link>
               <br />

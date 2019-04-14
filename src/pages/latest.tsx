@@ -24,7 +24,6 @@ export const pageQuery = graphql`
           excerptAst
           excerpted
           ...Article
-          ...File
         }
       }
     }

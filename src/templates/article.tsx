@@ -10,7 +10,7 @@ import Header from 'components/Header'
 import Navbar from 'components/Navbar'
 import Content from 'components/Content'
 import Footer from 'components/Footer'
-import Article, { ArticleItem, getPathFromArticleFile } from 'components/Article'
+import Article, { ArticleItem } from 'components/Article'
 
 export const pageQuery = graphql`
   query article($id: String!, $prev: String, $next: String) {
@@ -32,7 +32,7 @@ export const pageQuery = graphql`
     }
   }
   fragment Article on MarkdownRemark {
-    ...File
+    path
     excerpted
     attributes: frontmatter {
       title
@@ -58,15 +58,6 @@ export const pageQuery = graphql`
     name
     path
     thumbnail
-  }
-  fragment FileNode on File {
-    directory: relativeDirectory
-    name
-  }
-  fragment File on Node {
-    file: parent {
-      ...FileNode
-    }
   }
 `
 
@@ -126,7 +117,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
           'position': 3,
           'item': {
             '@type': 'Thing',
-            'id': siteUrl + getPathFromArticleFile(article.file),
+            'id': siteUrl + article.path,
             'name': article.attributes.title,
           },
         },
@@ -145,7 +136,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
           'position': 2,
           'item': {
             '@type': 'Thing',
-            'id': siteUrl + getPathFromArticleFile(article.file),
+            'id': siteUrl + article.path,
             'name': article.attributes.title,
           },
         },
