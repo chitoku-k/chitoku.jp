@@ -111,7 +111,7 @@ const SidebarItemList = styled.ul`
     margin-bottom: 3px;
     &.iconless {
       list-style: none;
-      margin-bottom: 8px;
+      margin-bottom: 16px;
       &:last-child {
         margin-bottom: 0;
       }
@@ -130,27 +130,24 @@ const SidebarItemListIcon = styled(FontAwesome)`
 
 const SidebarItemAttribute = styled.div`
   display: inline-block;
-  border: 1px solid;
-  border-radius: 4px;
-  margin: 4px 4px 4px 0;
-  padding: 4px 8px;
+  margin: 8px 4px 4px 0;
+  color: #757575;
   font-size: 75%;
   font-variant-numeric: tabular-nums;
   .fa {
     margin-right: 4px;
   }
-`
-
-const SidebarItemDate = styled(SidebarItemAttribute)`
-  border-color: #337ab7;
-  color: #337ab7;
+  & + & {
+    &::before {
+      content: "•";
+      margin-right: 4px;
+    }
+  }
 `
 
 const SidebarItemCategory = styled(SidebarItemAttribute)`
-  border-color: #346b4a;
-  &,
   a {
-    color: #346b4a;
+    color: #757575;
   }
 `
 
@@ -243,8 +240,7 @@ const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
                 {article.attributes.title}
               </Link>
               <br />
-              <SidebarItemDate>
-                <FontAwesome name="calendar-o" />
+              <SidebarItemAttribute>
                 {article.attributes.created ? (
                   formatDate(article.attributes.created, {
                     year: 'numeric',
@@ -252,9 +248,8 @@ const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
                     day: 'numeric',
                   })
                 ) : null}
-              </SidebarItemDate>
+              </SidebarItemAttribute>
               <SidebarItemCategory>
-                <FontAwesome name="folder-open-o" />
                 {article.attributes.category ? (
                   <Link to={article.attributes.category.path}>
                     {article.attributes.category.name}
