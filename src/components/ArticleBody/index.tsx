@@ -92,19 +92,6 @@ const ArticleContent = styled.div`
       padding-left: 15px;
     `}
   }
-  pre {
-    margin-left: 16px;
-    margin-right: 16px;
-    margin-bottom: 1.8em;
-    ${media.lessThan('tablet')`
-      margin-left: 13px;
-      margin-right: 13px;
-    `}
-    ${media.lessThan('sp')`
-      margin-left: 0;
-      margin-right: 0;
-    `}
-  }
   img {
     margin-top: 0.4em;
     &:not(.gatsby-resp-image-image) {
@@ -201,12 +188,39 @@ const ArticleContent = styled.div`
   *:not(pre) > code[class*="language-"] {
     padding: 2px 4px;
   }
+  .gatsby-highlight {
+    background-color: #f4f2f0;
+    border-radius: 0.3em;
+    margin: 0.5em 16px 1.8em;
+    ${media.lessThan('tablet')`
+      margin-left: 13px;
+      margin-right: 13px;
+    `}
+    ${media.lessThan('sp')`
+      margin-left: 0;
+      margin-right: 0;
+    `}
+  }
   pre[class*="language-"],
   code[class*="language-"] {
-    -webkit-overflow-scrolling: touch;
     font-family: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
     .token.operator {
       background: none;
+    }
+  }
+  pre[class*="language-"] {
+    -webkit-overflow-scrolling: touch;
+    padding: 1em;
+    &.line-numbers {
+      padding-left: 3.6em;
+      .line-numbers-rows {
+        top: 1em;
+        min-width: 3em;
+        > span::before {
+          padding-left: 0.8em;
+        }
+      }
     }
   }
   .monospace {
