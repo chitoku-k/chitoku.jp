@@ -54,7 +54,7 @@
     "gatsby-remark-images": "^3.0.11",
     "gatsby-remark-prismjs": "^3.2.8",
     "gatsby-source-filesystem": "^2.0.31",
-    "gatsby-transformer-remark": "^2.3.8",
+    "gatsby-transformer-remark": "^2.3.10",
     "gatsby-transformer-sharp": "^2.1.18",
     "gatsby-transformer-yaml": "^2.1.11",
     "husky": "^1.3.1",
