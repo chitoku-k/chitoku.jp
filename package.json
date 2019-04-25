@@ -56,7 +56,7 @@
     "gatsby-source-filesystem": "^2.0.31",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.18",
-    "gatsby-transformer-yaml": "^2.1.11",
+    "gatsby-transformer-yaml": "^2.1.12",
     "husky": "^2.1.0",
     "is-url": "^1.2.4",
     "lint-staged": "^8.1.5",
