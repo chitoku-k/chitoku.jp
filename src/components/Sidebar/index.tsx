@@ -2,7 +2,7 @@ import React from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { injectIntl } from 'react-intl'
-import { Location, WindowLocation } from '@reach/router'
+import { WindowLocation } from '@reach/router'
 import FontAwesome from 'react-fontawesome'
 import styled from 'styled-components'
 

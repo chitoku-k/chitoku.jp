@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Location } from '@reach/router'
 
 import { media } from 'components/Layout'
-import Sidebar, { SidebarProps } from 'components/Sidebar'
+import Sidebar from 'components/Sidebar'
 
 const Container = styled.div`
   padding: 0;
