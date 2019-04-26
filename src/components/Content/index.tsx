@@ -34,7 +34,9 @@ const Content: FunctionComponent<ContentProps> = ({
     {children}
     <Location>
       {({ location }) => (
-        <MemoizedSidebar location={location} />
+        sidebar ? (
+          <MemoizedSidebar location={location} />
+        ) : null
       )}
     </Location>
   </Container>
