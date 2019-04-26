@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useCallback, useState, useEffect, useRef } from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { injectIntl, InjectedIntlProps } from 'react-intl'
@@ -114,19 +114,20 @@ const SearchForm = injectIntl(connectSearchBox<SearchFormProps>(function SearchF
   const [ text, setText ] = useState(null as string | null)
   const input = useRef<HTMLInputElement>(null)
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement | React.Component>): void => {
+  const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement | React.Component>) => {
     e.preventDefault()
-  }
+  }, [])
 
-  const onFocus = (): void => {
+  const onFocus = useCallback(() => {
     openSearch()
     if (getSearchText(location) === false) {
       setText('')
     }
-  }
+  }, [ location ])
 
-  const onBlur = (): void => {
-  }
+  const onChange = useCallback((e: React.FormEvent<HTMLInputElement>) => {
+    setText(e.currentTarget.value)
+  }, [])
 
   useEffect(() => {
     if (text !== null) {
@@ -143,7 +144,7 @@ const SearchForm = injectIntl(connectSearchBox<SearchFormProps>(function SearchF
     } else {
       setText(null)
     }
-  }, [ search ])
+  }, [ input, search ])
 
   return (
     <>
@@ -151,7 +152,7 @@ const SearchForm = injectIntl(connectSearchBox<SearchFormProps>(function SearchF
         <FormMobileContainer>
           <FormMobile role="search" onSubmit={onSubmit}>
             <FormMobileInput type="search" ref={input} value={text || ''} placeholder={formatMessage(messages.search)}
-              onFocus={onFocus} onBlur={onBlur} onChange={e => setText(e.currentTarget.value)} />
+              onFocus={onFocus} onChange={onChange} />
           </FormMobile>
           <FormMobileCancelContainer onClick={closeSearch}>
             {formatMessage(messages.cancel)}
@@ -160,7 +161,7 @@ const SearchForm = injectIntl(connectSearchBox<SearchFormProps>(function SearchF
       ) : null}
       <FormDesktop role="search" componentClass="form" pullRight onSubmit={onSubmit}>
         <FormDesktopInput type="search" value={text || ''} placeholder={formatMessage(messages.search)}
-          onFocus={onFocus} onBlur={onBlur} onChange={e => setText(e.currentTarget.value)} />
+          onFocus={onFocus} onChange={onChange} />
         <UnsupportedNotice className="notice">
           <Bootstrap.Popover id="search-form-noscript" placement="bottom">
             {formatMessage(messages.enable_javascript)}

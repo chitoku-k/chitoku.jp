@@ -2,7 +2,7 @@ import React from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { injectIntl } from 'react-intl'
-import { Location } from '@reach/router'
+import { Location, WindowLocation } from '@reach/router'
 import FontAwesome from 'react-fontawesome'
 import styled from 'styled-components'
 
@@ -178,7 +178,8 @@ const FeedIcon = styled(FontAwesome)`
   margin: 0 3px -1px;
 `
 
-const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
+const Sidebar = injectIntl<SidebarProps>(withMetadata(function Sidebar({
+  location,
   metadata: {
     title,
   },
@@ -198,6 +199,7 @@ const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
     },
     latest,
   } = useStaticQuery(query) as SidebarQueryResult
+  const url = siteUrl + location.pathname
 
   return (
     <SidebarContainer md={3} componentClass="aside">
@@ -206,20 +208,11 @@ const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
           {formatMessage(messages.share)}
         </SidebarItemTitle>
         <ShareButtonContainer>
-          <Location>
-            {({ location }) => {
-              const url = siteUrl + location.pathname
-              return (
-                <>
-                  <TwitterShareButton title={title} url={url} />
-                  <FacebookShareButton url={url} />
-                  <PocketShareButton title={title} url={url} />
-                  <HatenaShareButton url={url} />
-                  <TumblrShareButton url={url} />
-                </>
-              )
-            }}
-          </Location>
+          <TwitterShareButton title={title} url={url} />
+          <FacebookShareButton url={url} />
+          <PocketShareButton title={title} url={url} />
+          <HatenaShareButton url={url} />
+          <TumblrShareButton url={url} />
         </ShareButtonContainer>
       </SidebarItem>
       <SidebarItem>
@@ -273,6 +266,10 @@ const Sidebar = injectIntl<{}>(withMetadata(function Sidebar({
     </SidebarContainer>
   )
 }))
+
+export interface SidebarProps {
+  location: WindowLocation
+}
 
 interface SidebarQueryResult {
   site: {
