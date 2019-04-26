@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import { injectIntl, FormattedMessage } from 'react-intl'
 import ImageZoom from 'react-medium-image-zoom'
@@ -71,12 +71,16 @@ const About = injectIntl<AboutProps>(function About({
     formatMessage,
   },
 }) {
-  const { Compiler } = new RehypeReact({
-    createElement: React.createElement,
-    components: {
-      'historia-link': Link,
-    },
-  })
+  const content = useMemo(() => {
+    const { Compiler } = new RehypeReact({
+      createElement: React.createElement,
+      components: {
+        'historia-link': Link,
+      },
+    })
+
+    return Compiler(introduction.markdown.htmlAst)
+  }, [ introduction ])
 
   return (
     <Container>
@@ -156,7 +160,7 @@ const About = injectIntl<AboutProps>(function About({
               ))}
               <tr>
                 <th>{formatMessage(messages.introduction)}</th>
-                <td>{Compiler(introduction.markdown.htmlAst)}</td>
+                <td>{content}</td>
               </tr>
             </tbody>
           </Table>

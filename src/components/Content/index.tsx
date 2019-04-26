@@ -1,5 +1,6 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, memo } from 'react'
 import styled from 'styled-components'
+import { Location } from '@reach/router'
 
 import { media } from 'components/Layout'
 import Sidebar from 'components/Sidebar'
@@ -20,6 +21,8 @@ const Container = styled.div`
   `}
 `
 
+const MemoizedSidebar = memo(Sidebar, (prev, next) => prev.location.pathname === next.location.pathname)
+
 const Content: FunctionComponent<ContentProps> = ({
   children,
   sidebar = true,
@@ -29,9 +32,11 @@ const Content: FunctionComponent<ContentProps> = ({
     sidebar ? 'sidebar' : '',
   ].filter(x => x).join(' ')}>
     {children}
-    {sidebar ? (
-      <Sidebar />
-    ) : null}
+    <Location>
+      {({ location }) => (
+        <MemoizedSidebar location={location} />
+      )}
+    </Location>
   </Container>
 )
 

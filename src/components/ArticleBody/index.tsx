@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ComponentType } from 'react'
+import React, { FunctionComponent, ComponentType, useMemo } from 'react'
 import RehypeReact from 'rehype-react'
 import styled from 'styled-components'
 
@@ -238,14 +238,18 @@ const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
   ast,
   components,
 }) => {
-  const { Compiler } = new RehypeReact({
-    createElement: React.createElement,
-    components,
-  })
+  const content = useMemo(() => {
+    const { Compiler } = new RehypeReact({
+      createElement: React.createElement,
+      components,
+    })
+
+    return Compiler(ast)
+  }, [ ast ])
 
   return (
     <ArticleContent>
-      {Compiler(ast)}
+      {content}
     </ArticleContent>
   )
 }
