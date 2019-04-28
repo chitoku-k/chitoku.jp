@@ -11330,9 +11330,9 @@ remark-attr@0.8.0, remark-attr@^0.8.0:
     md-attr-parser "^1.2.0"
 
 remark-grid-tables@^1.2.0, remark-grid-tables@^1.4.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/remark-grid-tables/-/remark-grid-tables-1.6.0.tgz#1261b931bd5ca78cd4711ffdbf70e91ff0605271"
-  integrity sha512-LuyxtHeYy4sJ0m9MYckVrfg4mZwVLZWp3bLUxnRQz8u/JGLY1EYy4HCxBMYAnfMh/aMd9D7RreX1KWM9gqgLeg==
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/remark-grid-tables/-/remark-grid-tables-1.6.1.tgz#b69fb34f5d90b5e66c7937f48a6752633c57daa9"
+  integrity sha512-m/CUsDxl9eEEm8M/bpt0M8fBKRj++hEUu+sL/zc0pqkXpRcA4nufRMzqarHrinMRprUVdqXLgeKM5czpOlCYXA==
   dependencies:
     grapheme-splitter "^1.0.4"
     is-fullwidth-code-point "^2.0.0"
@@ -13801,10 +13801,10 @@ url-regex@^3.0.0:
   dependencies:
     ip-regex "^1.0.1"
 
-url-search-params-polyfill@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/url-search-params-polyfill/-/url-search-params-polyfill-5.1.0.tgz#f0405dcc2e921bf7f5fdf8c4e616f1e8088ef31b"
-  integrity sha512-yjFY7uw2xRf9e8Mg4ZVkZwtp8dMCC4cbBkEIZiTDpuSY2WJ9+Quw0wRhxncv32qaMQwmBQT+P847rO8PrFhhDA==
+url-search-params-polyfill@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/url-search-params-polyfill/-/url-search-params-polyfill-6.0.0.tgz#f5e5fc230d56125f5b0ba67d9cbcd6555fa347e3"
+  integrity sha512-69Bl5s3SiEgcHe8SMpzLGOyag27BQeTeSaP/CfVHkKc/VdUHtNjaP2PnhshFVC021221ItueOzuMMGofZ/HDmQ==
 
 url-to-options@^1.0.1:
   version "1.0.1"
