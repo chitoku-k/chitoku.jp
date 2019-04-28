@@ -1066,10 +1066,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-instantsearch-dom@^5.2.3":
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/@types/react-instantsearch-dom/-/react-instantsearch-dom-5.2.3.tgz#041a2de68d6c072327f476580f325e9d6b8f2fdc"
-  integrity sha512-iUhIP5A4O/Fl6QfzLxL/xbDyHRTVLHaUTYw6LgQyUTuP1OFNldOZXIxSevCg1rS46OL2ZCXYEL+93HKEzL5dAQ==
+"@types/react-instantsearch-dom@^5.2.4":
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/@types/react-instantsearch-dom/-/react-instantsearch-dom-5.2.4.tgz#9d2309a0b822408295a7f82e7f2fcd491ffa657f"
+  integrity sha512-WwdMqQ6zxKAAj8Zi+fLuTofmQlu5mSDOW1lhPQ//YL5lvTzTp1fAruqeMjtVfw7trhimMVH3iuwct6yst9vtCA==
   dependencies:
     "@types/react" "*"
     "@types/react-instantsearch-core" "*"
