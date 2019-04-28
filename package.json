@@ -60,7 +60,7 @@
     "husky": "^2.1.0",
     "is-url": "^1.2.4",
     "lint-staged": "^8.1.5",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "prismjs": "^1.16.0",
     "react": "^16.8.6",
     "react-bootstrap": "^0.32.4",
