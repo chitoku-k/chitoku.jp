@@ -24,7 +24,7 @@
     "@typescript-eslint/eslint-plugin": "^1.7.0",
     "@typescript-eslint/parser": "^1.7.0",
     "@weknow/gatsby-remark-twitter": "^0.2.1",
-    "algoliasearch": "^3.32.1",
+    "algoliasearch": "^3.33.0",
     "babel-plugin-react-intl-auto": "^1.7.0",
     "babel-plugin-styled-components": "^1.10.0",
     "babel-preset-gatsby": "^0.1.10",
