@@ -21,7 +21,7 @@
     "@types/react-instantsearch-dom": "^5.2.4",
     "@types/react-intl": "^2.3.17",
     "@types/styled-components": "^4.1.14",
-    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/eslint-plugin": "^1.8.0",
     "@typescript-eslint/parser": "^1.7.0",
     "@weknow/gatsby-remark-twitter": "^0.2.1",
     "algoliasearch": "^3.33.0",
