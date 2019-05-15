@@ -911,10 +911,10 @@
   resolved "https://registry.yarnpkg.com/@stefanprobst/lokijs/-/lokijs-1.5.6-b.tgz#6a36a86dbe132e702e6b15ffd3ce4139aebfe942"
   integrity sha512-MNodHp46og+Sdde/LCxTLrxcD5Dimu21R/Fer2raXMG1XtHSV2+vZnkIV87OPAxuf2NiDj1W5hN7Q2MYUfQQ8w==
 
-"@types/algoliasearch@^3.30.8":
-  version "3.30.8"
-  resolved "https://registry.yarnpkg.com/@types/algoliasearch/-/algoliasearch-3.30.8.tgz#f7004bd905e61f7f56b0e6da2744ebd4dbafc87c"
-  integrity sha512-Lzf9kcLtFJe9gAu6lqc0/RR/yiQy7LfWXZYpZVaXUGsJ1t+ifyAiH/iPpXhslDqS11A6JiPKBeQTuG0/VtPLdA==
+"@types/algoliasearch@^3.30.10":
+  version "3.30.10"
+  resolved "https://registry.yarnpkg.com/@types/algoliasearch/-/algoliasearch-3.30.10.tgz#db1966fa37a028131e341a22a917696311ef4e51"
+  integrity sha512-Hir0fJAynz0KO+gyYEi/5rcNa14zP5ml2wmqUp4ZLwAcCRYSoeNaMaitSkGQKjYE0wLlE8OpPn21RxwYQdSPfQ==
 
 "@types/configstore@^2.1.1":
   version "2.1.1"
