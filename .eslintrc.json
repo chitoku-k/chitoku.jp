@@ -28,7 +28,7 @@
   },
   "overrides": [
     {
-      "files": ["**/messages.ts"],
+      "files": ["**/messages.ts", "gatsby-*.js"],
       "rules": {
         "@typescript-eslint/camelcase": "off"
       }

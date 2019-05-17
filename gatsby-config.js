@@ -84,7 +84,6 @@ module.exports = {
               linkImagesToOriginal: false,
               maxWidth: 768,
               quality: 100,
-              sizeByPixelDensity: true,
             },
           },
           { resolve: 'gatsby-remark-grid-tables' },
