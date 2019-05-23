@@ -11053,10 +11053,10 @@ react-reconciler@^0.20.0:
     prop-types "^15.6.2"
     scheduler "^0.13.6"
 
-react-schemaorg@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/react-schemaorg/-/react-schemaorg-0.1.0.tgz#f613e34ccfeb3865dd2d78180b514d2ebeb8701b"
-  integrity sha512-D9zxVz/8b/R0tziwG4RteRyRs8BPBpwOdnvC09YEyKlBnpGLge0zidmOo5W3qokq8se3aGX8zxlGIJxjOtjL7Q==
+react-schemaorg@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-schemaorg/-/react-schemaorg-1.0.0.tgz#976a036a965eca597db8682455a2e7c8cd95f0b0"
+  integrity sha512-dMSxyXBeFB0A3VLpsGLMK8W1rMh05+N7YzlBgp0WLMqt+9Y1yHDCO/gR4+dK8lu9574kknYomeZr79woBtFRYw==
 
 react-side-effect@^1.1.0:
   version "1.1.5"
