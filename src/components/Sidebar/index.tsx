@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { injectIntl } from 'react-intl'
@@ -16,7 +16,7 @@ import {
 } from './buttons'
 import { ArticleItem } from 'components/Article'
 import { NavigationLinkItem } from 'components/Navbar'
-import { withMetadata } from 'components/Metadata'
+import { MetadataContext } from 'components/Metadata'
 import { media } from 'components/Layout'
 import NavItem from 'components/NavItem'
 import Link from 'components/Link'
@@ -178,16 +178,14 @@ const FeedIcon = styled(FontAwesome)`
   margin: 0 3px -1px;
 `
 
-const Sidebar = injectIntl<SidebarProps>(withMetadata(function Sidebar({
+const Sidebar = injectIntl<SidebarProps>(function Sidebar({
   location,
-  metadata: {
-    title,
-  },
   intl: {
     formatDate,
     formatMessage,
   },
 }) {
+  const { title } = useContext(MetadataContext)
   const {
     site: {
       siteMetadata: {
@@ -265,7 +263,7 @@ const Sidebar = injectIntl<SidebarProps>(withMetadata(function Sidebar({
       </SidebarItem>
     </SidebarContainer>
   )
-}))
+})
 
 export interface SidebarProps {
   location: WindowLocation

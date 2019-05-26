@@ -1,4 +1,4 @@
-import React, { FunctionComponent, createContext } from 'react'
+import React, { createContext } from 'react'
 import { Helmet } from 'react-helmet'
 import { injectIntl } from 'react-intl'
 import { graphql, useStaticQuery } from 'gatsby'
@@ -29,7 +29,7 @@ const query = graphql`
   }
 `
 
-let metadata: MetadataItem = {
+const metadata: MetadataItem = {
   type: 'article',
   title: '',
   keywords: [],
@@ -37,29 +37,7 @@ let metadata: MetadataItem = {
   thumbnail: '',
 }
 
-const { Provider, Consumer } = createContext(metadata)
-
-export const MetadataProvider: FunctionComponent = ({
-  children,
-}) => (
-  <Provider value={metadata}>
-    {children}
-  </Provider>
-)
-
-export function withMetadata<T>(
-  Component: React.ComponentType<T & WithMetadataProps>,
-): React.ComponentType<T> {
-  return function Metadata(props: T) {
-    return (
-      <Consumer>
-        {context => (
-          <Component {...props} metadata={context} />
-        )}
-      </Consumer>
-    )
-  }
-}
+export const MetadataContext = createContext(metadata)
 
 const Metadata = injectIntl<MetadataItem>(function Metadata({
   children,
@@ -79,13 +57,12 @@ const Metadata = injectIntl<MetadataItem>(function Metadata({
     },
   } = useStaticQuery(query) as MetadataQueryResult
 
-  metadata = {
-    ...metadata,
+  Object.assign(metadata, {
     ...newState,
     title: newState.title
       ? formatMessage(messages.titleTemplate, { title: newState.title })
       : formatMessage(messages.title),
-  }
+  })
 
   return (
     <Location>
@@ -122,10 +99,6 @@ const Metadata = injectIntl<MetadataItem>(function Metadata({
     </Location>
   )
 })
-
-export interface WithMetadataProps {
-  metadata: MetadataItem
-}
 
 interface MetadataQueryResult {
   site: {
