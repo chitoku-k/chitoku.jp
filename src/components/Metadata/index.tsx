@@ -1,4 +1,4 @@
-import React, { FunctionComponent, createContext } from 'react'
+import React, { createContext } from 'react'
 import { Helmet } from 'react-helmet'
 import { injectIntl } from 'react-intl'
 import { graphql, useStaticQuery } from 'gatsby'
