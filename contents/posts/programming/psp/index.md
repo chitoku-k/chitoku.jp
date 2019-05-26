@@ -18,6 +18,7 @@ category: PSP プログラミング
     - [開発環境の構築: PS2dev & outpatch & elf2pbp3](/programming/psp/ps2dev)
 1. [Makefile の作成](/programming/psp/makefile)
 1. [プロジェクトの作成](/programming/psp/build)
+1. [Hello World のビルド](/programming/psp/helloworld)
 
 ## 資料
 

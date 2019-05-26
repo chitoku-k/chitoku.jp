@@ -3,7 +3,7 @@ title: プロジェクトの作成
 created: 2013-08-23T00:25:42+09:00
 category: PSP プログラミング
 prev: /programming/psp/makefile
-next:
+next: /programming/psp/helloworld
 ---
 Makefile を作成したらプロジェクトを作成します。これで Visual Studio でプログラムを管理しやすくなります。  
 プロジェクトを作成したらそのフォルダーに[前回](/programming/psp/makefile)作成した Makefile を保存しておきます。

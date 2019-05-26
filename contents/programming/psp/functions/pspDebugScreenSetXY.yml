@@ -1,0 +1,10 @@
+name: pspDebugScreenSetXY
+return: void
+description: デバッグスクリーンの座標を指定します。
+parameters:
+  - name: x
+    type: int
+    description: 出力する横位置。単位は文字で、0文字目からスタート。
+  - name: y
+    type: int
+    description: 出力する縦位置。単位は文字で、0行目からスタート。

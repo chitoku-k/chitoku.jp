@@ -1,0 +1,3 @@
+name: pspDebugScreenInit
+return: void
+description: デバッグスクリーン機能を初期化します。

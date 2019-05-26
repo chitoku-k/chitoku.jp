@@ -1,0 +1,8 @@
+name: pspDebugScreenPrintf
+return: void
+description: デバッグスクリーンで文字を出力します。
+parameters:
+  - name: fmt
+    type: const char *
+    description: 出力する書式指定付文字列（半角英数字）。printf と同様。
+  - name: ...

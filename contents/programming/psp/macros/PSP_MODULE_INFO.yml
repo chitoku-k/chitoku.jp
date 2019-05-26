@@ -1,0 +1,15 @@
+name: PSP_MODULE_INFO
+description: モジュールの情報について指定します。必須です。
+parameters:
+  - name: name
+    type: const char [27]
+    description: プログラムの名前（半角英数字）
+  - name: attributes
+    type: unsigned short
+    description: 実行モード
+  - name: major_version
+    type: unsigned char
+    description: メジャー・バージョン
+  - name: minor_version
+    type: unsigned char
+    description: マイナー・バージョン
