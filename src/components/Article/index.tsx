@@ -8,6 +8,8 @@ import messages from './messages'
 import Link from 'components/Link'
 import NavItem from 'components/NavItem'
 import ImageZoomWrapper from 'components/ImageZoomWrapper'
+import PspSdkFunction from 'components/PspSdkFunction'
+import PspSdkMacro from 'components/PspSdkMacro'
 import { NavigationLinkItem } from 'components/Navbar'
 import { PaginationContainer, SimplePagination } from 'components/Pagination'
 import { media } from 'components/Layout'
@@ -107,9 +109,23 @@ const ReadMoreButton = styled(Link)`
 
 const isTag = (tag: ArticleTagItem | null): tag is ArticleTagItem => Boolean(tag && tag.name)
 
+const withArticle = (
+  article: ArticleItem,
+  components: ArticleComponentCollection,
+): ArticleComponentCollection =>
+  Object.entries(components).reduce((prev, [ name, Component ]) => ({
+    ...prev,
+    [name]: function InjectArticle<T>(props: T) {
+      return (
+        <Component {...props} article={article} />
+      )
+    },
+  }), {})
+
 const Article = injectIntl<ArticleProps>(function Article({
   children,
   components = {},
+  article,
   article: {
     path,
     attributes: {
@@ -130,6 +146,14 @@ const Article = injectIntl<ArticleProps>(function Article({
     formatDate,
   },
 }) {
+  // TODO: Make default components injectable
+  Object.assign(components, {
+    'pspsdk-function': PspSdkFunction,
+    'pspsdk-macro': PspSdkMacro,
+    'historia-image': ImageZoomWrapper,
+    'historia-link': Link,
+  })
+
   return (
     <>
       <ArticleContainer className={getClassNameFromPath(path)}>
@@ -177,11 +201,7 @@ const Article = injectIntl<ArticleProps>(function Article({
             </ArticleNav>
           </ArticleNavbar>
         ) : null}
-        <ArticleBody ast={excerptAst || htmlAst || {}} components={{
-          ...components,
-          'historia-image': ImageZoomWrapper,
-          'historia-link': Link,
-        }} />
+        <ArticleBody ast={excerptAst || htmlAst || {}} components={withArticle(article, components)} />
         {excerpted && excerptAst ? (
           <ReadMoreContainer>
             <ReadMoreButton to={path}>{formatMessage(messages.more)}</ReadMoreButton>
