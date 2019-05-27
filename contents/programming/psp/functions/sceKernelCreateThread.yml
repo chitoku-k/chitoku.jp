@@ -1,0 +1,27 @@
+name: sceKernelCreateThread
+return: SceUID
+description: スレッドを作成します。成功するとスレッド ID、失敗すると負の値を返します。
+parameters:
+  - name: name
+    type: const char *
+    description: スレッドの名前
+  - name: entry
+    type: int
+    description: 実行される関数のポインター
+    parameters:
+      - name: args
+        type: unsigned int
+      - name: argp
+        type: void *
+  - name: initPriority
+    type: int
+    description: スレッドを実行する優先度。値が小さいほど優先度が高い。（main = 0x32）
+  - name: stackSize
+    type: int
+    description: スタックサイズの初期値
+  - name: attr
+    type: unsigned int
+    description: スレッドの種類
+  - name: option
+    type: SceKernelThreadOptParam *
+    description: 不明

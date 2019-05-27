@@ -1,0 +1,20 @@
+name: sceKernelCreateCallback
+return: SceUID
+description: コールバック関数を作成します。成功するとコールバック ID、失敗すると負の値を返します。
+parameters:
+  - name: name
+    type: const char *
+    description: コールバック関数の名前
+  - name: func
+    type: int
+    parameters:
+      - name: arg1
+        type: int
+      - name: arg2
+        type: int
+      - name: arg
+        type: void *
+    description: 呼び出される関数へのポインター
+  - name: arg
+    type: void *
+    description: 現時点では不明。コールバックの引数？

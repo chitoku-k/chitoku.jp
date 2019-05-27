@@ -1,0 +1,3 @@
+name: sceKernelExitGame
+return: void
+description: ゲームを終了し XMB へ戻ります。

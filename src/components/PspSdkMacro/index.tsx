@@ -4,6 +4,7 @@ import Prism from 'prismjs'
 require('prismjs/components/prism-c')
 
 import { ArticleItem } from 'components/Article'
+import { media } from 'components/Layout'
 
 const indentationWidth = 4
 const linebreakThreshold = 2
@@ -11,12 +12,20 @@ const linebreakThreshold = 2
 const PspSdkMacroEntry = styled.div`
   padding: 0 16px;
   margin-bottom: 32px;
+  ${media.lessThan('tablet')`
+    padding: 0 13px;
+  `}
+  ${media.lessThan('sp')`
+    padding: 0;
+  `}
 `
 
 const PspSdkMacroPrototype = styled.code`
   &&& {
     display: block;
     padding: 4px 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     margin-top: 4px;
     margin-bottom: 4px;
     white-space: pre;
@@ -33,9 +42,16 @@ const PspSdkMacroParameterSeparator = styled.span`
   margin: 0 8px;
 `
 
-const PspSdkMacroDescription = styled.p`
+const PspSdkMacroDescription = styled.div`
+  font-size: 11pt;
+  line-height: 1.8;
   margin-bottom: 2px;
   padding: 0 8px;
+  ${media.lessThan('sp')`
+    ul {
+      padding-left: 20px;
+    }
+  `}
 `
 
 const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = function PspSdkMacro({
@@ -43,7 +59,7 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = function PspSdkMacro({
   article,
   name: macroName,
 }) {
-  const def = article.attributes.macros && article.attributes.macros.find(x => x.name === macroName)
+  const def = article.attributes.macros && article.attributes.macros.find(x => Boolean(x && x.name === macroName))
   if (!def) {
     return (
       <></>
@@ -97,7 +113,7 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = function PspSdkMacro({
 
 type PspSdkMacroArticleItem = ArticleItem & {
   attributes: {
-    macros: PspSdkMacroItem[] | null
+    macros: (PspSdkMacroItem | null)[] | null
   }
 }
 

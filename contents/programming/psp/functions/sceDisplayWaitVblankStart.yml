@@ -1,0 +1,3 @@
+name: sceDisplayWaitVblankStart
+return: int
+description: 垂直方向の描画が終わるのを待ってから表示します。（チラつき防止）

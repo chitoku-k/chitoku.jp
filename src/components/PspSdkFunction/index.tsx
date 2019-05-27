@@ -4,6 +4,7 @@ import Prism from 'prismjs'
 require('prismjs/components/prism-c')
 
 import { ArticleItem } from 'components/Article'
+import { media } from 'components/Layout'
 
 const indentationWidth = 4
 const linebreakThreshold = 2
@@ -11,14 +12,23 @@ const linebreakThreshold = 2
 const PspSdkFunctionEntry = styled.div`
   padding: 0 16px;
   margin-bottom: 32px;
+  ${media.lessThan('tablet')`
+    padding: 0 13px;
+  `}
+  ${media.lessThan('sp')`
+    padding: 0;
+  `}
 `
 
 const PspSdkFunctionPrototype = styled.code`
   &&& {
     display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     padding: 4px 8px;
     margin-top: 4px;
     margin-bottom: 4px;
+    white-space: pre;
   }
 `
 
@@ -32,9 +42,16 @@ const PspSdkFunctionParameterSeparator = styled.span`
   margin: 0 8px;
 `
 
-const PspSdkFunctionDescription = styled.p`
+const PspSdkFunctionDescription = styled.div`
+  font-size: 11pt;
+  line-height: 1.8;
   margin-bottom: 2px;
   padding: 0 8px;
+  ${media.lessThan('sp')`
+    ul {
+      padding-left: 20px;
+    }
+  `}
 `
 
 const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = function PspSdkFunction({
@@ -42,7 +59,7 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = function PspSdkFu
   article,
   name: functionName,
 }) {
-  const def = article.attributes.functions && article.attributes.functions.find(x => x.name === functionName)
+  const def = article.attributes.functions && article.attributes.functions.find(x => x && x.name === functionName)
   if (!def) {
     return (
       <></>
@@ -63,13 +80,19 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = function PspSdkFu
       <PspSdkFunctionPrototype ref={ref} className="language-c">
         {[
           `${def.return} ${def.name}(`,
-          def.parameters && def.parameters.map(({ type, name }) => (
-            type ? (
-              `${indentation}${type} ${name}`
-            ) : (
-              `${indentation}${name}`
-            )
-          )).join(', ' + separator),
+          def.parameters ? (
+            def.parameters.map(({ type, name, parameters }) => (
+              parameters ? (
+                `${indentation}${type} (* ${name})(${parameters.map(({ type, name }) => `${type} ${name}`).join(', ')})`
+              ) : type ? (
+                `${indentation}${type} ${name}`
+              ) : (
+                `${indentation}${name}`
+              )
+            )).join(', ' + separator)
+          ) : (
+            'void'
+          ),
           `);`,
         ].join(separator)}
       </PspSdkFunctionPrototype>
@@ -108,6 +131,10 @@ interface PspSdkFunctionItem {
     name: string
     type: string
     description: string
+    parameters: {
+      name: string
+      type: string
+    }[] | null
   }[] | null
 }
 

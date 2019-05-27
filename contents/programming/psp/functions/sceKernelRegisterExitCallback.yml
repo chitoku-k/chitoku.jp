@@ -1,0 +1,7 @@
+name: sceKernelRegisterExitCallback
+return: int
+description: コールバック関数を終了コールバックとして登録します。成功すると 0、失敗すると負の値を返します。
+parameters:
+  - name: cbid
+    type: SceUID
+    description: コールバック ID

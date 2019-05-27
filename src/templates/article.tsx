@@ -72,6 +72,10 @@ export const pageQuery = graphql`
     parameters {
       name
       type
+      parameters {
+        name
+        type
+      }
       description
     }
   }
