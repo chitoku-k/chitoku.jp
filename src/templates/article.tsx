@@ -96,7 +96,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
       'itemListElement': article.attributes.category ? [
         {
           '@type': 'ListItem',
-          'position': 1,
+          'position': '1',
           'item': {
             '@type': 'Thing',
             'id': siteUrl,
@@ -105,7 +105,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
         },
         {
           '@type': 'ListItem',
-          'position': 2,
+          'position': '2',
           'item': {
             '@type': 'Thing',
             'id': siteUrl + article.attributes.category.path,
@@ -114,7 +114,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
         },
         {
           '@type': 'ListItem',
-          'position': 3,
+          'position': '3',
           'item': {
             '@type': 'Thing',
             'id': siteUrl + article.path,
@@ -124,7 +124,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
       ] : [
         {
           '@type': 'ListItem',
-          'position': 1,
+          'position': '1',
           'item': {
             '@type': 'Thing',
             'id': siteUrl,
@@ -133,7 +133,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
         },
         {
           '@type': 'ListItem',
-          'position': 2,
+          'position': '2',
           'item': {
             '@type': 'Thing',
             'id': siteUrl + article.path,
