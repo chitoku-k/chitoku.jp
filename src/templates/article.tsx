@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
-import { BreadcrumbList } from 'schema-dts'
+import { BreadcrumbList, Integer, Thing } from 'schema-dts'
 import { JsonLd } from 'react-schemaorg'
 
 import Layout from 'components/Layout'
@@ -91,56 +91,58 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
   <Layout>
     <Metadata title={article.attributes.title} thumbnail={article.attributes.category && article.attributes.category.thumbnail} />
     <JsonLd<BreadcrumbList> item={{
+      /* eslint-disable @typescript-eslint/no-object-literal-type-assertion */
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': article.attributes.category ? [
         {
           '@type': 'ListItem',
-          'position': '1',
+          'position': 1 as Integer,
           'item': {
             '@type': 'Thing',
             'id': siteUrl,
             'name': title,
-          },
+          } as Thing,
         },
         {
           '@type': 'ListItem',
-          'position': '2',
+          'position': 2 as Integer,
           'item': {
             '@type': 'Thing',
             'id': siteUrl + article.attributes.category.path,
             'name': article.attributes.category.name,
-          },
+          } as Thing,
         },
         {
           '@type': 'ListItem',
-          'position': '3',
+          'position': 3 as Integer,
           'item': {
             '@type': 'Thing',
             'id': siteUrl + article.path,
             'name': article.attributes.title,
-          },
+          } as Thing,
         },
       ] : [
         {
           '@type': 'ListItem',
-          'position': '1',
+          'position': 1 as Integer,
           'item': {
             '@type': 'Thing',
             'id': siteUrl,
             'name': title,
-          },
+          } as Thing,
         },
         {
           '@type': 'ListItem',
-          'position': '2',
+          'position': 2 as Integer,
           'item': {
             '@type': 'Thing',
             'id': siteUrl + article.path,
             'name': article.attributes.title,
-          },
+          } as Thing,
         },
       ],
+      /* eslint-enable @typescript-eslint/no-object-literal-type-assertion */
     }} />
     <Header />
     <Navbar />
