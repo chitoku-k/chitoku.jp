@@ -9,6 +9,7 @@
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/plugin-transform-typescript": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "@rstacruz/gatsby-remark-component": "^1.2.0-pre.1",
     "@types/algoliasearch": "^3.30.12",
     "@types/is-url": "^1.2.28",
     "@types/reach__router": "^1.2.4",
@@ -102,7 +103,6 @@
     "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
     "lint:css": "stylelint 'src/**/*.scss'",
     "lint:styled": "stylelint --config .stylelintrc.styled.json 'src/**/*.tsx'",
-    "postinstall": "yarn --cwd plugins/gatsby-remark-component build",
     "start": "gatsby develop"
   },
   "husky": {
@@ -125,7 +125,6 @@
     ]
   },
   "workspaces": [
-    "plugins/gatsby-remark-component",
     "plugins/historia-compat-plugin",
     "plugins/historia-feed-plugin",
     "plugins/historia-recotw-plugin",

@@ -894,6 +894,11 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
+"@rstacruz/gatsby-remark-component@^1.2.0-pre.1":
+  version "1.2.0-pre.1"
+  resolved "https://registry.yarnpkg.com/@rstacruz/gatsby-remark-component/-/gatsby-remark-component-1.2.0-pre.1.tgz#94444908fa005a0dcb6df6c65761cd2055a9a6dc"
+  integrity sha512-6PgE42bUxVk8NfibpGmuD437HeQZozbYF24F4MBiN4ROLwggJWtiSGatUf3FiH8LIrYcv0x7gEg8tyd9rQdVog==
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"
