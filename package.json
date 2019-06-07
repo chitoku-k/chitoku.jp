@@ -60,7 +60,7 @@
     "gatsby-transformer-yaml": "^2.1.12",
     "husky": "^2.4.0",
     "is-url": "^1.2.4",
-    "lint-staged": "^8.1.7",
+    "lint-staged": "^8.2.0",
     "node-sass": "^4.12.0",
     "prismjs": "^1.16.0",
     "react": "^16.8.6",
