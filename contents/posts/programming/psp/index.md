@@ -19,6 +19,7 @@ category: PSP プログラミング
 1. [Makefile の作成](/programming/psp/makefile)
 1. [プロジェクトの作成](/programming/psp/build)
 1. [Hello World のビルド](/programming/psp/helloworld)
+1. [HOME ボタンで終了](/programming/psp/home)
 
 ## 資料
 

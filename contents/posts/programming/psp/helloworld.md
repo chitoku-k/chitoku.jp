@@ -3,7 +3,7 @@ title: Hello World のビルド
 created: 2013-08-23T00:25:42+09:00
 category: PSP プログラミング
 prev: /programming/psp/build
-next: 
+next: /programming/psp/home
 functions:
   - pspDebugScreenInit
   - pspDebugScreenSetXY
