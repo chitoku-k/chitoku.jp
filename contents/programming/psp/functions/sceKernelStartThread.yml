@@ -1,0 +1,13 @@
+name: sceKernelStartThread
+return: int
+description: スレッドを開始します。
+parameters:
+  - name: thid
+    type: SceUID
+    description: スレッド ID
+  - name: arglen
+    type: unsigned int
+    description: 関数の引数のサイズをバイト数で指定
+  - name: argp
+    type: void *
+    description: 実行する関数に渡す引数

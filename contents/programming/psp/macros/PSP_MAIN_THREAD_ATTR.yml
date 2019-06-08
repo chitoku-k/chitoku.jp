@@ -1,0 +1,6 @@
+name: PSP_MAIN_THREAD_ATTR
+description: メインスレッドの種類を指定します。
+parameters:
+  - name: attr
+    type: unsigned int
+    description: メインスレッドの種類。

@@ -10,6 +10,8 @@ module.exports = {
   mapping: {
     'MarkdownRemark.frontmatter.category': 'CategoriesYaml',
     'MarkdownRemark.frontmatter.tags': 'TagsYaml',
+    'MarkdownRemark.frontmatter.functions': 'FunctionsYaml.name',
+    'MarkdownRemark.frontmatter.macros': 'MacrosYaml.name',
     'UpdatesYaml.file': 'File.base',
   },
   plugins: [

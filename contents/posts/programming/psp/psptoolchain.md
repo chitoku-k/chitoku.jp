@@ -2,9 +2,11 @@
 title: '開発環境の構築: psptoolchain'
 created: 2014-12-30T23:20:04+09:00
 category: PSP プログラミング
+prev: /programming/psp/dev
+next: /programming/psp/makefile
 ---
 UNIX 系 OS で PSP の開発環境をインストールするスクリプト、psptoolchain を実行する方法を解説します。
-開発に使用するコンピューターが Windows を実行している場合は、Minimalist PSPSDK および devkitPro を参照するか、Ubuntu の仮想環境を建ててしまっても構いません。
+開発に使用するコンピューターが Windows を実行している場合は、[Minimalist PSPSDK](/programming/psp/minimalist-pspsdk) および [devkitPro](/programming/psp/devkitpro) を参照するか、Ubuntu の仮想環境を建ててしまっても構いません。
 
 このページでは macOS と Ubuntu で解説しますが、それ以外の環境でも使用することができるはずです。
 Ubuntu 以外の Linux の場合は `prepare-debian-ubuntu.sh` の中身を見ながら適当な依存関係を入れてください。

@@ -10,9 +10,16 @@ category: PSP プログラミング
 
 ## 目次
 
-- [動作環境とプログラムの種類](/programming/psp/environment)
-- [開発環境の構築](/programming/psp/dev)
-- [開発環境の構築: psptoolchain](/programming/psp/psptoolchain)
+1. [動作環境とプログラムの種類](/programming/psp/environment)
+1. [開発環境の構築](/programming/psp/dev)
+    - [開発環境の構築: psptoolchain](/programming/psp/psptoolchain)
+    - [開発環境の構築: Minimalist PSPSDK & Visual Studio](/programming/psp/minimalist-pspsdk)
+    - [開発環境の構築: devkitPro & Visual Studio](/programming/psp/devkitpro)
+    - [開発環境の構築: PS2dev & outpatch & elf2pbp3](/programming/psp/ps2dev)
+1. [Makefile の作成](/programming/psp/makefile)
+1. [プロジェクトの作成](/programming/psp/build)
+1. [Hello World のビルド](/programming/psp/helloworld)
+1. [HOME ボタンで終了](/programming/psp/home)
 
 ## 資料
 

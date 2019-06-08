@@ -48,16 +48,45 @@ export const pageQuery = graphql`
       tags {
         ...Tag
       }
+      functions {
+        ...Function
+      }
+      macros {
+        ...Macro
+      }
     }
-  }
-  fragment Tag on TagsYaml {
-    name
-    slug
   }
   fragment Category on CategoriesYaml {
     name
     path
     thumbnail
+  }
+  fragment Tag on TagsYaml {
+    name
+    slug
+  }
+  fragment Function on FunctionsYaml {
+    name
+    return
+    description
+    parameters {
+      name
+      type
+      parameters {
+        name
+        type
+      }
+      description
+    }
+  }
+  fragment Macro on MacrosYaml {
+    name
+    description
+    parameters {
+      name
+      type
+      description
+    }
   }
 `
 
