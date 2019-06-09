@@ -217,6 +217,7 @@ const ArticleContent = styled.div`
       .line-numbers-rows {
         top: 1em;
         min-width: 3em;
+        letter-spacing: 0;
         > span::before {
           padding-left: 0.8em;
         }

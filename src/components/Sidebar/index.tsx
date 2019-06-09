@@ -106,6 +106,7 @@ const SidebarItemTitle = styled.h2`
 
 const SidebarItemList = styled.ul`
   padding-left: 30px;
+  margin-top: 5px;
   margin-bottom: 0;
   li {
     margin-bottom: 3px;

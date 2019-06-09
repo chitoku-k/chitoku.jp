@@ -5,8 +5,11 @@ category: PSP プログラミング
 prev: /programming/psp/makefile
 next: /programming/psp/helloworld
 ---
-Makefile を作成したらプロジェクトを作成します。これで Visual Studio でプログラムを管理しやすくなります。  
+Makefile を作成したら Visual Studio のプロジェクトを作成します。
 プロジェクトを作成したらそのフォルダーに[前回](/programming/psp/makefile)作成した Makefile を保存しておきます。
+
+これは Windows で使用する開発環境を構築した場合の手順です。
+Linux や macOS の場合は Makefile を作成して次の [Hello World のビルド](/programming/psp/helloworld)へ進んでください。
 
 ## 手順
 
@@ -18,7 +21,7 @@ Makefile を作成したらプロジェクトを作成します。これで Visu
     - Minimalist PSPSDK の場合
         - C:\pspsdk\psp\include; C:\pspsdk\psp\sdk\include
     - devkitPro の場合
-        - C:\devkitPro\devkitPSP\psp\include; C:\devkitPro\dekitPSP\psp\sdk\include
+        - C:\devkitPro\devkitPSP\psp\include; C:\devkitPro\devkitPSP\psp\sdk\include
 1. 「ビルド」を以下のように変更します。
     - ビルド コマンド ライン  
       `batch:make`
