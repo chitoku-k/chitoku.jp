@@ -76,7 +76,7 @@ module.exports = {
               offsetY: 10,
             },
           },
-          { resolve: 'gatsby-remark-component' },
+          { resolve: '@rstacruz/gatsby-remark-component' },
           { resolve: 'gatsby-remark-copy-linked-files' },
           { resolve: 'gatsby-remark-external-links' },
           { resolve: 'gatsby-remark-embed-gist' },
