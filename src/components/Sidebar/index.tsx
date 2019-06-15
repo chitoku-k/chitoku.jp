@@ -80,6 +80,7 @@ const SidebarItem = styled.div`
   box-shadow: 0 2px 4px 0 #c1c1c1;
   border-radius: 3px;
   &:last-child {
+    margin-bottom: 0;
     overflow: auto;
     min-height: 250px;
     -webkit-overflow-scrolling: touch;
