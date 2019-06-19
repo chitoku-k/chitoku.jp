@@ -11032,10 +11032,10 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-medium-image-zoom@^3.0.16:
-  version "3.0.16"
-  resolved "https://registry.yarnpkg.com/react-medium-image-zoom/-/react-medium-image-zoom-3.0.16.tgz#3d9436c1ef669401550920ab9429c0679b0c5853"
-  integrity sha512-l4z+2Ij0SeCJtBQhXykECowWJL+6OJkCycv6tHELiepIL4GYrYWl8NZZH12qED/9qL0XoNrH99+AyPcTfabUiQ==
+react-medium-image-zoom@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-medium-image-zoom/-/react-medium-image-zoom-3.1.0.tgz#2c5fda8a84f12dac28257b7ca2fdf9b7472f10ac"
+  integrity sha512-OGWs7G0KS782KX5gWV4saigS24yeNZ9PPvic83q125jnQNpJk3pso6PieUEVh2ZvlUGVDg6/9hXmcCOUJKpS4w==
 
 react-overlays@^0.8.0:
   version "0.8.3"
