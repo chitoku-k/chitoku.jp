@@ -5545,7 +5545,7 @@ gatsby-plugin-sass@^2.0.13:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
 
-gatsby-plugin-sharp@2.0.36, gatsby-plugin-sharp@^2.0.36:
+gatsby-plugin-sharp@^2.0.36:
   version "2.0.36"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.36.tgz#a8877cea81a7f2f6a0a1af2d0b96705a03b943d2"
   integrity sha512-/JD6JalZEXHmotdshITazIe0nWUIgZ29JIv1KiDZIwSlSPi7Mlg0n6FJLA0OlxLvc2q5+0NwbSAoegqVLV/qZA==
@@ -11420,7 +11420,7 @@ relay-runtime@2.0.0:
     "@babel/runtime" "^7.0.0"
     fbjs "^1.0.0"
 
-remark-attr@0.8.0, remark-attr@^0.8.0:
+remark-attr@^0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/remark-attr/-/remark-attr-0.8.0.tgz#3b87de7129cd6cd92539e3205fc1e21f4e3c313f"
   integrity sha512-9gjgMJxXCk+4pzW7A4HteWLwN5zThtKiyk7i62XZmMFvvsrlm3LIwZj/7y/2L6xtxkhuSwe91jPwD+8hmuvegA==
@@ -11428,7 +11428,7 @@ remark-attr@0.8.0, remark-attr@^0.8.0:
     html-element-attributes "^2.0.0"
     md-attr-parser "^1.2.0"
 
-remark-grid-tables@^1.2.0, remark-grid-tables@^1.4.0:
+remark-grid-tables@^1.2.0:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/remark-grid-tables/-/remark-grid-tables-1.6.1.tgz#b69fb34f5d90b5e66c7937f48a6752633c57daa9"
   integrity sha512-m/CUsDxl9eEEm8M/bpt0M8fBKRj++hEUu+sL/zc0pqkXpRcA4nufRMzqarHrinMRprUVdqXLgeKM5czpOlCYXA==

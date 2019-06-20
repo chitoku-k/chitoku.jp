@@ -1,4 +1,5 @@
 const removeMd = require('remove-markdown')
+const stripHtml = require('string-strip-html')
 const { getPath } = require('./utils')
 
 module.exports = () => ({
@@ -76,7 +77,7 @@ module.exports = () => ({
     return {
       path: getPath(file),
       excerpt: removeMd(excerpt),
-      headings: headings.map(x => x.value),
+      headings: headings.map(x => stripHtml(x.value)),
       title,
       category,
       tags,
