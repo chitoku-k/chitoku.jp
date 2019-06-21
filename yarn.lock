@@ -5516,10 +5516,10 @@ gatsby-plugin-google-analytics@^2.0.21:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-no-sourcemaps@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-2.0.2.tgz#2606bfec048ed391a1a275ccd0adaf0fff12f262"
-  integrity sha512-l7oulcpEwbP1WFR1sRO87Dlhc3h1Wju2SbZoc9MIB0P7OmoAfhgA+0UHCnrMcgGsV9XKJun3D+ldPcsDxf59/A==
+gatsby-plugin-no-sourcemaps@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-2.1.0.tgz#a152cf412cc0d4d5e56c38c7d9db8d99cfe1dcfd"
+  integrity sha512-svVu27lQmPeJaV4igCbLO6aS4ag1Ljsb2VQAVKidBJIqD3QGUdjmDGA3lqkYhUIrKC2s1XJY5BIUJHJfuVqJTg==
 
 gatsby-plugin-page-creator@^2.0.13:
   version "2.0.13"
