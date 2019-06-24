@@ -2700,10 +2700,10 @@ charenc@~0.0.1:
   resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
   integrity sha1-wKHS86cJLgN3S/qD8UwPxXkKhmc=
 
-check-types-mini@^5.7.22:
-  version "5.7.22"
-  resolved "https://registry.yarnpkg.com/check-types-mini/-/check-types-mini-5.7.22.tgz#09b55cd0089e7da7cac49395df5f54e7325c7a7e"
-  integrity sha512-WCmOHAgcwluBZGyQSKSqDXd1hYnP4pv4S16DjMwFteoK+HtSQe/i/ijm1428mvHS+o3I+YY8cP0ok5uL1/z/ZA==
+check-types-mini@^5.7.22, check-types-mini@^5.7.23:
+  version "5.7.23"
+  resolved "https://registry.yarnpkg.com/check-types-mini/-/check-types-mini-5.7.23.tgz#1063636ad51b9d3ad4e3e1b6e9a2753337a5120e"
+  integrity sha512-f5Qch4ekwfECzcRvoPz7izEXtlrqEhGHK1bPFQAdEyK2Lp2LUhzjL5eXtjaidcbz4puG7Fj1cLoNQsyAwXN9Vg==
   dependencies:
     arrayiffy-if-string "^3.10.26"
     ast-monkey-traverse "^1.11.22"
@@ -12736,12 +12736,12 @@ string-similarity@^1.2.0:
     lodash.map "^4.6.0"
     lodash.maxby "^4.6.0"
 
-string-strip-html@^4.0.17:
-  version "4.0.17"
-  resolved "https://registry.yarnpkg.com/string-strip-html/-/string-strip-html-4.0.17.tgz#ee79092a6c3c50e3eaad2f75520e884122e0c156"
-  integrity sha512-dJyqSaRmq37J/LmzYAZXo1jasC72wlNNIUlbPsE2tzQUesZ/xIlU2/1GkBW/M4Xg5qrNVe6m/St8A9Ex7kRAGQ==
+string-strip-html@^4.0.18:
+  version "4.0.18"
+  resolved "https://registry.yarnpkg.com/string-strip-html/-/string-strip-html-4.0.18.tgz#f5c14f4d681b9107b06688ef9078683f7eb1559a"
+  integrity sha512-FscdwFZQqcrCRokxQQty9KMvsoLceAUmr/75Xf9KHBkx1wcf54p04xVi5/6eyuFlSOTLHqn8I2IUVxFBu4rxUg==
   dependencies:
-    check-types-mini "^5.7.22"
+    check-types-mini "^5.7.23"
     ent "^2.2.0"
     lodash.isplainobject "^4.0.6"
     lodash.trim "^4.5.1"
