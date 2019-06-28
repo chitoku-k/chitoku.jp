@@ -14,10 +14,19 @@ chitoku.jp
 ## 環境変数
 
 ```shell
+# 公開 URL
 export HISTORIA_URL=https://chitoku.jp
+
+# メール送信先 URL
 export GATSBY_MAIL_API=
+
+# reCAPTCHA v3 API キー
 export GATSBY_MAIL_SITE_KEY=
+
+# Google Analytics ID
 export GATSBY_GOOGLE_ANALYTICS_ID=
+
+# Algolia
 export GATSBY_ALGOLIA_APPID=
 export GATSBY_ALGOLIA_APIKEY=
 export GATSBY_ALGOLIA_APIKEY_SEARCH_ONLY=
@@ -29,6 +38,7 @@ export GATSBY_ALGOLIA_INDEXNAME=
 ```shell
 $ git clone https://github.com/chitoku-k/chitoku.jp.git --recursive
 $ yarn install
+$ yarn build
 ```
 
 [travis-link]:          https://travis-ci.org/chitoku-k/chitoku.jp
