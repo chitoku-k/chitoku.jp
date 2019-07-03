@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
-    "html-react-parser": "^0.8.0",
+    "html-react-parser": "^0.8.1",
     "mdast-util-definitions": "^1.2.4",
     "unist-util-modify-children": "^1.1.4",
     "unist-util-visit-parents": "^2.1.2"
