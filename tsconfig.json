@@ -17,12 +17,11 @@
       "dom",
       "esnext"
     ],
-    "skipLibCheck": true,
     "jsx": "preserve",
     "sourceMap": true,
     "removeComments": false,
     "strict": true,
-    "esModuleInterop": true
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "src/**/*",
