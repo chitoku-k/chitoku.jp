@@ -5701,10 +5701,10 @@ gatsby-remark-attr@^0.0.2:
   dependencies:
     remark-attr "^0.8.0"
 
-gatsby-remark-autolink-headers@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.1.0.tgz#d6db90f234307f6a4711c89c609e2fd2d7ee433a"
-  integrity sha512-18pwSTZ11GoL08hll8kaMEtcd/HLL3/WlxxBjQvxmN4YznONVsjCnLGtmSWQmg16jJYYekrQH1A2cNf9qg6Ogg==
+gatsby-remark-autolink-headers@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.1.1.tgz#2007edfad044d937ae86c4e04ae9e31485026a82"
+  integrity sha512-hlzlG7kAxtQ06B3YYMjF92pNajWbf3c5ZQwlIDDi831s86b+agg/RkovkxD+FANBCPjbLzsaEGM5pC+GpoAkOg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     github-slugger "^1.1.1"
