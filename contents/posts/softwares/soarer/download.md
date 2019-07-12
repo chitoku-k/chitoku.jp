@@ -30,7 +30,6 @@ Twitter によってアプリケーションの機能が制限されました。
 <soarer-download />
 </div>
 <div class="clearfix"></div>
-</div>
 
 ---
 
