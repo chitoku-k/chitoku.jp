@@ -120,7 +120,7 @@ TypeScript なので `typescript:keyof` で補完が表示されるのも地味�
 
 ## gatsby-transformer-remark
 
-[gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) の GraphQL API には `excerpt` と呼ばれるフィールドが定義されており、Markdown 記事の冒頭部分を抜粋する機能があります。たとえば、次のようなクエリーで `excerpt` に記事冒頭の文字列が返ってきます。
+[gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) の GraphQL API には `excerpt` と呼ばれるフィールドが定義されており、Markdown 記事の冒頭部分の抜粋を取得することができるようになっています。たとえば、次のようなクエリーを実行すると `excerpt` に記事冒頭の文字列が返ってきます。
 
 ```graphql
 query {
@@ -129,7 +129,7 @@ query {
       node {
         # HTML: 冒頭部分の抜粋 (GraphQLString)
         excerpt
-        # AST: 冒頭部分の抜粋（GraphQLJSON)
+        # AST: 冒頭部分の抜粋 (GraphQLJSON)
         # ↓これが実装されていなかった……
         excerptAst
         # HTML (GraphQLString)
@@ -142,7 +142,7 @@ query {
 }
 ```
 
-chitoku.jp では gatsby-remark-component というプラグインを使っている関係で文字列の抜粋は不都合で、`htmlAst` のように AST での抜粋が必要だったものの文字列フィールドしか実装されていませんでした。`excerpt` フィールドを処理する部分に全ての抜粋処理が書かれていたためそれをすべて剝がしたり、無駄にキャッシュ部分を弄ったせいでバグを出したり、となかなか大変でしたが [gatsby-transformer-remark@2.3.0](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-remark/CHANGELOG.md#230-2019-02-25) で取り込んでもらえました[^7]。
+chitoku.jp では gatsby-remark-component というプラグインを使っているため文字列による抜粋では不都合で、`htmlAst` のように AST での抜粋が必要だったものの、従来は文字列型のフィールドしか実装されていませんでした。以前は `excerpt` フィールドを処理する部分に全ての抜粋処理が書かれていたためそれらをすべて剝がしたり、無駄にキャッシュ処理を弄ったせいでバグを出したり、となかなか大変でしたが [gatsby-transformer-remark@2.3.0](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-remark/CHANGELOG.md#230-2019-02-25) で取り込んでもらえました[^7]。
 
 ## remark-grid-tables (zmarkdown)
 
@@ -185,7 +185,7 @@ chitoku.jp では gatsby-remark-component というプラグインを使って�
 +--------------+------------------+--------------------+
 </div>
 
-表の中でセルの結合が入り組んでいる場合にそれらを HTML で表現するのは面倒ですし、Markdown の標準的な文法ではサポートされていないのでなかなか便利なプラグインです。chitoku.jp に組み込んだときは日本語や絵文字などの全角文字へのサポートがなく、正しい形で表を出力させるには「abcde」も「あいうえお」も同じ 5 文字と数えて次のように書く必要がありました。
+表の中でセルの結合が入り組んでいる場合にそれらを HTML で表現するのは面倒ですし、表は Markdown の標準的な文法ではサポートされていないのでなかなか便利なプラグインです。このプラグインは chitoku.jp に組み込んだ当時は日本語や絵文字などの全角文字へのサポートがなく、正しい形で表を出力させるには「abcde」も「あいうえお」も同じ 5 文字と数えて次のように書く必要がありました。
 
 <div style="max-width: 500px; margin: 0 auto 10px;" class="monospace">
 
@@ -198,9 +198,9 @@ chitoku.jp では gatsby-remark-component というプラグインを使って�
 ```
 </div>
 
-これだとエディター上でも表示が揃わないため日本語環境で使うのは厳しい状態だったので、全角文字対応のプルリクエスト[^8]を出したところ無事入れてもらえたので、今では表示幅基準で表が書けるようになっています。
+これだとエディター上でも表示が揃わないため日本語環境で使うのは厳しい状態だったので、全角文字対応のプルリクエスト[^8]を出したところ無事取り入れられ、今では表示幅基準で表が書けるようになっています。
 
-コンソールで表示される文字の幅には全角と半角の二種類があり、それらの表示や文字幅計算にはやや面倒な処理が必要になるという事実はなかなか東アジアの外では理解されにくいのかもしれません。わたしも右から左へ向かって書いていく言語の処理の常識を全く知らないので難しいですね……。結局、この対応をするためには以下の処理が必要でした。
+コンソール上で表示される文字の幅には全角と半角の二種類があり、それらの表示や文字幅計算にはやや面倒な処理が必要になるという事実はなかなか東アジアの外では理解されにくいのかもしれません。わたしも右から左へ向かって書いていく言語の処理の常識を全く知らないので難しいですね……。結局、この対応をするためには以下の処理が必要でした。
 
 ### 文字幅の考慮
 
