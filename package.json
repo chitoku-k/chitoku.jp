@@ -59,7 +59,7 @@
     "gatsby-transformer-remark": "^2.6.8",
     "gatsby-transformer-sharp": "^2.2.4",
     "gatsby-transformer-yaml": "^2.2.3",
-    "husky": "^3.0.0",
+    "husky": "^3.0.1",
     "is-url": "^1.2.4",
     "lint-staged": "^9.2.0",
     "node-sass": "^4.12.0",
