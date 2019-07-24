@@ -16,7 +16,7 @@
     "@types/reach__router": "^1.2.4",
     "@types/react": "^16.8.23",
     "@types/react-bootstrap": "^0.32.19",
-    "@types/react-dom": "^16.8.4",
+    "@types/react-dom": "^16.8.5",
     "@types/react-fontawesome": "^1.6.4",
     "@types/react-helmet": "^5.0.8",
     "@types/react-highlight-words": "^0.16.0",
