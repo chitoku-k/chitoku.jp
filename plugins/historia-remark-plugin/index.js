@@ -1,7 +1,6 @@
 const cheerio = require('cheerio')
 const visit = require('unist-util-visit-parents')
 const definitions = require('mdast-util-definitions')
-const modifyChildren = require('unist-util-modify-children')
 const attributesToProps = require('html-react-parser/lib/attributes-to-props')
 
 module.exports = ({
@@ -21,40 +20,6 @@ module.exports = ({
         children: $('img'),
       })
     }
-  })
-
-  // Traverse through Markdown links
-  visit(markdownAST, ['link', 'linkReference'], (node, ancestors) => {
-    const parent = ancestors[ancestors.length - 1]
-
-    modifyChildren((node, index, parent) => {
-      const ctx = node.type === 'link' ? node : definition(node.identifier)
-      if (!ctx || (ctx.data && ctx.data.hProperties && ctx.data.hProperties['aria-label'])) {
-        return
-      }
-
-      // Create <historia-link /> and split them to open and close tag
-      const $ = cheerio.load('');
-      const [ , open, close ] = $('body').append(
-        $('<historia-link />').attr({
-          to: ctx.url,
-          ...(ctx.data && ctx.data.hProperties || {}),
-        })
-      ).html().match(/(.*)(<\/.*)/)
-
-      // Replace a Markdown link with <historia-link />
-      parent.children.splice(index, 1,
-        {
-          type: 'html',
-          value: open,
-        },
-        ...(node.children || []),
-        {
-          type: 'html',
-          value: close,
-        },
-      )
-    })(parent)
   })
 
   // Replace <img /> with <historia-image />
