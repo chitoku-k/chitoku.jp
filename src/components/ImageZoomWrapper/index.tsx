@@ -1,15 +1,10 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, DetailedHTMLProps, ImgHTMLAttributes } from 'react'
 import ImageZoom from 'react-medium-image-zoom'
 
-const ImageZoomWrapper: FunctionComponent<ImageZoomWrapperProps> = ({
-  image,
-}) => (
-  <ImageZoom image={JSON.parse(image)} shouldRespectMaxDimension={true} />
+const ImageZoomWrapper: FunctionComponent<ImageZoomWrapperProps> = (props) => (
+  <ImageZoom image={props} shouldRespectMaxDimension={true} />
 )
 
-interface ImageZoomWrapperProps {
-  image: string
-  zoomImage?: string
-}
+type ImageZoomWrapperProps = DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>
 
 export default ImageZoomWrapper

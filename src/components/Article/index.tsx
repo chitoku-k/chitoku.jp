@@ -150,7 +150,7 @@ const Article = injectIntl<ArticleProps>(function Article({
   Object.assign(components, {
     'pspsdk-function': PspSdkFunction,
     'pspsdk-macro': PspSdkMacro,
-    'historia-image': ImageZoomWrapper,
+    img: ImageZoomWrapper,
     a: Link,
   })
 

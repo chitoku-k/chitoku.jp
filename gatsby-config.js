@@ -101,7 +101,6 @@ module.exports = {
             },
           },
           { resolve: '@weknow/gatsby-remark-twitter' },
-          { resolve: 'historia-remark-plugin' },
         ],
       },
     },
