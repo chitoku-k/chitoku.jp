@@ -151,7 +151,7 @@ const Article = injectIntl<ArticleProps>(function Article({
     'pspsdk-function': PspSdkFunction,
     'pspsdk-macro': PspSdkMacro,
     'historia-image': ImageZoomWrapper,
-    'historia-link': Link,
+    a: Link,
   })
 
   return (
