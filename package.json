@@ -43,7 +43,7 @@
     "gatsby-plugin-no-sourcemaps": "^2.1.1",
     "gatsby-plugin-react-helmet": "^3.1.2",
     "gatsby-plugin-react-svg": "^2.1.1",
-    "gatsby-plugin-sass": "^2.1.3",
+    "gatsby-plugin-sass": "^2.1.4",
     "gatsby-plugin-sharp": "chitoku-k/gatsby-plugin-sharp",
     "gatsby-plugin-styled-components": "^3.1.2",
     "gatsby-plugin-ts-loader": "^0.1.0",
