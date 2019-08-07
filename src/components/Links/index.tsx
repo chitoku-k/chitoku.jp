@@ -1,5 +1,5 @@
-import React from 'react'
-import { injectIntl } from 'react-intl'
+import React, { FunctionComponent } from 'react'
+import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 
 import messages from './messages'
@@ -13,30 +13,31 @@ const LinksContainer = styled.ul`
   line-height: 1.8;
 `
 
-const Links = injectIntl<LinksProps>(({
+const Links: FunctionComponent<LinksProps> = function Links({
   links: {
     items,
   },
-  intl: {
-    formatMessage,
-  },
-}) => (
-  <Container>
-    <Metadata title={formatMessage(messages.title)}>
-      <body className="links" />
-    </Metadata>
-    <ArticleContainer>
-      <ArticleHeader title={formatMessage(messages.title)} />
-      <LinksContainer>
-        {items.map(({ name, url }, index) => (
-          <li key={index}>
-            <Link to={url} title={name}>{name}</Link>
-          </li>
-        ))}
-      </LinksContainer>
-    </ArticleContainer>
-  </Container>
-))
+}) {
+  const { formatMessage } = useIntl()
+
+  return (
+    <Container>
+      <Metadata title={formatMessage(messages.title)}>
+        <body className="links" />
+      </Metadata>
+      <ArticleContainer>
+        <ArticleHeader title={formatMessage(messages.title)} />
+        <LinksContainer>
+          {items.map(({ name, url }, index) => (
+            <li key={index}>
+              <Link to={url} title={name}>{name}</Link>
+            </li>
+          ))}
+        </LinksContainer>
+      </ArticleContainer>
+    </Container>
+  )
+}
 
 export interface LinksLinkItem {
   name: string

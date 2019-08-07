@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { graphql, useStaticQuery } from 'gatsby'
-import { injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 
 import messages from './messages'
@@ -77,11 +77,9 @@ const SoarerDownloadDescription = styled.div`
   `}
 `
 
-const SoarerDownload = injectIntl<SoarerDownloadQueryResult>(function SoarerDownload({
-  intl: {
-    formatMessage,
-  },
-}) {
+const SoarerDownload: FunctionComponent<SoarerDownloadQueryResult> = function SoarerDownload() {
+  const { formatMessage } = useIntl()
+
   const {
     updates: {
       items: [
@@ -114,7 +112,7 @@ const SoarerDownload = injectIntl<SoarerDownloadQueryResult>(function SoarerDown
       </SoarerDownloadDescription>
     </>
   )
-})
+}
 
 interface SoarerDownloadQueryResult {
   updates: {

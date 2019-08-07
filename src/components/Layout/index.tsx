@@ -1,14 +1,11 @@
 import React, { FunctionComponent } from 'react'
-import { IntlProvider, addLocaleData } from 'react-intl'
+import { IntlProvider } from 'react-intl'
 import { InstantSearch } from 'react-instantsearch-dom'
 import styled from 'styled-components'
-import ja from 'react-intl/locale-data/ja'
 
 import '../../styles/styles.scss'
 import styles from './styles'
 import messages from 'translations/ja.yml'
-
-addLocaleData([...ja])
 
 export const media = styles
 

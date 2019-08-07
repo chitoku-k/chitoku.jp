@@ -1,6 +1,6 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, FunctionComponent } from 'react'
 import * as Bootstrap from 'react-bootstrap'
-import { injectIntl, FormattedMessage } from 'react-intl'
+import { useIntl, FormattedMessage } from 'react-intl'
 import ImageZoom from 'react-medium-image-zoom'
 import RehypeReact from 'rehype-react'
 import styled from 'styled-components'
@@ -64,13 +64,11 @@ const Table = styled.table`
   }
 `
 
-const About = injectIntl<AboutProps>(function About({
+const About: FunctionComponent<AboutProps> = function About({
   about,
   introduction,
-  intl: {
-    formatMessage,
-  },
 }) {
+  const { formatMessage } = useIntl()
   const content = useMemo(() => {
     const { Compiler } = new RehypeReact({
       createElement: React.createElement,
@@ -169,7 +167,7 @@ const About = injectIntl<AboutProps>(function About({
       </AboutContainer>
     </Container>
   )
-})
+}
 
 interface AboutProps {
   about: AboutItem

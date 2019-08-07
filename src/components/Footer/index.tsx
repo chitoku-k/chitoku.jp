@@ -1,5 +1,5 @@
 import React from 'react'
-import { injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 
 import messages from './messages'
@@ -20,12 +20,10 @@ const FooterCore = styled.footer`
   `}
 `
 
-export default injectIntl(function Footer({
-  intl: {
-    formatMessage,
-  },
-}) {
+export default function Footer() {
+  const { formatMessage } = useIntl()
+
   return (
     <FooterCore className="text-center">{formatMessage(messages.copyright)}</FooterCore>
   )
-})
+}

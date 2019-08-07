@@ -1,6 +1,6 @@
-import React, { FormEvent, useEffect, useState } from 'react'
+import React, { FormEvent, FunctionComponent, useEffect, useState } from 'react'
 import * as Bootstrap from 'react-bootstrap'
-import { injectIntl, FormattedMessage } from 'react-intl'
+import { useIntl, FormattedMessage } from 'react-intl'
 import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3'
 import FontAwesome from 'react-fontawesome'
 import styled from 'styled-components'
@@ -39,26 +39,25 @@ const Input = styled(Bootstrap.FormControl)`
   resize: vertical;
 `
 
-const Label = injectIntl<MailLabelProps>(({
+const Label: FunctionComponent<MailLabelProps> = function Label({
   children,
   required,
-  intl: {
-    formatMessage,
-  },
-}) => (
-  <label>
-    {children}
-    {required ? <Required>{formatMessage(messages.required)}</Required> : null}
-  </label>
-))
+}) {
+  const { formatMessage } = useIntl()
+
+  return (
+    <label>
+      {children}
+      {required ? <Required>{formatMessage(messages.required)}</Required> : null}
+    </label>
+  )
+}
 
 type Status = '' | 'sending' | 'sent' | 'error'
 
-const Mail = injectIntl(function Mail({
-  intl: {
-    formatMessage,
-  },
-}) {
+const Mail: FunctionComponent = function Mail() {
+  const { formatMessage } = useIntl()
+
   const [ token, setToken ] = useState('')
   const [ status, setStatus ] = useState('' as Status)
   const [ readOnly, setReadOnly ] = useState(false)
@@ -163,7 +162,7 @@ const Mail = injectIntl(function Mail({
       </ArticleContainer>
     </Container>
   )
-})
+}
 
 interface MailLabelProps {
   required?: true
