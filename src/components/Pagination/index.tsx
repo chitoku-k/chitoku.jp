@@ -1,6 +1,6 @@
-import React, { HTMLProps, ReactNode } from 'react'
+import React, { FunctionComponent, HTMLProps, ReactNode } from 'react'
 import * as Bootstrap from 'react-bootstrap'
-import { injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 
 import { media } from 'components/Layout'
@@ -120,12 +120,11 @@ const SimplePaginationItem = styled(PaginationItem)`
   }
 `
 
-const Pagination = injectIntl<PaginationProps>(function Pagination({
+const Pagination: FunctionComponent<PaginationProps> = function Pagination({
   page,
-  intl: {
-    formatMessage,
-  },
 }) {
+  const { formatMessage } = useIntl()
+
   return (
     <PaginationCore>
       <PaginationItem className={getVisibility('prev', hasPreviousPage(page))} href={getPreviousPagePath(page)}>
@@ -139,24 +138,23 @@ const Pagination = injectIntl<PaginationProps>(function Pagination({
       </PaginationItem>
     </PaginationCore>
   )
-})
+}
 
 export const PaginationContainer = styled.aside`
   text-align: center;
 `
 
-export const SimplePagination = injectIntl<HTMLProps<Bootstrap.Pagination> & SimplePaginationProps>(function SimplePagination({
+export const SimplePagination: FunctionComponent<HTMLProps<Bootstrap.Pagination> & SimplePaginationProps> = function SimplePagination({
   prev,
   next,
-  intl: {
-    formatMessage,
-  },
   /* eslint-disable @typescript-eslint/no-unused-vars */
   ref,
   as,
   /* eslint-enable @typescript-eslint/no-unused-vars */
   ...rest
 }) {
+  const { formatMessage } = useIntl()
+
   return (
     <SimplePaginationCore {...rest}>
       <SimplePaginationItem className={getVisibility('prev', !!prev)} href={prev && prev.to || '#'}>
@@ -177,7 +175,7 @@ export const SimplePagination = injectIntl<HTMLProps<Bootstrap.Pagination> & Sim
       </SimplePaginationItem>
     </SimplePaginationCore>
   )
-})
+}
 
 export interface Page {
   current: number

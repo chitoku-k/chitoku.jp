@@ -1,7 +1,7 @@
 import React, { useCallback, useState, useEffect, useRef } from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
-import { injectIntl, InjectedIntlProps } from 'react-intl'
+import { useIntl } from 'react-intl'
 import { navigate, WindowLocation } from '@reach/router'
 import styled from 'styled-components'
 import { SearchBoxProvided } from 'react-instantsearch-core'
@@ -101,16 +101,15 @@ const UnsupportedNotice = styled.noscript`
   }
 `
 
-const SearchForm = injectIntl(connectSearchBox<SearchFormProps>(function SearchForm({
+const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
   search,
   location,
   openSearch,
   closeSearch,
   refine,
-  intl: {
-    formatMessage,
-  },
 }) {
+  const { formatMessage } = useIntl()
+
   const [ text, setText ] = useState(null as string | null)
   const input = useRef<HTMLInputElement>(null)
 
@@ -171,9 +170,9 @@ const SearchForm = injectIntl(connectSearchBox<SearchFormProps>(function SearchF
       </FormDesktop>
     </>
   )
-}))
+})
 
-interface SearchFormProps extends InjectedIntlProps, SearchBoxProvided {
+interface SearchFormProps extends SearchBoxProvided {
   search: boolean
   location: WindowLocation
   openSearch: () => any

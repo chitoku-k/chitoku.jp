@@ -2,7 +2,7 @@ import React from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { graphql, useStaticQuery } from 'gatsby'
-import { injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 
 import messages from './messages'
@@ -46,12 +46,8 @@ const query = graphql`
   }
 `
 
-const SoarerHistory = injectIntl<SoarerHistoryQueryResult>(function SoarerHistory({
-  intl: {
-    formatMessage,
-    formatDate,
-  },
-}) {
+const SoarerHistory = function SoarerHistory() {
+  const { formatMessage, formatDate } = useIntl()
   const {
     updates: {
       items,
@@ -71,7 +67,7 @@ const SoarerHistory = injectIntl<SoarerHistoryQueryResult>(function SoarerHistor
           ) : null}
           <br />
           <small>
-            {formatDate(update.date, {
+            {formatDate(new Date(update.date), {
               year: 'numeric',
               month: 'narrow',
               day: 'numeric',
@@ -94,7 +90,7 @@ const SoarerHistory = injectIntl<SoarerHistoryQueryResult>(function SoarerHistor
       ))}
     </>
   )
-})
+}
 
 interface SoarerHistoryQueryResult {
   updates: {

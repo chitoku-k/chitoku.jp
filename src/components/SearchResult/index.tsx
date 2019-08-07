@@ -1,5 +1,5 @@
-import React from 'react'
-import { injectIntl, InjectedIntlProps, FormattedMessage } from 'react-intl'
+import React, { FunctionComponent } from 'react'
+import { useIntl, FormattedMessage } from 'react-intl'
 import { WindowLocation } from '@reach/router'
 import { Hit, StateResultsProvided } from 'react-instantsearch-core'
 import { connectStateResults, Hits, PoweredBy } from 'react-instantsearch-dom'
@@ -82,7 +82,7 @@ const NoHits = styled.div`
   line-height: 1.8;
 `
 
-const SearchHit = injectIntl<SearchHitProps<SearchDocument>>(function SearchHit({
+const SearchHit: FunctionComponent<SearchHitProps<SearchDocument>> = function SearchHit({
   hit: {
     _highlightResult: highlight,
     title,
@@ -90,10 +90,9 @@ const SearchHit = injectIntl<SearchHitProps<SearchDocument>>(function SearchHit(
     excerpt,
     category,
   },
-  intl: {
-    formatMessage,
-  },
 }) {
+  const { formatMessage } = useIntl()
+
   return (
     <SearchHitContainer>
       <SearchHitLink to={path}>
@@ -115,17 +114,16 @@ const SearchHit = injectIntl<SearchHitProps<SearchDocument>>(function SearchHit(
       </p>
     </SearchHitContainer>
   )
-})
+}
 
-const SearchResult = injectIntl(connectStateResults<SearchResultProps, SearchDocument>(function SearchResult({
+const SearchResult = connectStateResults<SearchResultProps, SearchDocument>(function SearchResult({
   searchState: {
     query: text,
   },
   searchResults,
-  intl: {
-    formatMessage,
-  },
 }) {
+  const { formatMessage } = useIntl()
+
   return (
     <SearchResultContainer className="search-result">
       <SearchResultHeader title={
@@ -151,7 +149,7 @@ const SearchResult = injectIntl(connectStateResults<SearchResultProps, SearchDoc
       )}
     </SearchResultContainer>
   )
-}))
+})
 
 interface SearchDocument {
   headings: string[]
@@ -167,7 +165,7 @@ interface SearchHitProps<T> {
   hit: Hit<T>
 }
 
-interface SearchResultProps extends InjectedIntlProps, StateResultsProvided<SearchDocument>  {
+interface SearchResultProps extends StateResultsProvided<SearchDocument>  {
   text: string | boolean
 }
 

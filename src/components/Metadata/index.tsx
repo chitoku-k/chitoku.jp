@@ -1,6 +1,6 @@
-import React, { createContext } from 'react'
+import React, { createContext, FunctionComponent } from 'react'
 import { Helmet } from 'react-helmet'
-import { injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Location } from '@reach/router'
 
@@ -39,13 +39,12 @@ const metadata: MetadataItem = {
 
 export const MetadataContext = createContext(metadata)
 
-const Metadata = injectIntl<MetadataItem>(function Metadata({
+const Metadata: FunctionComponent<MetadataItem> = function Metadata({
   children,
-  intl: {
-    formatMessage,
-  },
   ...newState
 }) {
+  const { formatMessage } = useIntl()
+
   const {
     site: {
       siteMetadata: {
@@ -98,7 +97,7 @@ const Metadata = injectIntl<MetadataItem>(function Metadata({
       )}
     </Location>
   )
-})
+}
 
 interface MetadataQueryResult {
   site: {

@@ -1,5 +1,4 @@
 import React from 'react'
-import { injectIntl } from 'react-intl'
 import styled from 'styled-components'
 
 import Logo from '../../assets/logo.svg'
@@ -35,7 +34,7 @@ const HeaderLink = styled(Link)`
   display: inline-block;
 `
 
-export default injectIntl(function Header() {
+export default function Header() {
   return (
     <HeaderContainer className="container">
       <HeaderTitle>
@@ -45,4 +44,4 @@ export default injectIntl(function Header() {
       </HeaderTitle>
     </HeaderContainer>
   )
-})
+}

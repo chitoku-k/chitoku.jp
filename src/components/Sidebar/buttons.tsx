@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import FontAwesome from 'react-fontawesome'
-import { injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import { GatsbyLinkProps } from 'gatsby-link'
 import styled from 'styled-components'
 
@@ -78,74 +78,68 @@ const HatenaShareButtonIcon = styled(ShareButtonIcon)`
   }
 `
 
-export const TwitterShareButton = injectIntl<TwitterShareButtonProps>(function TwitterShareButton({
+export const TwitterShareButton: FunctionComponent<TwitterShareButtonProps> = function TwitterShareButton({
   title,
   url,
-  intl: {
-    formatMessage,
-  },
 }) {
+  const { formatMessage } = useIntl()
   const to = `https://twitter.com/share?text=${encodeURIComponent(title || '')}&url=${encodeURIComponent(url)}`
+
   return (
     <ShareButton to={to} color="#00b0ed" hover="#009cd9" title={formatMessage(messages.share_on, { service: formatMessage(messages.twitter) })}>
       <ShareButtonIcon name="twitter" />
     </ShareButton>
   )
-})
+}
 
-export const FacebookShareButton = injectIntl<ShareButtonProps>(function FacebookShareButton({
+export const FacebookShareButton: FunctionComponent<ShareButtonProps> = function FacebookShareButton({
   url,
-  intl: {
-    formatMessage,
-  },
 }) {
+  const { formatMessage } = useIntl()
   const to = `https://www.facebook.com/sharer.php?u=${encodeURIComponent(url)}`
+
   return (
     <ShareButton to={to} color="#315096" hover="#1d3c82" title={formatMessage(messages.share_on, { service: formatMessage(messages.facebook) })}>
       <ShareButtonIcon name="facebook" />
     </ShareButton>
   )
-})
+}
 
-export const PocketShareButton = injectIntl<PocketShareButtonProps>(function PocketShareButtonProps({
+export const PocketShareButton: FunctionComponent<PocketShareButtonProps> = function PocketShareButtonProps({
   url,
   title,
-  intl: {
-    formatMessage,
-  },
 }) {
+  const { formatMessage } = useIntl()
   const to = `https://getpocket.com/edit?title=${encodeURIComponent(title || '')}&url=${encodeURIComponent(url)}`
+
   return (
     <ShareButton to={to} color="#ff2651" hover="#eb126e" title={formatMessage(messages.share_on, { service: formatMessage(messages.pocket) })}>
       <ShareButtonIcon name="get-pocket" />
     </ShareButton>
   )
-})
+}
 
-export const HatenaShareButton = injectIntl<ShareButtonProps>(function HatenaShareButton({
+export const HatenaShareButton: FunctionComponent<ShareButtonProps> = function HatenaShareButton({
   url,
-  intl: {
-    formatMessage,
-  },
 }) {
+  const { formatMessage } = useIntl()
   const to = `https://b.hatena.ne.jp/add?mode=confirm&url=${encodeURIComponent(url)}`
+
   return (
     <ShareButton to={to} color="#008fde" hover="#007bca" title={formatMessage(messages.share_on, { service: formatMessage(messages.hatena) })}>
       <HatenaShareButtonIcon name="hatena" />
     </ShareButton>
   )
-})
+}
 
-export const TumblrShareButton = injectIntl<ShareButtonProps>(function TumblrShareButton({
+export const TumblrShareButton: FunctionComponent<ShareButtonProps> = function TumblrShareButton({
   url,
-  intl: {
-    formatMessage,
-  },
 }) {
+  const { formatMessage } = useIntl()
   const to = `https://www.tumblr.com/share/link?url=${encodeURIComponent(url)}`
   return (
     <ShareButton to={to} color="#35465c" hover="#213248" title={formatMessage(messages.share_on, { service: formatMessage(messages.twitter) })}>
       <ShareButtonIcon name="tumblr" />
     </ShareButton>
   )
-})
+}

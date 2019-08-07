@@ -10,10 +10,11 @@ exports.onCreateWebpackConfig = ({
     module: {
       rules: [
         {
-          test: /\.js$/,
+          test: /\.m?js$/,
           include: [
             path.join(path.resolve('node_modules/@weknow/gatsby-remark-twitter'), '/'),
             path.join(path.resolve('node_modules/react'), '/'),
+            path.join(path.resolve('node_modules/react-intl'), '/'),
             path.join(path.resolve('node_modules/react-schemaorg'), '/'),
           ],
           use: [

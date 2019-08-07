@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
-import { injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 
 import messages from './messages'
@@ -28,11 +28,9 @@ const query = graphql`
   }
 `
 
-const PspErrorCodes = injectIntl(function PspErrorCodes({
-  intl: {
-    formatMessage,
-  },
-}) {
+const PspErrorCodes: FunctionComponent = function PspErrorCodes() {
+  const { formatMessage } = useIntl()
+
   const {
     errors: {
       group,
@@ -66,7 +64,7 @@ const PspErrorCodes = injectIntl(function PspErrorCodes({
       ))}
     </div>
   )
-})
+}
 
 interface PspErrorCodesQueryResult {
   errors: {

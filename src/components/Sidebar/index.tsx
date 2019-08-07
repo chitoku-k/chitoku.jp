@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
+import React, { FunctionComponent, useContext } from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
-import { injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import { WindowLocation } from '@reach/router'
 import FontAwesome from 'react-fontawesome'
 import styled from 'styled-components'
@@ -180,13 +180,11 @@ const FeedIcon = styled(FontAwesome)`
   margin: 0 3px -1px;
 `
 
-const Sidebar = injectIntl<SidebarProps>(function Sidebar({
+const Sidebar: FunctionComponent<SidebarProps> = function Sidebar({
   location,
-  intl: {
-    formatDate,
-    formatMessage,
-  },
 }) {
+  const { formatMessage, formatDate } = useIntl()
+
   const { title } = useContext(MetadataContext)
   const {
     site: {
@@ -235,7 +233,7 @@ const Sidebar = injectIntl<SidebarProps>(function Sidebar({
               <br />
               <SidebarItemAttribute>
                 {article.attributes.created ? (
-                  formatDate(article.attributes.created, {
+                  formatDate(new Date(article.attributes.created), {
                     year: 'numeric',
                     month: 'narrow',
                     day: 'numeric',
@@ -265,7 +263,7 @@ const Sidebar = injectIntl<SidebarProps>(function Sidebar({
       </SidebarItem>
     </SidebarContainer>
   )
-})
+}
 
 export interface SidebarProps {
   location: WindowLocation

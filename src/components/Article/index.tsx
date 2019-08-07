@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react'
+import React, { FunctionComponent, ReactNode } from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
-import { injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 
 import messages from './messages'
@@ -122,7 +122,7 @@ const withArticle = (
     },
   }), {})
 
-const Article = injectIntl<ArticleProps>(function Article({
+const Article: FunctionComponent<ArticleProps> = function Article({
   children,
   components = {},
   article,
@@ -141,11 +141,9 @@ const Article = injectIntl<ArticleProps>(function Article({
   },
   prev,
   next,
-  intl: {
-    formatMessage,
-    formatDate,
-  },
 }) {
+  const { formatMessage, formatDate } = useIntl()
+
   // TODO: Make default components injectable
   Object.assign(components, {
     'pspsdk-function': PspSdkFunction,
@@ -175,7 +173,7 @@ const Article = injectIntl<ArticleProps>(function Article({
               </ArticleHeaderAttributeItem>
             ) : null}
             {created ? (
-              <ArticleHeaderAttributeItem title={formatDate(created, {
+              <ArticleHeaderAttributeItem title={formatDate(new Date(created), {
                 year: 'numeric',
                 month: 'narrow',
                 day: 'numeric',
@@ -183,7 +181,7 @@ const Article = injectIntl<ArticleProps>(function Article({
                 minute: 'numeric',
               })}>
                 <ArticleHeaderAttributeIcon name="calendar-o" />
-                {formatDate(created, {
+                {formatDate(new Date(created), {
                   year: 'numeric',
                   month: 'narrow',
                   day: 'numeric',
@@ -222,7 +220,7 @@ const Article = injectIntl<ArticleProps>(function Article({
       ) : null}
     </>
   )
-})
+}
 
 interface ArticleItemBase {
   attributes: {
