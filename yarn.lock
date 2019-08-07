@@ -968,10 +968,10 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
   integrity sha512-ONhaKPIufzzrlNbqtWFFd+jlnemX6lJAgq9ZeiZtS7I1PIf/la7CW4m83rTXRnVnsMbW2k56pGYu7AUFJD9Pow==
 
-"@types/algoliasearch@^3.30.16":
-  version "3.30.16"
-  resolved "https://registry.yarnpkg.com/@types/algoliasearch/-/algoliasearch-3.30.16.tgz#df71aa3eee3648441075ee6dcc428e54dd861196"
-  integrity sha512-47FcMwJuW5NJnzjgkX6O9LKyUeNuVFaeU5iEjCAPH21LQNqev1l6PL/LhGSkme89YIcT0DAl27dqA/woq4BBrw==
+"@types/algoliasearch@^3.30.17":
+  version "3.30.17"
+  resolved "https://registry.yarnpkg.com/@types/algoliasearch/-/algoliasearch-3.30.17.tgz#b43b30ad0550e1a740b977b5a39c37f97cfa0e5f"
+  integrity sha512-BDBV4gsS+Nlzn3OcIJLRD4Y0yj7TI5Pc9ozDLn+ug/tnb6R1V+VVzZoqgeEoPtrfhEC4gOTI1PmApE0eg/Slkw==
 
 "@types/configstore@^2.1.1":
   version "2.1.1"
