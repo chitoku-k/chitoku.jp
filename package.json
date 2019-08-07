@@ -71,7 +71,7 @@
     "react-helmet": "^6.0.0-beta",
     "react-highlight-words": "^0.16.0",
     "react-instantsearch-dom": "^5.7.0",
-    "react-intl": "^2.9.0",
+    "react-intl": "^3.1.0",
     "react-medium-image-zoom": "^3.1.1",
     "react-recaptcha-v3": "^1.0.2",
     "react-schemaorg": "^1.0.0",
