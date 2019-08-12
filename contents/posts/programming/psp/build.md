@@ -18,17 +18,17 @@ Linux や macOS の場合は Makefile を作成して次の [Hello World のビ�
 1. プロジェクト名を入力して「OK」で完了します。
 1. プロジェクトが作成されたら「ソリューション エクスプローラー」でプロジェクトを右クリックして「プロパティ」を開きます。
 1. 「C/C++」→「インクルードの検索パス」を以下のように変更します。
-    - Minimalist PSPSDK の場合
-        - C:\pspsdk\psp\include; C:\pspsdk\psp\sdk\include
-    - devkitPro の場合
-        - C:\devkitPro\devkitPSP\psp\include; C:\devkitPro\devkitPSP\psp\sdk\include
+    - Minimalist PSPSDK の場合  
+    `C:\pspsdk\psp\include; C:\pspsdk\psp\sdk\include`
+    - devkitPro の場合  
+    `C:\devkitPro\devkitPSP\psp\include; C:\devkitPro\devkitPSP\psp\sdk\include`
 1. 「ビルド」を以下のように変更します。
     - ビルド コマンド ライン  
-      `batch:make`
+      `batch¦make`
     - すべてリビルド コマンド ライン  
-      `batch:make clean && make`
+      `batch¦make clean && make`
     - クリーン コマンド ライン  
-      `batch:make clean`
+      `batch¦make clean`
 1. 「OK」で完了します。
 
 ## 参考

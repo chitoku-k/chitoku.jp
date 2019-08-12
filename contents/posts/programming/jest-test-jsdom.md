@@ -9,7 +9,7 @@ tags:
 ## 目的
 
 Node.js におけるテストで [Jest](https://jestjs.io/) を使用する場合、DOM API が関連するテストは [JSDOM](https://github.com/jsdom/jsdom) の実装によって実行されます。
-この JSDOM はブラウザーと完全に同じ実装を持っているわけではなく、`javascript:location.href` への代入ができないなどの制約があります。
+この JSDOM はブラウザーと完全に同じ実装を持っているわけではなく、`javascript¦location.href` への代入ができないなどの制約があります。
 そのため Jest でもこれに合わせて JSDOM の API を使用したテストコードを記述する必要があります。
 
 ## 準備
@@ -34,8 +34,8 @@ npm i jest-environment-jsdom-global jest-environment-jsdom
 
 ## 書き方
 
-あとは `location` プロパティーなどのように書き換えることができないものを `javascript:jsdom.reconfigure()` を使って書き換えます[^2]。
-これは `javascript:location.href` を直接使えるようになるわけではなく、上記パッケージによって `javascript:jsdom` が Jest から参照できるようになるというだけです。
+あとは `location` プロパティーなどのように書き換えることができないものを `javascript¦jsdom.reconfigure()` を使って書き換えます[^2]。
+これは `javascript¦location.href` を直接使えるようになるわけではなく、上記パッケージによって `javascript¦jsdom` が Jest から参照できるようになるというだけです。
 
 ```javascript
 it('detects PC', () => {
@@ -55,7 +55,7 @@ it('detects SP', () => {
 });
 ```
 
-パス部分の書き換えだけであれば `javascript:history.pushState()` を使用することでも対処できますが、ホスト名の書き換えなどを伴う場合は `javascript:jsdom.reconfigure()` が必要です。
+パス部分の書き換えだけであれば `javascript¦history.pushState()` を使用することでも対処できますが、ホスト名の書き換えなどを伴う場合は `javascript¦jsdom.reconfigure()` が必要です。
 
 ## 脚注
 

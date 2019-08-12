@@ -40,13 +40,13 @@ img.Source = source;
 
 - 画像のダウンロードと生成がバックグラウンド（UI スレッド以外のスレッド）で処理されること
 - XAML またはデータバインディングで URI を指定できること
-- `csharp:System.Windows.Controls.Image` と `csharp:System.Windows.Media.ImageBrush` で使用できること
+- `csharp¦System.Windows.Controls.Image` と `csharp¦System.Windows.Media.ImageBrush` で使用できること
 
 ## バックグラウンドで画像を生成する
 
 最近の .NET 開発では非同期型の記述が容易になりましたが、WPF ではその性質上、オブジェクトがスレッドをまたぐ際にその扱いに制約があります。
 ここでのオブジェクトは `Freezable` の派生クラスを指します。
-`csharp:System.Windows.Media.Imaging.BitmapImage` もこれにあたります。
+`csharp¦System.Windows.Media.Imaging.BitmapImage` もこれにあたります。
 
 - UI スレッドで表示に用いられるオブジェクトは UI スレッドで生成する
 - 非 UI スレッドで生成したオブジェクトを UI スレッドで使用する場合は `Freeze`（変更不可能化）する必要がある

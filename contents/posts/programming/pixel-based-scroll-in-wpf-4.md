@@ -156,11 +156,11 @@ XAML 側の XML 名前空間は適切に設定してください。ここでは 
 
 コードではコントロールごとに次のプロパティを変更しています。
 
-- `csharp:System.Windows.Controls.ItemsControl`
-  - `csharp:System.Windows.Controls.VirtualizingPanel.ScrollUnitProperty` 依存関係プロパティ
-- `csharp:System.Windows.Controls.VirtualizingStackPanel`
-  - `csharp:System.Windows.Controls.VirtualizingPanel.ScrollUnitProperty` 依存関係プロパティ
-  - `csharp:System.Windows.Controls.VirtualizingStackPanel.IsPixelBased` プロパティ
+- `csharp¦System.Windows.Controls.ItemsControl`
+  - `csharp¦System.Windows.Controls.VirtualizingPanel.ScrollUnitProperty` 依存関係プロパティ
+- `csharp¦System.Windows.Controls.VirtualizingStackPanel`
+  - `csharp¦System.Windows.Controls.VirtualizingPanel.ScrollUnitProperty` 依存関係プロパティ
+  - `csharp¦System.Windows.Controls.VirtualizingStackPanel.IsPixelBased` プロパティ
 
 ## 誰得なの
 

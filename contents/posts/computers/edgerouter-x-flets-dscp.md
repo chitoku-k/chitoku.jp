@@ -11,7 +11,7 @@ tags:
 フレッツ光では OpenSSH が設定する DSCP 値の関係で SSH のパケットを NGN 網で捨てられてしまう問題が発生します[^1][^2]。
 端的にはこの記事の指摘通り `ssh_config` を以下のように修正すれば解決できます。
 
-```markup
+```
 Host foo.example.com
     HostName  foo.example.com
     IPQoS     0x00

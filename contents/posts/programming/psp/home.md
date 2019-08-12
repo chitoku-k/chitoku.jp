@@ -94,15 +94,15 @@ int main(int argc, char *argv[])
 ## 仕組み
 
 PSP のアプリケーションを HOME ボタンによる終了に対応させるためには、
-終了処理のためのコールバックを `c:sceKernelRegisterExitCallback()` 関数を使ってシステムに登録する必要があります。
-この関数に渡すコールバックは `c:sceKernelCreateCallback()` 関数を用いて作成することができ、今回の例ではユーザーが終了を選択したときにシステムによって呼び出されるようになっています。
+終了処理のためのコールバックを `c¦sceKernelRegisterExitCallback()` 関数を使ってシステムに登録する必要があります。
+この関数に渡すコールバックは `c¦sceKernelCreateCallback()` 関数を用いて作成することができ、今回の例ではユーザーが終了を選択したときにシステムによって呼び出されるようになっています。
 
 また、これらの終了コールバックの登録処理は新規作成したスレッド上で行い、
-作成したスレッドもコールバックが呼び出されるまでは `c:sceKernelSleepThreadCB()` 関数を使用して待機状態にしておきます。
+作成したスレッドもコールバックが呼び出されるまでは `c¦sceKernelSleepThreadCB()` 関数を使用して待機状態にしておきます。
 こうしておくことで、メインスレッドでゲームのメインループを処理しながら終了コールバックを待ち受けておくことができるようになります。
 
-ユーザーが終了を選択すると、終了コールバックに登録した `c:ExitCallback()` 関数が変数 `c:running` を `c:0` に変更します。
-これによってメインループの `c: while (running) { ... }` の継続条件から外れてループが終了し、`c:sceKernelExitGame()` 関数がゲームを終了するという流れになります。
+ユーザーが終了を選択すると、終了コールバックに登録した `c¦ExitCallback()` 関数が変数 `c¦running` を `c¦0` に変更します。
+これによってメインループの `c¦while (running) { ... }` の継続条件から外れてループが終了し、`c¦sceKernelExitGame()` 関数がゲームを終了するという流れになります。
 
 終了コールバックを登録しただけではゲームの終了は行われず、あくまでもプログラマーが終了を管理する必要がある点には注意が必要です。
 
@@ -116,7 +116,7 @@ PSP のアプリケーションを HOME ボタンによる終了に対応させ�
 
 <pspsdk-function name="sceKernelCreateThread"><div>
 
-スレッドの種類は [Hello World のビルド](/programming/psp/helloworld#api-リファレンス)で紹介した `c:PSP_MAIN_THREAD_ATTR()` のものと同じです。
+スレッドの種類は [Hello World のビルド](/programming/psp/helloworld#api-リファレンス)で紹介した `c¦PSP_MAIN_THREAD_ATTR()` のものと同じです。
 
 </div></psp-sdk-function>
 

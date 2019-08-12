@@ -50,14 +50,14 @@ var lismo  = new NowPlayingLib.LismoPort();
 var foobar = new NowPlayingLib.Foobar2000();
 ```
 
-インスタンスの生成に失敗した場合は `csharp:System.TypeInitializationException` がスローされます。
-原因となった例外（ほとんどの場合 `csharp:System.Runtime.InteropServices.COMException`）は `InnerException` プロパティで取得できます。
+インスタンスの生成に失敗した場合は `csharp¦System.TypeInitializationException` がスローされます。
+原因となった例外（ほとんどの場合 `csharp¦System.Runtime.InteropServices.COMException`）は `InnerException` プロパティで取得できます。
 
 ### 現在再生している曲の情報を取得する
 
 音楽プレーヤーが現在再生している曲の情報を取得します。
 取得できる場合はアルバムアートも格納されます。
-音楽プレーヤーが曲を再生していない場合 `csharp:null` が返ります。
+音楽プレーヤーが曲を再生していない場合 `csharp¦null` が返ります。
 時間のかかる操作は非同期で行われます。
 
 ```csharp
@@ -66,7 +66,7 @@ NowPlayingLib.MediaItem media = await player.GetCurrentMedia();
 
 ### 音楽プレーヤーにイベントを設定する
 
-`csharp:NowPlayingLib.INotifyPlayerStateChanged` を実装している音楽プレーヤー（x-アプリと LISMO Port 以外）の場合は音楽プレーヤーが再生している曲が変更された場合などにそのイベントをハンドルすることができます。
+`csharp¦NowPlayingLib.INotifyPlayerStateChanged` を実装している音楽プレーヤー（x-アプリと LISMO Port 以外）の場合は音楽プレーヤーが再生している曲が変更された場合などにそのイベントをハンドルすることができます。
 
 ```csharp
 player.CurrentMediaChanged += (sender, e) => Console.WriteLine(e.CurrentMedia);
@@ -79,7 +79,7 @@ player.CurrentMediaChanged += (sender, e) => Console.WriteLine(e.CurrentMedia);
 
 ### 音楽プレーヤーとの接続を切断する
 
-各インスタンスは `csharp:System.IDisposable` を実装しており、`Dispose` を呼び出したり `csharp:using` ステートメントで囲ったりすることで適切にリソースを解放することができます。
+各インスタンスは `csharp¦System.IDisposable` を実装しており、`Dispose` を呼び出したり `csharp¦using` ステートメントで囲ったりすることで適切にリソースを解放することができます。
 内部実装で利用される COM オブジェクトは自動的に解放されます。
 
 ## その他

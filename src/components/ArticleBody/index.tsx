@@ -203,7 +203,8 @@ const ArticleContent = styled.div`
   code[class*="language-"] {
     font-family: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
-    .token.operator {
+    .token.operator,
+    .token.string {
       background: none;
     }
   }

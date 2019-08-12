@@ -30,11 +30,11 @@ https://twitter.com/java_shit/status/1097194006700675073
 - [gatsby-remark-attr](https://www.gatsbyjs.org/packages/gatsby-remark-attr/)
   - Markdown 内のリンクや画像などに HTML 属性の機能を追加するプラグイン（[remark-attr](https://www.npmjs.com/package/remark-attr)）
 - [gatsby-remark-component](https://www.gatsbyjs.org/packages/gatsby-remark-component)
-  - Markdown 内に書かれた `html:<my-component />` を React のコンポーネントとして組み込むプラグイン（[rehype-react](https://www.npmjs.com/package/rehype-react)）
+  - Markdown 内に書かれた `html¦<my-component />` を React のコンポーネントとして組み込むプラグイン（[rehype-react](https://www.npmjs.com/package/rehype-react)）
 - [gatsby-remark-embed-gist](https://www.gatsbyjs.org/packages/gatsby-remark-embed-gist/)
   - Markdown 内の Gist の URL を Gist の埋め込みに展開するプラグイン
 - [gatsby-remark-grid-tables](https://www.gatsbyjs.org/packages/gatsby-remark-grid-tables/)
-  - Markdown 内にアスキーアートの要領で書かれた表組を `html:<table>` に展開するプラグイン（[remark-grid-tables](https://www.npmjs.com/package/remark-grid-tables)）
+  - Markdown 内にアスキーアートの要領で書かれた表組を `html¦<table>` に展開するプラグイン（[remark-grid-tables](https://www.npmjs.com/package/remark-grid-tables)）
 
 静的サイトジェネレーターはこれ以外にも色々ありますが、開発が活発な上、プラグインを中心としたエコシステムが盛り上がっているので今回は WordPress からの移行先を Gatsby に決めました。
 
@@ -98,9 +98,9 @@ Algolia ではこの問題に対して個別で設定を変更するようにな
 
 ## 国際化対応
 
-chitoku.jp は国際化対応する予定はありませんが、コンポーネントのソース内に日本語の文字列リテラルを書いていくのは管理しにくいため [react-intl](https://www.npmjs.com/package/react-intl) をメッセージのカタログとして使うことにしました。react-intl は `javascript:defineMessages()` を使って `id` を手動で定義する必要があって面倒ですが、[babel-plugin-react-intl-auto](https://www.npmjs.com/package/babel-plugin-react-intl-auto) というパッケージがこれをうまく解決してくれました[^4]。
+chitoku.jp は国際化対応する予定はありませんが、コンポーネントのソース内に日本語の文字列リテラルを書いていくのは管理しにくいため [react-intl](https://www.npmjs.com/package/react-intl) をメッセージのカタログとして使うことにしました。react-intl は `javascript¦defineMessages()` を使って `id` を手動で定義する必要があって面倒ですが、[babel-plugin-react-intl-auto](https://www.npmjs.com/package/babel-plugin-react-intl-auto) というパッケージがこれをうまく解決してくれました[^4]。
 
-開発スタート時は babel-plugin-react-intl-auto が自動生成する `javascript:defineMessages()` の関数シグネチャーが TypeScript の型定義と合っていないために TypeScript プロジェクトで導入できませんでしたが、型定義を取り込んでもらえたので[^5]良い感じに使えるようになりました[^6]。[@babel/plugin-transform-typescript](https://www.npmjs.com/package/@babel/plugin-transform-typescript) を Babel の設定に追加することで [extract-react-intl-messages](https://www.npmjs.com/package/extract-react-intl-messages) と併用し `messages.ts` からメッセージ用の翻訳ファイルを生成することも可能です！
+開発スタート時は babel-plugin-react-intl-auto が自動生成する `javascript¦defineMessages()` の関数シグネチャーが TypeScript の型定義と合っていないために TypeScript プロジェクトで導入できませんでしたが、型定義を取り込んでもらえたので[^5]良い感じに使えるようになりました[^6]。[@babel/plugin-transform-typescript](https://www.npmjs.com/package/@babel/plugin-transform-typescript) を Babel の設定に追加することで [extract-react-intl-messages](https://www.npmjs.com/package/extract-react-intl-messages) と併用し `messages.ts` からメッセージ用の翻訳ファイルを生成することも可能です！
 
 ```javascript
 import { defineMessages } from 'react-intl'
@@ -114,7 +114,7 @@ export default defineMessages({
 })
 ```
 
-TypeScript なので `typescript:keyof` で補完が表示されるのも地味に嬉しいところ。
+TypeScript なので `typescript¦keyof` で補完が表示されるのも地味に嬉しいところ。
 
 ![](../media/babel-plugin-react-intl-auto-typescript.png)
 
@@ -146,7 +146,7 @@ chitoku.jp では gatsby-remark-component というプラグインを使って�
 
 ## remark-grid-tables (zmarkdown)
 
-[remark-grid-tables](https://www.npmjs.com/package/remark-grid-tables) は下記のようにアスキーアート的な表現の表を `html:<table>` に展開するプラグインです。
+[remark-grid-tables](https://www.npmjs.com/package/remark-grid-tables) は下記のようにアスキーアート的な表現の表を `html¦<table>` に展開するプラグインです。
 
 <div style="max-width: 500px; margin: 0 auto 30px;" class="monospace">
 
@@ -208,7 +208,7 @@ chitoku.jp では gatsby-remark-component というプラグインを使って�
 
 ### サロゲートペアの考慮
 
-JavaScript で文字列を処理する際に `javascript:for (let i = 0; i < str.length; ++i)` といったループを使用すると壊れる文字があります。
+JavaScript で文字列を処理する際に `javascript¦for (let i = 0; i < str.length; ++i)` といったループを使用すると壊れる文字があります。
 
 ```javascript
 '🐶'[0] // => "�"

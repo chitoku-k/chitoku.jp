@@ -15,7 +15,7 @@ Markdown では改行を行末に半角スペースを 2 つ並べて表しま�
 
 ## 設定例
 
-`after/ftplugin/markdown.vim`[^2] などで次のように `vim:syntax` の設定を追加します。`cchar` は `conceal` 部分に表示される文字です。
+`after/ftplugin/markdown.vim`[^2] などで次のように `vim¦syntax` の設定を追加します。`cchar` は `conceal` 部分に表示される文字です。
 
 ```vim
 syntax match markdownLineBreak /\s\s$/ conceal cchar=↵

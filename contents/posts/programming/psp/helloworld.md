@@ -74,22 +74,22 @@ CFW ではプラグインの設定画面などでも頻繁に使用されてい�
 <pspsdk-macro name="PSP_MODULE_INFO"><div>
 実行モードには次の定数が定義されています。
 
-- `c:PSP_MODULE_KERNEL (0x1000)` - カーネルモード
-- `c:PSP_MODULE_USER (0)` - ユーザーモード
+- `c¦PSP_MODULE_KERNEL (0x1000)` - カーネルモード
+- `c¦PSP_MODULE_USER (0)` - ユーザーモード
 
 </div></psp-sdk-macro>
 
 <pspsdk-macro name="PSP_MAIN_THREAD_ATTR"><div>
 スレッドの種類には次の定数が定義されています。  
 
-- `c:PSP_THREAD_ATTR_VFPU` - VFPU（ベクトル演算を行うための FPU）へのアクセスを有効化
-- `c:PSP_THREAD_ATTR_USER` - ユーザーモード
-- `c:PSP_THREAD_ATTR_USBWLAN` - USB/無線 LAN の API を有効化
-- `c:PSP_THREAD_ATTR_VSH` - VSH の API を有効化
-- `c:PSP_THREAD_ATTR_SCRATCH_SRAM` - スクラッチパッドメモリーを使用（Ver 1.0 では使用不可）
-- `c:PSP_THREAD_ATTR_NO_FILLSTACK` - スタックの `c:0xFF` クリアを無効化
-- `c:PSP_THREAD_ATTR_CLEAR_STACK` - スレッド削除時にスタックをクリア
-- `c:0` - カーネルモード
+- `c¦PSP_THREAD_ATTR_VFPU` - VFPU（ベクトル演算を行うための FPU）へのアクセスを有効化
+- `c¦PSP_THREAD_ATTR_USER` - ユーザーモード
+- `c¦PSP_THREAD_ATTR_USBWLAN` - USB/無線 LAN の API を有効化
+- `c¦PSP_THREAD_ATTR_VSH` - VSH の API を有効化
+- `c¦PSP_THREAD_ATTR_SCRATCH_SRAM` - スクラッチパッドメモリーを使用（Ver 1.0 では使用不可）
+- `c¦PSP_THREAD_ATTR_NO_FILLSTACK` - スタックの `c¦0xFF` クリアを無効化
+- `c¦PSP_THREAD_ATTR_CLEAR_STACK` - スレッド削除時にスタックをクリア
+- `c¦0` - カーネルモード
 
 </div></psp-sdk-macro>
 

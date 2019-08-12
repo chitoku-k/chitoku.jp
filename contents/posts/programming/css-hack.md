@@ -40,7 +40,7 @@ CSSハックを利用することで、他のブラウザーへの影響なく�
 }
 ```
 
-指定されている、`css:"\"}\""` でそのセレクタの読み込みを止めてしまうバグを利用したハックです。
+指定されている、`css¦"\"}\""` でそのセレクタの読み込みを止めてしまうバグを利用したハックです。
 セレクタの最後に記述するなど、順番を工夫する必要があります。
 Validation では**有効**な記述です。**Tantek Box Model Hack** と呼ばれています。
 
@@ -56,7 +56,7 @@ Validation では**有効**な記述です。**Tantek Box Model Hack** と呼ば
 }
 ```
 
-プロパティーの先頭に `css:_` をつけます。**アンダースコアハック** と呼ばれています。Validation では**無効**な記述です。
+プロパティーの先頭に `css¦_` をつけます。**アンダースコアハック** と呼ばれています。Validation では**無効**な記述です。
 
 ### Internet Explorer 7 以下
 
@@ -70,7 +70,7 @@ Validation では**有効**な記述です。**Tantek Box Model Hack** と呼ば
 }
 ```
 
-プロパティーの先頭に `css:*` をつけます。Validation では**無効**な記述です。
+プロパティーの先頭に `css¦*` をつけます。Validation では**無効**な記述です。
 
 ```css
 #hack {
@@ -82,7 +82,7 @@ Validation では**有効**な記述です。**Tantek Box Model Hack** と呼ば
 }
 ```
 
-プロパティーの先頭に `css:#` をつけます。**ハッシュハック** と呼ばれています。Validation では**無効**な記述です。
+プロパティーの先頭に `css¦#` をつけます。**ハッシュハック** と呼ばれています。Validation では**無効**な記述です。
 
 ### Internet Explorer 10/9/8/7/6
 
@@ -96,7 +96,7 @@ Validation では**有効**な記述です。**Tantek Box Model Hack** と呼ば
 }
 ```
 
-値の末尾に `css:\9` をつけます。Internet Explorer 11 以上で修正されています。Validation では**無効**な記述です。
+値の末尾に `css¦\9` をつけます。Internet Explorer 11 以上で修正されています。Validation では**無効**な記述です。
 
 ### Internet Explorer 9 以上
 
@@ -111,7 +111,7 @@ Validation では**有効**な記述です。**Tantek Box Model Hack** と呼ば
 }
 ```
 
-セレクタの末尾に `:not(:target)` をつけます。さらに、モダンブラウザーを弾くために、値の末尾に `\9` をつけます。Validation では**無効**な記述です。
+セレクタの末尾に `css¦:not(:target)` をつけます。さらに、モダンブラウザーを弾くために、値の末尾に `css¦\9` をつけます。Validation では**無効**な記述です。
 
 ### Internet Explorer の判別
 
