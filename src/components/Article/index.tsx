@@ -122,7 +122,7 @@ const withArticle = (
     },
   }), {})
 
-const Article: FunctionComponent<ArticleProps> = function Article({
+const Article: FunctionComponent<ArticleProps> = ({
   children,
   components = {},
   article,
@@ -141,7 +141,7 @@ const Article: FunctionComponent<ArticleProps> = function Article({
   },
   prev,
   next,
-}) {
+}) => {
   const { formatMessage, formatDate } = useIntl()
 
   // TODO: Make default components injectable

@@ -54,11 +54,11 @@ const PspSdkFunctionDescription = styled.div`
   `}
 `
 
-const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = function PspSdkFunction({
+const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
   children,
   article,
   name: functionName,
-}) {
+}) => {
   const def = article.attributes.functions && article.attributes.functions.find(x => x && x.name === functionName)
   if (!def) {
     return (

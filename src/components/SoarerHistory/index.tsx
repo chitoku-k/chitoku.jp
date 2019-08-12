@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { graphql, useStaticQuery } from 'gatsby'
@@ -46,7 +46,7 @@ const query = graphql`
   }
 `
 
-const SoarerHistory = function SoarerHistory() {
+const SoarerHistory: FunctionComponent = () => {
   const { formatMessage, formatDate } = useIntl()
   const {
     updates: {

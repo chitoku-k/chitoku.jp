@@ -82,7 +82,7 @@ const NoHits = styled.div`
   line-height: 1.8;
 `
 
-const SearchHit: FunctionComponent<SearchHitProps<SearchDocument>> = function SearchHit({
+const SearchHit: FunctionComponent<SearchHitProps<SearchDocument>> = ({
   hit: {
     _highlightResult: highlight,
     title,
@@ -90,7 +90,7 @@ const SearchHit: FunctionComponent<SearchHitProps<SearchDocument>> = function Se
     excerpt,
     category,
   },
-}) {
+}) => {
   const { formatMessage } = useIntl()
 
   return (

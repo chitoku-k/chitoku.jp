@@ -39,10 +39,10 @@ const metadata: MetadataItem = {
 
 export const MetadataContext = createContext(metadata)
 
-const Metadata: FunctionComponent<MetadataItem> = function Metadata({
+const Metadata: FunctionComponent<MetadataItem> = ({
   children,
   ...newState
-}) {
+}) => {
   const { formatMessage } = useIntl()
 
   const {
