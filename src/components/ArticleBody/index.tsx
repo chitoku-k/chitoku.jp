@@ -223,6 +223,19 @@ const ArticleContent = styled.div`
         }
       }
     }
+    .command-line-prompt {
+      letter-spacing: 0;
+      border-right: none;
+      margin-right: 0;
+      > span::before {
+        padding-right: 0;
+      }
+      > span[data-user]::before {
+        content: "$";
+        color: slategray;
+        padding-right: 1ex;
+      }
+    }
   }
   .monospace {
     pre[class*="language-"],

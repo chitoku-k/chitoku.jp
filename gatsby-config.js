@@ -98,6 +98,9 @@ module.exports = {
                 shell: 'bash',
                 xaml: 'xml',
               },
+              prompt: {
+                global: true,
+              },
             },
           },
           { resolve: '@weknow/gatsby-remark-twitter' },
