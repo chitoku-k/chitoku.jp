@@ -32,8 +32,8 @@ IPv6 サポートのためには Perl ライブラリーである [IO::Socket:IN
 <!-- more -->
 
 ```bash
-$ sudo apt-get update
-$ sudo apt-get install libio-socket-inet6-perl
+sudo apt-get update
+sudo apt-get install libio-socket-inet6-perl
 ```
 
 EdgeRouter におけるパッケージのインストールに関しては公式のドキュメント[^2]も参考にしてください。
@@ -57,14 +57,14 @@ EdgeRouter におけるパッケージのインストールに関しては公式
   - IPv6 アドレスを返す Web API を指定します。今回は [ident.me API](https://api.ident.me/) を使いました。
 
 ```bash
-$ configure
-$ set service dns dynamic interface eth0 service custom-cloudflare host-name ddns.example.com
-$ set service dns dynamic interface eth0 service custom-cloudflare options 'ipv6=yes, zone=example.com'
-$ set service dns dynamic interface eth0 service custom-cloudflare login ******@*******.**
-$ set service dns dynamic interface eth0 service custom-cloudflare password *************************************
-$ set service dns dynamic interface eth0 service custom-cloudflare protocol cloudflare
-$ set service dns dynamic interface eth0 web 'https://v6.ident.me/'
-$ commit; save
+configure
+set service dns dynamic interface eth0 service custom-cloudflare host-name ddns.example.com
+set service dns dynamic interface eth0 service custom-cloudflare options 'ipv6=yes, zone=example.com'
+set service dns dynamic interface eth0 service custom-cloudflare login ******@*******.**
+set service dns dynamic interface eth0 service custom-cloudflare password *************************************
+set service dns dynamic interface eth0 service custom-cloudflare protocol cloudflare
+set service dns dynamic interface eth0 web 'https://v6.ident.me/'
+commit; save
 ```
 
 以上で設定は完了です。Cloudflare の管理画面で AAAA レコードが更新されていれば成功です。
@@ -78,7 +78,7 @@ $ commit; save
 以下のコマンドで最終更新日時と更新されたアドレスが表示できます。
 
 ```bash
-$ show dns dynamic status
+show dns dynamic status
 ```
 
 ### CLI から強制的に更新を実行する
@@ -88,7 +88,7 @@ $ show dns dynamic status
 （インターフェイス名は読み替えてください）
 
 ```bash
-$ sudo ddclient -verbose -force -file /etc/ddclient/ddclient_eth0.conf
+sudo ddclient -verbose -force -file /etc/ddclient/ddclient_eth0.conf
 ```
 
 ## 脚注

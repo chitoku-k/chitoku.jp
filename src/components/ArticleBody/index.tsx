@@ -93,12 +93,10 @@ const ArticleContent = styled.div`
     `}
   }
   img {
-    margin-top: 0.4em;
     &:not(.gatsby-resp-image-image) {
       max-width: 100%;
     }
     &.emoji {
-      margin-top: 0;
       width: 1.25em;
       height: auto;
     }
@@ -221,6 +219,19 @@ const ArticleContent = styled.div`
         > span::before {
           padding-left: 0.8em;
         }
+      }
+    }
+    .command-line-prompt {
+      letter-spacing: 0;
+      border-right: none;
+      margin-right: 0;
+      > span::before {
+        padding-right: 0;
+      }
+      > span[data-user]::before {
+        content: "$";
+        color: slategray;
+        padding-right: 1ex;
       }
     }
   }

@@ -19,22 +19,22 @@ Xcode と Homebrew をインストールしてから、ターミナルで環境�
 1. [Homebrew](https://brew.sh/) をインストールします。
 1. ターミナルで [pspdev/psptoolchain](https://github.com/pspdev/psptoolchain) をインストールします。
 
-```shell
-$ git clone 'https://github.com/pspdev/psptoolchain.git'
-$ cd psptoolchain
-$ ./prepare-mac-os.sh
-$ sudo ./toolchain-sudo.sh
+```bash
+git clone 'https://github.com/pspdev/psptoolchain.git'
+cd psptoolchain
+./prepare-mac-os.sh
+sudo ./toolchain-sudo.sh
 ```
 
 ## Ubuntu
 
 1. ターミナルで [pspdev/psptoolchain](https://github.com/pspdev/psptoolchain) をインストールします。
 
-```shell
-$ git clone 'https://github.com/pspdev/psptoolchain.git'
-$ cd psptoolchain
-$ ./prepare-debian-ubuntu.sh
-$ sudo ./toolchain-sudo.sh
+```bash
+git clone 'https://github.com/pspdev/psptoolchain.git'
+cd psptoolchain
+./prepare-debian-ubuntu.sh
+sudo ./toolchain-sudo.sh
 ```
 
 ## エラーが出た場合

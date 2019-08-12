@@ -37,8 +37,8 @@ StartSSL を使用して SSL 証明書を発行する手順は以下の記事が
 また、秘密鍵についてはパスフレーズが設定されている状態では利用できないのであらかじめ復号しておきます。  
 （StartSSL の ToolBox -> Decrypt Private Key を利用することでも復号できます、お好きな方で）
 
-```shell
-$ openssl rsa -in ssl.key -out ssl.key
+```bash
+openssl rsa -in ssl.key -out ssl.key
 ```
 
 ## 証明書の設定

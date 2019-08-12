@@ -26,8 +26,8 @@ phpenv でバージョン切り替えが可能な環境で実験してみます�
 1. phpenv と php-build をインストールする
 2. php-build のビルドオプションの設定ファイルを開く
 
-```shell
-$ vim /usr/local/share/php-build/default_configure_options
+```bash
+vim /usr/local/share/php-build/default_configure_options
 ```
 
 3.  次の行を追加（apxs の位置は環境依存）
@@ -40,16 +40,16 @@ $ vim /usr/local/share/php-build/default_configure_options
 
 4. 保存してビルド
 
-```shell
-$ php-build 7.0.0RC1 ~/.phpenv/versions/7.0.0RC1
+```bash
+php-build 7.0.0RC1 ~/.phpenv/versions/7.0.0RC1
 ```
 
 5.  バージョンを切り替える
 
-```shell
-$ phpenv global 7.0.0RC1
+```bash{outputLines: 2,4-5}
+phpenv global 7.0.0RC1
 
-$ phpenv versions
+phpenv versions
   system
 * 7.0.0RC1
 ```
