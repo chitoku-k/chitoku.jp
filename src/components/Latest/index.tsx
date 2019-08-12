@@ -6,9 +6,9 @@ import Metadata from 'components/Metadata'
 import Container from 'components/Container'
 import Article, { ArticleItem } from 'components/Article'
 
-const Latest: FunctionComponent<LatestProps> = function Latest({
+const Latest: FunctionComponent<LatestProps> = ({
   items,
-}) {
+}) => {
   const { formatMessage } = useIntl()
 
   return (

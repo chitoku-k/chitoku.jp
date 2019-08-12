@@ -54,11 +54,11 @@ const PspSdkMacroDescription = styled.div`
   `}
 `
 
-const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = function PspSdkMacro({
+const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
   children,
   article,
   name: macroName,
-}) {
+}) => {
   const def = article.attributes.macros && article.attributes.macros.find(x => Boolean(x && x.name === macroName))
   if (!def) {
     return (

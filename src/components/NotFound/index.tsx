@@ -15,35 +15,33 @@ const TryList = styled.ul`
   line-height: 2.2 !important;
 `
 
-const Contact: FunctionComponent<ContactProps> = function Contact({
+const Contact: FunctionComponent<ContactProps> = ({
   message,
   service: {
     service: name,
     accounts,
   },
-}) {
-  return (
-    <FormattedMessage {...message} values={{
-      service: name,
-      account: (
-        <span>
-          {accounts
-            .map(({ url, name }, index) => url ? <Link to={url} key={index}>{name}</Link> : name)
-            .reduce<ReactNode[]>((prev, curr) => prev.length ? [ prev, ', ', curr ] : [ curr ], [])}
-        </span>
-      ),
-    }} />
-  )
-}
+}) => (
+  <FormattedMessage {...message} values={{
+    service: name,
+    account: (
+      <span>
+        {accounts
+          .map(({ url, name }, index) => url ? <Link to={url} key={index}>{name}</Link> : name)
+          .reduce<ReactNode[]>((prev, curr) => prev.length ? [ prev, ', ', curr ] : [ curr ], [])}
+      </span>
+    ),
+  }} />
+)
 
 interface ContactProps {
   message: MessageDescriptor
   service: AboutContactItem
 }
 
-const NotFound: FunctionComponent<NotFoundProps> = function NotFound({
+const NotFound: FunctionComponent<NotFoundProps> = ({
   contacts,
-}) {
+}) => {
   const { formatMessage } = useIntl()
 
   return (

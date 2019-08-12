@@ -180,9 +180,9 @@ const FeedIcon = styled(FontAwesome)`
   margin: 0 3px -1px;
 `
 
-const Sidebar: FunctionComponent<SidebarProps> = function Sidebar({
+const Sidebar: FunctionComponent<SidebarProps> = ({
   location,
-}) {
+}) => {
   const { formatMessage, formatDate } = useIntl()
 
   const { title } = useContext(MetadataContext)

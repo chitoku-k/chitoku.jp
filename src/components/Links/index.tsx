@@ -13,11 +13,11 @@ const LinksContainer = styled.ul`
   line-height: 1.8;
 `
 
-const Links: FunctionComponent<LinksProps> = function Links({
+const Links: FunctionComponent<LinksProps> = ({
   links: {
     items,
   },
-}) {
+}) => {
   const { formatMessage } = useIntl()
 
   return (

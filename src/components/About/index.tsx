@@ -64,10 +64,10 @@ const Table = styled.table`
   }
 `
 
-const About: FunctionComponent<AboutProps> = function About({
+const About: FunctionComponent<AboutProps> = ({
   about,
   introduction,
-}) {
+}) => {
   const { formatMessage } = useIntl()
   const content = useMemo(() => {
     const { Compiler } = new RehypeReact({

@@ -28,7 +28,7 @@ const query = graphql`
   }
 `
 
-const PspErrorCodes: FunctionComponent = function PspErrorCodes() {
+const PspErrorCodes: FunctionComponent = () => {
   const { formatMessage } = useIntl()
 
   const {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 
 import Logo from '../../assets/logo.svg'
@@ -34,14 +34,14 @@ const HeaderLink = styled(Link)`
   display: inline-block;
 `
 
-export default function Header() {
-  return (
-    <HeaderContainer className="container">
-      <HeaderTitle>
-        <HeaderLink to="/">
-          <Logo viewBox="0 0 330 33" width={400} height={40} />
-        </HeaderLink>
-      </HeaderTitle>
-    </HeaderContainer>
-  )
-}
+const Header: FunctionComponent = () => (
+  <HeaderContainer className="container">
+    <HeaderTitle>
+      <HeaderLink to="/">
+        <Logo viewBox="0 0 330 33" width={400} height={40} />
+      </HeaderLink>
+    </HeaderTitle>
+  </HeaderContainer>
+)
+
+export default Header

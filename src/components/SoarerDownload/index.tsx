@@ -77,7 +77,7 @@ const SoarerDownloadDescription = styled.div`
   `}
 `
 
-const SoarerDownload: FunctionComponent<SoarerDownloadQueryResult> = function SoarerDownload() {
+const SoarerDownload: FunctionComponent<SoarerDownloadQueryResult> = () => {
   const { formatMessage } = useIntl()
 
   const {

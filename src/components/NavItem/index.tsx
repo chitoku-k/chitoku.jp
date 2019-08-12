@@ -111,10 +111,6 @@ const NavItem: FunctionComponent<NavItemProps & BootstrapNavItemProps & Navigati
   </Location>
 )
 
-interface NavContentProps {
-  arrow?: boolean | NavigationLinkItem[]
-}
-
 interface NavItemAttributes {
   bsClass: 'dropdown' | 'sub'
   className: string

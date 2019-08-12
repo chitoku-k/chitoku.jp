@@ -78,10 +78,10 @@ const HatenaShareButtonIcon = styled(ShareButtonIcon)`
   }
 `
 
-export const TwitterShareButton: FunctionComponent<TwitterShareButtonProps> = function TwitterShareButton({
+export const TwitterShareButton: FunctionComponent<TwitterShareButtonProps> = ({
   title,
   url,
-}) {
+}) => {
   const { formatMessage } = useIntl()
   const to = `https://twitter.com/share?text=${encodeURIComponent(title || '')}&url=${encodeURIComponent(url)}`
 
@@ -92,9 +92,9 @@ export const TwitterShareButton: FunctionComponent<TwitterShareButtonProps> = fu
   )
 }
 
-export const FacebookShareButton: FunctionComponent<ShareButtonProps> = function FacebookShareButton({
+export const FacebookShareButton: FunctionComponent<ShareButtonProps> = ({
   url,
-}) {
+}) => {
   const { formatMessage } = useIntl()
   const to = `https://www.facebook.com/sharer.php?u=${encodeURIComponent(url)}`
 
@@ -105,10 +105,10 @@ export const FacebookShareButton: FunctionComponent<ShareButtonProps> = function
   )
 }
 
-export const PocketShareButton: FunctionComponent<PocketShareButtonProps> = function PocketShareButtonProps({
+export const PocketShareButton: FunctionComponent<PocketShareButtonProps> = ({
   url,
   title,
-}) {
+}) => {
   const { formatMessage } = useIntl()
   const to = `https://getpocket.com/edit?title=${encodeURIComponent(title || '')}&url=${encodeURIComponent(url)}`
 
@@ -119,9 +119,9 @@ export const PocketShareButton: FunctionComponent<PocketShareButtonProps> = func
   )
 }
 
-export const HatenaShareButton: FunctionComponent<ShareButtonProps> = function HatenaShareButton({
+export const HatenaShareButton: FunctionComponent<ShareButtonProps> = ({
   url,
-}) {
+}) => {
   const { formatMessage } = useIntl()
   const to = `https://b.hatena.ne.jp/add?mode=confirm&url=${encodeURIComponent(url)}`
 
@@ -132,9 +132,9 @@ export const HatenaShareButton: FunctionComponent<ShareButtonProps> = function H
   )
 }
 
-export const TumblrShareButton: FunctionComponent<ShareButtonProps> = function TumblrShareButton({
+export const TumblrShareButton: FunctionComponent<ShareButtonProps> = ({
   url,
-}) {
+}) => {
   const { formatMessage } = useIntl()
   const to = `https://www.tumblr.com/share/link?url=${encodeURIComponent(url)}`
   return (

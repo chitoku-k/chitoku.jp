@@ -120,9 +120,9 @@ const SimplePaginationItem = styled(PaginationItem)`
   }
 `
 
-const Pagination: FunctionComponent<PaginationProps> = function Pagination({
+const Pagination: FunctionComponent<PaginationProps> = ({
   page,
-}) {
+}) => {
   const { formatMessage } = useIntl()
 
   return (
@@ -144,7 +144,7 @@ export const PaginationContainer = styled.aside`
   text-align: center;
 `
 
-export const SimplePagination: FunctionComponent<HTMLProps<Bootstrap.Pagination> & SimplePaginationProps> = function SimplePagination({
+export const SimplePagination: FunctionComponent<HTMLProps<Bootstrap.Pagination> & SimplePaginationProps> = ({
   prev,
   next,
   /* eslint-disable @typescript-eslint/no-unused-vars */
@@ -152,7 +152,7 @@ export const SimplePagination: FunctionComponent<HTMLProps<Bootstrap.Pagination>
   as,
   /* eslint-enable @typescript-eslint/no-unused-vars */
   ...rest
-}) {
+}) => {
   const { formatMessage } = useIntl()
 
   return (

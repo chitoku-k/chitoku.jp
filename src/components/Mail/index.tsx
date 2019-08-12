@@ -39,10 +39,10 @@ const Input = styled(Bootstrap.FormControl)`
   resize: vertical;
 `
 
-const Label: FunctionComponent<MailLabelProps> = function Label({
+const Label: FunctionComponent<MailLabelProps> = ({
   children,
   required,
-}) {
+}) => {
   const { formatMessage } = useIntl()
 
   return (
@@ -55,7 +55,7 @@ const Label: FunctionComponent<MailLabelProps> = function Label({
 
 type Status = '' | 'sending' | 'sent' | 'error'
 
-const Mail: FunctionComponent = function Mail() {
+const Mail: FunctionComponent = () => {
   const { formatMessage } = useIntl()
 
   const [ token, setToken ] = useState('')

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 
@@ -20,10 +20,12 @@ const FooterCore = styled.footer`
   `}
 `
 
-export default function Footer() {
+const Footer: FunctionComponent = () => {
   const { formatMessage } = useIntl()
 
   return (
     <FooterCore className="text-center">{formatMessage(messages.copyright)}</FooterCore>
   )
 }
+
+export default Footer
