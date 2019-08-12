@@ -21,7 +21,7 @@ export const pageQuery = graphql`
             title
             created
           }
-          excerptAst
+          excerptAst(pruneLength: 1000)
           excerpted
           ...Article
         }

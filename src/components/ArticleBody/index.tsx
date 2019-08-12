@@ -93,12 +93,10 @@ const ArticleContent = styled.div`
     `}
   }
   img {
-    margin-top: 0.4em;
     &:not(.gatsby-resp-image-image) {
       max-width: 100%;
     }
     &.emoji {
-      margin-top: 0;
       width: 1.25em;
       height: auto;
     }

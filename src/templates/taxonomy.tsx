@@ -43,7 +43,7 @@ export const pageQuery = graphql`
       items: edges {
         article: node {
           ...Article
-          excerptAst
+          excerptAst(pruneLength: 1000)
         }
       }
     }
