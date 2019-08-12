@@ -47,14 +47,14 @@ charon-systemd[625]: generating IKE_SA_INIT response 0 [ N(NO_PROP) ]
 
 設定ファイルのマイグレーションを行いたくない場合はこちらを選択します。
 
-```bash
+```bash{outputLines: 1,4,5}
 # 切り替え
-$ systemctl stop strongswan
-$ systemctl start strongswan-starter
+systemctl stop strongswan
+systemctl start strongswan-starter
 
 # 起動ユニットの修正
-$ systemctl disable strongswan
-$ systemctl enable strongswan-starter
+systemctl disable strongswan
+systemctl enable strongswan-starter
 ```
 
 ## 対応 2: 設定ファイルを移行して新ユニットを使う

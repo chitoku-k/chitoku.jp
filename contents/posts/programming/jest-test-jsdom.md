@@ -17,7 +17,7 @@ Node.js におけるテストで [Jest](https://jestjs.io/) を使用する場�
 Jest では JSDOM の API を直接参照することができないため、[jest-environment-jsdom-global](https://www.npmjs.com/package/jest-environment-jsdom-global) をインストールします。
 
 ```bash
-$ npm i jest-environment-jsdom-global jest-environment-jsdom
+npm i jest-environment-jsdom-global jest-environment-jsdom
 ```
 
 `package.json` の `jest` の項目にも追加しておきます。
@@ -29,6 +29,8 @@ $ npm i jest-environment-jsdom-global jest-environment-jsdom
   }
 }
 ```
+
+<!-- more -->
 
 ## 書き方
 

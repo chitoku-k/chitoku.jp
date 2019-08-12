@@ -44,8 +44,8 @@ https://twitter.com/java_shit/status/536534482828795904
 
 このツイート（[ID: 536534482828795904](https://twitter.com/java_shit/status/536534482828795904)）の GIF 画像で試してみます。
 
-```shell
-$ curl -X GET "https://api.twitter.com/1.1/statuses/show/536534482828795904.json?cards_platform=iPhone-8&include_cards=true"
+```bash
+curl -X GET "https://api.twitter.com/1.1/statuses/show/536534482828795904.json?cards_platform=iPhone-8&include_cards=true"
 ```
 
 取得に必要なパラメーターは以下の通りです。
@@ -119,7 +119,7 @@ $ curl -X GET "https://api.twitter.com/1.1/statuses/show/536534482828795904.json
 
 非公開アカウントの GIF 画像を取得することはできませんが、Twitter の Web をスクレイピングすることでも URL を取得できます。
 
-```shell
+```bash
 curl -X GET "https://twitter.com/java_shit/status/536534482828795904"
 ```
 
@@ -143,8 +143,8 @@ https://twitter.com/hnle0/status/544569728178466818
 
 埋め込みツイート API からも GIF の情報を取得できるようです。
 
-```shell
-$ curl -X GET "https://syndication.twitter.com/tweets.json?ids=536534482828795904"
+```bash
+curl -X GET "https://syndication.twitter.com/tweets.json?ids=536534482828795904"
 ```
 
 得られたレスポンスを展開すると以下のように、取れないこともないといった感じです。

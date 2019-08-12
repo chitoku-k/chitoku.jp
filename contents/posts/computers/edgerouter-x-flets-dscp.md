@@ -37,24 +37,24 @@ CLI からファイアウォールの設定を行います。
 
 <!-- more -->
 
-```shell
-$ configure
+```bash{outputLines: 2,3,6,7,13,14,16}
+configure
 
 # SSH に使われるアドレス
-$ set firewall group ipv6-address-group ADDRESS6_SSH description 'Addresses for SSH'
-$ set firewall group ipv6-address-group ADDRESS6_SSH ipv6-address '2001:db8::1'
+set firewall group ipv6-address-group ADDRESS6_SSH description 'Addresses for SSH'
+set firewall group ipv6-address-group ADDRESS6_SSH ipv6-address '2001:db8::1'
 
 # 上記アドレスが宛先の TCP パケットの DSCP 値を 0 に変更
-$ set firewall ipv6-modify LAN6_PBR rule 10 action modify
-$ set firewall ipv6-modify LAN6_PBR rule 10 destination group ipv6-address-group ADDRESS6_SSH
-$ set firewall ipv6-modify LAN6_PBR rule 10 destination port 22
-$ set firewall ipv6-modify LAN6_PBR rule 10 modify dscp 0
-$ set firewall ipv6-modify LAN6_PBR rule 10 protocol tcp
+set firewall ipv6-modify LAN6_PBR rule 10 action modify
+set firewall ipv6-modify LAN6_PBR rule 10 destination group ipv6-address-group ADDRESS6_SSH
+set firewall ipv6-modify LAN6_PBR rule 10 destination port 22
+set firewall ipv6-modify LAN6_PBR rule 10 modify dscp 0
+set firewall ipv6-modify LAN6_PBR rule 10 protocol tcp
 
 # 設定したファイアウォールのルールをインターフェイスに設定
-$ set interfaces ethernet eth0 firewall in ipv6-modify LAN6_PBR
+set interfaces ethernet eth0 firewall in ipv6-modify LAN6_PBR
 
-$ commit; save
+commit; save
 ```
 
 こうしておけば各端末で優先度の設定を意識することなくルーター側で適切な DSCP 値でパケットを送り出せるようになります。
