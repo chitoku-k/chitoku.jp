@@ -7,7 +7,7 @@ tags:
 ---
 大した記事ではないですが備忘録代わりに。
 
-WPF には Windows 上で動く手前、そのほとんどが DirectX で描画されている一方で、Win32 時代の遺産を利用できるようにするために、`csharp:System.Windows.Interop.HwndHost` という相互運用機構が用意されています。
+WPF には Windows 上で動く手前、そのほとんどが DirectX で描画されている一方で、Win32 時代の遺産を利用できるようにするために、`csharp¦System.Windows.Interop.HwndHost` という相互運用機構が用意されています。
 これを実装するコントロールを利用することで WPF でも ActiveX や Windows Forms のコントロールを利用することができるようになっています。
 そして Web ページを表示する機能を持つ `WebBrowser` コントロールも同様に `HwndHost` の派生クラスです。
 

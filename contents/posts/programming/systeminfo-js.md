@@ -37,7 +37,7 @@ UserAgent 以外にもブラウザーが持つ固有のオブジェクトも含�
 var info = new SystemInfo();
 ```
 
-3. インスタンスの判定結果を参照します。取得できない項目には `javascript:undefined` が入ります。
+3. インスタンスの判定結果を参照します。取得できない項目には `javascript¦undefined` が入ります。
 
 ```javascript
 // ブラウザーの名前 (Internet Explorer, Firefox, Google Chrome など - String)
@@ -71,7 +71,7 @@ document.write(info.device.name);</code></pre>
 document.write(info.userAgent.isFake);</code></pre>
 ```
 
-4. PSP の詳細情報に対応する場合は、systeminfo.js を読み込むより前に次のコードを挿入します。JavaScript の `javascript:document.write` による書き出しでも機能します。
+4. PSP の詳細情報に対応する場合は、systeminfo.js を読み込むより前に次のコードを挿入します。JavaScript の `javascript¦document.write` による書き出しでも機能します。
 
 ```html
 <object name="pspext" type="application/x-psp-extplugin"></object>

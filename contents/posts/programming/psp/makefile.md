@@ -44,7 +44,7 @@ include $(PSPSDK)/lib/build.mak
 指示は `設定項目名 = 指定` の形で行います。スペースはなくても構いませんが、1 行に 1 文です。  
 1 行に収まらない場合は行末に `\` を記述して改行して並べていきます。
 
-設定項目名は次のようなものがあります。必要ないときは上の例のように `c:NULL` を指定するか、または書かないでおきます。
+設定項目名は次のようなものがあります。必要ないときは上の例のように `c¦NULL` を指定するか、または書かないでおきます。
 
 ### コンパイラー/リンカー
 
@@ -95,9 +95,9 @@ include $(PSPSDK)/lib/build.mak
 
 ### その他
 
-- `makefile:PSPSDK = $(shell psp-config --pspsdk-path)`
+- `makefile¦PSPSDK = $(shell psp-config --pspsdk-path)`
   - PSPSDK のパス。
-- `makefile:include $(PSPSDK)/lib/build.mak`
+- `makefile¦include $(PSPSDK)/lib/build.mak`
   - PSPSDK のデフォルトのビルド用 Makefile。上記項目の設定を渡している本体です。
 
 ## 脚注
