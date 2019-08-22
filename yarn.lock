@@ -1992,10 +1992,10 @@ babel-plugin-macros@^2.6.1:
     cosmiconfig "^5.2.0"
     resolve "^1.10.0"
 
-babel-plugin-react-intl-auto@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-react-intl-auto/-/babel-plugin-react-intl-auto-2.1.0.tgz#82a8849ad84c5c2ea6e15438b5ec8081276081c1"
-  integrity sha512-nhh509nyNVKXg2By1X1v/u1m+liWzF8XWC/RWeHXbhDskC1deH3rkWIYkVfvCabEbDBVZ/cpV5JAYRbutFUQgw==
+babel-plugin-react-intl-auto@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-react-intl-auto/-/babel-plugin-react-intl-auto-2.2.0.tgz#8cbac7bab7ed495177cbe3c2f1af821052164c57"
+  integrity sha512-L6IS4NQCr+uGw8yOJ+tBfm5R0UhrM2mZyhN+X7jCsnEhTcWopkWe7geLm7AzJC2SWFXnr7phwXlJbN4erwKRrA==
   dependencies:
     "@babel/types" "^7.5.5"
     murmurhash3js "^3.0.1"
