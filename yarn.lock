@@ -11445,10 +11445,10 @@ react-instantsearch-dom@^5.7.0:
     prop-types "^15.5.10"
     react-instantsearch-core "^5.7.0"
 
-react-intl@^3.1.10:
-  version "3.1.10"
-  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-3.1.10.tgz#52ffb8dda6de09c7a7b8b451d99b22d5d3aec467"
-  integrity sha512-Fr5klqJB/wH3Jyc/RlLsAXFEQew2BzzmVtCf6NacEdisgHDvc2JZnI241Y6fOz2rI1rmgiEmgwj+OF0gQElueg==
+react-intl@^3.1.11:
+  version "3.1.11"
+  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-3.1.11.tgz#cdbd003408886e013d09a8b41133109e4d9aded5"
+  integrity sha512-hnsdhje7IrvyCyW6sdQD7FcVmdkzm9SdFrb+cnwnj5J4QHjZ8X7oVqGPB05sK482Ja1FLUgw1fHheaWRqPAKRA==
   dependencies:
     "@formatjs/intl-relativetimeformat" "^2.8.0"
     "@types/hoist-non-react-statics" "^3.3.1"
