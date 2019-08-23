@@ -1,9 +1,9 @@
 @import "variables";
-@import "font-awesome";
 @import "bootstrap-custom";
-@import "themes/prism";
-@import "plugins/command-line/prism-command-line";
-@import "plugins/line-numbers/prism-line-numbers";
+@import "~font-awesome/scss/font-awesome";
+@import "~prismjs/themes/prism";
+@import "~prismjs/plugins/command-line/prism-command-line";
+@import "~prismjs/plugins/line-numbers/prism-line-numbers";
 
 @import "mixin";
 @import "pages";
