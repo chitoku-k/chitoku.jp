@@ -45,16 +45,7 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: 'gatsby-plugin-sass',
-      options: {
-        includePaths: [
-          path.resolve('node_modules/bootstrap-sass/assets/stylesheets'),
-          path.resolve('node_modules/font-awesome/scss'),
-          path.resolve('node_modules/prismjs'),
-        ],
-      },
-    },
+    { resolve: 'gatsby-plugin-sass' },
     { resolve: 'gatsby-plugin-sharp' },
     { resolve: 'gatsby-plugin-styled-components' },
     { resolve: 'gatsby-plugin-ts-loader' },
