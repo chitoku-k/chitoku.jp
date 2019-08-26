@@ -5404,10 +5404,10 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-extract-react-intl-messages@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/extract-react-intl-messages/-/extract-react-intl-messages-1.1.0.tgz#5e0971fe5d5c3778ca31783b0e3c167f0bb6095e"
-  integrity sha512-mi3PzH3DAlkYJYgtz3yOPOghDab9SAKWG98OY7P2W0pmITWSN8g8AbEc3O9RoDWL6QeookSTcLnkqr+j2FIDzg==
+extract-react-intl-messages@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/extract-react-intl-messages/-/extract-react-intl-messages-2.2.1.tgz#7d417d0c566dbb2ebfaf3ec5315cf0b9da8e7268"
+  integrity sha512-1Wz77bIpqmu7NuXXw6EurjgU3O4jiPoS5xv5fOvGrOlQ8Oz96pTOC77ktLsxlr+YpBEpl1mpTlurpmrxpkjTKw==
   dependencies:
     "@babel/core" "^7.5.5"
     babel-plugin-react-intl "3.5.1"
@@ -5423,7 +5423,7 @@ extract-react-intl-messages@^1.1.0:
     mkdirp "^0.5.1"
     pify "^4.0.1"
     read-babelrc-up "^0.4.0"
-    sort-keys "^3.0.0"
+    sort-keys "^4.0.0"
     write-json-file "^4.1.1"
 
 extract-react-intl@^0.9.0:
@@ -5900,7 +5900,7 @@ fs-extra@^5.0.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
-fs-extra@^7.0.0, fs-extra@^7.0.1:
+fs-extra@^7.0.0:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
   integrity sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==
@@ -13355,6 +13355,13 @@ sort-keys@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/sort-keys/-/sort-keys-3.0.0.tgz#fa751737e3da363ef80632d4fd78e324d661fe9a"
   integrity sha512-77XUKMiZN5LvQXZ9sgWfJza19AvYIDwaDGwGiULM+B5XYru8Z90Oh06JvqDlJczvjjYvssrV0aK1GI6+YXvn5A==
+  dependencies:
+    is-plain-obj "^2.0.0"
+
+sort-keys@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/sort-keys/-/sort-keys-4.0.0.tgz#56dc5e256637bfe3fec8db0dc57c08b1a2be22d6"
+  integrity sha512-hlJLzrn/VN49uyNkZ8+9b+0q9DjmmYcYOnbMQtpkLrYpPwRApDPZfmqbUfJnAA3sb/nRib+nDot7Zi/1ER1fuA==
   dependencies:
     is-plain-obj "^2.0.0"
 
