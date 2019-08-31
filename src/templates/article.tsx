@@ -120,7 +120,6 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
   <Layout>
     <Metadata title={article.attributes.title} thumbnail={article.attributes.category && article.attributes.category.thumbnail} />
     <JsonLd<BreadcrumbList> item={{
-      /* eslint-disable @typescript-eslint/no-object-literal-type-assertion */
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': article.attributes.category ? [
@@ -171,7 +170,6 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
           } as Thing,
         },
       ],
-      /* eslint-enable @typescript-eslint/no-object-literal-type-assertion */
     }} />
     <Header />
     <Navbar />
