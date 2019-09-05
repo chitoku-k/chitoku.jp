@@ -95,7 +95,7 @@ const Mail: FunctionComponent = () => {
 
   useEffect(() => {
     loadReCaptcha(siteKey)
-  }, [])
+  }, [ siteKey ])
 
   useEffect(() => {
     setReadOnly(status === 'sending' || status === 'sent')

@@ -122,7 +122,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
     if (getSearchText(location) === false) {
       setText('')
     }
-  }, [ location ])
+  }, [ location, openSearch ])
 
   const onChange = useCallback((e: React.FormEvent<HTMLInputElement>) => {
     setText(e.currentTarget.value)
@@ -135,7 +135,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
     } else {
       navigate(location.pathname, { replace: true })
     }
-  }, [ text ])
+  }, [ text, location.pathname, refine ])
 
   useEffect(() => {
     if (search) {

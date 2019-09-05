@@ -251,6 +251,7 @@ const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
   ast,
   components,
 }) => {
+  /* eslint-disable react-hooks/exhaustive-deps */
   const content = useMemo(() => {
     const { Compiler } = new RehypeReact({
       createElement: React.createElement,
@@ -259,6 +260,7 @@ const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
 
     return Compiler(ast)
   }, [ ast ])
+  /* eslint-enable react-hooks/exhaustive-deps */
 
   return (
     <ArticleContent>
