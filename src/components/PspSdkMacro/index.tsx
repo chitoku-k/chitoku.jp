@@ -59,18 +59,17 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
   article,
   name: macroName,
 }) => {
+  const ref = useRef<HTMLElement>(null)
+  useEffect(() => {
+    ref.current && Prism.highlightElement(ref.current)
+  }, [ ref ])
+
   const def = article.attributes.macros && article.attributes.macros.find(x => Boolean(x && x.name === macroName))
   if (!def) {
     return (
       <></>
     )
   }
-
-  const ref = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    ref.current && Prism.highlightElement(ref.current)
-  }, [ ref ])
 
   const separator = def.parameters && def.parameters.length > linebreakThreshold ? '\n' : ''
   const indentation = separator ? ' '.repeat(indentationWidth) : ''

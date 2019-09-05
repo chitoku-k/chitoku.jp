@@ -59,18 +59,17 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
   article,
   name: functionName,
 }) => {
+  const ref = useRef<HTMLElement>(null)
+  useEffect(() => {
+    ref.current && Prism.highlightElement(ref.current)
+  }, [ ref ])
+
   const def = article.attributes.functions && article.attributes.functions.find(x => x && x.name === functionName)
   if (!def) {
     return (
       <></>
     )
   }
-
-  const ref = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    ref.current && Prism.highlightElement(ref.current)
-  }, [ ref ])
 
   const separator = def.parameters && def.parameters.length > linebreakThreshold ? '\n' : ''
   const indentation = separator ? ' '.repeat(indentationWidth) : ''
