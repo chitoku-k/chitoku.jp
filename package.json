@@ -28,7 +28,7 @@
     "algoliasearch": "^3.34.0",
     "babel-plugin-react-intl-auto": "^2.2.0",
     "babel-plugin-styled-components": "^1.10.6",
-    "babel-preset-gatsby": "^0.2.11",
+    "babel-preset-gatsby": "^0.2.12",
     "bootstrap-sass": "^3.4.1",
     "eslint": "^6.3.0",
     "eslint-plugin-react": "^7.14.3",
