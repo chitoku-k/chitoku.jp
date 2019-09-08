@@ -1,4 +1,4 @@
-import React, { FormEvent, FunctionComponent, useEffect, useState } from 'react'
+import React, { FormEvent, FunctionComponent, ReactNode, useEffect, useState } from 'react'
 import * as Bootstrap from 'react-bootstrap'
 import { useIntl, FormattedMessage } from 'react-intl'
 import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3'
@@ -183,7 +183,7 @@ const Mail: FunctionComponent = () => {
 
 interface MailLabelProps {
   required?: true
-  title: string
+  title: ReactNode
 }
 
 export default Mail
