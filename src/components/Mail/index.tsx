@@ -39,17 +39,30 @@ const Input = styled(Bootstrap.FormControl)`
   resize: vertical;
 `
 
+const LabelWrapper = styled.label`
+  display: block;
+`
+
+const LabelTitle = styled.span`
+  display: inline-block;
+  margin-bottom: 5px;
+`
+
 const Label: FunctionComponent<MailLabelProps> = ({
+  title,
   children,
   required,
 }) => {
   const { formatMessage } = useIntl()
 
   return (
-    <label>
-      {children}
+    <LabelWrapper>
+      <LabelTitle>
+        {title}
+      </LabelTitle>
       {required ? <Required>{formatMessage(messages.required)}</Required> : null}
-    </label>
+      {children}
+    </LabelWrapper>
   )
 }
 
@@ -117,20 +130,24 @@ const Mail: FunctionComponent = () => {
         </Bootstrap.Alert>
         <form onSubmit={onSubmit}>
           <Bootstrap.FormGroup>
-            <Label required>{formatMessage(messages.name)}</Label>
-            <Input name="name" size={40} required readOnly={readOnly} />
+            <Label required title={formatMessage(messages.name)}>
+              <Input name="name" size={40} required readOnly={readOnly} />
+            </Label>
           </Bootstrap.FormGroup>
           <Bootstrap.FormGroup>
-            <Label>{formatMessage(messages.mail)}</Label>
-            <Input name="email" size={40} readOnly={readOnly} />
+            <Label title={formatMessage(messages.mail)}>
+              <Input name="email" size={40} readOnly={readOnly} />
+            </Label>
           </Bootstrap.FormGroup>
           <Bootstrap.FormGroup>
-            <Label required>{formatMessage(messages.subject)}</Label>
-            <Input name="subject" size={40} required readOnly={readOnly} />
+            <Label required title={formatMessage(messages.subject)}>
+              <Input name="subject" size={40} required readOnly={readOnly} />
+            </Label>
           </Bootstrap.FormGroup>
           <Bootstrap.FormGroup>
-            <Label required>{formatMessage(messages.message)}</Label>
-            <Input name="body" componentClass="textarea" cols={40} rows={10} required readOnly={readOnly} />
+            <Label required title={formatMessage(messages.message)}>
+              <Input name="body" componentClass="textarea" cols={40} rows={10} required readOnly={readOnly} />
+            </Label>
           </Bootstrap.FormGroup>
           <ReCaptcha action="mail" sitekey={siteKey} verifyCallback={setToken} />
           <div className="text-center">
@@ -166,6 +183,7 @@ const Mail: FunctionComponent = () => {
 
 interface MailLabelProps {
   required?: true
+  title: string
 }
 
 export default Mail
