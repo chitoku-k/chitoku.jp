@@ -79,11 +79,7 @@ const Mail: FunctionComponent = () => {
   const siteKey = process.env.GATSBY_MAIL_SITE_KEY as string
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
-    const form = new FormData()
-    for (const name of ['name', 'email', 'subject', 'body']) {
-      const elm = e.currentTarget.elements.namedItem(name) as HTMLInputElement | HTMLTextAreaElement
-      form.append(name, elm.value)
-    }
+    const form = new FormData(e.currentTarget)
     form.append('g-recaptcha-response', token)
 
     e.preventDefault()
