@@ -23,7 +23,7 @@
     "@types/react-instantsearch-dom": "^5.2.5",
     "@types/styled-components": "^4.1.19",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
-    "@typescript-eslint/parser": "^2.0.0",
+    "@typescript-eslint/parser": "^2.2.0",
     "@weknow/gatsby-remark-twitter": "^0.2.3",
     "algoliasearch": "^3.34.0",
     "babel-plugin-react-intl-auto": "^2.3.0",
