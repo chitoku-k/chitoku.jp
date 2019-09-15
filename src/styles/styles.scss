@@ -61,9 +61,9 @@ button {
 
 // reCAPTCHA
 .grecaptcha-badge {
-  display: none;
+  display: none !important;
   body[data-recaptcha] & {
-    display: block;
+    display: block !important;
   }
 }
 
