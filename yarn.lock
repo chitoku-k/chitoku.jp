@@ -6304,12 +6304,12 @@ gatsby-react-router-scroll@^2.1.8:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
-gatsby-remark-attr@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-attr/-/gatsby-remark-attr-0.0.2.tgz#b7711746d5c6da16dca2233a805fe5da4ddd3cb9"
-  integrity sha512-8++FmSApgTjLdK3CbdsMhJiAsW/c/wFNHqt6BJt5WYzbVHwsTkWqRqoUQgONE0BG7rZn1SZg0srbJKto4OB+hw==
+gatsby-remark-attr@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-attr/-/gatsby-remark-attr-0.0.3.tgz#083d09656914311bf500d7b8030d84b147afa692"
+  integrity sha512-mh2oO+3OhstFd3XGvAGY2R5Deh6gxQKUnK9ae1VTnpWaXJOhA1GDfZDbRq64XFXcr9+6/gPBJTDfl5nXmxxriA==
   dependencies:
-    remark-attr "^0.8.0"
+    remark-attr "^0.9.0"
 
 gatsby-remark-autolink-headers@^2.1.10:
   version "2.1.10"
@@ -12397,7 +12397,7 @@ relay-runtime@2.0.0:
     "@babel/runtime" "^7.0.0"
     fbjs "^1.0.0"
 
-remark-attr@0.8.0, remark-attr@^0.8.0:
+remark-attr@0.8.0, remark-attr@^0.9.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/remark-attr/-/remark-attr-0.8.0.tgz#3b87de7129cd6cd92539e3205fc1e21f4e3c313f"
   integrity sha512-9gjgMJxXCk+4pzW7A4HteWLwN5zThtKiyk7i62XZmMFvvsrlm3LIwZj/7y/2L6xtxkhuSwe91jPwD+8hmuvegA==
