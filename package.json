@@ -45,7 +45,7 @@
     "gatsby-plugin-react-svg": "^2.1.2",
     "gatsby-plugin-sass": "^2.1.17",
     "gatsby-plugin-sharp": "chitoku-k/gatsby-plugin-sharp",
-    "gatsby-plugin-styled-components": "^3.1.6",
+    "gatsby-plugin-styled-components": "^3.1.8",
     "gatsby-plugin-ts-loader": "^0.1.0",
     "gatsby-remark-attr": "^0.0.3",
     "gatsby-remark-autolink-headers": "^2.1.10",
