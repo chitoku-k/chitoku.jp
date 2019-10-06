@@ -12112,9 +12112,9 @@ react-lifecycles-compat@^3.0.4:
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
 react-medium-image-zoom@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/react-medium-image-zoom/-/react-medium-image-zoom-3.1.1.tgz#6e48901e5e899fad4483e9a7251ad9a8e81ded23"
-  integrity sha512-nAbQLFJtRTrdizsYZ5zlsjY+irXpFT0JC16jo4BXIlWH5KPerFkZoU5AWnDw6TOjRaqOVKr5lsjcUt/xC2zMwA==
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/react-medium-image-zoom/-/react-medium-image-zoom-3.1.2.tgz#5ac4441f1d424bd9680a25bfc2591be3d7704a42"
+  integrity sha512-werjufn5o4ytdyvJNzfqXCilovDhMyREH0qeJhCjV5brNAyfV7anZmvpFc3FApbuVXwBkzHMuQkV2z/GyEQatg==
 
 react-overlays@^0.8.0:
   version "0.8.3"
