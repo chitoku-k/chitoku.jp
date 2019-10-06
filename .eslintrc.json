@@ -29,7 +29,8 @@
     "no-unused-vars": "off",
     "react/prop-types": "off",
     "react-hooks/exhaustive-deps": "warn",
-    "react-hooks/rules-of-hooks": "error"
+    "react-hooks/rules-of-hooks": "error",
+    "quotes": ["error", "single"]
   },
   "overrides": [
     {
