@@ -9460,10 +9460,10 @@ mathml-tag-names@^2.1.0:
   resolved "https://registry.yarnpkg.com/mathml-tag-names/-/mathml-tag-names-2.1.0.tgz#490b70e062ee24636536e3d9481e333733d00f2c"
   integrity sha512-3Zs9P/0zzwTob2pdgT0CHZuMbnSUSp8MB1bddfm+HDmnFWHGT4jvEZRf+2RuPoa+cjdn/z25SEt5gFTqdhvJAg==
 
-md-attr-parser@^1.2.0:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/md-attr-parser/-/md-attr-parser-1.2.1.tgz#1043f6451c33ed3e392b40504df08010f4d03e3d"
-  integrity sha512-dZqt2L4Q7FUcx6ZcuownAxa74Y7d5jcsHRB2MIgQ0vT10Pa+/0Som6hhJ+jgAjP3vnFtrd4aO+ZMc5K7QVfbiQ==
+md-attr-parser@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/md-attr-parser/-/md-attr-parser-1.3.0.tgz#23e1d507858746d4e84beb244c089799979cfce8"
+  integrity sha512-KTVlfU5Oxo/6kd0YZ2mLP3eWJj+5vzh5mBCxLo3yGl1fzHIgxmtadbE9tHb7TbUBi3XZbl+P0xKeGmakat135w==
 
 md5-file@^3.2.3:
   version "3.2.3"
@@ -12606,13 +12606,13 @@ relay-runtime@2.0.0:
     "@babel/runtime" "^7.0.0"
     fbjs "^1.0.0"
 
-remark-attr@0.8.0, remark-attr@^0.9.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/remark-attr/-/remark-attr-0.8.0.tgz#3b87de7129cd6cd92539e3205fc1e21f4e3c313f"
-  integrity sha512-9gjgMJxXCk+4pzW7A4HteWLwN5zThtKiyk7i62XZmMFvvsrlm3LIwZj/7y/2L6xtxkhuSwe91jPwD+8hmuvegA==
+remark-attr@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/remark-attr/-/remark-attr-0.9.0.tgz#5b213c4e9815fa4f8c07cbaa674aeb525966b15a"
+  integrity sha512-Q2M/fJixf+wBxOmzSp7Ux6s7UzWoLFSGXxnfPG8frGXoxAXbUIs/XF8IVrLWmvqjZ8a66Eb02r4gsbJkIhLewQ==
   dependencies:
     html-element-attributes "^2.0.0"
-    md-attr-parser "^1.2.0"
+    md-attr-parser "^1.3.0"
 
 remark-grid-tables@^1.2.0, remark-grid-tables@^1.4.0:
   version "1.7.0"
