@@ -86,7 +86,7 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
               `${indentation}${name}`
             )
           )).join(', ' + separator),
-          `);`,
+          ');',
         ].join(separator)}
       </PspSdkMacroPrototype>
       <PspSdkMacroDescription>

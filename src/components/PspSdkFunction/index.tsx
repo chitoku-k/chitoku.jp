@@ -92,7 +92,7 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
           ) : (
             'void'
           ),
-          `);`,
+          ');',
         ].join(separator)}
       </PspSdkFunctionPrototype>
       <PspSdkFunctionDescription>
