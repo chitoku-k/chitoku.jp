@@ -91,7 +91,6 @@
     "yaml-flat-loader": "^1.0.1"
   },
   "resolutions": {
-    "gatsby-remark-attr/remark-attr": "0.8.0",
     "gatsby-remark-grid-tables/remark-grid-tables": "^1.4.0"
   },
   "scripts": {
