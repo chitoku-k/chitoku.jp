@@ -783,10 +783,10 @@
     core-js "^2.5.7"
     regenerator-runtime "^0.12.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2":
-  version "7.6.2"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.2.tgz#c3d6e41b304ef10dcf13777a33e7694ec4a9a6dd"
-  integrity sha512-EXxN64agfUqqIGeEjI5dL5z0Sw0ZwWo1mLTi4mQowCZ42O59b7DRpZAnTC6OqdF28wMBMFKNb/4uFGrVaigSpg==
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3":
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.3.tgz#935122c74c73d2240cafd32ddb5fc2a6cd35cf1f"
+  integrity sha512-kq6anf9JGjW8Nt5rYfEuGRaEAaH1mkv3Bbu6rYvLOpPh/RusSJXuKPEAoZ7L7gybZkchE8+NV5g9vKF4AGAtsA==
   dependencies:
     regenerator-runtime "^0.13.2"
 
@@ -6271,11 +6271,11 @@ gatsby-remark-attr@^0.0.3:
     remark-attr "^0.9.0"
 
 gatsby-remark-autolink-headers@^2.1.13:
-  version "2.1.13"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.1.13.tgz#f707e6d5ab063aae368604edfae0c948e8154884"
-  integrity sha512-DQnb1eLfMFX5QXn2LDV/eu587dEBrjKuVB+Pt1Q3cVr3BpyFHjDiDYxMgGfgNJ5L1omB3DFHiuBrUmng6XJtWA==
+  version "2.1.14"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.1.14.tgz#723718ad1fb9254ff81b021ec2c50559c8802fcb"
+  integrity sha512-gHEXvu68dHvyKsVdrUtRRIOFXacjCKYW6Xw7ZSwK/PA7EVjEkPeOkoQ9s/BHoZk+KR4/lBIfsoW1OCaXHm0MDg==
   dependencies:
-    "@babel/runtime" "^7.6.2"
+    "@babel/runtime" "^7.6.3"
     github-slugger "^1.2.1"
     lodash "^4.17.15"
     mdast-util-to-string "^1.0.6"
