@@ -1,1 +1,4 @@
-yarn lint | reviewdog -f=eslint -diff='git diff master'
+#!/usr/bin/env bash
+
+{ yarn lint:js && yarn lint:ts; } | reviewdog -f=eslint -diff='git diff master'
+{ yarn lint:css && yarn lint:styled; } | reviewdog -f=stylelint -diff='git diff master'
