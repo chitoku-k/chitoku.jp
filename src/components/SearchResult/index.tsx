@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react'
-import { useIntl, FormattedMessage } from 'react-intl'
+import { FormattedMessage, useIntl } from 'react-intl'
 import { WindowLocation } from '@reach/router'
 import { Hit, StateResultsProvided } from 'react-instantsearch-core'
-import { connectStateResults, Hits, PoweredBy } from 'react-instantsearch-dom'
+import { Hits, PoweredBy, connectStateResults } from 'react-instantsearch-dom'
 import Highlighter from 'react-highlight-words'
 import styled from 'styled-components'
 
@@ -132,21 +132,20 @@ const SearchResult = connectStateResults<SearchResultProps, SearchDocument>(func
           <PoweredBy />
         </>
       } />
-      {text ? (
-        searchResults && searchResults.nbHits ? (
-          <Hits hitComponent={SearchHit} />
-        ) : (
-          <NoHits>
-            <FormattedMessage {...messages.not_found} values={{
-              text: <strong>{text}</strong>,
-            }} />
-            <br />
-            <FormattedMessage {...messages.not_found_hints} />
-          </NoHits>
-        )
-      ) : (
-        formatMessage(messages.how_to_search)
-      )}
+      {text
+        ? searchResults && searchResults.nbHits
+          ? (
+            <Hits hitComponent={SearchHit} />
+          ) : (
+            <NoHits>
+              <FormattedMessage {...messages.not_found} values={{
+                text: <strong>{text}</strong>,
+              }} />
+              <br />
+              <FormattedMessage {...messages.not_found_hints} />
+            </NoHits>
+          )
+        : formatMessage(messages.how_to_search)}
     </SearchResultContainer>
   )
 })
@@ -165,7 +164,7 @@ interface SearchHitProps<T> {
   hit: Hit<T>
 }
 
-interface SearchResultProps extends StateResultsProvided<SearchDocument>  {
+interface SearchResultProps extends StateResultsProvided<SearchDocument> {
   text: string | boolean
 }
 

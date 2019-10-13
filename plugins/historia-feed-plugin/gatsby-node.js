@@ -73,7 +73,7 @@ exports.onPostBuild = async ({
       attributes,
     } = article
 
-    const directory = file.directory.replace(/^posts(\/|$)/, '/')
+    const directory = file.directory.replace(/^posts(?:\/|$)/u, '/')
     if (!directory) {
       continue
     }

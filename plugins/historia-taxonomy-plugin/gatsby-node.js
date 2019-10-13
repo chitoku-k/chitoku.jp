@@ -92,7 +92,7 @@ exports.createResolvers = ({
         type: 'MarkdownRemark',
         resolve(source, args, context) {
           if (!source.frontmatter.prev) {
-            return
+            return null
           }
 
           const files = context.nodeModel.getAllNodes({
@@ -109,7 +109,7 @@ exports.createResolvers = ({
         type: 'MarkdownRemark',
         resolve(source, args, context) {
           if (!source.frontmatter.next) {
-            return
+            return null
           }
 
           const files = context.nodeModel.getAllNodes({

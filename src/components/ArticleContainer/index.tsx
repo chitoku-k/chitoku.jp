@@ -1,4 +1,4 @@
-import React, { DetailedHTMLProps, HTMLAttributes, FunctionComponent } from 'react'
+import React, { DetailedHTMLProps, FunctionComponent, HTMLAttributes } from 'react'
 import styled from 'styled-components'
 
 import { media } from 'components/Layout'

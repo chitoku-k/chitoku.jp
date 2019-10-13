@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ComponentType, useMemo } from 'react'
+import React, { ComponentType, FunctionComponent, useMemo } from 'react'
 import RehypeReact from 'rehype-react'
 import styled from 'styled-components'
 
@@ -253,12 +253,12 @@ const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
 }) => {
   /* eslint-disable react-hooks/exhaustive-deps */
   const content = useMemo(() => {
-    const { Compiler } = new RehypeReact({
+    const { Compiler: compiler } = new RehypeReact({
       createElement: React.createElement,
       components,
     })
 
-    return Compiler(ast)
+    return compiler(ast)
   }, [ ast ])
   /* eslint-enable react-hooks/exhaustive-deps */
 

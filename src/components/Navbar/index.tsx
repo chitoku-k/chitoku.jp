@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useState } from 'react'
-import * as Bootstrap from 'react-bootstrap'
+import { Navbar as BootstrapNavbar } from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Location } from '@reach/router'
@@ -46,7 +46,7 @@ const NavContainer = styled.div`
   `}
 `
 
-const NavbarCore = styled(Bootstrap.Navbar)`
+const NavbarCore = styled(BootstrapNavbar)`
   background-color: transparent;
   margin-bottom: 0;
   padding: 0;

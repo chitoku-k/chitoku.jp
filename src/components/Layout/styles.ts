@@ -1,5 +1,6 @@
 import { generateMedia } from 'styled-media-query'
 
+/* eslint-disable quote-props */
 export default generateMedia({
   'sp': '767px',
   'tablet': '991px',

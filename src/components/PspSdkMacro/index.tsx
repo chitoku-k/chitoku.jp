@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, FunctionComponent } from 'react'
+import React, { FunctionComponent, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import Prism from 'prismjs'
 require('prismjs/components/prism-c')
@@ -61,7 +61,9 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
 }) => {
   const ref = useRef<HTMLElement>(null)
   useEffect(() => {
-    ref.current && Prism.highlightElement(ref.current)
+    if (ref.current) {
+      Prism.highlightElement(ref.current)
+    }
   }, [ ref ])
 
   const def = article.attributes.macros && article.attributes.macros.find(x => Boolean(x && x.name === macroName))
@@ -74,18 +76,16 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
   const separator = def.parameters && def.parameters.length > linebreakThreshold ? '\n' : ''
   const indentation = separator ? ' '.repeat(indentationWidth) : ''
 
+  const buildParameters = ({ type, name }: PspSdkMacroParameterItem): string => type
+    ? `${indentation}${type} ${name}`
+    : `${indentation}${name}`
+
   return (
     <PspSdkMacroEntry>
       <PspSdkMacroPrototype ref={ref} className="language-c">
         {[
-          def.name + '(',
-          def.parameters && def.parameters.map(({ type, name }) => (
-            type ? (
-              `${indentation}${type} ${name}`
-            ) : (
-              `${indentation}${name}`
-            )
-          )).join(', ' + separator),
+          `${def.name}(`,
+          def.parameters && def.parameters.map(buildParameters).join(`, ${separator}`),
           ');',
         ].join(separator)}
       </PspSdkMacroPrototype>
@@ -119,11 +119,13 @@ type PspSdkMacroArticleItem = ArticleItem & {
 interface PspSdkMacroItem {
   name: string
   description: string
-  parameters: {
-    name: string
-    type: string
-    description: string
-  }[] | null
+  parameters: PspSdkMacroParameterItem[] | null
+}
+
+interface PspSdkMacroParameterItem {
+  name: string
+  type: string
+  description: string
 }
 
 interface PspSdkMacroProps {

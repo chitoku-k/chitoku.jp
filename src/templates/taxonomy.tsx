@@ -9,14 +9,14 @@ import Header from 'components/Header'
 import Navbar from 'components/Navbar'
 import Content from 'components/Content'
 import Footer from 'components/Footer'
-import Article, { ArticleItem, ArticleCategoryItem, ArticleTagItem } from 'components/Article'
+import Article, { ArticleCategoryItem, ArticleItem, ArticleTagItem } from 'components/Article'
 import Pagination, {
   Page,
   PaginationContainer,
-  hasPreviousPage,
-  hasNextPage,
-  getPreviousPagePath,
   getNextPagePath,
+  getPreviousPagePath,
+  hasNextPage,
+  hasPreviousPage,
 } from 'components/Pagination'
 
 interface TaxonomyPageProps extends PageProps {
@@ -52,15 +52,13 @@ export const pageQuery = graphql`
 
 const TaxonomyPagination: FunctionComponent<{ page: Page }> = ({
   page,
-}) => (
-  hasPreviousPage(page) || hasNextPage(page) ? (
-    <ArticleContainer>
-      <PaginationContainer>
-        <Pagination page={page} />
-      </PaginationContainer>
-    </ArticleContainer>
-  ) : null
-)
+}) => hasPreviousPage(page) || hasNextPage(page) ? (
+  <ArticleContainer>
+    <PaginationContainer>
+      <Pagination page={page} />
+    </PaginationContainer>
+  </ArticleContainer>
+) : null
 
 const TaxonomyPage: FunctionComponent<TaxonomyPageProps> = ({
   data: {
