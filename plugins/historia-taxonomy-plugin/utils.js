@@ -1,3 +1,5 @@
+'use strict'
+
 const path = require('path')
 
 const getDirectory = file => file.relativeDirectory.replace(/^posts(?:\/|$)/u, '/')

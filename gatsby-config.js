@@ -1,3 +1,5 @@
+'use strict'
+
 const path = require('path')
 const { description } = require('./package.json')
 const { createQuery } = require('historia-taxonomy-plugin')
@@ -60,7 +62,7 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /assets/,
+          include: /assets/u,
         },
       },
     },

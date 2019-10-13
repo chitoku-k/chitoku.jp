@@ -1,9 +1,11 @@
+'use strict'
+
 const path = require('path')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
-// react-intl
+// React-intl
 // https://github.com/formatjs/formatjs/issues/143#issuecomment-518774786
-exports.resolvableExtensions = () => ['.mjs']
+exports.resolvableExtensions = () => [ '.mjs' ]
 
 exports.onCreateWebpackConfig = ({
   actions: {
@@ -14,14 +16,14 @@ exports.onCreateWebpackConfig = ({
     module: {
       rules: [
         {
-          test: /\.yml$/,
+          test: /\.yml$/u,
           include: path.resolve('translations/'),
           use: [
             { loader: 'yaml-flat-loader' },
           ],
         },
         {
-          test: /\.mjs$/,
+          test: /\.mjs$/u,
           type: 'javascript/auto',
         },
       ],
@@ -34,7 +36,7 @@ exports.onCreateWebpackConfig = ({
   })
 }
 
-exports.onCreatePage = async ({
+exports.onCreatePage = ({
   page,
   actions: {
     createPage,

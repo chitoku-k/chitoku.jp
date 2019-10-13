@@ -1,3 +1,5 @@
+'use strict'
+
 const removeMd = require('remove-markdown')
 const stripHtml = require('string-strip-html')
 const { getPath } = require('./utils')

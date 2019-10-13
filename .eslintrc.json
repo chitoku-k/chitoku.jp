@@ -1,16 +1,9 @@
 {
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "ecmaVersion": 2019
   },
-  "plugins": [
-    "@typescript-eslint",
-    "react-hooks"
-  ],
   "extends": [
-    "eslint:all",
-    "plugin:react/all",
-    "plugin:@typescript-eslint/all"
+    "eslint:all"
   ],
   "env": {
     "browser": true,
@@ -18,41 +11,16 @@
     "node": true
   },
   "rules": {
-    "@typescript-eslint/explicit-function-return-type": ["warn", {
-      "allowExpressions": true,
-      "allowTypedFunctionExpressions": true
-    }],
-    "@typescript-eslint/indent": ["error", 2],
-    "@typescript-eslint/member-delimiter-style": ["error", {
-      "multiline": {
-        "delimiter": "none"
-      }
-    }],
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-extra-parens": ["error", "all", {
-      "ignoreJSX": "all"
-    }],
-    "@typescript-eslint/no-magic-numbers": "off",
-    "@typescript-eslint/no-type-alias": ["error", {
-      "allowAliases": "in-unions-and-intersections"
-    }],
-    "@typescript-eslint/no-unnecessary-condition": ["error", {
-      "ignoreRhs": true
-    }],
-    "@typescript-eslint/promise-function-async": "off",
-    "@typescript-eslint/quotes": ["error", "single"],
-    "@typescript-eslint/semi": ["error", "never"],
-    "@typescript-eslint/strict-boolean-expressions": "off",
-    "@typescript-eslint/typedef": "off",
     "array-bracket-newline": "off",
     "array-bracket-spacing": ["error", "always"],
     "array-element-newline": "off",
     "arrow-parens": ["error", "as-needed"],
+    "camelcase": "off",
     "comma-dangle": ["error", "always-multiline"],
     "dot-location": ["error", "property"],
     "function-call-argument-newline": "off",
     "id-length": "off",
-    "indent": "off",
+    "indent": ["error", 2],
     "init-declarations": "off",
     "max-len": "off",
     "max-lines-per-function": "off",
@@ -82,36 +50,16 @@
     }],
     "prefer-destructuring": "off",
     "quote-props": ["error", "as-needed"],
-    "quotes": "off",
-    "react/forbid-component-props": "off",
-    "react/jsx-closing-bracket-location": ["error", "after-props"],
-    "react/jsx-filename-extension": "off",
-    "react/jsx-first-prop-new-line": "off",
-    "react/jsx-indent": ["error", 2],
-    "react/jsx-indent-props": ["error", 2],
-    "react/jsx-max-depth": "off",
-    "react/jsx-max-props-per-line": "off",
-    "react/jsx-no-bind": ["error", {
-      "allowArrowFunctions": true
-    }],
-    "react/jsx-no-literals": "off",
-    "react/jsx-one-expression-per-line": "off",
-    "react/jsx-props-no-spreading": "off",
-    "react/jsx-sort-props": "off",
-    "react/no-array-index-key": "off",
-    "react/no-multi-comp": "off",
-    "react/prop-types": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "react-hooks/rules-of-hooks": "error",
-    "semi": "off",
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
     "sort-imports": ["warn", {
       "ignoreDeclarationSort": true
     }],
     "sort-keys": "off",
     "sort-vars": "off",
     "space-before-function-paren": ["error", {
-      "asyncArrow": "always",
       "anonymous": "always",
+      "asyncArrow": "always",
       "named": "never"
     }]
   },
@@ -123,32 +71,70 @@
       }
     },
     {
-      "files": ["**/*.js"],
+      "files": ["**/*.{ts,tsx}"],
+      "parser": "@typescript-eslint/parser",
       "parserOptions": {
-        "project": null
+        "project": "./tsconfig.json"
       },
+      "plugins": [
+        "@typescript-eslint",
+        "react-hooks"
+      ],
+      "extends": [
+        "plugin:react/all",
+        "plugin:@typescript-eslint/all"
+      ],
       "rules": {
-        "@typescript-eslint/await-thenable": "off",
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/no-floating-promises": "off",
-        "@typescript-eslint/no-misused-promises": "off",
-        "@typescript-eslint/no-require-imports": "off",
-        "@typescript-eslint/no-unnecessary-condition": "off",
-        "@typescript-eslint/no-unnecessary-qualifier": "off",
-        "@typescript-eslint/no-unnecessary-type-arguments": "off",
-        "@typescript-eslint/no-unnecessary-type-assertion": "off",
-        "@typescript-eslint/no-var-requires": "off",
-        "@typescript-eslint/prefer-includes": "off",
-        "@typescript-eslint/prefer-readonly": "off",
-        "@typescript-eslint/prefer-regexp-exec": "off",
-        "@typescript-eslint/prefer-string-starts-ends-with": "off",
+        "@typescript-eslint/camelcase": "off",
+        "@typescript-eslint/explicit-function-return-type": ["warn", {
+          "allowExpressions": true,
+          "allowTypedFunctionExpressions": true
+        }],
+        "@typescript-eslint/indent": ["error", 2],
+        "@typescript-eslint/member-delimiter-style": ["error", {
+          "multiline": {
+            "delimiter": "none"
+          }
+        }],
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-extra-parens": ["error", "all", {
+          "ignoreJSX": "all"
+        }],
+        "@typescript-eslint/no-magic-numbers": "off",
+        "@typescript-eslint/no-type-alias": ["error", {
+          "allowAliases": "in-unions-and-intersections"
+        }],
+        "@typescript-eslint/no-unnecessary-condition": ["error", {
+          "ignoreRhs": true
+        }],
         "@typescript-eslint/promise-function-async": "off",
-        "@typescript-eslint/require-array-sort-compare": "off",
-        "@typescript-eslint/require-await": "off",
-        "@typescript-eslint/restrict-plus-operands": "off",
+        "@typescript-eslint/quotes": ["error", "single"],
+        "@typescript-eslint/semi": ["error", "never"],
         "@typescript-eslint/strict-boolean-expressions": "off",
         "@typescript-eslint/typedef": "off",
-        "@typescript-eslint/unbound-method": "off"
+        "indent": "off",
+        "quotes": "off",
+        "react/forbid-component-props": "off",
+        "react/jsx-closing-bracket-location": ["error", "after-props"],
+        "react/jsx-filename-extension": "off",
+        "react/jsx-first-prop-new-line": "off",
+        "react/jsx-indent": ["error", 2],
+        "react/jsx-indent-props": ["error", 2],
+        "react/jsx-max-depth": "off",
+        "react/jsx-max-props-per-line": "off",
+        "react/jsx-no-bind": ["error", {
+          "allowArrowFunctions": true
+        }],
+        "react/jsx-no-literals": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/jsx-sort-props": "off",
+        "react/no-array-index-key": "off",
+        "react/no-multi-comp": "off",
+        "react/prop-types": "off",
+        "react-hooks/exhaustive-deps": "warn",
+        "react-hooks/rules-of-hooks": "error",
+        "semi": "off"
       }
     }
   ],

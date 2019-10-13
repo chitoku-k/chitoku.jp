@@ -1,3 +1,5 @@
+'use strict'
+
 const { description, author } = require('../../package.json')
 const { Feed } = require('feed')
 const fs = require('fs').promises
