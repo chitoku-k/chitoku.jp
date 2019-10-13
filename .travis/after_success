@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ "$TRAVIS_BRANCH" = "master" ]] && [[ "$TRAVIS_PULL_REQUEST" = "false" ]]; then
+if [[ "$TRAVIS_BRANCH" = 'master' ]] && [[ "$TRAVIS_PULL_REQUEST" = 'false' ]] && [[ "$SCRIPT" = 'build' ]]; then
     echo 'Cleaning...'
     ssh deploy rm -rf /srv/http/vhosts/chitoku.jp/historia/*
     echo 'Cleaned!'
