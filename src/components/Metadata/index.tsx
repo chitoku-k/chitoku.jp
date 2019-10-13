@@ -54,7 +54,7 @@ const Metadata: FunctionComponent<MetadataItem> = ({
     about: {
       contacts,
     },
-  } = useStaticQuery(query) as MetadataQueryResult
+  } = useStaticQuery<MetadataQueryResult>(query)
 
   Object.assign(metadata, {
     ...newState,

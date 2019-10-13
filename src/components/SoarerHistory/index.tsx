@@ -52,8 +52,9 @@ const SoarerHistory: FunctionComponent = () => {
     updates: {
       items,
     },
-  } = useStaticQuery(query) as SoarerHistoryQueryResult
+  } = useStaticQuery<SoarerHistoryQueryResult>(query)
 
+  /* eslint-disable react/jsx-no-useless-fragment */
   return (
     <>
       {items.map(({ update }) => (
@@ -90,6 +91,7 @@ const SoarerHistory: FunctionComponent = () => {
       ))}
     </>
   )
+  /* eslint-enable react/jsx-no-useless-fragment */
 }
 
 interface SoarerHistoryQueryResult {

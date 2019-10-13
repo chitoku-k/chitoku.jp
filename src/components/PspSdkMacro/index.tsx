@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import Prism from 'prismjs'
-require('prismjs/components/prism-c')
+import 'prismjs/components/prism-c'
 
 import { ArticleItem } from 'components/Article'
 import { media } from 'components/Layout'
@@ -68,9 +68,7 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
 
   const def = article.attributes.macros && article.attributes.macros.find(x => Boolean(x && x.name === macroName))
   if (!def) {
-    return (
-      <></>
-    )
+    return null
   }
 
   const separator = def.parameters && def.parameters.length > linebreakThreshold ? '\n' : ''
@@ -110,7 +108,9 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
   )
 }
 
-type PspSdkMacroArticleItem = ArticleItem & {
+type PspSdkMacroArticleItem = ArticleItem & PspSdkMacroArticleProps
+
+interface PspSdkMacroArticleProps {
   attributes: {
     macros: (PspSdkMacroItem | null)[] | null
   }

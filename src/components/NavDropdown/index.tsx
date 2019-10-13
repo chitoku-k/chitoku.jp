@@ -3,6 +3,7 @@ import React, { FunctionComponent } from 'react'
 import NavItem from 'components/NavItem'
 import { NavigationLinkItem } from 'components/Navbar'
 
+/* eslint-disable react/jsx-no-useless-fragment */
 const NavDropdown: FunctionComponent<NavDropdownProps> = ({
   items,
   dropdown,
@@ -11,6 +12,7 @@ const NavDropdown: FunctionComponent<NavDropdownProps> = ({
     {items.map(item => <NavItem key={item.name} {...item} dropdown={dropdown} />)}
   </>
 )
+/* eslint-enable react/jsx-no-useless-fragment */
 
 interface NavDropdownProps {
   items: NavigationLinkItem[]

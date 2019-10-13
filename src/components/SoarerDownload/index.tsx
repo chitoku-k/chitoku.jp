@@ -86,7 +86,7 @@ const SoarerDownload: FunctionComponent<SoarerDownloadQueryResult> = () => {
         { update },
       ],
     },
-  } = useStaticQuery(query) as SoarerDownloadQueryResult
+  } = useStaticQuery<SoarerDownloadQueryResult>(query)
 
   return (
     <>

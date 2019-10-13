@@ -196,7 +196,7 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
       sidebar,
     },
     latest,
-  } = useStaticQuery(query) as SidebarQueryResult
+  } = useStaticQuery<SidebarQueryResult>(query)
   const url = siteUrl + location.pathname
 
   return (

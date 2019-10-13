@@ -103,7 +103,7 @@ const Navbar: FunctionComponent = () => {
     navigation: {
       nav,
     },
-  } = useStaticQuery(query) as NavbarQueryResult
+  } = useStaticQuery<NavbarQueryResult>(query)
 
   const [ search, setSearch ] = useState(false)
 
@@ -115,7 +115,7 @@ const Navbar: FunctionComponent = () => {
       <NavbarCore className={search ? 'search' : ''}>
         <Nav className="nav navbar-nav">
           {nav.map((item, index) => (
-            <NavItem key={index} {...item} dropdown={true}>{item.items}</NavItem>
+            <NavItem key={index} {...item} dropdown>{item.items}</NavItem>
           ))}
           <SearchIcon onClick={openSearch}>
             <NavLink to="/">
