@@ -1,0 +1,1 @@
+yarn lint | reviewdog -f=eslint -diff='git diff master'
