@@ -1,3 +1,5 @@
+'use strict'
+
 const fromPath = '/recotw'
 const toPath = 'https://recotw.chitoku.jp'
 

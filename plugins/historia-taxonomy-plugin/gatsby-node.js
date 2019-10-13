@@ -1,3 +1,5 @@
+'use strict'
+
 const createTaxonomies = require('./createTaxonomies')
 const createArticles = require('./createArticles')
 const { getPath } = require('./utils')

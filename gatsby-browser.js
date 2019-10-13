@@ -1,3 +1,5 @@
+'use strict'
+
 const twemoji = require('twemoji').default
 
 exports.onRouteUpdate = () => {
