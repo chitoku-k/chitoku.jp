@@ -1,5 +1,5 @@
-import React, { FunctionComponent, DetailedHTMLProps } from 'react'
-import * as Bootstrap from 'react-bootstrap'
+import React, { DetailedHTMLProps, FunctionComponent } from 'react'
+import { Dropdown as BootstrapDropdown } from 'react-bootstrap'
 import { Location } from '@reach/router'
 import styled from 'styled-components'
 
@@ -8,12 +8,10 @@ import { NavigationLinkItem } from 'components/Navbar'
 import NavDropdown from 'components/NavDropdown'
 import Link from 'components/Link'
 
-const getClassName = (active: boolean, dropdown: boolean | undefined, className: string): NavItemAttributes => {
-  return {
-    bsClass: dropdown ? 'dropdown' : 'sub',
-    className: [ active ? 'active' : '', className ].filter(x => x).join(' '),
-  }
-}
+const getClassName = (active: boolean, dropdown: boolean | undefined, className: string): NavItemAttributes => ({
+  bsClass: dropdown ? 'dropdown' : 'sub',
+  className: [ active ? 'active' : '', className ].filter(x => x).join(' '),
+})
 
 const Caret = styled.span`
   margin-left: 4px;
@@ -23,7 +21,7 @@ const Caret = styled.span`
   `}
 `
 
-const Dropdown = styled(Bootstrap.Dropdown)`
+const Dropdown = styled(BootstrapDropdown)`
   &.dropdown:hover {
     .dropdown-menu {
       border-top: none;
@@ -96,10 +94,10 @@ const NavItem: FunctionComponent<NavItemProps & BootstrapNavItemProps & Navigati
             <Caret className="caret" />
           ) : null}
         </NavLink>
-        <Bootstrap.Dropdown.Toggle />
-        <Bootstrap.Dropdown.Menu>
+        <BootstrapDropdown.Toggle />
+        <BootstrapDropdown.Menu>
           <NavDropdown dropdown={dropdown} items={items} />
-        </Bootstrap.Dropdown.Menu>
+        </BootstrapDropdown.Menu>
       </Dropdown>
     ) : (
       <li className={(to === location.pathname && !location.search ? 'active ' : '') + className} {...rest}>

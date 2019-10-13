@@ -1,6 +1,6 @@
-import React, { useMemo, FunctionComponent } from 'react'
-import * as Bootstrap from 'react-bootstrap'
-import { useIntl, FormattedMessage } from 'react-intl'
+import React, { FunctionComponent, useMemo } from 'react'
+import { Clearfix, Col } from 'react-bootstrap'
+import { FormattedMessage, useIntl } from 'react-intl'
 import ImageZoom from 'react-medium-image-zoom'
 import RehypeReact from 'rehype-react'
 import styled from 'styled-components'
@@ -70,14 +70,14 @@ const About: FunctionComponent<AboutProps> = ({
 }) => {
   const { formatMessage } = useIntl()
   const content = useMemo(() => {
-    const { Compiler } = new RehypeReact({
+    const { Compiler: compiler } = new RehypeReact({
       createElement: React.createElement,
       components: {
         'historia-link': Link,
       },
     })
 
-    return Compiler(introduction.markdown.htmlAst)
+    return compiler(introduction.markdown.htmlAst)
   }, [ introduction ])
 
   return (
@@ -85,7 +85,7 @@ const About: FunctionComponent<AboutProps> = ({
       <Metadata title={formatMessage(messages.title)} />
       <AboutContainer className="about">
         <ArticleHeader title={formatMessage(messages.title)} />
-        <Bootstrap.Col sm={2}>
+        <Col sm={2}>
           <IconContainer className="text-center">
             <ImageZoom image={{
               src: about.icon.src,
@@ -103,8 +103,8 @@ const About: FunctionComponent<AboutProps> = ({
               }} />
             </small>
           </IconContainer>
-        </Bootstrap.Col>
-        <Bootstrap.Col sm={10}>
+        </Col>
+        <Col sm={10}>
           <Table className="table">
             <tbody>
               <tr>
@@ -126,9 +126,7 @@ const About: FunctionComponent<AboutProps> = ({
                           <li key={index}>
                             {item.url ? (
                               <Link to={item.url}>{item.name}</Link>
-                            ) : (
-                              item.name
-                            )}
+                            ) : item.name}
                           </li>
                         ))}
                       </ul>
@@ -142,12 +140,12 @@ const About: FunctionComponent<AboutProps> = ({
                   <Link to="/mail">{formatMessage(messages.mail)}</Link>
                 </td>
               </tr>
-              {about.contacts.map((contact, index) => (
-                <tr key={index}>
+              {about.contacts.map((contact, i) => (
+                <tr key={i}>
                   <th>{contact.service}</th>
                   <td>
-                    {contact.accounts.map((account, index) => (
-                      <div key={index}>
+                    {contact.accounts.map((account, j) => (
+                      <div key={j}>
                         {account.url ? (
                           <Link to={account.url}>{account.name}</Link>
                         ) : null}
@@ -162,8 +160,8 @@ const About: FunctionComponent<AboutProps> = ({
               </tr>
             </tbody>
           </Table>
-        </Bootstrap.Col>
-        <Bootstrap.Clearfix />
+        </Col>
+        <Clearfix />
       </AboutContainer>
     </Container>
   )

@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactNode } from 'react'
-import { useIntl, FormattedMessage, MessageDescriptor } from 'react-intl'
+import { FormattedMessage, MessageDescriptor, useIntl } from 'react-intl'
 import { Location } from '@reach/router'
 import styled from 'styled-components'
 
@@ -18,12 +18,12 @@ const TryList = styled.ul`
 const Contact: FunctionComponent<ContactProps> = ({
   message,
   service: {
-    service: name,
+    service,
     accounts,
   },
 }) => (
   <FormattedMessage {...message} values={{
-    service: name,
+    service,
     account: (
       <span>
         {accounts
@@ -57,7 +57,7 @@ const NotFound: FunctionComponent<NotFoundProps> = ({
           <Location>
             {({ location }) => (
               <FormattedMessage {...messages.requested} values={{
-                url: <code>{location.href}</code>
+                url: <code>{location.href}</code>,
               }} />
             )}
           </Location>

@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import * as Bootstrap from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
@@ -99,16 +99,16 @@ const SoarerDownload: FunctionComponent<SoarerDownloadQueryResult> = () => {
       </SoarerDownloadContainer>
       <SoarerDownloadDescription className="description">
         {update.file ? (
-          <Bootstrap.Button bsStyle="primary" bsSize="large" href={update.file.publicURL} download={update.file.base}>
+          <Button bsStyle="primary" bsSize="large" href={update.file.publicURL} download={update.file.base}>
             <FontAwesome name="download" />
             {formatMessage(messages.download, {
               size: update.file.prettySize,
             })}
-          </Bootstrap.Button>
+          </Button>
         ) : null}
-        <Bootstrap.Button bsStyle="default" bsSize="large" href="./history">
+        <Button bsStyle="default" bsSize="large" href="./history">
           {formatMessage(messages.history)}
-        </Bootstrap.Button>
+        </Button>
       </SoarerDownloadDescription>
     </>
   )

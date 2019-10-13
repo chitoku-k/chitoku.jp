@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactNode } from 'react'
-import * as Bootstrap from 'react-bootstrap'
+import { Nav, Navbar } from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
@@ -17,9 +17,7 @@ import ArticleBody, { ArticleComponentCollection } from 'components/ArticleBody'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
 
-export const getClassNameFromPath = (path: string): string => (
-  'page' + path.replace(/\//g, '-').replace(/-$/, '')
-)
+export const getClassNameFromPath = (path: string): string => `page${path.replace(/\//ug, '-').replace(/-$/u, '')}`
 
 const ArticleHeaderAttributes = styled.p`
   min-height: 0.5em;
@@ -44,7 +42,7 @@ const ArticleHeaderAttributeLink = styled(Link)`
   color: #333;
 `
 
-const ArticleNavbar = styled(Bootstrap.Navbar)`
+const ArticleNavbar = styled(Navbar)`
   border: none;
   border-radius: 0;
   .container {
@@ -53,7 +51,7 @@ const ArticleNavbar = styled(Bootstrap.Navbar)`
   }
 `
 
-const ArticleNav = styled(Bootstrap.Nav)`
+const ArticleNav = styled(Nav)`
   &.navbar-nav.nav {
     float: none;
     margin: 0;
@@ -112,8 +110,8 @@ const isTag = (tag: ArticleTagItem | null): tag is ArticleTagItem => Boolean(tag
 const withArticle = (
   article: ArticleItem,
   components: ArticleComponentCollection,
-): ArticleComponentCollection =>
-  Object.entries(components).reduce((prev, [ name, Component ]) => ({
+): ArticleComponentCollection => Object.entries(components)
+  .reduce((prev, [ name, Component ]) => ({
     ...prev,
     [name]: function InjectArticle<T>(props: T) {
       return (
@@ -169,7 +167,7 @@ const Article: FunctionComponent<ArticleProps> = ({
                 {tags
                   .filter(isTag)
                   .map(({ name, slug }, index) => <ArticleHeaderAttributeLink key={index} to={`/tag/${slug}`}>{name}</ArticleHeaderAttributeLink>)
-                  .reduce((prev, curr) => prev.length ? [ prev, ', ', curr ] : [ curr ], [] as ReactNode[])}
+                  .reduce((el, curr) => el.length ? [ el, ', ', curr ] : [ curr ], [] as ReactNode[])}
               </ArticleHeaderAttributeItem>
             ) : null}
             {created ? (

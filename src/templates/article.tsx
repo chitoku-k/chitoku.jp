@@ -122,51 +122,51 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
     <JsonLd<BreadcrumbList> item={{
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
-      'itemListElement': article.attributes.category ? [
+      itemListElement: article.attributes.category ? [
         {
           '@type': 'ListItem',
-          'position': 1 as Integer,
-          'item': {
+          position: 1 as Integer,
+          item: {
             '@type': 'Thing',
-            'id': siteUrl,
-            'name': title,
+            id: siteUrl,
+            name: title,
           } as Thing,
         },
         {
           '@type': 'ListItem',
-          'position': 2 as Integer,
-          'item': {
+          position: 2 as Integer,
+          item: {
             '@type': 'Thing',
-            'id': siteUrl + article.attributes.category.path,
-            'name': article.attributes.category.name,
+            id: siteUrl + article.attributes.category.path,
+            name: article.attributes.category.name,
           } as Thing,
         },
         {
           '@type': 'ListItem',
-          'position': 3 as Integer,
-          'item': {
+          position: 3 as Integer,
+          item: {
             '@type': 'Thing',
-            'id': siteUrl + article.path,
-            'name': article.attributes.title,
+            id: siteUrl + article.path,
+            name: article.attributes.title,
           } as Thing,
         },
       ] : [
         {
           '@type': 'ListItem',
-          'position': 1 as Integer,
-          'item': {
+          position: 1 as Integer,
+          item: {
             '@type': 'Thing',
-            'id': siteUrl,
-            'name': title,
+            id: siteUrl,
+            name: title,
           } as Thing,
         },
         {
           '@type': 'ListItem',
-          'position': 2 as Integer,
-          'item': {
+          position: 2 as Integer,
+          item: {
             '@type': 'Thing',
-            'id': siteUrl + article.path,
-            'name': article.attributes.title,
+            id: siteUrl + article.path,
+            name: article.attributes.title,
           } as Thing,
         },
       ],

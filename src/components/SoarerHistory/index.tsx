@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import * as Bootstrap from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
@@ -11,7 +11,7 @@ const DownloadVersion = styled.big`
   font-variant-numeric: tabular-nums;
 `
 
-const DownloadLink = styled(Bootstrap.Button)`
+const DownloadLink = styled(Button)`
   display: inline-block;
   margin-left: 15px;
   font-size: 90%;

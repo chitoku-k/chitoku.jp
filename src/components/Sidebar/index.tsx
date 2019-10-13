@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useContext } from 'react'
-import * as Bootstrap from 'react-bootstrap'
+import { Col } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
 import { WindowLocation } from '@reach/router'
@@ -8,11 +8,11 @@ import styled from 'styled-components'
 
 import messages from './messages'
 import {
-  TwitterShareButton,
   FacebookShareButton,
-  PocketShareButton,
   HatenaShareButton,
+  PocketShareButton,
   TumblrShareButton,
+  TwitterShareButton,
 } from './buttons'
 import { ArticleItem } from 'components/Article'
 import { NavigationLinkItem } from 'components/Navbar'
@@ -59,7 +59,7 @@ const query = graphql`
   }
 `
 
-const SidebarContainer = styled(Bootstrap.Col)`
+const SidebarContainer = styled(Col)`
   padding-left: 20px;
   padding-right: 0;
   width: 30%;
@@ -218,7 +218,7 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
           <Link to="/latest">
             {formatMessage(messages.latest_articles)}
           </Link>
-          <FeedIconLink to={siteUrl + '/feed/atom/'} target="_blank">
+          <FeedIconLink to={`${siteUrl}/feed/atom/`} target="_blank">
             <FeedIcon name="rss" />
             RSS
           </FeedIconLink>
@@ -232,13 +232,11 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
               </Link>
               <br />
               <SidebarItemAttribute>
-                {article.attributes.created ? (
-                  formatDate(new Date(article.attributes.created), {
-                    year: 'numeric',
-                    month: 'narrow',
-                    day: 'numeric',
-                  })
-                ) : null}
+                {article.attributes.created ? formatDate(new Date(article.attributes.created), {
+                  year: 'numeric',
+                  month: 'narrow',
+                  day: 'numeric',
+                }) : null}
               </SidebarItemAttribute>
               <SidebarItemCategory>
                 {article.attributes.category ? (

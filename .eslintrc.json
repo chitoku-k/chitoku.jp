@@ -5,7 +5,7 @@
     "react-hooks"
   ],
   "extends": [
-    "eslint:recommended",
+    "eslint:all",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
@@ -26,11 +26,61 @@
       }
     }],
     "@typescript-eslint/no-explicit-any": "off",
+    "array-bracket-newline": "off",
+    "array-bracket-spacing": ["error", "always"],
+    "array-element-newline": "off",
+    "arrow-parens": ["error", "as-needed"],
+    "comma-dangle": ["error", "always-multiline"],
+    "dot-location": ["error", "property"],
+    "function-call-argument-newline": "off",
+    "id-length": "off",
+    "indent": ["error", 2],
+    "init-declarations": "off",
+    "max-len": "off",
+    "max-lines-per-function": "off",
+    "max-statements": "off",
+    "multiline-comment-style": "off",
+    "multiline-ternary": "off",
+    "no-continue": "off",
+    "no-confusing-arrow": "off",
+    "no-extra-parens": ["error", "all", {
+      "ignoreJSX": "all"
+    }],
+    "no-magic-numbers": "off",
+    "no-mixed-operators": "off",
+    "no-negated-condition": "off",
+    "no-nested-ternary": "off",
+    "no-process-env": "off",
+    "no-ternary": "off",
     "no-unused-vars": "off",
+    "no-warning-comments": "warn",
+    "object-curly-spacing": ["error", "always"],
+    "object-property-newline": "off",
+    "one-var": ["error", {
+      "initialized": "never",
+      "uninitialized": "always"
+    }],
+    "padded-blocks": ["error", "never"],
+    "prefer-arrow-callback": ["error", {
+      "allowNamedFunctions": true
+    }],
+    "prefer-destructuring": "off",
+    "quote-props": ["error", "as-needed"],
+    "quotes": ["error", "single"],
     "react/prop-types": "off",
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/rules-of-hooks": "error",
-    "quotes": ["error", "single"]
+    "semi": ["error", "never"],
+    "sort-imports": ["warn", {
+      "ignoreDeclarationSort": true
+    }],
+    "sort-keys": "off",
+    "sort-vars": "off",
+    "space-before-function-paren": ["error", {
+      "asyncArrow": "always",
+      "anonymous": "always",
+      "named": "never"
+    }]
   },
   "overrides": [
     {

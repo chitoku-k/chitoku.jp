@@ -59,9 +59,7 @@ module.exports = () => ({
         items,
       },
     },
-  }) => items.filter(({ article: { file } }) => {
-    return getPath(file)
-  }).map(({
+  }) => items.filter(({ article: { file } }) => getPath(file)).map(({
     article: {
       file,
       excerpt,
@@ -73,15 +71,13 @@ module.exports = () => ({
         created,
       },
     },
-  }) => {
-    return {
-      path: getPath(file),
-      excerpt: removeMd(excerpt),
-      headings: headings.map(x => stripHtml(x.value)),
-      title,
-      category,
-      tags,
-      created,
-    }
-  })
+  }) => ({
+    path: getPath(file),
+    excerpt: removeMd(excerpt),
+    headings: headings.map(x => stripHtml(x.value)),
+    title,
+    category,
+    tags,
+    created,
+  })),
 })

@@ -1,8 +1,8 @@
-import React, { useCallback, useState, useEffect, useRef } from 'react'
-import * as Bootstrap from 'react-bootstrap'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
+import { Navbar, Popover } from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { useIntl } from 'react-intl'
-import { navigate, WindowLocation } from '@reach/router'
+import { WindowLocation, navigate } from '@reach/router'
 import styled from 'styled-components'
 import { SearchBoxProvided } from 'react-instantsearch-core'
 import { connectSearchBox } from 'react-instantsearch-dom'
@@ -11,7 +11,7 @@ import { getSearchText } from 'components/SearchResult'
 import { media } from 'components/Layout'
 import messages from './messages'
 
-const FormDesktop = styled(Bootstrap.Navbar.Form)`
+const FormDesktop = styled(Navbar.Form)`
   position: relative;
   padding: 0;
   margin-right: 0;
@@ -131,7 +131,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
   useEffect(() => {
     if (text !== null) {
       refine(text)
-      navigate(location.pathname + '?s=' + text, { replace: true })
+      navigate(`${location.pathname}?s=${text}`, { replace: true })
     } else {
       navigate(location.pathname, { replace: true })
     }
@@ -139,7 +139,9 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
 
   useEffect(() => {
     if (search) {
-      input.current && input.current.focus()
+      if (input.current) {
+        input.current.focus()
+      }
     } else {
       setText(null)
     }
@@ -162,9 +164,9 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
         <FormDesktopInput type="search" value={text || ''} placeholder={formatMessage(messages.search)}
           onFocus={onFocus} onChange={onChange} />
         <UnsupportedNotice className="notice">
-          <Bootstrap.Popover id="search-form-noscript" placement="bottom">
+          <Popover id="search-form-noscript" placement="bottom">
             {formatMessage(messages.enable_javascript)}
-          </Bootstrap.Popover>
+          </Popover>
         </UnsupportedNotice>
         <SearchIcon name="search" />
       </FormDesktop>

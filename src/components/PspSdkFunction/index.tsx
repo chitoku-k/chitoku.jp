@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, FunctionComponent } from 'react'
+import React, { FunctionComponent, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import Prism from 'prismjs'
 require('prismjs/components/prism-c')
@@ -61,7 +61,9 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
 }) => {
   const ref = useRef<HTMLElement>(null)
   useEffect(() => {
-    ref.current && Prism.highlightElement(ref.current)
+    if (ref.current) {
+      Prism.highlightElement(ref.current)
+    }
   }, [ ref ])
 
   const def = article.attributes.functions && article.attributes.functions.find(x => x && x.name === functionName)
@@ -74,24 +76,20 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
   const separator = def.parameters && def.parameters.length > linebreakThreshold ? '\n' : ''
   const indentation = separator ? ' '.repeat(indentationWidth) : ''
 
+  const buildParameters = ({ type, name, parameters }: PspSdkFunctionParameterItem): string => parameters
+    ? `${indentation}${type} (* ${name})(${parameters.map(child => `${child.type} ${child.name}`).join(', ')})`
+    : type
+      ? `${indentation}${type} ${name}`
+      : `${indentation}${name}`
+
   return (
     <PspSdkFunctionEntry>
       <PspSdkFunctionPrototype ref={ref} className="language-c">
         {[
           `${def.return} ${def.name}(`,
-          def.parameters ? (
-            def.parameters.map(({ type, name, parameters }) => (
-              parameters ? (
-                `${indentation}${type} (* ${name})(${parameters.map(({ type, name }) => `${type} ${name}`).join(', ')})`
-              ) : type ? (
-                `${indentation}${type} ${name}`
-              ) : (
-                `${indentation}${name}`
-              )
-            )).join(', ' + separator)
-          ) : (
-            'void'
-          ),
+          def.parameters
+            ? def.parameters.map(buildParameters).join(`, ${separator}`)
+            : 'void',
           ');',
         ].join(separator)}
       </PspSdkFunctionPrototype>
@@ -126,14 +124,16 @@ interface PspSdkFunctionItem {
   name: string
   return: string
   description: string
+  parameters: PspSdkFunctionParameterItem[] | null
+}
+
+interface PspSdkFunctionParameterItem {
+  name: string
+  type: string
+  description: string
   parameters: {
     name: string
     type: string
-    description: string
-    parameters: {
-      name: string
-      type: string
-    }[] | null
   }[] | null
 }
 

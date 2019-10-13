@@ -1,5 +1,5 @@
-import React, { FunctionComponent, Fragment } from 'react'
-import * as Bootstrap from 'react-bootstrap'
+import React, { Fragment, FunctionComponent } from 'react'
+import { Clearfix, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 
 import { media } from 'components/Layout'
@@ -23,7 +23,7 @@ const icons: HomeIcon = {
   ProgrammingIcon,
 }
 
-const HomeMenuItem = styled(Bootstrap.Col)`
+const HomeMenuItem = styled(Col)`
   padding: 10px 0 0 0;
   margin-bottom: 20px;
   color: #333;
@@ -152,10 +152,10 @@ const Home: FunctionComponent<HomeProps> = ({
               <HomeMeneuItemDescription>{description}</HomeMeneuItemDescription>
             </HomeMenuItem>
             {(index + 1) % 2 === 0 ? (
-              <Bootstrap.Clearfix visibleSmBlock visibleXsBlock />
+              <Clearfix visibleSmBlock visibleXsBlock />
             ) : null}
             {(index + 1) % 3 === 0 ? (
-              <Bootstrap.Clearfix visibleMdBlock visibleLgBlock />
+              <Clearfix visibleMdBlock visibleLgBlock />
             ) : null}
           </Fragment>
         )

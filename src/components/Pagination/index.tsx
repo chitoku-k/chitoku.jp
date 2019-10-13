@@ -1,5 +1,5 @@
 import React, { FunctionComponent, HTMLProps, ReactNode } from 'react'
-import * as Bootstrap from 'react-bootstrap'
+import { Pagination as BootstrapPagination } from 'react-bootstrap'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 
@@ -12,17 +12,17 @@ export const isLastPage = (page: Page): boolean => page.current === page.total
 export const hasPreviousPage = (page: Page): boolean => page.current > 1
 export const hasNextPage = (page: Page): boolean => page.current < page.total
 
-export const getPagePath = (num: number): string => './' + (num === 1 ? '' : num)
+export const getPagePath = (num: number): string => `./${num === 1 ? '' : num}`
 export const getPreviousPagePath = (page: Page): string => hasPreviousPage(page) ? getPagePath(page.current - 1) : '#'
 export const getNextPagePath = (page: Page): string => hasNextPage(page) ? getPagePath(page.current + 1) : '#'
 
 const getVisibility = (className: string, visible: boolean): string => [ className, visible ? 'visible' : 'hidden' ].join(' ')
 
-const PaginationCore = styled(Bootstrap.Pagination)`
+const PaginationCore = styled(BootstrapPagination)`
   margin: 0 auto;
 `
 
-const PaginationItem = styled(Bootstrap.Pagination.Item)`
+const PaginationItem = styled(BootstrapPagination.Item)`
   .pagination > &,
   .pagination > &.prev,
   .pagination > &.next {
@@ -66,7 +66,7 @@ const PaginationItem = styled(Bootstrap.Pagination.Item)`
   }
 `
 
-const SimplePaginationCore = styled(Bootstrap.Pagination)`
+const SimplePaginationCore = styled(BootstrapPagination)`
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -130,7 +130,7 @@ const Pagination: FunctionComponent<PaginationProps> = ({
       <PaginationItem className={getVisibility('prev', hasPreviousPage(page))} href={getPreviousPagePath(page)}>
         {formatMessage(messages.prev_page)}
       </PaginationItem>
-      {[...Array(page.total).keys()].map(i => (
+      {[ ...Array(page.total).keys() ].map(i => (
         <PaginationItem key={i} href={getPagePath(i + 1)} active={i + 1 === page.current}>{i + 1}</PaginationItem>
       ))}
       <PaginationItem className={getVisibility('next', hasNextPage(page))} href={getNextPagePath(page)}>
@@ -144,7 +144,7 @@ export const PaginationContainer = styled.aside`
   text-align: center;
 `
 
-export const SimplePagination: FunctionComponent<HTMLProps<Bootstrap.Pagination> & SimplePaginationProps> = ({
+export const SimplePagination: FunctionComponent<HTMLProps<BootstrapPagination> & SimplePaginationProps> = ({
   prev,
   next,
   /* eslint-disable @typescript-eslint/no-unused-vars */
@@ -157,7 +157,7 @@ export const SimplePagination: FunctionComponent<HTMLProps<Bootstrap.Pagination>
 
   return (
     <SimplePaginationCore {...rest}>
-      <SimplePaginationItem className={getVisibility('prev', !!prev)} href={prev && prev.to || '#'}>
+      <SimplePaginationItem className={getVisibility('prev', Boolean(prev))} href={prev ? prev.to : '#'}>
         {prev ? (
           <>
             <span className="icon">{formatMessage(messages.prev)}</span>
@@ -165,7 +165,7 @@ export const SimplePagination: FunctionComponent<HTMLProps<Bootstrap.Pagination>
           </>
         ) : null}
       </SimplePaginationItem>
-      <SimplePaginationItem className={getVisibility('next', !!next)} href={next && next.to || '#'}>
+      <SimplePaginationItem className={getVisibility('next', Boolean(next))} href={next ? next.to : '#'}>
         {next ? (
           <>
             <span>{next.title}</span>

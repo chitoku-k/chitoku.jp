@@ -1,4 +1,4 @@
-import React, { createContext, FunctionComponent } from 'react'
+import React, { FunctionComponent, createContext } from 'react'
 import { Helmet } from 'react-helmet'
 import { useIntl } from 'react-intl'
 import { graphql, useStaticQuery } from 'gatsby'
@@ -72,13 +72,13 @@ const Metadata: FunctionComponent<MetadataItem> = ({
           <meta property="og:url" content={siteUrl + location.pathname} />
           <meta name="twitter:card" content="summary" />
           <title>{metadata.title}</title>
-          {['og:title', 'twitter:title'].map(property => (
+          {[ 'og:title', 'twitter:title' ].map(property => (
             <meta key={property} property={property} content={metadata.title || ''} />
           ))}
-          {['og:image', 'twitter:image'].map(property => (
+          {[ 'og:image', 'twitter:image' ].map(property => (
             <meta key={property} property={property} content={siteUrl + (metadata.thumbnail || THUMBNAIL_DEFAULT)} />
           ))}
-          {metadata.description && ['og:description', 'description'].map(property => (
+          {metadata.description && [ 'og:description', 'description' ].map(property => (
             <meta key={property} property={property} content={metadata.description} />
           ))}
           {metadata.keywords && metadata.keywords.length ? (
@@ -91,8 +91,8 @@ const Metadata: FunctionComponent<MetadataItem> = ({
               <link key={index} rel="me" href={url as string} />
             ))}
           {children}
-          <link rel="alternate" type="application/rss+xml" href={siteUrl + '/feed/rss2/'} />
-          <link rel="alternate" type="application/atom+xml" href={siteUrl + '/feed/atom/'} />
+          <link rel="alternate" type="application/rss+xml" href={`${siteUrl}/feed/rss2/`} />
+          <link rel="alternate" type="application/atom+xml" href={`${siteUrl}/feed/atom/`} />
         </Helmet>
       )}
     </Location>

@@ -33,11 +33,7 @@ const Content: FunctionComponent<ContentProps> = ({
   ].filter(x => x).join(' ')}>
     {children}
     <Location>
-      {({ location }) => (
-        sidebar ? (
-          <MemoizedSidebar location={location} />
-        ) : null
-      )}
+      {({ location }) => sidebar ? <MemoizedSidebar location={location} /> : null}
     </Location>
   </Container>
 )

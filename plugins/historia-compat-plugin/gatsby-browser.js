@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 // https://www.gatsbyjs.org/docs/browser-support/
 // https://www.npmjs.com/package/babel-preset-gatsby
 exports.onClientEntry = () => {

@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import * as Bootstrap from 'react-bootstrap'
+import { Table } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
@@ -44,7 +44,7 @@ const PspErrorCodes: FunctionComponent = () => {
       {group.map(({ items, title }) => (
         <React.Fragment key={title}>
           <h2>{title}</h2>
-          <Bootstrap.Table striped condensed hover>
+          <Table striped condensed hover>
             <thead>
               <tr>
                 <th>{formatMessage(messages.errorCode)}</th>
@@ -54,12 +54,12 @@ const PspErrorCodes: FunctionComponent = () => {
             <tbody>
               {items.map(({ error }) => (
                 <tr key={error.code}>
-                  <ErrorCode>{'0x' + error.code.toString(16).padStart(8, '0')}</ErrorCode>
+                  <ErrorCode>{`0x${error.code.toString(16).padStart(8, '0')}`}</ErrorCode>
                   <td>{error.message}</td>
                 </tr>
               ))}
             </tbody>
-          </Bootstrap.Table>
+          </Table>
         </React.Fragment>
       ))}
     </div>

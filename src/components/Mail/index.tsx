@@ -1,6 +1,6 @@
 import React, { FormEvent, FunctionComponent, ReactNode, useEffect, useState } from 'react'
-import * as Bootstrap from 'react-bootstrap'
-import { useIntl, FormattedMessage } from 'react-intl'
+import { Alert, Button, FormControl, FormGroup } from 'react-bootstrap'
+import { FormattedMessage, useIntl } from 'react-intl'
 import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3'
 import FontAwesome from 'react-fontawesome'
 import styled from 'styled-components'
@@ -34,7 +34,7 @@ const ProcessingIcon = styled(FontAwesome)`
   margin-right: 5px;
 `
 
-const Input = styled(Bootstrap.FormControl)`
+const Input = styled(FormControl)`
   font-size: 16px;
   resize: vertical;
 `
@@ -96,9 +96,9 @@ const Mail: FunctionComponent = () => {
         res => res.json(),
       )
       setStatus('sent')
-    } catch (e) {
+    } catch (err) {
       setStatus('error')
-      throw e
+      throw err
     }
   }
 
@@ -117,34 +117,34 @@ const Mail: FunctionComponent = () => {
       </Metadata>
       <ArticleContainer className="mail">
         <ArticleHeader title={formatMessage(messages.title)} />
-        <Bootstrap.Alert bsStyle="info" className="text-center">
+        <Alert bsStyle="info" className="text-center">
           {formatMessage(messages.contact_me_on_sns)}
           <br />
           <FormattedMessage {...messages.contact_me_from_about} values={{
             about: <Link to="/about">{formatMessage(messages.about)}</Link>,
           }} />
-        </Bootstrap.Alert>
+        </Alert>
         <form onSubmit={onSubmit}>
-          <Bootstrap.FormGroup>
+          <FormGroup>
             <Label required title={formatMessage(messages.name)}>
               <Input name="name" size={40} required readOnly={readOnly} />
             </Label>
-          </Bootstrap.FormGroup>
-          <Bootstrap.FormGroup>
+          </FormGroup>
+          <FormGroup>
             <Label title={formatMessage(messages.mail)}>
               <Input name="email" size={40} readOnly={readOnly} />
             </Label>
-          </Bootstrap.FormGroup>
-          <Bootstrap.FormGroup>
+          </FormGroup>
+          <FormGroup>
             <Label required title={formatMessage(messages.subject)}>
               <Input name="subject" size={40} required readOnly={readOnly} />
             </Label>
-          </Bootstrap.FormGroup>
-          <Bootstrap.FormGroup>
+          </FormGroup>
+          <FormGroup>
             <Label required title={formatMessage(messages.message)}>
               <Input name="body" componentClass="textarea" cols={40} rows={10} required readOnly={readOnly} />
             </Label>
-          </Bootstrap.FormGroup>
+          </FormGroup>
           <ReCaptcha action="mail" sitekey={siteKey} verifyCallback={setToken} />
           <div className="text-center">
             {status === 'sent' ? (
@@ -165,9 +165,9 @@ const Mail: FunctionComponent = () => {
                     {formatMessage(messages.submission_error)}
                   </StatusArea>
                 ) : null}
-                <Bootstrap.Button type="submit" bsStyle="primary" disabled={!token}>
+                <Button type="submit" bsStyle="primary" disabled={!token}>
                   {formatMessage(messages.send)}
-                </Bootstrap.Button>
+                </Button>
               </>
             )}
           </div>

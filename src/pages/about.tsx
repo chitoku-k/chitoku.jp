@@ -6,7 +6,7 @@ import Header from 'components/Header'
 import Navbar from 'components/Navbar'
 import Content from 'components/Content'
 import Footer from 'components/Footer'
-import About, { AboutItem, AboutIntroductionItem } from 'components/About'
+import About, { AboutIntroductionItem, AboutItem } from 'components/About'
 
 export const pageQuery = graphql`
   query {
