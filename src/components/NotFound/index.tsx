@@ -27,7 +27,7 @@ const Contact: FunctionComponent<ContactProps> = ({
     account: (
       <span>
         {accounts
-          .map(({ url, name }, index) => url ? <Link to={url} key={index}>{name}</Link> : name)
+          .map(({ url, name }) => url ? <Link to={url} key={url}>{name}</Link> : name)
           .reduce<ReactNode[]>((prev, curr) => prev.length ? [ prev, ', ', curr ] : [ curr ], [])}
       </span>
     ),
@@ -79,8 +79,8 @@ const NotFound: FunctionComponent<NotFoundProps> = ({
           <li>
             {formatMessage(messages.give_up)}
           </li>
-          {contacts.filter(service => service.primary).map((service, index) => (
-            <li key={index}>
+          {contacts.filter(service => service.primary).map(service => (
+            <li key={service.service}>
               <Contact message={messages.follow_me_on} service={service} />
             </li>
           ))}

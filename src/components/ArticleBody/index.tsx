@@ -275,7 +275,7 @@ interface ArticleBodyProps {
 }
 
 export interface ArticleComponentCollection {
-  [key: string]: ComponentType<any>
+  [key: string]: ComponentType<unknown>
 }
 
 export default ArticleBody

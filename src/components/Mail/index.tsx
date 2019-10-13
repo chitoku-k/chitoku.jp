@@ -91,10 +91,7 @@ const Mail: FunctionComponent = () => {
       await fetch(siteApi, {
         method: 'POST',
         body: form,
-      }).then(
-        res => res.json(),
-        res => res.json(),
-      )
+      })
       setStatus('sent')
     } catch (err) {
       setStatus('error')

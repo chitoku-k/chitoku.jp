@@ -85,8 +85,8 @@ const TaxonomyPage: FunctionComponent<TaxonomyPageProps> = ({
     <Navbar />
     <Content>
       <Container>
-        {items.map(({ article }, index) => (
-          <Article key={index} article={article} />
+        {items.map(({ article }) => (
+          <Article key={article.path} article={article} />
         ))}
         <TaxonomyPagination page={page} />
       </Container>

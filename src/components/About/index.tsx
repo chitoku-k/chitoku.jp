@@ -122,8 +122,8 @@ const About: FunctionComponent<AboutProps> = ({
                     <div key={type}>
                       {type}
                       <ul>
-                        {items.map((item, index) => (
-                          <li key={index}>
+                        {items.map(item => (
+                          <li key={item.name}>
                             {item.url ? (
                               <Link to={item.url}>{item.name}</Link>
                             ) : item.name}
@@ -140,12 +140,12 @@ const About: FunctionComponent<AboutProps> = ({
                   <Link to="/mail">{formatMessage(messages.mail)}</Link>
                 </td>
               </tr>
-              {about.contacts.map((contact, i) => (
-                <tr key={i}>
+              {about.contacts.map(contact => (
+                <tr key={contact.service}>
                   <th>{contact.service}</th>
                   <td>
-                    {contact.accounts.map((account, j) => (
-                      <div key={j}>
+                    {contact.accounts.map(account => (
+                      <div key={account.name}>
                         {account.url ? (
                           <Link to={account.url}>{account.name}</Link>
                         ) : null}
