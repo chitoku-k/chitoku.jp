@@ -20,7 +20,7 @@ before_script:
   - source .travis/before_script
 
 script:
-  - yarn "$SCRIPT"
+  - source .travis/$SCRIPT
 
 after_success:
   - source .travis/after_success

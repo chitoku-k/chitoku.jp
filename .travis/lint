@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+{ yarn --silent lint:js && yarn --silent lint:ts; } | reviewdog -f=eslint -reporter=github-pr-check
+{ yarn --silent lint:css && yarn --silent lint:styled; } | reviewdog -f=stylelint -reporter=github-pr-check
