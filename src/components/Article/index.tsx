@@ -211,8 +211,7 @@ const Article: FunctionComponent<ArticleProps> = ({
             <SimplePagination
               className="simple-pagination"
               prev={prev ? { title: prev.attributes.title, to: prev.path } : null}
-              next={next ? { title: next.attributes.title, to: next.path } : null}
-            />
+              next={next ? { title: next.attributes.title, to: next.path } : null} />
           </PaginationContainer>
         </ArticleContainer>
       ) : null}

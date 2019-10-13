@@ -35,7 +35,7 @@ const PspErrorCodes: FunctionComponent = () => {
     errors: {
       group,
     },
-  } = useStaticQuery(query) as PspErrorCodesQueryResult
+  } = useStaticQuery<PspErrorCodesQueryResult>(query)
 
   group.sort(({ items: [ a ] }, { items: [ b ] }) => a.error.code - b.error.code)
 

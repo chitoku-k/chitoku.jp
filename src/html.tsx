@@ -17,7 +17,9 @@ const HTML: FunctionComponent<HTMLProps> = ({
     </head>
     <body {...bodyAttributes}>
       {preBodyComponents}
+      {/* eslint-disable react/no-danger */}
       <div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html }} />
+      {/* eslint-enable react/no-danger */}
       {postBodyComponents}
     </body>
   </html>

@@ -128,6 +128,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
     setText(e.currentTarget.value)
   }, [])
 
+  /* eslint-disable @typescript-eslint/no-floating-promises */
   useEffect(() => {
     if (text !== null) {
       refine(text)
@@ -136,6 +137,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
       navigate(location.pathname, { replace: true })
     }
   }, [ text, location.pathname, refine ])
+  /* eslint-enable @typescript-eslint/no-floating-promises */
 
   useEffect(() => {
     if (search) {

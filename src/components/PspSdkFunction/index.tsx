@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import Prism from 'prismjs'
-require('prismjs/components/prism-c')
+import 'prismjs/components/prism-c'
 
 import { ArticleItem } from 'components/Article'
 import { media } from 'components/Layout'
@@ -68,9 +68,7 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
 
   const def = article.attributes.functions && article.attributes.functions.find(x => x && x.name === functionName)
   if (!def) {
-    return (
-      <></>
-    )
+    return null
   }
 
   const separator = def.parameters && def.parameters.length > linebreakThreshold ? '\n' : ''
@@ -114,9 +112,11 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
   )
 }
 
-type PspSdkFunctionArticleItem = ArticleItem & {
+type PspSdkFunctionArticleItem = ArticleItem & PspSdkFunctionArticleProps
+
+interface PspSdkFunctionArticleProps {
   attributes: {
-    functions: PspSdkFunctionItem[] | null
+    functions: (PspSdkFunctionItem | null)[] | null
   }
 }
 

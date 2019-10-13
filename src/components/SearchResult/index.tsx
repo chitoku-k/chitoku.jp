@@ -133,7 +133,7 @@ const SearchResult = connectStateResults<SearchResultProps, SearchDocument>(func
         </>
       } />
       {text
-        ? searchResults && searchResults.nbHits
+        ? searchResults.nbHits
           ? (
             <Hits hitComponent={SearchHit} />
           ) : (
