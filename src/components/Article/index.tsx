@@ -109,9 +109,9 @@ const isTag = (tag: ArticleTagItem | null): tag is ArticleTagItem => Boolean(tag
 
 const withArticle = (
   article: ArticleItem,
-  components: ArticleComponentCollection<ArticleWrapper>,
-): ArticleComponentCollection<ArticleWrapper> => Object.entries(components)
-  .reduce<ArticleComponentCollection<ArticleWrapper>>((prev, [ name, Component ]) => ({
+  components: ArticleComponentCollection,
+): ArticleComponentCollection => Object.entries(components)
+  .reduce<ArticleComponentCollection>((prev, [ name, Component ]) => ({
   ...prev,
   [name]: function InjectArticle(props: ArticleWrapper) {
     return (
@@ -120,7 +120,7 @@ const withArticle = (
   },
 }), {})
 
-const Article: FunctionComponent<ArticleProps<ArticleWrapper>> = ({
+const Article: FunctionComponent<ArticleProps> = ({
   children,
   components = {},
   article,
@@ -259,10 +259,10 @@ export interface ArticleWrapper {
   article: ArticleItem
 }
 
-interface ArticleProps<T extends ArticleWrapper> extends ArticleWrapper {
+interface ArticleProps extends ArticleWrapper {
   prev?: ArticleItem | null
   next?: ArticleItem | null
-  components?: ArticleComponentCollection<T>
+  components?: ArticleComponentCollection
 }
 
 export default Article

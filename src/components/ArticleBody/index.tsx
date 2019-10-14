@@ -248,7 +248,7 @@ const ArticleContent = styled.div`
   }
 `
 
-const ArticleBody: FunctionComponent<ArticleBodyProps<ArticleWrapper>> = ({
+const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
   ast,
   components,
 }) => {
@@ -270,13 +270,13 @@ const ArticleBody: FunctionComponent<ArticleBodyProps<ArticleWrapper>> = ({
   )
 }
 
-interface ArticleBodyProps<T extends ArticleWrapper> {
+interface ArticleBodyProps {
   ast: {}
-  components?: ArticleComponentCollection<T>
+  components?: ArticleComponentCollection
 }
 
-export interface ArticleComponentCollection<T extends ArticleWrapper> {
-  [key: string]: ComponentType<T>
+export interface ArticleComponentCollection {
+  [key: string]: ComponentType<ArticleWrapper>
 }
 
 export default ArticleBody
