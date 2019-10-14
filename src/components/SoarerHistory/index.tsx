@@ -75,12 +75,12 @@ const SoarerHistory: FunctionComponent = () => {
             })}
           </small>
           <ul>
-            {update.history.map((content, index) => (
-              <li key={index}>
-                {content.title}
-                {content.message ? (
+            {update.history.map(({ title, message }) => (
+              <li key={title}>
+                {title}
+                {message ? (
                   <ul>
-                    <li>{content.message}</li>
+                    <li>{message}</li>
                   </ul>
                 ) : null}
               </li>

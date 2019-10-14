@@ -87,8 +87,8 @@ const Metadata: FunctionComponent<MetadataItem> = ({
           {contacts
             .filter(contact => contact.primary)
             .flatMap(contact => contact.accounts)
-            .map(({ url }, index) => (
-              <link key={index} rel="me" href={url as string} />
+            .map(({ url }) => (
+              <link key={url as string} rel="me" href={url as string} />
             ))}
           {children}
           <link rel="alternate" type="application/rss+xml" href={`${siteUrl}/feed/rss2/`} />

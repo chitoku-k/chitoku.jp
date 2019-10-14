@@ -14,8 +14,8 @@ const Latest: FunctionComponent<LatestProps> = ({
   return (
     <Container>
       <Metadata title={formatMessage(messages.title)} />
-      {items.map(({ article }, index) => (
-        <Article key={index} article={article} />
+      {items.map(({ article }) => (
+        <Article key={article.path} article={article} />
       ))}
     </Container>
   )

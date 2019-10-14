@@ -36,7 +36,6 @@
     "no-nested-ternary": "off",
     "no-process-env": "off",
     "no-ternary": "off",
-    "no-unused-vars": "off",
     "no-warning-comments": "warn",
     "object-curly-spacing": ["error", "always"],
     "object-property-newline": "off",
@@ -65,12 +64,6 @@
   },
   "overrides": [
     {
-      "files": ["**/messages.ts", "gatsby-*.js"],
-      "rules": {
-        "@typescript-eslint/camelcase": "off"
-      }
-    },
-    {
       "files": ["**/*.{ts,tsx}"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
@@ -96,7 +89,6 @@
             "delimiter": "none"
           }
         }],
-        "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-extra-parens": ["error", "all", {
           "ignoreJSX": "all"
         }],
@@ -107,30 +99,30 @@
         "@typescript-eslint/no-unnecessary-condition": ["error", {
           "ignoreRhs": true
         }],
-        "@typescript-eslint/promise-function-async": "off",
         "@typescript-eslint/quotes": ["error", "single"],
         "@typescript-eslint/semi": ["error", "never"],
         "@typescript-eslint/strict-boolean-expressions": "off",
         "@typescript-eslint/typedef": "off",
         "indent": "off",
+        "no-unused-vars": "off",
         "quotes": "off",
         "react/forbid-component-props": "off",
         "react/jsx-closing-bracket-location": ["error", "after-props"],
-        "react/jsx-filename-extension": "off",
+        "react/jsx-filename-extension": ["error", {
+          "extensions": [".tsx"]
+        }],
         "react/jsx-first-prop-new-line": "off",
         "react/jsx-indent": ["error", 2],
         "react/jsx-indent-props": ["error", 2],
         "react/jsx-max-depth": "off",
         "react/jsx-max-props-per-line": "off",
-        "react/jsx-no-bind": ["error", {
-          "allowArrowFunctions": true
-        }],
         "react/jsx-no-literals": "off",
         "react/jsx-one-expression-per-line": "off",
         "react/jsx-props-no-spreading": "off",
         "react/jsx-sort-props": "off",
-        "react/no-array-index-key": "off",
-        "react/no-multi-comp": "off",
+        "react/no-multi-comp": ["error", {
+          "ignoreStateless": true
+        }],
         "react/prop-types": "off",
         "react-hooks/exhaustive-deps": "warn",
         "react-hooks/rules-of-hooks": "error",

@@ -28,8 +28,8 @@ const Links: FunctionComponent<LinksProps> = ({
       <ArticleContainer>
         <ArticleHeader title={formatMessage(messages.title)} />
         <LinksContainer>
-          {items.map(({ name, url }, index) => (
-            <li key={index}>
+          {items.map(({ name, url }) => (
+            <li key={url}>
               <Link to={url} title={name}>{name}</Link>
             </li>
           ))}

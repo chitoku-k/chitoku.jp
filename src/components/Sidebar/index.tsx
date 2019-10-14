@@ -224,8 +224,8 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
           </FeedIconLink>
         </SidebarItemTitle>
         <SidebarItemList>
-          {latest.items.map(({ article }, index) => (
-            <li className="iconless" key={index}>
+          {latest.items.map(({ article }) => (
+            <li className="iconless" key={article.path}>
               <SidebarItemListIcon name="coffee" />
               <Link to={article.path}>
                 {article.attributes.title}

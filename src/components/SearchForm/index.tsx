@@ -179,8 +179,8 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
 interface SearchFormProps extends SearchBoxProvided {
   search: boolean
   location: WindowLocation
-  openSearch: () => any
-  closeSearch: () => any
+  openSearch: () => void
+  closeSearch: () => void
 }
 
 export default SearchForm

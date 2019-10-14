@@ -111,14 +111,14 @@ const withArticle = (
   article: ArticleItem,
   components: ArticleComponentCollection,
 ): ArticleComponentCollection => Object.entries(components)
-  .reduce((prev, [ name, Component ]) => ({
-    ...prev,
-    [name]: function InjectArticle<T>(props: T) {
-      return (
-        <Component {...props} article={article} />
-      )
-    },
-  }), {})
+  .reduce<ArticleComponentCollection>((prev, [ name, Component ]) => ({
+  ...prev,
+  [name]: function InjectArticle(props: ArticleWrapper) {
+    return (
+      <Component {...props} article={article} />
+    )
+  },
+}), {})
 
 const Article: FunctionComponent<ArticleProps> = ({
   children,
@@ -166,7 +166,7 @@ const Article: FunctionComponent<ArticleProps> = ({
                 <ArticleHeaderAttributeIcon name="tags" />
                 {tags
                   .filter(isTag)
-                  .map(({ name, slug }, index) => <ArticleHeaderAttributeLink key={index} to={`/tag/${slug}`}>{name}</ArticleHeaderAttributeLink>)
+                  .map(({ name, slug }) => <ArticleHeaderAttributeLink key={slug} to={`/tag/${slug}`}>{name}</ArticleHeaderAttributeLink>)
                   .reduce((el, curr) => el.length ? [ el, ', ', curr ] : [ curr ], [] as ReactNode[])}
               </ArticleHeaderAttributeItem>
             ) : null}
@@ -255,8 +255,11 @@ export interface ArticleTagItem {
   slug: string
 }
 
-interface ArticleProps {
+export interface ArticleWrapper {
   article: ArticleItem
+}
+
+interface ArticleProps extends ArticleWrapper {
   prev?: ArticleItem | null
   next?: ArticleItem | null
   components?: ArticleComponentCollection

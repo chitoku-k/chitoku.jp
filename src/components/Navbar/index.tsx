@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from 'react'
+import React, { FunctionComponent, useCallback, useState } from 'react'
 import { Navbar as BootstrapNavbar } from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { graphql, useStaticQuery } from 'gatsby'
@@ -107,15 +107,15 @@ const Navbar: FunctionComponent = () => {
 
   const [ search, setSearch ] = useState(false)
 
-  const openSearch = (): void => setSearch(true)
-  const closeSearch = (): void => setSearch(false)
+  const openSearch = useCallback(() => setSearch(true), [])
+  const closeSearch = useCallback(() => setSearch(false), [])
 
   return (
     <NavContainer>
       <NavbarCore className={search ? 'search' : ''}>
         <Nav className="nav navbar-nav">
-          {nav.map((item, index) => (
-            <NavItem key={index} {...item} dropdown>{item.items}</NavItem>
+          {nav.map(item => (
+            <NavItem key={item.to} {...item} dropdown>{item.items}</NavItem>
           ))}
           <SearchIcon onClick={openSearch}>
             <NavLink to="/">
