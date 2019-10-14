@@ -7,6 +7,7 @@ import styled from 'styled-components'
 
 import messages from './messages'
 import icon from './icon.png'
+import { ArticleWrapper } from 'components/Article'
 import { media } from 'components/Layout'
 import { SoarerHistoryItem } from 'components/SoarerHistory'
 
@@ -77,7 +78,7 @@ const SoarerDownloadDescription = styled.div`
   `}
 `
 
-const SoarerDownload: FunctionComponent<SoarerDownloadQueryResult> = () => {
+const SoarerDownload: FunctionComponent<ArticleWrapper & SoarerDownloadQueryResult> = () => {
   const { formatMessage } = useIntl()
 
   const {

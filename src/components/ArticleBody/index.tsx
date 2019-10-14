@@ -2,6 +2,7 @@ import React, { ComponentType, FunctionComponent, useMemo } from 'react'
 import RehypeReact from 'rehype-react'
 import styled from 'styled-components'
 
+import { ArticleWrapper } from 'components/Article'
 import { media } from 'components/Layout'
 
 const ArticleContent = styled.div`
@@ -247,7 +248,7 @@ const ArticleContent = styled.div`
   }
 `
 
-const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
+const ArticleBody: FunctionComponent<ArticleBodyProps<ArticleWrapper>> = ({
   ast,
   components,
 }) => {
@@ -269,13 +270,13 @@ const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
   )
 }
 
-interface ArticleBodyProps {
+interface ArticleBodyProps<T extends ArticleWrapper> {
   ast: {}
-  components?: ArticleComponentCollection
+  components?: ArticleComponentCollection<T>
 }
 
-export interface ArticleComponentCollection {
-  [key: string]: ComponentType<unknown>
+export interface ArticleComponentCollection<T extends ArticleWrapper> {
+  [key: string]: ComponentType<T>
 }
 
 export default ArticleBody

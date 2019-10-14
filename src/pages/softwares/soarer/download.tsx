@@ -8,7 +8,7 @@ import Header from 'components/Header'
 import Navbar from 'components/Navbar'
 import Content from 'components/Content'
 import Footer from 'components/Footer'
-import Article, { ArticleItem } from 'components/Article'
+import Article, { ArticleItem, ArticleWrapper } from 'components/Article'
 import SoarerDownload from 'components/SoarerDownload'
 
 export const pageQuery = graphql`
@@ -44,7 +44,7 @@ const SoarerDownloadPage: FunctionComponent<SoarerDownloadPageProps> = ({
     <Content sidebar={article.attributes.sidebar !== false}>
       <Container>
         <Article article={article} components={{
-          'soarer-download': SoarerDownload,
+          'soarer-download': SoarerDownload as FunctionComponent<ArticleWrapper>,
         }} />
       </Container>
     </Content>
