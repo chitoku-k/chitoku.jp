@@ -18,7 +18,7 @@
     "@types/react-bootstrap": "^0.32.20",
     "@types/react-dom": "^16.9.1",
     "@types/react-fontawesome": "^1.6.4",
-    "@types/react-helmet": "^5.0.12",
+    "@types/react-helmet": "^5.0.13",
     "@types/react-highlight-words": "^0.16.0",
     "@types/react-instantsearch-dom": "^5.2.6",
     "@types/styled-components": "^4.1.19",
