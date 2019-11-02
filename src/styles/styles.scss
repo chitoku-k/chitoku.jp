@@ -17,8 +17,7 @@ body {
   word-wrap: break-word;
   &,
   > div#___gatsby,
-  > div > div,
-  > div > div > div {
+  > div > div {
     height: 100%;
   }
 }
