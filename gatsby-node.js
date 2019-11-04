@@ -41,7 +41,6 @@ exports.onCreatePage = ({
   actions: {
     createPage,
     deletePage,
-    createRedirect,
   },
 }) => {
   const { dir, name } = path.parse(page.path)
@@ -57,20 +56,5 @@ exports.onCreatePage = ({
       ...page,
       path: path.join(dir, '/'),
     })
-    createRedirect({
-      fromPath: dir,
-      toPath: path.join(dir, '/'),
-      isPermanent: true,
-      redirectInBrowser: true,
-    })
-    return
   }
-
-  // Remove trailing slash for non-index pages
-  createRedirect({
-    fromPath: path.join(dir, name, '/'),
-    toPath: path.join(dir, name),
-    isPermanent: true,
-    redirectInBrowser: true,
-  })
 }
