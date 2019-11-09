@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import { BreadcrumbList, Integer, Thing } from 'schema-dts'
 import { JsonLd } from 'react-schemaorg'
 
+import { ArticleQuery } from 'graphql-types'
 import Layout from 'components/Layout'
 import Container from 'components/Container'
 import Metadata from 'components/Metadata'
@@ -10,7 +11,7 @@ import Header from 'components/Header'
 import Navbar from 'components/Navbar'
 import Content from 'components/Content'
 import Footer from 'components/Footer'
-import Article, { ArticleItem } from 'components/Article'
+import Article from 'components/Article'
 
 export const pageQuery = graphql`
   query article($id: String!, $prev: String, $next: String) {
@@ -90,96 +91,94 @@ export const pageQuery = graphql`
   }
 `
 
-interface ArticlePageProps extends PageProps {
-  data: {
-    site: {
-      siteMetadata: {
-        siteUrl: string
-        title: string
-      }
-    }
-    article: ArticleItem
-    prev: ArticleItem | null
-    next: ArticleItem | null
-  }
-}
-
 const ArticlePage: FunctionComponent<ArticlePageProps> = ({
   data: {
-    site: {
-      siteMetadata: {
-        siteUrl,
-        title,
-      },
-    },
+    site,
     article,
     prev,
     next,
   },
-}) => (
-  <Layout>
-    <Metadata title={article.attributes.title} thumbnail={article.attributes.category && article.attributes.category.thumbnail} />
-    <JsonLd<BreadcrumbList> item={{
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: article.attributes.category ? [
-        {
-          '@type': 'ListItem',
-          position: 1 as Integer,
-          item: {
-            '@type': 'Thing',
-            id: siteUrl,
-            name: title,
-          } as Thing,
-        },
-        {
-          '@type': 'ListItem',
-          position: 2 as Integer,
-          item: {
-            '@type': 'Thing',
-            id: siteUrl + article.attributes.category.path,
-            name: article.attributes.category.name,
-          } as Thing,
-        },
-        {
-          '@type': 'ListItem',
-          position: 3 as Integer,
-          item: {
-            '@type': 'Thing',
-            id: siteUrl + article.path,
-            name: article.attributes.title,
-          } as Thing,
-        },
-      ] : [
-        {
-          '@type': 'ListItem',
-          position: 1 as Integer,
-          item: {
-            '@type': 'Thing',
-            id: siteUrl,
-            name: title,
-          } as Thing,
-        },
-        {
-          '@type': 'ListItem',
-          position: 2 as Integer,
-          item: {
-            '@type': 'Thing',
-            id: siteUrl + article.path,
-            name: article.attributes.title,
-          } as Thing,
-        },
-      ],
-    }} />
-    <Header />
-    <Navbar />
-    <Content sidebar={article.attributes.sidebar !== false}>
-      <Container>
-        <Article article={article} prev={prev} next={next} />
-      </Container>
-    </Content>
-    <Footer />
-  </Layout>
-)
+}) => {
+  if (!site || !article) {
+    throw new Error('Invalid data')
+  }
+
+  const {
+    siteMetadata: {
+      siteUrl,
+      title,
+    },
+  } = site
+
+  return (
+    <Layout>
+      <Metadata title={article.attributes.title} thumbnail={article.attributes.category?.thumbnail} />
+      <JsonLd<BreadcrumbList> item={{
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: article.attributes.category ? [
+          {
+            '@type': 'ListItem',
+            position: 1 as Integer,
+            item: {
+              '@type': 'Thing',
+              id: siteUrl,
+              name: title,
+            } as Thing,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2 as Integer,
+            item: {
+              '@type': 'Thing',
+              id: siteUrl + article.attributes.category.path,
+              name: article.attributes.category.name,
+            } as Thing,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3 as Integer,
+            item: {
+              '@type': 'Thing',
+              id: siteUrl + article.path,
+              name: article.attributes.title,
+            } as Thing,
+          },
+        ] : [
+          {
+            '@type': 'ListItem',
+            position: 1 as Integer,
+            item: {
+              '@type': 'Thing',
+              id: siteUrl,
+              name: title,
+            } as Thing,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2 as Integer,
+            item: {
+              '@type': 'Thing',
+              id: siteUrl + article.path,
+              name: article.attributes.title,
+            } as Thing,
+          },
+        ],
+      }} />
+      <Header />
+      <Navbar />
+      <Content sidebar={article.attributes.sidebar !== false}>
+        <Container>
+          <Article article={article} prev={prev} next={next} />
+        </Container>
+      </Content>
+      <Footer />
+    </Layout>
+  )
+}
+
+interface ArticlePageProps {
+  data: ArticleQuery
+}
 
 export default ArticlePage

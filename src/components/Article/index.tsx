@@ -4,13 +4,13 @@ import FontAwesome from 'react-fontawesome'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 
+import { ArticleFragment, ArticleQuery } from 'graphql-types'
 import messages from './messages'
 import Link from 'components/Link'
 import NavItem from 'components/NavItem'
 import ImageZoomWrapper from 'components/ImageZoomWrapper'
 import PspSdkFunction from 'components/PspSdkFunction'
 import PspSdkMacro from 'components/PspSdkMacro'
-import { NavigationLinkItem } from 'components/Navbar'
 import { PaginationContainer, SimplePagination } from 'components/Pagination'
 import { media } from 'components/Layout'
 import ArticleBody, { ArticleComponentCollection } from 'components/ArticleBody'
@@ -219,30 +219,10 @@ const Article: FunctionComponent<ArticleProps> = ({
   )
 }
 
-interface ArticleItemBase {
-  attributes: {
-    title: string
-    created: string | null
-    sidebar: boolean | null
-    category?: ArticleCategoryItem
-    tags?: (ArticleTagItem | null)[]
-    navigation?: NavigationLinkItem[] | null
-  }
-  path: string
+export interface ArticleItem extends ArticleFragment {
   htmlAst?: {}
   excerptAst?: {}
-  excerpted: boolean
 }
-
-export interface FullArticleItem extends ArticleItemBase {
-  htmlAst: {}
-}
-
-export interface ExcerptedArticleItem extends ArticleItemBase {
-  excerptAst: {}
-}
-
-export type ArticleItem = FullArticleItem | ExcerptedArticleItem
 
 export interface ArticleCategoryItem {
   name: string
@@ -259,9 +239,7 @@ export interface ArticleWrapper {
   article: ArticleItem
 }
 
-interface ArticleProps extends ArticleWrapper {
-  prev?: ArticleItem | null
-  next?: ArticleItem | null
+interface ArticleProps extends ArticleWrapper, Partial<Omit<ArticleQuery, 'article'>> {
   components?: ArticleComponentCollection
 }
 

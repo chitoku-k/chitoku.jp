@@ -1,11 +1,8 @@
 language: node_js
 node_js:
-  - '11'
+  - '12'
 
 env:
-  matrix:
-    - SCRIPT=lint
-    - SCRIPT=build
   global:
     - TZ=Asia/Tokyo
 
@@ -20,7 +17,8 @@ before_script:
   - source .travis/before_script
 
 script:
-  - source .travis/$SCRIPT
+  - source .travis/build
+  - source .travis/lint
 
 after_success:
   - source .travis/after_success

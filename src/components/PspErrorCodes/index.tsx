@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 
+import { PspErrorItemQuery } from 'graphql-types'
 import messages from './messages'
 
 const ErrorCode = styled.td`
@@ -12,7 +13,7 @@ const ErrorCode = styled.td`
 `
 
 const query = graphql`
-  query {
+  query PspErrorItem {
     errors: allErrorsYaml(sort: { fields: [ code ], order: ASC }) {
       group(field: category) {
         title: fieldValue
@@ -66,21 +67,6 @@ const PspErrorCodes: FunctionComponent = () => {
   )
 }
 
-interface PspErrorCodesQueryResult {
-  errors: {
-    group: {
-      title: string
-      items: {
-        error: PspErrorItem
-      }[]
-    }[]
-  }
-}
-
-interface PspErrorItem {
-  code: number
-  category: string
-  message: string
-}
+type PspErrorCodesQueryResult = PspErrorItemQuery
 
 export default PspErrorCodes

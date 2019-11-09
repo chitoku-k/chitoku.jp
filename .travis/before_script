@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ "$TRAVIS_BRANCH" = 'master' ]] && [[ "$TRAVIS_PULL_REQUEST" = 'false' ]] && [[ "$SCRIPT" = 'build' ]]; then
+if [[ "$TRAVIS_BRANCH" = 'master' ]] && [[ "$TRAVIS_PULL_REQUEST" = 'false' ]]; then
     openssl aes-256-cbc -K "$encrypted_2ff73684a3eb_key" -iv "$encrypted_2ff73684a3eb_iv" -in .travis/ssh.tar.enc -out ssh.tar -d
     tar xvf ssh.tar
     mv id_ed25519 config ~/.ssh

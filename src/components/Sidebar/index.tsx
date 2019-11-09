@@ -6,6 +6,7 @@ import { WindowLocation } from '@reach/router'
 import FontAwesome from 'react-fontawesome'
 import styled from 'styled-components'
 
+import { SidebarItemQuery } from 'graphql-types'
 import messages from './messages'
 import {
   FacebookShareButton,
@@ -14,15 +15,13 @@ import {
   TumblrShareButton,
   TwitterShareButton,
 } from './buttons'
-import { ArticleItem } from 'components/Article'
-import { NavigationLinkItem } from 'components/Navbar'
 import { MetadataContext } from 'components/Metadata'
 import { media } from 'components/Layout'
 import NavItem from 'components/NavItem'
 import Link from 'components/Link'
 
 const query = graphql`
-  query {
+  query SidebarItem {
     site {
       siteMetadata {
         siteUrl
@@ -187,16 +186,21 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
 
   const { title } = useContext(MetadataContext)
   const {
-    site: {
-      siteMetadata: {
-        siteUrl,
-      },
-    },
-    navigation: {
-      sidebar,
-    },
+    site,
+    navigation,
     latest,
   } = useStaticQuery<SidebarQueryResult>(query)
+
+  if (!site || !navigation) {
+    throw new Error('Invalid data')
+  }
+
+  const {
+    siteMetadata: {
+      siteUrl,
+    },
+  } = site
+  const { sidebar } = navigation
   const url = siteUrl + location.pathname
 
   return (
@@ -267,20 +271,6 @@ export interface SidebarProps {
   location: WindowLocation
 }
 
-interface SidebarQueryResult {
-  site: {
-    siteMetadata: {
-      siteUrl: string
-    }
-  }
-  navigation: {
-    sidebar: NavigationLinkItem[]
-  }
-  latest: {
-    items: {
-      article: ArticleItem
-    }[]
-  }
-}
+type SidebarQueryResult = SidebarItemQuery
 
 export default Sidebar

@@ -3,10 +3,10 @@ import { FormattedMessage, MessageDescriptor, useIntl } from 'react-intl'
 import { Location } from '@reach/router'
 import styled from 'styled-components'
 
+import { AboutYamlContacts, NotFoundItemQuery } from 'graphql-types'
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
-import { AboutContactItem } from 'components/About'
 import Metadata from 'components/Metadata'
 import Link from 'components/Link'
 import messages from './messages'
@@ -36,13 +36,15 @@ const Contact: FunctionComponent<ContactProps> = ({
 
 interface ContactProps {
   message: MessageDescriptor
-  service: AboutContactItem
+  service: AboutYamlContacts
 }
 
-const NotFound: FunctionComponent<NotFoundProps> = ({
-  contacts,
-}) => {
+const NotFound: FunctionComponent<NotFoundProps> = ({ contacts }) => {
   const { formatMessage } = useIntl()
+
+  if (!contacts) {
+    throw new Error('Invalid data')
+  }
 
   return (
     <Container>
@@ -79,7 +81,7 @@ const NotFound: FunctionComponent<NotFoundProps> = ({
           <li>
             {formatMessage(messages.give_up)}
           </li>
-          {contacts.filter(service => service.primary).map(service => (
+          {contacts.items.filter(service => service.primary).map(service => (
             <li key={service.service}>
               <Contact message={messages.follow_me_on} service={service} />
             </li>
@@ -90,8 +92,6 @@ const NotFound: FunctionComponent<NotFoundProps> = ({
   )
 }
 
-export interface NotFoundProps {
-  contacts: AboutContactItem[]
-}
+type NotFoundProps = NotFoundItemQuery
 
 export default NotFound

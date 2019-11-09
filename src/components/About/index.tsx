@@ -5,6 +5,7 @@ import ImageZoom from 'react-medium-image-zoom'
 import RehypeReact from 'rehype-react'
 import styled from 'styled-components'
 
+import { AboutItemQuery } from 'graphql-types'
 import { media } from 'components/Layout'
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
@@ -77,8 +78,12 @@ const About: FunctionComponent<AboutProps> = ({
       },
     })
 
-    return compiler(introduction.markdown.htmlAst)
+    return compiler(introduction?.markdown?.htmlAst)
   }, [ introduction ])
+
+  if (!about) {
+    throw new Error('Invalid data')
+  }
 
   return (
     <Container>
@@ -167,42 +172,6 @@ const About: FunctionComponent<AboutProps> = ({
   )
 }
 
-interface AboutProps {
-  about: AboutItem
-  introduction: AboutIntroductionItem
-}
-
-interface AboutLink {
-  name: string
-  url: string | null
-}
-
-export interface AboutContactItem {
-  service: string
-  primary: true | null
-  accounts: AboutLink[]
-}
-
-export interface AboutItem {
-  title: string
-  name: string
-  occupation: string
-  icon: {
-    name: string
-    url: string
-    src: string
-  }
-  interests: {
-    type: string
-    items: AboutLink[]
-  }[]
-  contacts: AboutContactItem[]
-}
-
-export interface AboutIntroductionItem {
-  markdown: {
-    htmlAst: {}
-  }
-}
+type AboutProps = AboutItemQuery
 
 export default About

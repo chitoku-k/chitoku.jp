@@ -1,6 +1,7 @@
 'use strict'
 
 const path = require('path')
+const fs = require('fs').promises
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
 // React-intl
@@ -34,6 +35,14 @@ exports.onCreateWebpackConfig = ({
       ],
     },
   })
+}
+
+exports.createSchemaCustomization = async ({
+  actions: {
+    createTypes,
+  },
+}) => {
+  createTypes(await fs.readFile(path.resolve('schema.gql'), { encoding: 'utf-8' }))
 }
 
 exports.onCreatePage = ({

@@ -1,15 +1,16 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 
+import { AboutItemQuery } from 'graphql-types'
 import Layout from 'components/Layout'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
 import Content from 'components/Content'
 import Footer from 'components/Footer'
-import About, { AboutIntroductionItem, AboutItem } from 'components/About'
+import About from 'components/About'
 
 export const pageQuery = graphql`
-  query {
+  query AboutItem {
     about: aboutYaml {
       title
       name
@@ -44,23 +45,17 @@ export const pageQuery = graphql`
 `
 
 interface AboutPageProps extends PageProps {
-  data: {
-    about: AboutItem
-    introduction: AboutIntroductionItem
-  }
+  data: AboutItemQuery
 }
 
 const AboutPage: FunctionComponent<AboutPageProps> = ({
-  data: {
-    about,
-    introduction,
-  },
+  data,
 }) => (
   <Layout>
     <Header />
     <Navbar />
     <Content>
-      <About about={about} introduction={introduction} />
+      <About {...data} />
     </Content>
     <Footer />
   </Layout>

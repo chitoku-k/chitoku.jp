@@ -1,15 +1,16 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 
+import { HomeItemQuery } from 'graphql-types'
 import Layout from 'components/Layout'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
 import Content from 'components/Content'
 import Footer from 'components/Footer'
-import Home, { HomeLinkItem } from 'components/Home'
+import Home from 'components/Home'
 
 export const pageQuery = graphql`
-  query {
+  query HomeItem {
     home: homeYaml {
       items {
         id
@@ -22,27 +23,19 @@ export const pageQuery = graphql`
   }
 `
 
-const IndexPage: FunctionComponent<HomePageProps> = ({
-  data: {
-    home,
-  },
-}) => (
+const IndexPage: FunctionComponent<HomePageProps> = ({ data }) => (
   <Layout>
     <Header />
     <Navbar />
     <Content>
-      <Home home={home} />
+      <Home {...data} />
     </Content>
     <Footer />
   </Layout>
 )
 
 interface HomePageProps extends PageProps {
-  data: {
-    home: {
-      items: HomeLinkItem[]
-    }
-  }
+  data: HomeItemQuery
 }
 
 export default IndexPage

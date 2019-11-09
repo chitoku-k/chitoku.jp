@@ -1,5 +1,15 @@
 {
-  "processors": ["stylelint-processor-styled-components"],
+  "processors": [
+    ["stylelint-processor-styled-components", {
+      "parserPlugins": [
+        "asyncGenerators",
+        "jsx",
+        "nullishCoalescingOperator",
+        "objectRestSpread",
+        "optionalChaining"
+      ]
+    }]
+  ],
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-styled-components"

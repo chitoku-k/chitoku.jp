@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-c'
 
+import { MacrosYamlParameters } from 'graphql-types'
 import { ArticleItem } from 'components/Article'
 import { media } from 'components/Layout'
 
@@ -66,12 +67,12 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
     }
   }, [ ref ])
 
-  const def = article.attributes.macros && article.attributes.macros.find(x => Boolean(x && x.name === macroName))
+  const def = article.attributes.macros?.find(x => x?.name === macroName)
   if (!def) {
     return null
   }
 
-  const separator = def.parameters && def.parameters.length > linebreakThreshold ? '\n' : ''
+  const separator = def.parameters?.length && def.parameters.length > linebreakThreshold ? '\n' : ''
   const indentation = separator ? ' '.repeat(indentationWidth) : ''
 
   const buildParameters = ({ type, name }: PspSdkMacroParameterItem): string => type
@@ -108,28 +109,10 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
   )
 }
 
-type PspSdkMacroArticleItem = ArticleItem & PspSdkMacroArticleProps
-
-interface PspSdkMacroArticleProps {
-  attributes: {
-    macros: (PspSdkMacroItem | null)[] | null
-  }
-}
-
-interface PspSdkMacroItem {
-  name: string
-  description: string
-  parameters: PspSdkMacroParameterItem[] | null
-}
-
-interface PspSdkMacroParameterItem {
-  name: string
-  type: string
-  description: string
-}
+type PspSdkMacroParameterItem = MacrosYamlParameters
 
 interface PspSdkMacroProps {
-  article: PspSdkMacroArticleItem
+  article: ArticleItem
   name: string
 }
 

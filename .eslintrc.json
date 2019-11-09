@@ -75,7 +75,8 @@
       ],
       "extends": [
         "plugin:react/all",
-        "plugin:@typescript-eslint/all"
+        "plugin:@typescript-eslint/all",
+        "plugin:@typescript-eslint/eslint-recommended"
       ],
       "rules": {
         "@typescript-eslint/camelcase": "off",
@@ -94,7 +95,7 @@
         }],
         "@typescript-eslint/no-magic-numbers": "off",
         "@typescript-eslint/no-type-alias": ["error", {
-          "allowAliases": "in-unions-and-intersections"
+          "allowAliases": "always"
         }],
         "@typescript-eslint/no-unnecessary-condition": ["error", {
           "ignoreRhs": true
@@ -103,9 +104,6 @@
         "@typescript-eslint/semi": ["error", "never"],
         "@typescript-eslint/strict-boolean-expressions": "off",
         "@typescript-eslint/typedef": "off",
-        "indent": "off",
-        "no-unused-vars": "off",
-        "quotes": "off",
         "react/forbid-component-props": "off",
         "react/jsx-closing-bracket-location": ["error", "after-props"],
         "react/jsx-filename-extension": ["error", {
@@ -125,8 +123,7 @@
         }],
         "react/prop-types": "off",
         "react-hooks/exhaustive-deps": "warn",
-        "react-hooks/rules-of-hooks": "error",
-        "semi": "off"
+        "react-hooks/rules-of-hooks": "error"
       }
     }
   ],

@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 
+import { SoarerHistoryItemQuery } from 'graphql-types'
 import messages from './messages'
 
 const DownloadVersion = styled.big`
@@ -24,7 +25,7 @@ const DownloadIcon = styled(FontAwesome)`
 `
 
 const query = graphql`
-  query {
+  query SoarerHistoryItem {
     updates: allUpdatesYaml(
       sort: { fields: [ version ], order: DESC }
     ) {
@@ -54,6 +55,10 @@ const SoarerHistory: FunctionComponent = () => {
     },
   } = useStaticQuery<SoarerHistoryQueryResult>(query)
 
+  if (items.some(x => x.update.file && typeof x.update.file.publicURL !== 'string')) {
+    throw new Error('Invalid error')
+  }
+
   /* eslint-disable react/jsx-no-useless-fragment */
   return (
     <>
@@ -61,7 +66,7 @@ const SoarerHistory: FunctionComponent = () => {
         <div key={update.version}>
           <DownloadVersion>{update.version}</DownloadVersion>
           {update.file ? (
-            <DownloadLink bsStyle="default" href={update.file.publicURL} download={update.file.base}>
+            <DownloadLink bsStyle="default" href={update.file.publicURL as string} download={update.file.base}>
               <DownloadIcon name="download" />
               {formatMessage(messages.download)}
             </DownloadLink>
@@ -94,27 +99,6 @@ const SoarerHistory: FunctionComponent = () => {
   /* eslint-enable react/jsx-no-useless-fragment */
 }
 
-interface SoarerHistoryQueryResult {
-  updates: {
-    items: {
-      update: SoarerHistoryItem
-    }[]
-  }
-}
-
-export interface SoarerHistoryItem {
-  version: string
-  date: string
-  file?: {
-    base: string
-    size: number
-    publicURL: string
-    prettySize: string
-  } | null
-  history: {
-    title: string
-    message: string | null
-  }[]
-}
+type SoarerHistoryQueryResult = SoarerHistoryItemQuery
 
 export default SoarerHistory

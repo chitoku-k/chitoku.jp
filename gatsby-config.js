@@ -1,6 +1,5 @@
 'use strict'
 
-const path = require('path')
 const { description } = require('./package.json')
 const { createQuery } = require('historia-taxonomy-plugin')
 
@@ -69,7 +68,12 @@ module.exports = {
     { resolve: 'gatsby-plugin-sass' },
     { resolve: 'gatsby-plugin-sharp' },
     { resolve: 'gatsby-plugin-styled-components' },
-    { resolve: 'gatsby-plugin-ts-loader' },
+    {
+      resolve: 'gatsby-plugin-ts',
+      options: {
+        fileName: 'typings/graphql-types.d.ts',
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

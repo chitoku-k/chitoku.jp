@@ -1,0 +1,147 @@
+type AboutYaml implements Node {
+  title: String!
+  name: String!
+  occupation: String!
+  icon: AboutYamlIcon!
+  interests: [AboutYamlInterests!]!
+  contacts: [AboutYamlContacts!]!
+}
+type AboutYamlContacts {
+  service: String!
+  primary: Boolean
+  accounts: [AboutYamlContactsAccounts!]!
+}
+type AboutYamlContactsAccounts {
+  name: String!
+  url: String!
+}
+type AboutYamlIcon {
+  name: String!
+  url: String!
+  src: String!
+}
+type AboutYamlInterests {
+  type: String!
+  items: [AboutYamlInterestsItems!]!
+}
+type AboutYamlInterestsItems {
+  name: String!
+  url: String
+}
+type CategoriesYaml implements Node {
+  name: String!
+  path: String!
+  thumbnail: String!
+  articles: [MarkdownRemark!]!
+}
+type ErrorsYaml implements Node {
+  code: Float!
+  category: String!
+  message: String!
+}
+type ErrorsYamlEdge {
+  next: ErrorsYaml
+  node: ErrorsYaml!
+  previous: ErrorsYaml
+}
+type ErrorsYamlGroupConnection {
+  edges: [ErrorsYamlEdge!]!
+  nodes: [ErrorsYaml!]!
+  fieldValue: String!
+}
+type FunctionsYaml implements Node {
+  name: String!
+  return: String!
+  description: String!
+  parameters: [FunctionsYamlParameters!]
+}
+type FunctionsYamlParameters {
+  name: String!
+  parameters: [FunctionsYamlParametersParameters!]
+}
+type FunctionsYamlParametersParameters {
+  name: String!
+}
+type HomeYaml implements Node {
+  items: [HomeYamlItems!]!
+}
+type HomeYamlItems {
+  id: String!
+  component: String!
+  name: String!
+  to: String!
+  description: String!
+}
+type LinksYaml implements Node {
+  items: [LinksYamlItems!]!
+}
+type LinksYamlItems {
+  name: String!
+  url: String!
+}
+type MacrosYaml implements Node {
+  name: String!
+  parameters: [MacrosYamlParameters!]
+}
+type MacrosYamlParameters {
+  name: String!
+}
+type MarkdownRemark implements Node {
+  frontmatter: MarkdownRemarkFrontmatter!
+}
+type MarkdownRemarkFrontmatter {
+  title: String!
+  navigation: [MarkdownRemarkFrontmatterNavigation!]
+}
+type MarkdownRemarkFrontmatterNavigation {
+  name: String!
+  to: String!
+}
+type NavigationsYaml implements Node {
+  nav: [NavigationsYamlNav!]!
+  sidebar: [NavigationsYamlSidebar!]!
+}
+type NavigationsYamlNav {
+  name: String!
+  to: String!
+  items: [NavigationsYamlNavItems!]
+}
+type NavigationsYamlNavItems {
+  name: String!
+  to: String!
+}
+type NavigationsYamlSidebar {
+  name: String!
+  to: String!
+  items: [NavigationsYamlSidebarItems!]
+}
+type NavigationsYamlSidebarItems {
+  name: String!
+  to: String!
+}
+type Site implements Node {
+  siteMetadata: SiteSiteMetadata!
+}
+type SiteSiteMetadata {
+  siteUrl: String!
+  title: String!
+}
+type TagsYaml implements Node {
+  name: String!
+  slug: String!
+  articles: [MarkdownRemark!]!
+}
+type UpdatesYaml implements Node {
+  date(
+    formatString: String
+    fromNow: Boolean
+    difference: String
+    locale: String
+  ): Date!
+  version: String!
+  history: [UpdatesYamlHistory!]!
+}
+type UpdatesYamlHistory {
+  title: String!
+  message: String
+}

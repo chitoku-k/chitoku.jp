@@ -1,18 +1,17 @@
-import React, { ComponentType } from 'react'
+import { ComponentType } from 'react'
 
-declare module 'rehype-react' {
-  interface RehypeReactOptions {
-    components?: {
-      [key: string]: ComponentType<any>
-    }
-    prefix?: string
-    createElement?: any
+/* eslint-disable @typescript-eslint/no-explicit-any */
+interface RehypeReactOptions {
+  components?: {
+    [key: string]: ComponentType<any>
   }
+  prefix?: string
+  createElement?: any
+}
+/* eslint-enable @typescript-eslint/no-explicit-any */
 
-  class RehypeReact {
-    Compiler: (node: {}) => ComponentType
-    constructor(options: RehypeReactOptions)
-  }
+export default class RehypeReact {
+  public Compiler: (node: {}) => ComponentType
 
-  export = RehypeReact
+  public constructor(options: RehypeReactOptions)
 }

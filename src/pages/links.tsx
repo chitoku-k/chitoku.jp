@@ -9,7 +9,7 @@ import Footer from 'components/Footer'
 import Links, { LinksLinkItem } from 'components/Links'
 
 export const pageQuery = graphql`
-  query {
+  query LinksItem {
     links: linksYaml {
       items {
         name
