@@ -1,5 +1,4 @@
 import React, { DetailedHTMLProps, FunctionComponent, HTMLAttributes, ReactNode } from 'react'
-import { Omit } from 'utility-types'
 import styled from 'styled-components'
 
 import { media } from 'components/Layout'

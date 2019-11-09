@@ -1,10 +1,11 @@
 import React, { FunctionComponent } from 'react'
 import { useIntl } from 'react-intl'
 
+import { LatestItemQuery } from 'graphql-types'
 import messages from './messages'
 import Metadata from 'components/Metadata'
 import Container from 'components/Container'
-import Article, { ArticleItem } from 'components/Article'
+import Article from 'components/Article'
 
 const Latest: FunctionComponent<LatestProps> = ({
   items,
@@ -21,10 +22,6 @@ const Latest: FunctionComponent<LatestProps> = ({
   )
 }
 
-export interface LatestProps {
-  items: {
-    article: ArticleItem
-  }[]
-}
+type LatestProps = LatestItemQuery['latest']
 
 export default Latest

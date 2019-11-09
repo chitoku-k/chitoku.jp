@@ -2,6 +2,7 @@ import React, { Fragment, FunctionComponent } from 'react'
 import { Clearfix, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 
+import { HomeItemQuery } from 'graphql-types'
 import { media } from 'components/Layout'
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
@@ -126,60 +127,52 @@ const HomeMeneuItemDescription = styled.p`
   `}
 `
 
-const Home: FunctionComponent<HomeProps> = ({
-  home: {
-    items,
-  },
-}) => (
-  <Container>
-    <Metadata title={null} />
-    <ArticleContainer>
-      {items.map(({
-        id,
-        component,
-        name,
-        to,
-        description,
-      }, index) => {
-        const Icon = icons[component]
-        return (
-          <Fragment key={name}>
-            <HomeMenuItem xs={6} md={4}>
-              <HomeMenuItemLink to={to} title={name}>
-                <Icon className={id} viewBox="0 0 175 175" />
-                <HomeMenuItemTitle>{name}</HomeMenuItemTitle>
-              </HomeMenuItemLink>
-              <HomeMeneuItemDescription>{description}</HomeMeneuItemDescription>
-            </HomeMenuItem>
-            {(index + 1) % 2 === 0 ? (
-              <Clearfix visibleSmBlock visibleXsBlock />
-            ) : null}
-            {(index + 1) % 3 === 0 ? (
-              <Clearfix visibleMdBlock visibleLgBlock />
-            ) : null}
-          </Fragment>
-        )
-      })}
-    </ArticleContainer>
-  </Container>
-)
-
-interface HomeProps {
-  home: {
-    items: HomeLinkItem[]
+const Home: FunctionComponent<HomeItemQuery> = ({ home }) => {
+  if (!home) {
+    throw new Error('Invalid data')
   }
+
+  const { items } = home
+
+  return (
+    <Container>
+      <Metadata title={null} />
+      <ArticleContainer>
+        {items.map(({
+          id,
+          component,
+          name,
+          to,
+          description,
+        }, index) => {
+          const Icon = icons[component]
+          return (
+            <Fragment key={name}>
+              <HomeMenuItem xs={6} md={4}>
+                <HomeMenuItemLink to={to} title={name}>
+                  <Icon className={id} viewBox="0 0 175 175" />
+                  <HomeMenuItemTitle>{name}</HomeMenuItemTitle>
+                </HomeMenuItemLink>
+                <HomeMeneuItemDescription>{description}</HomeMeneuItemDescription>
+              </HomeMenuItem>
+              {(index + 1) % 2 === 0 ? (
+                <Clearfix visibleSmBlock visibleXsBlock />
+              ) : null}
+              {(index + 1) % 3 === 0 ? (
+                <Clearfix visibleMdBlock visibleLgBlock />
+              ) : null}
+            </Fragment>
+          )
+        })}
+      </ArticleContainer>
+    </Container>
+  )
 }
+
+type HomeProps = HomeItemQuery
 
 interface HomeIcon {
   [key: string]: React.ComponentType<React.SVGAttributes<{}>>
-}
-
-export interface HomeLinkItem {
-  id: string
-  component: string
-  name: string
-  to: string
-  description: string
 }
 
 export default Home

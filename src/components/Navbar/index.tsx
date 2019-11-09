@@ -5,12 +5,13 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { Location } from '@reach/router'
 import styled from 'styled-components'
 
+import { NavigationLinkItemQuery, NavigationsYamlNav } from 'graphql-types'
 import { media } from 'components/Layout'
 import SearchForm from 'components/SearchForm'
 import NavItem, { NavLink } from 'components/NavItem'
 
 const query = graphql`
-  query {
+  query NavigationLinkItem {
     navigation: navigationsYaml {
       nav {
         name
@@ -99,16 +100,18 @@ const SearchIcon = styled.li`
 `
 
 const Navbar: FunctionComponent = () => {
-  const {
-    navigation: {
-      nav,
-    },
-  } = useStaticQuery<NavbarQueryResult>(query)
+  const { navigation } = useStaticQuery<NavbarQueryResult>(query)
 
   const [ search, setSearch ] = useState(false)
 
   const openSearch = useCallback(() => setSearch(true), [])
   const closeSearch = useCallback(() => setSearch(false), [])
+
+  if (!navigation) {
+    throw new Error('Invalid data')
+  }
+
+  const { nav } = navigation
 
   return (
     <NavContainer>
@@ -133,16 +136,7 @@ const Navbar: FunctionComponent = () => {
   )
 }
 
-export interface NavigationLinkItem {
-  name: string
-  to: string
-  items?: NavigationLinkItem[]
-}
-
-interface NavbarQueryResult {
-  navigation: {
-    nav: NavigationLinkItem[]
-  }
-}
+export type NavigationLinkItem = NavigationsYamlNav
+type NavbarQueryResult = NavigationLinkItemQuery
 
 export default Navbar

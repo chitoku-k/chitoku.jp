@@ -4,13 +4,13 @@ import { useIntl } from 'react-intl'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Location } from '@reach/router'
 
+import { MetadataItemQuery } from 'graphql-types'
 import messages from './messages'
-import { AboutContactItem } from 'components/About'
 
 const THUMBNAIL_DEFAULT = '/thumbnails/default.png'
 
 const query = graphql`
-  query {
+  query MetadataItem {
     site {
       siteMetadata {
         siteUrl
@@ -44,17 +44,18 @@ const Metadata: FunctionComponent<MetadataItem> = ({
   ...newState
 }) => {
   const { formatMessage } = useIntl()
+  const { about, site } = useStaticQuery<MetadataQueryResult>(query)
 
+  if (!about || !site) {
+    throw new Error('Invalid data')
+  }
+
+  const { contacts } = about
   const {
-    site: {
-      siteMetadata: {
-        siteUrl,
-      },
+    siteMetadata: {
+      siteUrl,
     },
-    about: {
-      contacts,
-    },
-  } = useStaticQuery<MetadataQueryResult>(query)
+  } = site
 
   Object.assign(metadata, {
     ...newState,
@@ -88,7 +89,7 @@ const Metadata: FunctionComponent<MetadataItem> = ({
             .filter(contact => contact.primary)
             .flatMap(contact => contact.accounts)
             .map(({ url }) => (
-              <link key={url as string} rel="me" href={url as string} />
+              <link key={url} rel="me" href={url} />
             ))}
           {children}
           <link rel="alternate" type="application/rss+xml" href={`${siteUrl}/feed/rss2/`} />
@@ -99,16 +100,7 @@ const Metadata: FunctionComponent<MetadataItem> = ({
   )
 }
 
-interface MetadataQueryResult {
-  site: {
-    siteMetadata: {
-      siteUrl: string
-    }
-  }
-  about: {
-    contacts: AboutContactItem[]
-  }
-}
+type MetadataQueryResult = MetadataItemQuery
 
 interface MetadataItem {
   type?: string

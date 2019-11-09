@@ -1,15 +1,16 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 
+import { LatestItemQuery } from 'graphql-types'
 import Layout from 'components/Layout'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
 import Content from 'components/Content'
 import Footer from 'components/Footer'
-import Latest, { LatestProps } from 'components/Latest'
+import Latest from 'components/Latest'
 
 export const pageQuery = graphql`
-  query {
+  query LatestItem {
     latest: allMarkdownRemark(
       filter: { frontmatter: { created: { ne: null } } }
       sort: { order: DESC, fields: [ frontmatter___created ] }
@@ -48,9 +49,7 @@ const LatestPage: FunctionComponent<LatestPageProps> = ({
 )
 
 interface LatestPageProps extends PageProps {
-  data: {
-    latest: LatestProps
-  }
+  data: LatestItemQuery
 }
 
 export default LatestPage

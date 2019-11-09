@@ -47,7 +47,7 @@ exports.createResolvers = ({
     CategoriesYaml: {
       articles: {
         type: [
-          'MarkdownRemark',
+          'MarkdownRemark!',
         ],
         resolve(source, args, context) {
           const articles = context.nodeModel.getAllNodes({
@@ -63,7 +63,7 @@ exports.createResolvers = ({
     TagsYaml: {
       articles: {
         type: [
-          'MarkdownRemark',
+          'MarkdownRemark!',
         ],
         resolve(source, args, context) {
           const articles = context.nodeModel.getAllNodes({
@@ -78,14 +78,14 @@ exports.createResolvers = ({
     },
     MarkdownRemark: {
       excerpted: {
-        type: 'Boolean',
+        type: 'Boolean!',
         resolve(source) {
           // TODO: read excerpt_separator setting
           return source.rawMarkdownBody.includes('\n<!-- more -->\n')
         },
       },
       path: {
-        type: 'String',
+        type: 'String!',
         resolve(source, args, context) {
           return getPath(context.nodeModel.getNodeById({ id: source.parent }))
         },

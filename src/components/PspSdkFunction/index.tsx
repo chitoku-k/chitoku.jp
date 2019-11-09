@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-c'
 
+import { FunctionsYamlParameters } from 'graphql-types'
 import { ArticleItem } from 'components/Article'
 import { media } from 'components/Layout'
 
@@ -66,12 +67,12 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
     }
   }, [ ref ])
 
-  const def = article.attributes.functions && article.attributes.functions.find(x => x && x.name === functionName)
+  const def = article.attributes.functions?.find(x => x?.name === functionName)
   if (!def) {
     return null
   }
 
-  const separator = def.parameters && def.parameters.length > linebreakThreshold ? '\n' : ''
+  const separator = def.parameters?.length && def.parameters.length > linebreakThreshold ? '\n' : ''
   const indentation = separator ? ' '.repeat(indentationWidth) : ''
 
   const buildParameters = ({ type, name, parameters }: PspSdkFunctionParameterItem): string => parameters
@@ -112,33 +113,10 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
   )
 }
 
-type PspSdkFunctionArticleItem = ArticleItem & PspSdkFunctionArticleProps
-
-interface PspSdkFunctionArticleProps {
-  attributes: {
-    functions: (PspSdkFunctionItem | null)[] | null
-  }
-}
-
-interface PspSdkFunctionItem {
-  name: string
-  return: string
-  description: string
-  parameters: PspSdkFunctionParameterItem[] | null
-}
-
-interface PspSdkFunctionParameterItem {
-  name: string
-  type: string
-  description: string
-  parameters: {
-    name: string
-    type: string
-  }[] | null
-}
+type PspSdkFunctionParameterItem = FunctionsYamlParameters
 
 interface PspSdkFunctionProps {
-  article: PspSdkFunctionArticleItem
+  article: ArticleItem
   name: string
 }
 

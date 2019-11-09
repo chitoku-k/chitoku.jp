@@ -5,14 +5,14 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 
+import { SoarerDownloadItemQuery } from 'graphql-types'
 import messages from './messages'
 import icon from './icon.png'
 import { ArticleWrapper } from 'components/Article'
 import { media } from 'components/Layout'
-import { SoarerHistoryItem } from 'components/SoarerHistory'
 
 const query = graphql`
-  query {
+  query SoarerDownloadItem {
     updates: allUpdatesYaml(
       sort: { fields: [ version ], order: DESC }
       limit: 1
@@ -89,6 +89,10 @@ const SoarerDownload: FunctionComponent<ArticleWrapper> = () => {
     },
   } = useStaticQuery<SoarerDownloadQueryResult>(query)
 
+  if (update.file && typeof update.file.publicURL !== 'string') {
+    throw new Error('Invalid data')
+  }
+
   return (
     <>
       <SoarerDownloadContainer>
@@ -100,7 +104,7 @@ const SoarerDownload: FunctionComponent<ArticleWrapper> = () => {
       </SoarerDownloadContainer>
       <SoarerDownloadDescription className="description">
         {update.file ? (
-          <Button bsStyle="primary" bsSize="large" href={update.file.publicURL} download={update.file.base}>
+          <Button bsStyle="primary" bsSize="large" href={update.file.publicURL as string} download={update.file.base}>
             <FontAwesome name="download" />
             {formatMessage(messages.download, {
               size: update.file.prettySize,
@@ -115,12 +119,6 @@ const SoarerDownload: FunctionComponent<ArticleWrapper> = () => {
   )
 }
 
-interface SoarerDownloadQueryResult {
-  updates: {
-    items: {
-      update: SoarerHistoryItem
-    }[]
-  }
-}
+type SoarerDownloadQueryResult = SoarerDownloadItemQuery
 
 export default SoarerDownload
