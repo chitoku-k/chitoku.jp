@@ -55,12 +55,6 @@ module.exports = {
         trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_ID,
       },
     },
-    {
-      resolve: 'gatsby-plugin-graphql-codegen',
-      options: {
-        fileName: 'typings/graphql-types.d.ts',
-      },
-    },
     { resolve: 'gatsby-plugin-no-sourcemaps' },
     { resolve: 'gatsby-plugin-react-helmet' },
     {
@@ -74,7 +68,12 @@ module.exports = {
     { resolve: 'gatsby-plugin-sass' },
     { resolve: 'gatsby-plugin-sharp' },
     { resolve: 'gatsby-plugin-styled-components' },
-    { resolve: 'gatsby-plugin-ts-loader' },
+    {
+      resolve: 'gatsby-plugin-ts',
+      options: {
+        fileName: 'typings/graphql-types.d.ts',
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
