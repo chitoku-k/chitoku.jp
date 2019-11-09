@@ -37,9 +37,11 @@ exports.onCreateWebpackConfig = ({
   })
 }
 
-exports.createSchemaCustomization = async ({ actions: {
-  createTypes,
-} }) => {
+exports.createSchemaCustomization = async ({
+  actions: {
+    createTypes,
+  },
+}) => {
   createTypes(await fs.readFile(path.resolve('schema.gql'), { encoding: 'utf-8' }))
 }
 
