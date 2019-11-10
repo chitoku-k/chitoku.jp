@@ -48,7 +48,7 @@ const PspErrorCodes: FunctionComponent = () => {
           <Table striped condensed hover>
             <thead>
               <tr>
-                <th>{formatMessage(messages.errorCode)}</th>
+                <th>{formatMessage(messages.error_code)}</th>
                 <th>{formatMessage(messages.description)}</th>
               </tr>
             </thead>
