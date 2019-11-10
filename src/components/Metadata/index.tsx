@@ -60,7 +60,7 @@ const Metadata: FunctionComponent<MetadataItem> = ({
   Object.assign(metadata, {
     ...newState,
     title: newState.title
-      ? formatMessage(messages.titleTemplate, { title: newState.title })
+      ? formatMessage(messages.title_template, { title: newState.title })
       : formatMessage(messages.title),
   })
 

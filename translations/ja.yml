@@ -50,7 +50,7 @@ components:
     latest_articles: 最近の投稿
   Metadata:
     title: ちとくのホームページ
-    titleTemplate: '{title} – ちとくのホームページ'
+    title_template: '{title} – ちとくのホームページ'
   Pagination:
     next: »
     prev: «
@@ -76,5 +76,5 @@ components:
   SoarerHistory:
     download: ダウンロード
   PspErrorCodes:
-    errorCode: エラー番号
+    error_code: エラー番号
     description: 説明
