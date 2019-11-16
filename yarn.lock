@@ -7610,17 +7610,17 @@ gatsby-remark-grid-tables@^0.0.3:
     babel-runtime "^6.26.0"
     remark-grid-tables "^1.2.0"
 
-gatsby-remark-images@^3.1.29:
-  version "3.1.29"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.1.29.tgz#b40c641b7a62fc776149a6dbcb8940f76dbc6749"
-  integrity sha512-VUnuR7ZUSkfA5l/j9Ez8U0J4jx0bdqzeiiI8ftlwjhDjuvoPU1eOFLLULjnwod3p8mX8PIVo5vcdQGL+TtcAwQ==
+gatsby-remark-images@^3.1.31:
+  version "3.1.31"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.1.31.tgz#8c2fe37f8d0fd1a5612de085c7d96dfae22c6cb8"
+  integrity sha512-HWCRgGejHUnQM+fClkDO28NLDplS6ag1vA5jz4HKIWJD4cs33h+Oa9W12k2kul5gJ0y5/j9xEAYDT2zdbTSS3A==
   dependencies:
-    "@babel/runtime" "^7.6.3"
+    "@babel/runtime" "^7.7.2"
     chalk "^2.4.2"
     cheerio "^1.0.0-rc.3"
     is-relative-url "^3.0.0"
     lodash "^4.17.15"
-    mdast-util-definitions "^1.2.4"
+    mdast-util-definitions "^1.2.5"
     potrace "^2.1.2"
     query-string "^6.8.3"
     slash "^3.0.0"
@@ -10886,10 +10886,10 @@ mdast-util-compact@^1.0.0:
   dependencies:
     unist-util-visit "^1.1.0"
 
-mdast-util-definitions@^1.2.0, mdast-util-definitions@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/mdast-util-definitions/-/mdast-util-definitions-1.2.4.tgz#2b54ad4eecaff9d9fcb6bf6f9f6b68b232d77ca7"
-  integrity sha512-HfUArPog1j4Z78Xlzy9Q4aHLnrF/7fb57cooTHypyGoe2XFNbcx/kWZDoOz+ra8CkUzvg3+VHV434yqEd1DRmA==
+mdast-util-definitions@^1.2.0, mdast-util-definitions@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/mdast-util-definitions/-/mdast-util-definitions-1.2.5.tgz#3fe622a4171c774ebd06f11e9f8af7ec53ea5c74"
+  integrity sha512-CJXEdoLfiISCDc2JB6QLb79pYfI6+GcIH+W2ox9nMc7od0Pz+bovcHsiq29xAQY6ayqe/9CsK2VzkSJdg1pFYA==
   dependencies:
     unist-util-visit "^1.0.0"
 
