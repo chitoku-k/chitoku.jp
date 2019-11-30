@@ -2,6 +2,7 @@
 
 const { description } = require('./package.json')
 const { createQuery } = require('historia-taxonomy-plugin')
+const sass = require('sass')
 
 module.exports = {
   siteMetadata: {
@@ -46,7 +47,12 @@ module.exports = {
         },
       },
     },
-    { resolve: 'gatsby-plugin-sass' },
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        implementation: sass,
+      },
+    },
     { resolve: 'gatsby-plugin-sharp' },
     { resolve: 'gatsby-plugin-styled-components' },
     {
