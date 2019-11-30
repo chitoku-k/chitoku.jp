@@ -30,7 +30,7 @@
     "babel-plugin-styled-components": "^1.10.6",
     "babel-preset-gatsby": "^0.2.22",
     "bootstrap-sass": "^3.4.1",
-    "eslint": "^6.7.0",
+    "eslint": "^6.7.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.3.0",
     "extract-react-intl-messages": "^2.3.3",
