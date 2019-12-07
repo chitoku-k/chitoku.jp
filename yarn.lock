@@ -9,7 +9,7 @@
   dependencies:
     "@babel/highlight" "^7.0.0"
 
-"@babel/core@>=7.2.2", "@babel/core@^7.0.0", "@babel/core@^7.4.5", "@babel/core@^7.5.5", "@babel/core@^7.7.4", "@babel/core@^7.7.5":
+"@babel/core@>=7.2.2", "@babel/core@^7.0.0", "@babel/core@^7.5.5", "@babel/core@^7.7.2", "@babel/core@^7.7.4", "@babel/core@^7.7.5":
   version "7.7.5"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.7.5.tgz#ae1323cd035b5160293307f50647e83f8ba62f7e"
   integrity sha512-M42+ScN4+1S9iB6f+TL7QBpoQETxbclx+KNoKJABghnKYE+fMzSGqst0BZJc8CpI625bwPwYgUyRvxZ+0mZzpw==
@@ -2176,10 +2176,10 @@
   resolved "https://registry.yarnpkg.com/@types/algoliasearch/-/algoliasearch-3.34.7.tgz#7d0d565f658dbdbb2c6201dbc750dd66e0701ff5"
   integrity sha512-5loTXY3jFdKwSDFtKWSBdhKLNs2TI+YKnyNCnUh/WnOEjMbDi8fZHb6sflW8zs9VL7lYtwGkd62ralE7kjZjNQ==
 
-"@types/babel__core@^7.1.2":
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.2.tgz#608c74f55928033fce18b99b213c16be4b3d114f"
-  integrity sha512-cfCCrFmiGY/yq0NuKNxIQvZFy9kY/1immpSpTngOnyIbD4+eJOG5mxphhHDv3CHL9GltO4GcKr54kGBg3RNdbg==
+"@types/babel__core@^7.1.3":
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.3.tgz#e441ea7df63cd080dfcd02ab199e6d16a735fc30"
+  integrity sha512-8fBo0UR2CcwWxeX7WIIgJ7lXjasFxoYgRnFHUj+hRvKkpiBJbxhdAPTCY6/ZKM0uxANFVzt4yObSLuTiTnazDA==
   dependencies:
     "@babel/parser" "^7.1.0"
     "@babel/types" "^7.0.0"
@@ -2413,6 +2413,11 @@
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
+
+"@types/schema-utils@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/schema-utils/-/schema-utils-1.0.0.tgz#295d36f01e2cb8bc3207ca1d9a68e210db6b40cb"
+  integrity sha512-YesPanU1+WCigC/Aj1Mga8UCOjHIfMNHZ3zzDsUY7lI8GlKnh/Kv2QwJOQ+jNQ36Ru7IfzSedlG14hppYaN13A==
 
 "@types/styled-components@^4.4.0":
   version "4.4.0"
@@ -3338,16 +3343,18 @@ babel-plugin-react-intl-auto@^3.1.0:
     "@babel/types" "^7.5.5"
     murmurhash3js "^3.0.1"
 
-babel-plugin-react-intl@^4.1.16:
-  version "4.1.16"
-  resolved "https://registry.yarnpkg.com/babel-plugin-react-intl/-/babel-plugin-react-intl-4.1.16.tgz#96d63a007f2aa77b53b93bf7d5ba4f4da8dc7937"
-  integrity sha512-JzP+HkF7C+eOAcruygiRIrBgikh2n2xsV3hMBYib3SlqTxZu2pEW2g85nk8Zm1TJ32LvPOEnvZKwWnB0443/CQ==
+babel-plugin-react-intl@^5.1.8:
+  version "5.1.11"
+  resolved "https://registry.yarnpkg.com/babel-plugin-react-intl/-/babel-plugin-react-intl-5.1.11.tgz#b7f189d4f5e014d7e628f7518f3dae06cccb884b"
+  integrity sha512-yUGcYAcqrLZJICBlhSMQ5W6EHVOI91h3P3bgPLHjXnFKqZlpIYNgpvV3b/LiJ6L/kqszkwx898CQulFNG0CzyQ==
   dependencies:
-    "@babel/core" "^7.4.5"
+    "@babel/core" "^7.7.2"
     "@babel/helper-plugin-utils" "^7.0.0"
-    "@types/babel__core" "^7.1.2"
+    "@types/babel__core" "^7.1.3"
+    "@types/schema-utils" "^1.0.0"
     fs-extra "^8.0.1"
-    intl-messageformat-parser "^3.1.0"
+    intl-messageformat-parser "^3.5.1"
+    schema-utils "^2.2.0"
 
 babel-plugin-remove-graphql-queries@^2.7.17:
   version "2.7.17"
@@ -6781,13 +6788,13 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-extract-react-intl-messages@^2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/extract-react-intl-messages/-/extract-react-intl-messages-2.3.3.tgz#9a8e9bd26c8a9760f7183683d831e98ef9b47136"
-  integrity sha512-sFjAWCHePEDyHU4WXAzv2Ytq1FNAGxv8tCVccV76KLhwnAYc1hfs9ZJ/YgcW0TJ+4HWLekK0+M8HLZr20DSaEQ==
+extract-react-intl-messages@^2.3.5:
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/extract-react-intl-messages/-/extract-react-intl-messages-2.3.5.tgz#325228a5cd03f1aecfb7b2e887be9a19c8e29ee9"
+  integrity sha512-vzPnBZ8S8dmc07WCgYUeXTVBhpqv5VZT7sCVgBsufikvyYd6T/iiyRsKrP/SJNOMet+n08tmk1KoH7Y1f9udzw==
   dependencies:
     "@babel/core" "^7.5.5"
-    babel-plugin-react-intl "^4.1.16"
+    babel-plugin-react-intl "^5.1.8"
     flat "^4.1.0"
     glob "^7.1.4"
     js-yaml "^3.13.1"
@@ -9306,7 +9313,7 @@ intl-locales-supported@^1.8.4:
   resolved "https://registry.yarnpkg.com/intl-locales-supported/-/intl-locales-supported-1.8.4.tgz#e1d19812afa50dc2e2a2b4741ceb4030522d45b1"
   integrity sha512-wO0JhDqhshhkq8Pa9CLcstqd1aCXjfMgfMzjD6mDreS3mTSDbjGiMU+07O8BdJGxed7Q0Wf3TFVjGq0W3Y0n1w==
 
-intl-messageformat-parser@^3.1.0, intl-messageformat-parser@^3.5.0, intl-messageformat-parser@^3.5.1:
+intl-messageformat-parser@^3.5.0, intl-messageformat-parser@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-3.5.1.tgz#523a17bd2ef4a92209956b7cc953a0170bcf5b76"
   integrity sha512-aCUjbLCZYhWJzC5gJiXKYR+OCE8rIegRBsjm1irJSH0AmeC7dIOp3nzOCc84BcyFX5baoXJfijV6SWqYUrN27w==
@@ -14878,6 +14885,14 @@ schema-utils@^1.0.0:
     ajv "^6.1.0"
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
+
+schema-utils@^2.2.0:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.6.1.tgz#eb78f0b945c7bcfa2082b3565e8db3548011dc4f"
+  integrity sha512-0WXHDs1VDJyo+Zqs9TKLKyD/h7yDpHUhEFsM2CzkICFdoX1av+GBq/J2xRTFfsQO5kBfhZzANf2VcIm84jqDbg==
+  dependencies:
+    ajv "^6.10.2"
+    ajv-keywords "^3.4.1"
 
 scroll-behavior@^0.9.10:
   version "0.9.10"
