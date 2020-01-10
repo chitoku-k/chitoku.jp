@@ -2456,10 +2456,10 @@
   resolved "https://registry.yarnpkg.com/@types/schema-utils/-/schema-utils-1.0.0.tgz#295d36f01e2cb8bc3207ca1d9a68e210db6b40cb"
   integrity sha512-YesPanU1+WCigC/Aj1Mga8UCOjHIfMNHZ3zzDsUY7lI8GlKnh/Kv2QwJOQ+jNQ36Ru7IfzSedlG14hppYaN13A==
 
-"@types/styled-components@^4.4.1":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.4.1.tgz#bc40cf5ce0708032f4b148b04ab3c470d3e74026"
-  integrity sha512-cQXT4pkAkM0unk/s26UBrJx9RmJ2rNUn2aDTgzp1rtu+tTkScebE78jbxNWhlqkA43XF3d41CcDlyl9Ldotm2g==
+"@types/styled-components@^4.4.2":
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.4.2.tgz#709fa7afd7dc0963b8316a0159240f0fe19a026d"
+  integrity sha512-dngFx2PuGoy0MGE68eHayAmJvLSqWrnTe9w+DnQruu8PS+waWEsKmoBRhkzL2h2pK1OJhzJhVfuiz+oZa4etpA==
   dependencies:
     "@types/hoist-non-react-statics" "*"
     "@types/react" "*"
