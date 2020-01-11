@@ -39,7 +39,7 @@
     "gatsby-image": "^2.2.38",
     "gatsby-plugin-algolia": "^0.5.0",
     "gatsby-plugin-catch-links": "^2.1.24",
-    "gatsby-plugin-google-analytics": "^2.1.31",
+    "gatsby-plugin-google-analytics": "^2.1.32",
     "gatsby-plugin-no-sourcemaps": "^2.1.1",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-react-svg": "^3.0.0",
