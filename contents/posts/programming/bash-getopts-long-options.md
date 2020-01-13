@@ -15,7 +15,7 @@ Bash で書かれたシェルスクリプトで引数を処理するためには
 
 ### `--foo=bar`: 区切り文字として `=` を使って受け入れる
 
-[GNU Coreutils](https://www.gnu.org/software/coreutils/manual/coreutils.html)、[GNU Grep](https://www.gnu.org/software/grep/manual/grep.html#Command_002dline-Options)、[Git](https://git-scm.com/docs/git)、[Node.js](https://nodejs.org/api/cli.html) などで採用されている方式です。  
+`--foo=bar` のみを受け入れる実装は見当たりませんでした。  
 この記事の [--foo=bar を処理する方法](#--foobar-を処理する方法)で扱っています。
 
 ### `--foo bar`: 引数を分けて受け入れる
@@ -23,11 +23,12 @@ Bash で書かれたシェルスクリプトで引数を処理するためには
 [FreeBSD tar](https://www.freebsd.org/cgi/man.cgi?query=tar&sektion=1&manpath=FreeBSD+12.0-RELEASE+and+Ports)、[curl](https://curl.haxx.se/docs/manual.html)、[Ruby](https://docs.ruby-lang.org/ja/latest/doc/spec=2frubycmd.html#ruby)、[Python](https://docs.python.org/3/using/cmdline.html) などで採用されている方式です。  
 この記事の [--foo bar を処理する方法](#--foo-bar-を処理する方法)で扱っています。
 
-<!-- more -->
-
 ### `--foo=bar` と `--foo bar` の両方を受け入れる
 
-[GNU Awk](https://www.gnu.org/software/gawk/manual/html_node/Options.html#Options) で採用されている方式です。なんてこった。
+[GNU Coreutils](https://www.gnu.org/software/coreutils/manual/coreutils.html)、[GNU Grep](https://www.gnu.org/software/grep/manual/grep.html#Command_002dline-Options)、[Git](https://git-scm.com/docs/git)、[Node.js](https://nodejs.org/api/cli.html)、[GNU Awk](https://www.gnu.org/software/gawk/manual/html_node/Options.html#Options) など多くで採用されている方式です。  
+この記事の [--foo=bar と --foo bar の両方を処理する方法](#--foobar-と---foo-bar-の両方を処理する方法)で扱っています。
+
+<!-- more -->
 
 ### `-foo:bar`: 区切り文字として `:` を使って受け入れる
 
@@ -106,10 +107,10 @@ timestr() {
     while getopts h:m:s:v-: opt; do
         # OPTARG を = の位置で分割して opt と optarg に代入
         optarg="$OPTARG"
-        [[ "$opt" = - ]]
-            && opt="-${OPTARG%%=*}"
-            && optarg="${OPTARG/${OPTARG%%=*}/}"
-            && optarg="${optarg#=}"
+        [[ "$opt" = - ]] &&
+            opt="-${OPTARG%%=*}" &&
+            optarg="${OPTARG/${OPTARG%%=*}/}" &&
+            optarg="${optarg#=}"
 
         case "-$opt" in
             -h|--hour)
@@ -224,6 +225,104 @@ Time is 1:23:45
 
 timestr --hour 1 --minute 23 --second 45 'Time is'
 Time is 1:23:45
+
+timestr --hour 1 --minute 23 --second 45 -- '-- Time --'
+-- Time -- 1:23:45
+
+timestr --version
+v0.0.0
+
+timestr --day
+timestr.bash: illegal option -- day
+```
+
+## --foo=bar と --foo bar の両方を処理する方法
+
+`--foo=bar` と `--foo bar` の方法を組み合わせた処理方法です。最もよく使われています。  
+こちらもオプション文字として `-:` を指定し、次のようにパースします。
+
+- `--foo=bar` の場合
+  - オプション: `foo`、引数: `bar`
+- `--foo bar` の場合
+  - オプション: `foo`、引数: `bar`
+- `--foo=--bar` の場合
+  - オプション: `foo`、引数: `--bar`
+- `--foo --bar` の場合
+  - オプション: `foo`、引数: なし
+  - オプション: `bar`、引数: なし
+
+ショートオプションにおいて引数を要求するかどうかは、`bash¦getopts` の `:` を指定するかどうかに依存します。
+一方でロングオプションにおいて引数を要求するかどうかは、各オプションの実装ではなくユーザーの入力に依存します。そのため `bash¦shift` は不要です。
+こちらも `--` を処理しているため、`-` で始まる引数を渡すことができます。
+
+```bash{outputLines:1-48}
+timestr() {
+    local opt optarg h m s
+
+    while getopts h:m:s:v-: opt; do
+        # OPTARG を = の位置で分割して opt と optarg に代入
+        optarg="$OPTARG"
+        if [[ "$opt" = - ]]; then
+            opt="-${OPTARG%%=*}"
+            optarg="${OPTARG/${OPTARG%%=*}/}"
+            optarg="${optarg#=}"
+
+            if [[ -z "$optarg" ]] && [[ ! "${!OPTIND}" = -* ]]; then
+                optarg="${!OPTIND}"
+                shift
+            fi
+        fi
+
+        case "-$opt" in
+            -h|--hour)
+                h="$optarg"
+                ;;
+            -m|--minute)
+                m="$optarg"
+                ;;
+            -s|--second)
+                s="$optarg"
+                ;;
+            -v|--version)
+                echo 'v0.0.0'
+                exit
+                ;;
+            --)
+                break
+                ;;
+            -\?)
+                exit 1
+                ;;
+            --*)
+                echo "$0: illegal option -- ${opt##-}" >&2
+                exit 1
+                ;;
+        esac
+    done
+    shift $((OPTIND - 1))
+
+    local message="$1"
+    echo "$message $h:$m:$s"
+}
+```
+
+実行結果は以下のとおりです。
+
+```bash{outputLines:2,3,5,6,8,9,11,12,14,15,17,18,20,21,23,24}
+timestr -h 1 -m 23 --second=45 'Time is'
+Time is 1:23:45
+
+timestr -h 1 -m 23 --second 45 'Time is'
+Time is 1:23:45
+
+timestr --hour=1 --minute=23 --second=45 'Time is'
+Time is 1:23:45
+
+timestr --hour 1 --minute 23 --second 45 'Time is'
+Time is 1:23:45
+
+timestr --hour=1 --minute=23 --second=45 -- '-- Time --'
+-- Time -- 1:23:45
 
 timestr --hour 1 --minute 23 --second 45 -- '-- Time --'
 -- Time -- 1:23:45
