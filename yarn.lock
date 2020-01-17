@@ -2594,7 +2594,7 @@ babel-preset-fbjs@^3.1.2:
     "@babel/plugin-transform-template-literals" "^7.0.0"
     babel-plugin-syntax-trailing-function-commas "^7.0.0-beta.0"
 
-babel-preset-gatsby@^0.2.26, babel-preset-gatsby@^0.2.27:
+babel-preset-gatsby@^0.2.27:
   version "0.2.27"
   resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-0.2.27.tgz#bb2e9c35e820718932e58bdcb655afef93223493"
   integrity sha512-BXoUhKfBZUQb6nR5/fmQeNpKN137eucvRvKUGYcz9ZPbJOALSek03wseJA4zK8rV+mIQYM47y+AFs09RU/aOHg==
@@ -13277,10 +13277,10 @@ scheduler@^0.18.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-schema-dts@^0.4.5:
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/schema-dts/-/schema-dts-0.4.5.tgz#7ba5f705bf21301756d8f32acb17d7f9b7f279d1"
-  integrity sha512-LiWBc0/7dGwd5NqWfLBxOwqhBkH2cCuctMKpIjXLI0qD0gu6XqpKGPDDUhAgZOr2BlvYQHhdrEEM1wmTEWWqMw==
+schema-dts@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/schema-dts/-/schema-dts-0.5.0.tgz#4c351dac6a7c2ecfadc53f39f9ca2bdd658528b3"
+  integrity sha512-OrNqV2CXO7O0NitPGj+pzlidCVZD9h7e2Mk3WaLF6yYqwO51Uc6lBvrw1gYdVhudE1DHjGx/hy5XRw+6kJ/9Ig==
 
 schema-utils@^0.4.0, schema-utils@^0.4.5:
   version "0.4.7"
