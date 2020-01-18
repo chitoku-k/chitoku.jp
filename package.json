@@ -7,7 +7,7 @@
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/plugin-transform-runtime": "^7.8.3",
-    "@babel/plugin-transform-typescript": "^7.7.4",
+    "@babel/plugin-transform-typescript": "^7.8.3",
     "@babel/preset-env": "^7.7.7",
     "@rstacruz/gatsby-remark-component": "^1.2.0-pre.1",
     "@types/algoliasearch": "^3.34.8",
