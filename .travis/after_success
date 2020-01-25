@@ -1,11 +1,25 @@
 #!/usr/bin/env bash
 
-if [[ "$TRAVIS_BRANCH" = 'master' ]] && [[ "$TRAVIS_PULL_REQUEST" = 'false' ]]; then
+if [[ $TRAVIS_BRANCH = 'master' ]] && [[ $TRAVIS_PULL_REQUEST = 'false' ]]; then
     echo 'Cleaning...'
     ssh deploy rm -rf /srv/http/vhosts/chitoku.jp/historia/*
-    echo 'Cleaned!'
+    status=$?
+
+    if (( $status )); then
+        echo 'Failed to clean the remote files.' >&2
+        exit $status
+    else
+        echo 'Cleaned!'
+    fi
 
     echo 'Uploading...'
     rsync -rz public/ deploy:/srv/http/vhosts/chitoku.jp/historia
-    echo 'Uploaded!'
+    status=$?
+
+    if (( $status )); then
+        echo 'Failed to upload.' >&2
+        exit $status
+    else
+        echo 'Uploaded!'
+    fi
 fi
