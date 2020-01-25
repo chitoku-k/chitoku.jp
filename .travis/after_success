@@ -13,7 +13,7 @@ if [[ $TRAVIS_BRANCH = 'master' ]] && [[ $TRAVIS_PULL_REQUEST = 'false' ]]; then
     fi
 
     echo 'Uploading...'
-    rsync -rz public/ deploy:/srv/http/vhosts/chitoku.jp/historia
+    rsync -rzz public/ deploy:/srv/http/vhosts/chitoku.jp/historia
     status=$?
 
     if (( $status )); then
