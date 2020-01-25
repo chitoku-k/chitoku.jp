@@ -154,7 +154,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
       {search ? (
         <FormMobileContainer>
           <FormMobile role="search" onSubmit={onSubmit}>
-            <FormMobileInput type="search" ref={input} value={text || ''} placeholder={formatMessage(messages.search)}
+            <FormMobileInput type="search" ref={input} value={text ?? ''} placeholder={formatMessage(messages.search)}
               onFocus={onFocus} onChange={onChange} />
           </FormMobile>
           <FormMobileCancelContainer onClick={closeSearch}>
@@ -163,7 +163,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
         </FormMobileContainer>
       ) : null}
       <FormDesktop role="search" componentClass="form" pullRight onSubmit={onSubmit}>
-        <FormDesktopInput type="search" value={text || ''} placeholder={formatMessage(messages.search)}
+        <FormDesktopInput type="search" value={text ?? ''} placeholder={formatMessage(messages.search)}
           onFocus={onFocus} onChange={onChange} />
         <UnsupportedNotice className="notice">
           <Popover id="search-form-noscript" placement="bottom">

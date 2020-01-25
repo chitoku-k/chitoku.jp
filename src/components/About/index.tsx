@@ -1,7 +1,6 @@
 import React, { FunctionComponent, useMemo } from 'react'
 import { Clearfix, Col } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
-import ImageZoom from 'react-medium-image-zoom'
 import RehypeReact from 'rehype-react'
 import styled from 'styled-components'
 
@@ -33,7 +32,6 @@ const AboutContainer = styled(ArticleContainer)`
   }
   img {
     ${media.lessThan('tablet')`
-      max-width: 33% !important;
       margin-bottom: 20px;
     `}
     ${media.lessThan('sp')`
@@ -49,6 +47,14 @@ const AboutContainer = styled(ArticleContainer)`
 
 const IconContainer = styled.div`
   margin-bottom: 0.8em;
+`
+
+const Icon = styled.img`
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.4em;
+  width: 96px;
+  height: 96px;
 `
 
 const Table = styled.table`
@@ -92,15 +98,7 @@ const About: FunctionComponent<AboutProps> = ({
         <ArticleHeader title={formatMessage(messages.title)} />
         <Col sm={2}>
           <IconContainer className="text-center">
-            <ImageZoom image={{
-              src: about.icon.src,
-              alt: '',
-              style: {
-                maxWidth: '100%',
-                borderRadius: '4px',
-                marginBottom: '.4em',
-              },
-            }} />
+            <Icon src={about.icon.src} />
             <br />
             <small>
               <FormattedMessage {...messages.icon} values={{

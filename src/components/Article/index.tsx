@@ -8,7 +8,6 @@ import { ArticleFragment, ArticleQuery } from 'graphql-types'
 import messages from './messages'
 import Link from 'components/Link'
 import NavItem from 'components/NavItem'
-import ImageZoomWrapper from 'components/ImageZoomWrapper'
 import PspSdkFunction from 'components/PspSdkFunction'
 import PspSdkMacro from 'components/PspSdkMacro'
 import { PaginationContainer, SimplePagination } from 'components/Pagination'
@@ -105,7 +104,7 @@ const ReadMoreButton = styled(Link)`
   }
 `
 
-const isTag = (tag: ArticleTagItem | null): tag is ArticleTagItem => Boolean(tag && tag.name)
+const isTag = (tag: ArticleTagItem | null): tag is ArticleTagItem => Boolean(tag?.name)
 
 const withArticle = (
   article: ArticleItem,
@@ -146,7 +145,6 @@ const Article: FunctionComponent<ArticleProps> = ({
   Object.assign(components, {
     'pspsdk-function': PspSdkFunction,
     'pspsdk-macro': PspSdkMacro,
-    img: ImageZoomWrapper,
     a: Link,
   })
 
@@ -161,7 +159,7 @@ const Article: FunctionComponent<ArticleProps> = ({
                 <ArticleHeaderAttributeLink to={category.path}>{category.name}</ArticleHeaderAttributeLink>
               </ArticleHeaderAttributeItem>
             ) : null}
-            {tags && tags.filter(isTag).length ? (
+            {tags?.filter(isTag).length ? (
               <ArticleHeaderAttributeItem>
                 <ArticleHeaderAttributeIcon name="tags" />
                 {tags
@@ -197,7 +195,7 @@ const Article: FunctionComponent<ArticleProps> = ({
             </ArticleNav>
           </ArticleNavbar>
         ) : null}
-        <ArticleBody ast={excerptAst || htmlAst || {}} components={withArticle(article, components)} />
+        <ArticleBody ast={excerptAst ?? htmlAst ?? {}} components={withArticle(article, components)} />
         {excerpted && excerptAst ? (
           <ReadMoreContainer>
             <ReadMoreButton to={path}>{formatMessage(messages.more)}</ReadMoreButton>

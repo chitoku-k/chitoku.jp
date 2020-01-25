@@ -12,9 +12,9 @@ const Link: FunctionComponent<GatsbyLinkProps<{}> & LinkProps> = ({
   target,
   ...rest
 }) => {
-  const dest = to || href || ''
+  const dest = (to || href) ?? ''
   return isUrl(dest) || target ? (
-    <a href={dest} ref={ref} target={target || '_blank'} rel="nofollow noopener noreferrer" {...rest}>{children}</a>
+    <a href={dest} ref={ref} target={target ?? '_blank'} rel="nofollow noopener noreferrer" {...rest}>{children}</a>
   ) : isAnchor(dest) ? (
     <a href={dest} ref={ref} {...rest}>{children}</a>
   ) : (

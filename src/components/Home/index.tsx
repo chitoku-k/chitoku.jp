@@ -127,7 +127,7 @@ const HomeMeneuItemDescription = styled.p`
   `}
 `
 
-const Home: FunctionComponent<HomeItemQuery> = ({ home }) => {
+const Home: FunctionComponent<HomeProps> = ({ home }) => {
   if (!home) {
     throw new Error('Invalid data')
   }
