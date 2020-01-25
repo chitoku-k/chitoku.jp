@@ -48,9 +48,9 @@ const ShareButton = styled(ShareLink)`
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s;
-  background-color: ${props => props.color};
+  background-color: ${(props: ShareLinkProps) => props.color};
   &:hover {
-    background-color: ${props => props.hover};
+    background-color: ${(props: ShareLinkProps) => props.hover};
   }
   &,
   .fa {
@@ -83,7 +83,7 @@ export const TwitterShareButton: FunctionComponent<TwitterShareButtonProps> = ({
   url,
 }) => {
   const { formatMessage } = useIntl()
-  const to = `https://twitter.com/share?text=${encodeURIComponent(title || '')}&url=${encodeURIComponent(url)}`
+  const to = `https://twitter.com/share?text=${encodeURIComponent(title ?? '')}&url=${encodeURIComponent(url)}`
 
   return (
     <ShareButton to={to} color="#00b0ed" hover="#009cd9" title={formatMessage(messages.share_on, { service: formatMessage(messages.twitter) })}>
@@ -110,7 +110,7 @@ export const PocketShareButton: FunctionComponent<PocketShareButtonProps> = ({
   title,
 }) => {
   const { formatMessage } = useIntl()
-  const to = `https://getpocket.com/edit?title=${encodeURIComponent(title || '')}&url=${encodeURIComponent(url)}`
+  const to = `https://getpocket.com/edit?title=${encodeURIComponent(title ?? '')}&url=${encodeURIComponent(url)}`
 
   return (
     <ShareButton to={to} color="#ff2651" hover="#eb126e" title={formatMessage(messages.share_on, { service: formatMessage(messages.pocket) })}>

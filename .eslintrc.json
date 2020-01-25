@@ -101,10 +101,20 @@
           "ignoreRhs": true
         }],
         "@typescript-eslint/quotes": ["error", "single"],
+        "@typescript-eslint/restrict-template-expressions": ["error", {
+          "allowBoolean": true,
+          "allowNumber": true
+        }],
         "@typescript-eslint/semi": ["error", "never"],
+        "@typescript-eslint/space-before-function-paren": ["error", {
+          "anonymous": "always",
+          "asyncArrow": "always",
+          "named": "never"
+        }],
         "@typescript-eslint/strict-boolean-expressions": "off",
         "@typescript-eslint/typedef": "off",
         "react/forbid-component-props": "off",
+        "react/function-component-definition": "off",
         "react/jsx-closing-bracket-location": ["error", "after-props"],
         "react/jsx-filename-extension": ["error", {
           "extensions": [".tsx"]
@@ -118,6 +128,7 @@
         "react/jsx-one-expression-per-line": "off",
         "react/jsx-props-no-spreading": "off",
         "react/jsx-sort-props": "off",
+        "react/no-adjacent-inline-elements": "off",
         "react/no-multi-comp": ["error", {
           "ignoreStateless": true
         }],

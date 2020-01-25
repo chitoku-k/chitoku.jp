@@ -14,7 +14,7 @@ import messages from './messages'
 
 export const getSearchText = (location: WindowLocation | Location): string | boolean => {
   const params = new URLSearchParams(location.search.slice(1))
-  return params.get('s') || params.has('s')
+  return params.get('s') ?? params.has('s')
 }
 
 const SearchResultContainer = styled(ArticleContainer)`
