@@ -6572,7 +6572,7 @@ gatsby-cli@^2.8.29:
     ink "^2.6.0"
     ink-spinner "^3.0.1"
 
-gatsby-core-utils@^1.0.26, gatsby-core-utils@^1.0.27, gatsby-core-utils@^1.0.28:
+gatsby-core-utils@^1.0.26, gatsby-core-utils@^1.0.28:
   version "1.0.28"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.0.28.tgz#aa66e49cdcc1892e7817a32fdd806cf5e16ea309"
   integrity sha512-XWKR9Rk2v6iQkmBsTLCdI3adyC9PCh1s5BQ85nlGitlgcVVQq98jZlQdcy0v9mJOrTuce0uf5RqkeGDWFLekoA==
@@ -6697,7 +6697,7 @@ gatsby-plugin-sass@^2.1.28:
     "@babel/runtime" "^7.7.6"
     sass-loader "^7.3.1"
 
-gatsby-plugin-sharp@chitoku-k/gatsby-plugin-sharp:
+gatsby-plugin-sharp@chitoku-k/gatsby-plugin-sharp#3ce734b:
   version "2.4.0"
   resolved "https://codeload.github.com/chitoku-k/gatsby-plugin-sharp/tar.gz/3ce734be5f349ee6079876bc664b2066048f5dee"
   dependencies:
