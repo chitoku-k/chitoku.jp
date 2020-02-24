@@ -61,11 +61,14 @@ const query = graphql`
 const SidebarContainer = styled(Col)`
   padding-left: 20px;
   padding-right: 0;
+  flex: 0 0 30%;
   width: 30%;
+  max-width: 30%;
   top: 15px;
   position: static;
   position: sticky;
   ${media.lessThan('tablet')`
+    flex: 0 0 100%;
     width: auto;
     padding: 0;
   `}
@@ -87,6 +90,9 @@ const SidebarItem = styled.div`
   ${media.lessThan('tablet')`
     margin: 15px 0 0 0;
     padding: 15px;
+  `}
+  ${media.lessThan('sp')`
+    border-radius: 0;
   `}
 `
 
@@ -204,7 +210,7 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
   const url = siteUrl + location.pathname
 
   return (
-    <SidebarContainer md={3} componentClass="aside">
+    <SidebarContainer forwardedAs="aside">
       <SidebarItem>
         <SidebarItemTitle>
           {formatMessage(messages.share)}

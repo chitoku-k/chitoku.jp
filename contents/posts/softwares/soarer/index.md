@@ -26,6 +26,7 @@ Twitter によってアプリケーションの機能が制限されました。
 </div>
 
 ---
+<div class="row">
 <div class="col-md-6" style="padding-top: 12px;">
 <h2 class="no-border">
 <div class="text-left">サイズの小さなウィンドウでも</div>
@@ -50,13 +51,13 @@ Twitter によってアプリケーションの機能が制限されました。
 必要な機能を必要なときだけ。ウィンドウの大きさが自在に変化。ぜひお試しください。アカウントの切り替えも簡単です。
 </div>
 <div class="col-md-6 text-center">
-<hr class="visible-xs-block visible-sm-block" />
 
 ![](../../media/timeline.png)
 </div>
-<div class="clearfix"></div>
+</div>
 
 ---
+<div class="row">
 <div class="col-xs-12">
 
 ## つぶやくまで最速
@@ -65,4 +66,4 @@ Twitter によってアプリケーションの機能が制限されました。
 多機能ながら動作は軽快です。
 高速な起動に加え、ログイン中でもツイートを入力することができるので、ふと思ったことでもすぐにつぶやくことができます。
 </div>
-<div class="clearfix"></div>
+</div>

@@ -16,7 +16,7 @@ import ArticleBody, { ArticleComponentCollection } from 'components/ArticleBody'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
 
-export const getClassNameFromPath = (path: string): string => `page${path.replace(/\//ug, '-').replace(/-$/u, '')}`
+export const getClassNameFromPath = (path: string): string => `page${path.replace(/[/]/ug, '-').replace(/-$/u, '')}`
 
 const ArticleHeaderAttributes = styled.p`
   min-height: 0.5em;
@@ -44,16 +44,13 @@ const ArticleHeaderAttributeLink = styled(Link)`
 const ArticleNavbar = styled(Navbar)`
   border: none;
   border-radius: 0;
-  .container {
-    width: 100%;
-    padding: 0;
-  }
+  padding: 0;
 `
 
 const ArticleNav = styled(Nav)`
-  &.navbar-nav.nav {
-    float: none;
-    margin: 0;
+  &.navbar-nav {
+    width: 100%;
+    flex-wrap: wrap;
     > li {
       text-align: center;
       padding-left: 0;
@@ -74,14 +71,15 @@ const ArticleNav = styled(Nav)`
 `
 
 const ArticleNavItem = styled(NavItem)`
-  .navbar-nav.nav > & > a {
+  .navbar-nav > & > a {
     &,
     &:hover,
     &:focus {
       color: #777;
     }
   }
-  .navbar-nav.nav > &.active a {
+  .navbar-nav > &.active a {
+    background-color: #e7e7e7;
     color: #555;
   }
 `
@@ -187,8 +185,8 @@ const Article: FunctionComponent<ArticleProps> = ({
           </ArticleHeaderAttributes>
         </ArticleHeader>
         {navigation ? (
-          <ArticleNavbar>
-            <ArticleNav>
+          <ArticleNavbar bg="light">
+            <ArticleNav forwardedAs="ul">
               {navigation.map(item => (
                 <ArticleNavItem key={item.name} {...item} style={{ width: `calc(100% / ${navigation.length})` }} />
               ))}

@@ -9,21 +9,15 @@ import NavDropdown from 'components/NavDropdown'
 import Link from 'components/Link'
 
 const getClassName = (active: boolean, dropdown: boolean | undefined, className: string): NavItemAttributes => ({
-  bsClass: dropdown ? 'dropdown' : 'sub',
+  bsPrefix: dropdown ? 'dropdown' : 'sub',
   className: [ active ? 'active' : '', className ].filter(x => x).join(' '),
 })
 
-const Caret = styled.span`
-  margin-left: 4px;
-  border-top: 4px solid;
-  ${media.lessThan('sp')`
-    display: none;
-  `}
-`
-
 const Dropdown = styled(BootstrapDropdown)`
+  position: relative;
   &.dropdown:hover {
     .dropdown-menu {
+      display: block;
       border-top: none;
       border-radius: 0;
     }
@@ -33,13 +27,20 @@ const Dropdown = styled(BootstrapDropdown)`
     }
   }
   .dropdown-menu {
+    display: none;
     border-color: #395168;
+    margin: 0;
     padding: 0;
     background-clip: border-box;
     &,
     > .active > a {
       background-color: #44607b;
     }
+  }
+  .sub-menu {
+    position: initial !important;
+    opacity: initial !important;
+    pointer-events: initial !important;
   }
   .sub-toggle,
   .dropdown-toggle {
@@ -49,14 +50,17 @@ const Dropdown = styled(BootstrapDropdown)`
 
 export const NavLink = styled(Link)`
   .dropdown-menu > li > &,
-  .navbar-nav.nav > li > & {
+  .navbar-nav > li > & {
+    display: block;
     color: white;
     padding: 20px 30px;
     transition: background-color 0.3s;
+    white-space: nowrap;
     &:hover,
     &:focus {
       color: #fefefe;
       background-color: #34495e;
+      text-decoration: none;
     }
     ${media.greaterThan('wide-pc')`
       padding: 20px 24px;
@@ -71,6 +75,12 @@ export const NavLink = styled(Link)`
   .dropdown-menu > li > & {
     padding: 15px 24px;
   }
+  &.dropdown-toggle::after {
+    margin-left: 4px;
+    ${media.lessThan('sp')`
+      display: none;
+    `}
+  }
 `
 
 const NavItem: FunctionComponent<NavItemProps & BootstrapNavItemProps & NavigationLinkItem> = ({
@@ -79,23 +89,15 @@ const NavItem: FunctionComponent<NavItemProps & BootstrapNavItemProps & Navigati
   items,
   dropdown,
   className = '',
-  /* eslint-disable @typescript-eslint/no-unused-vars */
-  activeHref,
-  activeKey,
-  /* eslint-enable @typescript-eslint/no-unused-vars */
   ...rest
 }) => (
   <Location>
     {({ location }) => items ? (
-      <Dropdown componentClass="li" id={to} {...getClassName(to === location.pathname, dropdown, className)}>
-        <NavLink to={to}>
+      <Dropdown forwardedAs="li" id={to} {...getClassName(to === location.pathname, dropdown, className)}>
+        <NavLink to={to} className={dropdown ? 'dropdown-toggle' : ''}>
           {name}
-          {dropdown ? (
-            <Caret className="caret" />
-          ) : null}
         </NavLink>
-        <BootstrapDropdown.Toggle />
-        <BootstrapDropdown.Menu>
+        <BootstrapDropdown.Menu as="ul" show bsPrefix={dropdown ? 'dropdown-menu' : 'sub-menu'}>
           <NavDropdown dropdown={dropdown} items={items} />
         </BootstrapDropdown.Menu>
       </Dropdown>
@@ -110,7 +112,7 @@ const NavItem: FunctionComponent<NavItemProps & BootstrapNavItemProps & Navigati
 )
 
 interface NavItemAttributes {
-  bsClass: 'dropdown' | 'sub'
+  bsPrefix: 'dropdown' | 'sub'
   className: string
 }
 

@@ -1,5 +1,6 @@
-import React, { FunctionComponent, HTMLProps, ReactNode } from 'react'
+import React, { FunctionComponent, HTMLAttributes, ReactNode } from 'react'
 import { Pagination as BootstrapPagination } from 'react-bootstrap'
+import { BsPrefixProps } from 'react-bootstrap/helpers'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 
@@ -19,7 +20,8 @@ export const getNextPagePath = (page: Page): string => hasNextPage(page) ? getPa
 const getVisibility = (className: string, visible: boolean): string => [ className, visible ? 'visible' : 'hidden' ].join(' ')
 
 const PaginationCore = styled(BootstrapPagination)`
-  margin: 0 auto;
+  margin: 0;
+  justify-content: center;
 `
 
 const PaginationItem = styled(BootstrapPagination.Item)`
@@ -144,13 +146,9 @@ export const PaginationContainer = styled.aside`
   text-align: center;
 `
 
-export const SimplePagination: FunctionComponent<HTMLProps<BootstrapPagination> & SimplePaginationProps> = ({
+export const SimplePagination: FunctionComponent<HTMLAttributes<HTMLUListElement> & BsPrefixProps<'ul'> & SimplePaginationProps> = ({
   prev,
   next,
-  /* eslint-disable @typescript-eslint/no-unused-vars */
-  ref,
-  as,
-  /* eslint-enable @typescript-eslint/no-unused-vars */
   ...rest
 }) => {
   const { formatMessage } = useIntl()

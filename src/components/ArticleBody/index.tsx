@@ -24,10 +24,9 @@ const ArticleContent = styled.div`
     `}
     ${media.lessThan('sp')`
       font-size: 120%;
-      margin-top: 20px;
-      padding: 5px 0;
-      background: none;
-      border-width: 0 0 1px 0;
+      margin: 30px -15px 15px;
+      padding: 7px 15px;
+      border-width: 1px 0;
     `}
   }
   h3 {
@@ -41,17 +40,18 @@ const ArticleContent = styled.div`
       padding-right: 13px;
     `}
     ${media.lessThan('sp')`
-      margin-top: 10px;
-      padding: 6px 0;
+      margin: 10px -15px 15px;
+      padding: 6px 15px;
     `}
   }
   a.anchor {
-    margin-left: -65px;
     width: 55px;
+    top: auto;
     ${media.lessThan('sp')`
-      margin-left: 0;
       width: auto;
-      float: right;
+      left: auto;
+      right: 8px;
+      transform: none;
     `}
   }
   p {
@@ -88,6 +88,8 @@ const ArticleContent = styled.div`
     }
   }
   blockquote {
+    border-left: 5px solid #eee;
+    padding: 10px 20px;
     ${media.lessThan('sp')`
       margin-left: 10px;
       padding-left: 15px;
@@ -135,7 +137,8 @@ const ArticleContent = styled.div`
     ${media.lessThan('sp')`
       display: block;
       overflow: auto;
-      margin: 10px 0;
+      margin: 10px -15px;
+      width: calc(100% + 30px);
     `}
   }
   .footnote-ref {
@@ -186,6 +189,7 @@ const ArticleContent = styled.div`
   /* Prism.js */
   *:not(pre) > code[class*="language-"] {
     padding: 2px 4px;
+    word-wrap: break-word;
   }
   .gatsby-highlight {
     background-color: #f4f2f0;
@@ -196,18 +200,23 @@ const ArticleContent = styled.div`
       margin-right: 13px;
     `}
     ${media.lessThan('sp')`
-      margin-left: 0;
-      margin-right: 0;
+      border-radius: 0;
+      margin-left: -15px;
+      margin-right: -15px;
     `}
   }
   pre[class*="language-"],
   code[class*="language-"] {
+    border-radius: 3px;
     font-family: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
     .token.operator,
     .token.string {
       background: none;
     }
+    ${media.lessThan('sp')`
+      border-radius: 0;
+    `}
   }
   pre[class*="language-"] {
     -webkit-overflow-scrolling: touch;
@@ -236,6 +245,9 @@ const ArticleContent = styled.div`
         padding-right: 1ex;
       }
     }
+    ${media.lessThan('sp')`
+      padding: 15px;
+    `}
   }
   .monospace {
     pre[class*="language-"],

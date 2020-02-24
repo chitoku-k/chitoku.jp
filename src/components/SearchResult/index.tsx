@@ -116,7 +116,7 @@ const SearchHit: FunctionComponent<SearchHitProps<SearchDocument>> = ({
   )
 }
 
-const SearchResult = connectStateResults<SearchResultProps, SearchDocument>(function SearchResult({
+const SearchResult = connectStateResults<SearchResultProps>(function SearchResult({
   searchState: {
     query: text,
   },

@@ -15,6 +15,7 @@ const MainContentTitle = styled.h1`
   padding-bottom: 8px;
   border-left: 14px solid #e11010;
   border-bottom: 1px solid #e11010;
+  line-height: 1.25;
   font-size: 200%;
   margin: 0;
   a {

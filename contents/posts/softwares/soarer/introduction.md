@@ -20,7 +20,7 @@ Twitter によってアプリケーションの機能が制限されました。
 </div>
 
 ---
-<div>
+<div class="row">
 <div class="col-md-7" style="padding: 16px 15px 12px;">
 
 ## NowPlaying をもっと気軽に。
@@ -38,9 +38,10 @@ iTunes / Windows Media Player に対応しており、ともにアルバムア�
 
 ![](../../media/nowplaying.png)
 </div>
-<div class="clearfix"></div>
+</div>
 
 ---
+<div class="row">
 <div class="col-md-7" style="padding: 16px 15px 12px;">
 
 ## 邪魔にならない
@@ -53,9 +54,10 @@ iTunes / Windows Media Player に対応しており、ともにアルバムア�
 
 ![](../../media/minimum.png)
 </div>
-<div class="clearfix"></div>
+</div>
 
 ---
+<div class="row">
 <div class="col-md-7" style="padding: 12px 15px 12px;">
 
 ## Twitter をもっと楽しく。
@@ -72,9 +74,10 @@ Twitter の公式 Web のように、あとから、お気に入り登録やリ�
 
 ![](../../media/activities.png)
 </div>
-<div class="clearfix"></div>
+</div>
 
 ---
+<div class="row">
 <div class="col-md-7" style="padding: 16px 15px 12px;">
 
 ## 設定はお好みで。
@@ -87,9 +90,10 @@ Twitter の公式 Web のように、あとから、お気に入り登録やリ�
 
 ![](../../media/options.png)
 </div>
-<div class="clearfix"></div>
+</div>
 
 ---
+<div class="row">
 <div class="col-md-7" style="padding: 16px 15px 12px;">
 
 ## 同じ話題をみんなで共有。
@@ -105,9 +109,10 @@ Twitter の公式 Web のように、あとから、お気に入り登録やリ�
 
 ![](../../media/templates.png)
 </div>
-<div class="clearfix"></div>
+</div>
 
 ---
+<div class="row">
 <div class="col-md-7" style="padding: 16px 15px 12px;">
 
 ## Web ページの共有も簡単に。
@@ -121,5 +126,5 @@ Twitter の公式 Web のように、あとから、お気に入り登録やリ�
 
 ![](../../media/share.png)
 </div>
-<div class="clearfix"></div>
+</div>
 </div>

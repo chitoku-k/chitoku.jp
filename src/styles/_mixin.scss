@@ -4,27 +4,27 @@
   }
 }
 @mixin media-sp {
-  @include media-of(max-width, $screen-xs-max) {
+  @include media-of(max-width, map-get($container-max-widths, md)) {
     @content;
   }
 }
 @mixin media-tablet {
-  @include media-of(max-width, $screen-sm-max) {
+  @include media-of(max-width, map-get($container-max-widths, lg)) {
     @content;
   }
 }
 @mixin media-small-pc {
-  @include media-of(min-width, $screen-sm-min) {
+  @include media-of(min-width, map-get($grid-breakpoints, md)) {
     @content;
   }
 }
 @mixin media-normal-pc {
-  @include media-of(min-width, $screen-md-min) {
+  @include media-of(min-width, map-get($grid-breakpoints, lg)) {
     @content;
   }
 }
 @mixin media-wide-pc {
-  @include media-of(min-width, $screen-lg-min) {
+  @include media-of(min-width, map-get($grid-breakpoints, xl)) {
     @content;
   }
 }

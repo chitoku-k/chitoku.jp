@@ -45,7 +45,7 @@ const PspErrorCodes: FunctionComponent = () => {
       {group.map(({ items, title }) => (
         <React.Fragment key={title}>
           <h2>{title}</h2>
-          <Table striped condensed hover>
+          <Table striped hover size="sm">
             <thead>
               <tr>
                 <th>{formatMessage(messages.error_code)}</th>

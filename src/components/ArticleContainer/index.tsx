@@ -15,8 +15,15 @@ const MainContent = styled.article`
       margin-top: 15px;
     `}
   }
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
   ${media.lessThan('tablet')`
     padding: 15px;
+  `}
+  ${media.lessThan('sp')`
+    border-radius: 0;
   `}
 `
 
