@@ -62,14 +62,15 @@ const SidebarContainer = styled(Col)`
   padding-left: 20px;
   padding-right: 0;
   flex: 0 0 30%;
-  width: 30%;
   max-width: 30%;
+  width: 30%;
   top: 15px;
   position: static;
   position: sticky;
   ${media.lessThan('tablet')`
     flex: 0 0 100%;
-    width: auto;
+    max-width: 100%;
+    width: 100%;
     padding: 0;
   `}
 `
