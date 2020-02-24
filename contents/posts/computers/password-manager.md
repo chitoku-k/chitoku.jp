@@ -120,5 +120,5 @@ Chrome の DevTools を使用して input 要素をインスペクターで表�
 
 ## 参考
 
-二段階認証: [AgileBits Blog | TOTP for 1Password users](https://blog.agilebits.com/2015/01/26/totp-for-1password-users/<Paste>)（英語）  
+二段階認証: [AgileBits Blog | TOTP for 1Password users](https://blog.1password.com/totp-for-1password-users/)（英語）  
 イラスト: [口を抑えてショックを受けている女性のイラスト | かわいいフリー素材集 いらすとや](https://www.irasutoya.com/2014/11/blog-post_317.html)
