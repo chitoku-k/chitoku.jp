@@ -76,9 +76,9 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
   const indentation = separator ? ' '.repeat(indentationWidth) : ''
 
   const buildParameters = ({ type, name, parameters }: PspSdkFunctionParameterItem): string => parameters
-    ? `${indentation}${type ?? ''} (* ${name})(${parameters.map(child => `${child.type ?? ''} ${child.name}`).join(', ')})`
+    ? `${indentation}${type ?? ''} (*${name})(${parameters.map(child => `${child.type ?? ''}${child.type?.endsWith('*') ? '' : ' '}${child.name}`).join(', ')})`
     : type
-      ? `${indentation}${type} ${name}`
+      ? `${indentation}${type}${type.endsWith('*') ? '' : ' '}${name}`
       : `${indentation}${name}`
 
   return (

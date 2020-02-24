@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useCallback, useState } from 'react'
-import { Navbar as BootstrapNavbar } from 'react-bootstrap'
+import { Navbar as BootstrapNavbar, Container, Row } from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Location } from '@reach/router'
@@ -47,17 +47,24 @@ const NavContainer = styled.div`
   `}
 `
 
+const NavbarRow = styled(Row)`
+  justify-content: space-between;
+  align-items: center;
+  ${media.lessThan('sp')`
+    height: 45px;
+  `}
+`
+
 const NavbarCore = styled(BootstrapNavbar)`
   background-color: transparent;
   margin-bottom: 0;
-  padding: 0;
+  padding: 0 15px;
   border-radius: 0;
   border: none;
   ${media.lessThan('sp')`
-    &.search .nav {
+    &.search {
       display: none;
     }
-    min-height: 0;
   `}
   ${media.greaterThan('small-pc')`
     .dropdown:hover .dropdown-menu {
@@ -67,6 +74,7 @@ const NavbarCore = styled(BootstrapNavbar)`
 `
 
 const Nav = styled.ul`
+  flex-wrap: nowrap;
   &.nav > .active > a {
     &,
     &:hover,
@@ -91,7 +99,6 @@ const Nav = styled.ul`
 `
 
 const SearchIcon = styled.li`
-  padding-right: 15px;
   ${media.greaterThan('sp')`
     .nav > & {
       display: none;
@@ -115,23 +122,29 @@ const Navbar: FunctionComponent = () => {
 
   return (
     <NavContainer>
-      <NavbarCore className={search ? 'search' : ''}>
-        <Nav className="nav navbar-nav">
-          {nav.map(item => (
-            <NavItem key={item.to} {...item} dropdown>{item.items}</NavItem>
-          ))}
-          <SearchIcon onClick={openSearch}>
-            <NavLink to="/">
-              <FontAwesome name="search" />
-            </NavLink>
-          </SearchIcon>
-        </Nav>
-        <Location>
-          {({ location }) => (
-            <SearchForm search={search} location={location} openSearch={openSearch} closeSearch={closeSearch} />
-          )}
-        </Location>
-      </NavbarCore>
+      <Container>
+        <NavbarRow>
+          <NavbarCore className={search ? 'search' : ''}>
+            <Row>
+              <Nav className="nav navbar-nav">
+                {nav.map(item => (
+                  <NavItem key={item.to} {...item} dropdown>{item.items}</NavItem>
+                ))}
+                <SearchIcon onClick={openSearch}>
+                  <NavLink to="/">
+                    <FontAwesome name="search" />
+                  </NavLink>
+                </SearchIcon>
+              </Nav>
+            </Row>
+          </NavbarCore>
+          <Location>
+            {({ location }) => (
+              <SearchForm search={search} location={location} openSearch={openSearch} closeSearch={closeSearch} />
+            )}
+          </Location>
+        </NavbarRow>
+      </Container>
     </NavContainer>
   )
 }

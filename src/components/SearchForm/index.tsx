@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { Navbar, Popover } from 'react-bootstrap'
+import { Container, Navbar, Popover, Row } from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { useIntl } from 'react-intl'
 import { WindowLocation, navigate } from '@reach/router'
@@ -11,23 +11,16 @@ import { getSearchText } from 'components/SearchResult'
 import { media } from 'components/Layout'
 import messages from './messages'
 
-const FormDesktop = styled(Navbar.Form)`
+const FormDesktop = styled(Navbar)`
   position: relative;
-  padding: 0;
-  margin-right: 0;
-  margin-top: 14px;
   ${media.lessThan('sp')`
     display: none;
   `}
 `
 
 const FormDesktopInput = styled.input`
-  display: inline-block;
-  vertical-align: middle;
   width: 250px;
-  height: 34px;
   padding: 6px 12px 6px 35px;
-  margin-right: 0;
   border: none;
   border-radius: 17px;
   box-shadow: 0 3px 5px 1px #d8d8d8 inset;
@@ -42,9 +35,7 @@ const FormDesktopInput = styled.input`
   }
 `
 
-const FormMobileContainer = styled.div`
-  height: 44px;
-  padding: 8px 0;
+const FormMobileContainer = styled(Container)`
   display: none;
   ${media.lessThan('sp')`
     display: block;
@@ -55,20 +46,22 @@ const FormMobileCancelContainer = styled.div`
   display: table-cell;
   text-align: center;
   color: white;
-  padding-left: 12px;
+  margin-right: 8px;
 `
 
-const FormMobile = styled.form`
-  display: table-cell;
-  width: 100%;
+const FormMobile = styled(Container)``
+
+const FormMobileRow = styled(Row)`
+  align-items: center;
 `
 
 const FormMobileInput = styled.input`
   border: none;
   border-radius: 4px;
   background: white;
+  margin: 0 8px;
   padding: 3px 8px;
-  width: 100%;
+  flex-grow: 1;
   font-size: 16px;
   &:focus {
     outline: none;
@@ -153,16 +146,18 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
     <>
       {search ? (
         <FormMobileContainer>
-          <FormMobile role="search" onSubmit={onSubmit}>
-            <FormMobileInput type="search" ref={input} value={text ?? ''} placeholder={formatMessage(messages.search)}
-              onFocus={onFocus} onChange={onChange} />
+          <FormMobile role="search" as="form" onSubmit={onSubmit}>
+            <FormMobileRow>
+              <FormMobileInput type="search" ref={input} value={text ?? ''} placeholder={formatMessage(messages.search)}
+                onFocus={onFocus} onChange={onChange} />
+              <FormMobileCancelContainer onClick={closeSearch}>
+                {formatMessage(messages.cancel)}
+              </FormMobileCancelContainer>
+            </FormMobileRow>
           </FormMobile>
-          <FormMobileCancelContainer onClick={closeSearch}>
-            {formatMessage(messages.cancel)}
-          </FormMobileCancelContainer>
         </FormMobileContainer>
       ) : null}
-      <FormDesktop role="search" componentClass="form" pullRight onSubmit={onSubmit}>
+      <FormDesktop role="search" as="form" onSubmit={onSubmit}>
         <FormDesktopInput type="search" value={text ?? ''} placeholder={formatMessage(messages.search)}
           onFocus={onFocus} onChange={onChange} />
         <UnsupportedNotice className="notice">

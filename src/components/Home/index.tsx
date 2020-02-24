@@ -1,5 +1,5 @@
 import React, { Fragment, FunctionComponent } from 'react'
-import { Clearfix, Col } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import styled from 'styled-components'
 
 import { HomeItemQuery } from 'graphql-types'
@@ -30,6 +30,8 @@ const HomeMenuItem = styled(Col)`
   color: #333;
   text-align: center;
   ${media.lessThan('sp')`
+    flex: 0 0 100%;
+    max-width: 100%;
     width: 100%;
     margin-bottom: 0;
     padding-top: 16px;
@@ -39,7 +41,7 @@ const HomeMenuItem = styled(Col)`
     &:first-child {
       padding-top: 0;
     }
-    &:nth-last-child(3) {
+    &:last-child {
       padding-bottom: 0;
       border: none;
       margin-bottom: 6px;
@@ -50,6 +52,9 @@ const HomeMenuItem = styled(Col)`
 const HomeMenuItemLink = styled(Link)`
   color: #333;
   display: inline-block;
+  &:hover {
+    text-decoration: none;
+  }
   svg {
     transition: fill 0.3s;
     width: 175px;
@@ -138,32 +143,28 @@ const Home: FunctionComponent<HomeProps> = ({ home }) => {
     <Container>
       <Metadata title={null} />
       <ArticleContainer>
-        {items.map(({
-          id,
-          component,
-          name,
-          to,
-          description,
-        }, index) => {
-          const Icon = icons[component]
-          return (
-            <Fragment key={name}>
-              <HomeMenuItem xs={6} md={4}>
-                <HomeMenuItemLink to={to} title={name}>
-                  <Icon className={id} viewBox="0 0 175 175" />
-                  <HomeMenuItemTitle>{name}</HomeMenuItemTitle>
-                </HomeMenuItemLink>
-                <HomeMeneuItemDescription>{description}</HomeMeneuItemDescription>
-              </HomeMenuItem>
-              {(index + 1) % 2 === 0 ? (
-                <Clearfix visibleSmBlock visibleXsBlock />
-              ) : null}
-              {(index + 1) % 3 === 0 ? (
-                <Clearfix visibleMdBlock visibleLgBlock />
-              ) : null}
-            </Fragment>
-          )
-        })}
+        <Row>
+          {items.map(({
+            id,
+            component,
+            name,
+            to,
+            description,
+          }) => {
+            const Icon = icons[component]
+            return (
+              <Fragment key={name}>
+                <HomeMenuItem xs={6} md={4}>
+                  <HomeMenuItemLink to={to} title={name}>
+                    <Icon className={id} viewBox="0 0 175 175" />
+                    <HomeMenuItemTitle>{name}</HomeMenuItemTitle>
+                  </HomeMenuItemLink>
+                  <HomeMeneuItemDescription>{description}</HomeMeneuItemDescription>
+                </HomeMenuItem>
+              </Fragment>
+            )
+          })}
+        </Row>
       </ArticleContainer>
     </Container>
   )

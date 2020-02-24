@@ -104,14 +104,14 @@ const SoarerDownload: FunctionComponent<ArticleWrapper> = () => {
       </SoarerDownloadContainer>
       <SoarerDownloadDescription className="description">
         {update.file ? (
-          <Button bsStyle="primary" bsSize="large" href={update.file.publicURL as string} download={update.file.base}>
+          <Button<'a'> variant="primary" size="lg" href={update.file.publicURL as string} download={update.file.base}>
             <FontAwesome name="download" />
             {formatMessage(messages.download, {
               size: update.file.prettySize,
             })}
           </Button>
         ) : null}
-        <Button bsStyle="default" bsSize="large" href="./history">
+        <Button variant="light" size="lg" href="./history">
           {formatMessage(messages.history)}
         </Button>
       </SoarerDownloadDescription>

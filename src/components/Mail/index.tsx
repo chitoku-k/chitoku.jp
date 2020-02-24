@@ -114,7 +114,7 @@ const Mail: FunctionComponent = () => {
       </Metadata>
       <ArticleContainer className="mail">
         <ArticleHeader title={formatMessage(messages.title)} />
-        <Alert bsStyle="info" className="text-center">
+        <Alert variant="info" className="text-center">
           {formatMessage(messages.contact_me_on_sns)}
           <br />
           <FormattedMessage {...messages.contact_me_from_about} values={{
@@ -139,7 +139,7 @@ const Mail: FunctionComponent = () => {
           </FormGroup>
           <FormGroup>
             <Label required title={formatMessage(messages.message)}>
-              <Input name="body" componentClass="textarea" cols={40} rows={10} required readOnly={readOnly} />
+              <Input name="body" forwardedAs="textarea" cols={40} rows={10} required readOnly={readOnly} />
             </Label>
           </FormGroup>
           <ReCaptcha action="mail" sitekey={siteKey} verifyCallback={setToken} />
@@ -162,7 +162,7 @@ const Mail: FunctionComponent = () => {
                     {formatMessage(messages.submission_error)}
                   </StatusArea>
                 ) : null}
-                <Button type="submit" bsStyle="primary" disabled={!token}>
+                <Button type="submit" variant="primary" disabled={!token}>
                   {formatMessage(messages.send)}
                 </Button>
               </>

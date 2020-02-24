@@ -66,7 +66,7 @@ const SoarerHistory: FunctionComponent = () => {
         <div key={update.version}>
           <DownloadVersion>{update.version}</DownloadVersion>
           {update.file ? (
-            <DownloadLink bsStyle="default" href={update.file.publicURL as string} download={update.file.base}>
+            <DownloadLink variant="light" href={update.file.publicURL as string} download={update.file.base}>
               <DownloadIcon name="download" />
               {formatMessage(messages.download)}
             </DownloadLink>

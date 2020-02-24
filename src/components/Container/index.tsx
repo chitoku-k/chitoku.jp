@@ -9,11 +9,14 @@ import SearchResult, { getSearchText } from 'components/SearchResult'
 const MainContentContainer = styled(Col)`
   position: static;
   padding: 0;
+  flex: 0 0 100%;
+  max-width: 100%;
   width: 100%;
   .sidebar & {
+    flex: 0 0 70%;
     width: 70%;
     ${media.lessThan('tablet')`
-      padding: 0;
+      flex: 0 0 100%;
       width: auto;
     `}
   }

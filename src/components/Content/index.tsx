@@ -1,15 +1,12 @@
 import React, { FunctionComponent, memo } from 'react'
+import { Container as BootstrapContainer, Row as BootstrapRow } from 'react-bootstrap'
 import styled from 'styled-components'
 import { Location } from '@reach/router'
 
 import { media } from 'components/Layout'
 import Sidebar from 'components/Sidebar'
 
-const Container = styled.div`
-  padding: 0;
-  ${media.greaterThan('small-pc')`
-    padding: 0 15px;
-  `}
+const Container = styled(BootstrapContainer)`
   ${media.greaterThan('normal-pc')`
     padding-bottom: 60px;
   `}
@@ -21,20 +18,23 @@ const Container = styled.div`
   `}
 `
 
+const Row = styled(BootstrapRow)`
+  align-items: flex-start;
+`
+
 const MemoizedSidebar = memo(Sidebar, (prev, next) => prev.location.pathname === next.location.pathname)
 
 const Content: FunctionComponent<ContentProps> = ({
   children,
   sidebar = true,
 }) => (
-  <Container className={[
-    'container',
-    sidebar ? 'sidebar' : '',
-  ].filter(x => x).join(' ')}>
-    {children}
-    <Location>
-      {({ location }) => sidebar ? <MemoizedSidebar location={location} /> : null}
-    </Location>
+  <Container className={sidebar ? 'sidebar' : ''}>
+    <Row>
+      {children}
+      <Location>
+        {({ location }) => sidebar ? <MemoizedSidebar location={location} /> : null}
+      </Location>
+    </Row>
   </Container>
 )
 
