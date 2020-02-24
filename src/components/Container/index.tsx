@@ -14,10 +14,12 @@ const MainContentContainer = styled(Col)`
   width: 100%;
   .sidebar & {
     flex: 0 0 70%;
+    max-width: 70%;
     width: 70%;
     ${media.lessThan('tablet')`
       flex: 0 0 100%;
-      width: auto;
+      max-width: 100%;
+      width: 100%;
     `}
   }
 `
