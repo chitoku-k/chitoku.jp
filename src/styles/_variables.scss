@@ -1,16 +1,15 @@
-/* stylelint-disable value-keyword-case */
 $fa-font-path: "~font-awesome/fonts";
 $headings-line-height: 1.1;
 $font-size-base: 0.875rem;
 $font-family-base:
-  // Safari for macOS and iOS
-  -apple-system,
+  /* Safari for macOS and iOS */
+  "-apple-system",
   /* Chrome for macOS*/
-  blinkmacsystemfont,
+  "BlinkMacSystemFont",
   /* Android*/
-  roboto,
+  "Roboto",
   /* Windows*/
-  verdana, meiryo,
+  "Verdana", "Meiryo",
   /* macOS*/
   "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3",
   /* Fallback*/
