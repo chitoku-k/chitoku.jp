@@ -45,7 +45,7 @@
     "gatsby-plugin-sass": "^2.1.29",
     "gatsby-plugin-sharp": "chitoku-k/gatsby-plugin-sharp#3ce734b",
     "gatsby-plugin-styled-components": "^3.1.19",
-    "gatsby-plugin-ts": "^2.2.2",
+    "gatsby-plugin-ts": "^2.2.3",
     "gatsby-remark-attr": "^0.0.3",
     "gatsby-remark-autolink-headers": "^2.1.24",
     "gatsby-remark-copy-linked-files": "^2.1.37",
