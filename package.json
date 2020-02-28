@@ -31,7 +31,7 @@
     "bootstrap": "^4.4.1",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-react-hooks": "^2.4.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
     "extract-react-intl-messages": "^2.3.5",
     "font-awesome": "^4.7.0",
     "gatsby": "^2.19.19",
