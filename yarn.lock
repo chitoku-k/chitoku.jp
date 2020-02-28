@@ -6458,10 +6458,10 @@ gatsby-plugin-google-analytics@^2.1.35:
   dependencies:
     "@babel/runtime" "^7.7.6"
 
-gatsby-plugin-graphql-codegen@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-graphql-codegen/-/gatsby-plugin-graphql-codegen-2.2.2.tgz#f53ea89110f56c2c7162ae66d76dd61c0d19167a"
-  integrity sha512-c+0JgKnx9mxeUIUPicoKbtye2PlZOyr078eC/HlWmsgTnWFXlstnXR9+ZNvMePnfBgvXaL2kzedpKN9MMYj7+A==
+gatsby-plugin-graphql-codegen@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-graphql-codegen/-/gatsby-plugin-graphql-codegen-2.2.3.tgz#58cdcf5a85b16eab13ca372576031a5dda91049f"
+  integrity sha512-M6MTIoPJWBF7li2HRMjbpt1u0TOHxGvRDfIa5u4gizQx59ujJNWudyOJnLO9YuIX4xsYKuGnaWAeMf+IDn8dwA==
   dependencies:
     "@graphql-codegen/core" "^1.12.2"
     "@graphql-codegen/typescript" "^1.12.2"
@@ -6544,14 +6544,14 @@ gatsby-plugin-styled-components@^3.1.19:
   dependencies:
     "@babel/runtime" "^7.7.6"
 
-gatsby-plugin-ts@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-ts/-/gatsby-plugin-ts-2.2.2.tgz#70ab4524a653143d800f39bd411d7523f901d0c3"
-  integrity sha512-phlYfeG99yK6QjLt54jM7SXzz6qpzDsXBqC025wlYnpCwL5mmX8WVk7vratbKVFXWgDc+vPj2lcevXY+UdIowg==
+gatsby-plugin-ts@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-ts/-/gatsby-plugin-ts-2.2.3.tgz#b52695cf526dccc98a497127edf9b491c476f1b3"
+  integrity sha512-5cDLNqgwawSEaOgTbh29w+E2BFhC5sALzN+H1tsG4JCRn12HwFYnsBHyKX7xZanuXZCCDC7nNWQEN+NKn4DjRg==
   dependencies:
     fork-ts-checker-webpack-plugin "^4.0.3"
     fs-extra "^7.0.1"
-    gatsby-plugin-graphql-codegen "^2.2.2"
+    gatsby-plugin-graphql-codegen "^2.2.3"
     ts-loader "^6.2.1"
 
 gatsby-react-router-scroll@^2.1.22:
