@@ -61,6 +61,7 @@ module.exports = {
         fileName: 'typings/graphql-types.d.ts',
       },
     },
+    { resolve: 'gatsby-source-local-git' },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

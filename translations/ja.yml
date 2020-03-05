@@ -57,7 +57,7 @@ components:
     next_page: 次へ »
     prev_page: « 前へ
   Footer:
-    copyright: © Chitoku 2014.
+    copyright: '© Chitoku 2014 ({link})'
   SearchForm:
     cancel: キャンセル
     search: 検索

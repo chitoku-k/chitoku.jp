@@ -17,6 +17,12 @@ chitoku.jp
 # 公開 URL
 export HISTORIA_URL=https://chitoku.jp
 
+# リポジトリー名称
+export GATSBY_REPOSITORY_NAME=chitoku-k/chitoku.jp
+
+# リポジトリーツリー URL
+export GATSBY_REPOSITORY_TREE_URL=https://github.com/chitoku-k/chitoku.jp/tree/
+
 # メール送信先 URL
 export GATSBY_MAIL_API=
 

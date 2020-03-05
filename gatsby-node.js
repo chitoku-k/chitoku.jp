@@ -13,6 +13,8 @@ for (const key of [
   'GATSBY_GOOGLE_ANALYTICS_ID',
   'GATSBY_MAIL_API',
   'GATSBY_MAIL_SITE_KEY',
+  'GATSBY_REPOSITORY_NAME',
+  'GATSBY_REPOSITORY_TREE_URL',
   'HISTORIA_URL',
 ]) {
   if (!(key in process.env)) {
