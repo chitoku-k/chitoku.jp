@@ -1535,10 +1535,10 @@
   resolved "https://registry.yarnpkg.com/@restart/hooks/-/hooks-0.3.21.tgz#5264d12019ffb844dc1fc44d55517ded7b580ee2"
   integrity sha512-Wcu3CFJV+iiqPEIoPVx3/CYnZBRgPeRABo6bLJByRH9ptJXyObn7WYPG7Rv0cg3+55bqcBbG0xEfovzwE2PNXg==
 
-"@rstacruz/gatsby-remark-component@^1.2.0-pre.1":
-  version "1.2.0-pre.1"
-  resolved "https://registry.yarnpkg.com/@rstacruz/gatsby-remark-component/-/gatsby-remark-component-1.2.0-pre.1.tgz#94444908fa005a0dcb6df6c65761cd2055a9a6dc"
-  integrity sha512-6PgE42bUxVk8NfibpGmuD437HeQZozbYF24F4MBiN4ROLwggJWtiSGatUf3FiH8LIrYcv0x7gEg8tyd9rQdVog==
+"@rstacruz/gatsby-remark-component@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@rstacruz/gatsby-remark-component/-/gatsby-remark-component-2.0.0.tgz#ecc81499c43729379b7ea80b909ef120c9afa7dd"
+  integrity sha512-R6HyaD/k5tC+ffpx4j6CyXWkp2fk59zAlEaeXIgvTZ2bARNcXcBwOZ2kA4kAHtVRQgtA982r/xIdAIIBAD+yDQ==
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
