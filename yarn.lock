@@ -6223,6 +6223,13 @@ flat@^4.1.0:
   dependencies:
     is-buffer "~2.0.3"
 
+flat@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/flat/-/flat-5.0.0.tgz#dab7d71d60413becb0ac2de9bf4304495e3af6af"
+  integrity sha512-6KSMM+cHHzXC/hpldXApL2S8Uz+QZv+tq5o/L0KQYleoG+GcwrnIJhTWC7tCOiKQp8D/fIvryINU1OZCCwevjA==
+  dependencies:
+    is-buffer "~2.0.4"
+
 flatted@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.1.tgz#69e57caa8f0eacbc281d2e2cb458d46fdb449e08"
@@ -8409,7 +8416,7 @@ is-buffer@^1.1.4, is-buffer@^1.1.5, is-buffer@~1.1.1:
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
 
-is-buffer@^2.0.0, is-buffer@~2.0.3:
+is-buffer@^2.0.0, is-buffer@~2.0.3, is-buffer@~2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-2.0.4.tgz#3e572f23c8411a5cfd9557c849e3665e0b290623"
   integrity sha512-Kq1rokWXOPXWuaMAqZiJW4XxsmD9zGx9q4aePabbn3qCRGedtH7Cm+zV8WETitMfu1wdh+Rvd6w5egwSngUX2A==
@@ -16036,12 +16043,12 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
-yaml-flat-loader@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/yaml-flat-loader/-/yaml-flat-loader-1.0.1.tgz#9e09c1ba6ca2165992f05b7084d8552f8cce8c83"
-  integrity sha512-kWZ9aBDdnP0jgaoQ1V5T90LQe1IZ5onKy/G0oS/e3qHAtz1RFZNzKvbWrKVC28wXWC/OxJRZgoVEnB8wtlLSFA==
+yaml-flat-loader@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/yaml-flat-loader/-/yaml-flat-loader-1.0.2.tgz#d2eed49a648349888c5da6bfb1868b93ee223b62"
+  integrity sha512-jyw+ajsiKQnGYISxFxtzPif+CKI0qRR2qPaAezVM7r2ZjEsatWFkoc0vSvtTvclebo8FpziuEdGxxBp53P3RGg==
   dependencies:
-    flat "^4.1.0"
+    flat "^5.0.0"
     js-yaml "^3.8.4"
 
 yaml-loader@^0.5.0:
