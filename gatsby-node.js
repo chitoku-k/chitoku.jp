@@ -4,27 +4,6 @@ const path = require('path')
 const fs = require('fs').promises
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
-const env = []
-for (const key of [
-  'GATSBY_ALGOLIA_APIKEY',
-  'GATSBY_ALGOLIA_APIKEY_SEARCH_ONLY',
-  'GATSBY_ALGOLIA_APPID',
-  'GATSBY_ALGOLIA_INDEXNAME',
-  'GATSBY_GOOGLE_ANALYTICS_ID',
-  'GATSBY_MAIL_API',
-  'GATSBY_MAIL_SITE_KEY',
-  'GATSBY_REPOSITORY_NAME',
-  'GATSBY_REPOSITORY_TREE_URL',
-  'HISTORIA_URL',
-]) {
-  if (!(key in process.env)) {
-    env.push(key)
-  }
-}
-if (env.length) {
-  throw new Error(`Required environment variable is not set: ${env.join(', ')}`)
-}
-
 exports.onCreateWebpackConfig = ({
   actions: {
     setWebpackConfig,
