@@ -75,7 +75,7 @@
     "react-schemaorg": "^1.0.1",
     "rehype-react": "^5.0.0",
     "sass": "^1.26.3",
-    "schema-dts": "^0.5.1",
+    "schema-dts": "^0.5.2",
     "styled-components": "^4.4.1",
     "styled-media-query": "^2.1.2",
     "stylelint": "^13.2.1",
