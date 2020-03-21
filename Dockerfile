@@ -5,7 +5,8 @@ COPY . /usr/src
 RUN apk update && \
     apk add git util-linux && \
     yarn && \
-    yarn build
+    yarn build && \
+    rm -rf node_modules .cache
 
 FROM nginx:1.16-alpine
 COPY conf /etc/nginx/conf.d
