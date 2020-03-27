@@ -32,7 +32,7 @@
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
-    "extract-react-intl-messages": "^3.0.0",
+    "extract-react-intl-messages": "^4.1.1",
     "font-awesome": "^4.7.0",
     "gatsby": "^2.20.2",
     "gatsby-image": "^2.3.0",
