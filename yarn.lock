@@ -12236,26 +12236,26 @@ range-parser@^1.2.1, range-parser@~1.2.1:
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
 
-ranges-apply@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/ranges-apply/-/ranges-apply-3.1.1.tgz#3875dda23921b729d8fb9016688ed4bf942e2123"
-  integrity sha512-47uYjGzTDCRIyV0+KVrxMkFUBsc1+GJpDarfNZpL8RCJu1x9YieceY3YjIA72bWj6itMacFbn2bA32pTfBOWyw==
+ranges-apply@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/ranges-apply/-/ranges-apply-3.1.2.tgz#5f057f1ff51177c988a1b51e790c1b407eea644f"
+  integrity sha512-M5i5P3ruWZ6PPIhFBpZaed82F59/2eEO349pdrnznq+zm41xXxAeMV8nQFXzpU+n393SYhE5NBskIhtCdNXfUg==
   dependencies:
-    ranges-merge "^4.3.0"
+    ranges-merge "^4.3.1"
 
-ranges-merge@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/ranges-merge/-/ranges-merge-4.3.0.tgz#0322be2e626fd6b8db39fd6fdbbf305c9134da0f"
-  integrity sha512-9A0Yj3HnwrBoj3Wq7DQ8FbnyI8ZZ7VT34p2cf59oHKD6gVC1s4k/MnmACvL0a0kwcZnSn32y7pM2EsrRYOW/5w==
+ranges-merge@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/ranges-merge/-/ranges-merge-4.3.1.tgz#2dbc6678f60ec4247f7bfb8b87e5a1bf2a58f2e5"
+  integrity sha512-+usIi05v+iZnEcy+G34IHgf5oXb2/rHGr6R29uJIp5QoE0+YSGv/i9UaTTtxF8fi/yLiVDnbe0wt7oqt2HmNyA==
   dependencies:
     ranges-sort "^3.11.0"
 
-ranges-push@^3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/ranges-push/-/ranges-push-3.7.1.tgz#89e15f7ccb5d6a8ef4df2f129e102ed79c1c043f"
-  integrity sha512-AYqykirRcAQZ2/YWVKDdz7A91G9LAe/Z4Gw+VaUs9rYpvdYS2RDLbXso4A99uHnb4jzChu3TWdWaEbkZ35vBog==
+ranges-push@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/ranges-push/-/ranges-push-3.7.2.tgz#6f6580a011bac99330146e31bdd49f149a459e20"
+  integrity sha512-kgCt/BffPy5WDcJYG3UHeVk4E5y1atVgCzKMvsBGkl2Sw/kuYoYttXpJSE0gtAWd7sTkb4i8cjGePqzW7Q+Y9A==
   dependencies:
-    ranges-merge "^4.3.0"
+    ranges-merge "^4.3.1"
     string-collapse-leading-whitespace "^2.0.13"
     string-trim-spaces-only "^2.8.11"
 
@@ -14148,10 +14148,10 @@ string-collapse-leading-whitespace@^2.0.13:
   resolved "https://registry.yarnpkg.com/string-collapse-leading-whitespace/-/string-collapse-leading-whitespace-2.0.13.tgz#3dcb3cda380b24a713209a6e5eee24330d3b93c2"
   integrity sha512-uMw+yoti9zoovlV3vfCH2/AqWSTj5m7n3z7VEsOQJ1BrR3xzSeInBXSTGN+UWr5wjA5eI4ohs2rrrOZGv3Vrkw==
 
-string-left-right@^2.3.16:
-  version "2.3.16"
-  resolved "https://registry.yarnpkg.com/string-left-right/-/string-left-right-2.3.16.tgz#6ba2b8e1f451cfae25095a496c90963af2883af0"
-  integrity sha512-KYy0wfEOj9gNgEd4SDaVmp+5VNb9Dyjxdxp6ESGSpDaNri7ObuZ2cDGxqTYtAmNd7a/keyhRbJrnaUeoiSuogQ==
+string-left-right@^2.3.17:
+  version "2.3.17"
+  resolved "https://registry.yarnpkg.com/string-left-right/-/string-left-right-2.3.17.tgz#03051316733d96a5d5ec1b4b80fd31746d9dad83"
+  integrity sha512-AUaObh//7q94iXjWQGcKC2qhnoGSS90McAc0f2Om0AVb+cH02eKVTMkmESigTl9ObROXV7a0EvaFfN8qocctXA==
   dependencies:
     lodash.clonedeep "^4.5.0"
     lodash.isplainobject "^4.0.6"
@@ -14175,18 +14175,18 @@ string-similarity@^1.2.2:
     lodash.map "^4.6.0"
     lodash.maxby "^4.6.0"
 
-string-strip-html@^4.3.17:
-  version "4.3.17"
-  resolved "https://registry.yarnpkg.com/string-strip-html/-/string-strip-html-4.3.17.tgz#31cdb96480032fa440bcd9012e175e308133d255"
-  integrity sha512-HpNMjGS7HRnhYPbrTHYs8c8hhoe88jy3RCqhihPSmZ7z8dyRGKWjkOZXoysGYxKQ+4R+LbqiqnGqVOmTeRcHMw==
+string-strip-html@^4.3.18:
+  version "4.3.18"
+  resolved "https://registry.yarnpkg.com/string-strip-html/-/string-strip-html-4.3.18.tgz#2eb7d63da7ef1336d60c08b0cf9e6956d2f55b8e"
+  integrity sha512-8AqVo1qh5Ak8O+gU5AC3MedpTTeiqPCyQplewDJn6CUSOejatFxIcPFYW+jArhuu6gsxFm3E0/LXf3X3nx5yuA==
   dependencies:
     ent "^2.2.0"
     lodash.isplainobject "^4.0.6"
     lodash.trim "^4.5.1"
     lodash.without "^4.4.0"
-    ranges-apply "^3.1.1"
-    ranges-push "^3.7.1"
-    string-left-right "^2.3.16"
+    ranges-apply "^3.1.2"
+    ranges-push "^3.7.2"
+    string-left-right "^2.3.17"
 
 string-trim-spaces-only@^2.8.11:
   version "2.8.11"
