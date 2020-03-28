@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '13'
+  - '12'
 
 env:
   global:
@@ -15,9 +15,6 @@ before_install:
 
 before_script:
   - source .travis/before_script
-
-install:
-  - source .travis/install
 
 script:
   - source .travis/build
