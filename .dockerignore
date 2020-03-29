@@ -1,4 +1,9 @@
+Dockerfile
+LICENSE
+README.md
 node_modules
 public
 .cache
-.travis
+.editorconfig
+.github
+.ignore
