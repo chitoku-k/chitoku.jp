@@ -1,0 +1,9 @@
+Dockerfile
+LICENSE
+README.md
+node_modules
+public
+.cache
+.editorconfig
+.github
+.ignore

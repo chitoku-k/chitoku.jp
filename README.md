@@ -1,7 +1,7 @@
 chitoku.jp
 ==========
 
-[![][travis-badge]][travis-link]
+[![][workflow-badge]][workflow-link]
 
 [ちとくのホームページ](https://chitoku.jp)の Gatsby テンプレートとコンテンツです。
 
@@ -15,28 +15,28 @@ chitoku.jp
 
 ```shell
 # 公開 URL
-export HISTORIA_URL=https://chitoku.jp
+HISTORIA_URL=https://chitoku.jp
 
 # リポジトリー名称
-export GATSBY_REPOSITORY_NAME=chitoku-k/chitoku.jp
+GATSBY_REPOSITORY_NAME=chitoku-k/chitoku.jp
 
 # リポジトリーツリー URL
-export GATSBY_REPOSITORY_TREE_URL=https://github.com/chitoku-k/chitoku.jp/tree/
+GATSBY_REPOSITORY_TREE_URL=https://github.com/chitoku-k/chitoku.jp/tree/
 
 # メール送信先 URL
-export GATSBY_MAIL_API=
+GATSBY_MAIL_API=
 
 # reCAPTCHA v3 API キー
-export GATSBY_MAIL_SITE_KEY=
+GATSBY_MAIL_SITE_KEY=
 
 # Google Analytics ID
-export GATSBY_GOOGLE_ANALYTICS_ID=
+GATSBY_GOOGLE_ANALYTICS_ID=
 
 # Algolia
-export GATSBY_ALGOLIA_APPID=
-export GATSBY_ALGOLIA_APIKEY=
-export GATSBY_ALGOLIA_APIKEY_SEARCH_ONLY=
-export GATSBY_ALGOLIA_INDEXNAME=
+GATSBY_ALGOLIA_APPID=
+GATSBY_ALGOLIA_APIKEY=
+GATSBY_ALGOLIA_APIKEY_SEARCH_ONLY=
+GATSBY_ALGOLIA_INDEXNAME=
 ```
 
 ## ビルド
@@ -47,5 +47,5 @@ $ yarn install
 $ yarn build
 ```
 
-[travis-link]:          https://travis-ci.org/chitoku-k/chitoku.jp
-[travis-badge]:         https://img.shields.io/travis/chitoku-k/chitoku.jp/master.svg?style=flat-square
+[workflow-link]:    https://github.com/chitoku-k/chitoku.jp/actions?query=branch:master                                           
+[workflow-badge]:   https://img.shields.io/github/workflow/status/chitoku-k/chitoku.jp/CI%20Workflow/master.svg?style=flat-square

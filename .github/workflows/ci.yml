@@ -1,0 +1,19 @@
+name: CI Workflow
+on:
+  - push
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: Extract .env
+        run: echo "$ENVFILE" > .env
+        env:
+          ENVFILE: ${{ secrets.ENVFILE }}
+      - name: Build
+        run: docker build .
