@@ -35,7 +35,7 @@
     "eslint-plugin-react-hooks": "^3.0.0",
     "extract-react-intl-messages": "^4.1.1",
     "font-awesome": "^4.7.0",
-    "gatsby": "^2.20.16",
+    "gatsby": "^2.20.24",
     "gatsby-image": "^2.3.2",
     "gatsby-plugin-algolia": "^0.7.0",
     "gatsby-plugin-catch-links": "^2.2.1",
