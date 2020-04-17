@@ -36,7 +36,7 @@
     "extract-react-intl-messages": "^4.1.1",
     "font-awesome": "^4.7.0",
     "gatsby": "^2.20.24",
-    "gatsby-image": "^2.3.2",
+    "gatsby-image": "^2.3.4",
     "gatsby-plugin-algolia": "^0.7.0",
     "gatsby-plugin-catch-links": "^2.2.1",
     "gatsby-plugin-google-analytics": "^2.2.4",
