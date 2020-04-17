@@ -1075,10 +1075,10 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
-  version "7.8.7"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.8.7.tgz#8fefce9802db54881ba59f90bb28719b4996324d"
-  integrity sha512-+AATMUFppJDw6aiR5NVPHqIQBlV/Pj8wY/EZH+lmvRdUo9xBaz/rF3alAwFJQavvKfeOlPE7oaaDHVbcySbCsg==
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+  version "7.9.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.2.tgz#d90df0583a3a252f09aaa619665367bae518db06"
+  integrity sha512-NE2DtOdufG7R5vnfQUTehdTfNycfUANEtCa9PssN9O/xmTzP4E08UI797ixaei6hBEVL9BI/PsdJS5x7mWoB9Q==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -7310,13 +7310,13 @@ gatsby-remark-external-links@^0.0.4:
     unist-util-find "^1.0.1"
     unist-util-visit "^1.1.3"
 
-gatsby-remark-grid-tables@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-grid-tables/-/gatsby-remark-grid-tables-0.0.3.tgz#2ace558669360fe32aa5e29c17920db3d148436f"
-  integrity sha512-tqqhs0/leLKGvvY5t5rfjx22DeGK5SL+KbESfDBnwUbmBfjpctiACnZ/xRpPTTxBYKGpE0dvOCYJpxTrQTtJ3w==
+gatsby-remark-grid-tables@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-grid-tables/-/gatsby-remark-grid-tables-0.1.0.tgz#bb0344e5b64d034b522347219836e5c71a767483"
+  integrity sha512-SSwvXyasAAigrLtgm0O0Vwb2L8f4T3y6oMCAAyLZzZ+Dkrh6mI6unhyHJZOGq/2G2Vh2JbYqSmaliaumvAW4wA==
   dependencies:
-    babel-runtime "^6.26.0"
-    remark-grid-tables "^1.2.0"
+    "@babel/runtime" "^7.9.2"
+    remark-grid-tables "^2.1.1"
 
 gatsby-remark-images@^3.2.4:
   version "3.2.4"
@@ -13662,7 +13662,7 @@ remark-attr@^0.9.0:
     html-element-attributes "^2.0.0"
     md-attr-parser "^1.3.0"
 
-remark-grid-tables@^1.2.0, remark-grid-tables@^1.4.0:
+remark-grid-tables@^1.4.0, remark-grid-tables@^2.1.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/remark-grid-tables/-/remark-grid-tables-1.7.1.tgz#38aa1e456ee751ef18e6a0ce4e1ab03c0d41b23e"
   integrity sha512-GhsSWWu07Pe+VGOxIPDU/SXT+xUXcdJkRH66FFo4lxnVSS15K/mApNT1mtBKEAGfJBhTHEZF7O1Et4TZ8jslyA==
