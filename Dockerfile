@@ -1,4 +1,4 @@
-FROM node:13.13.0-alpine as build
+FROM node:14.0.0-alpine as build
 ARG GATSBY_UPDATE_INDEX=false
 WORKDIR /usr/src
 COPY . /usr/src
