@@ -59,7 +59,7 @@
     "gatsby-source-local-git": "^0.2.2",
     "gatsby-transformer-remark": "^2.7.3",
     "gatsby-transformer-sharp": "^2.4.7",
-    "gatsby-transformer-yaml": "^2.3.3",
+    "gatsby-transformer-yaml": "^2.3.4",
     "husky": "^4.2.5",
     "is-url": "^1.2.4",
     "lint-staged": "^10.1.7",
