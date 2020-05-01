@@ -56,7 +56,7 @@
     "gatsby-remark-images": "^3.3.0",
     "gatsby-remark-prismjs": "^3.5.0",
     "gatsby-source-filesystem": "^2.3.0",
-    "gatsby-source-local-git": "^0.2.2",
+    "gatsby-source-local-git": "^1.0.0",
     "gatsby-transformer-remark": "^2.8.4",
     "gatsby-transformer-sharp": "^2.5.0",
     "gatsby-transformer-yaml": "^2.4.0",
