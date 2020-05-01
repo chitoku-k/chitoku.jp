@@ -881,7 +881,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.3"
 
-"@babel/plugin-transform-runtime@^7.8.3", "@babel/plugin-transform-runtime@^7.9.6":
+"@babel/plugin-transform-runtime@^7.8.3", "@babel/plugin-transform-runtime@^7.9.0", "@babel/plugin-transform-runtime@^7.9.6":
   version "7.9.6"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.9.6.tgz#3ba804438ad0d880a17bca5eaa0cdf1edeedb2fd"
   integrity sha512-qcmiECD0mYOjOIt8YHNsAP1SxPooC/rDmfmiSK9BNY72EitdSc7l44WTEklaWuFtbOEBjNhWWyph/kOImbNJ4w==
@@ -7411,10 +7411,10 @@ gatsby-source-filesystem@^2.3.0:
     valid-url "^1.0.9"
     xstate "^4.9.1"
 
-gatsby-source-local-git@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/gatsby-source-local-git/-/gatsby-source-local-git-0.2.2.tgz#543886dbca3ab51a986b87c97be38445f2f4bd5a"
-  integrity sha512-heMVojdPQfeqMr5Tsa5E0Aj7AYW151IQqrGe57Uc4NKiyNK/SplJdl++irPuEuNo9IqjE5F2s4WdpfS8bHzZNg==
+gatsby-source-local-git@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-local-git/-/gatsby-source-local-git-1.0.0.tgz#a285eb60d92b2d8021ed33ea1e62ca6e1f6c152d"
+  integrity sha512-QsX5vjs/Zsh7vAkPzcnsDm085qAaMX+NSZrhscwjQrk0os61lVbFiXbpkiwvBPuCxXGl2QITTWejPqvcps7y8A==
   dependencies:
     simple-git "^1.128.0"
 
