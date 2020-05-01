@@ -62,7 +62,7 @@
     "gatsby-transformer-yaml": "^2.4.0",
     "husky": "^4.2.5",
     "is-url": "^1.2.4",
-    "lint-staged": "^10.1.7",
+    "lint-staged": "^10.2.2",
     "prismjs": "^1.20.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
