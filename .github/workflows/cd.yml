@@ -16,9 +16,7 @@ jobs:
         env:
           ENVFILE: ${{ secrets.ENVFILE }}
       - name: Build
-        run: docker build . -t docker.chitoku.jp/chitoku-k/chitoku.jp
-        env:
-          GATSBY_UPDATE_INDEX: 'true'
+        run: docker build . -t docker.chitoku.jp/chitoku-k/chitoku.jp --build-arg=GATSBY_UPDATE_INDEX=true
       - name: Log into Docker Registry
         uses: azure/docker-login@v1
         with:
