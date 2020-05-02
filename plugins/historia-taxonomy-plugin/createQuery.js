@@ -33,6 +33,7 @@ module.exports = () => ({
     fragment ArticleNode on MarkdownRemarkConnection {
       items: edges {
         article: node {
+          id
           ...Article
         }
       }
@@ -63,6 +64,7 @@ module.exports = () => ({
     },
   }) => items.filter(({ article: { file } }) => getPath(file)).map(({
     article: {
+      id,
       file,
       excerpt,
       headings,
@@ -74,6 +76,7 @@ module.exports = () => ({
       },
     },
   }) => ({
+    id,
     path: getPath(file),
     excerpt: removeMd(excerpt),
     headings: headings.map(x => stripHtml(x.value)),
