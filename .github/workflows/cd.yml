@@ -17,6 +17,8 @@ jobs:
           ENVFILE: ${{ secrets.ENVFILE }}
       - name: Build
         run: docker build . -t docker.chitoku.jp/chitoku-k/chitoku.jp
+        env:
+          GATSBY_UPDATE_INDEX: 'true'
       - name: Log into Docker Registry
         uses: azure/docker-login@v1
         with:
@@ -34,4 +36,4 @@ jobs:
           k8s-url: https://k8s.chitoku.jp
           k8s-secret: ${{ secrets.K8S_SECRET }}
       - name: Rollout restart
-        run: kubectl rollout restart deployment/chitokujp --insecure-skip-tls-verify=true
+        run: kubectl rollout restart deployment/chitokujp
