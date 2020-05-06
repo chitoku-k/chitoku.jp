@@ -135,7 +135,13 @@ module.exports = {
               ],
             },
           },
-          { resolve: '@weknow/gatsby-remark-twitter' },
+          {
+            resolve: '@weknow/gatsby-remark-twitter',
+            options: {
+              // HACK
+              align: '&lang=ja',
+            },
+          },
         ],
       },
     },
