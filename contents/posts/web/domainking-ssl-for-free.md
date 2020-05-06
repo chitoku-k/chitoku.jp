@@ -38,7 +38,7 @@ StartSSL を使用して SSL 証明書を発行する手順は以下の記事が
 （StartSSL の ToolBox -> Decrypt Private Key を利用することでも復号できます、お好きな方で）
 
 ```bash
-openssl rsa -in ssl.key -out ssl.key
+$ openssl rsa -in ssl.key -out ssl.key
 ```
 
 ## 証明書の設定

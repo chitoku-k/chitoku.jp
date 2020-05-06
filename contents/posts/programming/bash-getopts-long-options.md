@@ -42,7 +42,7 @@ Bash で書かれたシェルスクリプトで引数を処理するためには
 
 ここでは以下の基本的な関数を例にして、これをロングオプションに対応させてみます。
 
-```bash{outputLines:1-28}
+```bash
 timestr() {
     local opt h m s
 
@@ -82,14 +82,14 @@ timestr() {
 
 引数を処理し終わったら `bash¦$OPTIND - 1` 個分引数を `bash¦shift`[^6] させることで、処理し終えた引数の続きから `bash¦$1`, `bash¦$2`, ... として使用することができます。
 
-```bash{outputLines:2,3,5,6,8}
-timestr -h 1 -m 23 -s 45 'Time is'
+```bash
+$ timestr -h 1 -m 23 -s 45 'Time is'
 Time is 1:23:45
 
-timestr -v
+$ timestr -v
 v0.0.0
 
-timestr -d
+$ timestr -d
 timestr.bash: illegal option -- d
 ```
 
@@ -100,7 +100,7 @@ timestr.bash: illegal option -- d
 ここでは変数展開[^7]を利用して `=` の前後で分割した引数を `bash¦$optarg` という変数に代入しています。  
 また `--` を処理しているため、`-` で始まる引数を渡すことができます。
 
-```bash{outputLines:1-42}
+```bash
 timestr() {
     local opt optarg h m s
 
@@ -147,20 +147,20 @@ timestr() {
 
 実行結果は以下のとおりです。
 
-```bash{outputLines:2,3,5,6,8,9,11,12,14}
-timestr -h 1 -m 23 --second=45 'Time is'
+```bash
+$ timestr -h 1 -m 23 --second=45 'Time is'
 Time is 1:23:45
 
-timestr --hour=1 --minute=23 --second=45 'Time is'
+$ timestr --hour=1 --minute=23 --second=45 'Time is'
 Time is 1:23:45
 
-timestr --hour=1 --minute=23 --second=45 -- '-- Time --'
+$ timestr --hour=1 --minute=23 --second=45 -- '-- Time --'
 -- Time -- 1:23:45
 
-timestr --version
+$ timestr --version
 v0.0.0
 
-timestr --day
+$ timestr --day
 timestr.bash: illegal option -- day
 ```
 
@@ -171,7 +171,7 @@ timestr.bash: illegal option -- day
 オプションのうち引数を要求するものについては、`bash¦$OPTIND`[^8] 番目の変数から取り出して `bash¦$optarg` に代入し、処理後に `bash¦shift`[^6] を使用して引数をシフトさせます。  
 また `--` を処理しているため、`-` で始まる引数を渡すことができます。
 
-```bash{outputLines:1-43}
+```bash
 timestr() {
     local opt optarg h m s
 
@@ -219,20 +219,20 @@ timestr() {
 
 実行結果は以下のとおりです。
 
-```bash{outputLines:2,3,5,6,8,9,11,12,14}
-timestr -h 1 -m 23 --second 45 'Time is'
+```bash
+$ timestr -h 1 -m 23 --second 45 'Time is'
 Time is 1:23:45
 
-timestr --hour 1 --minute 23 --second 45 'Time is'
+$ timestr --hour 1 --minute 23 --second 45 'Time is'
 Time is 1:23:45
 
-timestr --hour 1 --minute 23 --second 45 -- '-- Time --'
+$ timestr --hour 1 --minute 23 --second 45 -- '-- Time --'
 -- Time -- 1:23:45
 
-timestr --version
+$ timestr --version
 v0.0.0
 
-timestr --day
+$ timestr --day
 timestr.bash: illegal option -- day
 ```
 
@@ -255,7 +255,7 @@ timestr.bash: illegal option -- day
 一方でロングオプションにおいて引数を要求するかどうかは、各オプションの実装ではなくユーザーの入力に依存します。そのため `bash¦shift` は不要です。
 こちらも `--` を処理しているため、`-` で始まる引数を渡すことができます。
 
-```bash{outputLines:1-48}
+```bash
 timestr() {
     local opt optarg h m s
 
@@ -308,29 +308,29 @@ timestr() {
 
 実行結果は以下のとおりです。
 
-```bash{outputLines:2,3,5,6,8,9,11,12,14,15,17,18,20,21,23,24}
-timestr -h 1 -m 23 --second=45 'Time is'
+```bash
+$ timestr -h 1 -m 23 --second=45 'Time is'
 Time is 1:23:45
 
-timestr -h 1 -m 23 --second 45 'Time is'
+$ timestr -h 1 -m 23 --second 45 'Time is'
 Time is 1:23:45
 
-timestr --hour=1 --minute=23 --second=45 'Time is'
+$ timestr --hour=1 --minute=23 --second=45 'Time is'
 Time is 1:23:45
 
-timestr --hour 1 --minute 23 --second 45 'Time is'
+$ timestr --hour 1 --minute 23 --second 45 'Time is'
 Time is 1:23:45
 
-timestr --hour=1 --minute=23 --second=45 -- '-- Time --'
+$ timestr --hour=1 --minute=23 --second=45 -- '-- Time --'
 -- Time -- 1:23:45
 
-timestr --hour 1 --minute 23 --second 45 -- '-- Time --'
+$ timestr --hour 1 --minute 23 --second 45 -- '-- Time --'
 -- Time -- 1:23:45
 
-timestr --version
+$ timestr --version
 v0.0.0
 
-timestr --day
+$ timestr --day
 timestr.bash: illegal option -- day
 ```
 
