@@ -2,7 +2,6 @@ import React, { FunctionComponent, useCallback, useState } from 'react'
 import { Navbar as BootstrapNavbar, Container, Row } from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Location } from '@reach/router'
 import styled from 'styled-components'
 
 import { NavigationLinkItemQuery, NavigationsYamlNav } from 'graphql-types'
@@ -131,18 +130,14 @@ const Navbar: FunctionComponent = () => {
                   <NavItem key={item.to} {...item} dropdown>{item.items}</NavItem>
                 ))}
                 <SearchIcon onClick={openSearch}>
-                  <NavLink to="/">
+                  <NavLink to="#">
                     <FontAwesome name="search" />
                   </NavLink>
                 </SearchIcon>
               </Nav>
             </Row>
           </NavbarCore>
-          <Location>
-            {({ location }) => (
-              <SearchForm search={search} location={location} openSearch={openSearch} closeSearch={closeSearch} />
-            )}
-          </Location>
+          <SearchForm search={search} openSearch={openSearch} closeSearch={closeSearch} />
         </NavbarRow>
       </Container>
     </NavContainer>

@@ -2,12 +2,10 @@ import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Container, Navbar, Popover, Row } from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { useIntl } from 'react-intl'
-import { WindowLocation, navigate } from '@reach/router'
 import styled from 'styled-components'
 import { SearchBoxProvided } from 'react-instantsearch-core'
 import { connectSearchBox } from 'react-instantsearch-dom'
 
-import { getSearchText } from 'components/SearchResult'
 import { media } from 'components/Layout'
 import messages from './messages'
 
@@ -21,8 +19,9 @@ const FormDesktop = styled(Navbar)`
 const FormDesktopInput = styled.input`
   width: 250px;
   padding: 6px 12px 6px 35px;
+  min-height: 32px;
   border: none;
-  border-radius: 17px;
+  border-radius: 16px;
   box-shadow: 0 3px 5px 1px #d8d8d8 inset;
   ${media.lessThan('tablet')`
     width: 200px;
@@ -96,7 +95,6 @@ const UnsupportedNotice = styled.noscript`
 
 const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
   search,
-  location,
   openSearch,
   closeSearch,
   refine,
@@ -112,25 +110,15 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
 
   const onFocus = useCallback(() => {
     openSearch()
-    if (getSearchText(location) === false) {
-      setText('')
-    }
-  }, [ location, openSearch ])
+  }, [ openSearch ])
 
   const onChange = useCallback((e: React.FormEvent<HTMLInputElement>) => {
     setText(e.currentTarget.value)
   }, [])
 
-  /* eslint-disable @typescript-eslint/no-floating-promises */
   useEffect(() => {
-    if (text !== null) {
-      refine(text)
-      navigate(`${location.pathname}?s=${text}`, { replace: true })
-    } else {
-      navigate(location.pathname, { replace: true })
-    }
-  }, [ text, location.pathname, refine ])
-  /* eslint-enable @typescript-eslint/no-floating-promises */
+    refine(text)
+  }, [ text, refine ])
 
   useEffect(() => {
     if (search) {
@@ -173,7 +161,6 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
 
 interface SearchFormProps extends SearchBoxProvided {
   search: boolean
-  location: WindowLocation
   openSearch: () => void
   closeSearch: () => void
 }

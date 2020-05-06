@@ -17,7 +17,6 @@ const Dropdown = styled(BootstrapDropdown)`
   position: relative;
   &.dropdown:hover {
     .dropdown-menu {
-      display: block;
       border-top: none;
       border-radius: 0;
     }
@@ -120,7 +119,7 @@ interface BootstrapNavItemProps {
   active?: boolean
   activeHref?: string
   activeKey?: string
-  onSelect?: () => void | null
+  onSelect?: () => void
 }
 
 interface NavItemProps extends DetailedHTMLProps<React.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement> {
