@@ -7,6 +7,5 @@ exports.onClientEntry = () => {
   require('core-js/fn/array/flat-map')
   require('core-js/fn/array/from')
   require('core-js/modules/es6.symbol')
-  require('url-search-params-polyfill')
   require('whatwg-fetch')
 }
