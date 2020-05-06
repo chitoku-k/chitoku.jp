@@ -85,7 +85,15 @@ button {
   margin: 20px auto;
   padding: 15px;
   font-size: 100%;
+}
+.twitter-tweet + .twitter-tweet {
   visibility: hidden;
+}
+blockquote.twitter-tweet {
+  width: 470px;
+  max-width: 100%;
+  border: 1px solid #e1e8ed !important;
+  border-radius: 5px;
 }
 
 // Font Awesome
