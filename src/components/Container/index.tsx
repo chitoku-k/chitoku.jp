@@ -1,10 +1,10 @@
-import React, { FunctionComponent } from 'react'
-import { Location } from '@reach/router'
+import React from 'react'
 import { Col } from 'react-bootstrap'
+import { connectStateResults } from 'react-instantsearch-dom'
 import styled from 'styled-components'
 
 import { media } from 'components/Layout'
-import SearchResult, { getSearchText } from 'components/SearchResult'
+import SearchResult from 'components/SearchResult'
 
 const MainContentContainer = styled(Col)`
   position: static;
@@ -24,17 +24,15 @@ const MainContentContainer = styled(Col)`
   }
 `
 
-const Container: FunctionComponent = ({
+const Container = connectStateResults(function Container({
+  searchState,
   children,
-}) => (
-  <MainContentContainer md={9}>
-    <Location>
-      {({ location }) => {
-        const search = getSearchText(location)
-        return search ? <SearchResult text={search} /> : children
-      }}
-    </Location>
-  </MainContentContainer>
-)
+}) {
+  return (
+    <MainContentContainer md={9}>
+      {searchState.query ? <SearchResult /> : children}
+    </MainContentContainer>
+  )
+})
 
 export default Container

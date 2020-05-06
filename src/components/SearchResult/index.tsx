@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from 'react'
 import { FormattedMessage, useIntl } from 'react-intl'
-import { WindowLocation } from '@reach/router'
 import { Hit, StateResultsProvided } from 'react-instantsearch-core'
 import { Hits, PoweredBy, connectStateResults } from 'react-instantsearch-dom'
 import Highlighter from 'react-highlight-words'
@@ -11,11 +10,6 @@ import ArticleHeader from 'components/ArticleHeader'
 import { ArticleCategoryItem, ArticleTagItem } from 'components/Article'
 import Link from 'components/Link'
 import messages from './messages'
-
-export const getSearchText = (location: WindowLocation | Location): string | boolean => {
-  const params = new URLSearchParams(location.search.slice(1))
-  return params.get('s') ?? params.has('s')
-}
 
 const SearchResultContainer = styled(ArticleContainer)`
   .ais-Hits-list {
@@ -164,8 +158,6 @@ interface SearchHitProps<T> {
   hit: Hit<T>
 }
 
-interface SearchResultProps extends StateResultsProvided<SearchDocument> {
-  text: string | boolean
-}
+type SearchResultProps = StateResultsProvided<SearchDocument>
 
 export default SearchResult
