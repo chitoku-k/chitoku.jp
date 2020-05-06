@@ -97,10 +97,10 @@ VDSL モデムと v6 プラスルーターに正しいグローバル IPv6 ア�
 MTU と MSS の設定がフレッツ光の場合は別途必要なので注意が必要です[^4]。
 
 ```bash
-configure
-set interfaces ethernet eth0 pppoe 0 password ****************
-set interfaces ethernet eth0 pppoe 0 user-id ********************
-commit; save
+$ configure
+$ set interfaces ethernet eth0 pppoe 0 password ****************
+$ set interfaces ethernet eth0 pppoe 0 user-id ********************
+$ commit; save
 ```
 
 ## ルーティング・テーブルの設定
@@ -111,12 +111,12 @@ commit; save
 このほか VPN 接続などの個別のルートがある場合はそれぞれのテーブルに設定します。
 
 ```bash
-configure
-set protocols static table 1 description PPPoE
-set protocols static table 1 route 0.0.0.0/0 next-hop 192.0.2.2
-set protocols static table 2 description v6plus
-set protocols static table 2 route 0.0.0.0/0 next-hop 192.0.2.6
-commit; save
+$ configure
+$ set protocols static table 1 description PPPoE
+$ set protocols static table 1 route 0.0.0.0/0 next-hop 192.0.2.2
+$ set protocols static table 2 description v6plus
+$ set protocols static table 2 route 0.0.0.0/0 next-hop 192.0.2.6
+$ commit; save
 ```
 
 ## ロードバランスの設定
@@ -129,13 +129,13 @@ commit; save
 上述の通り v6 プラスでは VPN などのサービスが使用できなくなるため、特有のポート番号を使用するサーバーを使用している場合は無効にする必要があります。
 
 ```bash
-configure
-set load-balance group WAN_FAILOVER interface eth0 failover-only
-set load-balance group WAN_FAILOVER interface eth0 route table 1
-set load-balance group WAN_FAILOVER interface eth1 route table 2
-set load-balance group WAN_FAILOVER lb-local disable
-set load-balance group WAN_FAILOVER lb-local-metric-change disable
-commit; save
+$ configure
+$ set load-balance group WAN_FAILOVER interface eth0 failover-only
+$ set load-balance group WAN_FAILOVER interface eth0 route table 1
+$ set load-balance group WAN_FAILOVER interface eth1 route table 2
+$ set load-balance group WAN_FAILOVER lb-local disable
+$ set load-balance group WAN_FAILOVER lb-local-metric-change disable
+$ commit; save
 ```
 
 ## ファイアウォールの設定
@@ -144,10 +144,10 @@ commit; save
 ここでは `eth1` の配下にあるクライアントからのパケットをロードバランシングの対象にしていますが、他のインターフェイスや `switch0` などでも正常に動作します。
 
 ```bash
-configure
-set firewall modify LAN_PBR rule 10 modify lb-group WAN_FAILOVER
-set interfaces ethernet eth1 firewall in modify LAN_PBR
-commit; save
+$ configure
+$ set firewall modify LAN_PBR rule 10 modify lb-group WAN_FAILOVER
+$ set interfaces ethernet eth1 firewall in modify LAN_PBR
+$ commit; save
 ```
 
 ## 最後に

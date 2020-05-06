@@ -121,12 +121,18 @@ module.exports = {
             options: {
               inlineCodeMarker: '¦',
               aliases: {
-                shell: 'bash',
                 xaml: 'xml',
               },
-              prompt: {
-                global: true,
-              },
+              languageExtensions: [
+                {
+                  extend: 'bash',
+                  insertBefore: {
+                    function: {
+                      prompt: /^\$ /mu,
+                    },
+                  },
+                },
+              ],
             },
           },
           { resolve: '@weknow/gatsby-remark-twitter' },

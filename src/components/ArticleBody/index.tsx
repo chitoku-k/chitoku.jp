@@ -195,6 +195,14 @@ const ArticleContent = styled.div`
     background-color: #f4f2f0;
     border-radius: 0.3em;
     margin: 0.5em 16px 1.8em;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    pre[class*="language-"] {
+      overflow: visible;
+      display: inline-block;
+      margin: 1em;
+      padding: 0;
+    }
     ${media.lessThan('tablet')`
       margin-left: 13px;
       margin-right: 13px;
@@ -214,35 +222,24 @@ const ArticleContent = styled.div`
     .token.string {
       background: none;
     }
+    .token.prompt {
+      user-select: none;
+      color: slategray;
+    }
     ${media.lessThan('sp')`
       border-radius: 0;
     `}
   }
   pre[class*="language-"] {
-    -webkit-overflow-scrolling: touch;
     padding: 1em;
     &.line-numbers {
       padding-left: 3.6em;
       .line-numbers-rows {
-        top: 1em;
         min-width: 3em;
         letter-spacing: 0;
         > span::before {
           padding-left: 0.8em;
         }
-      }
-    }
-    .command-line-prompt {
-      letter-spacing: 0;
-      border-right: none;
-      margin-right: 0;
-      > span::before {
-        padding-right: 0;
-      }
-      > span[data-user]::before {
-        content: "$";
-        color: slategray;
-        padding-right: 1ex;
       }
     }
     ${media.lessThan('sp')`

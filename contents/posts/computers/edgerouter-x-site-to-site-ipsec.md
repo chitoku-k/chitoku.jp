@@ -54,41 +54,41 @@ So-net 光 プラスは、フレッツ光とプロバイダー契約がセット
 CLI から設定を行います。ここでは IKEv2 で設定しています。  
 また、EdgeRouter 側をイニシエーター（`connection-type initiate`）としています。
 
-```bash{outputLines: 2,3,10,11,18,19,33}
-configure
+```bash
+$ configure
 
 # ESP の構成
-set vpn ipsec esp-group ESP-1 compression disable
-set vpn ipsec esp-group ESP-1 lifetime 86400
-set vpn ipsec esp-group ESP-1 mode tunnel
-set vpn ipsec esp-group ESP-1 pfs enable
-set vpn ipsec esp-group ESP-1 proposal 1 encryption aes128
-set vpn ipsec esp-group ESP-1 proposal 1 hash sha1
+$ set vpn ipsec esp-group ESP-1 compression disable
+$ set vpn ipsec esp-group ESP-1 lifetime 86400
+$ set vpn ipsec esp-group ESP-1 mode tunnel
+$ set vpn ipsec esp-group ESP-1 pfs enable
+$ set vpn ipsec esp-group ESP-1 proposal 1 encryption aes128
+$ set vpn ipsec esp-group ESP-1 proposal 1 hash sha1
 
 # IKE の構成
-set vpn ipsec ike-group IKE-1 ikev2-reauth yes
-set vpn ipsec ike-group IKE-1 key-exchange ikev2
-set vpn ipsec ike-group IKE-1 lifetime 86400
-set vpn ipsec ike-group IKE-1 proposal 1 dh-group 14
-set vpn ipsec ike-group IKE-1 proposal 1 encryption aes128
-set vpn ipsec ike-group IKE-1 proposal 1 hash sha1
+$ set vpn ipsec ike-group IKE-1 ikev2-reauth yes
+$ set vpn ipsec ike-group IKE-1 key-exchange ikev2
+$ set vpn ipsec ike-group IKE-1 lifetime 86400
+$ set vpn ipsec ike-group IKE-1 proposal 1 dh-group 14
+$ set vpn ipsec ike-group IKE-1 proposal 1 encryption aes128
+$ set vpn ipsec ike-group IKE-1 proposal 1 hash sha1
 
 # ピアの構成
-set vpn ipsec site-to-site peer site-b.example.com authentication id site-a.example.com
-set vpn ipsec site-to-site peer site-b.example.com authentication remote-id site-b.example.com
-set vpn ipsec site-to-site peer site-b.example.com authentication mode pre-shared-secret
-set vpn ipsec site-to-site peer site-b.example.com authentication pre-shared-secret XXXXXXXXXXXXXXXX
-set vpn ipsec site-to-site peer site-b.example.com connection-type initiate
-set vpn ipsec site-to-site peer site-b.example.com ike-group IKE-1
-set vpn ipsec site-to-site peer site-b.example.com ikev2-reauth inherit
-set vpn ipsec site-to-site peer site-b.example.com local-address '2001:db8:1::1'
-set vpn ipsec site-to-site peer site-b.example.com tunnel 1 allow-nat-networks disable
-set vpn ipsec site-to-site peer site-b.example.com tunnel 1 allow-public-networks disable
-set vpn ipsec site-to-site peer site-b.example.com tunnel 1 esp-group ESP-1
-set vpn ipsec site-to-site peer site-b.example.com tunnel 1 local prefix '2001:db8:1::/80'
-set vpn ipsec site-to-site peer site-b.example.com tunnel 1 remote prefix '2001:db8:2::/80'
+$ set vpn ipsec site-to-site peer site-b.example.com authentication id site-a.example.com
+$ set vpn ipsec site-to-site peer site-b.example.com authentication remote-id site-b.example.com
+$ set vpn ipsec site-to-site peer site-b.example.com authentication mode pre-shared-secret
+$ set vpn ipsec site-to-site peer site-b.example.com authentication pre-shared-secret XXXXXXXXXXXXXXXX
+$ set vpn ipsec site-to-site peer site-b.example.com connection-type initiate
+$ set vpn ipsec site-to-site peer site-b.example.com ike-group IKE-1
+$ set vpn ipsec site-to-site peer site-b.example.com ikev2-reauth inherit
+$ set vpn ipsec site-to-site peer site-b.example.com local-address '2001:db8:1::1'
+$ set vpn ipsec site-to-site peer site-b.example.com tunnel 1 allow-nat-networks disable
+$ set vpn ipsec site-to-site peer site-b.example.com tunnel 1 allow-public-networks disable
+$ set vpn ipsec site-to-site peer site-b.example.com tunnel 1 esp-group ESP-1
+$ set vpn ipsec site-to-site peer site-b.example.com tunnel 1 local prefix '2001:db8:1::/80'
+$ set vpn ipsec site-to-site peer site-b.example.com tunnel 1 remote prefix '2001:db8:2::/80'
 
-commit; save
+$ commit; save
 ```
 
 ## Linux サーバー側の設定
