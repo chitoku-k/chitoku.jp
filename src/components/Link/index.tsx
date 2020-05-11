@@ -2,14 +2,17 @@ import React, { AnchorHTMLAttributes, DetailedHTMLProps, FunctionComponent } fro
 import isUrl from 'is-url'
 import GatsbyLink, { GatsbyLinkProps } from 'gatsby-link'
 
+import { ArticleWrapper } from 'components/Article'
+
 const isAnchor = (to: string): boolean => to.startsWith('#')
 
-const Link: FunctionComponent<GatsbyLinkProps<{}> & LinkProps> = ({
+const Link: FunctionComponent<GatsbyLinkProps<{}> & LinkProps & Partial<ArticleWrapper>> = ({
   to,
   href,
   children,
   ref,
   target,
+  article,
   ...rest
 }) => {
   const dest = (to || href) ?? ''
