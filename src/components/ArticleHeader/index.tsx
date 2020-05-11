@@ -31,9 +31,7 @@ const MainContentTitle = styled.h1`
 
 const ArticleHeader: FunctionComponent<ArticleHeaderProps & Omit<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>, 'title'>> = ({
   children,
-  /* eslint-disable @typescript-eslint/no-unused-vars */
   ref,
-  /* eslint-enable @typescript-eslint/no-unused-vars */
   title,
   ...rest
 }) => (
