@@ -59,6 +59,7 @@ module.exports = {
         trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_ID,
       },
     },
+    { resolve: 'gatsby-plugin-minify-html' },
     { resolve: 'gatsby-plugin-no-sourcemaps' },
     { resolve: 'gatsby-plugin-react-helmet' },
     {
@@ -76,7 +77,12 @@ module.exports = {
       },
     },
     { resolve: 'gatsby-plugin-sharp' },
-    { resolve: 'gatsby-plugin-styled-components' },
+    {
+      resolve: 'gatsby-plugin-styled-components',
+      options: {
+        displayName: process.env.NODE_ENV === 'development',
+      },
+    },
     {
       resolve: 'gatsby-plugin-ts',
       options: {
