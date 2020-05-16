@@ -89,7 +89,6 @@
     "yaml-flat-loader": "^1.0.2"
   },
   "resolutions": {
-    "gatsby-remark-grid-tables/remark-grid-tables": "^1.4.0",
     "react-bootstrap/react-overlays/@popperjs/core": "^2.4.0"
   },
   "scripts": {
