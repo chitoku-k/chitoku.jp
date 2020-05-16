@@ -1,80 +1,80 @@
 components:
-  Mail:
-    mail: メールアドレス
-    name: お名前
-    send: 送信
-    about: プロフィール
-    title: メール
-    message: メッセージ
-    subject: 件名
-    required: （必須）
-    submission_error: メールの送信ができませんでした
-    contact_me_on_sns: SNS でのご連絡の場合、より早くお返事できるかもしれません。
-    submission_accepted: メールの送信を受け付けました
-    contact_me_from_about: 'アカウントは{about}からご覧いただけます。'
-    submission_processing: 送信しています……
   About:
     icon: 'Icon by {name}'
+    interests: 興味
+    introduction: 自己紹介
     mail: メール
     name: 名前
-    title: プロフィール
-    interests: 興味
     occupation: 職業
-    introduction: 自己紹介
-  Links:
-    title: リンク
+    title: プロフィール
   Article:
     more: 続きを読む »
+  Footer:
+    copyright: '© Chitoku 2014 ({link})'
   Latest:
     title: 最近の投稿
-  NotFound:
-    try: 次の方法をお試しください。
-    home: トップページ
-    title: ページがありません
-    give_up: あきらめる
-    requested: 'リクエストされた URL: {url}'
-    go_to_home: '{home}に移動する'
-    description: お探しのページが見つかりませんでした。URL が変更された、または削除された可能性があります。ご不便をおかけして申し訳ありません。
-    follow_me_on: '{service} で {account} をフォローする'
-    administrator: 管理人
-    complain_to_administrator: '{administrator}に文句を言う'
-  Sidebar:
-    links: 投稿リンク
-    share: 共有
-    hatena: はてなブックマーク
-    pocket: Pocket
-    tumblr: Tumblr
-    twitter: Twitter
-    facebook: Facebook
-    share_on: '{service} で共有'
-    latest_articles: 最近の投稿
+  Links:
+    title: リンク
+  Mail:
+    about: プロフィール
+    contact_me_from_about: 'アカウントは{about}からご覧いただけます。'
+    contact_me_on_sns: SNS でのご連絡の場合、より早くお返事できるかもしれません。
+    mail: メールアドレス
+    message: メッセージ
+    name: お名前
+    required: （必須）
+    send: 送信
+    subject: 件名
+    submission_accepted: メールの送信を受け付けました
+    submission_error: メールの送信ができませんでした
+    submission_processing: 送信しています……
+    title: メール
   Metadata:
     title: ちとくのホームページ
     title_template: '{title} – ちとくのホームページ'
+  NotFound:
+    administrator: 管理人
+    complain_to_administrator: '{administrator}に文句を言う'
+    description: お探しのページが見つかりませんでした。URL が変更された、または削除された可能性があります。ご不便をおかけして申し訳ありません。
+    follow_me_on: '{service} で {account} をフォローする'
+    give_up: あきらめる
+    go_to_home: '{home}に移動する'
+    home: トップページ
+    requested: 'リクエストされた URL: {url}'
+    title: ページがありません
+    try: 次の方法をお試しください。
   Pagination:
     next: »
-    prev: «
     next_page: 次へ »
+    prev: «
     prev_page: « 前へ
-  Footer:
-    copyright: '© Chitoku 2014 ({link})'
+  PspErrorCodes:
+    description: 説明
+    error_code: エラー番号
   SearchForm:
     cancel: キャンセル
-    search: 検索
     enable_javascript: 検索を利用するためには、JavaScript の設定を有効にしてください
+    search: 検索
   SearchResult:
-    title: 検索
-    not_found: '{text} を含む記事が見つかりませんでした。'
-    title_text: '検索結果: {text}'
-    how_to_search: 検索したいキーワードを入力してください。
-    breadcrumb_path: 'https://chitoku.jp{path}'
-    not_found_hints: 記事のタイトル、カテゴリー、タグ、本文冒頭のみが検索の対象です。
     breadcrumb_category: 'https://chitoku.jp › {category}'
+    breadcrumb_path: 'https://chitoku.jp{path}'
+    how_to_search: 検索したいキーワードを入力してください。
+    not_found: '{text} を含む記事が見つかりませんでした。'
+    not_found_hints: 記事のタイトル、カテゴリー、タグ、本文冒頭のみが検索の対象です。
+    title: 検索
+    title_text: '検索結果: {text}'
+  Sidebar:
+    facebook: Facebook
+    hatena: はてなブックマーク
+    latest_articles: 最近の投稿
+    links: 投稿リンク
+    pocket: Pocket
+    share: 共有
+    share_on: '{service} で共有'
+    tumblr: Tumblr
+    twitter: Twitter
   SoarerDownload:
-    history: 更新履歴 ▶
     download: 'ダウンロード ({size})'
+    history: 更新履歴 ▶
   SoarerHistory:
     download: ダウンロード
-  PspErrorCodes:
-    error_code: エラー番号
-    description: 説明
