@@ -1,7 +1,7 @@
 import React, { DetailedHTMLProps, FunctionComponent } from 'react'
 import { Dropdown as BootstrapDropdown } from 'react-bootstrap'
 import { Location } from '@reach/router'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { media } from 'components/Layout'
 import { NavigationLinkItem } from 'components/Navbar'
@@ -61,24 +61,21 @@ export const NavLink = styled(Link)`
       background-color: #34495e;
       text-decoration: none;
     }
-    ${media.greaterThan('wide-pc')`
+    ${media.md.up()} {
       padding: 20px 24px;
-    `}
-    ${media.lessThan('tablet')`
-      padding: 20px;
-    `}
-    ${media.lessThan('sp')`
+    }
+    ${media.sm.down()} {
       padding: 12px;
-    `}
+    }
   }
   .dropdown-menu > li > & {
     padding: 15px 24px;
   }
   &.dropdown-toggle::after {
     margin-left: 4px;
-    ${media.lessThan('sp')`
+    ${media.sm.down()} {
       display: none;
-    `}
+    }
   }
 `
 
@@ -92,7 +89,7 @@ const NavItem: FunctionComponent<NavItemProps & BootstrapNavItemProps & Navigati
 }) => (
   <Location>
     {({ location }) => items ? (
-      <Dropdown forwardedAs="li" id={to} {...getClassName(to === location.pathname, dropdown, className)}>
+      <Dropdown as="li" id={to} {...getClassName(to === location.pathname, dropdown, className)}>
         <NavLink to={to} className={dropdown ? 'dropdown-toggle' : ''}>
           {name}
         </NavLink>

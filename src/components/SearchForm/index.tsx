@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Container, Navbar, Popover, Row } from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { useIntl } from 'react-intl'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { SearchBoxProvided } from 'react-instantsearch-core'
 import { connectSearchBox } from 'react-instantsearch-dom'
 
@@ -11,9 +11,10 @@ import messages from './messages'
 
 const FormDesktop = styled(Navbar)`
   position: relative;
-  ${media.lessThan('sp')`
+  padding: 0;
+  ${media.sm.down()} {
     display: none;
-  `}
+  }
 `
 
 const FormDesktopInput = styled.input`
@@ -23,9 +24,9 @@ const FormDesktopInput = styled.input`
   border: none;
   border-radius: 16px;
   box-shadow: 0 3px 5px 1px #d8d8d8 inset;
-  ${media.lessThan('tablet')`
+  ${media.md.down()} {
     width: 200px;
-  `}
+  }
   &:focus {
     outline: none;
   }
@@ -36,9 +37,9 @@ const FormDesktopInput = styled.input`
 
 const FormMobileContainer = styled(Container)`
   display: none;
-  ${media.lessThan('sp')`
+  ${media.sm.down()} {
     display: block;
-  `}
+  }
 `
 
 const FormMobileCancelContainer = styled.div`
@@ -48,7 +49,9 @@ const FormMobileCancelContainer = styled.div`
   margin-right: 8px;
 `
 
-const FormMobile = styled(Container)``
+const FormMobile = styled(Container)`
+  padding: 0;
+`
 
 const FormMobileRow = styled(Row)`
   align-items: center;

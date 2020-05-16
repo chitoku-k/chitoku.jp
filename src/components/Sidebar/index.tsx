@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
 import { WindowLocation } from '@reach/router'
 import FontAwesome from 'react-fontawesome'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { SidebarItemQuery } from 'graphql-types'
 import messages from './messages'
@@ -67,12 +67,12 @@ const SidebarContainer = styled(Col)`
   top: 15px;
   position: static;
   position: sticky;
-  ${media.lessThan('tablet')`
+  ${media.md.down()} {
     flex: 0 0 100%;
     max-width: 100%;
     width: 100%;
     padding: 0;
-  `}
+  }
 `
 
 const SidebarItem = styled.div`
@@ -88,13 +88,13 @@ const SidebarItem = styled.div`
     min-height: 250px;
     -webkit-overflow-scrolling: touch;
   }
-  ${media.lessThan('tablet')`
+  ${media.md.down()} {
     margin: 15px 0 0 0;
     padding: 15px;
-  `}
-  ${media.lessThan('sp')`
+  }
+  ${media.sm.down()} {
     border-radius: 0;
-  `}
+  }
 `
 
 const SidebarItemTitle = styled.h2`
@@ -125,9 +125,9 @@ const SidebarItemList = styled.ul`
       }
     }
   }
-  ${media.greaterThan('small-pc')`
+  ${media.md.up()} {
     padding-left: 28px;
-  `}
+  }
 `
 
 const SidebarItemListIcon = styled(FontAwesome)`
@@ -145,15 +145,13 @@ const SidebarItemAttribute = styled.div`
   .fa {
     margin-right: 4px;
   }
-  & + & {
-    &::before {
-      content: "•";
-      margin-right: 4px;
-    }
-  }
 `
 
 const SidebarItemCategory = styled(SidebarItemAttribute)`
+  &::before {
+    content: "•";
+    margin-right: 4px;
+  }
   a {
     color: #757575;
   }
@@ -211,7 +209,7 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
   const url = siteUrl + location.pathname
 
   return (
-    <SidebarContainer forwardedAs="aside">
+    <SidebarContainer as="aside">
       <SidebarItem>
         <SidebarItemTitle>
           {formatMessage(messages.share)}

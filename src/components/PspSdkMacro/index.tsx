@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useEffect, useRef } from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-c'
 
@@ -13,12 +13,12 @@ const linebreakThreshold = 2
 const PspSdkMacroEntry = styled.div`
   padding: 0 16px;
   margin-bottom: 32px;
-  ${media.lessThan('tablet')`
+  ${media.md.down()} {
     padding: 0 13px;
-  `}
-  ${media.lessThan('sp')`
+  }
+  ${media.sm.down()} {
     padding: 0;
-  `}
+  }
 `
 
 const PspSdkMacroPrototype = styled.code`
@@ -48,11 +48,11 @@ const PspSdkMacroDescription = styled.div`
   line-height: 1.8;
   margin-bottom: 2px;
   padding: 0 8px;
-  ${media.lessThan('sp')`
+  ${media.sm.down()} {
     ul {
       padding-left: 20px;
     }
-  `}
+  }
 `
 
 const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({

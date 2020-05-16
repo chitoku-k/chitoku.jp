@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { SoarerDownloadItemQuery } from 'graphql-types'
 import messages from './messages'
@@ -40,9 +40,9 @@ const SoarerDownloadContainer = styled.div`
 const SoarerDownloadIcon = styled.img`
   width: 48px;
   margin: 0 15px !important;
-  ${media.lessThan('sp')`
+  ${media.sm.down()} {
     margin-left: 0 !important;
-  `}
+  }
 `
 
 const SoarerDownloadTitle = styled.h2`
@@ -51,13 +51,13 @@ const SoarerDownloadTitle = styled.h2`
   br {
     display: none;
   }
-  ${media.lessThan('sp')`
+  ${media.sm.down()} {
     font-size: 120% !important;
     line-height: 1.2;
     br {
       display: inline;
     }
-  `}
+  }
 `
 
 const SoarerDownloadDescription = styled.div`
@@ -67,7 +67,7 @@ const SoarerDownloadDescription = styled.div`
   .btn .fa {
     margin-right: 8px;
   }
-  ${media.lessThan('sp')`
+  ${media.sm.down()} {
     margin-top: 20px;
     margin-left: 0;
     .btn {
@@ -75,7 +75,7 @@ const SoarerDownloadDescription = styled.div`
       margin-bottom: 5px;
       padding: 7px 14px;
     }
-  `}
+  }
 `
 
 const SoarerDownload: FunctionComponent<ArticleWrapper> = () => {

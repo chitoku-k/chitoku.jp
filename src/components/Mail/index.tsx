@@ -3,7 +3,7 @@ import { Alert, Button, FormControl, FormGroup } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3'
 import FontAwesome from 'react-fontawesome'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
@@ -97,7 +97,7 @@ const Mail: FunctionComponent = () => {
       setStatus('error')
       throw err
     }
-  }, [ token ])
+  }, [ siteApi, token ])
 
   useEffect(() => {
     loadReCaptcha(siteKey)
@@ -124,22 +124,22 @@ const Mail: FunctionComponent = () => {
         <form onSubmit={onSubmit}>
           <FormGroup>
             <Label required title={formatMessage(messages.name)}>
-              <Input name="name" size={40} required readOnly={readOnly} />
+              <Input name="name" size="sm" required readOnly={readOnly} />
             </Label>
           </FormGroup>
           <FormGroup>
             <Label title={formatMessage(messages.mail)}>
-              <Input name="email" size={40} readOnly={readOnly} />
+              <Input name="email" size="sm" readOnly={readOnly} />
             </Label>
           </FormGroup>
           <FormGroup>
             <Label required title={formatMessage(messages.subject)}>
-              <Input name="subject" size={40} required readOnly={readOnly} />
+              <Input name="subject" size="sm" required readOnly={readOnly} />
             </Label>
           </FormGroup>
           <FormGroup>
             <Label required title={formatMessage(messages.message)}>
-              <Input name="body" forwardedAs="textarea" cols={40} rows={10} required readOnly={readOnly} />
+              <Input name="body" as="textarea" cols={40} rows={10} required readOnly={readOnly} />
             </Label>
           </FormGroup>
           <ReCaptcha action="mail" sitekey={siteKey} verifyCallback={setToken} />

@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import Logo from '../../assets/logo.svg'
 import { media } from 'components/Layout'
@@ -8,10 +8,10 @@ import { Container, Row } from 'react-bootstrap'
 
 const HeaderContainer = styled(Container)`
   margin: 0 auto;
-  ${media.lessThan('sp')`
+  ${media.sm.down()} {
     width: auto;
     margin: 12px 10px 16px;
-  `}
+  }
 `
 
 const HeaderTitle = styled.h1`
@@ -20,15 +20,16 @@ const HeaderTitle = styled.h1`
   svg {
     vertical-align: baseline;
   }
-  ${media.lessThan('sp')`
+  ${media.sm.down()} {
     text-align: center;
     margin: 6px auto 0;
-    &, svg {
+    &,
+    svg {
       width: auto;
       height: 32px;
       max-width: 100%;
     }
-  `}
+  }
 `
 
 const HeaderLink = styled(Link)`
@@ -36,7 +37,7 @@ const HeaderLink = styled(Link)`
 `
 
 const Header: FunctionComponent = () => (
-  <HeaderContainer forwardedAs="header">
+  <HeaderContainer as="header">
     <Row>
       <HeaderTitle>
         <HeaderLink to="/">

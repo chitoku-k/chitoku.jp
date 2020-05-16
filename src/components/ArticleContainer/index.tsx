@@ -1,5 +1,5 @@
 import React, { DetailedHTMLProps, FunctionComponent, HTMLAttributes } from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { media } from 'components/Layout'
 
@@ -11,20 +11,20 @@ const MainContent = styled.article`
   border-radius: 3px;
   & + & {
     margin-top: 20px;
-    ${media.lessThan('tablet')`
+    ${media.md.down()} {
       margin-top: 15px;
-    `}
+    }
   }
   .row {
     margin-left: 0;
     margin-right: 0;
   }
-  ${media.lessThan('tablet')`
+  ${media.md.down()} {
     padding: 15px;
-  `}
-  ${media.lessThan('sp')`
+  }
+  ${media.sm.down()} {
     border-radius: 0;
-  `}
+  }
 `
 
 const ArticleContainer: FunctionComponent<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>> = ({

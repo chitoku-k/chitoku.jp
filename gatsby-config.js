@@ -53,6 +53,7 @@ module.exports = {
       },
     ] : []),
     { resolve: 'gatsby-plugin-catch-links' },
+    { resolve: 'gatsby-plugin-emotion' },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
@@ -77,12 +78,6 @@ module.exports = {
       },
     },
     { resolve: 'gatsby-plugin-sharp' },
-    {
-      resolve: 'gatsby-plugin-styled-components',
-      options: {
-        displayName: process.env.NODE_ENV === 'development',
-      },
-    },
     {
       resolve: 'gatsby-plugin-ts',
       options: {

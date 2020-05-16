@@ -5,7 +5,6 @@
 @import "~prismjs/plugins/command-line/prism-command-line";
 @import "~prismjs/plugins/line-numbers/prism-line-numbers";
 
-@import "mixin";
 @import "pages";
 @import "pages/soarer";
 @import "pages/softwares";
@@ -70,7 +69,7 @@ button {
 .gist {
   .gist-data,
   .gist-meta {
-    @include media-small-pc {
+    @include media-breakpoint-up(md) {
       padding-left: 16px;
     }
   }

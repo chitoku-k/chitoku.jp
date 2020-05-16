@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import FontAwesome from 'react-fontawesome'
 import { useIntl } from 'react-intl'
 import { GatsbyLinkProps } from 'gatsby-link'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import messages from './messages'
 import Link from 'components/Link'
@@ -81,7 +81,8 @@ export const TwitterShareButton: FunctionComponent<TwitterShareButtonProps> = ({
   url,
 }) => {
   const { formatMessage } = useIntl()
-  const to = `https://twitter.com/share?text=${encodeURIComponent(title ?? '')}&url=${encodeURIComponent(url)}`
+  const base = 'https://twitter.com/share'
+  const to = `${base}?text=${encodeURIComponent(title ?? '')}&url=${encodeURIComponent(url)}`
 
   return (
     <ShareButton to={to} color="#00b0ed" hover="#009cd9" title={formatMessage(messages.share_on, { service: formatMessage(messages.twitter) })}>
@@ -94,7 +95,8 @@ export const FacebookShareButton: FunctionComponent<ShareButtonProps> = ({
   url,
 }) => {
   const { formatMessage } = useIntl()
-  const to = `https://www.facebook.com/sharer.php?u=${encodeURIComponent(url)}`
+  const base = 'https://www.facebook.com/sharer.php'
+  const to = `${base}?u=${encodeURIComponent(url)}`
 
   return (
     <ShareButton to={to} color="#315096" hover="#1d3c82" title={formatMessage(messages.share_on, { service: formatMessage(messages.facebook) })}>
@@ -108,7 +110,8 @@ export const PocketShareButton: FunctionComponent<PocketShareButtonProps> = ({
   title,
 }) => {
   const { formatMessage } = useIntl()
-  const to = `https://getpocket.com/edit?title=${encodeURIComponent(title ?? '')}&url=${encodeURIComponent(url)}`
+  const base = 'https://getpocket.com/edit'
+  const to = `${base}?title=${encodeURIComponent(title ?? '')}&url=${encodeURIComponent(url)}`
 
   return (
     <ShareButton to={to} color="#ff2651" hover="#eb126e" title={formatMessage(messages.share_on, { service: formatMessage(messages.pocket) })}>
@@ -121,7 +124,8 @@ export const HatenaShareButton: FunctionComponent<ShareButtonProps> = ({
   url,
 }) => {
   const { formatMessage } = useIntl()
-  const to = `https://b.hatena.ne.jp/add?mode=confirm&url=${encodeURIComponent(url)}`
+  const base = 'https://b.hatena.ne.jp/add'
+  const to = `${base}?mode=confirm&url=${encodeURIComponent(url)}`
 
   return (
     <ShareButton to={to} color="#008fde" hover="#007bca" title={formatMessage(messages.share_on, { service: formatMessage(messages.hatena) })}>
@@ -134,7 +138,9 @@ export const TumblrShareButton: FunctionComponent<ShareButtonProps> = ({
   url,
 }) => {
   const { formatMessage } = useIntl()
-  const to = `https://www.tumblr.com/share/link?url=${encodeURIComponent(url)}`
+  const base = 'https://www.tumblr.com/share/link'
+  const to = `${base}?url=${encodeURIComponent(url)}`
+
   return (
     <ShareButton to={to} color="#35465c" hover="#213248" title={formatMessage(messages.share_on, { service: formatMessage(messages.twitter) })}>
       <ShareButtonIcon name="tumblr" />

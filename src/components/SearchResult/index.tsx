@@ -3,7 +3,7 @@ import { FormattedMessage, useIntl } from 'react-intl'
 import { Hit, StateResultsProvided } from 'react-instantsearch-core'
 import { Hits, PoweredBy, connectStateResults } from 'react-instantsearch-dom'
 import Highlighter from 'react-highlight-words'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'

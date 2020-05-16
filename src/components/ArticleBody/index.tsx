@@ -1,6 +1,6 @@
 import React, { ComponentType, FunctionComponent, useMemo } from 'react'
 import RehypeReact from 'rehype-react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { ArticleWrapper } from 'components/Article'
 import { media } from 'components/Layout'
@@ -19,40 +19,40 @@ const ArticleContent = styled.div`
       background: none;
       border: none;
     }
-    ${media.lessThan('tablet')`
+    ${media.md.down()} {
       padding: 7px 12px;
-    `}
-    ${media.lessThan('sp')`
+    }
+    ${media.sm.down()} {
       font-size: 120%;
       margin: 30px -15px 15px;
       padding: 7px 15px;
       border-width: 1px 0;
-    `}
+    }
   }
   h3 {
     font-size: 120%;
     border-bottom: 1px solid #d4d4d4;
     margin: 50px 0 15px;
     padding: 0 16px 5px;
-    ${media.lessThan('tablet')`
+    ${media.md.down()} {
       font-size: 110%;
       padding-left: 13px;
       padding-right: 13px;
-    `}
-    ${media.lessThan('sp')`
+    }
+    ${media.sm.down()} {
       margin: 10px -15px 15px;
       padding: 6px 15px;
-    `}
+    }
   }
   a.anchor {
     width: 55px;
     top: auto;
-    ${media.lessThan('sp')`
+    ${media.sm.down()} {
       width: auto;
       left: auto;
       right: 8px;
       transform: none;
-    `}
+    }
   }
   p {
     font-size: 11pt;
@@ -61,13 +61,13 @@ const ArticleContent = styled.div`
   > div {
     > p {
       padding: 0 16px;
-      ${media.lessThan('tablet')`
+      ${media.md.down()} {
         padding: 0 13px;
         font-size: 14px;
-      `}
-      ${media.lessThan('sp')`
+      }
+      ${media.sm.down()} {
         padding: 0;
-      `}
+      }
     }
     > p,
     > ul,
@@ -90,10 +90,10 @@ const ArticleContent = styled.div`
   blockquote {
     border-left: 5px solid #eee;
     padding: 10px 20px;
-    ${media.lessThan('sp')`
+    ${media.sm.down()} {
       margin-left: 10px;
       padding-left: 15px;
-    `}
+    }
   }
   img {
     &:not(.gatsby-resp-image-image) {
@@ -122,9 +122,9 @@ const ArticleContent = styled.div`
             padding: 0;
             margin-bottom: 0;
           }
-          ${media.lessThan('sp')`
+          ${media.sm.down()} {
             white-space: nowrap;
-          `}
+          }
         }
         &:last-child {
           > td,
@@ -134,12 +134,12 @@ const ArticleContent = styled.div`
         }
       }
     }
-    ${media.lessThan('sp')`
+    ${media.sm.down()} {
       display: block;
       overflow: auto;
       margin: 10px -15px;
       width: calc(100% + 30px);
-    `}
+    }
   }
   .footnote-ref {
     &::before {
@@ -173,9 +173,9 @@ const ArticleContent = styled.div`
       padding: 0;
       margin-bottom: 0;
     }
-    ${media.lessThan('sp')`
+    ${media.sm.down()} {
       text-align: left;
-    `}
+    }
   }
 
   /* Images */
@@ -203,15 +203,15 @@ const ArticleContent = styled.div`
       margin: 1em;
       padding: 0;
     }
-    ${media.lessThan('tablet')`
+    ${media.md.down()} {
       margin-left: 13px;
       margin-right: 13px;
-    `}
-    ${media.lessThan('sp')`
+    }
+    ${media.sm.down()} {
       border-radius: 0;
       margin-left: -15px;
       margin-right: -15px;
-    `}
+    }
   }
   pre[class*="language-"],
   code[class*="language-"] {
@@ -226,9 +226,9 @@ const ArticleContent = styled.div`
       user-select: none;
       color: slategray;
     }
-    ${media.lessThan('sp')`
+    ${media.sm.down()} {
       border-radius: 0;
-    `}
+    }
   }
   pre[class*="language-"] {
     padding: 1em;
@@ -242,9 +242,9 @@ const ArticleContent = styled.div`
         }
       }
     }
-    ${media.lessThan('sp')`
+    ${media.sm.down()} {
       padding: 15px;
-    `}
+    }
   }
   .monospace {
     pre[class*="language-"],
