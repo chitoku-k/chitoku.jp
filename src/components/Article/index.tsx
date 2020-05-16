@@ -2,7 +2,7 @@ import React, { FunctionComponent, ReactNode } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { useIntl } from 'react-intl'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { ArticleFragment, ArticleQuery } from 'graphql-types'
 import messages from './messages'
@@ -55,11 +55,11 @@ const ArticleNav = styled(Nav)`
       text-align: center;
       padding-left: 0;
       padding-right: 0;
-      ${media.lessThan('sp')`
+      ${media.sm.down()} {
         width: 100% !important;
         display: block;
         text-align: left;
-      `}
+      }
     }
     > li > a {
       &:hover,
@@ -186,7 +186,7 @@ const Article: FunctionComponent<ArticleProps> = ({
         </ArticleHeader>
         {navigation ? (
           <ArticleNavbar bg="light">
-            <ArticleNav forwardedAs="ul">
+            <ArticleNav as="ul">
               {navigation.map(item => (
                 <ArticleNavItem key={item.name} {...item} style={{ width: `calc(100% / ${navigation.length})` }} />
               ))}

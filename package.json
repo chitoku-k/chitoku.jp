@@ -5,6 +5,8 @@
   "description": "ちとくのホームページ",
   "devDependencies": {
     "@babel/plugin-transform-typescript": "^7.9.6",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "@rstacruz/gatsby-remark-component": "^2.0.0",
     "@types/is-url": "^1.2.28",
     "@types/prismjs": "^1.16.1",
@@ -16,15 +18,13 @@
     "@types/react-highlight-words": "^0.16.1",
     "@types/react-instantsearch-core": "^6.3.0",
     "@types/react-instantsearch-dom": "^6.3.0",
-    "@types/styled-components": "^5.1.0",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "@weknow/gatsby-remark-twitter": "^0.2.3",
     "algoliasearch": "^4.2.0",
     "babel-plugin-react-intl-auto": "^3.3.0",
-    "babel-plugin-styled-components": "^1.10.7",
-    "babel-preset-gatsby": "^0.4.2",
     "bootstrap": "^4.5.0",
+    "emotion-theming": "^10.0.27",
     "eslint": "^7.0.0",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.2",
@@ -34,6 +34,7 @@
     "gatsby-image": "^2.4.3",
     "gatsby-plugin-algolia": "^0.11.0",
     "gatsby-plugin-catch-links": "^2.3.1",
+    "gatsby-plugin-emotion": "^4.3.1",
     "gatsby-plugin-google-analytics": "^2.3.1",
     "gatsby-plugin-minify-html": "^1.0.1",
     "gatsby-plugin-no-sourcemaps": "^2.2.0",
@@ -41,7 +42,6 @@
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.3.1",
     "gatsby-plugin-sharp": "chitoku-k/gatsby-plugin-sharp#566121f",
-    "gatsby-plugin-styled-components": "^3.3.1",
     "gatsby-plugin-ts": "^2.7.1",
     "gatsby-remark-attr": "^0.0.3",
     "gatsby-remark-autolink-headers": "^2.3.2",
@@ -59,6 +59,7 @@
     "husky": "^4.2.5",
     "is-url": "^1.2.4",
     "lint-staged": "^10.2.2",
+    "postcss-styled": "^0.34.0",
     "prismjs": "^1.20.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
@@ -73,12 +74,9 @@
     "rehype-react": "^5.0.1",
     "sass": "^1.26.5",
     "schema-dts": "^0.5.3",
-    "styled-components": "^5.1.0",
-    "styled-media-query": "^2.1.2",
+    "styled-breakpoints": "^8.1.1",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.10.0",
     "stylelint-scss": "^3.17.2",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "twemoji": "^13.0.0",
@@ -96,7 +94,7 @@
     "lint:js": "eslint '{src,plugins}/**/*.js'",
     "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
     "lint:css": "stylelint 'src/**/*.scss'",
-    "lint:styled": "stylelint --config .stylelintrc.styled.json 'src/**/*.tsx'",
+    "lint:styled": "stylelint --custom-syntax=postcss-styled 'src/**/*.tsx'",
     "start": "gatsby develop"
   },
   "husky": {
@@ -109,7 +107,7 @@
       "eslint --fix"
     ],
     "*.tsx": [
-      "stylelint --config .stylelintrc.styled.json"
+      "stylelint --fix --custom-syntax=postcss-styled"
     ],
     "*.scss": [
       "stylelint --fix"

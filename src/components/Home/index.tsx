@@ -1,6 +1,6 @@
 import React, { Fragment, FunctionComponent } from 'react'
 import { Col, Row } from 'react-bootstrap'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { HomeItemQuery } from 'graphql-types'
 import { media } from 'components/Layout'
@@ -29,7 +29,7 @@ const HomeMenuItem = styled(Col)`
   margin-bottom: 20px;
   color: #333;
   text-align: center;
-  ${media.lessThan('sp')`
+  ${media.sm.down()} {
     flex: 0 0 100%;
     max-width: 100%;
     width: 100%;
@@ -46,7 +46,7 @@ const HomeMenuItem = styled(Col)`
       border: none;
       margin-bottom: 6px;
     }
-  `}
+  }
 `
 
 const HomeMenuItemLink = styled(Link)`
@@ -96,15 +96,15 @@ const HomeMenuItemLink = styled(Link)`
         fill: #d9ac00;
       }
     }
-    ${media.lessThan('sp')`
+    ${media.sm.down()} {
       float: left;
       width: 44px;
       height: 44px;
-    `}
+    }
   }
-  ${media.lessThan('sp')`
+  ${media.sm.down()} {
     margin: 0;
-  `}
+  }
 `
 
 const HomeMenuItemTitle = styled.h2`
@@ -114,10 +114,10 @@ const HomeMenuItemTitle = styled.h2`
   color: #333;
   border: none;
   font-size: 140%;
-  ${media.lessThan('sp')`
+  ${media.sm.down()} {
     float: left;
     margin: 10px 8px;
-  `}
+  }
 `
 
 const HomeMeneuItemDescription = styled.p`
@@ -126,10 +126,10 @@ const HomeMeneuItemDescription = styled.p`
   line-height: 1.4;
   font-size: 14px;
   text-align: left;
-  ${media.lessThan('sp')`
+  ${media.sm.down()} {
     padding: 6px 0 0;
     clear: both;
-  `}
+  }
 `
 
 const Home: FunctionComponent<HomeProps> = ({ home }) => {

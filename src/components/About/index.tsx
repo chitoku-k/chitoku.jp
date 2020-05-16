@@ -2,7 +2,7 @@ import React, { FunctionComponent, useMemo } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
 import RehypeReact from 'rehype-react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { AboutItemQuery } from 'graphql-types'
 import { media } from 'components/Layout'
@@ -20,9 +20,9 @@ const AboutContainer = styled(ArticleContainer)`
     margin-bottom: 0;
   }
   div {
-    ${media.lessThan('tablet')`
+    ${media.md.down()} {
       padding: 0;
-    `}
+    }
   }
   p,
   div,
@@ -31,17 +31,17 @@ const AboutContainer = styled(ArticleContainer)`
     line-height: 1.8;
   }
   img {
-    ${media.lessThan('tablet')`
+    ${media.md.down()} {
       margin-bottom: 20px;
-    `}
-    ${media.lessThan('sp')`
+    }
+    ${media.sm.down()} {
       max-width: 50% !important;
-    `}
+    }
   }
   td {
-    ${media.lessThan('tablet')`
+    ${media.md.down()} {
       padding-right: 0;
-    `}
+    }
   }
 `
 

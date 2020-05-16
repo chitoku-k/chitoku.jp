@@ -1,5 +1,5 @@
 import React, { DetailedHTMLProps, FunctionComponent, HTMLAttributes, ReactNode } from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { media } from 'components/Layout'
 
@@ -21,12 +21,12 @@ const MainContentTitle = styled.h1`
   a {
     color: #111;
   }
-  ${media.lessThan('tablet')`
+  ${media.sm.down()} {
     font-size: 130%;
     padding-top: 3px;
     padding-left: 7px;
     padding-bottom: 7px;
-  `}
+  }
 `
 
 const ArticleHeader: FunctionComponent<ArticleHeaderProps & Omit<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>, 'title'>> = ({

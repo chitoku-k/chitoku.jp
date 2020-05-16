@@ -17,10 +17,10 @@ article.page-softwares {
     }
   }
   p {
-    @include media-small-pc {
+    @include media-breakpoint-up(md) {
       margin-left: 44px;
     }
-    @include media-sp {
+    @include media-breakpoint-down(md) {
       padding-left: 60px;
     }
   }

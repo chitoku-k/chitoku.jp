@@ -2,7 +2,7 @@ import React, { FunctionComponent, useCallback, useState } from 'react'
 import { Navbar as BootstrapNavbar, Container, Row } from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { graphql, useStaticQuery } from 'gatsby'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { NavigationLinkItemQuery, NavigationsYamlNav } from 'graphql-types'
 import { media } from 'components/Layout'
@@ -31,27 +31,30 @@ const NavContainer = styled.div`
   top: 0;
   z-index: 5;
   -webkit-overflow-scrolling: touch;
-  ${media.greaterThan('small-pc')`
+  ${media.md.up()} {
     margin-bottom: 15px;
-  `}
-  ${media.greaterThan('normal-pc')`
+  }
+  ${media.lg.up()} {
     margin-bottom: 24px;
-  `}
-  ${media.lessThan('tablet')`
+  }
+  ${media.md.down()} {
     white-space: nowrap;
     margin-bottom: 0;
-  `}
-  ${media.lessThan('sp')`
+  }
+  ${media.sm.down()} {
     overflow-x: auto;
-  `}
+  }
 `
 
 const NavbarRow = styled(Row)`
   justify-content: space-between;
   align-items: center;
-  ${media.lessThan('sp')`
+  ${media.sm.down()} {
     height: 45px;
-  `}
+  }
+  ${media.md.up()} {
+    height: auto;
+  }
 `
 
 const NavbarCore = styled(BootstrapNavbar)`
@@ -60,16 +63,16 @@ const NavbarCore = styled(BootstrapNavbar)`
   padding: 0 15px;
   border-radius: 0;
   border: none;
-  ${media.lessThan('sp')`
+  ${media.sm.down()} {
     &.search {
       display: none;
     }
-  `}
-  ${media.greaterThan('small-pc')`
+  }
+  ${media.md.up()} {
     .dropdown:hover .dropdown-menu {
       display: block;
     }
-  `}
+  }
 `
 
 const Nav = styled.ul`
@@ -84,25 +87,25 @@ const Nav = styled.ul`
   }
   li.nav-icon {
     display: none;
-    ${media.lessThan('sp')`
+    ${media.sm.down()} {
       display: table-cell;
-    `}
+    }
   }
-  ${media.lessThan('sp')`
+  ${media.sm.down()} {
     margin: 0;
     > li {
       margin: 0;
       display: table-cell;
     }
-  `}
+  }
 `
 
 const SearchIcon = styled.li`
-  ${media.greaterThan('sp')`
+  ${media.md.up()} {
     .nav > & {
       display: none;
     }
-  `}
+  }
 `
 
 const Navbar: FunctionComponent = () => {

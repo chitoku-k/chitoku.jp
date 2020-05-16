@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { SoarerHistoryItemQuery } from 'graphql-types'
 import messages from './messages'

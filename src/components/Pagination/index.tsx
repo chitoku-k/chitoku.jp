@@ -2,7 +2,7 @@ import React, { FunctionComponent, HTMLAttributes, ReactNode } from 'react'
 import { Pagination as BootstrapPagination } from 'react-bootstrap'
 import { BsPrefixProps } from 'react-bootstrap/helpers'
 import { useIntl } from 'react-intl'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { media } from 'components/Layout'
 import messages from './messages'
@@ -48,9 +48,9 @@ const PaginationItem = styled(BootstrapPagination.Item)`
         background-color: #cacaca;
       }
     }
-    ${media.lessThan('sp')`
+    ${media.sm.down()} {
       display: none;
-    `}
+    }
   }
   .pagination > &.active > span {
     background-color: #e11010;
@@ -62,9 +62,9 @@ const PaginationItem = styled(BootstrapPagination.Item)`
   .pagination > &.prev,
   .pagination > &.next {
     margin: 0 9px;
-    ${media.lessThan('sp')`
+    ${media.sm.down()} {
       display: inline-block;
-    `}
+    }
   }
 `
 
@@ -74,9 +74,9 @@ const SimplePaginationCore = styled(BootstrapPagination)`
   justify-content: space-between;
   text-align: left;
   margin: 0;
-  ${media.lessThan('sp')`
+  ${media.sm.down()} {
     flex-wrap: wrap;
-  `}
+  }
 `
 
 const SimplePaginationItem = styled(PaginationItem)`
@@ -91,7 +91,7 @@ const SimplePaginationItem = styled(PaginationItem)`
       height: 100%;
       min-height: 4em;
     }
-    ${media.lessThan('sp')`
+    ${media.sm.down()} {
       width: 100%;
       & + li {
         margin-top: 10px;
@@ -102,7 +102,7 @@ const SimplePaginationItem = styled(PaginationItem)`
           margin-top: 0;
         }
       }
-    `}
+    }
   }
   .pagination > &.prev {
     > a {

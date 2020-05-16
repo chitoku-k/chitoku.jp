@@ -1,21 +1,21 @@
 import React, { FunctionComponent, memo } from 'react'
 import { Container as BootstrapContainer, Row as BootstrapRow } from 'react-bootstrap'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { Location } from '@reach/router'
 
 import { media } from 'components/Layout'
 import Sidebar from 'components/Sidebar'
 
 const Container = styled(BootstrapContainer)`
-  ${media.greaterThan('normal-pc')`
+  ${media.lg.up()} {
     padding-bottom: 60px;
-  `}
-  ${media.lessThan('tablet')`
+  }
+  ${media.md.down()} {
     padding: 15px;
     &.sidebar {
       padding: 15px;
     }
-  `}
+  }
 `
 
 const Row = styled(BootstrapRow)`

@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { FormattedMessage } from 'react-intl'
 import { graphql, useStaticQuery } from 'gatsby'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { FooterItemQuery } from 'graphql-types'
 import messages from './messages'
@@ -23,14 +23,14 @@ const FooterCore = styled.footer`
   padding: 8px 0;
   background: #44607b;
   color: white;
-  ${media.greaterThan('normal-pc')`
+  ${media.lg.up()} {
     width: 100%;
     position: absolute;
     bottom: 0;
-  `}
-  ${media.lessThan('tablet')`
+  }
+  ${media.md.down()} {
     margin-top: 0;
-  `}
+  }
 `
 
 const FooterLink = styled(Link)`

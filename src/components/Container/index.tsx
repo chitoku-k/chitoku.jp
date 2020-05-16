@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
 import { connectStateResults } from 'react-instantsearch-dom'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { media } from 'components/Layout'
 import SearchResult from 'components/SearchResult'
@@ -16,11 +16,11 @@ const MainContentContainer = styled(Col)`
     flex: 0 0 70%;
     max-width: 70%;
     width: 70%;
-    ${media.lessThan('tablet')`
+    ${media.md.down()} {
       flex: 0 0 100%;
       max-width: 100%;
       width: 100%;
-    `}
+    }
   }
 `
 
