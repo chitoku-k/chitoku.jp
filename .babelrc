@@ -1,11 +1,13 @@
 {
   "presets": [
-    ["gatsby"],
-    ["@babel/preset-env"]
+    ["gatsby", {
+      "targets": {
+        "browsers": ["> 3% in JP"]
+      }
+    }]
   ],
   "plugins": [
-    ["@babel/plugin-transform-runtime"],
-    ["@babel/plugin-proposal-class-properties"],
+    ["@babel/plugin-transform-typescript"],
     ["react-intl-auto", { "removePrefix": "src/" }],
     ["styled-components"]
   ]
