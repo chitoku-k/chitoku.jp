@@ -163,7 +163,7 @@ const Article: FunctionComponent<ArticleProps> = ({
                 {tags
                   .filter(isTag)
                   .map(({ name, slug }) => <ArticleHeaderAttributeLink key={slug} to={`/tag/${slug}`}>{name}</ArticleHeaderAttributeLink>)
-                  .reduce((el, curr) => el.length ? [ el, ', ', curr ] : [ curr ], [] as ReactNode[])}
+                  .reduce<ReactNode[]>((el, curr) => el.length ? [ el, ', ', curr ] : [ curr ], [])}
               </ArticleHeaderAttributeItem>
             ) : null}
             {created ? (
