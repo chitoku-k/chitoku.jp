@@ -85,7 +85,7 @@ const About: FunctionComponent<AboutProps> = ({
     })
 
     return compiler(introduction?.markdown?.htmlAst)
-  }, [ introduction ])
+  }, [ introduction?.markdown?.htmlAst ])
 
   if (!about) {
     throw new Error('Invalid data')

@@ -1,4 +1,4 @@
-import React, { FormEvent, FunctionComponent, ReactNode, useEffect, useState } from 'react'
+import React, { FormEvent, FunctionComponent, ReactNode, useCallback, useEffect, useState } from 'react'
 import { Alert, Button, FormControl, FormGroup } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3'
@@ -78,7 +78,7 @@ const Mail: FunctionComponent = () => {
   const siteApi = process.env.GATSBY_MAIL_API as string
   const siteKey = process.env.GATSBY_MAIL_SITE_KEY as string
 
-  const onSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
+  const onSubmit = useCallback(async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     const form = new FormData(e.currentTarget)
     form.append('g-recaptcha-response', token)
 
@@ -97,7 +97,7 @@ const Mail: FunctionComponent = () => {
       setStatus('error')
       throw err
     }
-  }
+  }, [ token ])
 
   useEffect(() => {
     loadReCaptcha(siteKey)
