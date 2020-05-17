@@ -3,7 +3,8 @@ import { Col } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
 import { WindowLocation } from '@reach/router'
-import FontAwesome from 'react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faRss } from '@fortawesome/free-solid-svg-icons'
 import styled from '@emotion/styled'
 
 import { SidebarItemQuery } from 'graphql-types'
@@ -111,67 +112,86 @@ const SidebarItemTitle = styled.h2`
   }
 `
 
-const SidebarItemList = styled.ul`
-  padding-left: 30px;
+const LatestList = styled.ul`
+  padding-left: 0;
   margin-top: 5px;
   margin-bottom: 0;
   li {
-    margin-bottom: 3px;
-    &.iconless {
-      list-style: none;
-      margin-bottom: 16px;
-      &:last-of-type {
-        margin-bottom: 0;
-      }
+    list-style: none;
+    margin-bottom: 16px;
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
+`
+
+const CategoryList = styled.ul`
+  padding-left: 30px;
+  margin-top: 5px;
+  margin-bottom: 0;
   ${media.md.up()} {
     padding-left: 28px;
   }
 `
 
-const SidebarItemListIcon = styled(FontAwesome)`
-  margin-left: -1.75em;
-  padding-right: 1.75em;
-  width: 1.5em;
+const LatestItem = styled.li`
+  display: inline-flex;
+  align-items: flex-start;
+  margin-bottom: 3px;
 `
 
-const SidebarItemAttribute = styled.div`
+const LatestItemIcon = styled(FontAwesomeIcon)`
+  margin-top: 4px;
+`
+
+const LatestItemBody = styled.div`
+  margin-left: 10px;
+`
+
+const LatestItemTitle = styled.div``
+
+const LatestItemMetadata = styled.div`
+  display: inline-flex;
+  align-items: center;
+`
+
+const LatestItemMetadataSeparator = styled.span`
   display: inline-block;
-  margin: 8px 4px 4px 0;
+  margin: 0 4px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #757575;
+`
+
+const LatestItemAttribute = styled.div`
+  display: inline-block;
   color: #757575;
   font-size: 75%;
   font-variant-numeric: tabular-nums;
-  .fa {
-    margin-right: 4px;
-  }
 `
 
-const SidebarItemCategory = styled(SidebarItemAttribute)`
-  &::before {
-    content: "•";
-    margin-right: 4px;
-  }
+const LatestItemCategory = styled(LatestItemAttribute)`
   a {
     color: #757575;
   }
 `
 
 const ShareButtonContainer = styled.div`
-  padding: 5px 0 0;
   display: flex;
   justify-content: center;
+  padding: 5px 0 0;
 `
 
 const FeedIconLink = styled(Link)`
-  background-color: #f76204;
-  color: white !important;
   display: inline-flex;
   align-items: center;
-  font-size: 12px;
-  padding: 4px 8px;
   margin-left: 12px;
+  padding: 4px 10px;
+  font-size: 12px;
   border-radius: 4px;
+  background-color: #f76204;
+  color: white !important;
   text-decoration: none !important;
   transition: background-color 0.3s;
   font-weight: normal;
@@ -180,8 +200,8 @@ const FeedIconLink = styled(Link)`
   }
 `
 
-const FeedIcon = styled(FontAwesome)`
-  margin: 0 3px -1px;
+const FeedIcon = styled(FontAwesomeIcon)`
+  margin-right: 5px;
 `
 
 const Sidebar: FunctionComponent<SidebarProps> = ({
@@ -228,45 +248,51 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
             {formatMessage(messages.latest_articles)}
           </Link>
           <FeedIconLink to={`${siteUrl}/feed/atom/`} target="_blank">
-            <FeedIcon name="rss" />
+            <FeedIcon icon={faRss} />
             RSS
           </FeedIconLink>
         </SidebarItemTitle>
-        <SidebarItemList>
+        <LatestList>
           {latest.items.map(({ article }) => (
-            <li className="iconless" key={article.path}>
-              <SidebarItemListIcon name="coffee" />
-              <Link to={article.path}>
-                {article.attributes.title}
-              </Link>
-              <br />
-              <SidebarItemAttribute>
-                {article.attributes.created ? formatDate(new Date(article.attributes.created), {
-                  year: 'numeric',
-                  month: 'narrow',
-                  day: 'numeric',
-                }) : null}
-              </SidebarItemAttribute>
-              <SidebarItemCategory>
-                {article.attributes.category ? (
-                  <Link to={article.attributes.category.path}>
-                    {article.attributes.category.name}
+            <LatestItem key={article.path}>
+              <LatestItemIcon icon={faCoffee} />
+              <LatestItemBody>
+                <LatestItemTitle>
+                  <Link to={article.path}>
+                    {article.attributes.title}
                   </Link>
-                ) : null}
-              </SidebarItemCategory>
-            </li>
+                </LatestItemTitle>
+                <LatestItemMetadata>
+                  <LatestItemAttribute>
+                    {article.attributes.created ? formatDate(new Date(article.attributes.created), {
+                      year: 'numeric',
+                      month: 'narrow',
+                      day: 'numeric',
+                    }) : null}
+                  </LatestItemAttribute>
+                  <LatestItemMetadataSeparator />
+                  <LatestItemCategory>
+                    {article.attributes.category ? (
+                      <Link to={article.attributes.category.path}>
+                        {article.attributes.category.name}
+                      </Link>
+                    ) : null}
+                  </LatestItemCategory>
+                </LatestItemMetadata>
+              </LatestItemBody>
+            </LatestItem>
           ))}
-        </SidebarItemList>
+        </LatestList>
       </SidebarItem>
       <SidebarItem>
         <SidebarItemTitle>
           {formatMessage(messages.links)}
         </SidebarItemTitle>
-        <SidebarItemList>
+        <CategoryList>
           {sidebar.map(item => (
             <NavItem key={item.name} {...item} />
           ))}
-        </SidebarItemList>
+        </CategoryList>
       </SidebarItem>
     </SidebarContainer>
   )

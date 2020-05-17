@@ -23,6 +23,7 @@
     "indent": ["error", 2],
     "init-declarations": "off",
     "max-len": "off",
+    "max-lines": "off",
     "max-lines-per-function": "off",
     "max-statements": "off",
     "multiline-comment-style": "off",

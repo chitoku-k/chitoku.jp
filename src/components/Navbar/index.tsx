@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useCallback, useState } from 'react'
 import { Navbar as BootstrapNavbar, Container, Row } from 'react-bootstrap'
-import FontAwesome from 'react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from '@emotion/styled'
 
@@ -134,7 +135,7 @@ const Navbar: FunctionComponent = () => {
                 ))}
                 <SearchIcon onClick={openSearch}>
                   <NavLink to="#">
-                    <FontAwesome name="search" />
+                    <FontAwesomeIcon icon={faSearch} />
                   </NavLink>
                 </SearchIcon>
               </Nav>

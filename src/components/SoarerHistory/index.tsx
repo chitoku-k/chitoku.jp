@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { Button } from 'react-bootstrap'
-import FontAwesome from 'react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
 import styled from '@emotion/styled'
@@ -20,7 +21,7 @@ const DownloadLink = styled(Button)`
   vertical-align: 2px;
 `
 
-const DownloadIcon = styled(FontAwesome)`
+const DownloadIcon = styled(FontAwesomeIcon)`
   margin-right: 5px;
 `
 
@@ -67,7 +68,7 @@ const SoarerHistory: FunctionComponent = () => {
           <DownloadVersion>{update.version}</DownloadVersion>
           {update.file ? (
             <DownloadLink variant="light" href={update.file.publicURL as string} download={update.file.base}>
-              <DownloadIcon name="download" />
+              <DownloadIcon icon={faDownload} />
               {formatMessage(messages.download)}
             </DownloadLink>
           ) : null}
