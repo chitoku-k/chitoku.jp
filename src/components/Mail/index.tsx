@@ -2,7 +2,8 @@ import React, { FormEvent, FunctionComponent, ReactNode, useCallback, useEffect,
 import { Alert, Button, FormControl, FormGroup } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3'
-import FontAwesome from 'react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck, faCircleNotch, faTimes } from '@fortawesome/free-solid-svg-icons'
 import styled from '@emotion/styled'
 
 import Container from 'components/Container'
@@ -20,17 +21,17 @@ const StatusArea = styled.div`
   margin-bottom: 10px;
 `
 
-const AcceptedIcon = styled(FontAwesome)`
+const AcceptedIcon = styled(FontAwesomeIcon)`
   color: #009688;
   margin-right: 5px;
 `
 
-const ErrorIcon = styled(FontAwesome)`
+const ErrorIcon = styled(FontAwesomeIcon)`
   color: #e11011;
   margin-right: 5px;
 `
 
-const ProcessingIcon = styled(FontAwesome)`
+const ProcessingIcon = styled(FontAwesomeIcon)`
   margin-right: 5px;
 `
 
@@ -146,19 +147,19 @@ const Mail: FunctionComponent = () => {
           <div className="text-center">
             {status === 'sent' ? (
               <StatusArea>
-                <AcceptedIcon name="check" />
+                <AcceptedIcon icon={faCheck} />
                 {formatMessage(messages.submission_accepted)}
               </StatusArea>
             ) : status === 'sending' ? (
               <StatusArea>
-                <ProcessingIcon name="circle-o-notch" spin />
+                <ProcessingIcon icon={faCircleNotch} spin />
                 {formatMessage(messages.submission_processing)}
               </StatusArea>
             ) : (
               <>
                 {status === 'error' ? (
                   <StatusArea>
-                    <ErrorIcon name="remove" />
+                    <ErrorIcon icon={faTimes} />
                     {formatMessage(messages.submission_error)}
                   </StatusArea>
                 ) : null}

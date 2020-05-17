@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Container, Navbar, Popover, Row } from 'react-bootstrap'
-import FontAwesome from 'react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useIntl } from 'react-intl'
 import styled from '@emotion/styled'
 import { SearchBoxProvided } from 'react-instantsearch-core'
@@ -70,11 +71,10 @@ const FormMobileInput = styled.input`
   }
 `
 
-const SearchIcon = styled(FontAwesome)`
+const SearchIcon = styled(FontAwesomeIcon)`
   color: #2f4255;
   position: absolute;
-  left: 15px;
-  top: 25%;
+  left: 14px;
 `
 
 const UnsupportedNotice = styled.noscript`
@@ -147,7 +147,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
             {formatMessage(messages.enable_javascript)}
           </Popover>
         </UnsupportedNotice>
-        <SearchIcon name="search" />
+        <SearchIcon icon={faSearch} />
       </FormDesktop>
     </>
   )

@@ -1,6 +1,5 @@
 @import "variables";
 @import "bootstrap-custom";
-@import "~font-awesome/scss/font-awesome";
 @import "~prismjs/themes/prism";
 @import "~prismjs/plugins/command-line/prism-command-line";
 @import "~prismjs/plugins/line-numbers/prism-line-numbers";
@@ -93,9 +92,4 @@ blockquote.twitter-tweet {
   max-width: 100%;
   border: 1px solid #e1e8ed !important;
   border-radius: 5px;
-}
-
-// Font Awesome
-.fa {
-  min-width: 1em;
 }

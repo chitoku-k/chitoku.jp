@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { Button } from 'react-bootstrap'
-import FontAwesome from 'react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
 import styled from '@emotion/styled'
@@ -105,7 +106,7 @@ const SoarerDownload: FunctionComponent<ArticleWrapper> = () => {
       <SoarerDownloadDescription className="description">
         {update.file ? (
           <Button<'a'> variant="primary" size="lg" href={update.file.publicURL as string} download={update.file.base}>
-            <FontAwesome name="download" />
+            <FontAwesomeIcon icon={faDownload} />
             {formatMessage(messages.download, {
               size: update.file.prettySize,
             })}

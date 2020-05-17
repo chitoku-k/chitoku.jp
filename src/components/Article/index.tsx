@@ -1,6 +1,8 @@
 import React, { FunctionComponent, ReactNode } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
-import FontAwesome from 'react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCalendar, faFolderOpen } from '@fortawesome/free-regular-svg-icons'
+import { faTags } from '@fortawesome/free-solid-svg-icons'
 import { useIntl } from 'react-intl'
 import styled from '@emotion/styled'
 
@@ -26,7 +28,7 @@ const ArticleHeaderAttributes = styled.div`
   padding: 0;
 `
 
-const ArticleHeaderAttributeIcon = styled(FontAwesome)`
+const ArticleHeaderAttributeIcon = styled(FontAwesomeIcon)`
   margin-right: 0.2em;
 `
 
@@ -38,7 +40,10 @@ const ArticleHeaderAttributeItem = styled.span`
 `
 
 const ArticleHeaderAttributeLink = styled(Link)`
-  color: #333;
+  &,
+  &:hover {
+    color: #333;
+  }
 `
 
 const ArticleNavbar = styled(Navbar)`
@@ -153,13 +158,13 @@ const Article: FunctionComponent<ArticleProps> = ({
           <ArticleHeaderAttributes>
             {category ? (
               <ArticleHeaderAttributeItem>
-                <ArticleHeaderAttributeIcon name="folder-open-o" />
+                <ArticleHeaderAttributeIcon icon={faFolderOpen} />
                 <ArticleHeaderAttributeLink to={category.path}>{category.name}</ArticleHeaderAttributeLink>
               </ArticleHeaderAttributeItem>
             ) : null}
             {tags?.filter(isTag).length ? (
               <ArticleHeaderAttributeItem>
-                <ArticleHeaderAttributeIcon name="tags" />
+                <ArticleHeaderAttributeIcon icon={faTags} />
                 {tags
                   .filter(isTag)
                   .map(({ name, slug }) => <ArticleHeaderAttributeLink key={slug} to={`/tag/${slug}`}>{name}</ArticleHeaderAttributeLink>)
@@ -174,7 +179,7 @@ const Article: FunctionComponent<ArticleProps> = ({
                 hour: 'numeric',
                 minute: 'numeric',
               })}>
-                <ArticleHeaderAttributeIcon name="calendar-o" />
+                <ArticleHeaderAttributeIcon icon={faCalendar} />
                 {formatDate(new Date(created), {
                   year: 'numeric',
                   month: 'narrow',
