@@ -38,10 +38,10 @@ const HomeMenuItem = styled(Col)`
     padding-bottom: 16px;
     border-bottom: 1px solid #efefef;
     text-align: left;
-    &:first-child {
+    &:first-of-type {
       padding-top: 0;
     }
-    &:last-child {
+    &:last-of-type {
       padding-bottom: 0;
       border: none;
       margin-bottom: 6px;

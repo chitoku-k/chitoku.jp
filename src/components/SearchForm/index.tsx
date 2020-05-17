@@ -30,7 +30,7 @@ const FormDesktopInput = styled.input`
   &:focus {
     outline: none;
   }
-  &:focus + noscript {
+  &:focus ~ noscript {
     opacity: 1;
   }
 `
@@ -79,17 +79,19 @@ const SearchIcon = styled(FontAwesome)`
 
 const UnsupportedNotice = styled.noscript`
   position: absolute;
-  background: white;
-  left: -15px;
-  right: -15px;
-  bottom: -8px;
+  left: 0;
+  right: 0;
+  bottom: -9px;
   opacity: 0;
   transition: 0.3s opacity;
   z-index: 1;
   .popover {
     width: 100%;
+    margin: 0;
+    padding: 8px 12px;
     border: none;
     border-radius: 3px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     > .arrow {
       border-bottom: none;
     }
@@ -98,7 +100,6 @@ const UnsupportedNotice = styled.noscript`
 
 const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
   search,
-  openSearch,
   closeSearch,
   refine,
 }) {
@@ -111,10 +112,6 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
     e.preventDefault()
   }, [])
 
-  const onFocus = useCallback(() => {
-    openSearch()
-  }, [ openSearch ])
-
   const onChange = useCallback((e: React.FormEvent<HTMLInputElement>) => {
     setText(e.currentTarget.value)
   }, [])
@@ -124,12 +121,8 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
   }, [ text, refine ])
 
   useEffect(() => {
-    if (search) {
-      if (input.current) {
-        input.current.focus()
-      }
-    } else {
-      setText(null)
+    if (search && input.current) {
+      input.current.focus()
     }
   }, [ input, search ])
 
@@ -139,8 +132,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
         <FormMobileContainer>
           <FormMobile role="search" as="form" onSubmit={onSubmit}>
             <FormMobileRow>
-              <FormMobileInput type="search" ref={input} value={text ?? ''} placeholder={formatMessage(messages.search)}
-                onFocus={onFocus} onChange={onChange} />
+              <FormMobileInput type="search" ref={input} value={text ?? ''} placeholder={formatMessage(messages.search)} onChange={onChange} />
               <FormMobileCancelContainer onClick={closeSearch}>
                 {formatMessage(messages.cancel)}
               </FormMobileCancelContainer>
@@ -149,8 +141,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
         </FormMobileContainer>
       ) : null}
       <FormDesktop role="search" as="form" onSubmit={onSubmit}>
-        <FormDesktopInput type="search" value={text ?? ''} placeholder={formatMessage(messages.search)}
-          onFocus={onFocus} onChange={onChange} />
+        <FormDesktopInput type="search" value={text ?? ''} placeholder={formatMessage(messages.search)} onChange={onChange} />
         <UnsupportedNotice className="notice">
           <Popover id="search-form-noscript" placement="bottom">
             {formatMessage(messages.enable_javascript)}
