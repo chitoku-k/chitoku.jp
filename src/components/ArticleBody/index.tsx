@@ -8,7 +8,7 @@ import { media } from 'components/Layout'
 const ArticleContent = styled.div`
   h2 {
     font-size: 140%;
-    margin: 56px 0 16px 0;
+    margin: 48px 0 16px 0;
     padding: 9px 15px 7px;
     background: #efefef;
     color: #444;
@@ -126,7 +126,7 @@ const ArticleContent = styled.div`
             white-space: nowrap;
           }
         }
-        &:last-child {
+        &:last-of-type {
           > td,
           > th {
             border-bottom: 1px solid #ddd;
@@ -160,7 +160,7 @@ const ArticleContent = styled.div`
   .wide-list {
     li {
       margin-bottom: 1.8em;
-      &:first-child {
+      &:first-of-type {
         margin-top: 1.4em;
       }
     }

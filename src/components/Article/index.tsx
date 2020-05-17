@@ -18,7 +18,7 @@ import ArticleHeader from 'components/ArticleHeader'
 
 export const getClassNameFromPath = (path: string): string => `page${path.replace(/[/]/ug, '-').replace(/-$/u, '')}`
 
-const ArticleHeaderAttributes = styled.p`
+const ArticleHeaderAttributes = styled.div`
   min-height: 0.5em;
   text-align: right;
   color: #333;

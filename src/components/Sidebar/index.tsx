@@ -82,7 +82,7 @@ const SidebarItem = styled.div`
   color: #111;
   box-shadow: 0 2px 4px 0 #c1c1c1;
   border-radius: 3px;
-  &:last-child {
+  &:last-of-type {
     margin-bottom: 0;
     overflow: auto;
     min-height: 250px;
@@ -120,7 +120,7 @@ const SidebarItemList = styled.ul`
     &.iconless {
       list-style: none;
       margin-bottom: 16px;
-      &:last-child {
+      &:last-of-type {
         margin-bottom: 0;
       }
     }
