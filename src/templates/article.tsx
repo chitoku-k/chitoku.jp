@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
-import { BreadcrumbList, Integer, Thing } from 'schema-dts'
+import { BreadcrumbList, CreativeWork, DateTime, Integer, Thing } from 'schema-dts'
 import { JsonLd } from 'react-schemaorg'
 
 import { ArticleQuery } from 'graphql-types'
@@ -113,6 +113,12 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
   return (
     <Layout>
       <Metadata title={article.attributes.title} thumbnail={article.attributes.category?.thumbnail} />
+      <JsonLd<CreativeWork> item={{
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        datePublished: article.attributes.created as DateTime,
+        thumbnailUrl: article.attributes.category?.thumbnail && siteUrl + article.attributes.category.thumbnail,
+      }} />
       <JsonLd<BreadcrumbList> item={{
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
