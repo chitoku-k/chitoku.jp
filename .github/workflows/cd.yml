@@ -35,3 +35,8 @@ jobs:
           k8s-secret: ${{ secrets.K8S_SECRET }}
       - name: Rollout restart
         run: kubectl rollout restart deployment/chitokujp
+      - name: Purge cache
+        uses: jakejarvis/cloudflare-purge-action@v0.3.0
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
