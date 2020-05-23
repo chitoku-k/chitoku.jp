@@ -1,5 +1,5 @@
 interface PageProps {
-  data: {}
+  data: unknown
   location: Location
   path: string
   uri: string

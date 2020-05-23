@@ -2,7 +2,7 @@ import React, { ComponentType, FunctionComponent, useMemo } from 'react'
 import RehypeReact from 'rehype-react'
 import styled from '@emotion/styled'
 
-import { ArticleWrapper } from 'components/Article'
+import { ArticleAstNode, ArticleWrapper } from 'components/Article'
 import { media } from 'components/Layout'
 
 const ArticleContent = styled.div`
@@ -280,7 +280,7 @@ const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
 }
 
 interface ArticleBodyProps {
-  ast: {}
+  ast: ArticleAstNode
   components?: ArticleComponentCollection
 }
 

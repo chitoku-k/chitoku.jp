@@ -198,7 +198,7 @@ const Article: FunctionComponent<ArticleProps> = ({
             </ArticleNav>
           </ArticleNavbar>
         ) : null}
-        <ArticleBody ast={excerptAst ?? htmlAst ?? {}} components={withArticle(article, components)} />
+        <ArticleBody ast={excerptAst ?? htmlAst ?? null} components={withArticle(article, components)} />
         {excerpted && excerptAst ? (
           <ReadMoreContainer>
             <ReadMoreButton to={path}>{formatMessage(messages.more)}</ReadMoreButton>
@@ -221,8 +221,27 @@ const Article: FunctionComponent<ArticleProps> = ({
 }
 
 export interface ArticleItem extends ArticleFragment {
-  htmlAst?: {}
-  excerptAst?: {}
+  htmlAst?: ArticleAstNode
+  excerptAst?: ArticleAstNode
+}
+
+export type ArticleAstNode = null | ArticleAstCommentNode | ArticleAstElementNode | ArticleAstTextNode
+
+export interface ArticleAstCommentNode {
+  type: 'comment'
+  value: string
+}
+
+export interface ArticleAstElementNode {
+  type: 'element'
+  children: ArticleAstNode[]
+  properties: { [key: string]: unknown }
+  tagName: string
+}
+
+export interface ArticleAstTextNode {
+  type: 'text'
+  value: string
 }
 
 export interface ArticleCategoryItem {

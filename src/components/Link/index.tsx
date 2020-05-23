@@ -6,7 +6,7 @@ import { ArticleWrapper } from 'components/Article'
 
 const isAnchor = (to: string): boolean => to.startsWith('#')
 
-const Link: FunctionComponent<GatsbyLinkProps<{}> & LinkProps & Partial<ArticleWrapper>> = ({
+const Link: FunctionComponent<GatsbyLinkProps<unknown> & LinkProps & Partial<ArticleWrapper>> = ({
   to,
   href,
   children,
