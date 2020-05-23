@@ -147,7 +147,7 @@ export const TumblrShareButton: FunctionComponent<ShareButtonProps> = ({
   const to = `${base}?url=${encodeURIComponent(url)}`
 
   return (
-    <ShareButton to={to} color="#35465c" hover="#213248" title={formatMessage(messages.share_on, { service: formatMessage(messages.twitter) })}>
+    <ShareButton to={to} color="#35465c" hover="#213248" title={formatMessage(messages.share_on, { service: formatMessage(messages.tumblr) })}>
       <ShareButtonIcon icon={faTumblr} />
     </ShareButton>
   )
