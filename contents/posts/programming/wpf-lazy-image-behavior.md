@@ -11,21 +11,21 @@ WPF でインターネット上にある画像を表示させる場合、その 
 ```xaml
 <Image>
     <Image.Source>
-        <BitmapImage UriSource="https://chitoku.jp/img/icon.png" />
+        <BitmapImage UriSource="https://chitoku.jp/media/icon.png" />
     </Image.Source>
 </Image>
 ```
 
 ```csharp
 var img = new Image();
-img.Source = new BitmapImage(new Uri("https://chitoku.jp/img/icon.png"));
+img.Source = new BitmapImage(new Uri("https://chitoku.jp/media/icon.png"));
 ```
 
 ```csharp
 var img = new Image();
 var source = new BitmapImage();
 source.BeginInit();
-source.UriSource = new Uri("https://chitoku.jp/img/icon.png");
+source.UriSource = new Uri("https://chitoku.jp/media/icon.png");
 source.EndInit();
 img.Source = source;
 ```
@@ -72,7 +72,7 @@ Expression Blend にはビヘイビアを利用できるクラスが用意され
 あとはこれを XAML から次のように呼び出せば、バックグラウンドから画像を非同期で生成、取得して表示することができます。
 
 ```xaml
-<Image behaviors:LazyImageBehavior.LazySource="https://chitoku.jp/img/icon.png" />
+<Image behaviors:LazyImageBehavior.LazySource="https://chitoku.jp/media/icon.png" />
 ```
 
 ここでは XML 名前空間を `behaviors:` としましたが、プロジェクトに合わせて適当に設定してください。お疲れさまでした。

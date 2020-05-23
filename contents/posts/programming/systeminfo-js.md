@@ -63,12 +63,12 @@ document.write(info.os.platfrom);
 
 ```javascript
 // デバイスの名前 (Kindle Fire HD, PlayStation Portable など - String)
-document.write(info.device.name);</code></pre>
+document.write(info.device.name);
 ```
 
 ```javascript
 // UserAgent 偽装 (true / false - Boolean)
-document.write(info.userAgent.isFake);</code></pre>
+document.write(info.userAgent.isFake);
 ```
 
 4. PSP の詳細情報に対応する場合は、systeminfo.js を読み込むより前に次のコードを挿入します。JavaScript の `javascript¦document.write` による書き出しでも機能します。
