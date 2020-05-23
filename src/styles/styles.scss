@@ -14,8 +14,8 @@ body {
   background: #efefef;
   word-wrap: break-word;
   &,
-  > div#___gatsby,
-  > div > div {
+  div#___gatsby,
+  div#gatsby-focus-wrapper {
     height: 100%;
   }
 }
