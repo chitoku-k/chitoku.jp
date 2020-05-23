@@ -173,7 +173,7 @@ const Home: FunctionComponent<HomeProps> = ({ home }) => {
 type HomeProps = HomeItemQuery
 
 interface HomeIcon {
-  [key: string]: React.ComponentType<React.SVGAttributes<{}>>
+  [key: string]: React.ComponentType<React.SVGAttributes<Element>>
 }
 
 export default Home

@@ -98,9 +98,6 @@
         "@typescript-eslint/no-type-alias": ["error", {
           "allowAliases": "always"
         }],
-        "@typescript-eslint/no-unnecessary-condition": ["error", {
-          "ignoreRhs": true
-        }],
         "@typescript-eslint/no-unused-vars": ["error", {
           "ignoreRestSiblings": true
         }],

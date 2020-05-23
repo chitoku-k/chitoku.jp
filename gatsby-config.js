@@ -55,6 +55,16 @@ module.exports = {
     { resolve: 'gatsby-plugin-catch-links' },
     { resolve: 'gatsby-plugin-emotion' },
     {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /\.js$|\.tsx?$/u,
+        stages: [ 'build-javascript' ],
+        options: {
+          failOnError: true,
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_ID,
@@ -78,6 +88,21 @@ module.exports = {
       },
     },
     { resolve: 'gatsby-plugin-sharp' },
+    {
+      resolve: '@danbruegge/gatsby-plugin-stylelint',
+      options: {
+        files: [ 'src/**/*.scss' ],
+        failOnError: true,
+      },
+    },
+    {
+      resolve: '@danbruegge/gatsby-plugin-stylelint',
+      options: {
+        files: [ 'src/**/*.tsx' ],
+        customSyntax: 'postcss-styled',
+        failOnError: true,
+      },
+    },
     {
       resolve: 'gatsby-plugin-ts',
       options: {

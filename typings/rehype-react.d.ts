@@ -11,7 +11,7 @@ interface RehypeReactOptions {
 /* eslint-enable @typescript-eslint/no-explicit-any */
 
 export default class RehypeReact {
-  public Compiler: (node: {}) => ComponentType
+  public Compiler: (node: unknown) => ComponentType
 
   public constructor(options: RehypeReactOptions)
 }

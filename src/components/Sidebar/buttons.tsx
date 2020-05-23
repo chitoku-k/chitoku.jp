@@ -21,7 +21,7 @@ interface PocketShareButtonProps extends ShareButtonProps {
   title: string | null
 }
 
-interface ShareLinkProps extends GatsbyLinkProps<{}> {
+interface ShareLinkProps extends GatsbyLinkProps<unknown> {
   color: string
   hover: string
 }
