@@ -91,6 +91,7 @@
             "delimiter": "none"
           }
         }],
+        "@typescript-eslint/naming-convention": "off",
         "@typescript-eslint/no-extra-parens": ["error", "all", {
           "ignoreJSX": "all"
         }],
