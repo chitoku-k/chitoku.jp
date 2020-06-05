@@ -16,6 +16,6 @@ RUN apk add --no-cache --virtual build-dependencies \
         /usr/local/share/.cache \
         /tmp/*
 
-FROM nginx:1.17.10-alpine
+FROM nginx:1.19.0-alpine
 COPY conf /etc/nginx/conf.d
 COPY --from=build /usr/src/public /usr/share/nginx/html
