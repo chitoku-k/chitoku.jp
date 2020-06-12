@@ -84,7 +84,7 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
       <PspSdkMacroPrototype ref={ref} className="language-c">
         {[
           `${def.name}(`,
-          def.parameters && def.parameters.map(buildParameters).join(`, ${separator}`),
+          def.parameters?.map(buildParameters).join(`, ${separator}`) ?? '',
           ');',
         ].join(separator)}
       </PspSdkMacroPrototype>
