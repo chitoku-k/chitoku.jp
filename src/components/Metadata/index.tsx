@@ -82,7 +82,7 @@ const Metadata: FunctionComponent<MetadataItem> = ({
           {metadata.description && [ 'og:description', 'description' ].map(property => (
             <meta key={property} property={property} content={metadata.description} />
           ))}
-          {metadata.keywords && metadata.keywords.length ? (
+          {metadata.keywords?.length ? (
             <meta name="keywords" content={metadata.keywords.join()} />
           ) : null}
           {contacts
