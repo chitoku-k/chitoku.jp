@@ -76,7 +76,7 @@
     "react-intl": "^4.6.6",
     "react-recaptcha-v3": "^1.1.0",
     "react-schemaorg": "^1.0.2",
-    "rehype-react": "^5.0.1",
+    "rehype-react": "^6.0.0",
     "sass": "^1.26.8",
     "schema-dts": "^0.6.0",
     "styled-breakpoints": "^8.1.1",
