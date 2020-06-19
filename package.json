@@ -74,7 +74,7 @@
     "react-highlight-words": "^0.16.0",
     "react-instantsearch-dom": "^6.5.0",
     "react-intl": "^4.6.9",
-    "react-recaptcha-v3": "^1.1.0",
+    "react-recaptcha-v3": "^2.0.1",
     "react-schemaorg": "^1.0.2",
     "rehype-react": "^6.0.0",
     "sass": "^1.26.8",

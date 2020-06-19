@@ -14872,10 +14872,10 @@ react-overlays@^3.1.2:
     uncontrollable "^7.0.0"
     warning "^4.0.3"
 
-react-recaptcha-v3@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-recaptcha-v3/-/react-recaptcha-v3-1.1.0.tgz#6c4c4808b2336d98586f90c72c38acfe64a6a51c"
-  integrity sha512-mNX6q4KEbY68kEiy1K7bbPihW8Ty3AWPtkogzM03xAI092js9atk1ThUlbiiqsEZTktn0rJqoo3WYY2reLZVBQ==
+react-recaptcha-v3@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-recaptcha-v3/-/react-recaptcha-v3-2.0.1.tgz#b8dd391e9e36785f250d5e01aad235dd2fea2285"
+  integrity sha512-ZQ+auotgu+E/6YAbPqk53sf9xgcp8TFvVVfL4bVR7PXj98nQmdaONugdLJEA7g1iTZ4yQqC4mZbcVUGZmwb25Q==
 
 react-reconciler@^0.24.0:
   version "0.24.0"
