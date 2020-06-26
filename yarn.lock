@@ -8823,10 +8823,10 @@ gatsby-remark-copy-linked-files@^2.3.7:
     probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-embed-gist@^1.1.9:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-gist/-/gatsby-remark-embed-gist-1.1.9.tgz#8c633de2df3105f7681fea8ec92bc62dc6f424d7"
-  integrity sha512-FCn2kymq/okNDYo/2ZUTt7XYOeJJL7jF0wzmo0AapbgX5IGy/eEnQ3xfQH3B3h+5B5nmUoDtsVmuCjrxSDN0vg==
+gatsby-remark-embed-gist@^1.1.10:
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-gist/-/gatsby-remark-embed-gist-1.1.10.tgz#4bbb575422f535d49ec9854940c0cc8a5e929702"
+  integrity sha512-zGPycWUV8S6yOKOsXkEfgYM3OWvju/2uKQyKEAFNZ2c2Y1l+6F7Gb1swpHeJISddqBQf1GsSqliqpPELmpBNxQ==
   dependencies:
     "@babel/runtime" "^7.5.5"
     async-unist-util-visit "^1.0.0"
