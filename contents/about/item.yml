@@ -45,8 +45,6 @@ contacts:
   - service: Mastodon
     primary: true
     accounts:
-    - name: '@chitoku@mstdn.jp'
-      url: https://mstdn.jp/@chitoku
     - name: '@chitoppig@don.gomasy.jp'
       url: https://don.gomasy.jp/@citoppig
   - service: Skype
