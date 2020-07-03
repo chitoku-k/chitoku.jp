@@ -50,7 +50,7 @@
     "gatsby-plugin-sharp": "chitoku-k/gatsby-plugin-sharp#566121f",
     "gatsby-plugin-ts": "^2.7.1",
     "gatsby-remark-attr": "^0.0.3",
-    "gatsby-remark-autolink-headers": "^2.3.7",
+    "gatsby-remark-autolink-headers": "^2.3.10",
     "gatsby-remark-copy-linked-files": "^2.3.7",
     "gatsby-remark-embed-gist": "^1.1.10",
     "gatsby-remark-external-links": "^0.0.4",
