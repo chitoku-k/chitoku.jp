@@ -32,7 +32,7 @@
     "emotion-theming": "^10.0.27",
     "eslint": "^7.3.1",
     "eslint-loader": "^4.0.2",
-    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.4",
     "extract-react-intl-messages": "^4.1.1",
     "gatsby": "^2.23.11",
