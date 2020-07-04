@@ -75,6 +75,7 @@ const SearchIcon = styled(FontAwesomeIcon)`
   color: #2f4255;
   position: absolute;
   left: 14px;
+  top: calc(50% - 0.5em);
 `
 
 const UnsupportedNotice = styled.noscript`
