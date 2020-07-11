@@ -59,7 +59,7 @@
     "gatsby-remark-prismjs": "^3.5.9",
     "gatsby-source-filesystem": "^2.3.14",
     "gatsby-source-local-git": "^1.0.0",
-    "gatsby-transformer-remark": "^2.8.23",
+    "gatsby-transformer-remark": "^2.8.25",
     "gatsby-transformer-sharp": "^2.5.10",
     "gatsby-transformer-yaml": "^2.4.9",
     "husky": "^4.2.5",
