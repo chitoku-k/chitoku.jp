@@ -142,6 +142,7 @@ const LatestItem = styled.li`
 
 const LatestItemIcon = styled(FontAwesomeIcon)`
   margin-top: 4px;
+  flex-shrink: 0;
 `
 
 const LatestItemBody = styled.div`
