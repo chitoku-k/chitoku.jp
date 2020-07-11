@@ -37,8 +37,8 @@ const Dropdown = styled(BootstrapDropdown)`
     }
   }
   .sub-menu {
-    position: initial !important;
-    opacity: initial !important;
+    position: static !important;
+    opacity: 1 !important;
     pointer-events: initial !important;
   }
   .sub-toggle,
