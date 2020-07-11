@@ -8191,12 +8191,12 @@ gatsby-recipes@^0.1.51:
     ws "^7.3.0"
     xstate "^4.11.0"
 
-gatsby-remark-attr@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-attr/-/gatsby-remark-attr-0.0.3.tgz#083d09656914311bf500d7b8030d84b147afa692"
-  integrity sha512-mh2oO+3OhstFd3XGvAGY2R5Deh6gxQKUnK9ae1VTnpWaXJOhA1GDfZDbRq64XFXcr9+6/gPBJTDfl5nXmxxriA==
+gatsby-remark-attr@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-attr/-/gatsby-remark-attr-0.1.0.tgz#7cf943b24f3568e0b1bae1373793716b9e7c564d"
+  integrity sha512-jT5U74Ac04o8awuAN4FIJse9biD6rO9vqae8vfPaAVZG+JQYSYNfqQXK/CQaw3Pdt04bYugkUlOhgGjn3QO50Q==
   dependencies:
-    remark-attr "^0.9.0"
+    remark-attr "^0.11.0"
 
 gatsby-remark-autolink-headers@^2.3.11:
   version "2.3.11"
@@ -10512,7 +10512,7 @@ is-valid-path@^0.1.1:
   dependencies:
     is-invalid-path "^0.1.0"
 
-is-whitespace-character@^1.0.0:
+is-whitespace-character@^1.0.0, is-whitespace-character@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/is-whitespace-character/-/is-whitespace-character-1.0.4.tgz#0858edd94a95594c7c9dd0b5c174ec6e45ee4aa7"
   integrity sha512-SDweEzfIZM0SJV0EUga669UTKlmL0Pq8Lno0QDQsPnvECB3IM2aP0gdx5TrU0A01MAPfViaZiI2V1QMZLaKK5w==
@@ -14577,15 +14577,17 @@ relay-runtime@9.0.0:
     "@babel/runtime" "^7.0.0"
     fbjs "^1.0.0"
 
-remark-attr@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/remark-attr/-/remark-attr-0.9.0.tgz#5b213c4e9815fa4f8c07cbaa674aeb525966b15a"
-  integrity sha512-Q2M/fJixf+wBxOmzSp7Ux6s7UzWoLFSGXxnfPG8frGXoxAXbUIs/XF8IVrLWmvqjZ8a66Eb02r4gsbJkIhLewQ==
+remark-attr@^0.11.0:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/remark-attr/-/remark-attr-0.11.1.tgz#4f2f96b16316be2887a24662116756c88ee36f15"
+  integrity sha512-NnzURvBJ52c58L3AohBk5qSTBPXdMKsf5+w9L0YNhi/HCtv7ZA9dNRz5NsPIxLtIHhoZIjTqQsMzoyggyPVvkQ==
   dependencies:
     html-element-attributes "^2.0.0"
+    is-whitespace-character "^1.0.4"
     md-attr-parser "^1.3.0"
+    remark-footnotes "^1.0.0"
 
-remark-footnotes@1.0.0:
+remark-footnotes@1.0.0, remark-footnotes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/remark-footnotes/-/remark-footnotes-1.0.0.tgz#9c7a97f9a89397858a50033373020b1ea2aad011"
   integrity sha512-X9Ncj4cj3/CIvLI2Z9IobHtVi8FVdUrdJkCNaL9kdX8ohfsi18DXHsCVd/A7ssARBdccdDb5ODnt62WuEWaM/g==
