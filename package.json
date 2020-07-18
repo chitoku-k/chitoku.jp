@@ -68,7 +68,7 @@
     "postcss-styled": "^0.34.0",
     "prismjs": "^1.20.0",
     "react": "^16.13.1",
-    "react-bootstrap": "^1.2.1",
+    "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "react-highlight-words": "^0.16.0",
