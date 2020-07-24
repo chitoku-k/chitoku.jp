@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useCallback, useState } from 'react'
-import { Navbar as BootstrapNavbar, Container, Row } from 'react-bootstrap'
+import { Nav as BootstrapNav, Navbar as BootstrapNavbar, Container, NavbarProps, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { graphql, useStaticQuery } from 'gatsby'
@@ -58,16 +58,21 @@ const NavbarRow = styled(Row)`
   }
 `
 
-const NavbarCore = styled(BootstrapNavbar)`
+const NavbarWrapper: FunctionComponent<NavbarCoreProps> = ({
+  search,
+  ...props
+}) => (
+  <BootstrapNavbar {...props} />
+)
+
+const NavbarCore = styled(NavbarWrapper)<NavbarCoreProps>`
   background-color: transparent;
   margin-bottom: 0;
   padding: 0 15px;
   border-radius: 0;
   border: none;
   ${media.sm.down()} {
-    &.search {
-      display: none;
-    }
+    display: ${({ search }) => search ? 'none' : 'block'};
   }
   ${media.md.up()} {
     .dropdown:hover .dropdown-menu {
@@ -76,9 +81,9 @@ const NavbarCore = styled(BootstrapNavbar)`
   }
 `
 
-const Nav = styled.ul`
+const Nav = styled(BootstrapNav)`
   flex-wrap: nowrap;
-  &.nav > .active > a {
+  > .active > a {
     &,
     &:hover,
     &:focus {
@@ -86,26 +91,11 @@ const Nav = styled.ul`
       background-color: #2f4255;
     }
   }
-  li.nav-icon {
-    display: none;
-    ${media.sm.down()} {
-      display: table-cell;
-    }
-  }
-  ${media.sm.down()} {
-    margin: 0;
-    > li {
-      margin: 0;
-      display: table-cell;
-    }
-  }
 `
 
 const SearchIcon = styled.li`
   ${media.md.up()} {
-    .nav > & {
-      display: none;
-    }
+    display: none;
   }
 `
 
@@ -127,9 +117,9 @@ const Navbar: FunctionComponent = () => {
     <NavContainer>
       <Container>
         <NavbarRow>
-          <NavbarCore className={search ? 'search' : ''}>
+          <NavbarCore search={search}>
             <Row>
-              <Nav className="nav navbar-nav">
+              <Nav as="ul">
                 {nav.map(item => (
                   <NavItem key={item.to} {...item} dropdown>{item.items}</NavItem>
                 ))}
@@ -150,5 +140,9 @@ const Navbar: FunctionComponent = () => {
 
 export type NavigationLinkItem = NavigationsYamlNav
 type NavbarQueryResult = NavigationLinkItemQuery
+
+interface NavbarCoreProps extends NavbarProps {
+  search: boolean
+}
 
 export default Navbar

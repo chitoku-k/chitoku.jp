@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useMemo } from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Table as BootstrapTable, Col, Row } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
 import RehypeReact from 'rehype-react'
 import styled from '@emotion/styled'
@@ -47,6 +47,7 @@ const AboutContainer = styled(ArticleContainer)`
 
 const IconContainer = styled.div`
   margin-bottom: 0.8em;
+  text-align: center;
 `
 
 const Icon = styled.img`
@@ -57,7 +58,7 @@ const Icon = styled.img`
   height: 96px;
 `
 
-const Table = styled.table`
+const Table = styled(BootstrapTable)`
   border-bottom-color: #ddd;
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -94,11 +95,11 @@ const About: FunctionComponent<AboutProps> = ({
   return (
     <Container>
       <Metadata title={formatMessage(messages.title)} />
-      <AboutContainer className="about">
+      <AboutContainer>
         <ArticleHeader title={formatMessage(messages.title)} />
         <Row>
           <Col sm={2}>
-            <IconContainer className="text-center">
+            <IconContainer>
               <Icon src={about.icon.src} />
               <br />
               <small>
@@ -109,7 +110,7 @@ const About: FunctionComponent<AboutProps> = ({
             </IconContainer>
           </Col>
           <Col sm={10}>
-            <Table className="table">
+            <Table>
               <tbody>
                 <tr>
                   <th>{formatMessage(messages.name)}</th>

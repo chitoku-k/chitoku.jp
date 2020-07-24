@@ -90,7 +90,7 @@ const SearchHit: FunctionComponent<SearchHitProps<SearchDocument>> = ({
   return (
     <SearchHitContainer>
       <SearchHitLink to={path}>
-        <SearchHitHeader className="no-border">
+        <SearchHitHeader>
           {highlight.title && highlight.title.matchLevel !== 'none' ? (
             <Highlighter searchWords={highlight.title.matchedWords} textToHighlight={title} />
           ) : title}
@@ -119,7 +119,7 @@ const SearchResult = connectStateResults<SearchResultProps>(function SearchResul
   const { formatMessage } = useIntl()
 
   return (
-    <SearchResultContainer className="search-result">
+    <SearchResultContainer>
       <SearchResultHeader title={
         <>
           {text ? formatMessage(messages.title_text, { text }) : formatMessage(messages.title)}
