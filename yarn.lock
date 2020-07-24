@@ -14198,10 +14198,10 @@ react-refresh@^0.7.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.7.2.tgz#f30978d21eb8cac6e2f2fde056a7d04f6844dd50"
   integrity sha512-u5l7fhAJXecWUJzVxzMRU2Zvw8m4QmDNHlTrT5uo3KBlYBhmChd7syAakBoay1yIiVhx/8Fi7a6v6kQZfsw81Q==
 
-react-schemaorg@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-schemaorg/-/react-schemaorg-1.1.0.tgz#a9d34d78763569e8ec911f7b08e28e196bf32afa"
-  integrity sha512-RJawkmB1dNoqsYcgrX47Dr4Z44Je7qDF8BhY/lih9vmYdy5dhHMmdxR+JX+OZaXT4dLxdJ5SKZPkHkjcI8lirA==
+react-schemaorg@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-schemaorg/-/react-schemaorg-1.2.0.tgz#82454f7bf4aa6d52eb0e9e300c9dc4d5d220ba23"
+  integrity sha512-vtutPvE32n9b2d6qH1Gmyss4nJxRWsJKJR8WdVxxLzn6ErAIOOEE00paqC4rwI8gwm9mtnRBA2JLUfqv3AjDXw==
 
 react-side-effect@^2.1.0:
   version "2.1.0"
