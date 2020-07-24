@@ -48,9 +48,7 @@ const NotFound: FunctionComponent<NotFoundProps> = ({ contacts }) => {
 
   return (
     <Container>
-      <Metadata title={formatMessage(messages.title)}>
-        <body className="404" />
-      </Metadata>
+      <Metadata title={formatMessage(messages.title)} />
       <ArticleContainer>
         <ArticleHeader title={formatMessage(messages.title)} />
         <p>

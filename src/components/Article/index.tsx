@@ -126,7 +126,11 @@ const Article: FunctionComponent<ArticleProps> = ({
   children,
   components = {},
   article,
-  article: {
+  prev,
+  next,
+}) => {
+  const { formatMessage, formatDate } = useIntl()
+  const {
     path,
     attributes: {
       title,
@@ -138,11 +142,7 @@ const Article: FunctionComponent<ArticleProps> = ({
     htmlAst,
     excerptAst,
     excerpted,
-  },
-  prev,
-  next,
-}) => {
-  const { formatMessage, formatDate } = useIntl()
+  } = article
 
   // TODO: Make default components injectable
   Object.assign(components, {
@@ -210,7 +210,6 @@ const Article: FunctionComponent<ArticleProps> = ({
         <ArticleContainer>
           <PaginationContainer>
             <SimplePagination
-              className="simple-pagination"
               prev={prev ? { title: prev.attributes.title, to: prev.path } : null}
               next={next ? { title: next.attributes.title, to: next.path } : null} />
           </PaginationContainer>
@@ -259,7 +258,7 @@ export interface ArticleWrapper {
   article: ArticleItem
 }
 
-interface ArticleProps extends ArticleWrapper, Partial<Omit<ArticleQuery, 'article'>> {
+interface ArticleProps extends ArticleWrapper, Partial<Omit<ArticleQuery, keyof ArticleWrapper>> {
   components?: ArticleComponentCollection
 }
 

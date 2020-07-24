@@ -1,5 +1,5 @@
 import React, { FunctionComponent, HTMLAttributes, ReactNode } from 'react'
-import { Pagination as BootstrapPagination } from 'react-bootstrap'
+import { Pagination as BootstrapPagination, PageItemProps, SafeAnchorProps } from 'react-bootstrap'
 import { BsPrefixProps } from 'react-bootstrap/helpers'
 import { useIntl } from 'react-intl'
 import styled from '@emotion/styled'
@@ -17,54 +17,37 @@ export const getPagePath = (num: number): string => `./${num === 1 ? '' : num}`
 export const getPreviousPagePath = (page: Page): string => hasPreviousPage(page) ? getPagePath(page.current - 1) : '#'
 export const getNextPagePath = (page: Page): string => hasNextPage(page) ? getPagePath(page.current + 1) : '#'
 
-const getVisibility = (className: string, visible: boolean): string => [ className, visible ? 'visible' : 'hidden' ].join(' ')
-
 const PaginationCore = styled(BootstrapPagination)`
   margin: 0;
   justify-content: center;
 `
 
-const PaginationItem = styled(BootstrapPagination.Item)`
-  .pagination > &,
-  .pagination > &.prev,
-  .pagination > &.next {
+const PaginationItemWrapper: FunctionComponent<PaginationItemProps> = ({
+  visible,
+  ...props
+}) => (
+  <BootstrapPagination.Item {...props} />
+)
+
+const PaginationItem = styled(PaginationItemWrapper)<PaginationItemProps>`
+  display: inline-block;
+  ${media.sm.down()} {
+    display: ${({ direction }) => direction ? 'inline-block' : 'none'};
+  }
+  visibility: ${({ visible }) => visible ? 'visible' : 'hidden'};
+  margin: ${({ direction }) => direction ? '0 9px' : '0 3px'};
+  &&& > a,
+  &&& > span {
     display: inline-block;
-    margin: 0 3px;
-    > a,
-    > span {
-      display: inline-block;
-      border: none;
-      border-radius: 0;
-      padding: 8px 16px;
-      float: none;
-    }
-    > a {
-      background-color: #efefef;
-      color: #141414;
-      margin: 0;
-      transition: background-color 0.3s;
-      &:hover {
-        color: #141414;
-        background-color: #cacaca;
-      }
-    }
-    ${media.sm.down()} {
-      display: none;
-    }
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 8px 16px;
+    float: none;
   }
-  .pagination > &.active > span {
-    background-color: #e11010;
-  }
-  &.hidden {
-    display: inline-block !important;
-    visibility: hidden;
-  }
-  .pagination > &.prev,
-  .pagination > &.next {
-    margin: 0 9px;
-    ${media.sm.down()} {
-      display: inline-block;
-    }
+  > a {
+    margin: 0;
+    transition: background-color 0.3s;
   }
 `
 
@@ -79,44 +62,32 @@ const SimplePaginationCore = styled(BootstrapPagination)`
   }
 `
 
-const SimplePaginationItem = styled(PaginationItem)`
-  .pagination > &,
-  .pagination > &.prev,
-  .pagination > &.next {
-    width: calc(50% - 10px);
-    margin: 0;
-    > a {
-      display: flex;
-      align-items: center;
-      height: 100%;
-      min-height: 4em;
-    }
-    ${media.sm.down()} {
-      width: 100%;
-      & + li {
-        margin-top: 10px;
-      }
-      &.hidden {
-        display: none !important;
-        + li {
-          margin-top: 0;
-        }
-      }
+const SimplePaginationIcon = styled.span`
+`
+
+const SimplePaginationItem = styled(PaginationItem)<PaginationItemProps>`
+  width: calc(50% - 10px);
+  margin: 0;
+  &&& > a {
+    display: flex;
+    justify-content: ${({ direction }) => direction === 'prev' ? 'flex-start' : direction === 'next' ? 'flex-end' : ''};
+    align-items: center;
+    height: 100%;
+    min-height: 4em;
+    ${SimplePaginationIcon} {
+      margin-left: ${({ direction }) => direction === 'next' ? '10px' : '0'};
+      margin-right: ${({ direction }) => direction === 'prev' ? '10px' : '0'};
     }
   }
-  .pagination > &.prev {
-    > a {
-      justify-content: flex-start;
-      .icon {
-        margin-right: 10px;
-      }
+  ${media.sm.down()} {
+    width: 100%;
+    & + li {
+      margin-top: 10px;
     }
-  }
-  .pagination > &.next {
-    > a {
-      justify-content: flex-end;
-      .icon {
-        margin-left: 10px;
+    &.hidden {
+      display: none !important;
+      + li {
+        margin-top: 0;
       }
     }
   }
@@ -129,13 +100,13 @@ const Pagination: FunctionComponent<PaginationProps> = ({
 
   return (
     <PaginationCore>
-      <PaginationItem className={getVisibility('prev', hasPreviousPage(page))} href={getPreviousPagePath(page)}>
+      <PaginationItem direction="prev" visible={hasPreviousPage(page)} href={getPreviousPagePath(page)}>
         {formatMessage(messages.prev_page)}
       </PaginationItem>
       {[ ...Array(page.total).keys() ].map(i => (
-        <PaginationItem key={i} href={getPagePath(i + 1)} active={i + 1 === page.current}>{i + 1}</PaginationItem>
+        <PaginationItem key={i} visible active={i + 1 === page.current} href={getPagePath(i + 1)}>{i + 1}</PaginationItem>
       ))}
-      <PaginationItem className={getVisibility('next', hasNextPage(page))} href={getNextPagePath(page)}>
+      <PaginationItem direction="next" visible={hasNextPage(page)} href={getNextPagePath(page)}>
         {formatMessage(messages.next_page)}
       </PaginationItem>
     </PaginationCore>
@@ -155,19 +126,19 @@ export const SimplePagination: FunctionComponent<HTMLAttributes<HTMLUListElement
 
   return (
     <SimplePaginationCore {...rest}>
-      <SimplePaginationItem className={getVisibility('prev', Boolean(prev))} href={prev ? prev.to : '#'}>
+      <SimplePaginationItem direction="prev" visible={Boolean(prev)} href={prev ? prev.to : '#'}>
         {prev ? (
           <>
-            <span className="icon">{formatMessage(messages.prev)}</span>
+            <SimplePaginationIcon>{formatMessage(messages.prev)}</SimplePaginationIcon>
             <span>{prev.title}</span>
           </>
         ) : null}
       </SimplePaginationItem>
-      <SimplePaginationItem className={getVisibility('next', Boolean(next))} href={next ? next.to : '#'}>
+      <SimplePaginationItem direction="next" visible={Boolean(next)} href={next ? next.to : '#'}>
         {next ? (
           <>
             <span>{next.title}</span>
-            <span className="icon">{formatMessage(messages.next)}</span>
+            <SimplePaginationIcon>{formatMessage(messages.next)}</SimplePaginationIcon>
           </>
         ) : null}
       </SimplePaginationItem>
@@ -182,6 +153,11 @@ export interface Page {
 
 interface PaginationProps {
   page: Page
+}
+
+interface PaginationItemProps extends PageItemProps, SafeAnchorProps {
+  direction?: 'prev' | 'next'
+  visible?: boolean
 }
 
 interface SimplePaginationItem {

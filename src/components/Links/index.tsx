@@ -25,9 +25,7 @@ const Links: FunctionComponent<LinksProps> = ({ links }) => {
 
   return (
     <Container>
-      <Metadata title={formatMessage(messages.title)}>
-        <body className="links" />
-      </Metadata>
+      <Metadata title={formatMessage(messages.title)} />
       <ArticleContainer>
         <ArticleHeader title={formatMessage(messages.title)} />
         <LinksContainer>

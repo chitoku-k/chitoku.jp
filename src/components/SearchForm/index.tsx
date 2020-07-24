@@ -143,7 +143,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
       ) : null}
       <FormDesktop role="search" as="form" onSubmit={onSubmit}>
         <FormDesktopInput type="search" value={text ?? ''} placeholder={formatMessage(messages.search)} onChange={onChange} />
-        <UnsupportedNotice className="notice">
+        <UnsupportedNotice>
           <Popover id="search-form-noscript" placement="bottom">
             {formatMessage(messages.enable_javascript)}
           </Popover>

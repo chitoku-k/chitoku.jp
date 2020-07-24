@@ -13,6 +13,10 @@ import Metadata from 'components/Metadata'
 import Link from 'components/Link'
 import messages from './messages'
 
+const ContactNotice = styled(Alert)`
+  text-align: center;
+`
+
 const Required = styled.span`
   color: red;
 `
@@ -47,6 +51,10 @@ const LabelWrapper = styled.label`
 const LabelTitle = styled.span`
   display: inline-block;
   margin-bottom: 5px;
+`
+
+const SubmissionContainer = styled.div`
+  text-align: center;
 `
 
 const Label: FunctionComponent<MailLabelProps> = ({
@@ -113,15 +121,15 @@ const Mail: FunctionComponent = () => {
       <Metadata title={formatMessage(messages.title)}>
         <body data-recaptcha="" />
       </Metadata>
-      <ArticleContainer className="mail">
+      <ArticleContainer>
         <ArticleHeader title={formatMessage(messages.title)} />
-        <Alert variant="info" className="text-center">
+        <ContactNotice variant="info">
           {formatMessage(messages.contact_me_on_sns)}
           <br />
           <FormattedMessage {...messages.contact_me_from_about} values={{
             about: <Link to="/about">{formatMessage(messages.about)}</Link>,
           }} />
-        </Alert>
+        </ContactNotice>
         <form onSubmit={onSubmit}>
           <FormGroup>
             <Label required title={formatMessage(messages.name)}>
@@ -144,7 +152,7 @@ const Mail: FunctionComponent = () => {
             </Label>
           </FormGroup>
           <ReCaptcha action="mail" sitekey={siteKey} verifyCallback={setToken} />
-          <div className="text-center">
+          <SubmissionContainer>
             {status === 'sent' ? (
               <StatusArea>
                 <AcceptedIcon icon={faCheck} />
@@ -168,7 +176,7 @@ const Mail: FunctionComponent = () => {
                 </Button>
               </>
             )}
-          </div>
+          </SubmissionContainer>
         </form>
       </ArticleContainer>
     </Container>

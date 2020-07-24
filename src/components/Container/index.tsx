@@ -3,25 +3,12 @@ import { Col } from 'react-bootstrap'
 import { connectStateResults } from 'react-instantsearch-dom'
 import styled from '@emotion/styled'
 
-import { media } from 'components/Layout'
 import SearchResult from 'components/SearchResult'
 
 const MainContentContainer = styled(Col)`
   position: static;
   padding: 0;
-  flex: 0 0 100%;
-  max-width: 100%;
-  width: 100%;
-  .sidebar & {
-    flex: 0 0 70%;
-    max-width: 70%;
-    width: 70%;
-    ${media.md.down()} {
-      flex: 0 0 100%;
-      max-width: 100%;
-      width: 100%;
-    }
-  }
+  flex: auto;
 `
 
 const Container = connectStateResults(function Container({
@@ -29,7 +16,7 @@ const Container = connectStateResults(function Container({
   children,
 }) {
   return (
-    <MainContentContainer md={9}>
+    <MainContentContainer>
       {searchState.query ? <SearchResult /> : children}
     </MainContentContainer>
   )

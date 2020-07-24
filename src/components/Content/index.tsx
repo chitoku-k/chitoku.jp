@@ -12,14 +12,14 @@ const Container = styled(BootstrapContainer)`
   }
   ${media.md.down()} {
     padding: 15px;
-    &.sidebar {
-      padding: 15px;
-    }
   }
 `
 
 const Row = styled(BootstrapRow)`
-  align-items: flex-start;
+  ${media.lg.up()} {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
 `
 
 const MemoizedSidebar = memo(Sidebar, (prev, next) => prev.location.pathname === next.location.pathname)
@@ -28,7 +28,7 @@ const Content: FunctionComponent<ContentProps> = ({
   children,
   sidebar = true,
 }) => (
-  <Container className={sidebar ? 'sidebar' : ''}>
+  <Container>
     <Row>
       {children}
       <Location>

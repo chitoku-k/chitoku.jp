@@ -21,6 +21,7 @@ const query = graphql`
 const FooterCore = styled.footer`
   margin: 15px 0 0;
   padding: 8px 0;
+  text-align: center;
   background: #44607b;
   color: white;
   ${media.lg.up()} {
@@ -50,7 +51,7 @@ const Footer: FunctionComponent = () => {
   }
 
   return (
-    <FooterCore className="text-center">
+    <FooterCore>
       <FormattedMessage {...messages.copyright} values={{
         link: <FooterLink to={`${repositoryTreeUrl}${commit.hash}`}>{repositoryName}</FooterLink>,
       }} />

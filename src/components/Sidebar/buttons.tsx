@@ -61,9 +61,9 @@ const ShareButton = styled(ShareLink)`
   display: inline-flex;
   transition: background-color 0.3s;
   color: white;
-  background-color: ${(props: ShareLinkProps) => props.color};
+  background-color: ${({ color }) => color};
   &:hover {
-    background-color: ${(props: ShareLinkProps) => props.hover};
+    background-color: ${({ hover }) => hover};
   }
   &:hover,
   &:active,
