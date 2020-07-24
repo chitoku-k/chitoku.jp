@@ -75,7 +75,7 @@
     "react-instantsearch-dom": "^6.6.0",
     "react-intl": "^5.4.1",
     "react-recaptcha-v3": "^2.0.1",
-    "react-schemaorg": "^1.1.0",
+    "react-schemaorg": "^1.2.0",
     "rehype-react": "^6.0.0",
     "sass": "^1.26.10",
     "schema-dts": "^0.6.0",
