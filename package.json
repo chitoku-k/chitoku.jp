@@ -28,6 +28,7 @@
     "@weknow/gatsby-remark-twitter": "^0.2.3",
     "algoliasearch": "^4.3.1",
     "babel-plugin-react-intl-auto": "^3.3.0",
+    "babel-preset-gatsby": "^0.5.4",
     "bootstrap": "^4.5.0",
     "emotion-theming": "^10.0.27",
     "eslint": "^7.6.0",
