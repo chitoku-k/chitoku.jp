@@ -1,0 +1,256 @@
+{
+  "themes": {
+    "light": {
+      "body": {
+        "background": "#efefef",
+        "color": "#111111"
+      },
+      "links": {
+        "color": "#1e61ad",
+        "hover": "#133c6c"
+      },
+      "header": {
+        "primary": "#2f4255",
+        "secondary": "#e11010"
+      },
+      "footer": {
+        "background": "#44607b",
+        "color": "#ffffff"
+      },
+      "nav": {
+        "background": "#44607b",
+        "color": "#ffffff",
+        "hover": "#34495e",
+        "active": "#2f4255",
+        "border": "#395168"
+      },
+      "subnav": {
+        "background": "#f8f9fa",
+        "color": "#555555",
+        "hover": "#ececec",
+        "active": "#e7e7e7",
+        "inactive": "#777777"
+      },
+      "search": {
+        "background": "#ffffff",
+        "color": "#111111",
+        "placeholder": "#757575",
+        "icon": "#2f4255",
+        "shadow": "#d8d8d8",
+        "path": "#4f7f4d"
+      },
+      "containers": {
+        "background": "#ffffff",
+        "color": "#111111",
+        "shadow": "#c1c1c1"
+      },
+      "headings": {
+        "color": "#444444",
+        "primary": "#e11010",
+        "secondary": "#efefef",
+        "border": "#d4d4d4"
+      },
+      "blockquote": {
+        "border": "#eeeeee"
+      },
+      "table": {
+        "border": "#dddddd"
+      },
+      "code": {
+        "background": "#f4f2f0",
+        "prompt": "#708090"
+      },
+      "info": {
+        "background": "#d1ecf1",
+        "color": "#0c5460",
+        "border": "#bee5eb"
+      },
+      "danger": {
+        "background": "#f8d7da",
+        "color": "#721c24",
+        "border": "#f5c6cb"
+      },
+      "tweet": {
+        "border": "#e1e8ed"
+      },
+      "readmore": {
+        "background": "#e11010",
+        "color": "#ffffff",
+        "hover": "#a30c0c"
+      },
+      "pagination": {
+        "background": "#efefef",
+        "color": "#111111",
+        "hover": "#cacaca",
+        "active": "#e11010"
+      },
+      "sidebar": {
+        "description": "#757575"
+      },
+      "feed": {
+        "background": "#f76204",
+        "hover": "#e34e00",
+        "color": "#ffffff"
+      },
+      "share": {
+        "color": "#ffffff",
+        "twitter": "#00b0ed",
+        "twitter-hover": "#009cd9",
+        "facebook": "#315096",
+        "facebook-hover": "#1d3c82",
+        "pocket": "#eb126e",
+        "pocket-hover": "#ff2651",
+        "hatena": "#05a4de",
+        "hatena-hover": "#0090ca",
+        "tumblr": "#35465c",
+        "tumblr-hover": "#213248"
+      },
+      "home": {
+        "color": "#ffffff",
+        "pspprogramming": "#39bc75",
+        "pspprogramming-hover": "#21a160",
+        "soarer": "#48a9e2",
+        "soarer-hover": "#308ecd",
+        "recotw": "#6e587e",
+        "recotw-hover": "#563d69",
+        "windows": "#e73c3c",
+        "windows-hover": "#cf2424",
+        "psp-smartphone": "#e67e22",
+        "psp-smartphone-hover": "#ce660a",
+        "programming": "#f1c40f",
+        "programming-hover": "#d9ac00"
+      },
+      "mail": {
+        "accepted": "#009688",
+        "error": "#e11011",
+        "required": "#e11011"
+      }
+    },
+    "dark": {
+      "body": {
+        "background": "#484848",
+        "color": "#c3c4c7"
+      },
+      "links": {
+        "color": "#688bb4",
+        "hover": "#6b94c4"
+      },
+      "header": {
+        "primary": "#c3c4c7",
+        "secondary": "#a21919"
+      },
+      "footer": {
+        "background": "#283848",
+        "color": "#c3c4c7"
+      },
+      "nav": {
+        "background": "#283848",
+        "color": "#c3c4c7",
+        "hover": "#243341",
+        "active": "#212c39",
+        "border": "#253240"
+      },
+      "subnav": {
+        "background": "#484848",
+        "color": "#c3c4c7",
+        "hover": "#565656",
+        "active": "#3e3e3e",
+        "inactive": "#c3c4c7"
+      },
+      "search": {
+        "background": "#3d4852",
+        "color": "#c3c4c7",
+        "placeholder": "#949494",
+        "icon": "#949494",
+        "shadow": "#37393f",
+        "path": "#559152"
+      },
+      "containers": {
+        "background": "#313335",
+        "color": "#c3c4c7",
+        "shadow": "#393939"
+      },
+      "headings": {
+        "color": "#c3c4c7",
+        "primary": "#a21919",
+        "secondary": "#4a5056",
+        "border": "#62666b"
+      },
+      "blockquote": {
+        "border": "#484848"
+      },
+      "table": {
+        "border": "#62666b"
+      },
+      "code": {
+        "background": "#2d2d2d",
+        "prompt": "#708090"
+      },
+      "info": {
+        "background": "#3d4f52",
+        "color": "#c3c4c7",
+        "border": "#5a7a80"
+      },
+      "danger": {
+        "background": "#442f31",
+        "color": "#c3c4c7",
+        "border": "#653637"
+      },
+      "tweet": {
+        "border": "#e1e8ed"
+      },
+      "readmore": {
+        "background": "#a21919",
+        "color": "#e0e0e0",
+        "hover": "#901c1c"
+      },
+      "pagination": {
+        "background": "#484848",
+        "color": "#c3c4c7",
+        "hover": "#565656",
+        "active": "#a21919"
+      },
+      "sidebar": {
+        "description": "#9c9c9c"
+      },
+      "feed": {
+        "background": "#f76204",
+        "hover": "#e34e00",
+        "color": "#e0e0e0"
+      },
+      "share": {
+        "color": "#ffffff",
+        "twitter": "#00b0ed",
+        "twitter-hover": "#009cd9",
+        "facebook": "#315096",
+        "facebook-hover": "#1d3c82",
+        "pocket": "#eb126e",
+        "pocket-hover": "#ff2651",
+        "hatena": "#05a4de",
+        "hatena-hover": "#0090ca",
+        "tumblr": "#35465c",
+        "tumblr-hover": "#213248"
+      },
+      "home": {
+        "color": "#ffffff",
+        "pspprogramming": "#39bc75",
+        "pspprogramming-hover": "#21a160",
+        "soarer": "#48a9e2",
+        "soarer-hover": "#308ecd",
+        "recotw": "#6e587e",
+        "recotw-hover": "#563d69",
+        "windows": "#e73c3c",
+        "windows-hover": "#cf2424",
+        "psp-smartphone": "#e67e22",
+        "psp-smartphone-hover": "#ce660a",
+        "programming": "#f1c40f",
+        "programming-hover": "#d9ac00"
+      },
+      "mail": {
+        "accepted": "#009688",
+        "error": "#e11011",
+        "required": "#e11011"
+      }
+    }
+  }
+}
