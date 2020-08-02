@@ -10486,6 +10486,11 @@ is-symbol@^1.0.2:
   dependencies:
     has-symbols "^1.0.1"
 
+is-there@^4.4.4:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/is-there/-/is-there-4.5.0.tgz#62e918299660c4549b5388b8dd0c982f268fa30e"
+  integrity sha512-ko8s1Ll99F0fxKSGil5gdQCGOgkmOLWIC++OWBi3IvhlELNZzqUF/ydlcNnzMH18hau9wGfE77RjDMBxX1Qw+w==
+
 is-typedarray@^1.0.0, is-typedarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
@@ -10739,7 +10744,7 @@ json5@^1.0.1:
   dependencies:
     minimist "^1.2.0"
 
-json5@^2.1.2:
+json5@^2.1.1, json5@^2.1.2:
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.1.3.tgz#c9b0f7fa9233bfe5807fe66fcf3a5617ed597d43"
   integrity sha512-KXPvOm8K9IJKFM0bmdn8QXh7udDh1g/giieX0NLCaMnb4hEiVFqnop2ImTXCc5e0/oHz3LTqmHGtExn5hfMkOA==
@@ -12142,6 +12147,15 @@ node-releases@^1.1.58:
   version "1.1.58"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.58.tgz#8ee20eef30fa60e52755fcc0942def5a734fe935"
   integrity sha512-NxBudgVKiRh/2aPWMgPR7bPTX0VPmGx5QBwCtdHitnqFE5/O8DeBXuIMH1nwNnw/aMo6AjOrpsHzfY3UbUJ7yg==
+
+node-sass-json-importer@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/node-sass-json-importer/-/node-sass-json-importer-4.3.0.tgz#15773cc070f16aa20e93b378908366af85f6f742"
+  integrity sha512-+j+SsxPzYo7fWIDuz/etuLs+wfay5Zx2bkWE4LazkycdYGzEtCQz4tgIFXveeLBCBM6jvY4fp45z2JEj6U+VWQ==
+  dependencies:
+    is-there "^4.4.4"
+    json5 "^2.1.1"
+    lodash "^4.17.15"
 
 noms@0.0.0:
   version "0.0.0"
