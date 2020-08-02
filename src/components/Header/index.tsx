@@ -19,6 +19,10 @@ const HeaderTitle = styled.h1`
   margin: 20px 0;
   svg {
     vertical-align: baseline;
+    fill: var(--header-primary);
+    > .secondary {
+      fill: var(--header-secondary);
+    }
   }
   ${media.sm.down()} {
     text-align: center;

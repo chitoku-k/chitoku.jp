@@ -11,7 +11,6 @@
 // Basic
 html,
 body {
-  background: #efefef;
   word-wrap: break-word;
   &,
   div#___gatsby,
@@ -78,6 +77,18 @@ button {
   }
 }
 
+// Alerts
+.alert-danger {
+  color: var(--danger-color);
+  background-color: var(--danger-background);
+  border-color: var(--danger-border);
+}
+.alert-info {
+  color: var(--info-color);
+  background-color: var(--info-background);
+  border-color: var(--info-border);
+}
+
 // Tweet
 .twitter-tweet {
   margin: 20px auto;
@@ -90,6 +101,6 @@ button {
 blockquote.twitter-tweet {
   width: 470px;
   max-width: 100%;
-  border: 1px solid #e1e8ed !important;
+  border: 1px solid var(--tweet-border) !important;
   border-radius: 5px;
 }

@@ -27,7 +27,7 @@ const query = graphql`
 
 const NavContainer = styled.div`
   margin-bottom: 24px;
-  background: #44607b;
+  background-color: var(--nav-background);
   width: 100%;
   top: 0;
   z-index: 5;
@@ -87,8 +87,8 @@ const Nav = styled(BootstrapNav)`
     &,
     &:hover,
     &:focus {
-      color: white;
-      background-color: #2f4255;
+      background-color: var(--nav-active);
+      color: var(--nav-color);
     }
   }
 `

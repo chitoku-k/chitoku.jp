@@ -6,8 +6,8 @@
   }
 }
 :root {
+  @include theme(light);
   @media not all and (prefers-color-scheme: dark) {
-    @include theme(light);
     @import "~prismjs/themes/prism";
   }
   @media all and (prefers-color-scheme: dark) {

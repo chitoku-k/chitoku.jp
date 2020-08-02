@@ -22,8 +22,7 @@ interface PocketShareButtonProps extends ShareButtonProps {
 }
 
 interface ShareLinkProps extends GatsbyLinkProps<unknown> {
-  color: string
-  hover: string
+  name: string
 }
 
 const hatena: IconDefinition = {
@@ -40,8 +39,6 @@ const hatena: IconDefinition = {
 
 const ShareLink: FunctionComponent<ShareLinkProps> = ({
   children,
-  color,
-  hover,
   ...props
 }) => (
   <Link {...props}>
@@ -60,16 +57,16 @@ const ShareButton = styled(ShareLink)`
   border-radius: 6px;
   display: inline-flex;
   transition: background-color 0.3s;
-  color: white;
-  background-color: ${({ color }) => color};
+  color: var(--share-color);
+  background-color: var(--share-${({ name }) => name});
   &:hover {
-    background-color: ${({ hover }) => hover};
+    background-color: var(--share-${({ name }) => name}-hover);
   }
   &:hover,
   &:active,
   &:focus {
     text-decoration: none;
-    color: white;
+    color: var(--share-color);
   }
 `
 
@@ -90,7 +87,7 @@ export const TwitterShareButton: FunctionComponent<TwitterShareButtonProps> = ({
   const to = `${base}?text=${encodeURIComponent(title ?? '')}&url=${encodeURIComponent(url)}`
 
   return (
-    <ShareButton to={to} color="#00b0ed" hover="#009cd9" title={formatMessage(messages.share_on, { service: formatMessage(messages.twitter) })}>
+    <ShareButton to={to} name="twitter" title={formatMessage(messages.share_on, { service: formatMessage(messages.twitter) })}>
       <ShareButtonIcon icon={faTwitter} />
     </ShareButton>
   )
@@ -104,7 +101,7 @@ export const FacebookShareButton: FunctionComponent<ShareButtonProps> = ({
   const to = `${base}?u=${encodeURIComponent(url)}`
 
   return (
-    <ShareButton to={to} color="#315096" hover="#1d3c82" title={formatMessage(messages.share_on, { service: formatMessage(messages.facebook) })}>
+    <ShareButton to={to} name="facebook" title={formatMessage(messages.share_on, { service: formatMessage(messages.facebook) })}>
       <ShareButtonIcon icon={faFacebookF} />
     </ShareButton>
   )
@@ -119,7 +116,7 @@ export const PocketShareButton: FunctionComponent<PocketShareButtonProps> = ({
   const to = `${base}?title=${encodeURIComponent(title ?? '')}&url=${encodeURIComponent(url)}`
 
   return (
-    <ShareButton to={to} color="#ff2651" hover="#eb126e" title={formatMessage(messages.share_on, { service: formatMessage(messages.pocket) })}>
+    <ShareButton to={to} name="pocket" title={formatMessage(messages.share_on, { service: formatMessage(messages.pocket) })}>
       <ShareButtonIcon icon={faGetPocket} />
     </ShareButton>
   )
@@ -133,7 +130,7 @@ export const HatenaShareButton: FunctionComponent<ShareButtonProps> = ({
   const to = `${base}?mode=confirm&url=${encodeURIComponent(url)}`
 
   return (
-    <ShareButton to={to} color="#05a4de" hover="#0090ca" title={formatMessage(messages.share_on, { service: formatMessage(messages.hatena) })}>
+    <ShareButton to={to} name="hatena" title={formatMessage(messages.share_on, { service: formatMessage(messages.hatena) })}>
       <HatenaShareButtonIcon icon={hatena} />
     </ShareButton>
   )
@@ -147,7 +144,7 @@ export const TumblrShareButton: FunctionComponent<ShareButtonProps> = ({
   const to = `${base}?url=${encodeURIComponent(url)}`
 
   return (
-    <ShareButton to={to} color="#35465c" hover="#213248" title={formatMessage(messages.share_on, { service: formatMessage(messages.tumblr) })}>
+    <ShareButton to={to} name="tumblr" title={formatMessage(messages.share_on, { service: formatMessage(messages.tumblr) })}>
       <ShareButtonIcon icon={faTumblr} />
     </ShareButton>
   )

@@ -10,9 +10,9 @@ const ArticleContent = styled.div`
     font-size: 140%;
     margin: 48px 0 16px 0;
     padding: 9px 15px 7px;
-    background: #efefef;
-    color: #444;
-    border: 1px solid #d4d4d4;
+    background-color: var(--headings-secondary);
+    color: var(--headings-color);
+    border: 1px solid var(--headings-border);
     &.no-border {
       margin: 0;
       padding: 0;
@@ -31,7 +31,7 @@ const ArticleContent = styled.div`
   }
   h3 {
     font-size: 120%;
-    border-bottom: 1px solid #d4d4d4;
+    border-bottom: 1px solid var(--headings-border);
     margin: 50px 0 15px;
     padding: 0 16px 5px;
     ${media.md.down()} {
@@ -88,7 +88,7 @@ const ArticleContent = styled.div`
     }
   }
   blockquote {
-    border-left: 5px solid #eee;
+    border-left: 5px solid var(--blockquote-border);
     padding: 10px 20px;
     ${media.sm.down()} {
       margin-left: 10px;
@@ -116,8 +116,8 @@ const ArticleContent = styled.div`
           padding: 8px 16px;
           line-height: 1.42857;
           vertical-align: top;
-          border-top: 1px solid #ddd;
-          border-bottom: 1px solid #ddd;
+          border: 1px solid var(--table-border);
+          border-width: 1px 0;
           p {
             padding: 0;
             margin-bottom: 0;
@@ -129,7 +129,7 @@ const ArticleContent = styled.div`
         &:last-of-type {
           > td,
           > th {
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid var(--table-border);
           }
         }
       }
@@ -192,7 +192,7 @@ const ArticleContent = styled.div`
     word-wrap: break-word;
   }
   .gatsby-highlight {
-    background-color: #f4f2f0;
+    background-color: var(--code-background);
     border-radius: 0.3em;
     margin: 0.5em 16px 1.8em;
     -webkit-overflow-scrolling: touch;
@@ -216,7 +216,7 @@ const ArticleContent = styled.div`
   pre[class*="language-"],
   code[class*="language-"] {
     border-radius: 3px;
-    font-family: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: var(--font-family-monospace);
     margin: 0;
     .token.operator,
     .token.string {
@@ -224,7 +224,7 @@ const ArticleContent = styled.div`
     }
     .token.prompt {
       user-select: none;
-      color: slategray;
+      color: var(--code-prompt);
     }
     ${media.sm.down()} {
       border-radius: 0;

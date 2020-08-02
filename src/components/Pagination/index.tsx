@@ -80,15 +80,10 @@ const SimplePaginationItem = styled(PaginationItem)<PaginationItemProps>`
     }
   }
   ${media.sm.down()} {
+    display: ${({ visible }) => visible ? 'inline-block' : 'none'};
     width: 100%;
     & + li {
-      margin-top: 10px;
-    }
-    &.hidden {
-      display: none !important;
-      + li {
-        margin-top: 0;
-      }
+      margin-top: ${({ visible }) => visible ? '10px' : '0'};
     }
   }
 `

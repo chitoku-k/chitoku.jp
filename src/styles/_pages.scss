@@ -1,6 +1,6 @@
 .page-softwares {
   a {
-    color: #333;
+    color: var(--headings-color);
   }
   img {
     margin-right: 6px;
@@ -18,5 +18,9 @@
     @include media-breakpoint-down(lg) {
       margin-top: -15px;
     }
+  }
+  // Gatsby
+  .gatsby-resp-image-image {
+    box-shadow: none !important;
   }
 }

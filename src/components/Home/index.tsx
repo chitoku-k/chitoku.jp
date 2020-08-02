@@ -1,5 +1,6 @@
 import React, { Fragment, FunctionComponent } from 'react'
 import { Col, Row } from 'react-bootstrap'
+import { GatsbyLinkProps } from 'gatsby'
 import styled from '@emotion/styled'
 
 import { HomeItemQuery } from 'graphql-types'
@@ -24,10 +25,36 @@ const icons: HomeIcon = {
   ProgrammingIcon,
 }
 
+const IconWrapper = styled.div`
+  position: relative;
+  width: 175px;
+  height: 175px;
+  ${media.sm.down()} {
+    float: left;
+    width: 44px;
+    height: 44px;
+  }
+`
+
+const IconCurtain = styled.div`
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  width: 120px;
+  height: 120px;
+  transform: rotate(45deg);
+  background-color: var(--home-color);
+  ${media.sm.down()} {
+    top: 8px;
+    left: 8px;
+    width: 29px;
+    height: 29px;
+  }
+`
+
 const HomeMenuItem = styled(Col)`
   padding: 10px 0 0 0;
   margin-bottom: 20px;
-  color: #333;
   text-align: center;
   ${media.sm.down()} {
     flex: 0 0 100%;
@@ -36,7 +63,7 @@ const HomeMenuItem = styled(Col)`
     margin-bottom: 0;
     padding-top: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid var(--table-border);
     text-align: left;
     &:first-of-type {
       padding-top: 0;
@@ -49,55 +76,32 @@ const HomeMenuItem = styled(Col)`
   }
 `
 
-const HomeMenuItemLink = styled(Link)`
-  color: #333;
+const HomeMenuItemWrapper: FunctionComponent<HomeMenuItemLinkProps> = ({
+  item,
+  ...props
+}) => (
+  <Link {...props} />
+)
+
+const HomeMenuItemLink = styled(HomeMenuItemWrapper)<HomeMenuItemLinkProps>`
   display: inline-block;
   &:hover {
     text-decoration: none;
+    svg {
+      fill: var(--home-${({ item }) => item}-hover);
+    }
   }
   svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     transition: fill 0.3s;
     width: 175px;
     height: 175px;
     margin: 0 auto;
-    &.pspprogramming {
-      fill: #39bc75;
-      &:hover {
-        fill: #21a160;
-      }
-    }
-    &.soarer {
-      fill: #48a9e2;
-      &:hover {
-        fill: #308ecd;
-      }
-    }
-    &.recotw {
-      fill: #6e587e;
-      &:hover {
-        fill: #563d69;
-      }
-    }
-    &.windows {
-      fill: #e73c3c;
-      &:hover {
-        fill: #cf2424;
-      }
-    }
-    &.psp-smartphone {
-      fill: #e67e22;
-      &:hover {
-        fill: #ce660a;
-      }
-    }
-    &.programming {
-      fill: #f1c40f;
-      &:hover {
-        fill: #d9ac00;
-      }
-    }
+    fill: var(--home-${({ item }) => item});
     ${media.sm.down()} {
-      float: left;
       width: 44px;
       height: 44px;
     }
@@ -111,7 +115,7 @@ const HomeMenuItemTitle = styled.h2`
   margin: 18px 0 14px;
   padding: 0;
   background: none;
-  color: #333;
+  color: var(--headings-color);
   border: none;
   font-size: 140%;
   ${media.sm.down()} {
@@ -155,8 +159,11 @@ const Home: FunctionComponent<HomeProps> = ({ home }) => {
             return (
               <Fragment key={name}>
                 <HomeMenuItem xs={6} md={4}>
-                  <HomeMenuItemLink to={to} title={name}>
-                    <Icon className={id} viewBox="0 0 175 175" />
+                  <HomeMenuItemLink to={to} item={id} title={name}>
+                    <IconWrapper>
+                      <IconCurtain />
+                      <Icon viewBox="0 0 175 175" />
+                    </IconWrapper>
                     <HomeMenuItemTitle>{name}</HomeMenuItemTitle>
                   </HomeMenuItemLink>
                   <HomeMeneuItemDescription>{description}</HomeMeneuItemDescription>
@@ -174,6 +181,10 @@ type HomeProps = HomeItemQuery
 
 interface HomeIcon {
   [key: string]: React.ComponentType<React.SVGAttributes<Element>>
+}
+
+interface HomeMenuItemLinkProps extends GatsbyLinkProps<unknown> {
+  item: string
 }
 
 export default Home

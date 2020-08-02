@@ -4,10 +4,10 @@ import styled from '@emotion/styled'
 import { media } from 'components/Layout'
 
 const MainContent = styled.article`
-  background: white;
-  color: #111;
+  background-color: var(--containers-background);
+  color: var(--containers-color);
   padding: 20px;
-  box-shadow: 0 2px 4px 0 #c1c1c1;
+  box-shadow: 0 2px 4px 0 var(--containers-shadow);
   border-radius: 3px;
   & + & {
     margin-top: 20px;

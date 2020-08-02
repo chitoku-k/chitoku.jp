@@ -23,9 +23,9 @@ export const getClassNameFromPath = (path: string): string => `page${path.replac
 const ArticleHeaderAttributes = styled.div`
   min-height: 0.5em;
   text-align: right;
-  color: #333;
   margin: 4px 0 0 0;
   padding: 0;
+  color: var(--containers-color);
 `
 
 const ArticleHeaderAttributeIcon = styled(FontAwesomeIcon)`
@@ -42,7 +42,7 @@ const ArticleHeaderAttributeItem = styled.span`
 const ArticleHeaderAttributeLink = styled(Link)`
   &,
   &:hover {
-    color: #333;
+    color: var(--containers-color);
   }
 `
 
@@ -50,6 +50,7 @@ const ArticleNavbar = styled(Navbar)`
   border: none;
   border-radius: 0;
   padding: 0;
+  background-color: var(--subnav-background) !important;
 `
 
 const ArticleNav = styled(Nav)`
@@ -69,7 +70,7 @@ const ArticleNav = styled(Nav)`
     > li > a {
       &:hover,
       &:focus {
-        background-color: #ececec;
+        background-color: var(--subnav-hover);
       }
     }
   }
@@ -80,12 +81,12 @@ const ArticleNavItem = styled(NavItem)`
     &,
     &:hover,
     &:focus {
-      color: #777;
+      color: var(--subnav-inactive);
     }
   }
   .navbar-nav > &.active a {
-    background-color: #e7e7e7;
-    color: #555;
+    background-color: var(--subnav-active);
+    color: var(--subnav-color);
   }
 `
 
@@ -97,12 +98,12 @@ const ReadMoreContainer = styled.div`
 const ReadMoreButton = styled(Link)`
   display: inline-block;
   padding: 4px 16px;
-  background-color: #e11010;
-  color: white;
+  background-color: var(--readmore-background);
+  color: var(--readmore-color);
   transition: background-color 0.3s;
   &:hover {
-    background: #a30c0c;
-    color: white;
+    background: var(--readmore-hover);
+    color: var(--readmore-color);
     text-decoration: none;
   }
 `

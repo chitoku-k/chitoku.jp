@@ -21,19 +21,19 @@ const Dropdown = styled(BootstrapDropdown)`
       border-radius: 0;
     }
     > a {
-      color: #fefefe;
-      background-color: #34495e;
+      background-color: var(--nav-hover);
+      color: var(--nav-color);
     }
   }
   .dropdown-menu {
     display: none;
-    border-color: #395168;
     margin: 0;
     padding: 0;
     background-clip: border-box;
+    border-color: var(--nav-border);
     &,
     > .active > a {
-      background-color: #44607b;
+      background-color: var(--nav-background);
     }
   }
   .sub-menu {
@@ -51,14 +51,14 @@ export const NavLink = styled(Link)`
   .dropdown-menu > li > &,
   .navbar-nav > li > & {
     display: block;
-    color: white;
+    color: var(--nav-color);
     padding: 20px 30px;
     transition: background-color 0.3s;
     white-space: nowrap;
     &:hover,
     &:focus {
-      color: #fefefe;
-      background-color: #34495e;
+      background-color: var(--nav-hover);
+      color: var(--nav-color);
       text-decoration: none;
     }
     ${media.md.up()} {

@@ -22,8 +22,8 @@ const FooterCore = styled.footer`
   margin: 15px 0 0;
   padding: 8px 0;
   text-align: center;
-  background: #44607b;
-  color: white;
+  background-color: var(--footer-background);
+  color: var(--footer-color);
   ${media.lg.up()} {
     width: 100%;
     position: absolute;
@@ -37,7 +37,7 @@ const FooterCore = styled.footer`
 const FooterLink = styled(Link)`
   &,
   &:hover {
-    color: white;
+    color: var(--footer-color);
   }
 `
 

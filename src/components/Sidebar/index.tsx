@@ -79,9 +79,9 @@ const SidebarContainer = styled(Col)`
 const SidebarItem = styled.div`
   margin-bottom: 20px;
   padding: 20px;
-  background: white;
-  color: #111;
-  box-shadow: 0 2px 4px 0 #c1c1c1;
+  background-color: var(--containers-background);
+  color: var(--containers-color);
+  box-shadow: 0 2px 4px 0 var(--containers-shadow);
   border-radius: 3px;
   &:last-of-type {
     margin-bottom: 0;
@@ -103,12 +103,12 @@ const SidebarItemTitle = styled.h2`
   margin: 0 0 10px 0;
   font-size: 20px;
   padding-left: 8px;
-  border-left: 1em solid #e11010;
+  border-left: 1em solid var(--headings-primary);
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   a {
-    color: #333;
+    color: var(--containers-color);
   }
 `
 
@@ -162,19 +162,19 @@ const LatestItemMetadataSeparator = styled.span`
   width: 2px;
   height: 2px;
   border-radius: 50%;
-  background-color: #757575;
+  background-color: var(--sidebar-description);
 `
 
 const LatestItemAttribute = styled.div`
   display: inline-block;
-  color: #757575;
+  color: var(--sidebar-description);
   font-size: 75%;
   font-variant-numeric: tabular-nums;
 `
 
 const LatestItemCategory = styled(LatestItemAttribute)`
   a {
-    color: #757575;
+    color: var(--sidebar-description);
   }
 `
 
@@ -191,13 +191,13 @@ const FeedIconLink = styled(Link)`
   padding: 4px 10px;
   font-size: 12px;
   border-radius: 4px;
-  background-color: #f76204;
-  color: white !important;
+  background-color: var(--feed-background);
+  color: var(--feed-color) !important;
   text-decoration: none !important;
   transition: background-color 0.3s;
   font-weight: normal;
   &:hover {
-    background-color: #e34e00;
+    background-color: var(--feed-hover);
   }
 `
 

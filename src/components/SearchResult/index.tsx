@@ -69,7 +69,7 @@ const SearchHitLink = styled(Link)`
 `
 
 const SearchHitPath = styled.span`
-  color: #4f7f4d;
+  color: var(--search-path);
 `
 
 const NoHits = styled.div`

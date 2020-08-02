@@ -18,7 +18,7 @@ const ContactNotice = styled(Alert)`
 `
 
 const Required = styled.span`
-  color: red;
+  color: var(--mail-required);
 `
 
 const StatusArea = styled.div`
@@ -26,12 +26,12 @@ const StatusArea = styled.div`
 `
 
 const AcceptedIcon = styled(FontAwesomeIcon)`
-  color: #009688;
+  color: var(--mail-accepted);
   margin-right: 5px;
 `
 
 const ErrorIcon = styled(FontAwesomeIcon)`
-  color: #e11011;
+  color: var(--mail-error);
   margin-right: 5px;
 `
 

@@ -13,13 +13,13 @@ const MainContentHeader = styled.div`
 const MainContentTitle = styled.h1`
   padding-left: 12px;
   padding-bottom: 8px;
-  border-left: 14px solid #e11010;
-  border-bottom: 1px solid #e11010;
+  border-left: 14px solid var(--headings-primary);
+  border-bottom: 1px solid var(--headings-primary);
   line-height: 1.25;
   font-size: 200%;
   margin: 0;
   a {
-    color: #111;
+    color: var(--containers-color);
   }
   ${media.sm.down()} {
     font-size: 130%;

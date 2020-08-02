@@ -5,7 +5,7 @@ category: コンピューター
 ---
 ## うわっ……
 
-<aside class="recommended" style="margin: 20px auto; width: 300px; height: 250px; border: 1px solid #CACAC9;">
+<aside class="recommended" style="margin: 20px auto; width: 300px; height: 250px; background-color: #fff; color: #333; border: 1px solid #CACAC9;">
 <div style="border-bottom: 1px solid #C9C5C2; background: linear-gradient(to bottom, #f5edee 0%, #e6d6d2 100%); padding: 5px 8px;"><strong>■おすすめ情報</strong></div>
 <h6 style="margin: 8px 0 5px; font-size: 32px; line-height: 1.3; padding: 0 8px; white-space: nowrap;">うわっ…<span style="background-color: #efb0ec;">私のPW</span>、<br>
 <span style="background-color: #efb0ec;">危なすぎ…</span>？</h6>

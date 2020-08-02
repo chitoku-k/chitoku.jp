@@ -24,9 +24,14 @@ const FormDesktopInput = styled.input`
   min-height: 32px;
   border: none;
   border-radius: 16px;
-  box-shadow: 0 3px 5px 1px #d8d8d8 inset;
+  background-color: var(--search-background);
+  color: var(--search-color);
+  box-shadow: 0 3px 5px 1px var(--search-shadow) inset;
   ${media.md.down()} {
     width: 200px;
+  }
+  &::placeholder {
+    color: var(--search-placeholder);
   }
   &:focus {
     outline: none;
@@ -46,7 +51,7 @@ const FormMobileContainer = styled(Container)`
 const FormMobileCancelContainer = styled.div`
   display: table-cell;
   text-align: center;
-  color: white;
+  color: var(--nav-color);
   margin-right: 8px;
 `
 
@@ -61,7 +66,8 @@ const FormMobileRow = styled(Row)`
 const FormMobileInput = styled.input`
   border: none;
   border-radius: 4px;
-  background: white;
+  background-color: var(--search-background);
+  color: var(--search-color);
   margin: 0 8px;
   padding: 3px 8px;
   flex-grow: 1;
@@ -72,7 +78,7 @@ const FormMobileInput = styled.input`
 `
 
 const SearchIcon = styled(FontAwesomeIcon)`
-  color: #2f4255;
+  color: var(--search-icon);
   position: absolute;
   left: 14px;
   top: calc(50% - 0.5em);

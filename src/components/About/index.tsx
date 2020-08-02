@@ -59,7 +59,7 @@ const Icon = styled.img`
 `
 
 const Table = styled(BootstrapTable)`
-  border-bottom-color: #ddd;
+  border-bottom-color: var(--table-border);
   border-bottom-width: 1px;
   border-bottom-style: solid;
   margin: 0;
