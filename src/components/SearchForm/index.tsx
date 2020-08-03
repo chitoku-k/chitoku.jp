@@ -3,7 +3,7 @@ import { Container, Navbar, Popover, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useIntl } from 'react-intl'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import { SearchBoxProvided } from 'react-instantsearch-core'
 import { connectSearchBox } from 'react-instantsearch-dom'
 
@@ -137,7 +137,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
     <>
       {search ? (
         <FormMobileContainer>
-          <FormMobile role="search" as="form" onSubmit={onSubmit}>
+          <FormMobile role="search" forwardedAs="form" onSubmit={onSubmit}>
             <FormMobileRow>
               <FormMobileInput type="search" ref={input} value={text ?? ''} placeholder={formatMessage(messages.search)} onChange={onChange} />
               <FormMobileCancelContainer onClick={closeSearch}>
@@ -147,7 +147,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
           </FormMobile>
         </FormMobileContainer>
       ) : null}
-      <FormDesktop role="search" as="form" onSubmit={onSubmit}>
+      <FormDesktop role="search" forwardedAs="form" onSubmit={onSubmit}>
         <FormDesktopInput type="search" value={text ?? ''} placeholder={formatMessage(messages.search)} onChange={onChange} />
         <UnsupportedNotice>
           <Popover id="search-form-noscript" placement="bottom">

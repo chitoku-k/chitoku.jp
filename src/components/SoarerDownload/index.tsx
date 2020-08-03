@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import { SoarerDownloadItemQuery } from 'graphql-types'
 import messages from './messages'

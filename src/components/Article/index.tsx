@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar, faFolderOpen } from '@fortawesome/free-regular-svg-icons'
 import { faTags } from '@fortawesome/free-solid-svg-icons'
 import { useIntl } from 'react-intl'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import { ArticleFragment, ArticleQuery } from 'graphql-types'
 import messages from './messages'
@@ -192,7 +192,7 @@ const Article: FunctionComponent<ArticleProps> = ({
         </ArticleHeader>
         {navigation ? (
           <ArticleNavbar bg="light">
-            <ArticleNav as="ul">
+            <ArticleNav forwardedAs="ul">
               {navigation.map(item => (
                 <ArticleNavItem key={item.name} {...item} style={{ width: `calc(100% / ${navigation.length})` }} />
               ))}

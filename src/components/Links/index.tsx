@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { useIntl } from 'react-intl'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import { LinksItemQuery } from 'graphql-types'
 import messages from './messages'

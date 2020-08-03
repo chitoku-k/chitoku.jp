@@ -9,6 +9,7 @@
   "plugins": [
     ["@babel/plugin-transform-regenerator"],
     ["@babel/plugin-transform-typescript"],
-    ["react-intl-auto", { "removePrefix": "src/" }]
+    ["react-intl-auto", { "removePrefix": "src/" }],
+    ["styled-components"]
   ]
 }

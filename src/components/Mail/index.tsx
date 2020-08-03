@@ -4,7 +4,7 @@ import { FormattedMessage, useIntl } from 'react-intl'
 import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faCircleNotch, faTimes } from '@fortawesome/free-solid-svg-icons'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
@@ -148,7 +148,7 @@ const Mail: FunctionComponent = () => {
           </FormGroup>
           <FormGroup>
             <Label required title={formatMessage(messages.message)}>
-              <Input name="body" as="textarea" cols={40} rows={10} required readOnly={readOnly} />
+              <Input name="body" forwardedAs="textarea" cols={40} rows={10} required readOnly={readOnly} />
             </Label>
           </FormGroup>
           <ReCaptcha action="mail" sitekey={siteKey} verifyCallback={setToken} />

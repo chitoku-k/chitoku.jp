@@ -1,7 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { IntlProvider } from 'react-intl'
-import styled from '@emotion/styled'
-import { ThemeProvider } from 'emotion-theming'
+import styled, { ThemeProvider } from 'styled-components'
 
 import '../../styles/styles.scss'
 import * as styles from './styles'

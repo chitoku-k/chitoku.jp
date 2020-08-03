@@ -54,7 +54,6 @@ module.exports = {
       },
     ] : []),
     { resolve: 'gatsby-plugin-catch-links' },
-    { resolve: 'gatsby-plugin-emotion' },
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
@@ -90,6 +89,12 @@ module.exports = {
       },
     },
     { resolve: 'gatsby-plugin-sharp' },
+    {
+      resolve: 'gatsby-plugin-styled-components',
+      options: {
+        displayName: process.env.NODE_ENV === 'development',
+      },
+    },
     {
       resolve: '@danbruegge/gatsby-plugin-stylelint',
       options: {

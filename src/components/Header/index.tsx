@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import Logo from '../../assets/logo.svg'
 import { media } from 'components/Layout'
@@ -41,7 +41,7 @@ const HeaderLink = styled(Link)`
 `
 
 const Header: FunctionComponent = () => (
-  <HeaderContainer as="header">
+  <HeaderContainer forwardedAs="header">
     <Row>
       <HeaderTitle>
         <HeaderLink to="/">

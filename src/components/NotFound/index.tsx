@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactNode } from 'react'
 import { FormattedMessage, MessageDescriptor, useIntl } from 'react-intl'
 import { Location } from '@reach/router'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import { AboutYamlContacts, NotFoundItemQuery } from 'graphql-types'
 import Container from 'components/Container'

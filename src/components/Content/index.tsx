@@ -1,6 +1,6 @@
 import React, { FunctionComponent, memo } from 'react'
 import { Container as BootstrapContainer, Row as BootstrapRow } from 'react-bootstrap'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import { Location } from '@reach/router'
 
 import { media } from 'components/Layout'

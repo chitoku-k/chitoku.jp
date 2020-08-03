@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { FormattedMessage } from 'react-intl'
 import { graphql, useStaticQuery } from 'gatsby'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import { FooterItemQuery } from 'graphql-types'
 import messages from './messages'

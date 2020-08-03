@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
 import { connectStateResults } from 'react-instantsearch-dom'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import SearchResult from 'components/SearchResult'
 

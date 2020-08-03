@@ -1,5 +1,5 @@
 import React, { DetailedHTMLProps, FunctionComponent, HTMLAttributes, ReactNode } from 'react'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import { media } from 'components/Layout'
 

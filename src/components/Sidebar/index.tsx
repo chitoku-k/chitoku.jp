@@ -5,7 +5,7 @@ import { useIntl } from 'react-intl'
 import { WindowLocation } from '@reach/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faRss } from '@fortawesome/free-solid-svg-icons'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import { SidebarItemQuery } from 'graphql-types'
 import messages from './messages'
@@ -230,7 +230,7 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
   const url = siteUrl + location.pathname
 
   return (
-    <SidebarContainer as="aside">
+    <SidebarContainer forwardedAs="aside">
       <SidebarItem>
         <SidebarItemTitle>
           {formatMessage(messages.share)}

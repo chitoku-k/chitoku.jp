@@ -2,7 +2,7 @@ import React, { FunctionComponent, HTMLAttributes, ReactNode } from 'react'
 import { Pagination as BootstrapPagination, PageItemProps, SafeAnchorProps } from 'react-bootstrap'
 import { BsPrefixProps } from 'react-bootstrap/helpers'
 import { useIntl } from 'react-intl'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import { media } from 'components/Layout'
 import messages from './messages'

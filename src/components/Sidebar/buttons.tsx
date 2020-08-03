@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faGetPocket, faTumblr, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { useIntl } from 'react-intl'
 import { GatsbyLinkProps } from 'gatsby-link'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import messages from './messages'
 import Link from 'components/Link'

@@ -1,6 +1,6 @@
 import React, { ComponentType, FunctionComponent, useMemo } from 'react'
 import RehypeReact from 'rehype-react'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import { ArticleAstNode, ArticleWrapper } from 'components/Article'
 import { media } from 'components/Layout'

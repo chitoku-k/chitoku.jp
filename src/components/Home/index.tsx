@@ -1,7 +1,7 @@
 import React, { Fragment, FunctionComponent } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { GatsbyLinkProps } from 'gatsby'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import { HomeItemQuery } from 'graphql-types'
 import { media } from 'components/Layout'

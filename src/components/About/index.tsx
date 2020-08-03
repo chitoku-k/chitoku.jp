@@ -2,7 +2,7 @@ import React, { FunctionComponent, useMemo } from 'react'
 import { Table as BootstrapTable, Col, Row } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
 import RehypeReact from 'rehype-react'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import { AboutItemQuery } from 'graphql-types'
 import { media } from 'components/Layout'

@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { Table } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import { PspErrorItemQuery } from 'graphql-types'
 import messages from './messages'

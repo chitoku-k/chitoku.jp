@@ -3,7 +3,7 @@ import { Nav as BootstrapNav, Navbar as BootstrapNavbar, Container, NavbarProps,
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { graphql, useStaticQuery } from 'gatsby'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import { NavigationLinkItemQuery, NavigationsYamlNav } from 'graphql-types'
 import { media } from 'components/Layout'
@@ -119,7 +119,7 @@ const Navbar: FunctionComponent = () => {
         <NavbarRow>
           <NavbarCore search={search}>
             <Row>
-              <Nav as="ul">
+              <Nav forwardedAs="ul">
                 {nav.map(item => (
                   <NavItem key={item.to} {...item} dropdown>{item.items}</NavItem>
                 ))}

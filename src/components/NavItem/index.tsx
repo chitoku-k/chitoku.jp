@@ -1,7 +1,7 @@
 import React, { DetailedHTMLProps, FunctionComponent } from 'react'
 import { Dropdown as BootstrapDropdown } from 'react-bootstrap'
 import { Location } from '@reach/router'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import { media } from 'components/Layout'
 import { NavigationLinkItem } from 'components/Navbar'
@@ -89,7 +89,7 @@ const NavItem: FunctionComponent<NavItemProps & BootstrapNavItemProps & Navigati
 }) => (
   <Location>
     {({ location }) => items ? (
-      <Dropdown as="li" id={to} {...getClassName(to === location.pathname, dropdown, className)}>
+      <Dropdown forwardedAs="li" id={to} {...getClassName(to === location.pathname, dropdown, className)}>
         <NavLink to={to} className={dropdown ? 'dropdown-toggle' : ''}>
           {name}
         </NavLink>

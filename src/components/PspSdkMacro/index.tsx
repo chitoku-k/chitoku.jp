@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useEffect, useRef } from 'react'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-c'
 
