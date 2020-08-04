@@ -7,10 +7,14 @@
 }
 :root {
   @include theme(light);
-  @import "~prismjs/themes/prism";
 
   @media (prefers-color-scheme: dark) {
     @include theme(dark);
-    @import "~prismjs/themes/prism-tomorrow";
   }
+}
+
+@import "~prismjs/themes/prism";
+
+@media (prefers-color-scheme: dark) {
+  @import "~prismjs/themes/prism-tomorrow";
 }
