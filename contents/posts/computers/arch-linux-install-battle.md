@@ -10,7 +10,6 @@ category: コンピューター
 さくらのクラウドでは [Antergos](https://antergos.com/) を利用して Arch Linux のインストールを行いましたが、
 「Antergos は甘え」という意見を受けたため[*要出典*]、
 今回は人生初の [#ArchLinuxInstallBattle](https://twitter.com/search?q=#ArchLinuxInstallBattle) に挑戦する運びとなりました。はー、こわ………。
-</p>
 
 <!-- more -->
 
@@ -37,6 +36,6 @@ SQUASHFS error: Unable to read fragment cache entry
 
 ## 勝利
 
-https://twitter.com/java_shit/status/736877915049066496
+<twitter-tweet id="736877915049066496"></twitter-tweet>
 
 デフォルトで vim すらバンドルされていないミニマムさに驚きながら、無言で前のサーバーの pacman から書きだしたパッケージ一覧を押し込んで作業完了でした。おしまい。

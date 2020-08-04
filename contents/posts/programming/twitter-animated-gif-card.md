@@ -7,7 +7,7 @@ tags:
 ---
 この記事は、ヒナロエ氏（[@hnle0](https://twitter.com/hnle0)）の [Advent Calendar 2014](https://blog.hinaloe.net/events/advent-calendar2014/) 参加記事（7 日目）です。
 
-https://twitter.com/hnle0/status/543439157263998976
+<twitter-tweet id="543439157263998976"></twitter-tweet>
 
 <div class="alert alert-info text-center">
 
@@ -22,7 +22,7 @@ https://twitter.com/hnle0/status/543439157263998976
 
 <!-- more -->
 
-https://twitter.com/TwitterDevJP/status/479447380190691328
+<twitter-tweet id="479447380190691328"></twitter-tweet>
 
 <div class="text-center" style="margin: 30px 0; font-size: 140%;">
 “近いうちに”（年内とは言っていない）
@@ -40,7 +40,7 @@ https://twitter.com/TwitterDevJP/status/479447380190691328
 公式アプリの特権を利用するにはリクエストの認証情報に公式アプリのキーを利用する必要があります。どこかで手に入れてきましょう。
 私は Twitter for iPhone と Twitter for Android のキーで確認しました。
 
-https://twitter.com/java_shit/status/536534482828795904
+<twitter-tweet id="536534482828795904"></twitter-tweet>
 
 このツイート（[ID: 536534482828795904](https://twitter.com/java_shit/status/536534482828795904)）の GIF 画像で試してみます。
 
@@ -139,7 +139,7 @@ $ curl -X GET "https://twitter.com/java_shit/status/536534482828795904"
 
 ## 埋め込みツイートから
 
-https://twitter.com/hnle0/status/544569728178466818
+<twitter-tweet id="544569728178466818"></twitter-tweet>
 
 埋め込みツイート API からも GIF の情報を取得できるようです。
 
@@ -166,6 +166,6 @@ $ curl -X GET "https://syndication.twitter.com/tweets.json?ids=53653448282879590
 
 ## 【追記】ようやく対応する模様
 
-https://twitter.com/twitterapi/status/552807479147778049
+<twitter-tweet id="552807479147778049"></twitter-tweet>
 
 2015年1月6日の発表記事によれば、同年2月2日から REST API ならびに Streaming API の双方において、`extended_entities` フィールドで MP4 形式の GIF アニメーションが取得できるようになるようです。ようやくか………。

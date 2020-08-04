@@ -34,4 +34,4 @@ Google Chrome 64 ビット版を使用している場合は 64 ビット版の S
 詳しくは下記のリンクにて。
 </div>
 
-https://twitter.com/hnle0/status/598552456226742272
+<twitter-tweet id="598552456226742272"></twitter-tweet>

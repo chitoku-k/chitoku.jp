@@ -139,7 +139,7 @@ SourceTree だと今どのブランチに何の操作をしようとしている
 
 ってことで GitHub のコンソール操作を覚えるために、ゆるゆり 13 巻（と GitHub の教科書）を買ってきました。
 
-https://twitter.com/java_shit/status/562917301310484482
+<twitter-tweet id="562917301310484482"></twitter-tweet>
 
 全体を通した対話形式となっていて、GitHub の基本的な使い方やブランチ、プルリクエストなどの運用のしかたについて非常に見やすくまとめられています。
 また GitHub に入門したばかりでも基本的な操作は SourceTree を通して行うため初心者にも安心です。
@@ -151,6 +151,6 @@ https://twitter.com/java_shit/status/562917301310484482
 RecoTw Explorer は G2 氏の RecoTw があってこそです。開発お疲れさまです。
 ドメインが凍結したり、Twitter アカウントが凍結したり、ドメインが凍結したりしても、強く生きてください。
 
-https://twitter.com/G2U/status/562393891152752640
+<twitter-tweet id="562393891152752640"></twitter-tweet>
 
 ↑アカウント凍結系開発者さんの声
