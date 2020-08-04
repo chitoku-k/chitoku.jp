@@ -9,7 +9,6 @@ const isAnchor = (to: string): boolean => to.startsWith('#')
 const Link: FunctionComponent<GatsbyLinkProps<unknown> & LinkProps & Partial<ArticleWrapper>> = ({
   to,
   href,
-  children,
   ref,
   target,
   article,
@@ -17,11 +16,11 @@ const Link: FunctionComponent<GatsbyLinkProps<unknown> & LinkProps & Partial<Art
 }) => {
   const dest = (to || href) ?? ''
   return isUrl(dest) || target ? (
-    <a href={dest} ref={ref} target={target ?? '_blank'} rel="nofollow noopener noreferrer" {...rest}>{children}</a>
+    <a href={dest} ref={ref} target={target ?? '_blank'} rel="nofollow noopener noreferrer" {...rest} />
   ) : isAnchor(dest) ? (
-    <a href={dest} ref={ref} {...rest}>{children}</a>
+    <a href={dest} ref={ref} {...rest} />
   ) : (
-    <GatsbyLink to={dest} {...rest}>{children}</GatsbyLink>
+    <GatsbyLink to={dest} {...rest} />
   )
 }
 

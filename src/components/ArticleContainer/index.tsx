@@ -28,13 +28,10 @@ const MainContent = styled.article`
 `
 
 const ArticleContainer: FunctionComponent<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>> = ({
-  children,
   ref,
   ...rest
 }) => (
-  <MainContent {...rest}>
-    {children}
-  </MainContent>
+  <MainContent {...rest} />
 )
 
 export default ArticleContainer

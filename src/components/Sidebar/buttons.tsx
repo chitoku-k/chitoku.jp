@@ -42,16 +42,7 @@ const hatena: IconDefinition = {
   ],
 }
 
-const ShareLink: FunctionComponent<ShareLinkProps> = ({
-  children,
-  ...props
-}) => (
-  <Link {...props}>
-    {children}
-  </Link>
-)
-
-const ShareButton = styled(ShareLink)`
+const ShareButton = styled(Link)<ShareLinkProps>`
   box-sizing: content-box;
   align-items: center;
   justify-content: center;
