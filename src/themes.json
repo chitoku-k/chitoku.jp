@@ -193,9 +193,17 @@
       }
     },
     "tweet": {
+      "background": {
+        "light": "#ffffff",
+        "dark": "#000000"
+      },
+      "color": {
+        "light": "#14171a",
+        "dark": "#d9d9d9"
+      },
       "border": {
-        "light": "#e1e8ed",
-        "dark": "#e1e8ed"
+        "light": "#ccd6dd",
+        "dark": "#2f3336"
       }
     },
     "readmore": {

@@ -98,15 +98,16 @@ code[class*="language-"] {
 // Tweet
 .twitter-tweet {
   margin: 20px auto;
-  padding: 15px;
   font-size: 100%;
 }
 .twitter-tweet + .twitter-tweet {
   visibility: hidden;
 }
 blockquote.twitter-tweet {
-  width: 470px;
+  width: 550px;
   max-width: 100%;
+  color: var(--tweet-color);
+  background-color: var(--tweet-background);
   border: 1px solid var(--tweet-border) !important;
-  border-radius: 5px;
+  border-radius: 15px;
 }

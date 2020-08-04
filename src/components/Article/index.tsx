@@ -17,6 +17,7 @@ import { colors, media } from 'components/Layout'
 import ArticleBody, { ArticleComponentCollection } from 'components/ArticleBody'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
+import TwitterTweet from '../TwitterTweet'
 
 export const getClassNameFromPath = (path: string): string => `page${path.replace(/[/]/ug, '-').replace(/-$/u, '')}`
 
@@ -149,6 +150,7 @@ const Article: FunctionComponent<ArticleProps> = ({
   Object.assign(components, {
     'pspsdk-function': PspSdkFunction,
     'pspsdk-macro': PspSdkMacro,
+    'twitter-tweet': TwitterTweet,
     a: Link,
   })
 
