@@ -26,6 +26,7 @@ const { description } = require('./package.json')
 const { createQuery } = require('historia-taxonomy-plugin')
 const sass = require('sass')
 const jsonImporter = require('node-sass-json-importer')
+const postcssCustomProperties = require('postcss-custom-properties')
 
 module.exports = {
   siteMetadata: {
@@ -85,7 +86,12 @@ module.exports = {
       resolve: 'gatsby-plugin-sass',
       options: {
         implementation: sass,
-        importer: jsonImporter(),
+        importer: jsonImporter({
+          convertCase: true,
+        }),
+        postCssPlugins: [
+          postcssCustomProperties(),
+        ],
       },
     },
     { resolve: 'gatsby-plugin-sharp' },

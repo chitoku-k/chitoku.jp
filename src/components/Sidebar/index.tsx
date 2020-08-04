@@ -17,7 +17,7 @@ import {
   TwitterShareButton,
 } from './buttons'
 import { MetadataContext } from 'components/Metadata'
-import { media } from 'components/Layout'
+import { colors, media } from 'components/Layout'
 import NavItem from 'components/NavItem'
 import Link from 'components/Link'
 
@@ -79,9 +79,9 @@ const SidebarContainer = styled(Col)`
 const SidebarItem = styled.div`
   margin-bottom: 20px;
   padding: 20px;
-  background-color: var(--containers-background);
-  color: var(--containers-color);
-  box-shadow: 0 2px 4px 0 var(--containers-shadow);
+  background-color: ${colors.containers.background};
+  color: ${colors.containers.color};
+  box-shadow: 0 2px 4px 0 ${colors.containers.shadow};
   border-radius: 3px;
   &:last-of-type {
     margin-bottom: 0;
@@ -103,12 +103,12 @@ const SidebarItemTitle = styled.h2`
   margin: 0 0 10px 0;
   font-size: 20px;
   padding-left: 8px;
-  border-left: 1em solid var(--headings-primary);
+  border-left: 1em solid ${colors.headings.primary};
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   a {
-    color: var(--containers-color);
+    color: ${colors.containers.color};
   }
 `
 
@@ -162,19 +162,19 @@ const LatestItemMetadataSeparator = styled.span`
   width: 2px;
   height: 2px;
   border-radius: 50%;
-  background-color: var(--sidebar-description);
+  background-color: ${colors.sidebar.description};
 `
 
 const LatestItemAttribute = styled.div`
   display: inline-block;
-  color: var(--sidebar-description);
+  color: ${colors.sidebar.description};
   font-size: 75%;
   font-variant-numeric: tabular-nums;
 `
 
 const LatestItemCategory = styled(LatestItemAttribute)`
   a {
-    color: var(--sidebar-description);
+    color: ${colors.sidebar.description};
   }
 `
 
@@ -191,13 +191,13 @@ const FeedIconLink = styled(Link)`
   padding: 4px 10px;
   font-size: 12px;
   border-radius: 4px;
-  background-color: var(--feed-background);
-  color: var(--feed-color) !important;
+  background-color: ${colors.feed.background};
+  color: ${colors.feed.color} !important;
   text-decoration: none !important;
   transition: background-color 0.3s;
   font-weight: normal;
   &:hover {
-    background-color: var(--feed-hover);
+    background-color: ${colors.feed.hover};
   }
 `
 

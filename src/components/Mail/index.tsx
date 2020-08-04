@@ -10,6 +10,7 @@ import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
 import Metadata from 'components/Metadata'
+import { colors } from 'components/Layout'
 import Link from 'components/Link'
 import messages from './messages'
 
@@ -18,7 +19,7 @@ const ContactNotice = styled(Alert)`
 `
 
 const Required = styled.span`
-  color: var(--mail-required);
+  color: ${colors.mail.required};
 `
 
 const StatusArea = styled.div`
@@ -26,12 +27,12 @@ const StatusArea = styled.div`
 `
 
 const AcceptedIcon = styled(FontAwesomeIcon)`
-  color: var(--mail-accepted);
+  color: ${colors.mail.accepted};
   margin-right: 5px;
 `
 
 const ErrorIcon = styled(FontAwesomeIcon)`
-  color: var(--mail-error);
+  color: ${colors.mail.error};
   margin-right: 5px;
 `
 

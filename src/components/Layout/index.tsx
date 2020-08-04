@@ -1,13 +1,12 @@
 import React, { FunctionComponent } from 'react'
 import { IntlProvider } from 'react-intl'
 import styled, { ThemeProvider } from 'styled-components'
+import { useMedia } from 'use-media'
 
 import '../../styles/styles.scss'
-import * as styles from './styles'
+import { colors, media, theme } from './styles'
 import messages from 'translations/ja.yml'
 import Search from 'components/Search'
-
-export const media = styles
 
 const Wrapper = styled.div`
   ${media.lg.up()} {
@@ -18,16 +17,24 @@ const Wrapper = styled.div`
 
 const Layout: FunctionComponent = ({
   children,
-}) => (
-  <IntlProvider locale="ja" messages={messages}>
-    <ThemeProvider theme={media.theme}>
-      <Search>
-        <Wrapper>
-          {children}
-        </Wrapper>
-      </Search>
-    </ThemeProvider>
-  </IntlProvider>
-)
+}) => {
+  const mode = useMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light'
+
+  return (
+    <IntlProvider locale="ja" messages={messages}>
+      <ThemeProvider theme={{ ...theme, mode }}>
+        <Search>
+          <Wrapper>
+            {children}
+          </Wrapper>
+        </Search>
+      </ThemeProvider>
+    </IntlProvider>
+  )
+}
 
 export default Layout
+export {
+  media,
+  colors,
+}

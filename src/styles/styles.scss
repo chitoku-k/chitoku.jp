@@ -77,6 +77,14 @@ button {
   }
 }
 
+// Prism
+:root {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-family: var(--font-family-monospace);
+  }
+}
+
 // Alerts
 .alert-danger {
   color: var(--danger-color);

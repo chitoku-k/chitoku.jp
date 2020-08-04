@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 
 import { NavigationLinkItemQuery, NavigationsYamlNav } from 'graphql-types'
-import { media } from 'components/Layout'
+import { colors, media } from 'components/Layout'
 import SearchForm from 'components/SearchForm'
 import NavItem, { NavLink } from 'components/NavItem'
 
@@ -27,7 +27,7 @@ const query = graphql`
 
 const NavContainer = styled.div`
   margin-bottom: 24px;
-  background-color: var(--nav-background);
+  background-color: ${colors.nav.background};
   width: 100%;
   top: 0;
   z-index: 5;
@@ -87,8 +87,8 @@ const Nav = styled(BootstrapNav)`
     &,
     &:hover,
     &:focus {
-      background-color: var(--nav-active);
-      color: var(--nav-color);
+      background-color: ${colors.nav.active};
+      color: ${colors.nav.color};
     }
   }
 `

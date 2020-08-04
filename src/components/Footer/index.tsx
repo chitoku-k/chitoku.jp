@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import { FooterItemQuery } from 'graphql-types'
 import messages from './messages'
-import { media } from 'components/Layout'
+import { colors, media } from 'components/Layout'
 import Link from 'src/components/Link'
 
 const query = graphql`
@@ -22,8 +22,8 @@ const FooterCore = styled.footer`
   margin: 15px 0 0;
   padding: 8px 0;
   text-align: center;
-  background-color: var(--footer-background);
-  color: var(--footer-color);
+  background-color: ${colors.footer.background};
+  color: ${colors.footer.color};
   ${media.lg.up()} {
     width: 100%;
     position: absolute;
@@ -37,7 +37,7 @@ const FooterCore = styled.footer`
 const FooterLink = styled(Link)`
   &,
   &:hover {
-    color: var(--footer-color);
+    color: ${colors.footer.color};
   }
 `
 

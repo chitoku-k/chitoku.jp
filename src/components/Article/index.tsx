@@ -13,7 +13,7 @@ import NavItem from 'components/NavItem'
 import PspSdkFunction from 'components/PspSdkFunction'
 import PspSdkMacro from 'components/PspSdkMacro'
 import { PaginationContainer, SimplePagination } from 'components/Pagination'
-import { media } from 'components/Layout'
+import { colors, media } from 'components/Layout'
 import ArticleBody, { ArticleComponentCollection } from 'components/ArticleBody'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
@@ -25,7 +25,7 @@ const ArticleHeaderAttributes = styled.div`
   text-align: right;
   margin: 4px 0 0 0;
   padding: 0;
-  color: var(--containers-color);
+  color: ${colors.containers.color};
 `
 
 const ArticleHeaderAttributeIcon = styled(FontAwesomeIcon)`
@@ -42,7 +42,7 @@ const ArticleHeaderAttributeItem = styled.span`
 const ArticleHeaderAttributeLink = styled(Link)`
   &,
   &:hover {
-    color: var(--containers-color);
+    color: ${colors.containers.color};
   }
 `
 
@@ -50,7 +50,7 @@ const ArticleNavbar = styled(Navbar)`
   border: none;
   border-radius: 0;
   padding: 0;
-  background-color: var(--subnav-background) !important;
+  background-color: ${colors.subnav.background} !important;
 `
 
 const ArticleNav = styled(Nav)`
@@ -70,7 +70,7 @@ const ArticleNav = styled(Nav)`
     > li > a {
       &:hover,
       &:focus {
-        background-color: var(--subnav-hover);
+        background-color: ${colors.subnav.hover};
       }
     }
   }
@@ -81,12 +81,12 @@ const ArticleNavItem = styled(NavItem)`
     &,
     &:hover,
     &:focus {
-      color: var(--subnav-inactive);
+      color: ${colors.subnav.inactive};
     }
   }
   .navbar-nav > &.active a {
-    background-color: var(--subnav-active);
-    color: var(--subnav-color);
+    background-color: ${colors.subnav.active};
+    color: ${colors.subnav.color};
   }
 `
 
@@ -98,12 +98,12 @@ const ReadMoreContainer = styled.div`
 const ReadMoreButton = styled(Link)`
   display: inline-block;
   padding: 4px 16px;
-  background-color: var(--readmore-background);
-  color: var(--readmore-color);
+  background-color: ${colors.readmore.background};
+  color: ${colors.readmore.color};
   transition: background-color 0.3s;
   &:hover {
-    background: var(--readmore-hover);
-    color: var(--readmore-color);
+    background: ${colors.readmore.hover};
+    color: ${colors.readmore.color};
     text-decoration: none;
   }
 `

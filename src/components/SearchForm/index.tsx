@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import { SearchBoxProvided } from 'react-instantsearch-core'
 import { connectSearchBox } from 'react-instantsearch-dom'
 
-import { media } from 'components/Layout'
+import { colors, media } from 'components/Layout'
 import messages from './messages'
 
 const FormDesktop = styled(Navbar)`
@@ -24,14 +24,14 @@ const FormDesktopInput = styled.input`
   min-height: 32px;
   border: none;
   border-radius: 16px;
-  background-color: var(--search-background);
-  color: var(--search-color);
-  box-shadow: 0 3px 5px 1px var(--search-shadow) inset;
+  background-color: ${colors.search.background};
+  color: ${colors.search.color};
+  box-shadow: 0 3px 5px 1px ${colors.search.shadow} inset;
   ${media.md.down()} {
     width: 200px;
   }
   &::placeholder {
-    color: var(--search-placeholder);
+    color: ${colors.search.placeholder};
   }
   &:focus {
     outline: none;
@@ -51,7 +51,7 @@ const FormMobileContainer = styled(Container)`
 const FormMobileCancelContainer = styled.div`
   display: table-cell;
   text-align: center;
-  color: var(--nav-color);
+  color: ${colors.nav.color};
   margin-right: 8px;
 `
 
@@ -66,8 +66,8 @@ const FormMobileRow = styled(Row)`
 const FormMobileInput = styled.input`
   border: none;
   border-radius: 4px;
-  background-color: var(--search-background);
-  color: var(--search-color);
+  background-color: ${colors.search.background};
+  color: ${colors.search.color};
   margin: 0 8px;
   padding: 3px 8px;
   flex-grow: 1;
@@ -78,7 +78,7 @@ const FormMobileInput = styled.input`
 `
 
 const SearchIcon = styled(FontAwesomeIcon)`
-  color: var(--search-icon);
+  color: ${colors.search.icon};
   position: absolute;
   left: 14px;
   top: calc(50% - 0.5em);

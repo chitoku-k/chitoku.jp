@@ -7,7 +7,10 @@ import styled from 'styled-components'
 
 import messages from './messages'
 import Link from 'components/Link'
+import { colors } from 'components/Layout'
 import { IconDefinition, IconName } from '@fortawesome/fontawesome-svg-core'
+
+type ShareLinkName = 'twitter' | 'facebook' | 'pocket' | 'hatena' | 'tumblr'
 
 interface ShareButtonProps {
   url: string
@@ -22,8 +25,10 @@ interface PocketShareButtonProps extends ShareButtonProps {
 }
 
 interface ShareLinkProps extends GatsbyLinkProps<unknown> {
-  name: string
+  name: ShareLinkName
 }
+
+const hover = (name: ShareLinkName): ShareLinkName => `${name}Hover` as ShareLinkName
 
 const hatena: IconDefinition = {
   prefix: 'fab',
@@ -57,16 +62,16 @@ const ShareButton = styled(ShareLink)`
   border-radius: 6px;
   display: inline-flex;
   transition: background-color 0.3s;
-  color: var(--share-color);
-  background-color: var(--share-${({ name }) => name});
+  color: ${colors.share.color};
+  background-color: ${({ name }) => colors.share[name]};
   &:hover {
-    background-color: var(--share-${({ name }) => name}-hover);
+    background-color: ${({ name }) => colors.share[hover(name)]};
   }
   &:hover,
   &:active,
   &:focus {
     text-decoration: none;
-    color: var(--share-color);
+    color: ${colors.share.color};
   }
 `
 

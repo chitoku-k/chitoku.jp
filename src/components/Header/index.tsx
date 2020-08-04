@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 
 import Logo from '../../assets/logo.svg'
-import { media } from 'components/Layout'
+import { colors, media } from 'components/Layout'
 import Link from 'components/Link'
 import { Container, Row } from 'react-bootstrap'
 
@@ -19,9 +19,9 @@ const HeaderTitle = styled.h1`
   margin: 20px 0;
   svg {
     vertical-align: baseline;
-    fill: var(--header-primary);
+    fill: ${colors.header.primary};
     > .secondary {
-      fill: var(--header-secondary);
+      fill: ${colors.header.secondary};
     }
   }
   ${media.sm.down()} {

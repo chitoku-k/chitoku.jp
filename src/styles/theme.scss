@@ -1,16 +1,15 @@
 @mixin theme($name) {
-  @each $category, $values in map-get($themes, $name) {
-    @each $key, $value in $values {
-      --#{$category}-#{$key}: #{$value};
+  @each $category, $values in $themes {
+    @each $key, $variations in $values {
+      --#{$category}-#{$key}: #{map-get($variations, $name)};
     }
   }
 }
 :root {
   @include theme(light);
-  @media not all and (prefers-color-scheme: dark) {
-    @import "~prismjs/themes/prism";
-  }
-  @media all and (prefers-color-scheme: dark) {
+  @import "~prismjs/themes/prism";
+
+  @media (prefers-color-scheme: dark) {
     @include theme(dark);
     @import "~prismjs/themes/prism-tomorrow";
   }

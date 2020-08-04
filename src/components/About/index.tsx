@@ -5,7 +5,7 @@ import RehypeReact from 'rehype-react'
 import styled from 'styled-components'
 
 import { AboutItemQuery } from 'graphql-types'
-import { media } from 'components/Layout'
+import { colors, media } from 'components/Layout'
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
@@ -59,7 +59,7 @@ const Icon = styled.img`
 `
 
 const Table = styled(BootstrapTable)`
-  border-bottom-color: var(--table-border);
+  border-bottom-color: ${colors.table.border};
   border-bottom-width: 1px;
   border-bottom-style: solid;
   margin: 0;

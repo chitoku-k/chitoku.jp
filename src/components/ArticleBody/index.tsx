@@ -3,16 +3,16 @@ import RehypeReact from 'rehype-react'
 import styled from 'styled-components'
 
 import { ArticleAstNode, ArticleWrapper } from 'components/Article'
-import { media } from 'components/Layout'
+import { colors, media } from 'components/Layout'
 
 const ArticleContent = styled.div`
   h2 {
     font-size: 140%;
     margin: 48px 0 16px 0;
     padding: 9px 15px 7px;
-    background-color: var(--headings-secondary);
-    color: var(--headings-color);
-    border: 1px solid var(--headings-border);
+    background-color: ${colors.headings.secondary};
+    color: ${colors.headings.color};
+    border: 1px solid ${colors.headings.border};
     &.no-border {
       margin: 0;
       padding: 0;
@@ -31,7 +31,7 @@ const ArticleContent = styled.div`
   }
   h3 {
     font-size: 120%;
-    border-bottom: 1px solid var(--headings-border);
+    border-bottom: 1px solid ${colors.headings.border};
     margin: 50px 0 15px;
     padding: 0 16px 5px;
     ${media.md.down()} {
@@ -88,7 +88,7 @@ const ArticleContent = styled.div`
     }
   }
   blockquote {
-    border-left: 5px solid var(--blockquote-border);
+    border-left: 5px solid ${colors.blockquote.border};
     padding: 10px 20px;
     ${media.sm.down()} {
       margin-left: 10px;
@@ -116,7 +116,7 @@ const ArticleContent = styled.div`
           padding: 8px 16px;
           line-height: 1.42857;
           vertical-align: top;
-          border: 1px solid var(--table-border);
+          border: 1px solid ${colors.table.border};
           border-width: 1px 0;
           p {
             padding: 0;
@@ -129,7 +129,7 @@ const ArticleContent = styled.div`
         &:last-of-type {
           > td,
           > th {
-            border-bottom: 1px solid var(--table-border);
+            border-bottom: 1px solid ${colors.table.border};
           }
         }
       }
@@ -192,7 +192,7 @@ const ArticleContent = styled.div`
     word-wrap: break-word;
   }
   .gatsby-highlight {
-    background-color: var(--code-background);
+    background-color: ${colors.code.background};
     border-radius: 0.3em;
     margin: 0.5em 16px 1.8em;
     -webkit-overflow-scrolling: touch;
@@ -216,15 +216,15 @@ const ArticleContent = styled.div`
   pre[class*="language-"],
   code[class*="language-"] {
     border-radius: 3px;
-    font-family: var(--font-family-monospace);
     margin: 0;
+    text-shadow: none;
     .token.operator,
     .token.string {
       background: none;
     }
     .token.prompt {
       user-select: none;
-      color: var(--code-prompt);
+      color: ${colors.code.prompt};
     }
     ${media.sm.down()} {
       border-radius: 0;

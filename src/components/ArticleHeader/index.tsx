@@ -1,7 +1,7 @@
 import React, { DetailedHTMLProps, FunctionComponent, HTMLAttributes, ReactNode } from 'react'
 import styled from 'styled-components'
 
-import { media } from 'components/Layout'
+import { colors, media } from 'components/Layout'
 
 const MainContentHeader = styled.div`
   margin-bottom: 20px;
@@ -13,13 +13,13 @@ const MainContentHeader = styled.div`
 const MainContentTitle = styled.h1`
   padding-left: 12px;
   padding-bottom: 8px;
-  border-left: 14px solid var(--headings-primary);
-  border-bottom: 1px solid var(--headings-primary);
+  border-left: 14px solid ${colors.headings.primary};
+  border-bottom: 1px solid ${colors.headings.primary};
   line-height: 1.25;
   font-size: 200%;
   margin: 0;
   a {
-    color: var(--containers-color);
+    color: ${colors.containers.color};
   }
   ${media.sm.down()} {
     font-size: 130%;

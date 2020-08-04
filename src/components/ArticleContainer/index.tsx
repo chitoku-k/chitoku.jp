@@ -1,13 +1,13 @@
 import React, { DetailedHTMLProps, FunctionComponent, HTMLAttributes } from 'react'
 import styled from 'styled-components'
 
-import { media } from 'components/Layout'
+import { colors, media } from 'components/Layout'
 
 const MainContent = styled.article`
-  background-color: var(--containers-background);
-  color: var(--containers-color);
+  background-color: ${colors.containers.background};
+  color: ${colors.containers.color};
   padding: 20px;
-  box-shadow: 0 2px 4px 0 var(--containers-shadow);
+  box-shadow: 0 2px 4px 0 ${colors.containers.shadow};
   border-radius: 3px;
   & + & {
     margin-top: 20px;

@@ -3,7 +3,7 @@ import { Dropdown as BootstrapDropdown } from 'react-bootstrap'
 import { Location } from '@reach/router'
 import styled from 'styled-components'
 
-import { media } from 'components/Layout'
+import { colors, media } from 'components/Layout'
 import { NavigationLinkItem } from 'components/Navbar'
 import NavDropdown from 'components/NavDropdown'
 import Link from 'components/Link'
@@ -21,8 +21,8 @@ const Dropdown = styled(BootstrapDropdown)`
       border-radius: 0;
     }
     > a {
-      background-color: var(--nav-hover);
-      color: var(--nav-color);
+      background-color: ${colors.nav.hover};
+      color: ${colors.nav.color};
     }
   }
   .dropdown-menu {
@@ -30,10 +30,10 @@ const Dropdown = styled(BootstrapDropdown)`
     margin: 0;
     padding: 0;
     background-clip: border-box;
-    border-color: var(--nav-border);
+    border-color: ${colors.nav.border};
     &,
     > .active > a {
-      background-color: var(--nav-background);
+      background-color: ${colors.nav.background};
     }
   }
   .sub-menu {
@@ -51,14 +51,14 @@ export const NavLink = styled(Link)`
   .dropdown-menu > li > &,
   .navbar-nav > li > & {
     display: block;
-    color: var(--nav-color);
+    color: ${colors.nav.color};
     padding: 20px 30px;
     transition: background-color 0.3s;
     white-space: nowrap;
     &:hover,
     &:focus {
-      background-color: var(--nav-hover);
-      color: var(--nav-color);
+      background-color: ${colors.nav.hover};
+      color: ${colors.nav.color};
       text-decoration: none;
     }
     ${media.md.up()} {

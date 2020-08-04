@@ -8,6 +8,7 @@ import styled from 'styled-components'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
 import { ArticleCategoryItem, ArticleTagItem } from 'components/Article'
+import { colors } from 'components/Layout'
 import Link from 'components/Link'
 import messages from './messages'
 
@@ -69,7 +70,7 @@ const SearchHitLink = styled(Link)`
 `
 
 const SearchHitPath = styled.span`
-  color: var(--search-path);
+  color: ${colors.search.path};
 `
 
 const NoHits = styled.div`

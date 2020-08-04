@@ -4,7 +4,7 @@ import { GatsbyLinkProps } from 'gatsby'
 import styled from 'styled-components'
 
 import { HomeItemQuery } from 'graphql-types'
-import { media } from 'components/Layout'
+import { colors, media } from 'components/Layout'
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
 import Metadata from 'components/Metadata'
@@ -25,10 +25,13 @@ const icons: HomeIcon = {
   ProgrammingIcon,
 }
 
+const hover = (item: HomeMenuItem): HomeMenuItem => `${item}Hover` as HomeMenuItem
+
 const IconWrapper = styled.div`
   position: relative;
   width: 175px;
   height: 175px;
+  margin: 0 auto;
   ${media.sm.down()} {
     float: left;
     width: 44px;
@@ -43,7 +46,7 @@ const IconCurtain = styled.div`
   width: 120px;
   height: 120px;
   transform: rotate(45deg);
-  background-color: var(--home-color);
+  background-color: ${colors.home.color};
   ${media.sm.down()} {
     top: 8px;
     left: 8px;
@@ -63,7 +66,7 @@ const HomeMenuItem = styled(Col)`
     margin-bottom: 0;
     padding-top: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid var(--table-border);
+    border-bottom: 1px solid ${colors.table.border};
     text-align: left;
     &:first-of-type {
       padding-top: 0;
@@ -88,7 +91,7 @@ const HomeMenuItemLink = styled(HomeMenuItemWrapper)<HomeMenuItemLinkProps>`
   &:hover {
     text-decoration: none;
     svg {
-      fill: var(--home-${({ item }) => item}-hover);
+      fill: ${({ item }) => colors.home[hover(item)]};
     }
   }
   svg {
@@ -97,17 +100,11 @@ const HomeMenuItemLink = styled(HomeMenuItemWrapper)<HomeMenuItemLinkProps>`
     left: 0;
     right: 0;
     transition: fill 0.3s;
-    width: 175px;
-    height: 175px;
-    margin: 0 auto;
-    fill: var(--home-${({ item }) => item});
+    fill: ${({ item }) => colors.home[item]};
     ${media.sm.down()} {
       width: 44px;
       height: 44px;
     }
-  }
-  ${media.sm.down()} {
-    margin: 0;
   }
 `
 
@@ -115,7 +112,7 @@ const HomeMenuItemTitle = styled.h2`
   margin: 18px 0 14px;
   padding: 0;
   background: none;
-  color: var(--headings-color);
+  color: ${colors.headings.color};
   border: none;
   font-size: 140%;
   ${media.sm.down()} {
@@ -159,7 +156,7 @@ const Home: FunctionComponent<HomeProps> = ({ home }) => {
             return (
               <Fragment key={name}>
                 <HomeMenuItem xs={6} md={4}>
-                  <HomeMenuItemLink to={to} item={id} title={name}>
+                  <HomeMenuItemLink to={to} item={id as HomeMenuItemLinkProps['item']} title={name}>
                     <IconWrapper>
                       <IconCurtain />
                       <Icon viewBox="0 0 175 175" />
@@ -178,13 +175,14 @@ const Home: FunctionComponent<HomeProps> = ({ home }) => {
 }
 
 type HomeProps = HomeItemQuery
+type HomeMenuItem = 'pspprogramming' | 'soarer' | 'recotw' | 'windows' | 'pspsmartphone' | 'programming'
 
 interface HomeIcon {
   [key: string]: React.ComponentType<React.SVGAttributes<Element>>
 }
 
 interface HomeMenuItemLinkProps extends GatsbyLinkProps<unknown> {
-  item: string
+  item: HomeMenuItem
 }
 
 export default Home
