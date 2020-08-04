@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 const Layout: FunctionComponent = ({
   children,
 }) => {
-  const mode = useMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light'
+  const mode: Mode = useMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light'
 
   return (
     <IntlProvider locale="ja" messages={messages}>
@@ -31,6 +31,13 @@ const Layout: FunctionComponent = ({
       </ThemeProvider>
     </IntlProvider>
   )
+}
+
+export type Mode = 'light' | 'dark'
+
+export interface Theme {
+  mode: Mode
+  breakpoints: typeof theme.breakpoints
 }
 
 export default Layout

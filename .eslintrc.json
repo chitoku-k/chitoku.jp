@@ -97,7 +97,8 @@
         }],
         "@typescript-eslint/no-magic-numbers": "off",
         "@typescript-eslint/no-type-alias": ["error", {
-          "allowAliases": "always"
+          "allowAliases": "always",
+          "allowMappedTypes": "always"
         }],
         "@typescript-eslint/no-unsafe-assignment": "off",
         "@typescript-eslint/no-unused-vars": ["error", {

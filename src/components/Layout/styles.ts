@@ -1,5 +1,5 @@
 import { Orientation, Props, down, only, up } from 'styled-breakpoints'
-import theming from 'styled-theming'
+import theming, { ThemeSet } from 'styled-theming'
 import { themes } from '../../themes.json'
 import { mapValues } from 'lodash'
 
@@ -15,9 +15,15 @@ const breakpoint = (name: string): Breakpoints => ({
   only: only.bind(null, name),
 })
 
-export type Colors = typeof themes
+type ThemeColors = Colors<typeof themes>
+type Colors<T> = {
+  [TCategory in keyof T]: {
+    [TProperty in keyof T[TCategory]]: ThemeSet
+  }
+}
+
 export const colors =
-  mapValues(themes, props => mapValues(props, values => theming('mode', values))) as unknown as Colors
+  mapValues(themes, props => mapValues(props, values => theming('mode', values))) as ThemeColors
 
 export const media = {
   sm: breakpoint('sm'),
