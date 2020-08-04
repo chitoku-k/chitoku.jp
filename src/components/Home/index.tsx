@@ -25,7 +25,7 @@ const icons: HomeIcon = {
   ProgrammingIcon,
 }
 
-const hover = (item: HomeMenuItem): HomeMenuItem => `${item}Hover` as HomeMenuItem
+const hover = (item: HomeMenuItemID): HomeMenuItemID => `${item}Hover` as HomeMenuItemID
 
 const IconWrapper = styled.div`
   position: relative;
@@ -156,7 +156,7 @@ const Home: FunctionComponent<HomeProps> = ({ home }) => {
             return (
               <Fragment key={name}>
                 <HomeMenuItem xs={6} md={4}>
-                  <HomeMenuItemLink to={to} item={id as HomeMenuItemLinkProps['item']} title={name}>
+                  <HomeMenuItemLink to={to} item={id as HomeMenuItemID} title={name}>
                     <IconWrapper>
                       <IconCurtain />
                       <Icon viewBox="0 0 175 175" />
@@ -175,14 +175,14 @@ const Home: FunctionComponent<HomeProps> = ({ home }) => {
 }
 
 type HomeProps = HomeItemQuery
-type HomeMenuItem = 'pspprogramming' | 'soarer' | 'recotw' | 'windows' | 'pspsmartphone' | 'programming'
+type HomeMenuItemID = 'pspprogramming' | 'soarer' | 'recotw' | 'windows' | 'pspsmartphone' | 'programming'
 
 interface HomeIcon {
   [key: string]: React.ComponentType<React.SVGAttributes<Element>>
 }
 
 interface HomeMenuItemLinkProps extends GatsbyLinkProps<unknown> {
-  item: HomeMenuItem
+  item: HomeMenuItemID
 }
 
 export default Home
