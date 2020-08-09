@@ -18,6 +18,8 @@
   }
 
   @include media-breakpoint-down(sm) {
+    margin: 0 6px;
+
     &.numbers {
       display: none;
     }
@@ -86,7 +88,7 @@
     }
 
     &.hidden {
-      visibility: hidden;
+      display: none;
 
       + li {
         margin-top: 0;
