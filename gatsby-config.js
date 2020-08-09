@@ -60,7 +60,7 @@ module.exports = {
         test: /\.js$|\.tsx?$/u,
         stages: [ 'build-javascript' ],
         options: {
-          failOnError: true,
+          failOnError: process.env.NODE_ENV === 'production',
         },
       },
     },
@@ -98,7 +98,7 @@ module.exports = {
       resolve: '@danbruegge/gatsby-plugin-stylelint',
       options: {
         files: [ 'src/**/*.scss' ],
-        failOnError: true,
+        emitErrors: process.env.NODE_ENV === 'production',
       },
     },
     {
