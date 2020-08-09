@@ -50,10 +50,11 @@
   }
 
   > .nav-item > a {
+    color: var(--subnav-inactive);
+
     &:hover,
     &:focus {
       background-color: var(--subnav-hover);
-      color: var(--subnav-inactive);
     }
   }
 

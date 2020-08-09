@@ -36,9 +36,11 @@
   margin-top: 10px;
   margin-left: 78px;
 
-  .btn,
-  .btn .fa {
-    margin-right: 8px;
+  :global {
+    .btn,
+    .btn [data-icon] {
+      margin-right: 8px;
+    }
   }
 
   @include media-breakpoint-down(sm) {
