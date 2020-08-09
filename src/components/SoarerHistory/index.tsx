@@ -4,26 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
-import styled from 'styled-components'
 
-import { SoarerHistoryItemQuery } from 'graphql-types'
 import messages from './messages'
-
-const DownloadVersion = styled.big`
-  font-variant-numeric: tabular-nums;
-`
-
-const DownloadLink = styled(Button)`
-  display: inline-block;
-  margin-left: 15px;
-  font-size: 90%;
-  padding: 2px 8px;
-  vertical-align: 2px;
-`
-
-const DownloadIcon = styled(FontAwesomeIcon)`
-  margin-right: 5px;
-`
+import styles from './styles.module.scss'
+import { SoarerHistoryItemQuery } from 'graphql-types'
 
 const query = graphql`
   query SoarerHistoryItem {
@@ -65,12 +49,12 @@ const SoarerHistory: FunctionComponent = () => {
     <>
       {items.map(({ update }) => (
         <div key={update.version}>
-          <DownloadVersion>{update.version}</DownloadVersion>
+          <big className={styles.version}>{update.version}</big>
           {update.file ? (
-            <DownloadLink variant="light" href={update.file.publicURL as string} download={update.file.base}>
-              <DownloadIcon icon={faDownload} />
+            <Button as="a" className={styles.button} variant="light" href={update.file.publicURL as string} download={update.file.base}>
+              <FontAwesomeIcon className={styles.icon} icon={faDownload} />
               {formatMessage(messages.download)}
-            </DownloadLink>
+            </Button>
           ) : null}
           <br />
           <small>

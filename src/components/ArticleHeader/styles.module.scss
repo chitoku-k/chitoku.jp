@@ -1,0 +1,31 @@
+@import "src/styles/modules";
+
+.header {
+  margin-bottom: 20px;
+
+  + h2 {
+    margin-top: 18px;
+  }
+}
+
+.title {
+  padding-left: 12px;
+  padding-bottom: 8px;
+  border-left: 14px solid;
+  border-bottom: 1px solid;
+  border-color: var(--headings-primary);
+  line-height: 1.25;
+  font-size: 200%;
+  margin: 0;
+
+  a {
+    color: var(--containers-color);
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 130%;
+    padding-top: 3px;
+    padding-left: 7px;
+    padding-bottom: 7px;
+  }
+}

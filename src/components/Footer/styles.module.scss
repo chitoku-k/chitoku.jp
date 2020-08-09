@@ -1,0 +1,26 @@
+@import "src/styles/modules";
+
+.footer {
+  margin: 15px 0 0;
+  padding: 8px 0;
+  text-align: center;
+  background-color: var(--footer-background);
+  color: var(--footer-color);
+
+  @include media-breakpoint-up(lg) {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-top: 0;
+  }
+}
+
+.link {
+  &,
+  &:hover {
+    color: var(--footer-color);
+  }
+}

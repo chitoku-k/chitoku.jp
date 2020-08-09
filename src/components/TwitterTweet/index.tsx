@@ -1,18 +1,10 @@
-import React, { FunctionComponent, useCallback, useContext, useEffect, useRef } from 'react'
+import React, { FunctionComponent, useCallback, useEffect, useRef } from 'react'
 import { Tweet, TweetProps } from 'react-twitter-widgets'
-import styled, { ThemeContext } from 'styled-components'
+import { useMedia } from 'use-media'
+import clsx from 'clsx'
 
-import { Theme } from 'components/Layout'
-import Link from '../Link'
-
-const Wrapper = styled.div`
-  margin: 20px auto;
-`
-
-const ErrorWrapper = styled.blockquote`
-  margin: 20px auto;
-  padding: 10px 15px;
-`
+import styles from './styles.module.scss'
+import Link from 'components/Link'
 
 const renderError = (props: TwitterTweetProps) => () => <TwitterTweetError {...props} />
 
@@ -32,11 +24,11 @@ const TwitterTweetError: FunctionComponent<TwitterTweetProps> = ({
   /* eslint-enable react-hooks/exhaustive-deps */
 
   return (
-    <ErrorWrapper className="twitter-tweet">
+    <blockquote className={clsx(styles.errorWrapper, 'twitter-tweet')}>
       <Link to={url}>
         {url}
       </Link>
-    </ErrorWrapper>
+    </blockquote>
   )
 }
 
@@ -45,9 +37,8 @@ const TwitterTweet: FunctionComponent<TwitterTweetProps> = ({
   options = {},
   ...rest
 }) => {
-  const theme = useContext<Theme>(ThemeContext)
   options.lang = 'ja'
-  options.theme = theme.mode
+  options.theme = useMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light'
 
   const ref = useRef<HTMLDivElement>(null)
   const onLoad = useCallback(() => {
@@ -57,14 +48,14 @@ const TwitterTweet: FunctionComponent<TwitterTweetProps> = ({
   }, [ ref ])
 
   return (
-    <Wrapper ref={ref}>
+    <div className={styles.wrapper} ref={ref}>
       <Tweet
         tweetId={id}
         options={options}
         onLoad={onLoad}
         renderError={renderError({ id, onLoad })}
         {...rest} />
-    </Wrapper>
+    </div>
   )
 }
 

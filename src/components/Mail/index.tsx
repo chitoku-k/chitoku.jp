@@ -4,59 +4,15 @@ import { FormattedMessage, useIntl } from 'react-intl'
 import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faCircleNotch, faTimes } from '@fortawesome/free-solid-svg-icons'
-import styled from 'styled-components'
+
+import messages from './messages'
+import styles from './styles.module.scss'
 
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
 import Metadata from 'components/Metadata'
-import { colors } from 'components/Layout'
 import Link from 'components/Link'
-import messages from './messages'
-
-const ContactNotice = styled(Alert)`
-  text-align: center;
-`
-
-const Required = styled.span`
-  color: ${colors.mail.required};
-`
-
-const StatusArea = styled.div`
-  margin-bottom: 10px;
-`
-
-const AcceptedIcon = styled(FontAwesomeIcon)`
-  color: ${colors.mail.accepted};
-  margin-right: 5px;
-`
-
-const ErrorIcon = styled(FontAwesomeIcon)`
-  color: ${colors.mail.error};
-  margin-right: 5px;
-`
-
-const ProcessingIcon = styled(FontAwesomeIcon)`
-  margin-right: 5px;
-`
-
-const Input = styled(FormControl)`
-  font-size: 16px;
-  resize: vertical;
-`
-
-const LabelWrapper = styled.label`
-  display: block;
-`
-
-const LabelTitle = styled.span`
-  display: inline-block;
-  margin-bottom: 5px;
-`
-
-const SubmissionContainer = styled.div`
-  text-align: center;
-`
 
 const Label: FunctionComponent<MailLabelProps> = ({
   title,
@@ -66,13 +22,13 @@ const Label: FunctionComponent<MailLabelProps> = ({
   const { formatMessage } = useIntl()
 
   return (
-    <LabelWrapper>
-      <LabelTitle>
+    <div className={styles.wrapper}>
+      <span className={styles.title}>
         {title}
-      </LabelTitle>
-      {required ? <Required>{formatMessage(messages.required)}</Required> : null}
+      </span>
+      {required ? <span className={styles.required}>{formatMessage(messages.required)}</span> : null}
       {children}
-    </LabelWrapper>
+    </div>
   )
 }
 
@@ -124,60 +80,60 @@ const Mail: FunctionComponent = () => {
       </Metadata>
       <ArticleContainer>
         <ArticleHeader title={formatMessage(messages.title)} />
-        <ContactNotice variant="info">
+        <Alert className={styles.notice} variant="info">
           {formatMessage(messages.contact_me_on_sns)}
           <br />
           <FormattedMessage {...messages.contact_me_from_about} values={{
             about: <Link to="/about">{formatMessage(messages.about)}</Link>,
           }} />
-        </ContactNotice>
+        </Alert>
         <form onSubmit={onSubmit}>
           <FormGroup>
             <Label required title={formatMessage(messages.name)}>
-              <Input name="name" size="sm" required readOnly={readOnly} />
+              <FormControl className={styles.input} name="name" size="sm" required readOnly={readOnly} />
             </Label>
           </FormGroup>
           <FormGroup>
             <Label title={formatMessage(messages.mail)}>
-              <Input name="email" size="sm" readOnly={readOnly} />
+              <FormControl className={styles.input} name="email" size="sm" readOnly={readOnly} />
             </Label>
           </FormGroup>
           <FormGroup>
             <Label required title={formatMessage(messages.subject)}>
-              <Input name="subject" size="sm" required readOnly={readOnly} />
+              <FormControl className={styles.input} name="subject" size="sm" required readOnly={readOnly} />
             </Label>
           </FormGroup>
           <FormGroup>
             <Label required title={formatMessage(messages.message)}>
-              <Input name="body" forwardedAs="textarea" cols={40} rows={10} required readOnly={readOnly} />
+              <FormControl className={styles.input} name="body" as="textarea" cols={40} rows={10} required readOnly={readOnly} />
             </Label>
           </FormGroup>
           <ReCaptcha action="mail" sitekey={siteKey} verifyCallback={setToken} />
-          <SubmissionContainer>
+          <div className={styles.submission}>
             {status === 'sent' ? (
-              <StatusArea>
-                <AcceptedIcon icon={faCheck} />
+              <div className={styles.area}>
+                <FontAwesomeIcon className={styles.accepted} icon={faCheck} />
                 {formatMessage(messages.submission_accepted)}
-              </StatusArea>
+              </div>
             ) : status === 'sending' ? (
-              <StatusArea>
-                <ProcessingIcon icon={faCircleNotch} spin />
+              <div className={styles.area}>
+                <FontAwesomeIcon className={styles.processing} icon={faCircleNotch} spin />
                 {formatMessage(messages.submission_processing)}
-              </StatusArea>
+              </div>
             ) : (
               <>
                 {status === 'error' ? (
-                  <StatusArea>
-                    <ErrorIcon icon={faTimes} />
+                  <div className={styles.area}>
+                    <FontAwesomeIcon className={styles.error} icon={faTimes} />
                     {formatMessage(messages.submission_error)}
-                  </StatusArea>
+                  </div>
                 ) : null}
                 <Button type="submit" variant="primary" disabled={!token}>
                   {formatMessage(messages.send)}
                 </Button>
               </>
             )}
-          </SubmissionContainer>
+          </div>
         </form>
       </ArticleContainer>
     </Container>

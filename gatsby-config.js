@@ -25,7 +25,6 @@ if (env.length) {
 const { description } = require('./package.json')
 const { createQuery } = require('historia-taxonomy-plugin')
 const sass = require('sass')
-const jsonImporter = require('node-sass-json-importer')
 const postcssCustomProperties = require('postcss-custom-properties')
 
 module.exports = {
@@ -86,9 +85,9 @@ module.exports = {
       resolve: 'gatsby-plugin-sass',
       options: {
         implementation: sass,
-        importer: jsonImporter({
-          convertCase: true,
-        }),
+        cssLoaderOptions: {
+          camelCase: 'only',
+        },
         postCssPlugins: [
           postcssCustomProperties(),
         ],
@@ -96,23 +95,9 @@ module.exports = {
     },
     { resolve: 'gatsby-plugin-sharp' },
     {
-      resolve: 'gatsby-plugin-styled-components',
-      options: {
-        displayName: process.env.NODE_ENV === 'development',
-      },
-    },
-    {
       resolve: '@danbruegge/gatsby-plugin-stylelint',
       options: {
         files: [ 'src/**/*.scss' ],
-        failOnError: true,
-      },
-    },
-    {
-      resolve: '@danbruegge/gatsby-plugin-stylelint',
-      options: {
-        files: [ 'src/**/*.tsx' ],
-        customSyntax: 'postcss-styled',
         failOnError: true,
       },
     },

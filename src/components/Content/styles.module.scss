@@ -1,0 +1,18 @@
+@import "src/styles/modules";
+
+.container {
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 60px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 15px;
+  }
+}
+
+.row {
+  @include media-breakpoint-up(lg) {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+}

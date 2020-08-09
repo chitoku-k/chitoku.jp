@@ -1,19 +1,16 @@
 import React, { FunctionComponent, ReactNode } from 'react'
 import { FormattedMessage, MessageDescriptor, useIntl } from 'react-intl'
 import { Location } from '@reach/router'
-import styled from 'styled-components'
 
+import messages from './messages'
+import styles from './styles.module.scss'
 import { AboutYamlContacts, NotFoundItemQuery } from 'graphql-types'
+
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
 import Metadata from 'components/Metadata'
 import Link from 'components/Link'
-import messages from './messages'
-
-const TryList = styled.ul`
-  line-height: 2.2 !important;
-`
 
 const Contact: FunctionComponent<ContactProps> = ({
   message,
@@ -65,7 +62,7 @@ const NotFound: FunctionComponent<NotFoundProps> = ({ contacts }) => {
         <p>
           {formatMessage(messages.try)}
         </p>
-        <TryList>
+        <ul className={styles.tryList}>
           <li>
             <FormattedMessage {...messages.go_to_home} values={{
               home: <a href="/">{formatMessage(messages.home)}</a>,
@@ -84,7 +81,7 @@ const NotFound: FunctionComponent<NotFoundProps> = ({ contacts }) => {
               <Contact message={messages.follow_me_on} service={service} />
             </li>
           ))}
-        </TryList>
+        </ul>
       </ArticleContainer>
     </Container>
   )

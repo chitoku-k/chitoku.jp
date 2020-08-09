@@ -1,0 +1,54 @@
+@import "src/styles/modules";
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 48px;
+  margin: 0 15px !important;
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0 !important;
+  }
+}
+
+.title {
+  margin: 0 !important;
+  font-size: 24px !important;
+
+  br {
+    display: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 120% !important;
+    line-height: 1.2;
+
+    br {
+      display: inline;
+    }
+  }
+}
+
+.description {
+  margin-top: 10px;
+  margin-left: 78px;
+
+  .btn,
+  .btn .fa {
+    margin-right: 8px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 20px;
+    margin-left: 0;
+
+    .btn {
+      font-size: 100%;
+      margin-bottom: 5px;
+      padding: 7px 14px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "src/styles/modules";
+
+.container {
+  background-color: var(--containers-background);
+  color: var(--containers-color);
+  padding: 20px;
+  box-shadow: 0 2px 4px 0 var(--containers-shadow);
+  border-radius: 3px;
+
+  & + & {
+    margin-top: 20px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 15px;
+    }
+  }
+
+  :global(.row) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 15px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    border-radius: 0;
+  }
+}

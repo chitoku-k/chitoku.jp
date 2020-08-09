@@ -5,10 +5,12 @@ import { useIntl } from 'react-intl'
 import { WindowLocation } from '@reach/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faRss } from '@fortawesome/free-solid-svg-icons'
-import styled from 'styled-components'
+import clsx from 'clsx'
 
-import { SidebarItemQuery } from 'graphql-types'
 import messages from './messages'
+import styles from './styles.module.scss'
+import { SidebarItemQuery } from 'graphql-types'
+
 import {
   FacebookShareButton,
   HatenaShareButton,
@@ -17,7 +19,6 @@ import {
   TwitterShareButton,
 } from './buttons'
 import { MetadataContext } from 'components/Metadata'
-import { colors, media } from 'components/Layout'
 import NavItem from 'components/NavItem'
 import Link from 'components/Link'
 
@@ -59,152 +60,6 @@ const query = graphql`
   }
 `
 
-const SidebarContainer = styled(Col)`
-  padding-left: 20px;
-  padding-right: 0;
-  flex: 0 0 30%;
-  max-width: 30%;
-  width: 30%;
-  top: 15px;
-  position: static;
-  position: sticky;
-  ${media.md.down()} {
-    flex: 0 0 100%;
-    max-width: 100%;
-    width: 100%;
-    padding: 0;
-  }
-`
-
-const SidebarItem = styled.div`
-  margin-bottom: 20px;
-  padding: 20px;
-  background-color: ${colors.containers.background};
-  color: ${colors.containers.color};
-  box-shadow: 0 2px 4px 0 ${colors.containers.shadow};
-  border-radius: 3px;
-  &:last-of-type {
-    margin-bottom: 0;
-    overflow: auto;
-    min-height: 250px;
-    -webkit-overflow-scrolling: touch;
-  }
-  ${media.md.down()} {
-    margin: 15px 0 0 0;
-    padding: 15px;
-  }
-  ${media.sm.down()} {
-    border-radius: 0;
-  }
-`
-
-const SidebarItemTitle = styled.h2`
-  display: inline-flex;
-  margin: 0 0 10px 0;
-  font-size: 20px;
-  padding-left: 8px;
-  border-left: 1em solid ${colors.headings.primary};
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  a {
-    color: ${colors.containers.color};
-  }
-`
-
-const LatestList = styled.ul`
-  padding-left: 0;
-  margin-top: 5px;
-  margin-bottom: 0;
-  li {
-    list-style: none;
-    margin-bottom: 16px;
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-`
-
-const CategoryList = styled.ul`
-  padding-left: 30px;
-  margin-top: 5px;
-  margin-bottom: 0;
-  ${media.md.up()} {
-    padding-left: 28px;
-  }
-`
-
-const LatestItem = styled.li`
-  display: inline-flex;
-  align-items: flex-start;
-  margin-bottom: 3px;
-`
-
-const LatestItemIcon = styled(FontAwesomeIcon)`
-  margin-top: 4px;
-  flex-shrink: 0;
-`
-
-const LatestItemBody = styled.div`
-  margin-left: 10px;
-`
-
-const LatestItemTitle = styled.div``
-
-const LatestItemMetadata = styled.div`
-  display: inline-flex;
-  align-items: center;
-`
-
-const LatestItemMetadataSeparator = styled.span`
-  display: inline-block;
-  margin: 0 4px;
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background-color: ${colors.sidebar.description};
-`
-
-const LatestItemAttribute = styled.div`
-  display: inline-block;
-  color: ${colors.sidebar.description};
-  font-size: 75%;
-  font-variant-numeric: tabular-nums;
-`
-
-const LatestItemCategory = styled(LatestItemAttribute)`
-  a {
-    color: ${colors.sidebar.description};
-  }
-`
-
-const ShareButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 5px 0 0;
-`
-
-const FeedIconLink = styled(Link)`
-  display: inline-flex;
-  align-items: center;
-  margin-left: 12px;
-  padding: 4px 10px;
-  font-size: 12px;
-  border-radius: 4px;
-  background-color: ${colors.feed.background};
-  color: ${colors.feed.color} !important;
-  text-decoration: none !important;
-  transition: background-color 0.3s;
-  font-weight: normal;
-  &:hover {
-    background-color: ${colors.feed.hover};
-  }
-`
-
-const FeedIcon = styled(FontAwesomeIcon)`
-  margin-right: 5px;
-`
-
 const Sidebar: FunctionComponent<SidebarProps> = ({
   location,
 }) => {
@@ -230,72 +85,72 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
   const url = siteUrl + location.pathname
 
   return (
-    <SidebarContainer forwardedAs="aside">
-      <SidebarItem>
-        <SidebarItemTitle>
+    <Col className={styles.container} as="aside">
+      <div className={styles.item}>
+        <h2 className={styles.title}>
           {formatMessage(messages.share)}
-        </SidebarItemTitle>
-        <ShareButtonContainer>
+        </h2>
+        <div className={styles.shareContainer}>
           <TwitterShareButton title={title} url={url} />
           <FacebookShareButton url={url} />
           <PocketShareButton title={title} url={url} />
           <HatenaShareButton url={url} />
           <TumblrShareButton url={url} />
-        </ShareButtonContainer>
-      </SidebarItem>
-      <SidebarItem>
-        <SidebarItemTitle>
+        </div>
+      </div>
+      <div className={styles.item}>
+        <h2 className={styles.title}>
           <Link to="/latest">
             {formatMessage(messages.latest_articles)}
           </Link>
-          <FeedIconLink to={`${siteUrl}/feed/atom/`} target="_blank">
-            <FeedIcon icon={faRss} />
+          <Link className={styles.feed} to={`${siteUrl}/feed/atom/`} target="_blank">
+            <FontAwesomeIcon className={styles.icon} icon={faRss} />
             RSS
-          </FeedIconLink>
-        </SidebarItemTitle>
-        <LatestList>
+          </Link>
+        </h2>
+        <ul className={styles.latest}>
           {latest.items.map(({ article }) => (
-            <LatestItem key={article.path}>
-              <LatestItemIcon icon={faCoffee} />
-              <LatestItemBody>
-                <LatestItemTitle>
+            <li key={article.path} className={styles.latestItem}>
+              <FontAwesomeIcon className={styles.icon} icon={faCoffee} />
+              <div className={styles.body}>
+                <div>
                   <Link to={article.path}>
                     {article.attributes.title}
                   </Link>
-                </LatestItemTitle>
-                <LatestItemMetadata>
-                  <LatestItemAttribute>
+                </div>
+                <div className={styles.metadata}>
+                  <div className={styles.attribute}>
                     {article.attributes.created ? formatDate(new Date(article.attributes.created), {
                       year: 'numeric',
                       month: 'narrow',
                       day: 'numeric',
                     }) : null}
-                  </LatestItemAttribute>
-                  <LatestItemMetadataSeparator />
-                  <LatestItemCategory>
+                  </div>
+                  <span className={styles.separator} />
+                  <div className={clsx(styles.attribute, styles.category)}>
                     {article.attributes.category ? (
                       <Link to={article.attributes.category.path}>
                         {article.attributes.category.name}
                       </Link>
                     ) : null}
-                  </LatestItemCategory>
-                </LatestItemMetadata>
-              </LatestItemBody>
-            </LatestItem>
+                  </div>
+                </div>
+              </div>
+            </li>
           ))}
-        </LatestList>
-      </SidebarItem>
-      <SidebarItem>
-        <SidebarItemTitle>
+        </ul>
+      </div>
+      <div className={styles.item}>
+        <h2 className={styles.title}>
           {formatMessage(messages.links)}
-        </SidebarItemTitle>
-        <CategoryList>
+        </h2>
+        <ul className={styles.categories}>
           {sidebar.map(item => (
             <NavItem key={item.name} {...item} />
           ))}
-        </CategoryList>
-      </SidebarItem>
-    </SidebarContainer>
+        </ul>
+      </div>
+    </Col>
   )
 }
 

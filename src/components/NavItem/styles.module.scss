@@ -1,0 +1,80 @@
+@import "src/styles/modules";
+
+.dropdown {
+  position: relative;
+
+  &:global(.dropdown):hover {
+    > a {
+      background-color: var(--nav-hover);
+      color: var(--nav-color);
+    }
+  }
+
+  :global {
+    .dropdown-menu {
+      display: none;
+      margin: 0;
+      padding: 0;
+      background-clip: border-box;
+      border-radius: 0;
+      border-top: none;
+      border-color: var(--nav-border);
+
+      &,
+      > :global(.active) > a {
+        background-color: var(--nav-background);
+      }
+    }
+
+    .sub-menu {
+      position: static !important;
+      opacity: 1 !important;
+      pointer-events: initial !important;
+    }
+
+    .sub-toggle,
+    .dropdown-toggle {
+      display: none;
+    }
+  }
+}
+
+.link {
+  :global {
+    .dropdown-menu > li > & {
+      padding: 15px 24px;
+    }
+
+    .dropdown-menu > li > &,
+    .navbar-nav > li > & {
+      display: block;
+      color: var(--nav-color);
+      padding: 20px 30px;
+      transition: background-color 0.3s;
+      white-space: nowrap;
+
+      &:hover,
+      &:focus {
+        background-color: var(--nav-hover);
+        color: var(--nav-color);
+        text-decoration: none;
+      }
+
+      @include media-breakpoint-up(md) {
+        padding: 20px 24px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding: 12px;
+      }
+    }
+
+    &.dropdown-toggle::after {
+      margin-left: 4px;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+}

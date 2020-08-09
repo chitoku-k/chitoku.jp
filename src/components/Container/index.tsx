@@ -1,24 +1,19 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
 import { connectStateResults } from 'react-instantsearch-dom'
-import styled from 'styled-components'
+
+import styles from './styles.module.scss'
 
 import SearchResult from 'components/SearchResult'
-
-const MainContentContainer = styled(Col)`
-  position: static;
-  padding: 0;
-  flex: auto;
-`
 
 const Container = connectStateResults(function Container({
   searchState,
   children,
 }) {
   return (
-    <MainContentContainer>
+    <Col className={styles.container}>
       {searchState.query ? <SearchResult /> : children}
-    </MainContentContainer>
+    </Col>
   )
 })
 

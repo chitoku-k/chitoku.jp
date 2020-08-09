@@ -1,55 +1,21 @@
 import React, { FunctionComponent } from 'react'
-import styled from 'styled-components'
-
-import Logo from '../../assets/logo.svg'
-import { colors, media } from 'components/Layout'
-import Link from 'components/Link'
 import { Container, Row } from 'react-bootstrap'
 
-const HeaderContainer = styled(Container)`
-  margin: 0 auto;
-  ${media.sm.down()} {
-    width: auto;
-    margin: 12px 10px 16px;
-  }
-`
+import styles from './styles.module.scss'
+import Logo from '../../assets/logo.svg'
 
-const HeaderTitle = styled.h1`
-  height: 40px;
-  margin: 20px 0;
-  svg {
-    vertical-align: baseline;
-    fill: ${colors.header.primary};
-    > .secondary {
-      fill: ${colors.header.secondary};
-    }
-  }
-  ${media.sm.down()} {
-    text-align: center;
-    margin: 6px auto 0;
-    &,
-    svg {
-      width: auto;
-      height: 32px;
-      max-width: 100%;
-    }
-  }
-`
-
-const HeaderLink = styled(Link)`
-  display: inline-block;
-`
+import Link from 'components/Link'
 
 const Header: FunctionComponent = () => (
-  <HeaderContainer forwardedAs="header">
+  <Container className={styles.container} as="header">
     <Row>
-      <HeaderTitle>
-        <HeaderLink to="/">
+      <h1 className={styles.title}>
+        <Link className={styles.link} to="/">
           <Logo viewBox="0 0 330 33" width={400} height={40} />
-        </HeaderLink>
-      </HeaderTitle>
+        </Link>
+      </h1>
     </Row>
-  </HeaderContainer>
+  </Container>
 )
 
 export default Header

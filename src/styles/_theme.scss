@@ -1,0 +1,5 @@
+@import "themes/light";
+
+@media (prefers-color-scheme: dark) {
+  @import "themes/dark";
+}

@@ -1,0 +1,45 @@
+@import "src/styles/modules";
+
+.entry {
+  padding: 0 16px;
+  margin-bottom: 32px;
+
+  @include media-breakpoint-down(md) {
+    padding: 0 13px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+  }
+}
+
+.prototype {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 8px !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+  white-space: pre !important;
+}
+
+.parameter {
+  padding: 2px 4px !important;
+}
+
+.separator {
+  margin: 0 8px;
+}
+
+.description {
+  font-size: 11pt;
+  line-height: 1.8;
+  margin-bottom: 2px;
+  padding: 0 8px;
+
+  @include media-breakpoint-down(sm) {
+    ul {
+      padding-left: 20px;
+    }
+  }
+}

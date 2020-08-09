@@ -1,0 +1,83 @@
+@import "src/styles/modules";
+
+.header-attribute {
+  min-height: 0.5em;
+  text-align: right;
+  margin: 4px 0 0 0;
+  padding: 0;
+  color: var(--containers-color);
+}
+
+.header-attribute-icon {
+  margin-right: 0.2em;
+}
+
+.header-attribute-item {
+  & + & {
+    display: inline-block;
+    margin-left: 0.8em;
+  }
+}
+
+.header-attribute-link {
+  &,
+  &:hover {
+    color: var(--containers-color);
+  }
+}
+
+.navbar {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background-color: var(--subnav-background) !important;
+}
+
+.nav:global(.navbar-nav) {
+  width: 100%;
+  flex-wrap: wrap;
+
+  > .nav-item {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include media-breakpoint-down(sm) {
+      width: 100% !important;
+      display: block;
+      text-align: left;
+    }
+  }
+
+  > .nav-item > a {
+    &:hover,
+    &:focus {
+      background-color: var(--subnav-hover);
+      color: var(--subnav-inactive);
+    }
+  }
+
+  > .nav-item:global(.active) a {
+    background-color: var(--subnav-active);
+    color: var(--subnav-color);
+  }
+}
+
+.read-more-container {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.read-more-button {
+  display: inline-block;
+  padding: 4px 16px;
+  background-color: var(--readmore-background);
+  color: var(--readmore-color);
+  transition: background-color 0.3s;
+
+  &:hover {
+    background: var(--readmore-hover);
+    color: var(--readmore-color);
+    text-decoration: none;
+  }
+}

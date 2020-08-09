@@ -2,15 +2,10 @@ import React, { FunctionComponent } from 'react'
 import { Table } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
-import styled from 'styled-components'
 
-import { PspErrorItemQuery } from 'graphql-types'
 import messages from './messages'
-
-const ErrorCode = styled.td`
-  width: 150px;
-  font-family: Consolas, Monaco, monospace;
-`
+import styles from './styles.module.scss'
+import { PspErrorItemQuery } from 'graphql-types'
 
 const query = graphql`
   query PspErrorItem {
@@ -55,7 +50,7 @@ const PspErrorCodes: FunctionComponent = () => {
             <tbody>
               {items.map(({ error }) => (
                 <tr key={error.code}>
-                  <ErrorCode>{`0x${error.code.toString(16).padStart(8, '0')}`}</ErrorCode>
+                  <td className={styles.errorCode}>{`0x${error.code.toString(16).padStart(8, '0')}`}</td>
                   <td>{error.message}</td>
                 </tr>
               ))}
