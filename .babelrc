@@ -7,7 +7,6 @@
     }]
   ],
   "plugins": [
-    ["@babel/plugin-transform-regenerator"],
     ["@babel/plugin-transform-typescript"],
     ["react-intl-auto", { "removePrefix": "src/" }]
   ]

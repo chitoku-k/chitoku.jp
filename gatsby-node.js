@@ -29,6 +29,17 @@ exports.onCreateWebpackConfig = ({
   })
 }
 
+// FIXME: Workaround for Unexpected token error in .cache/*.js
+exports.onCreateBabelConfig = ({
+  actions: {
+    setBabelPlugin,
+  },
+}) => {
+  setBabelPlugin({
+    name: 'babel-plugin-syntax-jsx',
+  })
+}
+
 exports.createSchemaCustomization = async ({
   actions: {
     createTypes,
