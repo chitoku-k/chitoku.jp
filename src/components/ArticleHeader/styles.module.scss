@@ -9,23 +9,23 @@
 }
 
 .title {
-  padding-left: 12px;
   padding-bottom: 8px;
-  border-left: 14px solid;
-  border-bottom: 1px solid;
-  border-color: var(--headings-primary);
-  line-height: 1.25;
-  font-size: 200%;
+  padding-left: 12px;
   margin: 0;
+  font-size: 200%;
+  line-height: 1.25;
+  border-color: var(--headings-primary);
+  border-bottom: 1px solid;
+  border-left: 14px solid;
 
   a {
     color: var(--containers-color);
   }
 
   @include media-breakpoint-down(sm) {
-    font-size: 130%;
     padding-top: 3px;
-    padding-left: 7px;
     padding-bottom: 7px;
+    padding-left: 7px;
+    font-size: 130%;
   }
 }

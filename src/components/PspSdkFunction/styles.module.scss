@@ -15,12 +15,12 @@
 
 .prototype {
   display: block;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
   padding: 4px 8px !important;
   margin-top: 4px !important;
   margin-bottom: 4px !important;
+  overflow-x: auto;
   white-space: pre !important;
+  -webkit-overflow-scrolling: touch;
 }
 
 .parameter {
@@ -32,10 +32,10 @@
 }
 
 .description {
+  padding: 0 8px;
+  margin-bottom: 2px;
   font-size: 11pt;
   line-height: 1.8;
-  margin-bottom: 2px;
-  padding: 0 8px;
 
   @include media-breakpoint-down(sm) {
     ul {

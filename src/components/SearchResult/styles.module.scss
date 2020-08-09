@@ -3,9 +3,9 @@
 .result-container {
   :global {
     .ais-Hits-list {
-      list-style: none;
-      margin: 0;
       padding: 0;
+      margin: 0;
+      list-style: none;
     }
   }
 }
@@ -13,15 +13,15 @@
 .result-header {
   h1 {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     :global {
       .ais-PoweredBy {
         display: inline-flex;
+        align-items: center;
         font-size: 10pt;
         font-weight: normal;
-        align-items: center;
 
         .ais-PoweredBy-text {
           margin-right: 5px;
@@ -38,9 +38,9 @@
 
   mark {
     padding: 0;
-    background-color: inherit;
-    color: inherit;
     font-weight: bold;
+    color: inherit;
+    background-color: inherit;
   }
 
   p {
@@ -51,10 +51,10 @@
 }
 
 .hit-header {
-  color: inherit;
   margin-bottom: 2px;
-  font-weight: normal;
   font-size: 120%;
+  font-weight: normal;
+  color: inherit;
 }
 
 .hit-link {

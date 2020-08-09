@@ -5,20 +5,20 @@
 
   &:global(.dropdown):hover {
     > a {
-      background-color: var(--nav-hover);
       color: var(--nav-color);
+      background-color: var(--nav-hover);
     }
   }
 
   :global {
     .dropdown-menu {
       display: none;
-      margin: 0;
       padding: 0;
+      margin: 0;
       background-clip: border-box;
-      border-radius: 0;
-      border-top: none;
       border-color: var(--nav-border);
+      border-top: none;
+      border-radius: 0;
 
       &,
       > :global(.active) > a {
@@ -28,8 +28,8 @@
 
     .sub-menu {
       position: static !important;
-      opacity: 1 !important;
       pointer-events: initial !important;
+      opacity: 1 !important;
     }
 
     .sub-toggle,
@@ -47,16 +47,16 @@
   :global(.dropdown-menu) > li > &,
   :global(.navbar-nav) > li > & {
     display: block;
-    color: var(--nav-color);
     padding: 20px 30px;
-    transition: background-color 0.3s;
+    color: var(--nav-color);
     white-space: nowrap;
+    transition: background-color 0.3s;
 
     &:hover,
     &:focus {
-      background-color: var(--nav-hover);
       color: var(--nav-color);
       text-decoration: none;
+      background-color: var(--nav-hover);
     }
 
     @include media-breakpoint-up(md) {

@@ -13,13 +13,13 @@
 }
 
 .accepted {
-  color: var(--mail-accepted);
   margin-right: 5px;
+  color: var(--mail-accepted);
 }
 
 .error {
-  color: var(--mail-error);
   margin-right: 5px;
+  color: var(--mail-error);
 }
 
 .processing {
@@ -29,8 +29,8 @@
 .input {
   &,
   &:focus {
-    background-color: var(--containers-background);
     color: var(--containers-color);
+    background-color: var(--containers-background);
   }
 
   font-size: 16px;

@@ -3,35 +3,35 @@
 $items: twitter, facebook, pocket, hatena, tumblr;
 
 .container {
-  padding-left: 20px;
-  padding-right: 0;
-  flex: 0 0 30%;
-  max-width: 30%;
-  width: 30%;
-  top: 15px;
   position: static;
   position: sticky;
+  top: 15px;
+  flex: 0 0 30%;
+  width: 30%;
+  max-width: 30%;
+  padding-right: 0;
+  padding-left: 20px;
 
   @include media-breakpoint-down(md) {
     flex: 0 0 100%;
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
     padding: 0;
   }
 }
 
 .button {
   box-sizing: content-box;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 45px;
   min-height: 22px;
-  margin-right: 7px;
   padding: 5px 0;
-  border-radius: 6px;
-  display: inline-flex;
-  transition: background-color 0.3s;
+  margin-right: 7px;
   color: var(--share-color);
+  border-radius: 6px;
+  transition: background-color 0.3s;
 
   @each $item in $items {
     &.#{$item} {
@@ -45,8 +45,8 @@ $items: twitter, facebook, pocket, hatena, tumblr;
   &:hover,
   &:active,
   &:focus {
-    text-decoration: none;
     color: var(--share-color);
+    text-decoration: none;
   }
 
   .icon {
@@ -59,23 +59,23 @@ $items: twitter, facebook, pocket, hatena, tumblr;
 }
 
 .item {
-  margin-bottom: 20px;
   padding: 20px;
-  background-color: var(--containers-background);
+  margin-bottom: 20px;
   color: var(--containers-color);
-  box-shadow: 0 2px 4px 0 var(--containers-shadow);
+  background-color: var(--containers-background);
   border-radius: 3px;
+  box-shadow: 0 2px 4px 0 var(--containers-shadow);
 
   &:last-of-type {
+    min-height: 250px;
     margin-bottom: 0;
     overflow: auto;
-    min-height: 250px;
     -webkit-overflow-scrolling: touch;
   }
 
   @include media-breakpoint-down(md) {
-    margin: 15px 0 0 0;
     padding: 15px;
+    margin: 15px 0 0 0;
   }
 
   @include media-breakpoint-down(sm) {
@@ -84,13 +84,13 @@ $items: twitter, facebook, pocket, hatena, tumblr;
 
   .title {
     display: inline-flex;
-    margin: 0 0 10px 0;
-    font-size: 20px;
     padding-left: 8px;
-    border-left: 1em solid var(--headings-primary);
-    text-overflow: ellipsis;
+    margin: 0 0 10px 0;
     overflow: hidden;
+    font-size: 20px;
+    text-overflow: ellipsis;
     white-space: nowrap;
+    border-left: 1em solid var(--headings-primary);
 
     a {
       color: var(--containers-color);
@@ -103,20 +103,19 @@ $items: twitter, facebook, pocket, hatena, tumblr;
     margin-bottom: 0;
 
     .latest-item {
-      list-style: none;
+      display: inline-flex;
+      align-items: flex-start;
       margin-bottom: 16px;
+      list-style: none;
 
       &:last-of-type {
         margin-bottom: 0;
       }
-
-      display: inline-flex;
-      align-items: flex-start;
     }
 
     .icon {
-      margin-top: 4px;
       flex-shrink: 0;
+      margin-top: 4px;
     }
 
     .body {
@@ -129,17 +128,17 @@ $items: twitter, facebook, pocket, hatena, tumblr;
 
       .separator {
         display: inline-block;
-        margin: 0 4px;
         width: 2px;
         height: 2px;
-        border-radius: 50%;
+        margin: 0 4px;
         background-color: var(--sidebar-description);
+        border-radius: 50%;
       }
 
       .attribute {
         display: inline-block;
-        color: var(--sidebar-description);
         font-size: 75%;
+        color: var(--sidebar-description);
         font-variant-numeric: tabular-nums;
       }
 
@@ -154,15 +153,15 @@ $items: twitter, facebook, pocket, hatena, tumblr;
   .feed {
     display: inline-flex;
     align-items: center;
-    margin-left: 12px;
     padding: 4px 10px;
+    margin-left: 12px;
     font-size: 12px;
-    border-radius: 4px;
-    background-color: var(--feed-background);
+    font-weight: normal;
     color: var(--feed-color) !important;
     text-decoration: none !important;
+    background-color: var(--feed-background);
+    border-radius: 4px;
     transition: background-color 0.3s;
-    font-weight: normal;
 
     &:hover {
       background-color: var(--feed-hover);

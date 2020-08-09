@@ -2,9 +2,9 @@
 
 .container {
   p {
-    font-size: inherit;
     padding: 0;
     margin-bottom: 0;
+    font-size: inherit;
   }
 
   div {
@@ -43,18 +43,18 @@
 }
 
 .icon {
-  max-width: 100%;
-  border-radius: 4px;
-  margin-bottom: 0.4em;
   width: 96px;
+  max-width: 100%;
+  margin-bottom: 0.4em;
+  border-radius: 4px;
 }
 
 .table {
-  border-bottom-color: var(--table-border);
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  margin: 0;
   width: auto;
+  margin: 0;
+  border-bottom-color: var(--table-border);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 
   > tbody > tr {
     > th,

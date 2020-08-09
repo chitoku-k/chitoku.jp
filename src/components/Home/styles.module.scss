@@ -21,8 +21,8 @@ $items: pspprogramming, soarer, recotw, windows, pspsmartphone, programming;
   left: 28px;
   width: 120px;
   height: 120px;
-  transform: rotate(45deg);
   background-color: var(--home-color);
+  transform: rotate(45deg);
 
   @include media-breakpoint-down(sm) {
     top: 8px;
@@ -39,13 +39,13 @@ $items: pspprogramming, soarer, recotw, windows, pspsmartphone, programming;
 
   @include media-breakpoint-down(sm) {
     flex: 0 0 100%;
-    max-width: 100%;
     width: 100%;
-    margin-bottom: 0;
+    max-width: 100%;
     padding-top: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid var(--table-border);
+    margin-bottom: 0;
     text-align: left;
+    border-bottom: 1px solid var(--table-border);
 
     &:first-of-type {
       padding-top: 0;
@@ -53,8 +53,8 @@ $items: pspprogramming, soarer, recotw, windows, pspsmartphone, programming;
 
     &:last-of-type {
       padding-bottom: 0;
-      border: none;
       margin-bottom: 6px;
+      border: none;
     }
   }
 }
@@ -81,8 +81,8 @@ $items: pspprogramming, soarer, recotw, windows, pspsmartphone, programming;
   svg {
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
     transition: fill 0.3s;
 
     @include media-breakpoint-down(sm) {
@@ -93,12 +93,12 @@ $items: pspprogramming, soarer, recotw, windows, pspsmartphone, programming;
 }
 
 .title {
-  margin: 18px 0 14px;
   padding: 0;
-  background: none;
-  color: var(--headings-color);
-  border: none;
+  margin: 18px 0 14px;
   font-size: 140%;
+  color: var(--headings-color);
+  background: none;
+  border: none;
 
   @include media-breakpoint-down(sm) {
     float: left;
@@ -107,10 +107,10 @@ $items: pspprogramming, soarer, recotw, windows, pspsmartphone, programming;
 }
 
 .description {
-  margin-bottom: 0;
   padding: 0 12px;
-  line-height: 1.4;
+  margin-bottom: 0;
   font-size: 14px;
+  line-height: 1.4;
   text-align: left;
 
   @include media-breakpoint-down(sm) {

@@ -11,12 +11,12 @@
 
 .desktop-input {
   width: 250px;
-  padding: 6px 12px 6px 35px;
   min-height: 32px;
+  padding: 6px 12px 6px 35px;
+  color: var(--search-color);
+  background-color: var(--search-background);
   border: none;
   border-radius: 16px;
-  background-color: var(--search-background);
-  color: var(--search-color);
   box-shadow: 0 3px 5px 1px var(--search-shadow) inset;
 
   @include media-breakpoint-down(md) {
@@ -46,9 +46,9 @@
 
 .mobile-cancel-container {
   display: table-cell;
-  text-align: center;
-  color: var(--nav-color);
   margin-right: 8px;
+  color: var(--nav-color);
+  text-align: center;
 }
 
 .mobile {
@@ -60,14 +60,14 @@
 }
 
 .mobile-input {
+  flex-grow: 1;
+  padding: 3px 8px;
+  margin: 0 8px;
+  font-size: 16px;
+  color: var(--search-color);
+  background-color: var(--search-background);
   border: none;
   border-radius: 4px;
-  background-color: var(--search-background);
-  color: var(--search-color);
-  margin: 0 8px;
-  padding: 3px 8px;
-  flex-grow: 1;
-  font-size: 16px;
 
   &:focus {
     outline: none;
@@ -75,26 +75,26 @@
 }
 
 .search-icon {
-  color: var(--search-icon);
   position: absolute;
-  left: 14px;
   top: calc(50% - 0.5em);
+  left: 14px;
+  color: var(--search-icon);
 }
 
 .unsupported-notice {
   position: absolute;
-  left: 0;
   right: 0;
   bottom: -9px;
+  left: 0;
+  z-index: 1;
   opacity: 0;
   transition: 0.3s opacity;
-  z-index: 1;
 
   :global {
     .popover {
       width: 100%;
-      margin: 0;
       padding: 8px 12px;
+      margin: 0;
       border: none;
       border-radius: 3px;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);

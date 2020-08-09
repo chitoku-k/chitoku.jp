@@ -1,11 +1,11 @@
 @import "src/styles/modules";
 
 .container {
-  margin-bottom: 24px;
-  background-color: var(--nav-background);
-  width: 100%;
   top: 0;
   z-index: 5;
+  width: 100%;
+  margin-bottom: 24px;
+  background-color: var(--nav-background);
   -webkit-overflow-scrolling: touch;
 
   @include media-breakpoint-up(md) {
@@ -17,8 +17,8 @@
   }
 
   @include media-breakpoint-down(md) {
-    white-space: nowrap;
     margin-bottom: 0;
+    white-space: nowrap;
   }
 
   @include media-breakpoint-down(sm) {
@@ -27,8 +27,8 @@
 }
 
 .row {
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   @include media-breakpoint-down(sm) {
     height: 45px;
@@ -40,11 +40,11 @@
 }
 
 .navbar {
-  background-color: transparent;
-  margin-bottom: 0;
   padding: 0 15px;
-  border-radius: 0;
+  margin-bottom: 0;
+  background-color: transparent;
   border: none;
+  border-radius: 0;
 
   @include media-breakpoint-down(sm) {
     &.search {
@@ -68,8 +68,8 @@
     &,
     &:hover,
     &:focus {
-      background-color: var(--nav-active);
       color: var(--nav-color);
+      background-color: var(--nav-active);
     }
   }
 }

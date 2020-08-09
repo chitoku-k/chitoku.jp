@@ -2,10 +2,10 @@
 
 .header-attribute {
   min-height: 0.5em;
-  text-align: right;
-  margin: 4px 0 0 0;
   padding: 0;
+  margin: 4px 0 0 0;
   color: var(--containers-color);
+  text-align: right;
 }
 
 .header-attribute-icon {
@@ -27,24 +27,24 @@
 }
 
 .navbar {
-  border: none;
-  border-radius: 0;
   padding: 0;
   background-color: var(--subnav-background) !important;
+  border: none;
+  border-radius: 0;
 }
 
 .nav:global(.navbar-nav) {
-  width: 100%;
   flex-wrap: wrap;
+  width: 100%;
 
   > .nav-item {
-    text-align: center;
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
+    text-align: center;
 
     @include media-breakpoint-down(sm) {
-      width: 100% !important;
       display: block;
+      width: 100% !important;
       text-align: left;
     }
   }
@@ -59,8 +59,8 @@
   }
 
   > .nav-item:global(.active) a {
-    background-color: var(--subnav-active);
     color: var(--subnav-color);
+    background-color: var(--subnav-active);
   }
 }
 
@@ -72,13 +72,13 @@
 .read-more-button {
   display: inline-block;
   padding: 4px 16px;
-  background-color: var(--readmore-background);
   color: var(--readmore-color);
+  background-color: var(--readmore-background);
   transition: background-color 0.3s;
 
   &:hover {
-    background: var(--readmore-hover);
     color: var(--readmore-color);
     text-decoration: none;
+    background-color: var(--readmore-hover);
   }
 }

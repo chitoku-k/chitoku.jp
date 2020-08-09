@@ -1,11 +1,11 @@
 @import "src/styles/modules";
 
 .container {
-  background-color: var(--containers-background);
-  color: var(--containers-color);
   padding: 20px;
-  box-shadow: 0 2px 4px 0 var(--containers-shadow);
+  color: var(--containers-color);
+  background-color: var(--containers-background);
   border-radius: 3px;
+  box-shadow: 0 2px 4px 0 var(--containers-shadow);
 
   & + & {
     margin-top: 20px;
@@ -16,8 +16,8 @@
   }
 
   :global(.row) {
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
   }
 
   @include media-breakpoint-down(md) {
