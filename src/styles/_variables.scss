@@ -1,28 +1,53 @@
 $fa-font-path: "~font-awesome/fonts";
 $headings-line-height: 1.1;
 $font-size-base: 0.875rem;
-$font-family-base:
+$font-family-emoji-base:
+  /* macOS */
+  "Apple Color Emoji",
+  /* Windows */
+  "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif:
   /* Safari for macOS and iOS */
   "-apple-system",
-  /* Chrome for macOS*/
+  /* Chrome for macOS */
   "BlinkMacSystemFont",
-  /* Android*/
+  /* Android */
   "Roboto",
-  /* Windows*/
+  /* Windows */
   "Verdana", "Meiryo",
-  /* macOS*/
+  /* macOS */
   "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3",
-  /* Fallback*/
+  /* Fallback */
   sans-serif,
-  /* Emoji*/
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /* Emoji */
+  #{$font-family-emoji-base};
+$font-family-monospace:
+  /* Windows */
+  Consolas,
+  /* macOS */
+  Menlo, Monaco, "Andale Mono",
+  /* Ubuntu */
+  "Ubuntu Mono",
+  /* Fallback */
+  monospace,
+  /* Emoji */
+  #{$font-family-emoji-base};
 
-$primary: #1e61ad;
+$body-bg: var(--body-background);
+$body-color: var(--body-color);
 
-$pagination-active-bg: #e11010;
+$link-color: var(--links-color);
+$link-hover-color: var(--links-hover);
 
-$pagination-color: #141414;
-$pagination-bg: #efefef;
+$hr-border-color: var(--table-border);
+$table-border-color:  var(--table-border);
 
-$pagination-hover-color: #141414;
-$pagination-hover-bg: #cacaca;
+$input-bg: var(--body-background);
+$input-color: var(--body-color);
+$input-border-color: var(--table-border);
+
+$pagination-bg: var(--pagination-background);
+$pagination-color: var(--pagination-color);
+$pagination-hover-color: var(--pagination-color);
+$pagination-hover-bg: var(--pagination-hover);
+$pagination-active-bg: var(--pagination-active);

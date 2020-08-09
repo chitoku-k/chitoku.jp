@@ -1,0 +1,78 @@
+@import "src/styles/modules";
+
+.dropdown {
+  position: relative;
+
+  &:global(.dropdown):hover {
+    > a {
+      color: var(--nav-color);
+      background-color: var(--nav-hover);
+    }
+  }
+
+  :global {
+    .dropdown-menu {
+      display: none;
+      padding: 0;
+      margin: 0;
+      background-clip: border-box;
+      border-color: var(--nav-border);
+      border-top: none;
+      border-radius: 0;
+
+      &,
+      > :global(.active) > a {
+        background-color: var(--nav-background);
+      }
+    }
+
+    .sub-menu {
+      position: static !important;
+      pointer-events: initial !important;
+      opacity: 1 !important;
+    }
+
+    .sub-toggle,
+    .dropdown-toggle {
+      display: none;
+    }
+  }
+}
+
+.link {
+  :global(.dropdown-menu) > li > & {
+    padding: 15px 24px;
+  }
+
+  :global(.dropdown-menu) > li > &,
+  :global(.navbar-nav) > li > & {
+    display: block;
+    padding: 20px 30px;
+    color: var(--nav-color);
+    white-space: nowrap;
+    transition: background-color 0.3s;
+
+    &:hover,
+    &:focus {
+      color: var(--nav-color);
+      text-decoration: none;
+      background-color: var(--nav-hover);
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: 20px 24px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 12px;
+    }
+  }
+
+  &:global(.dropdown-toggle)::after {
+    margin-left: 4px;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}

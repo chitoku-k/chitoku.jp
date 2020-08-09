@@ -5,7 +5,6 @@ import { HomeItemQuery } from 'graphql-types'
 import Layout from 'components/Layout'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
-import Content from 'components/Content'
 import Footer from 'components/Footer'
 import Home from 'components/Home'
 
@@ -27,9 +26,7 @@ const IndexPage: FunctionComponent<HomePageProps> = ({ data }) => (
   <Layout>
     <Header />
     <Navbar />
-    <Content>
-      <Home {...data} />
-    </Content>
+    <Home {...data} />
     <Footer />
   </Layout>
 )

@@ -1,0 +1,81 @@
+@import "src/styles/modules";
+
+.container {
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  margin-bottom: 24px;
+  background-color: var(--nav-background);
+  -webkit-overflow-scrolling: touch;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 15px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 24px;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-down(sm) {
+    overflow-x: auto;
+  }
+}
+
+.row {
+  align-items: center;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(sm) {
+    height: 45px;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: auto;
+  }
+}
+
+.navbar {
+  padding: 0 15px;
+  margin-bottom: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+
+  @include media-breakpoint-down(sm) {
+    &.search {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    :global {
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+    }
+  }
+}
+
+.nav {
+  flex-wrap: nowrap;
+
+  > :global(.active) > a {
+    &,
+    &:hover,
+    &:focus {
+      color: var(--nav-color);
+      background-color: var(--nav-active);
+    }
+  }
+}
+
+.search-icon {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}

@@ -1,25 +1,38 @@
-import React from 'react'
-import { Col } from 'react-bootstrap'
+import React, { memo } from 'react'
+import { Container as BootstrapContainer, Col, Row } from 'react-bootstrap'
+import { Location } from '@reach/router'
+import { StateResultsProvided } from 'react-instantsearch-core'
 import { connectStateResults } from 'react-instantsearch-dom'
-import styled from '@emotion/styled'
+import clsx from 'clsx'
 
+import styles from './styles.module.scss'
+
+import Sidebar from 'components/Sidebar'
 import SearchResult from 'components/SearchResult'
 
-const MainContentContainer = styled(Col)`
-  position: static;
-  padding: 0;
-  flex: auto;
-`
+const MemoizedSidebar = memo(Sidebar, (prev, next) => prev.location.pathname === next.location.pathname)
 
-const Container = connectStateResults(function Container({
+const Container = connectStateResults<ContainerProps>(function Container({
   searchState,
   children,
+  sidebar = true,
 }) {
   return (
-    <MainContentContainer>
-      {searchState.query ? <SearchResult /> : children}
-    </MainContentContainer>
+    <BootstrapContainer className={styles.container}>
+      <Row className={styles.row}>
+        <Col className={clsx(styles.col, sidebar && styles.sidebar)}>
+          {searchState.query ? <SearchResult /> : children}
+        </Col>
+        <Location>
+          {({ location }) => sidebar ? <MemoizedSidebar location={location} /> : null}
+        </Location>
+      </Row>
+    </BootstrapContainer>
   )
 })
+
+interface ContainerProps extends StateResultsProvided<unknown> {
+  sidebar?: boolean
+}
 
 export default Container

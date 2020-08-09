@@ -1,13 +1,14 @@
 import React, { FunctionComponent } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { IconDefinition, IconName } from '@fortawesome/fontawesome-svg-core'
 import { faFacebookF, faGetPocket, faTumblr, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { useIntl } from 'react-intl'
-import { GatsbyLinkProps } from 'gatsby-link'
-import styled from '@emotion/styled'
+import clsx from 'clsx'
 
 import messages from './messages'
+import styles from './styles.module.scss'
+
 import Link from 'components/Link'
-import { IconDefinition, IconName } from '@fortawesome/fontawesome-svg-core'
 
 interface ShareButtonProps {
   url: string
@@ -19,11 +20,6 @@ interface TwitterShareButtonProps extends ShareButtonProps {
 
 interface PocketShareButtonProps extends ShareButtonProps {
   title: string | null
-}
-
-interface ShareLinkProps extends GatsbyLinkProps<unknown> {
-  color: string
-  hover: string
 }
 
 const hatena: IconDefinition = {
@@ -38,49 +34,6 @@ const hatena: IconDefinition = {
   ],
 }
 
-const ShareLink: FunctionComponent<ShareLinkProps> = ({
-  children,
-  color,
-  hover,
-  ...props
-}) => (
-  <Link {...props}>
-    {children}
-  </Link>
-)
-
-const ShareButton = styled(ShareLink)`
-  box-sizing: content-box;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  min-height: 22px;
-  margin-right: 7px;
-  padding: 5px 0;
-  border-radius: 6px;
-  display: inline-flex;
-  transition: background-color 0.3s;
-  color: white;
-  background-color: ${({ color }) => color};
-  &:hover {
-    background-color: ${({ hover }) => hover};
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none;
-    color: white;
-  }
-`
-
-const ShareButtonIcon = styled(FontAwesomeIcon)`
-  font-size: 18px;
-`
-
-const HatenaShareButtonIcon = styled(FontAwesomeIcon)`
-  font-size: 16px;
-`
-
 export const TwitterShareButton: FunctionComponent<TwitterShareButtonProps> = ({
   title,
   url,
@@ -90,9 +43,9 @@ export const TwitterShareButton: FunctionComponent<TwitterShareButtonProps> = ({
   const to = `${base}?text=${encodeURIComponent(title ?? '')}&url=${encodeURIComponent(url)}`
 
   return (
-    <ShareButton to={to} color="#00b0ed" hover="#009cd9" title={formatMessage(messages.share_on, { service: formatMessage(messages.twitter) })}>
-      <ShareButtonIcon icon={faTwitter} />
-    </ShareButton>
+    <Link className={clsx(styles.button, styles.twitter)} to={to} title={formatMessage(messages.share_on, { service: formatMessage(messages.twitter) })}>
+      <FontAwesomeIcon className={styles.icon} icon={faTwitter} />
+    </Link>
   )
 }
 
@@ -104,24 +57,24 @@ export const FacebookShareButton: FunctionComponent<ShareButtonProps> = ({
   const to = `${base}?u=${encodeURIComponent(url)}`
 
   return (
-    <ShareButton to={to} color="#315096" hover="#1d3c82" title={formatMessage(messages.share_on, { service: formatMessage(messages.facebook) })}>
-      <ShareButtonIcon icon={faFacebookF} />
-    </ShareButton>
+    <Link className={clsx(styles.button, styles.facebook)} to={to} title={formatMessage(messages.share_on, { service: formatMessage(messages.facebook) })}>
+      <FontAwesomeIcon className={styles.icon} icon={faFacebookF} />
+    </Link>
   )
 }
 
 export const PocketShareButton: FunctionComponent<PocketShareButtonProps> = ({
-  url,
   title,
+  url,
 }) => {
   const { formatMessage } = useIntl()
   const base = 'https://getpocket.com/edit'
   const to = `${base}?title=${encodeURIComponent(title ?? '')}&url=${encodeURIComponent(url)}`
 
   return (
-    <ShareButton to={to} color="#ff2651" hover="#eb126e" title={formatMessage(messages.share_on, { service: formatMessage(messages.pocket) })}>
-      <ShareButtonIcon icon={faGetPocket} />
-    </ShareButton>
+    <Link className={clsx(styles.button, styles.pocket)} to={to} title={formatMessage(messages.share_on, { service: formatMessage(messages.pocket) })}>
+      <FontAwesomeIcon className={styles.icon} icon={faGetPocket} />
+    </Link>
   )
 }
 
@@ -133,9 +86,9 @@ export const HatenaShareButton: FunctionComponent<ShareButtonProps> = ({
   const to = `${base}?mode=confirm&url=${encodeURIComponent(url)}`
 
   return (
-    <ShareButton to={to} color="#05a4de" hover="#0090ca" title={formatMessage(messages.share_on, { service: formatMessage(messages.hatena) })}>
-      <HatenaShareButtonIcon icon={hatena} />
-    </ShareButton>
+    <Link className={clsx(styles.button, styles.hatena)} to={to} title={formatMessage(messages.share_on, { service: formatMessage(messages.hatena) })}>
+      <FontAwesomeIcon className={styles.icon} icon={hatena} />
+    </Link>
   )
 }
 
@@ -147,8 +100,8 @@ export const TumblrShareButton: FunctionComponent<ShareButtonProps> = ({
   const to = `${base}?url=${encodeURIComponent(url)}`
 
   return (
-    <ShareButton to={to} color="#35465c" hover="#213248" title={formatMessage(messages.share_on, { service: formatMessage(messages.tumblr) })}>
-      <ShareButtonIcon icon={faTumblr} />
-    </ShareButton>
+    <Link className={clsx(styles.button, styles.tumblr)} to={to} title={formatMessage(messages.share_on, { service: formatMessage(messages.tumblr) })}>
+      <FontAwesomeIcon className={styles.icon} icon={faTumblr} />
+    </Link>
   )
 }

@@ -1,8 +1,13 @@
 declare module 'translations/ja.yml' {
 }
 
+declare module '*.scss' {
+  const classes: { [key: string]: string }
+  export default classes
+}
+
 declare module '*.svg' {
-  const svg: React.ComponentType<React.SVGAttributes<{}>>
+  const svg: React.ComponentType<React.SVGAttributes<unknown>>
   export = svg
 }
 

@@ -1,9 +1,7 @@
-@import "variables";
+@import "modules";
 @import "bootstrap-custom";
+@import "prism";
 @import "~@fortawesome/fontawesome-svg-core/styles";
-@import "~prismjs/themes/prism";
-@import "~prismjs/plugins/line-numbers/prism-line-numbers";
-
 @import "pages";
 @import "pages/soarer";
 @import "pages/softwares";
@@ -11,14 +9,15 @@
 // Basic
 html,
 body {
-  background: #efefef;
   word-wrap: break-word;
+
   &,
   div#___gatsby,
   div#gatsby-focus-wrapper {
     height: 100%;
   }
 }
+
 h1,
 h2,
 h3,
@@ -27,20 +26,25 @@ h5,
 h6 {
   font-weight: bold;
 }
+
 blockquote {
   margin: 0 4px 20px 16px;
 }
+
 pre {
   padding: 0;
   background-color: inherit;
   border: none;
 }
+
 a {
   -webkit-tap-highlight-color: initial;
+
   @at-root button, &, &:focus {
     outline: none !important;
   }
 }
+
 input,
 button {
   &::-moz-focus-inner {
@@ -59,6 +63,7 @@ button {
 // reCAPTCHA
 .grecaptcha-badge {
   display: none !important;
+
   body[data-recaptcha] & {
     display: block !important;
   }
@@ -72,24 +77,47 @@ button {
       padding-left: 16px;
     }
   }
+
   .gist-meta {
-    font-size: 12px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 12px;
   }
+}
+
+// Prism
+pre[class*="language-"],
+code[class*="language-"] {
+  font-family: var(--font-family-monospace);
+}
+
+// Alerts
+.alert-danger {
+  color: var(--danger-color);
+  background-color: var(--danger-background);
+  border-color: var(--danger-border);
+}
+
+.alert-info {
+  color: var(--info-color);
+  background-color: var(--info-background);
+  border-color: var(--info-border);
 }
 
 // Tweet
 .twitter-tweet {
   margin: 20px auto;
-  padding: 15px;
   font-size: 100%;
 }
+
 .twitter-tweet + .twitter-tweet {
   visibility: hidden;
 }
+
 blockquote.twitter-tweet {
-  width: 470px;
+  width: 550px;
   max-width: 100%;
-  border: 1px solid #e1e8ed !important;
-  border-radius: 5px;
+  color: var(--tweet-color);
+  background-color: var(--tweet-background);
+  border: 1px solid var(--tweet-border) !important;
+  border-radius: 15px;
 }

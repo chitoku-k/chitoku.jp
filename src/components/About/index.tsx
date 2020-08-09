@@ -1,76 +1,17 @@
 import React, { FunctionComponent, useMemo } from 'react'
-import { Table as BootstrapTable, Col, Row } from 'react-bootstrap'
+import { Col, Row, Table } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
 import RehypeReact from 'rehype-react'
-import styled from '@emotion/styled'
 
+import messages from './messages'
+import styles from './styles.module.scss'
 import { AboutItemQuery } from 'graphql-types'
-import { media } from 'components/Layout'
+
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
 import Metadata from 'components/Metadata'
 import Link from 'components/Link'
-import messages from './messages'
-
-const AboutContainer = styled(ArticleContainer)`
-  p {
-    font-size: inherit;
-    padding: 0;
-    margin-bottom: 0;
-  }
-  div {
-    ${media.md.down()} {
-      padding: 0;
-    }
-  }
-  p,
-  div,
-  li {
-    font-size: 11pt;
-    line-height: 1.8;
-  }
-  img {
-    ${media.md.down()} {
-      margin-bottom: 20px;
-    }
-    ${media.sm.down()} {
-      max-width: 50% !important;
-    }
-  }
-  td {
-    ${media.md.down()} {
-      padding-right: 0;
-    }
-  }
-`
-
-const IconContainer = styled.div`
-  margin-bottom: 0.8em;
-  text-align: center;
-`
-
-const Icon = styled.img`
-  max-width: 100%;
-  border-radius: 4px;
-  margin-bottom: 0.4em;
-  width: 96px;
-  height: 96px;
-`
-
-const Table = styled(BootstrapTable)`
-  border-bottom-color: #ddd;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  margin: 0;
-  width: auto;
-  > tbody > tr {
-    > th,
-    > td {
-      white-space: normal;
-    }
-  }
-`
 
 const About: FunctionComponent<AboutProps> = ({
   about,
@@ -95,22 +36,22 @@ const About: FunctionComponent<AboutProps> = ({
   return (
     <Container>
       <Metadata title={formatMessage(messages.title)} />
-      <AboutContainer>
+      <ArticleContainer className={styles.container}>
         <ArticleHeader title={formatMessage(messages.title)} />
         <Row>
           <Col sm={2}>
-            <IconContainer>
-              <Icon src={about.icon.src} />
+            <div className={styles.iconContainer}>
+              <img className={styles.icon} src={about.icon.src} />
               <br />
               <small>
                 <FormattedMessage {...messages.icon} values={{
                   name: <Link to={about.icon.url}>{about.icon.name}</Link>,
                 }} />
               </small>
-            </IconContainer>
+            </div>
           </Col>
           <Col sm={10}>
-            <Table>
+            <Table className={styles.table}>
               <tbody>
                 <tr>
                   <th>{formatMessage(messages.name)}</th>
@@ -167,7 +108,7 @@ const About: FunctionComponent<AboutProps> = ({
             </Table>
           </Col>
         </Row>
-      </AboutContainer>
+      </ArticleContainer>
     </Container>
   )
 }

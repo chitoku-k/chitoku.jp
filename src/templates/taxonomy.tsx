@@ -7,7 +7,6 @@ import Container from 'components/Container'
 import Metadata from 'components/Metadata'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
-import Content from 'components/Content'
 import Footer from 'components/Footer'
 import Article, { ArticleCategoryItem, ArticleItem, ArticleTagItem } from 'components/Article'
 import Pagination, {
@@ -83,14 +82,12 @@ const TaxonomyPage: FunctionComponent<TaxonomyPageProps> = ({
     </Metadata>
     <Header />
     <Navbar />
-    <Content>
-      <Container>
-        {items.map(({ article }) => (
-          <Article key={article.path} article={article} />
-        ))}
-        <TaxonomyPagination page={page} />
-      </Container>
-    </Content>
+    <Container>
+      {items.map(({ article }) => (
+        <Article key={article.path} article={article} />
+      ))}
+      <TaxonomyPagination page={page} />
+    </Container>
     <Footer />
   </Layout>
 )

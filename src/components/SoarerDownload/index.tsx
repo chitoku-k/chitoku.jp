@@ -4,13 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
-import styled from '@emotion/styled'
+import clsx from 'clsx'
 
-import { SoarerDownloadItemQuery } from 'graphql-types'
 import messages from './messages'
+import styles from './styles.module.scss'
 import icon from './icon.png'
+import { SoarerDownloadItemQuery } from 'graphql-types'
+
 import { ArticleWrapper } from 'components/Article'
-import { media } from 'components/Layout'
 
 const query = graphql`
   query SoarerDownloadItem {
@@ -33,52 +34,6 @@ const query = graphql`
   }
 `
 
-const SoarerDownloadContainer = styled.div`
-  display: flex;
-  align-items: center;
-`
-
-const SoarerDownloadIcon = styled.img`
-  width: 48px;
-  margin: 0 15px !important;
-  ${media.sm.down()} {
-    margin-left: 0 !important;
-  }
-`
-
-const SoarerDownloadTitle = styled.h2`
-  margin: 0 !important;
-  font-size: 24px !important;
-  br {
-    display: none;
-  }
-  ${media.sm.down()} {
-    font-size: 120% !important;
-    line-height: 1.2;
-    br {
-      display: inline;
-    }
-  }
-`
-
-const SoarerDownloadDescription = styled.div`
-  margin-top: 10px;
-  margin-left: 78px;
-  .btn,
-  .btn .fa {
-    margin-right: 8px;
-  }
-  ${media.sm.down()} {
-    margin-top: 20px;
-    margin-left: 0;
-    .btn {
-      font-size: 100%;
-      margin-bottom: 5px;
-      padding: 7px 14px;
-    }
-  }
-`
-
 const SoarerDownload: FunctionComponent<ArticleWrapper> = () => {
   const { formatMessage } = useIntl()
 
@@ -96,16 +51,16 @@ const SoarerDownload: FunctionComponent<ArticleWrapper> = () => {
 
   return (
     <>
-      <SoarerDownloadContainer>
-        <SoarerDownloadIcon src={icon} />
-        <SoarerDownloadTitle className="no-border">
+      <div className={styles.container}>
+        <img className={styles.icon} src={icon} />
+        <h2 className={clsx(styles.title, 'no-border')}>
           <span>Soarer for Windows </span><br />
           <span>ver {update.version}</span>
-        </SoarerDownloadTitle>
-      </SoarerDownloadContainer>
-      <SoarerDownloadDescription className="description">
+        </h2>
+      </div>
+      <div className={styles.description}>
         {update.file ? (
-          <Button<'a'> variant="primary" size="lg" href={update.file.publicURL as string} download={update.file.base}>
+          <Button as="a" variant="primary" size="lg" href={update.file.publicURL as string} download={update.file.base}>
             <FontAwesomeIcon icon={faDownload} />
             {formatMessage(messages.download, {
               size: update.file.prettySize,
@@ -115,7 +70,7 @@ const SoarerDownload: FunctionComponent<ArticleWrapper> = () => {
         <Button variant="light" size="lg" href="./history">
           {formatMessage(messages.history)}
         </Button>
-      </SoarerDownloadDescription>
+      </div>
     </>
   )
 }

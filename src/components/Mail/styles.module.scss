@@ -1,0 +1,51 @@
+@import "src/styles/modules";
+
+.notice {
+  text-align: center;
+}
+
+.required {
+  color: var(--mail-required);
+}
+
+.area {
+  margin-bottom: 10px;
+}
+
+.accepted {
+  margin-right: 5px;
+  color: var(--mail-accepted);
+}
+
+.error {
+  margin-right: 5px;
+  color: var(--mail-error);
+}
+
+.processing {
+  margin-right: 5px;
+}
+
+.input {
+  &,
+  &:focus {
+    color: var(--containers-color);
+    background-color: var(--containers-background);
+  }
+
+  font-size: 16px;
+  resize: vertical;
+}
+
+.wrapper {
+  display: block;
+}
+
+.title {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.submission {
+  text-align: center;
+}

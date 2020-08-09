@@ -8,7 +8,7 @@ tags:
 ---
 2019/02 まで WordPress で管理していた chitoku.jp ですがこの度 Gatsby に移行しました！
 
-https://twitter.com/java_shit/status/1097194006700675073
+<twitter-tweet id="1097194006700675073"></twitter-tweet>
 
 ## TL;DR
 

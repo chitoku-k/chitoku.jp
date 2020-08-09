@@ -23,7 +23,7 @@ Twitter によってアプリケーションの機能が制限されました。
 <div class="text-center">
 
 基本的なトラブル等はこちらに書かれている場合があります。  
-これ以外の件については、[@soarer_windows](https://twitter.com/soarer_windows) か、[メール](/mail)にてお問い合わせください。
+これ以外の件については、[@soarer\_windows](https://twitter.com/soarer_windows) か、[メール](/mail)にてお問い合わせください。
 </div>
 
 ---

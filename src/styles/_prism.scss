@@ -1,0 +1,6 @@
+@import "~prismjs/themes/prism";
+@import "~prismjs/plugins/line-numbers/prism-line-numbers";
+
+@media (prefers-color-scheme: dark) {
+  @import "~prismjs/themes/prism-tomorrow";
+}

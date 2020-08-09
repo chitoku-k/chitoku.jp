@@ -4,8 +4,8 @@ import { useIntl } from 'react-intl'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Location } from '@reach/router'
 
-import { MetadataItemQuery } from 'graphql-types'
 import messages from './messages'
+import { MetadataItemQuery } from 'graphql-types'
 
 const THUMBNAIL_DEFAULT = '/thumbnails/default.png'
 

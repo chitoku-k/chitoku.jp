@@ -1,0 +1,65 @@
+@import "src/styles/modules";
+
+.container {
+  p {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: inherit;
+  }
+
+  div {
+    @include media-breakpoint-down(md) {
+      padding: 0;
+    }
+  }
+
+  p,
+  div,
+  li {
+    font-size: 11pt;
+    line-height: 1.8;
+  }
+
+  img {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      max-width: 50% !important;
+    }
+  }
+
+  td {
+    @include media-breakpoint-down(md) {
+      padding-right: 0;
+    }
+  }
+}
+
+.icon-container {
+  margin-bottom: 0.8em;
+  text-align: center;
+}
+
+.icon {
+  width: 96px;
+  max-width: 100%;
+  margin-bottom: 0.4em;
+  border-radius: 4px;
+}
+
+.table {
+  width: auto;
+  margin: 0;
+  border-bottom-color: var(--table-border);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+
+  > tbody > tr {
+    > th,
+    > td {
+      white-space: normal;
+    }
+  }
+}

@@ -1,25 +1,29 @@
 article.page-softwares {
   h2 {
-    margin: 0;
     padding: 0;
+    margin: 0;
     background: none;
     border: none;
+
     > a {
       display: inline-flex;
       align-items: center;
+
       > .gatsby-resp-image-wrapper {
         width: 48px;
-        height: 48px;
         max-width: none !important;
-        margin-left: 0 !important;
+        height: 48px;
         margin-right: 12px !important;
+        margin-left: 0 !important;
       }
     }
   }
+
   p {
     @include media-breakpoint-up(md) {
       margin-left: 44px;
     }
+
     @include media-breakpoint-down(md) {
       padding-left: 60px;
     }

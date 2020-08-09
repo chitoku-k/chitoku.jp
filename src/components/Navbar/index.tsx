@@ -1,12 +1,13 @@
-import React, { FunctionComponent, useCallback, useState } from 'react'
-import { Nav as BootstrapNav, Navbar as BootstrapNavbar, Container, NavbarProps, Row } from 'react-bootstrap'
+import React, { DetailedHTMLProps, FunctionComponent, HTMLAttributes, useCallback, useState } from 'react'
+import { Navbar as BootstrapNavbar, Container, Nav, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { graphql, useStaticQuery } from 'gatsby'
-import styled from '@emotion/styled'
+import clsx from 'clsx'
 
+import styles from './styles.module.scss'
 import { NavigationLinkItemQuery, NavigationsYamlNav } from 'graphql-types'
-import { media } from 'components/Layout'
+
 import SearchForm from 'components/SearchForm'
 import NavItem, { NavLink } from 'components/NavItem'
 
@@ -25,79 +26,13 @@ const query = graphql`
   }
 `
 
-const NavContainer = styled.div`
-  margin-bottom: 24px;
-  background: #44607b;
-  width: 100%;
-  top: 0;
-  z-index: 5;
-  -webkit-overflow-scrolling: touch;
-  ${media.md.up()} {
-    margin-bottom: 15px;
-  }
-  ${media.lg.up()} {
-    margin-bottom: 24px;
-  }
-  ${media.md.down()} {
-    white-space: nowrap;
-    margin-bottom: 0;
-  }
-  ${media.sm.down()} {
-    overflow-x: auto;
-  }
-`
-
-const NavbarRow = styled(Row)`
-  justify-content: space-between;
-  align-items: center;
-  ${media.sm.down()} {
-    height: 45px;
-  }
-  ${media.md.up()} {
-    height: auto;
-  }
-`
-
-const NavbarWrapper: FunctionComponent<NavbarCoreProps> = ({
-  search,
-  ...props
+const SearchIcon: FunctionComponent<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>> = ({
+  ref,
+  className,
+  ...rest
 }) => (
-  <BootstrapNavbar {...props} />
+  <li className={clsx(styles.searchIcon, className)} {...rest} />
 )
-
-const NavbarCore = styled(NavbarWrapper)<NavbarCoreProps>`
-  background-color: transparent;
-  margin-bottom: 0;
-  padding: 0 15px;
-  border-radius: 0;
-  border: none;
-  ${media.sm.down()} {
-    display: ${({ search }) => search ? 'none' : 'block'};
-  }
-  ${media.md.up()} {
-    .dropdown:hover .dropdown-menu {
-      display: block;
-    }
-  }
-`
-
-const Nav = styled(BootstrapNav)`
-  flex-wrap: nowrap;
-  > .active > a {
-    &,
-    &:hover,
-    &:focus {
-      color: white;
-      background-color: #2f4255;
-    }
-  }
-`
-
-const SearchIcon = styled.li`
-  ${media.md.up()} {
-    display: none;
-  }
-`
 
 const Navbar: FunctionComponent = () => {
   const { navigation } = useStaticQuery<NavbarQueryResult>(query)
@@ -114,12 +49,12 @@ const Navbar: FunctionComponent = () => {
   const { nav } = navigation
 
   return (
-    <NavContainer>
+    <div className={styles.container}>
       <Container>
-        <NavbarRow>
-          <NavbarCore search={search}>
+        <Row className={styles.row}>
+          <BootstrapNavbar className={clsx(styles.navbar, search && styles.search)}>
             <Row>
-              <Nav as="ul">
+              <Nav className={styles.nav} as="ul">
                 {nav.map(item => (
                   <NavItem key={item.to} {...item} dropdown>{item.items}</NavItem>
                 ))}
@@ -130,19 +65,15 @@ const Navbar: FunctionComponent = () => {
                 </SearchIcon>
               </Nav>
             </Row>
-          </NavbarCore>
+          </BootstrapNavbar>
           <SearchForm search={search} openSearch={openSearch} closeSearch={closeSearch} />
-        </NavbarRow>
+        </Row>
       </Container>
-    </NavContainer>
+    </div>
   )
 }
 
 export type NavigationLinkItem = NavigationsYamlNav
 type NavbarQueryResult = NavigationLinkItemQuery
-
-interface NavbarCoreProps extends NavbarProps {
-  search: boolean
-}
 
 export default Navbar

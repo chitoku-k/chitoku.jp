@@ -1,22 +1,31 @@
 .page-softwares {
   a {
-    color: #333;
+    color: var(--headings-color);
   }
+
   img {
     margin-right: 6px;
+
     @include media-breakpoint-up(md) {
       margin-right: 12px;
     }
   }
+
   p {
     padding-top: 0;
+
     @include media-breakpoint-up(md) {
       margin-left: 44px;
     }
   }
+
   h2 {
     @include media-breakpoint-down(lg) {
       margin-top: -15px;
     }
+  }
+  // Gatsby
+  .gatsby-resp-image-image {
+    box-shadow: none !important;
   }
 }

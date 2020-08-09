@@ -1,0 +1,8 @@
+@import "src/styles/modules";
+
+.wrapper {
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    min-height: 100%;
+  }
+}

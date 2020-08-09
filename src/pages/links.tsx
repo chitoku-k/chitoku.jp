@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import Layout from 'components/Layout'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
-import Content from 'components/Content'
 import Footer from 'components/Footer'
 import Links, { LinksLinkItem } from 'components/Links'
 
@@ -27,9 +26,7 @@ const LinksPage: FunctionComponent<LinksPageProps> = ({
   <Layout>
     <Header />
     <Navbar />
-    <Content>
-      <Links links={links} />
-    </Content>
+    <Links links={links} />
     <Footer />
   </Layout>
 )

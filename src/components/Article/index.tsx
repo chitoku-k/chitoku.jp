@@ -4,108 +4,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar, faFolderOpen } from '@fortawesome/free-regular-svg-icons'
 import { faTags } from '@fortawesome/free-solid-svg-icons'
 import { useIntl } from 'react-intl'
-import styled from '@emotion/styled'
 
-import { ArticleFragment, ArticleQuery } from 'graphql-types'
 import messages from './messages'
-import Link from 'components/Link'
-import NavItem from 'components/NavItem'
-import PspSdkFunction from 'components/PspSdkFunction'
-import PspSdkMacro from 'components/PspSdkMacro'
-import { PaginationContainer, SimplePagination } from 'components/Pagination'
-import { media } from 'components/Layout'
+import styles from './styles.module.scss'
+import { ArticleFragment, ArticleQuery } from 'graphql-types'
+
 import ArticleBody, { ArticleComponentCollection } from 'components/ArticleBody'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
+import Link from 'components/Link'
+import NavItem from 'components/NavItem'
+import { PaginationContainer, SimplePagination } from 'components/Pagination'
+import PspSdkFunction from 'components/PspSdkFunction'
+import PspSdkMacro from 'components/PspSdkMacro'
+import TwitterTweet from 'components/TwitterTweet'
 
 export const getClassNameFromPath = (path: string): string => `page${path.replace(/[/]/ug, '-').replace(/-$/u, '')}`
-
-const ArticleHeaderAttributes = styled.div`
-  min-height: 0.5em;
-  text-align: right;
-  color: #333;
-  margin: 4px 0 0 0;
-  padding: 0;
-`
-
-const ArticleHeaderAttributeIcon = styled(FontAwesomeIcon)`
-  margin-right: 0.2em;
-`
-
-const ArticleHeaderAttributeItem = styled.span`
-  & + & {
-    display: inline-block;
-    margin-left: 0.8em;
-  }
-`
-
-const ArticleHeaderAttributeLink = styled(Link)`
-  &,
-  &:hover {
-    color: #333;
-  }
-`
-
-const ArticleNavbar = styled(Navbar)`
-  border: none;
-  border-radius: 0;
-  padding: 0;
-`
-
-const ArticleNav = styled(Nav)`
-  &.navbar-nav {
-    width: 100%;
-    flex-wrap: wrap;
-    > li {
-      text-align: center;
-      padding-left: 0;
-      padding-right: 0;
-      ${media.sm.down()} {
-        width: 100% !important;
-        display: block;
-        text-align: left;
-      }
-    }
-    > li > a {
-      &:hover,
-      &:focus {
-        background-color: #ececec;
-      }
-    }
-  }
-`
-
-const ArticleNavItem = styled(NavItem)`
-  .navbar-nav > & > a {
-    &,
-    &:hover,
-    &:focus {
-      color: #777;
-    }
-  }
-  .navbar-nav > &.active a {
-    background-color: #e7e7e7;
-    color: #555;
-  }
-`
-
-const ReadMoreContainer = styled.div`
-  margin-top: 15px;
-  text-align: right;
-`
-
-const ReadMoreButton = styled(Link)`
-  display: inline-block;
-  padding: 4px 16px;
-  background-color: #e11010;
-  color: white;
-  transition: background-color 0.3s;
-  &:hover {
-    background: #a30c0c;
-    color: white;
-    text-decoration: none;
-  }
-`
 
 const isTag = (tag: ArticleTagItem | null): tag is ArticleTagItem => Boolean(tag?.name)
 
@@ -148,6 +62,7 @@ const Article: FunctionComponent<ArticleProps> = ({
   Object.assign(components, {
     'pspsdk-function': PspSdkFunction,
     'pspsdk-macro': PspSdkMacro,
+    'twitter-tweet': TwitterTweet,
     a: Link,
   })
 
@@ -155,54 +70,54 @@ const Article: FunctionComponent<ArticleProps> = ({
     <>
       <ArticleContainer className={getClassNameFromPath(path)}>
         <ArticleHeader title={<Link to={path}>{title}</Link>}>
-          <ArticleHeaderAttributes>
+          <div className={styles.headerAttribute}>
             {category ? (
-              <ArticleHeaderAttributeItem>
-                <ArticleHeaderAttributeIcon icon={faFolderOpen} />
-                <ArticleHeaderAttributeLink to={category.path}>{category.name}</ArticleHeaderAttributeLink>
-              </ArticleHeaderAttributeItem>
+              <span className={styles.headerAttributeItem}>
+                <FontAwesomeIcon className={styles.headerAttributeIcon} icon={faFolderOpen} />
+                <Link className={styles.headerAttributeLink} to={category.path}>{category.name}</Link>
+              </span>
             ) : null}
             {tags?.filter(isTag).length ? (
-              <ArticleHeaderAttributeItem>
-                <ArticleHeaderAttributeIcon icon={faTags} />
+              <span className={styles.headerAttributeItem}>
+                <FontAwesomeIcon className={styles.headerAttributeIcon} icon={faTags} />
                 {tags
                   .filter(isTag)
-                  .map(({ name, slug }) => <ArticleHeaderAttributeLink key={slug} to={`/tag/${slug}`}>{name}</ArticleHeaderAttributeLink>)
+                  .map(({ name, slug }) => <Link key={slug} className={styles.headerAttributeLink} to={`/tag/${slug}`}>{name}</Link>)
                   .reduce<ReactNode[]>((el, curr) => el.length ? [ el, ', ', curr ] : [ curr ], [])}
-              </ArticleHeaderAttributeItem>
+              </span>
             ) : null}
             {created ? (
-              <ArticleHeaderAttributeItem title={formatDate(new Date(created), {
+              <span className={styles.headerAttributeItem} title={formatDate(new Date(created), {
                 year: 'numeric',
                 month: 'narrow',
                 day: 'numeric',
                 hour: 'numeric',
                 minute: 'numeric',
               })}>
-                <ArticleHeaderAttributeIcon icon={faCalendar} />
+                <FontAwesomeIcon className={styles.headerAttributeIcon} icon={faCalendar} />
                 {formatDate(new Date(created), {
                   year: 'numeric',
                   month: 'narrow',
                   day: 'numeric',
                 })}
-              </ArticleHeaderAttributeItem>
+              </span>
             ) : null}
-          </ArticleHeaderAttributes>
+          </div>
         </ArticleHeader>
         {navigation ? (
-          <ArticleNavbar bg="light">
-            <ArticleNav as="ul">
+          <Navbar className={styles.navbar} bg="light">
+            <Nav className={styles.nav} as="ul">
               {navigation.map(item => (
-                <ArticleNavItem key={item.name} {...item} style={{ width: `calc(100% / ${navigation.length})` }} />
+                <NavItem key={item.name} className={styles.navItem} {...item} style={{ width: `calc(100% / ${navigation.length})` }} />
               ))}
-            </ArticleNav>
-          </ArticleNavbar>
+            </Nav>
+          </Navbar>
         ) : null}
         <ArticleBody ast={excerptAst ?? htmlAst ?? null} components={withArticle(article, components)} />
         {excerpted && excerptAst ? (
-          <ReadMoreContainer>
-            <ReadMoreButton to={path}>{formatMessage(messages.more)}</ReadMoreButton>
-          </ReadMoreContainer>
+          <div className={styles.readMoreContainer}>
+            <Link className={styles.readMoreButton} to={path}>{formatMessage(messages.more)}</Link>
+          </div>
         ) : null}
         {children}
       </ArticleContainer>

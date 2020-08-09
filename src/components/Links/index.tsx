@@ -1,18 +1,15 @@
 import React, { FunctionComponent } from 'react'
 import { useIntl } from 'react-intl'
-import styled from '@emotion/styled'
 
-import { LinksItemQuery } from 'graphql-types'
 import messages from './messages'
+import styles from './styles.module.scss'
+import { LinksItemQuery } from 'graphql-types'
+
 import Metadata from 'components/Metadata'
 import Link from 'components/Link'
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
-
-const LinksContainer = styled.ul`
-  line-height: 1.8;
-`
 
 const Links: FunctionComponent<LinksProps> = ({ links }) => {
   const { formatMessage } = useIntl()
@@ -28,13 +25,13 @@ const Links: FunctionComponent<LinksProps> = ({ links }) => {
       <Metadata title={formatMessage(messages.title)} />
       <ArticleContainer>
         <ArticleHeader title={formatMessage(messages.title)} />
-        <LinksContainer>
+        <ul className={styles.container}>
           {items.map(({ name, url }) => (
             <li key={url}>
               <Link to={url} title={name}>{name}</Link>
             </li>
           ))}
-        </LinksContainer>
+        </ul>
       </ArticleContainer>
     </Container>
   )

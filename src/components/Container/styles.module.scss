@@ -1,0 +1,38 @@
+@import "src/styles/modules";
+
+.container {
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 60px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 15px;
+  }
+}
+
+.row {
+  @include media-breakpoint-up(lg) {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+}
+
+.col {
+  position: static;
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+
+  &.sidebar {
+    flex: 0 0 70%;
+    width: 70%;
+    max-width: 70%;
+
+    @include media-breakpoint-down(md) {
+      flex: 0 0 100%;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}

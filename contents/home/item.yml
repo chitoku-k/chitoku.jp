@@ -19,7 +19,7 @@ items:
     name: Windows
     to: /windows/
     description: Windows のデスクトップ向けフリーソフトの紹介コーナーです。でも最近は Windows を使っていません……。
-  - id: psp-smartphone
+  - id: pspsmartphone
     component: GadgetsIcon
     name: ガジェット
     to: /gadgets/

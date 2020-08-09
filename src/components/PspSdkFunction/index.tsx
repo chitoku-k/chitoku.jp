@@ -1,66 +1,27 @@
 import React, { FunctionComponent, useEffect, useRef } from 'react'
-import styled from '@emotion/styled'
+import clsx from 'clsx'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-c'
 
+import styles from './styles.module.scss'
 import { FunctionsYamlParameters } from 'graphql-types'
+
 import { ArticleItem } from 'components/Article'
-import { media } from 'components/Layout'
 
 const indentationWidth = 4
 const linebreakThreshold = 2
-
-const PspSdkFunctionEntry = styled.div`
-  padding: 0 16px;
-  margin-bottom: 32px;
-  ${media.md.down()} {
-    padding: 0 13px;
-  }
-  ${media.sm.down()} {
-    padding: 0;
-  }
-`
-
-const PspSdkFunctionPrototype = styled.code`
-  &&& {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 4px 8px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    white-space: pre;
-  }
-`
-
-const PspSdkFunctionParameter = styled.code`
-  &&& {
-    padding: 2px 4px;
-  }
-`
-
-const PspSdkFunctionParameterSeparator = styled.span`
-  margin: 0 8px;
-`
-
-const PspSdkFunctionDescription = styled.div`
-  font-size: 11pt;
-  line-height: 1.8;
-  margin-bottom: 2px;
-  padding: 0 8px;
-  ${media.sm.down()} {
-    ul {
-      padding-left: 20px;
-    }
-  }
-`
+const buildParameters = ({ type, name, parameters }: PspSdkFunctionParameterItem, indentation: string): string => parameters
+  ? `${indentation}${type ?? ''} (*${name})(${parameters.map(child => `${child.type ?? ''}${child.type?.endsWith('*') ? '' : ' '}${child.name}`).join(', ')})`
+  : type
+    ? `${indentation}${type}${type.endsWith('*') ? '' : ' '}${name}`
+    : `${indentation}${name}`
 
 const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
   children,
   article,
   name: functionName,
 }) => {
-  const ref = useRef<HTMLElement>(null)
+  const ref = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (ref.current) {
       Prism.highlightElement(ref.current)
@@ -75,41 +36,35 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
   const separator = def.parameters?.length && def.parameters.length > linebreakThreshold ? '\n' : ''
   const indentation = separator ? ' '.repeat(indentationWidth) : ''
 
-  const buildParameters = ({ type, name, parameters }: PspSdkFunctionParameterItem): string => parameters
-    ? `${indentation}${type ?? ''} (*${name})(${parameters.map(child => `${child.type ?? ''}${child.type?.endsWith('*') ? '' : ' '}${child.name}`).join(', ')})`
-    : type
-      ? `${indentation}${type}${type.endsWith('*') ? '' : ' '}${name}`
-      : `${indentation}${name}`
-
   return (
-    <PspSdkFunctionEntry>
-      <PspSdkFunctionPrototype ref={ref} className="language-c">
+    <div className={styles.entry}>
+      <code className={clsx(styles.prototype, 'language-c')} ref={ref}>
         {[
           `${def.return} ${def.name}(`,
           def.parameters
-            ? def.parameters.map(buildParameters).join(`, ${separator}`)
+            ? def.parameters.map(x => buildParameters(x, indentation)).join(`, ${separator}`)
             : 'void',
           ');',
         ].join(separator)}
-      </PspSdkFunctionPrototype>
-      <PspSdkFunctionDescription>
+      </code>
+      <div className={styles.description}>
         {def.description}
         {def.parameters ? (
           <ul>
             {def.parameters.filter(x => x.description).map(({ name, description }) => (
               <li key={name}>
-                <PspSdkFunctionParameter className="language-c">{name}</PspSdkFunctionParameter>
-                <PspSdkFunctionParameterSeparator>-</PspSdkFunctionParameterSeparator>
+                <code className={clsx(styles.parameter, 'language-c')}>{name}</code>
+                <span className={styles.separator}>-</span>
                 {description}
               </li>
             ))}
           </ul>
         ) : null}
-      </PspSdkFunctionDescription>
-      <PspSdkFunctionDescription>
+      </div>
+      <div className={styles.description}>
         {children}
-      </PspSdkFunctionDescription>
-    </PspSdkFunctionEntry>
+      </div>
+    </div>
   )
 }
 

@@ -5,7 +5,6 @@ import { AboutItemQuery } from 'graphql-types'
 import Layout from 'components/Layout'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
-import Content from 'components/Content'
 import Footer from 'components/Footer'
 import About from 'components/About'
 
@@ -54,9 +53,7 @@ const AboutPage: FunctionComponent<AboutPageProps> = ({
   <Layout>
     <Header />
     <Navbar />
-    <Content>
-      <About {...data} />
-    </Content>
+    <About {...data} />
     <Footer />
   </Layout>
 )

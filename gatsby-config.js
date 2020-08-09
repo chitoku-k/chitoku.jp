@@ -25,6 +25,7 @@ if (env.length) {
 const { description } = require('./package.json')
 const { createQuery } = require('historia-taxonomy-plugin')
 const sass = require('sass')
+const postcssCustomProperties = require('postcss-custom-properties')
 
 module.exports = {
   siteMetadata: {
@@ -53,14 +54,13 @@ module.exports = {
       },
     ] : []),
     { resolve: 'gatsby-plugin-catch-links' },
-    { resolve: 'gatsby-plugin-emotion' },
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
         test: /\.js$|\.tsx?$/u,
         stages: [ 'build-javascript' ],
         options: {
-          failOnError: true,
+          failOnError: process.env.NODE_ENV === 'production',
         },
       },
     },
@@ -85,6 +85,12 @@ module.exports = {
       resolve: 'gatsby-plugin-sass',
       options: {
         implementation: sass,
+        cssLoaderOptions: {
+          camelCase: 'only',
+        },
+        postCssPlugins: [
+          postcssCustomProperties(),
+        ],
       },
     },
     { resolve: 'gatsby-plugin-sharp' },
@@ -92,15 +98,7 @@ module.exports = {
       resolve: '@danbruegge/gatsby-plugin-stylelint',
       options: {
         files: [ 'src/**/*.scss' ],
-        failOnError: true,
-      },
-    },
-    {
-      resolve: '@danbruegge/gatsby-plugin-stylelint',
-      options: {
-        files: [ 'src/**/*.tsx' ],
-        customSyntax: 'postcss-styled',
-        failOnError: true,
+        emitErrors: process.env.NODE_ENV === 'production',
       },
     },
     {
@@ -159,13 +157,6 @@ module.exports = {
                   },
                 },
               ],
-            },
-          },
-          {
-            resolve: '@weknow/gatsby-remark-twitter',
-            options: {
-              // HACK
-              align: '&lang=ja',
             },
           },
         ],
