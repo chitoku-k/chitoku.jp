@@ -15,8 +15,9 @@
   font-size: 200%;
   line-height: 1.25;
   border-color: var(--headings-primary);
-  border-bottom: 1px solid;
-  border-left: 14px solid;
+  border-style: solid;
+  border-bottom-width: 1px;
+  border-left-width: 14px;
 
   a {
     color: var(--containers-color);
