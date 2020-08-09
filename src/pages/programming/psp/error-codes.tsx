@@ -6,7 +6,6 @@ import Container from 'components/Container'
 import Metadata from 'components/Metadata'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
-import Content from 'components/Content'
 import Footer from 'components/Footer'
 import Article, { ArticleItem } from 'components/Article'
 import PspErrorCodes from 'components/PspErrorCodes'
@@ -41,13 +40,11 @@ const PspErrorCodesPage: FunctionComponent<PspErrorCodesPageProps> = ({
     <Metadata title={article.attributes.title} thumbnail="/thumbnails/pspprogramming.png" />
     <Header />
     <Navbar />
-    <Content sidebar={article.attributes.sidebar !== false}>
-      <Container>
-        <Article article={article} components={{
-          'psp-error-codes': PspErrorCodes,
-        }} />
-      </Container>
-    </Content>
+    <Container sidebar={article.attributes.sidebar !== false}>
+      <Article article={article} components={{
+        'psp-error-codes': PspErrorCodes,
+      }} />
+    </Container>
     <Footer />
   </Layout>
 )

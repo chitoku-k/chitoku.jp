@@ -16,8 +16,7 @@
   line-height: 1.25;
   border-color: var(--headings-primary);
   border-style: solid;
-  border-bottom-width: 1px;
-  border-left-width: 14px;
+  border-width: 0 0 1px 14px;
 
   a {
     color: var(--containers-color);

@@ -6,7 +6,6 @@ import Container from 'components/Container'
 import Metadata from 'components/Metadata'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
-import Content from 'components/Content'
 import Footer from 'components/Footer'
 import Article, { ArticleItem } from 'components/Article'
 import SoarerDownload from 'components/SoarerDownload'
@@ -41,13 +40,11 @@ const SoarerDownloadPage: FunctionComponent<SoarerDownloadPageProps> = ({
     <Metadata title={article.attributes.title} thumbnail="/thumbnails/soarer.png" />
     <Header />
     <Navbar />
-    <Content sidebar={article.attributes.sidebar !== false}>
-      <Container>
-        <Article article={article} components={{
-          'soarer-download': SoarerDownload,
-        }} />
-      </Container>
-    </Content>
+    <Container sidebar={article.attributes.sidebar !== false}>
+      <Article article={article} components={{
+        'soarer-download': SoarerDownload,
+      }} />
+    </Container>
     <Footer />
   </Layout>
 )
