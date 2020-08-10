@@ -1,8 +1,7 @@
-'use strict'
+import { GatsbyNode } from 'gatsby'
+import * as path from 'path'
 
-const path = require('path')
-
-exports.onCreateWebpackConfig = ({
+export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   loaders,
   actions: {
     setWebpackConfig,

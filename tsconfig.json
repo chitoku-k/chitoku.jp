@@ -26,7 +26,8 @@
     "allowSyntheticDefaultImports": true
   },
   "include": [
-    "src/**/*",
+    "**/*.ts",
+    "**/*.tsx",
     "typings/**/*.d.ts",
     "node_modules/babel-plugin-react-intl-auto/**/*.d.ts"
   ]

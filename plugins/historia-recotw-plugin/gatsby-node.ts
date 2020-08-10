@@ -1,9 +1,9 @@
-'use strict'
+import { GatsbyNode } from 'gatsby'
 
 const fromPath = '/recotw'
 const toPath = 'https://recotw.chitoku.jp'
 
-exports.createPages = ({
+export const createPages: GatsbyNode['createPages'] = ({
   actions: {
     createRedirect,
   },

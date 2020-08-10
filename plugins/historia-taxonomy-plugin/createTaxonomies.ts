@@ -1,9 +1,49 @@
-'use strict'
+import * as path from 'path'
+import { BuildArgs, Page } from 'gatsby'
 
-const path = require('path')
+type TaxonomiesArgs = Pick<BuildArgs, 'graphql'> & { limit: number }
 
-const splitPages = (items, limit) => {
-  const pages = []
+export interface Category {
+  id: string
+  name: string
+  path: string
+}
+
+export interface Tag {
+  id: string
+  name: string
+  slug: string
+}
+
+interface Article {
+  id: string
+  attributes: {
+    category: Category
+    tags: Tag[]
+  }
+}
+
+interface Data {
+  categories?: {
+    items: (Category & { articles: Article[] })[]
+  }
+  tags?: {
+    items: (Tag & { articles: Article[] })[]
+  }
+}
+
+export interface TaxonomyContext {
+  category: null | Category
+  tag: null | Tag
+  ids: string[]
+  page: {
+    current: number
+    total: number
+  }
+}
+
+const splitPages = (items: Article[], limit: number): Article[][] => {
+  const pages: Article[][] = []
 
   while (pages.length * limit < items.length) {
     pages.push(items.slice(pages.length * limit, (pages.length + 1) * limit))
@@ -15,15 +55,10 @@ const splitPages = (items, limit) => {
 const createTaxonomies = async ({
   graphql,
   limit,
-}) => {
-  const taxonomies = []
+}: TaxonomiesArgs): Promise<Page<TaxonomyContext>[]> => {
+  const taxonomies: Page<TaxonomyContext>[] = []
 
-  const {
-    data: {
-      categories,
-      tags,
-    },
-  } = await graphql(`
+  const { data } = await graphql<Data>(`
     query {
       categories: allCategoriesYaml {
         items: nodes {
@@ -68,8 +103,16 @@ const createTaxonomies = async ({
       path
     }
   `)
+  if (!data) {
+    throw new Error('Invalid taxonomy data')
+  }
 
-  for (const { articles, ...category } of categories && categories.items || []) {
+  const {
+    categories,
+    tags,
+  } = data
+
+  for (const { articles, ...category } of categories?.items ?? []) {
     const pages = splitPages(articles, limit)
 
     for (const [ num, page ] of pages.entries()) {
@@ -89,7 +132,7 @@ const createTaxonomies = async ({
     }
   }
 
-  for (const { articles, ...tag } of tags && tags.items || []) {
+  for (const { articles, ...tag } of tags?.items ?? []) {
     const pages = splitPages(articles, limit)
 
     for (const [ num, page ] of pages.entries()) {
@@ -112,4 +155,4 @@ const createTaxonomies = async ({
   return taxonomies
 }
 
-module.exports = createTaxonomies
+export default createTaxonomies
