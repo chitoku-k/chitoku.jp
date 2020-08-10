@@ -33,19 +33,24 @@ $font-family-monospace:
   /* Emoji */
   #{$font-family-emoji-base};
 
+// Body
 $body-bg: var(--body-background);
 $body-color: var(--body-color);
 
+// Link
 $link-color: var(--links-color);
 $link-hover-color: var(--links-hover);
 
+// Table
 $hr-border-color: var(--table-border);
-$table-border-color:  var(--table-border);
+$table-border-color: var(--table-border);
 
+// Input
 $input-bg: var(--body-background);
 $input-color: var(--body-color);
 $input-border-color: var(--table-border);
 
+// Pagination
 $pagination-bg: var(--pagination-background);
 $pagination-color: var(--pagination-color);
 $pagination-hover-color: var(--pagination-color);

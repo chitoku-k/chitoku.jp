@@ -83,7 +83,7 @@
   @include media-breakpoint-down(sm) {
     width: 100%;
 
-    & + li {
+    + li {
       margin-top: 10px;
     }
 
