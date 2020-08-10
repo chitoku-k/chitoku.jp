@@ -8,6 +8,42 @@
     "at-rule-no-unknown": null,
     "selector-pseudo-class-no-unknown": [true, {
       "ignorePseudoClasses": ["global"]
-    }]
+    }],
+    "scss/at-each-key-value-single-line": true,
+    "scss/at-function-named-arguments": "never",
+    "scss/at-function-parentheses-space-before": "never",
+    "scss/at-import-no-partial-leading-underscore": true,
+    "scss/at-import-partial-extension": "never",
+    "scss/at-mixin-argumentless-call-parentheses": "never",
+    "scss/at-mixin-named-arguments": "never",
+    "scss/at-mixin-parentheses-space-before": "never",
+    "scss/at-rule-no-unknown": true,
+    "scss/dollar-variable-colon-newline-after": "always-multi-line",
+    "scss/dollar-variable-colon-space-after": "always-single-line",
+    "scss/dollar-variable-colon-space-before": "never",
+    "scss/dollar-variable-empty-line-after": ["always", {
+      "except": ["before-dollar-variable"]
+    }],
+    "scss/dollar-variable-empty-line-before": ["always", {
+      "except": ["after-comment", "after-dollar-variable"]
+    }],
+    "scss/dollar-variable-first-in-block": [true, {
+      "except": ["root"]
+    }],
+    "scss/dollar-variable-no-missing-interpolation": true,
+    "scss/double-slash-comment-empty-line-before": "always",
+    "scss/double-slash-comment-inline": "never",
+    "scss/double-slash-comment-whitespace-inside": "always",
+    "scss/function-quote-no-quoted-strings-inside": true,
+    "scss/function-unquote-no-unquoted-strings-inside": true,
+    "scss/map-keys-quotes": "always",
+    "scss/media-feature-value-dollar-variable": ["always", {
+      "ignore": ["keywords"]
+    }],
+    "scss/operator-no-unspaced": true,
+    "scss/selector-no-redundant-nesting-selector": true,
+    "scss/selector-no-union-class-name": true,
+    "scss/no-duplicate-dollar-variables": true,
+    "scss/no-duplicate-mixins": true
   }
 }
