@@ -1,10 +1,51 @@
-'use strict'
+import removeMd from 'remove-markdown'
+import stripHtml from 'string-strip-html'
 
-const removeMd = require('remove-markdown')
-const stripHtml = require('string-strip-html')
-const { getPath } = require('./utils')
+import { getPath } from './utils'
+import { Category, Tag } from './createTaxonomies'
 
-module.exports = () => ({
+interface Query {
+  data: {
+    pages: {
+      items: {
+        article: {
+          id: string
+          file: {
+            children: string[]
+            relativeDirectory: string
+            name: string
+          }
+          excerpt: string
+          headings: {
+            value: string
+          }[]
+          attributes: {
+            title: string
+            created: string
+            category: Category
+            tags: Tag[]
+          }
+        }
+      }[]
+    }
+  }
+}
+
+interface CreateQueryResult {
+  query: string
+  transformer: (arg: Query) => {
+    id: string
+    path: string
+    excerpt: string
+    headings: string[]
+    title: string
+    category: Category
+    tags: Tag[]
+    created: string
+  }[]
+}
+
+export default (): CreateQueryResult => ({
   query: `
     query {
       pages: allMarkdownRemark(

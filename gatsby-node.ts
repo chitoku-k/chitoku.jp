@@ -1,10 +1,9 @@
-'use strict'
+import { CreateSchemaCustomizationArgs, GatsbyNode } from 'gatsby'
+import * as path from 'path'
+import { promises as fs } from 'fs'
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 
-const path = require('path')
-const fs = require('fs').promises
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
-
-exports.onCreateWebpackConfig = ({
+export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   actions: {
     setWebpackConfig,
   },
@@ -30,25 +29,26 @@ exports.onCreateWebpackConfig = ({
 }
 
 // FIXME: Workaround for Unexpected token error in .cache/*.js
-exports.onCreateBabelConfig = ({
+export const onCreateBabelConfig: GatsbyNode['onCreateBabelConfig'] = ({
   actions: {
     setBabelPlugin,
   },
 }) => {
   setBabelPlugin({
     name: 'babel-plugin-syntax-jsx',
+    options: {},
   })
 }
 
-exports.createSchemaCustomization = async ({
+export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = async ({
   actions: {
     createTypes,
   },
-}) => {
+}: CreateSchemaCustomizationArgs) => {
   createTypes(await fs.readFile(path.resolve('schema.gql'), { encoding: 'utf-8' }))
 }
 
-exports.onCreatePage = ({
+export const onCreatePage: GatsbyNode['onCreatePage'] = ({
   page,
   actions: {
     createPage,

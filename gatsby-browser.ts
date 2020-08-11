@@ -1,12 +1,14 @@
-'use strict'
+import { GatsbyBrowser } from 'gatsby'
+import twemoji from 'twemoji'
 
-const twemoji = require('twemoji').default
-
-exports.onRouteUpdate = () => {
-  twemoji.parse(document.getElementById('___gatsby'))
+export const onRouteUpdate: GatsbyBrowser['onRouteUpdate'] = () => {
+  const el = document.getElementById('___gatsby')
+  if (el) {
+    twemoji.parse(el)
+  }
 }
 
-exports.onInitialClientRender = () => {
+export const onInitialClientRender: GatsbyBrowser['onInitialClientRender'] = () => {
   // Hotfix: https://github.com/weirdpattern/gatsby-remark-embed-gist/pull/34
   const el = document.createElement('link')
   el.rel = 'stylesheet'

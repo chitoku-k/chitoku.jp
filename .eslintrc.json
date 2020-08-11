@@ -98,6 +98,7 @@
         "@typescript-eslint/no-magic-numbers": "off",
         "@typescript-eslint/no-type-alias": ["error", {
           "allowAliases": "always",
+          "allowLiterals": "always",
           "allowMappedTypes": "always"
         }],
         "@typescript-eslint/no-unsafe-assignment": "off",

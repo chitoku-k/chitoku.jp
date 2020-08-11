@@ -1,26 +1,38 @@
-'use strict'
+import { GatsbyNode } from 'gatsby'
+import { Feed } from 'feed'
+import { promises as fs } from 'fs'
+import * as path from 'path'
+import stripHtml from 'string-strip-html'
 
-const { description, author } = require('../../package.json')
-const { Feed } = require('feed')
-const fs = require('fs').promises
-const path = require('path')
-const stripHtml = require('string-strip-html')
+import { author, description } from '../../package.json'
 
-exports.onPostBuild = async ({
+interface Data {
+  site: {
+    siteMetadata: {
+      siteUrl: string
+    }
+  }
+  pages: {
+    items: {
+      article: {
+        excerpt?: string
+        file: {
+          directory: string
+          name: string
+        }
+        attributes: {
+          title: string
+          created: string
+        }
+      }
+    }[]
+  }
+}
+
+export const onPostBuild: GatsbyNode['onPostBuild'] = async ({
   graphql,
 }) => {
-  const {
-    data: {
-      site: {
-        siteMetadata: {
-          siteUrl,
-        },
-      },
-      pages: {
-        items,
-      },
-    },
-  } = await graphql(`
+  const { data } = await graphql<Data>(`
     query {
       site {
         siteMetadata {
@@ -61,6 +73,21 @@ exports.onPostBuild = async ({
     }
   `)
 
+  if (!data) {
+    throw new Error('Invalid feed data')
+  }
+
+  const {
+    site: {
+      siteMetadata: {
+        siteUrl,
+      },
+    },
+    pages: {
+      items,
+    },
+  } = data
+
   const feed = new Feed({
     id: siteUrl,
     title: description,
@@ -85,7 +112,7 @@ exports.onPostBuild = async ({
       id: url,
       link: url,
       title: attributes.title,
-      content: stripHtml(excerpt),
+      content: stripHtml(excerpt ?? ''),
       date: new Date(attributes.created),
     })
   }
@@ -93,7 +120,7 @@ exports.onPostBuild = async ({
   await fs.mkdir(path.resolve('public/feed/atom'), { recursive: true })
   await fs.mkdir(path.resolve('public/feed/rss2'), { recursive: true })
 
-  const createFeed = url => {
+  const createFeed = (url: string): Feed => {
     feed.options.feedLinks = {
       atom: siteUrl + url,
     }
