@@ -101,6 +101,10 @@
 
       > .arrow {
         border-bottom: none;
+
+        &::before {
+          border-width: 0;
+        }
       }
     }
   }
