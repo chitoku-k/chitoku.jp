@@ -6,7 +6,12 @@ import clsx from 'clsx'
 import styles from './styles.module.scss'
 import Link from 'components/Link'
 
-const renderError = (props: TwitterTweetProps) => () => <TwitterTweetError {...props} />
+const renderError = (props: TwitterTweetProps) => function RenderTwitterTweetError() {
+  return (
+    <TwitterTweetError {...props} />
+  )
+}
+
 
 const TwitterTweetError: FunctionComponent<TwitterTweetProps> = ({
   id,
