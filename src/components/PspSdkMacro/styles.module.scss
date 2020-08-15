@@ -14,11 +14,10 @@
 }
 
 .prototype {
-  display: block;
+  display: block !important;
   padding: 4px 8px !important;
-  margin-top: 4px !important;
-  margin-bottom: 4px !important;
-  overflow-x: auto;
+  margin: 4px 0 !important;
+  overflow-x: auto !important;
   white-space: pre !important;
   -webkit-overflow-scrolling: touch;
 }
