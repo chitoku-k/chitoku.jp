@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect, useRef } from 'react'
+import React, { FunctionComponent } from 'react'
 import clsx from 'clsx'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-c'
@@ -19,13 +19,6 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
   article,
   name: macroName,
 }) => {
-  const ref = useRef<HTMLElement>(null)
-  useEffect(() => {
-    if (ref.current) {
-      Prism.highlightElement(ref.current)
-    }
-  }, [ ref ])
-
   const def = article.attributes.macros?.find(x => x?.name === macroName)
   if (!def) {
     return null
@@ -33,16 +26,18 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
 
   const separator = def.parameters?.length && def.parameters.length > linebreakThreshold ? '\n' : ''
   const indentation = separator ? ' '.repeat(indentationWidth) : ''
+  const highlighted = Prism.highlight([
+    `${def.name}(`,
+    def.parameters?.map(x => buildParameters(x, indentation)).join(`, ${separator}`) ?? '',
+    ');',
+  ].join(separator), Prism.languages.c, 'c')
 
+  /* eslint-disable react/no-danger */
   return (
     <div className={styles.entry}>
-      <code className={clsx(styles.prototype, 'language-c')} ref={ref}>
-        {[
-          `${def.name}(`,
-          def.parameters?.map(x => buildParameters(x, indentation)).join(`, ${separator}`) ?? '',
-          ');',
-        ].join(separator)}
-      </code>
+      <pre className={clsx(styles.prototype, 'language-c')}>
+        <code className="language-c" dangerouslySetInnerHTML={{ __html: highlighted }} />
+      </pre>
       <div className={styles.description}>
         {def.description}
         {def.parameters ? (

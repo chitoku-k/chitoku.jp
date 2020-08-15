@@ -1,4 +1,5 @@
 import { GatsbyBrowser } from 'gatsby'
+import Prism from 'prismjs'
 import twemoji from 'twemoji'
 
 export const onRouteUpdate: GatsbyBrowser['onRouteUpdate'] = () => {
@@ -6,6 +7,10 @@ export const onRouteUpdate: GatsbyBrowser['onRouteUpdate'] = () => {
   if (el) {
     twemoji.parse(el)
   }
+}
+
+export const onClientEntry: GatsbyBrowser['onClientEntry'] = () => {
+  Prism.manual = true
 }
 
 export const onInitialClientRender: GatsbyBrowser['onInitialClientRender'] = () => {
