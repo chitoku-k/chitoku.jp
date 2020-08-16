@@ -16,11 +16,13 @@ interface Article {
   file: File
   attributes: {
     created: string
+    page: null | boolean
   }
 }
 
 export interface ArticleContext {
   id: string
+  page: null | boolean
   prev: null | string
   next: null | string
 }
@@ -59,6 +61,7 @@ const createArticles = async ({
       ...File
       attributes: frontmatter {
         created
+        page
       }
     }
     fragment FileNode on File {
@@ -97,6 +100,7 @@ const createArticles = async ({
         component: path.resolve('src/templates/article.tsx'),
         context: {
           id,
+          page: article.attributes.page,
           prev: prev && (!('attributes' in prev) || prev.attributes.created) ? prev.id : null,
           next: next && (!('attributes' in next) || next.attributes.created) ? next.id : null,
         },

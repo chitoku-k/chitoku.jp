@@ -6,7 +6,6 @@ import { File, getPath } from './utils'
 
 interface Options extends PluginOptions {
   limit: number
-  exclude: string[]
 }
 
 interface GetAllNodesArgs {
@@ -45,7 +44,6 @@ export const createPages: GatsbyNode['createPages'] = async (
     },
   }, {
     limit = 3,
-    exclude = [],
   }: Options,
 ) => {
   const paths = new Set<string>()
@@ -55,7 +53,10 @@ export const createPages: GatsbyNode['createPages'] = async (
   ]
 
   for (const page of pages) {
-    if (paths.has(page.path) || exclude.includes(page.path)) {
+    if ('page' in page.context && page.context.page === false) {
+      continue
+    }
+    if (paths.has(page.path)) {
       continue
     }
     createPage(page)

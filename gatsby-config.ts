@@ -158,11 +158,6 @@ const config: GatsbyConfig = {
       resolve: 'historia-taxonomy-plugin',
       options: {
         limit: 5,
-        exclude: [
-          '/programming/psp/error-codes',
-          '/softwares/soarer/download',
-          '/softwares/soarer/history',
-        ],
       },
     },
     { resolve: 'historia-soarer-update-plugin' },
