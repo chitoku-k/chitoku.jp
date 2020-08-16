@@ -54,7 +54,6 @@ const config: GatsbyConfig = {
         },
       },
     ] : [],
-    { resolve: 'gatsby-plugin-catch-links' },
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
@@ -71,7 +70,14 @@ const config: GatsbyConfig = {
         trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_ID,
       },
     },
-    { resolve: 'gatsby-plugin-minify-html' },
+    {
+      resolve: 'gatsby-plugin-minify-html',
+      options: {
+        config: {
+          conservativeCollapse: true,
+        },
+      },
+    },
     { resolve: 'gatsby-plugin-no-sourcemaps' },
     { resolve: 'gatsby-plugin-react-helmet' },
     {
@@ -129,7 +135,6 @@ const config: GatsbyConfig = {
           },
           { resolve: '@rstacruz/gatsby-remark-component' },
           { resolve: 'gatsby-remark-copy-linked-files' },
-          { resolve: 'gatsby-remark-external-links' },
           { resolve: 'gatsby-remark-embed-gist' },
           {
             resolve: 'gatsby-remark-images',
