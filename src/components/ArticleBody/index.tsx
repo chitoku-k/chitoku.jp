@@ -1,24 +1,27 @@
-import React, { ComponentType, FunctionComponent, useMemo } from 'react'
+import React, { ComponentType, FunctionComponent, createElement, useMemo } from 'react'
 import RehypeReact from 'rehype-react'
 
 import styles from './styles.module.scss'
 
-import { ArticleAstNode, ArticleWrapper } from 'components/Article'
+import { ArticleAstNode } from 'components/Article'
+
+const components: ArticleComponentCollection = {}
+
+export const register = function register<T>(key: string, component: ComponentType<T>): void {
+  components[key] = component as unknown as ComponentType<unknown>
+}
 
 const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
   ast,
-  components,
 }) => {
-  /* eslint-disable react-hooks/exhaustive-deps */
   const content = useMemo(() => {
     const { Compiler: compiler } = new RehypeReact({
-      createElement: React.createElement,
+      createElement,
       components,
     })
 
     return compiler(ast)
   }, [ ast ])
-  /* eslint-enable react-hooks/exhaustive-deps */
 
   return (
     <div className={styles.body}>
@@ -29,11 +32,10 @@ const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
 
 interface ArticleBodyProps {
   ast: ArticleAstNode
-  components?: ArticleComponentCollection
 }
 
 export interface ArticleComponentCollection {
-  [key: string]: ComponentType<ArticleWrapper>
+  [key: string]: ComponentType<unknown>
 }
 
 export default ArticleBody

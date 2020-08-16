@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, useContext } from 'react'
 import clsx from 'clsx'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-c'
@@ -6,7 +6,7 @@ import 'prismjs/components/prism-c'
 import styles from './styles.module.scss'
 import { MacrosYamlParameters } from 'graphql-types'
 
-import { ArticleItem } from 'components/Article'
+import { ArticleContext } from 'components/Article'
 
 const indentationWidth = 4
 const linebreakThreshold = 2
@@ -16,9 +16,9 @@ const buildParameters = ({ type, name }: PspSdkMacroParameterItem, indentation: 
 
 const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
   children,
-  article,
   name: macroName,
 }) => {
+  const article = useContext(ArticleContext)
   const def = article.attributes.macros?.find(x => x?.name === macroName)
   if (!def) {
     return null
@@ -62,7 +62,6 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
 type PspSdkMacroParameterItem = MacrosYamlParameters
 
 interface PspSdkMacroProps {
-  article: ArticleItem
   name: string
 }
 

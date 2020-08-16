@@ -4,6 +4,7 @@ import { useMedia } from 'use-media'
 import clsx from 'clsx'
 
 import styles from './styles.module.scss'
+
 import Link from 'components/Link'
 
 const renderError = (props: TwitterTweetProps) => function RenderTwitterTweetError() {
@@ -11,7 +12,6 @@ const renderError = (props: TwitterTweetProps) => function RenderTwitterTweetErr
     <TwitterTweetError {...props} />
   )
 }
-
 
 const TwitterTweetError: FunctionComponent<TwitterTweetProps> = ({
   id,

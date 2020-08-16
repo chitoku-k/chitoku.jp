@@ -1,7 +1,6 @@
 ---
 title: ダウンロード
 sidebar: false
-page: false
 navigation:
   - name: Soarer トップ
     to: /softwares/soarer/

@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ReactNode } from 'react'
+import React, { FunctionComponent, ReactNode, createContext } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar, faFolderOpen } from '@fortawesome/free-regular-svg-icons'
@@ -9,36 +9,28 @@ import messages from './messages'
 import styles from './styles.module.scss'
 import { ArticleFragment, ArticleQuery } from 'graphql-types'
 
-import ArticleBody, { ArticleComponentCollection } from 'components/ArticleBody'
+import ArticleBody from 'components/ArticleBody'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
 import Link from 'components/Link'
 import NavItem from 'components/NavItem'
 import { PaginationContainer, SimplePagination } from 'components/Pagination'
-import PspSdkFunction from 'components/PspSdkFunction'
-import PspSdkMacro from 'components/PspSdkMacro'
-import TwitterTweet from 'components/TwitterTweet'
 
 export const getClassNameFromPath = (path: string): string => `page${path.replace(/[/]/ug, '-').replace(/-$/u, '')}`
 
 const isTag = (tag: ArticleTagItem | null): tag is ArticleTagItem => Boolean(tag?.name)
 
-const withArticle = (
-  article: ArticleItem,
-  components: ArticleComponentCollection,
-): ArticleComponentCollection => Object.entries(components)
-  .reduce<ArticleComponentCollection>((prev, [ name, Component ]) => ({
-  ...prev,
-  [name]: function InjectArticle(props: ArticleWrapper) {
-    return (
-      <Component {...props} article={article} />
-    )
+const current: ArticleItem = {
+  path: '',
+  attributes: {
+    title: '',
   },
-}), {})
+  excerpted: false,
+}
+export const ArticleContext = createContext(current)
 
 const Article: FunctionComponent<ArticleProps> = ({
   children,
-  components = {},
   article,
   prev,
   next,
@@ -58,14 +50,7 @@ const Article: FunctionComponent<ArticleProps> = ({
     excerpted,
   } = article
 
-  // TODO: Make default components injectable
-  Object.assign(components, {
-    'pspsdk-function': PspSdkFunction,
-    'pspsdk-macro': PspSdkMacro,
-    'twitter-tweet': TwitterTweet,
-    a: Link,
-  })
-
+  Object.assign(current, article)
   return (
     <>
       <ArticleContainer className={getClassNameFromPath(path)}>
@@ -113,7 +98,7 @@ const Article: FunctionComponent<ArticleProps> = ({
             </Nav>
           </Navbar>
         ) : null}
-        <ArticleBody ast={excerptAst ?? htmlAst ?? null} components={withArticle(article, components)} />
+        <ArticleBody ast={excerptAst ?? htmlAst ?? null} />
         {excerpted && excerptAst ? (
           <div className={styles.readMoreContainer}>
             <Link className={styles.readMoreButton} to={path}>{formatMessage(messages.more)}</Link>
@@ -169,12 +154,8 @@ export interface ArticleTagItem {
   slug: string
 }
 
-export interface ArticleWrapper {
+interface ArticleProps extends ArticleQuery {
   article: ArticleItem
-}
-
-interface ArticleProps extends ArticleWrapper, Partial<Omit<ArticleQuery, keyof ArticleWrapper>> {
-  components?: ArticleComponentCollection
 }
 
 export default Article

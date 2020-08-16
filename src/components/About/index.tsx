@@ -1,13 +1,13 @@
-import React, { FunctionComponent, useMemo } from 'react'
+import React, { FunctionComponent } from 'react'
 import { Col, Row, Table } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
-import RehypeReact from 'rehype-react'
 
 import messages from './messages'
 import styles from './styles.module.scss'
 import { AboutItemQuery } from 'graphql-types'
 
 import Container from 'components/Container'
+import ArticleBody from 'components/ArticleBody'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
 import Metadata from 'components/Metadata'
@@ -18,17 +18,6 @@ const About: FunctionComponent<AboutProps> = ({
   introduction,
 }) => {
   const { formatMessage } = useIntl()
-  const content = useMemo(() => {
-    const { Compiler: compiler } = new RehypeReact({
-      createElement: React.createElement,
-      components: {
-        'historia-link': Link,
-      },
-    })
-
-    return compiler(introduction?.markdown?.htmlAst)
-  }, [ introduction?.markdown?.htmlAst ])
-
   if (!about) {
     throw new Error('Invalid data')
   }
@@ -102,7 +91,9 @@ const About: FunctionComponent<AboutProps> = ({
                 ))}
                 <tr>
                   <th>{formatMessage(messages.introduction)}</th>
-                  <td>{content}</td>
+                  <td>
+                    <ArticleBody ast={introduction?.markdown?.htmlAst} />
+                  </td>
                 </tr>
               </tbody>
             </Table>

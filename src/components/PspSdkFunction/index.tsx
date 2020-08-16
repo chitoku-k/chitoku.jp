@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, useContext } from 'react'
 import clsx from 'clsx'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-c'
@@ -6,7 +6,7 @@ import 'prismjs/components/prism-c'
 import styles from './styles.module.scss'
 import { FunctionsYamlParameters } from 'graphql-types'
 
-import { ArticleItem } from 'components/Article'
+import { ArticleContext } from 'components/Article'
 
 const indentationWidth = 4
 const linebreakThreshold = 2
@@ -18,9 +18,9 @@ const buildParameters = ({ type, name, parameters }: PspSdkFunctionParameterItem
 
 const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
   children,
-  article,
   name: functionName,
 }) => {
+  const article = useContext(ArticleContext)
   const def = article.attributes.functions?.find(x => x?.name === functionName)
   if (!def) {
     return null
@@ -66,7 +66,6 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
 type PspSdkFunctionParameterItem = FunctionsYamlParameters
 
 interface PspSdkFunctionProps {
-  article: ArticleItem
   name: string
 }
 

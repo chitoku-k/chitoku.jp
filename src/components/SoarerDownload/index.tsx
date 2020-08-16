@@ -11,7 +11,7 @@ import styles from './styles.module.scss'
 import icon from './icon.png'
 import { SoarerDownloadItemQuery } from 'graphql-types'
 
-import { ArticleWrapper } from 'components/Article'
+import Link from 'components/Link'
 
 const query = graphql`
   query SoarerDownloadItem {
@@ -34,7 +34,7 @@ const query = graphql`
   }
 `
 
-const SoarerDownload: FunctionComponent<ArticleWrapper> = () => {
+const SoarerDownload: FunctionComponent = () => {
   const { formatMessage } = useIntl()
 
   const {
@@ -60,16 +60,20 @@ const SoarerDownload: FunctionComponent<ArticleWrapper> = () => {
       </div>
       <div className={styles.description}>
         {update.file ? (
-          <Button as="a" variant="primary" size="lg" href={update.file.publicURL as string} download={update.file.base}>
-            <FontAwesomeIcon icon={faDownload} />
-            {formatMessage(messages.download, {
-              size: update.file.prettySize,
-            })}
-          </Button>
+          <Link to={update.file.publicURL as string} download={update.file.base}>
+            <Button variant="primary" size="lg">
+              <FontAwesomeIcon icon={faDownload} />
+              {formatMessage(messages.download, {
+                size: update.file.prettySize,
+              })}
+            </Button>
+          </Link>
         ) : null}
-        <Button variant="light" size="lg" href="./history">
-          {formatMessage(messages.history)}
-        </Button>
+        <Link to="/softwares/soarer/history">
+          <Button variant="light" size="lg">
+            {formatMessage(messages.history)}
+          </Button>
+        </Link>
       </div>
     </>
   )
