@@ -1,6 +1,7 @@
 ---
 title: 更新履歴
 sidebar: false
+page: false
 navigation:
   - name: Soarer トップ
     to: /softwares/soarer/
