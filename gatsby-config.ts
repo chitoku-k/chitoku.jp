@@ -1,32 +1,12 @@
 import { GatsbyConfig } from 'gatsby'
+import * as dotenv from 'dotenv-safe'
 import * as sass from 'sass'
 import postcssCustomProperties from 'postcss-custom-properties'
-import { config as dotenv } from 'dotenv'
 
 import { description } from './package.json'
 import { createQuery } from 'historia-taxonomy-plugin'
 
-const result = dotenv()
-const env = []
-for (const key of [
-  'GATSBY_ALGOLIA_APIKEY',
-  'GATSBY_ALGOLIA_APIKEY_SEARCH_ONLY',
-  'GATSBY_ALGOLIA_APPID',
-  'GATSBY_ALGOLIA_INDEXNAME',
-  'GATSBY_GOOGLE_ANALYTICS_ID',
-  'GATSBY_MAIL_API',
-  'GATSBY_MAIL_SITE_KEY',
-  'GATSBY_REPOSITORY_NAME',
-  'GATSBY_REPOSITORY_TREE_URL',
-  'HISTORIA_URL',
-]) {
-  if (result.parsed && !(key in result.parsed)) {
-    env.push(key)
-  }
-}
-if (env.length) {
-  throw new Error(`Required environment variable is not set: ${env.join(', ')}`)
-}
+dotenv.config()
 
 const config: GatsbyConfig = {
   siteMetadata: {
