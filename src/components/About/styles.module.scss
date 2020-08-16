@@ -56,6 +56,15 @@
     > th,
     > td {
       white-space: normal;
+
+      div {
+        margin: 0;
+      }
+
+      p {
+        padding: 0;
+        margin-bottom: 0;
+      }
     }
   }
 }

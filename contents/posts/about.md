@@ -1,5 +1,6 @@
 ---
 title: プロフィール
+page: false
 ---
 ゆるゆりが可愛すぎて涙流しながら読んでいます。
 WPF 製の Twitter クライアント「[Soarer for Windows](/softwares/soarer)」を開発していました。
