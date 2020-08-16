@@ -160,6 +160,7 @@ const config: GatsbyConfig = {
               ],
             },
           },
+          { resolve: 'historia-remark-plugin' },
         ],
       },
     },

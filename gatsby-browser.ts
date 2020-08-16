@@ -1,13 +1,5 @@
 import { GatsbyBrowser } from 'gatsby'
 import Prism from 'prismjs'
-import twemoji from 'twemoji'
-
-export const onRouteUpdate: GatsbyBrowser['onRouteUpdate'] = () => {
-  const el = document.getElementById('___gatsby')
-  if (el) {
-    twemoji.parse(el)
-  }
-}
 
 export const onClientEntry: GatsbyBrowser['onClientEntry'] = () => {
   Prism.manual = true
