@@ -54,6 +54,7 @@
 
     &:hover,
     &:focus {
+      color: var(--subnav-color);
       background-color: var(--subnav-hover);
     }
   }
