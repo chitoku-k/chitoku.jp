@@ -5,6 +5,6 @@
     "@types/remove-markdown": "^0.1.1",
     "@types/string-strip-html": "^4.3.0",
     "remove-markdown": "^0.3.0",
-    "string-strip-html": "^4.5.1"
+    "string-strip-html": "^5.0.1"
   }
 }
