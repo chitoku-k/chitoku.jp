@@ -3088,10 +3088,10 @@
   resolved "https://registry.yarnpkg.com/@types/schema-utils/-/schema-utils-1.0.0.tgz#295d36f01e2cb8bc3207ca1d9a68e210db6b40cb"
   integrity sha512-YesPanU1+WCigC/Aj1Mga8UCOjHIfMNHZ3zzDsUY7lI8GlKnh/Kv2QwJOQ+jNQ36Ru7IfzSedlG14hppYaN13A==
 
-"@types/string-strip-html@^4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@types/string-strip-html/-/string-strip-html-4.3.0.tgz#4f16aef4338904a2b1910f13104c66521a49cc75"
-  integrity sha512-DOr+qtsT4gU8brGg85MI6nHOrfFipLsjX/FtrSL8hxJSpkEgJYAEtq/xu06z/XIoBhJScvk8lnVYJdWFpuyRFw==
+"@types/string-strip-html@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@types/string-strip-html/-/string-strip-html-5.0.0.tgz#96c4052d07e14e700b898dd4edc3d7ea79d34b28"
+  integrity sha512-+mdBIb+pxJ9SLwtjc2DgolMm8U7CG6qBdCevkjSsFB7ehJ0EExFd2ltKQ6m9CoKitqXwe6Tx5h+fAcklGQD0Bw==
 
 "@types/tmp@^0.0.33":
   version "0.0.33"
