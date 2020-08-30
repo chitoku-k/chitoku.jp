@@ -54,12 +54,15 @@ const Mail: FunctionComponent = () => {
     setStatus('sending')
 
     try {
-      await fetch(siteApi, {
+      const response = await fetch(siteApi, {
         method: 'POST',
         body: form,
       })
+      if (!response.ok) {
+        throw new Error(await response.text())
+      }
       setStatus('sent')
-    } catch (err) {
+    } catch (err: unknown) {
       setStatus('error')
       throw err
     }
