@@ -112,7 +112,7 @@ export const onPostBuild: GatsbyNode['onPostBuild'] = async ({
       id: url,
       link: url,
       title: attributes.title,
-      content: stripHtml(excerpt ?? ''),
+      content: stripHtml(excerpt ?? '').result,
       date: new Date(attributes.created),
     })
   }

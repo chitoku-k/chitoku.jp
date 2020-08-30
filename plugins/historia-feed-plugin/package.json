@@ -2,7 +2,6 @@
   "name": "historia-feed-plugin",
   "version": "1.0.0",
   "dependencies": {
-    "@types/string-strip-html": "^4.3.0",
     "feed": "^4.2.1",
     "string-strip-html": "^5.0.1"
   }

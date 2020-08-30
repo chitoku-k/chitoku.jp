@@ -120,7 +120,7 @@ export default (): CreateQueryResult => ({
     id,
     path: getPath(file),
     excerpt: removeMd(excerpt),
-    headings: headings.map(x => stripHtml(x.value)),
+    headings: headings.map(x => stripHtml(x.value).result),
     title,
     category,
     tags,
