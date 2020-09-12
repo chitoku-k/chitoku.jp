@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "dependencies": {
     "element-matches": "^0.1.2",
-    "whatwg-fetch": "^3.4.0"
+    "whatwg-fetch": "^3.4.1"
   }
 }
