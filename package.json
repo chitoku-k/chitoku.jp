@@ -65,7 +65,7 @@
     "gatsby-transformer-sharp": "^2.5.14",
     "gatsby-transformer-yaml": "^2.4.10",
     "graphql": "^15.3.0",
-    "husky": "^4.2.5",
+    "husky": "^4.3.0",
     "is-url": "^1.2.4",
     "lint-staged": "^10.3.0",
     "postcss": "^7.0.32",
