@@ -59,7 +59,7 @@
     "gatsby-remark-grid-tables": "^0.1.0",
     "gatsby-remark-images": "^3.3.28",
     "gatsby-remark-prismjs": "^3.5.11",
-    "gatsby-source-filesystem": "^2.3.27",
+    "gatsby-source-filesystem": "^2.3.29",
     "gatsby-source-local-git": "^1.1.1",
     "gatsby-transformer-remark": "^2.8.32",
     "gatsby-transformer-sharp": "^2.5.14",
