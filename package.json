@@ -91,7 +91,7 @@
     "stylelint-scss": "^3.18.0",
     "ts-node": "^9.0.0",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
-    "typescript": "^4.0.2",
+    "typescript": "^4.0.3",
     "use-media": "^1.4.0",
     "webpack": "^4.44.2",
     "yaml-flat-loader": "^1.0.2"
