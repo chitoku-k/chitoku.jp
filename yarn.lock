@@ -8159,7 +8159,7 @@ gatsby-cli@^2.12.95:
     yargs "^15.3.1"
     yurnalist "^1.1.2"
 
-gatsby-core-utils@^1.1.1, gatsby-core-utils@^1.3.18, gatsby-core-utils@^1.3.19:
+gatsby-core-utils@^1.1.1, gatsby-core-utils@^1.3.19:
   version "1.3.19"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.3.19.tgz#d7f9981fbc85affbbc09c96ac84c76c37615fc89"
   integrity sha512-nwiU17m2lihvN7IOkBTj4n2WKc7Eb569Vv7G8dmuwthmjIB6ml98Quno5fRBCz+2DBF6R60boDfc84Qdct1LPw==
@@ -16375,10 +16375,10 @@ string-similarity@^1.2.2:
     lodash.map "^4.6.0"
     lodash.maxby "^4.6.0"
 
-string-strip-html@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/string-strip-html/-/string-strip-html-5.0.2.tgz#7f58a2e43fa5b722d02055056e27f5b3d504b424"
-  integrity sha512-uxTGmBPnH3x0r0TylSE/PWWibOHxd7+RtKxTuhNuwXmMUk+/DqrS5n4B5z9ICqOxqhbJQ4lqc3J3K+jW1VsFxw==
+string-strip-html@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/string-strip-html/-/string-strip-html-6.0.0.tgz#9ddca8ea962e9d89c832b4a0002eff2f4f8518aa"
+  integrity sha512-8nyOOx/nKPzFuz7PIU/+AXdU303vRAZwM/AjIycRNWpAzglo4wiLLg/9efypKY5qgqCF2FYab+iAnsgr+wjMhA==
   dependencies:
     ent "^2.2.0"
     lodash.isplainobject "^4.0.6"
