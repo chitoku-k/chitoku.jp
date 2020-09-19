@@ -8492,12 +8492,12 @@ gatsby-remark-autolink-headers@^2.3.12:
     mdast-util-to-string "^1.1.0"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-copy-linked-files@^2.3.14:
-  version "2.3.14"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.3.14.tgz#9f8516188685c2cc26179ab494f1bb0e73debe2c"
-  integrity sha512-ELhRCVspyk1GjG6wkFSGL6+U43ljnJZ+7yWhWPpIt+9SRyJdVi0NtPJaNhALSpZ1KIRLRN0epunW49T+ooAgFA==
+gatsby-remark-copy-linked-files@^2.3.15:
+  version "2.3.15"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.3.15.tgz#2f5e6f81bd489fe88dca3836476b6ae66c7067ee"
+  integrity sha512-IjgM7JK0ln23D3Svka+j80f1W6ew5boVzijS6Mf5ecbcOz0Wp+Xz5gudXKzjpH2t3g/MpSuYmjewngO+Gmz6SQ==
   dependencies:
-    "@babel/runtime" "^7.10.3"
+    "@babel/runtime" "^7.11.2"
     cheerio "^1.0.0-rc.3"
     fs-extra "^8.1.0"
     is-relative-url "^3.0.0"
