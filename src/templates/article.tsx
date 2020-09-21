@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
-import { BreadcrumbList, CreativeWork, DateTime, Integer, Thing } from 'schema-dts'
+import { BreadcrumbList, CreativeWork, DateTime, Thing } from 'schema-dts'
 import { JsonLd } from 'react-schemaorg'
 
 import { ArticleQuery } from 'graphql-types'
@@ -132,7 +132,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
         itemListElement: article.attributes.category ? [
           {
             '@type': 'ListItem',
-            position: 1 as Integer,
+            position: 1,
             item: {
               '@type': 'Thing',
               id: siteUrl,
@@ -141,7 +141,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
           },
           {
             '@type': 'ListItem',
-            position: 2 as Integer,
+            position: 2,
             item: {
               '@type': 'Thing',
               id: siteUrl + article.attributes.category.path,
@@ -150,7 +150,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
           },
           {
             '@type': 'ListItem',
-            position: 3 as Integer,
+            position: 3,
             item: {
               '@type': 'Thing',
               id: siteUrl + article.path,
@@ -160,7 +160,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
         ] : [
           {
             '@type': 'ListItem',
-            position: 1 as Integer,
+            position: 1,
             item: {
               '@type': 'Thing',
               id: siteUrl,
@@ -169,7 +169,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
           },
           {
             '@type': 'ListItem',
-            position: 2 as Integer,
+            position: 2,
             item: {
               '@type': 'Thing',
               id: siteUrl + article.path,
@@ -195,7 +195,7 @@ interface ArticlePageProps {
 register('a', Link)
 register('psp-error-codes', PspErrorCodes)
 register('pspsdk-function', PspSdkFunction)
-register('pspsdk-marco', PspSdkMacro)
+register('pspsdk-macro', PspSdkMacro)
 register('soarer-download', SoarerDownload)
 register('soarer-history', SoarerHistory)
 register('twitter-tweet', TwitterTweet)

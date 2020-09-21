@@ -7,6 +7,7 @@ const isAnchor = (to: string): boolean => to.startsWith('#')
 const Link: FunctionComponent<GatsbyLinkProps<unknown> & LinkProps> = ({
   to,
   href,
+  as,
   ref,
   target,
   ...rest
@@ -21,6 +22,8 @@ const Link: FunctionComponent<GatsbyLinkProps<unknown> & LinkProps> = ({
   )
 }
 
-type LinkProps = DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>
+interface LinkProps extends DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement> {
+  as?: string
+}
 
 export default Link
