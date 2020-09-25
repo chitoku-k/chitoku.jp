@@ -8179,10 +8179,10 @@ gatsby-plugin-graphql-codegen@^2.7.1:
     fs-extra "^7.0.1"
     lodash.debounce "^4.0.8"
 
-gatsby-plugin-minify-html@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-minify-html/-/gatsby-plugin-minify-html-1.0.3.tgz#563eb64ad4d457e8ddb6da723975c30c4784e0fe"
-  integrity sha512-oMWnwRv7ty6ptSZOqYfz0sZPhh1ijhyqpN9mkJtH4a4ADjLx81CajnCxYTeUUOfuBVb51/o5FppxCwzoHugZ+Q==
+gatsby-plugin-minify-html@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-minify-html/-/gatsby-plugin-minify-html-1.0.4.tgz#c2f5462309b1d8635ee57b852d0b4d110b096dc6"
+  integrity sha512-K+/CyZwjXBU6G/whXPtKbECxmpmqSvqfn2PqRuOjhEGrwt9PDuCZ66r0KyV/tHo+FPGkJrEVHfVGEp/Wn6LD5Q==
   dependencies:
     glob "^7.1.6"
     html-minifier-terser "^5.1.1"
