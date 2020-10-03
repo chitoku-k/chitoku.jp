@@ -63,7 +63,7 @@
     "gatsby-source-local-git": "^1.1.1",
     "gatsby-transformer-remark": "^2.8.37",
     "gatsby-transformer-sharp": "^2.5.15",
-    "gatsby-transformer-yaml": "^2.4.12",
+    "gatsby-transformer-yaml": "^2.4.13",
     "graphql": "^15.3.0",
     "husky": "^4.3.0",
     "is-url": "^1.2.4",
