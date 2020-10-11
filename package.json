@@ -30,7 +30,7 @@
     "algoliasearch": "^4.5.1",
     "babel-plugin-react-intl-auto": "^3.3.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
-    "babel-preset-gatsby": "^0.5.10",
+    "babel-preset-gatsby": "^0.5.13",
     "bootstrap": "^4.5.2",
     "clsx": "^1.1.1",
     "core-js": "^3.6.5",
