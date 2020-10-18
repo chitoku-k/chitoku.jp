@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "dependencies": {
     "feed": "^4.2.1",
-    "string-strip-html": "^6.0.4"
+    "string-strip-html": "^6.1.0"
   }
 }
