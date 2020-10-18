@@ -545,7 +545,12 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@7.9.4", "@babel/parser@^7.0.0", "@babel/parser@^7.1.0", "@babel/parser@^7.10.4", "@babel/parser@^7.10.5", "@babel/parser@^7.11.4", "@babel/parser@^7.11.5", "@babel/parser@^7.7.0", "@babel/parser@^7.9.0":
+"@babel/parser@7.9.4", "@babel/parser@^7.0.0", "@babel/parser@^7.11.4", "@babel/parser@^7.9.0":
+  version "7.12.3"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.3.tgz#a305415ebe7a6c7023b40b5122a0662d928334cd"
+  integrity sha512-kFsOS0IbsuhO5ojF8Hc8z/8vEIOkylVBrjiZUbLTE3XFe0Qi+uu6HjzQixkFaqr0ZPAMZcBVxEwmsnsLPZ2Xsw==
+
+"@babel/parser@^7.1.0", "@babel/parser@^7.10.4", "@babel/parser@^7.10.5", "@babel/parser@^7.11.5", "@babel/parser@^7.7.0":
   version "7.11.5"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.11.5.tgz#c7ff6303df71080ec7a4f5b8c003c58f1cf51037"
   integrity sha512-X9rD8qqm695vgmeaQ4fvz/o3+Wk4ZzQvSHkDBgpYKxpD4qTAUm88ZKtHkVqIOsYFFbIQ6wQYhC6q7pjqVK0E0Q==
@@ -8222,7 +8227,7 @@ gatsby-cli@^2.12.107:
     yargs "^15.4.1"
     yurnalist "^1.1.2"
 
-gatsby-core-utils@^1.1.1, gatsby-core-utils@^1.3.22, gatsby-core-utils@^1.3.23:
+gatsby-core-utils@^1.1.1, gatsby-core-utils@^1.3.23:
   version "1.3.23"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.3.23.tgz#5d99e86178b2aa3561f58fde4fdffbebecb0dd0c"
   integrity sha512-H6n6dDeRZ22HAJaBUIt5YjB/BSaE8Jq+kayMUv/YzL1RL2yFZ5lqcLwIL1OE2vWk1mQjMUBZCRxLODU0q1i3bQ==
@@ -16624,10 +16629,10 @@ string-similarity@^1.2.2:
     lodash.map "^4.6.0"
     lodash.maxby "^4.6.0"
 
-string-strip-html@^6.0.4:
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/string-strip-html/-/string-strip-html-6.0.4.tgz#fbf851634b3a73b5eb1babce1d21d4539dc0c629"
-  integrity sha512-qu7ScLCn2p2++mowdVgbnkIsRodYBwJqJoUOBrrvGXJvdZSonl9SsBehObskJSzMDh19HHKpBZWLxhY5BN2Ahg==
+string-strip-html@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/string-strip-html/-/string-strip-html-6.1.0.tgz#551b88caa709fe6b0cf14a5358ca0d017d338610"
+  integrity sha512-IlTeycdYxfjDcu9fEPHXhSEzMQNs/ajIcdiYuwU5/l3KZQG7ROTUT0dlGHC5fh5ifGORVgIT3HcJ+pkuMeNgLw==
   dependencies:
     ent "^2.2.0"
     lodash.isplainobject "^4.0.6"
