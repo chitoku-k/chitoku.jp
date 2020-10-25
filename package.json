@@ -79,7 +79,7 @@
     "react-instantsearch-dom": "^6.8.1",
     "react-intl": "^5.8.6",
     "react-recaptcha-v3": "^2.0.1",
-    "react-refresh": "^0.8.3",
+    "react-refresh": "^0.9.0",
     "react-schemaorg": "^1.2.0",
     "react-twitter-widgets": "^1.9.5",
     "rehype-react": "^6.1.0",
