@@ -16796,10 +16796,10 @@ string-similarity@^1.2.2:
     lodash.map "^4.6.0"
     lodash.maxby "^4.6.0"
 
-string-strip-html@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/string-strip-html/-/string-strip-html-6.1.0.tgz#551b88caa709fe6b0cf14a5358ca0d017d338610"
-  integrity sha512-IlTeycdYxfjDcu9fEPHXhSEzMQNs/ajIcdiYuwU5/l3KZQG7ROTUT0dlGHC5fh5ifGORVgIT3HcJ+pkuMeNgLw==
+string-strip-html@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/string-strip-html/-/string-strip-html-6.1.1.tgz#181f6d842954ab6f4a8e57d2e74a0b9bc53e4a90"
+  integrity sha512-J1xMmOPBJPxiBePqAl9gD2HO45tAvWncVSnNDkl+caIEieI7kxKY3bNArizKhvGZY+w0X7bv3XU52ar7loedBw==
   dependencies:
     ent "^2.2.0"
     lodash.isplainobject "^4.0.6"
