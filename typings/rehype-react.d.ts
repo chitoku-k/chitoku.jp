@@ -1,9 +1,7 @@
-import { ComponentType } from 'react'
+import type { ComponentType } from 'react'
 
 interface RehypeReactOptions {
-  components?: {
-    [key: string]: ComponentType<unknown>
-  }
+  components?: Record<string, ComponentType<unknown>>
   prefix?: string
   createElement?: unknown
 }

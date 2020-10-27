@@ -1,11 +1,12 @@
-import React, { FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
+import { Fragment } from 'react'
 import { Table } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
 
 import messages from './messages'
 import styles from './styles.module.scss'
-import { PspErrorItemQuery } from 'graphql-types'
+import type { PspErrorItemQuery } from 'graphql-types'
 
 const query = graphql`
   query PspErrorItem {
@@ -38,7 +39,7 @@ const PspErrorCodes: FunctionComponent = () => {
   return (
     <div>
       {group.map(({ items, title }) => (
-        <React.Fragment key={title}>
+        <Fragment key={title}>
           <h2>{title}</h2>
           <Table striped hover size="sm">
             <thead>
@@ -56,7 +57,7 @@ const PspErrorCodes: FunctionComponent = () => {
               ))}
             </tbody>
           </Table>
-        </React.Fragment>
+        </Fragment>
       ))}
     </div>
   )

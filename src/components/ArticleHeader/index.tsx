@@ -1,4 +1,4 @@
-import React, { DetailedHTMLProps, FunctionComponent, HTMLAttributes, ReactNode } from 'react'
+import type { DetailedHTMLProps, FunctionComponent, HTMLAttributes, ReactNode } from 'react'
 import clsx from 'clsx'
 
 import styles from './styles.module.scss'

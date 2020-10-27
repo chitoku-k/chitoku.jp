@@ -1,4 +1,4 @@
-import { GatsbyNode } from 'gatsby'
+import type { GatsbyNode } from 'gatsby'
 
 const fromPath = '/recotw'
 const toPath = 'https://recotw.chitoku.jp'

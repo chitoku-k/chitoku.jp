@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
 import { Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
@@ -7,7 +7,7 @@ import { useIntl } from 'react-intl'
 
 import messages from './messages'
 import styles from './styles.module.scss'
-import { SoarerHistoryItemQuery } from 'graphql-types'
+import type { SoarerHistoryItemQuery } from 'graphql-types'
 
 const query = graphql`
   query SoarerHistoryItem {

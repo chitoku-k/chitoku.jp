@@ -1,9 +1,10 @@
-import React, { Fragment, FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
+import { Fragment } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import clsx from 'clsx'
 
 import styles from './styles.module.scss'
-import { HomeItemQuery } from 'graphql-types'
+import type { HomeItemQuery } from 'graphql-types'
 
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
@@ -68,8 +69,6 @@ const Home: FunctionComponent<HomeProps> = ({ home }) => {
 
 type HomeProps = HomeItemQuery
 
-interface HomeIcon {
-  [key: string]: React.ComponentType<React.SVGAttributes<Element>>
-}
+type HomeIcon = Record<string, React.ComponentType<React.SVGAttributes<Element>>>
 
 export default Home

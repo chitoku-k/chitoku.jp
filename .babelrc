@@ -1,6 +1,7 @@
 {
   "presets": [
     ["gatsby", {
+      "reactRuntime": "automatic",
       "targets": {
         "browsers": ["> 3% in JP"]
       }

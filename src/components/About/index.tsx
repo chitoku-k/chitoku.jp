@@ -1,10 +1,10 @@
-import React, { FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
 import { Col, Row, Table } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
 
 import messages from './messages'
 import styles from './styles.module.scss'
-import { AboutItemQuery } from 'graphql-types'
+import type { AboutItemQuery } from 'graphql-types'
 
 import Container from 'components/Container'
 import ArticleBody from 'components/ArticleBody'

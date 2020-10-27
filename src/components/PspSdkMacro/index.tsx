@@ -1,10 +1,11 @@
-import React, { FunctionComponent, useContext } from 'react'
+import type { FunctionComponent } from 'react'
+import { useContext } from 'react'
 import clsx from 'clsx'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-c'
 
 import styles from './styles.module.scss'
-import { MacrosYamlParameters } from 'graphql-types'
+import type { MacrosYamlParameters } from 'graphql-types'
 
 import { ArticleContext } from 'components/Article'
 

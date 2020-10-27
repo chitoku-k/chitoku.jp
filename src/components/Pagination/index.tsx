@@ -1,6 +1,7 @@
-import React, { DetailedHTMLProps, FunctionComponent, HTMLAttributes, ReactNode } from 'react'
-import { Pagination as BootstrapPagination, PageItemProps, SafeAnchorProps } from 'react-bootstrap'
-import { BsPrefixProps } from 'react-bootstrap/helpers'
+import type { DetailedHTMLProps, FunctionComponent, HTMLAttributes, ReactNode } from 'react'
+import type { PageItemProps, SafeAnchorProps } from 'react-bootstrap'
+import { Pagination as BootstrapPagination } from 'react-bootstrap'
+import type { BsPrefixProps } from 'react-bootstrap/helpers'
 import { useIntl } from 'react-intl'
 import clsx from 'clsx'
 

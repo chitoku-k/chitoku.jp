@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
 
 import Layout from 'components/Layout'
 import Header from 'components/Header'

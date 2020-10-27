@@ -1,9 +1,9 @@
-import React, { FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
-import { BreadcrumbList, CreativeWork, DateTime, Thing } from 'schema-dts'
+import type { BreadcrumbList, CreativeWork, DateTime, Thing } from 'schema-dts'
 import { JsonLd } from 'react-schemaorg'
 
-import { ArticleQuery } from 'graphql-types'
+import type { ArticleQuery } from 'graphql-types'
 import Article from 'components/Article'
 import { register } from 'components/ArticleBody'
 import Container from 'components/Container'

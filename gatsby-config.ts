@@ -1,4 +1,4 @@
-import { GatsbyConfig } from 'gatsby'
+import type { GatsbyConfig } from 'gatsby'
 import * as dotenv from 'dotenv-safe'
 import * as sass from 'sass'
 import postcssCustomProperties from 'postcss-custom-properties'

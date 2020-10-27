@@ -1,4 +1,4 @@
-import React, { DetailedHTMLProps, FunctionComponent, ReactNode } from 'react'
+import type { DetailedHTMLProps, FunctionComponent, ReactNode } from 'react'
 
 const HTML: FunctionComponent<HTMLProps> = ({
   htmlAttributes,

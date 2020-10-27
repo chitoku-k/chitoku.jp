@@ -1,4 +1,4 @@
-import { CreateSchemaCustomizationArgs, GatsbyNode } from 'gatsby'
+import type { CreateSchemaCustomizationArgs, GatsbyNode } from 'gatsby'
 import * as path from 'path'
 import { promises as fs } from 'fs'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'

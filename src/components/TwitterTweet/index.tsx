@@ -1,17 +1,13 @@
-import React, { FunctionComponent, useCallback, useEffect, useRef } from 'react'
-import { Tweet, TweetProps } from 'react-twitter-widgets'
+import type { FunctionComponent } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
+import type { TweetProps } from 'react-twitter-widgets'
+import { Tweet } from 'react-twitter-widgets'
 import { useMedia } from 'use-media'
 import clsx from 'clsx'
 
 import styles from './styles.module.scss'
 
 import Link from 'components/Link'
-
-const renderError = (props: TwitterTweetProps) => function RenderTwitterTweetError() {
-  return (
-    <TwitterTweetError {...props} />
-  )
-}
 
 const TwitterTweetError: FunctionComponent<TwitterTweetProps> = ({
   id,
@@ -34,6 +30,12 @@ const TwitterTweetError: FunctionComponent<TwitterTweetProps> = ({
         {url}
       </Link>
     </blockquote>
+  )
+}
+
+const renderError = (props: TwitterTweetProps) => function RenderTwitterTweetError() {
+  return (
+    <TwitterTweetError {...props} />
   )
 }
 

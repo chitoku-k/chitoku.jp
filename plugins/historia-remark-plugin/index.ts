@@ -1,4 +1,4 @@
-import { Node } from 'unist'
+import type { Node } from 'unist'
 import u from 'unist-builder'
 import { selectAll } from 'unist-util-select'
 import remove from 'unist-util-remove'

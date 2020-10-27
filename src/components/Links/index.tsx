@@ -1,9 +1,9 @@
-import React, { FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
 import { useIntl } from 'react-intl'
 
 import messages from './messages'
 import styles from './styles.module.scss'
-import { LinksItemQuery } from 'graphql-types'
+import type { LinksItemQuery } from 'graphql-types'
 
 import Metadata from 'components/Metadata'
 import Link from 'components/Link'

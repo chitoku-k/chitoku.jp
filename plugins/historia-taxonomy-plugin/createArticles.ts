@@ -1,7 +1,8 @@
-import { BuildArgs, Page } from 'gatsby'
+import type { BuildArgs, Page } from 'gatsby'
 import * as path from 'path'
 
-import { File, getPath } from './utils'
+import type { File } from './utils'
+import { getPath } from './utils'
 
 type ArticlesArgs = Pick<BuildArgs, 'graphql'>
 

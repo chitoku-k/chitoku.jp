@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from 'components/Layout'
@@ -8,9 +8,10 @@ import Metadata from 'components/Metadata'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
-import Article, { ArticleCategoryItem, ArticleItem, ArticleTagItem } from 'components/Article'
+import type { ArticleCategoryItem, ArticleItem, ArticleTagItem } from 'components/Article'
+import Article from 'components/Article'
+import type { Page } from 'components/Pagination'
 import Pagination, {
-  Page,
   PaginationContainer,
   getNextPagePath,
   getPreviousPagePath,

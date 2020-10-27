@@ -1,7 +1,7 @@
-import React, { FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 
-import { LatestItemQuery } from 'graphql-types'
+import type { LatestItemQuery } from 'graphql-types'
 import Layout from 'components/Layout'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'

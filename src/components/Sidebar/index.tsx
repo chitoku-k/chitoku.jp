@@ -1,15 +1,16 @@
-import React, { FunctionComponent, useContext } from 'react'
+import type { FunctionComponent } from 'react'
+import { useContext } from 'react'
 import { Col } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
-import { WindowLocation } from '@reach/router'
+import type { WindowLocation } from '@reach/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faRss } from '@fortawesome/free-solid-svg-icons'
 import clsx from 'clsx'
 
 import messages from './messages'
 import styles from './styles.module.scss'
-import { SidebarItemQuery } from 'graphql-types'
+import type { SidebarItemQuery } from 'graphql-types'
 
 import {
   FacebookShareButton,
