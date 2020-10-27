@@ -106,9 +106,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "i18n": "extract-messages -o translations -l=ja -d=ja -f yaml 'src/**/*.ts'",
-    "lint": "yarn lint:js && yarn lint:ts && yarn lint:css",
-    "lint:js": "eslint '{src,plugins}/**/*.js'",
-    "lint:ts": "eslint '{,src}/**/*.{ts,tsx}'",
+    "lint": "yarn lint:ts && yarn lint:css",
+    "lint:ts": "eslint '{,src,plugins}/**/*.{ts,tsx}'",
     "lint:css": "stylelint 'src/**/*.scss'",
     "start": "gatsby develop"
   },
