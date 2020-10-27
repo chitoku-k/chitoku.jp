@@ -1,5 +1,5 @@
 import type { FunctionComponent } from 'react'
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { Col } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'

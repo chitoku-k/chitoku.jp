@@ -1,5 +1,4 @@
 import type { DetailedHTMLProps, FunctionComponent, HTMLAttributes, ReactNode } from 'react'
-import React from 'react'
 import clsx from 'clsx'
 
 import styles from './styles.module.scss'

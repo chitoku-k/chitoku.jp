@@ -1,5 +1,4 @@
 import type { FunctionComponent } from 'react'
-import React from 'react'
 import { InstantSearch } from 'react-instantsearch-dom'
 import algoliasearch from 'algoliasearch/lite'
 

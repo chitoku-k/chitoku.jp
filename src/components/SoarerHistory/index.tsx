@@ -1,5 +1,4 @@
 import type { FunctionComponent } from 'react'
-import React from 'react'
 import { Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'

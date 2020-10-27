@@ -1,5 +1,5 @@
 import type { FormEvent, FunctionComponent, ReactNode } from 'react'
-import React, { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { Alert, Button, FormControl, FormGroup } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3'

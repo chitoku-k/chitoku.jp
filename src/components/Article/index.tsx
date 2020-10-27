@@ -1,5 +1,5 @@
 import type { FunctionComponent, ReactNode } from 'react'
-import React, { createContext } from 'react'
+import { createContext } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar, faFolderOpen } from '@fortawesome/free-regular-svg-icons'

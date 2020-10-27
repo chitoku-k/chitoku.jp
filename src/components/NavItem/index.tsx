@@ -1,5 +1,4 @@
 import type { DetailedHTMLProps, FunctionComponent } from 'react'
-import React from 'react'
 import { Dropdown } from 'react-bootstrap'
 import { Location } from '@reach/router'
 import clsx from 'clsx'

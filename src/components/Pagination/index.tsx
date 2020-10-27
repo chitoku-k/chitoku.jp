@@ -1,5 +1,4 @@
 import type { DetailedHTMLProps, FunctionComponent, HTMLAttributes, ReactNode } from 'react'
-import React from 'react'
 import type { PageItemProps, SafeAnchorProps } from 'react-bootstrap'
 import { Pagination as BootstrapPagination } from 'react-bootstrap'
 import type { BsPrefixProps } from 'react-bootstrap/helpers'

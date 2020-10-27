@@ -1,5 +1,5 @@
 import type { DetailedHTMLProps, FunctionComponent, HTMLAttributes } from 'react'
-import React, { useCallback, useState } from 'react'
+import { useCallback, useState } from 'react'
 import { Navbar as BootstrapNavbar, Container, Nav, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'

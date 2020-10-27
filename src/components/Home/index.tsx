@@ -1,5 +1,5 @@
 import type { FunctionComponent } from 'react'
-import React, { Fragment } from 'react'
+import { Fragment } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import clsx from 'clsx'
 

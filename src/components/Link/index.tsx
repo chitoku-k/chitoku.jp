@@ -1,5 +1,4 @@
 import type { AnchorHTMLAttributes, DetailedHTMLProps, FunctionComponent } from 'react'
-import React from 'react'
 import isUrl from 'is-url'
 import type { GatsbyLinkProps } from 'gatsby-link'
 import GatsbyLink from 'gatsby-link'

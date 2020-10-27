@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import { memo } from 'react'
 import { Container as BootstrapContainer, Col, Row } from 'react-bootstrap'
 import { Location } from '@reach/router'
 import type { StateResultsProvided } from 'react-instantsearch-core'

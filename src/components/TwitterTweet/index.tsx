@@ -1,5 +1,5 @@
 import type { FunctionComponent } from 'react'
-import React, { useCallback, useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import type { TweetProps } from 'react-twitter-widgets'
 import { Tweet } from 'react-twitter-widgets'
 import { useMedia } from 'use-media'

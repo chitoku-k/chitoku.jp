@@ -1,5 +1,4 @@
 import type { FunctionComponent } from 'react'
-import React from 'react'
 import { FormattedMessage, useIntl } from 'react-intl'
 import type { Hit, StateResultsProvided } from 'react-instantsearch-core'
 import { Hits, PoweredBy, connectStateResults } from 'react-instantsearch-dom'

@@ -1,5 +1,5 @@
 import type { FunctionComponent } from 'react'
-import React from 'react'
+import { Fragment } from 'react'
 import { Table } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
@@ -39,7 +39,7 @@ const PspErrorCodes: FunctionComponent = () => {
   return (
     <div>
       {group.map(({ items, title }) => (
-        <React.Fragment key={title}>
+        <Fragment key={title}>
           <h2>{title}</h2>
           <Table striped hover size="sm">
             <thead>
@@ -57,7 +57,7 @@ const PspErrorCodes: FunctionComponent = () => {
               ))}
             </tbody>
           </Table>
-        </React.Fragment>
+        </Fragment>
       ))}
     </div>
   )

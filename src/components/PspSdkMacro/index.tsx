@@ -1,5 +1,5 @@
 import type { FunctionComponent } from 'react'
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import clsx from 'clsx'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-c'

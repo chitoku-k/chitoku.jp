@@ -137,11 +137,13 @@
         "react/jsx-one-expression-per-line": "off",
         "react/jsx-props-no-spreading": "off",
         "react/jsx-sort-props": "off",
+        "react/jsx-uses-react": "off",
         "react/no-adjacent-inline-elements": "off",
         "react/no-multi-comp": ["error", {
           "ignoreStateless": true
         }],
         "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
         "react-hooks/exhaustive-deps": "warn",
         "react-hooks/rules-of-hooks": "error"
       }

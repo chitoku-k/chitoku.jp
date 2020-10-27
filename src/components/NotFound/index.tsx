@@ -1,5 +1,4 @@
 import type { FunctionComponent, ReactNode } from 'react'
-import React from 'react'
 import type { MessageDescriptor } from 'react-intl'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { Location } from '@reach/router'

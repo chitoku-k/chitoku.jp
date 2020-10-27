@@ -1,5 +1,4 @@
 import type { FunctionComponent } from 'react'
-import React from 'react'
 import { Col, Row, Table } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
 

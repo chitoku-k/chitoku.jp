@@ -1,5 +1,5 @@
 import type { FunctionComponent } from 'react'
-import React, { createContext } from 'react'
+import { createContext } from 'react'
 import { Helmet } from 'react-helmet'
 import { useIntl } from 'react-intl'
 import { graphql, useStaticQuery } from 'gatsby'

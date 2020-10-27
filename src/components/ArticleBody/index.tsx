@@ -1,5 +1,5 @@
 import type { ComponentType, FunctionComponent } from 'react'
-import React, { createElement, useMemo } from 'react'
+import { createElement, useMemo } from 'react'
 import RehypeReact from 'rehype-react'
 
 import styles from './styles.module.scss'
