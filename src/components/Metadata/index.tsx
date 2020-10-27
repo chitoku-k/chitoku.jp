@@ -1,11 +1,12 @@
-import React, { FunctionComponent, createContext } from 'react'
+import type { FunctionComponent } from 'react'
+import React, { createContext } from 'react'
 import { Helmet } from 'react-helmet'
 import { useIntl } from 'react-intl'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Location } from '@reach/router'
 
 import messages from './messages'
-import { MetadataItemQuery } from 'graphql-types'
+import type { MetadataItemQuery } from 'graphql-types'
 
 const THUMBNAIL_DEFAULT = '/thumbnails/default.png'
 

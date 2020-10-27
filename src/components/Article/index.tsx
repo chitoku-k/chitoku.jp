@@ -1,4 +1,5 @@
-import React, { FunctionComponent, ReactNode, createContext } from 'react'
+import type { FunctionComponent, ReactNode } from 'react'
+import React, { createContext } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar, faFolderOpen } from '@fortawesome/free-regular-svg-icons'
@@ -7,7 +8,7 @@ import { useIntl } from 'react-intl'
 
 import messages from './messages'
 import styles from './styles.module.scss'
-import { ArticleFragment, ArticleQuery } from 'graphql-types'
+import type { ArticleFragment, ArticleQuery } from 'graphql-types'
 
 import ArticleBody from 'components/ArticleBody'
 import ArticleContainer from 'components/ArticleContainer'
@@ -134,7 +135,7 @@ export interface ArticleAstCommentNode {
 export interface ArticleAstElementNode {
   type: 'element'
   children: ArticleAstNode[]
-  properties: { [key: string]: unknown }
+  properties: Record<string, unknown>
   tagName: string
 }
 

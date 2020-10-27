@@ -1,11 +1,13 @@
-import React, { FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from 'components/Layout'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
-import Links, { LinksLinkItem } from 'components/Links'
+import type { LinksLinkItem } from 'components/Links'
+import Links from 'components/Links'
 
 export const pageQuery = graphql`
   query LinksItem {

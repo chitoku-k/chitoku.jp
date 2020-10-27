@@ -1,4 +1,5 @@
-import React, { DetailedHTMLProps, FunctionComponent, HTMLAttributes, useCallback, useState } from 'react'
+import type { DetailedHTMLProps, FunctionComponent, HTMLAttributes } from 'react'
+import React, { useCallback, useState } from 'react'
 import { Navbar as BootstrapNavbar, Container, Nav, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -6,7 +7,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import clsx from 'clsx'
 
 import styles from './styles.module.scss'
-import { NavigationLinkItemQuery, NavigationsYamlNav } from 'graphql-types'
+import type { NavigationLinkItemQuery, NavigationsYamlNav } from 'graphql-types'
 
 import SearchForm from 'components/SearchForm'
 import NavItem, { NavLink } from 'components/NavItem'

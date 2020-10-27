@@ -1,4 +1,4 @@
-import { GatsbyNode } from 'gatsby'
+import type { GatsbyNode } from 'gatsby'
 import { promises as fs } from 'fs'
 import * as path from 'path'
 

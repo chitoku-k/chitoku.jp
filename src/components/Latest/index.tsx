@@ -1,8 +1,9 @@
-import React, { FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
+import React from 'react'
 import { useIntl } from 'react-intl'
 
 import messages from './messages'
-import { LatestItemQuery } from 'graphql-types'
+import type { LatestItemQuery } from 'graphql-types'
 
 import Metadata from 'components/Metadata'
 import Container from 'components/Container'

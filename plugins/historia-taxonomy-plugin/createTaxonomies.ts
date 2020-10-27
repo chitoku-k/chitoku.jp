@@ -1,5 +1,5 @@
 import * as path from 'path'
-import { BuildArgs, Page } from 'gatsby'
+import type { BuildArgs, Page } from 'gatsby'
 
 type TaxonomiesArgs = Pick<BuildArgs, 'graphql'> & { limit: number }
 

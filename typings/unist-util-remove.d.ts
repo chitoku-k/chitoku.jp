@@ -1,5 +1,5 @@
-import { Node } from 'unist'
-import { Test } from 'unist-util-is'
+import type { Node } from 'unist'
+import type { Test } from 'unist-util-is'
 
 declare function remove<T extends Node>(
   tree: T,

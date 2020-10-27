@@ -1,6 +1,8 @@
-import React, { AnchorHTMLAttributes, DetailedHTMLProps, FunctionComponent } from 'react'
+import type { AnchorHTMLAttributes, DetailedHTMLProps, FunctionComponent } from 'react'
+import React from 'react'
 import isUrl from 'is-url'
-import GatsbyLink, { GatsbyLinkProps } from 'gatsby-link'
+import type { GatsbyLinkProps } from 'gatsby-link'
+import GatsbyLink from 'gatsby-link'
 
 const isAnchor = (to: string): boolean => to.startsWith('#')
 

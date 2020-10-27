@@ -1,7 +1,8 @@
-import React, { FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
+import React from 'react'
 
 import NavItem from 'components/NavItem'
-import { NavigationLinkItem } from 'components/Navbar'
+import type { NavigationLinkItem } from 'components/Navbar'
 
 /* eslint-disable react/jsx-no-useless-fragment */
 const NavDropdown: FunctionComponent<NavDropdownProps> = ({

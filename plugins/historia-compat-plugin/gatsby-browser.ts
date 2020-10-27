@@ -1,4 +1,4 @@
-import { GatsbyBrowser } from 'gatsby'
+import type { GatsbyBrowser } from 'gatsby'
 
 /* eslint-disable @typescript-eslint/no-require-imports */
 /* eslint-disable global-require */

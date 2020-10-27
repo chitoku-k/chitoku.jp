@@ -1,9 +1,10 @@
-import React, { ComponentType, FunctionComponent, createElement, useMemo } from 'react'
+import type { ComponentType, FunctionComponent } from 'react'
+import React, { createElement, useMemo } from 'react'
 import RehypeReact from 'rehype-react'
 
 import styles from './styles.module.scss'
 
-import { ArticleAstNode } from 'components/Article'
+import type { ArticleAstNode } from 'components/Article'
 
 const components: ArticleComponentCollection = {}
 
@@ -34,8 +35,6 @@ interface ArticleBodyProps {
   ast: ArticleAstNode
 }
 
-export interface ArticleComponentCollection {
-  [key: string]: ComponentType<unknown>
-}
+export type ArticleComponentCollection = Record<string, ComponentType<unknown>>
 
 export default ArticleBody

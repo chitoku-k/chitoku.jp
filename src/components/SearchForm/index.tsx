@@ -3,7 +3,7 @@ import { Container, Nav, Popover, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useIntl } from 'react-intl'
-import { SearchBoxProvided } from 'react-instantsearch-core'
+import type { SearchBoxProvided } from 'react-instantsearch-core'
 import { connectSearchBox } from 'react-instantsearch-dom'
 
 import messages from './messages'

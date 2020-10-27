@@ -1,11 +1,12 @@
-import React, { FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
+import React from 'react'
 import { Table } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
 
 import messages from './messages'
 import styles from './styles.module.scss'
-import { PspErrorItemQuery } from 'graphql-types'
+import type { PspErrorItemQuery } from 'graphql-types'
 
 const query = graphql`
   query PspErrorItem {

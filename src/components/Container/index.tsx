@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import { Container as BootstrapContainer, Col, Row } from 'react-bootstrap'
 import { Location } from '@reach/router'
-import { StateResultsProvided } from 'react-instantsearch-core'
+import type { StateResultsProvided } from 'react-instantsearch-core'
 import { connectStateResults } from 'react-instantsearch-dom'
 import clsx from 'clsx'
 

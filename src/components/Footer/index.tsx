@@ -1,10 +1,11 @@
-import React, { FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
+import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import messages from './messages'
 import styles from './styles.module.scss'
-import { FooterItemQuery } from 'graphql-types'
+import type { FooterItemQuery } from 'graphql-types'
 
 import Link from 'components/Link'
 

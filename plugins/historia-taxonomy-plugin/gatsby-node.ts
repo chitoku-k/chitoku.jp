@@ -1,8 +1,11 @@
-import { CreateResolversArgs, GatsbyNode, Page, PluginOptions } from 'gatsby'
+import type { CreateResolversArgs, GatsbyNode, Page, PluginOptions } from 'gatsby'
 
-import createArticles, { ArticleContext } from './createArticles'
-import createTaxonomies, { Category, Tag, TaxonomyContext } from './createTaxonomies'
-import { File, getPath } from './utils'
+import type { ArticleContext } from './createArticles'
+import createArticles from './createArticles'
+import type { Category, Tag, TaxonomyContext } from './createTaxonomies'
+import createTaxonomies from './createTaxonomies'
+import type { File } from './utils'
+import { getPath } from './utils'
 
 interface Options extends PluginOptions {
   limit: number
@@ -36,16 +39,14 @@ interface Article {
   }
 }
 
-export const createPages: GatsbyNode['createPages'] = async (
-  {
-    graphql,
-    actions: {
-      createPage,
-    },
-  }, {
-    limit = 3,
-  }: Options,
-) => {
+export const createPages: GatsbyNode['createPages'] = async ({
+  graphql,
+  actions: {
+    createPage,
+  },
+}, {
+  limit = 3,
+}: Options) => {
   const paths = new Set<string>()
   const pages: Page<ArticleContext | TaxonomyContext>[] = [
     ...await createArticles({ graphql }),
@@ -74,7 +75,7 @@ const sortArticles = (a: Article, b: Article): number => {
   return Number(new Date(b.frontmatter.created)) - Number(new Date(a.frontmatter.created))
 }
 
-/* eslint-disable no-shadow, @typescript-eslint/no-explicit-any */
+/* eslint-disable no-shadow, @typescript-eslint/no-explicit-any, @typescript-eslint/no-shadow */
 export const createResolvers: GatsbyNode['createResolvers'] = ({
   createResolvers,
 }: CreateResolversArgs): any => {

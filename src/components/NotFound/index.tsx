@@ -1,10 +1,12 @@
-import React, { FunctionComponent, ReactNode } from 'react'
-import { FormattedMessage, MessageDescriptor, useIntl } from 'react-intl'
+import type { FunctionComponent, ReactNode } from 'react'
+import React from 'react'
+import type { MessageDescriptor } from 'react-intl'
+import { FormattedMessage, useIntl } from 'react-intl'
 import { Location } from '@reach/router'
 
 import messages from './messages'
 import styles from './styles.module.scss'
-import { AboutYamlContacts, NotFoundItemQuery } from 'graphql-types'
+import type { AboutYamlContacts, NotFoundItemQuery } from 'graphql-types'
 
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'

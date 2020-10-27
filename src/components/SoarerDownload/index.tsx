@@ -1,4 +1,5 @@
-import React, { FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
+import React from 'react'
 import { Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
@@ -9,7 +10,7 @@ import clsx from 'clsx'
 import messages from './messages'
 import styles from './styles.module.scss'
 import icon from './icon.png'
-import { SoarerDownloadItemQuery } from 'graphql-types'
+import type { SoarerDownloadItemQuery } from 'graphql-types'
 
 import Link from 'components/Link'
 
