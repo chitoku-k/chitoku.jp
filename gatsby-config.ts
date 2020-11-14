@@ -21,19 +21,18 @@ const config: GatsbyConfig = {
     'UpdatesYaml.file': 'File.base',
   },
   plugins: [
-    ...process.env.GATSBY_UPDATE_INDEX === 'true' ? [
-      {
-        resolve: 'gatsby-plugin-algolia',
-        options: {
-          appId: process.env.GATSBY_ALGOLIA_APPID,
-          apiKey: process.env.GATSBY_ALGOLIA_APIKEY,
-          indexName: process.env.GATSBY_ALGOLIA_INDEXNAME,
-          queries: [
-            createQuery(),
-          ],
-        },
+    {
+      resolve: 'gatsby-plugin-algolia',
+      options: {
+        skipIndexing: process.env.GATSBY_UPDATE_INDEX !== 'true',
+        appId: process.env.GATSBY_ALGOLIA_APPID,
+        apiKey: process.env.GATSBY_ALGOLIA_APIKEY,
+        indexName: process.env.GATSBY_ALGOLIA_INDEXNAME,
+        queries: [
+          createQuery(),
+        ],
       },
-    ] : [],
+    },
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
@@ -94,13 +93,13 @@ const config: GatsbyConfig = {
         fileName: 'typings/graphql-types.d.ts',
       },
     },
-    { resolve: 'gatsby-source-local-git' },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: 'contents/',
       },
     },
+    { resolve: 'gatsby-source-local-git' },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
