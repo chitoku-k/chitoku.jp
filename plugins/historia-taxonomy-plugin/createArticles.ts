@@ -28,10 +28,10 @@ export interface ArticleContext {
   next: null | string
 }
 
-interface Data<TDirectory extends string, TName extends string> {
+interface Data {
   categories?: {
     items: {
-      articles: Article<TDirectory, TName>[]
+      articles: Article<string, string>[]
     }[]
   }
 }
@@ -41,7 +41,7 @@ const createArticles = async ({
 }: ArticlesArgs): Promise<Page<ArticleContext>[]> => {
   const pages: Page<ArticleContext>[] = []
 
-  const { data } = await graphql<Data<string, string>>(`
+  const { data } = await graphql<Data>(`
     query {
       categories: allCategoriesYaml {
         items: nodes {

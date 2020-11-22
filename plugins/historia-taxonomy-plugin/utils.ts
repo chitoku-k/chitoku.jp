@@ -12,7 +12,7 @@ type Directory<
   ? `/${Subdirectory}`
   : TDirectory extends 'posts'
     ? '/'
-    : ''
+    : string
 
 type Path<
   TDirectory extends string,
