@@ -1,18 +1,44 @@
 import * as path from 'path'
 
-export interface File {
+export interface File<TDirectory extends string, TName extends string> {
   children: string[]
-  relativeDirectory: string
-  name: string
+  relativeDirectory: TDirectory
+  name: TName
 }
 
-const getDirectory = (file: File): string => file.relativeDirectory.replace(/^posts(?:\/|$)/u, '/')
+type Directory<
+  TDirectory extends string,
+> = TDirectory extends `posts/${infer Subdirectory}`
+  ? `/${Subdirectory}`
+  : TDirectory extends 'posts'
+    ? '/'
+    : ''
 
-export const getPath = (file: File, index = '/'): string => {
+type Path<
+  TDirectory extends string,
+  TName extends string,
+  TIndex extends string,
+> = Directory<TDirectory> extends ''
+  ? ''
+  : TName extends 'index'
+    ? `${Directory<TDirectory>}${TIndex}`
+    : `${Directory<TDirectory>}/${TName}`
+
+const getDirectory = <
+  TDirectory extends string,
+  TName extends string,
+>(file: File<TDirectory, TName>): Directory<TDirectory> => file.relativeDirectory.replace(/^posts(?:\/|$)/u, '/') as Directory<TDirectory>
+
+export const getPath = <
+  TDirectory extends string,
+  TName extends string,
+  TIndex extends string,
+>(file: File<TDirectory, TName>, index: TIndex = '/' as TIndex): Path<TDirectory, TName, TIndex> => {
+  /* eslint-disable @typescript-eslint/no-unnecessary-condition */
   const directory = getDirectory(file)
   if (!directory) {
-    return ''
+    return '' as Path<TDirectory, TName, TIndex>
   }
 
-  return path.join(directory, file.name === 'index' ? index : file.name)
+  return path.join(directory, file.name === 'index' ? index : file.name) as Path<TDirectory, TName, TIndex>
 }

@@ -133,7 +133,7 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({
             return null
           }
 
-          const files = context.nodeModel.getAllNodes<File>({
+          const files = context.nodeModel.getAllNodes<File<string, string>>({
             type: 'File',
           })
 
@@ -154,7 +154,7 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({
             return null
           }
 
-          const files = context.nodeModel.getAllNodes<File>({
+          const files = context.nodeModel.getAllNodes<File<string, string>>({
             type: 'File',
           })
 
