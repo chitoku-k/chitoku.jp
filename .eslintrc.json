@@ -100,6 +100,7 @@
         "@typescript-eslint/no-magic-numbers": "off",
         "@typescript-eslint/no-type-alias": ["error", {
           "allowAliases": "always",
+          "allowConditionalTypes": "always",
           "allowLiterals": "always",
           "allowMappedTypes": "always"
         }],
