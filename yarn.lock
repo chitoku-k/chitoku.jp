@@ -7969,7 +7969,7 @@ gatsby-cli@^2.14.0:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^1.1.2"
 
-gatsby-core-utils@^1.1.1, gatsby-core-utils@^1.4.0, gatsby-core-utils@^1.5.0:
+gatsby-core-utils@^1.1.1, gatsby-core-utils@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.5.0.tgz#0834b561ab32b8b93db2ddb3ee695188f8d2eea9"
   integrity sha512-hCt44m7I9Kmra/iVJwrmHXK8WFK9I1JwXQZquIVZ/JaG8UgqroxW1wpsY7ColbHGMATOmp13Efqn02VNPnms5Q==
@@ -15251,10 +15251,10 @@ scheduler@^0.20.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-schema-dts@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/schema-dts/-/schema-dts-0.7.1.tgz#9c7e978e958ce331e927b63030575c47b6a7d795"
-  integrity sha512-BCbdw1DtSJErERmKrTyu8K+nyuEwfKgRwSTctlklBqnAAkt9+w//Xg8vgRSzknGNBne+DUGLtL372KlLuI002w==
+schema-dts@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/schema-dts/-/schema-dts-0.8.1.tgz#db04845d26377c5a8de15e87afc97c9047127c59"
+  integrity sha512-GlLkN812img1pWqkTlhCKIuABF0s8aXqmyD5wUaeGWMJ7tvEYFJ4xdGABlVs7yEEtNwVrOXMWGMJhnY7z/hYUA==
 
 schema-utils@^0.4.5:
   version "0.4.7"
