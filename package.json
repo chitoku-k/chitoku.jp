@@ -67,7 +67,7 @@
     "graphql": "^15.4.0",
     "husky": "^4.3.0",
     "is-url": "^1.2.4",
-    "lint-staged": "^10.5.1",
+    "lint-staged": "^10.5.2",
     "postcss": "^8.1.8",
     "postcss-custom-properties": "^10.0.0",
     "prismjs": "^1.22.0",
