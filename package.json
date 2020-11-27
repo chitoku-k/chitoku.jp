@@ -11,7 +11,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.12",
+    "@fortawesome/react-fontawesome": "^0.1.13",
     "@rstacruz/gatsby-remark-component": "^2.0.0",
     "@types/dotenv-safe": "^8.1.1",
     "@types/is-url": "^1.2.28",
