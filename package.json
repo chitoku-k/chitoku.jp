@@ -68,7 +68,7 @@
     "husky": "^4.3.5",
     "is-url": "^1.2.4",
     "lint-staged": "^10.5.3",
-    "postcss": "^8.1.14",
+    "postcss": "^8.2.1",
     "postcss-custom-properties": "^10.0.0",
     "prismjs": "^1.22.0",
     "react": "^17.0.1",
