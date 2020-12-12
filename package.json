@@ -100,6 +100,7 @@
     "gatsby/**/react-hot-loader": "^4.13.0",
     "gatsby-plugin-ts/**/@babel/parser": "^7.12.3",
     "react-bootstrap/react-overlays/@popperjs/core": "^2.5.3",
+    "react-bootstrap/**/@types/react": "^17.0.0",
     "react-instantsearch-dom/algoliasearch-helper": "^3.2.2"
   },
   "scripts": {
