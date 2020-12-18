@@ -536,7 +536,12 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@7.9.4", "@babel/parser@^7.0.0", "@babel/parser@^7.1.0", "@babel/parser@^7.10.5", "@babel/parser@^7.12.10", "@babel/parser@^7.12.3", "@babel/parser@^7.12.5", "@babel/parser@^7.12.7", "@babel/parser@^7.7.0", "@babel/parser@^7.9.0":
+"@babel/parser@7.9.4", "@babel/parser@^7.0.0", "@babel/parser@^7.12.3", "@babel/parser@^7.9.0":
+  version "7.12.11"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.11.tgz#9ce3595bcd74bc5c466905e86c535b8b25011e79"
+  integrity sha512-N3UxG+uuF4CMYoNj8AhnbAcJF0PiuJ9KHuy1lQmkYsxTer/MAH9UBNHsBoAX/4s6NvlDD047No8mYVGGzLL4hg==
+
+"@babel/parser@^7.1.0", "@babel/parser@^7.10.5", "@babel/parser@^7.12.10", "@babel/parser@^7.12.5", "@babel/parser@^7.12.7", "@babel/parser@^7.7.0":
   version "7.12.10"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.10.tgz#824600d59e96aea26a5a2af5a9d812af05c3ae81"
   integrity sha512-PJdRPwyoOqFAWfLytxrWwGrAxghCgh/yTNCYciOz8QgjflA7aZhECPZAa2VUedKg2+QMWkI0L9lynh2SNmNEgA==
@@ -2345,9 +2350,9 @@
     source-map "^0.7.3"
 
 "@popperjs/core@^2.0.0", "@popperjs/core@^2.5.3":
-  version "2.5.4"
-  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.5.4.tgz#de25b5da9f727985a3757fd59b5d028aba75841a"
-  integrity sha512-ZpKr+WTb8zsajqgDkvCEWgp6d5eJT6Q63Ng2neTbzBO76Lbe91vX/iVIW9dikq+Fs3yEo+ls4cxeXABD2LtcbQ==
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.6.0.tgz#f022195afdfc942e088ee2101285a1d31c7d727f"
+  integrity sha512-cPqjjzuFWNK3BSKLm0abspP0sp/IGOli4p5I5fKFAzdS8fvjdOwDCfZqAaIiXd9lPkOWi3SUUfZof3hEb7J/uw==
 
 "@reach/router@^1.3.4":
   version "1.3.4"
@@ -3232,9 +3237,9 @@ ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.4, ajv@^6.12.5, ajv@^6.5.5:
     uri-js "^4.2.2"
 
 algoliasearch-helper@^3.1.0, algoliasearch-helper@^3.2.2:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/algoliasearch-helper/-/algoliasearch-helper-3.3.3.tgz#8f1338790c3b478a8223f14ee447b9bdab4ab68b"
-  integrity sha512-1MKryf/yLQK9qgCaHtM+OBmG+R3qD6wxN8NnZstlCB8LijCZjoX1mgdema3+cBaa/zfmsD2q6/aP9kUKQmH4DQ==
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/algoliasearch-helper/-/algoliasearch-helper-3.3.4.tgz#4a3c56d42a2a81589d5722b73653b2deaf3e7064"
+  integrity sha512-1Ts2XcgGdjGlDrp3v6zbY8VW+X9+jJ5rBmtPBmXOQLd4b5t/LpJlaBdxoAnlMfVFjywP7KSAdmyFUNNYVHDyRQ==
   dependencies:
     events "^1.1.1"
 
@@ -17472,10 +17477,10 @@ unist-util-select@^1.5.0:
     debug "^2.2.0"
     nth-check "^1.0.1"
 
-unist-util-select@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/unist-util-select/-/unist-util-select-3.0.3.tgz#8ef3ca40b3ef17c4bab5cfbf4fdad533302a7f23"
-  integrity sha512-DnbjRvotPiDGsUaw9knEvprwD6conwGtaArUn5niG9yBQvWQyHMmUJ4p/vXXzLBm+8XyiTr3pcuw9n3TlF6SYg==
+unist-util-select@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/unist-util-select/-/unist-util-select-3.0.4.tgz#702c9dc1db1b2bbbfe27f796fce99e43f25edc60"
+  integrity sha512-xf1zCu4okgPqGLdhCDpRnjwBNyv3EqjiXRUbz2SdK1+qnLMB7uXXajfzuBvvbHoQ+JLyp4AEbFCGndmc6S72sw==
   dependencies:
     css-selector-parser "^1.0.0"
     not "^0.1.0"
