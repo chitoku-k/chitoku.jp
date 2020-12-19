@@ -40,18 +40,14 @@ const SoarerHistory: FunctionComponent = () => {
     },
   } = useStaticQuery<SoarerHistoryQueryResult>(query)
 
-  if (items.some(x => x.update.file && typeof x.update.file.publicURL !== 'string')) {
-    throw new Error('Invalid error')
-  }
-
   /* eslint-disable react/jsx-no-useless-fragment */
   return (
     <>
       {items.map(({ update }) => (
         <div key={update.version}>
           <big className={styles.version}>{update.version}</big>
-          {update.file ? (
-            <Button as="a" className={styles.button} variant="light" href={update.file.publicURL as string} download={update.file.base}>
+          {update.file?.publicURL ? (
+            <Button as="a" className={styles.button} variant="light" href={update.file.publicURL} download={update.file.base}>
               <FontAwesomeIcon className={styles.icon} icon={faDownload} />
               {formatMessage(messages.download)}
             </Button>

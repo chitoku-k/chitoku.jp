@@ -42,10 +42,15 @@ const Mail: FunctionComponent = () => {
   const [ status, setStatus ] = useState('' as Status)
   const [ readOnly, setReadOnly ] = useState(false)
 
-  const siteApi = process.env.GATSBY_MAIL_API as string
-  const siteKey = process.env.GATSBY_MAIL_SITE_KEY as string
+  const siteApi = process.env.GATSBY_MAIL_API
+  const siteKey = process.env.GATSBY_MAIL_SITE_KEY
 
   const onSubmit = useCallback(async (e: FormEvent<HTMLFormElement>): Promise<void> => {
+    if (!siteApi) {
+      setStatus('error')
+      throw new Error('Invalid env')
+    }
+
     const form = new FormData(e.currentTarget)
     form.append('g-recaptcha-response', token)
 
@@ -70,12 +75,20 @@ const Mail: FunctionComponent = () => {
   }, [ siteApi, token ])
 
   useEffect(() => {
+    if (!siteKey) {
+      throw new Error('Invalid env')
+    }
+
     loadReCaptcha(siteKey)
   }, [ siteKey ])
 
   useEffect(() => {
     setReadOnly(status === 'sending' || status === 'sent')
   }, [ status ])
+
+  if (!siteKey) {
+    throw new Error('Invalid env')
+  }
 
   return (
     <Container>
