@@ -45,10 +45,6 @@ const SoarerDownload: FunctionComponent = () => {
     },
   } = useStaticQuery<SoarerDownloadQueryResult>(query)
 
-  if (update.file && typeof update.file.publicURL !== 'string') {
-    throw new Error('Invalid data')
-  }
-
   return (
     <>
       <div className={styles.container}>
@@ -59,8 +55,8 @@ const SoarerDownload: FunctionComponent = () => {
         </h2>
       </div>
       <div className={styles.description}>
-        {update.file ? (
-          <Link to={update.file.publicURL as string} download={update.file.base}>
+        {update.file?.publicURL ? (
+          <Link to={update.file.publicURL} download={update.file.base}>
             <Button variant="primary" size="lg">
               <FontAwesomeIcon icon={faDownload} />
               {formatMessage(messages.download, {

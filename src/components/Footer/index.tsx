@@ -20,11 +20,14 @@ const query = graphql`
 
 const Footer: FunctionComponent = () => {
   const { commit } = useStaticQuery<FooterQueryResult>(query)
-  const repositoryName = process.env.GATSBY_REPOSITORY_NAME as string
-  const repositoryTreeUrl = process.env.GATSBY_REPOSITORY_TREE_URL as string
+  const repositoryName = process.env.GATSBY_REPOSITORY_NAME
+  const repositoryTreeUrl = process.env.GATSBY_REPOSITORY_TREE_URL
 
   if (!commit) {
     throw new Error('Invalid data')
+  }
+  if (!repositoryName || !repositoryTreeUrl) {
+    throw new Error('Invalid env')
   }
 
   return (
