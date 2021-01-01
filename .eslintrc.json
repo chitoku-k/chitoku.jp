@@ -135,6 +135,7 @@
         "react/jsx-indent-props": ["error", 2],
         "react/jsx-max-depth": "off",
         "react/jsx-max-props-per-line": "off",
+        "react/jsx-newline": "off",
         "react/jsx-no-literals": "off",
         "react/jsx-one-expression-per-line": "off",
         "react/jsx-props-no-spreading": "off",
