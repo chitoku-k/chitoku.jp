@@ -20,7 +20,7 @@ export const getPagePath = (page: Page, num: number): string => `${page.current 
 export const getPreviousPagePath = (page: Page): string => hasPreviousPage(page) ? getPagePath(page, page.current - 1) : '#'
 export const getNextPagePath = (page: Page): string => hasNextPage(page) ? getPagePath(page, page.current + 1) : '#'
 
-const PaginationItem: FunctionComponent<PaginationItemProps & Omit<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>, keyof PaginationItemProps>> = ({
+const PaginationItem: FunctionComponent<Omit<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>, keyof PaginationItemProps> & PaginationItemProps> = ({
   visible,
   direction,
   className,
@@ -56,7 +56,7 @@ const Pagination: FunctionComponent<PaginationProps> = ({
   )
 }
 
-export const SimplePagination: FunctionComponent<HTMLAttributes<HTMLUListElement> & BsPrefixProps<'ul'> & SimplePaginationProps> = ({
+export const SimplePagination: FunctionComponent<BsPrefixProps<'ul'> & HTMLAttributes<HTMLUListElement> & SimplePaginationProps> = ({
   prev,
   next,
   ...rest
@@ -103,7 +103,7 @@ interface PaginationProps {
 }
 
 interface PaginationItemProps extends PageItemProps, SafeAnchorProps {
-  direction?: 'prev' | 'next'
+  direction?: 'next' | 'prev'
   visible?: boolean
 }
 

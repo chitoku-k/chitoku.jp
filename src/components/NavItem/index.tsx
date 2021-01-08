@@ -16,7 +16,7 @@ export const NavLink: typeof Link = ({
   <Link className={clsx(styles.link, className)} {...rest} />
 )
 
-const NavItem: FunctionComponent<NavItemProps & BootstrapNavItemProps & NavigationLinkItem> = ({
+const NavItem: FunctionComponent<BootstrapNavItemProps & NavigationLinkItem & NavItemProps> = ({
   name,
   to,
   items,

@@ -105,10 +105,10 @@ type MetadataQueryResult = MetadataItemQuery
 
 interface MetadataItem {
   type?: string
-  title: string | null
+  title: null | string
   keywords?: string[]
   description?: string
-  thumbnail?: string | null
+  thumbnail?: null | string
 }
 
 export default Metadata

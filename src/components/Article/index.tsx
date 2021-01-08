@@ -125,7 +125,7 @@ export interface ArticleItem extends ArticleFragment {
   excerptAst?: ArticleAstNode
 }
 
-export type ArticleAstNode = null | ArticleAstCommentNode | ArticleAstElementNode | ArticleAstTextNode
+export type ArticleAstNode = ArticleAstCommentNode | ArticleAstElementNode | ArticleAstTextNode | null
 
 export interface ArticleAstCommentNode {
   type: 'comment'
@@ -147,7 +147,7 @@ export interface ArticleAstTextNode {
 export interface ArticleCategoryItem {
   name: string
   path: string
-  thumbnail: string | null
+  thumbnail: null | string
 }
 
 export interface ArticleTagItem {
