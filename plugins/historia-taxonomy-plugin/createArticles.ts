@@ -17,13 +17,13 @@ interface Article<TDirectory extends string, TName extends string> {
   file: File<TDirectory, TName>
   attributes: {
     created: string
-    page: null | boolean
+    page: boolean | null
   }
 }
 
 export interface ArticleContext {
   id: string
-  page: null | boolean
+  page: boolean | null
   prev: null | string
   next: null | string
 }

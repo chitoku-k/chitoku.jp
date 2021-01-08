@@ -86,7 +86,7 @@ interface SearchDocument {
   title: string
   excerpt: string
   category: ArticleCategoryItem | null
-  created: string | null
+  created: null | string
   tags: ArticleTagItem | null
 }
 

@@ -33,8 +33,8 @@ interface Data {
 }
 
 export interface TaxonomyContext {
-  category: null | Category
-  tag: null | Tag
+  category: Category | null
+  tag: Tag | null
   ids: string[]
   page: {
     current: number

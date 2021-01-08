@@ -33,7 +33,7 @@ const Label: FunctionComponent<MailLabelProps> = ({
   )
 }
 
-type Status = '' | 'sending' | 'sent' | 'error'
+type Status = '' | 'error' | 'sending' | 'sent'
 
 const Mail: FunctionComponent = () => {
   const { formatMessage } = useIntl()

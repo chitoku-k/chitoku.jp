@@ -12,7 +12,7 @@ type Directory<
   ? `/${Subdirectory}`
   : TDirectory extends 'posts'
     ? '/'
-    : string
+    : TDirectory
 
 type Path<
   TDirectory extends string,
@@ -20,9 +20,13 @@ type Path<
   TIndex extends string,
 > = Directory<TDirectory> extends ''
   ? ''
-  : TName extends 'index'
-    ? `${Directory<TDirectory>}${TIndex}`
-    : `${Directory<TDirectory>}/${TName}`
+  : Directory<TDirectory> extends '/'
+    ? `/${TName}`
+    : Directory<TDirectory> extends string
+      ? string
+      : TName extends 'index'
+        ? `${Directory<TDirectory>}${TIndex}`
+        : `${Directory<TDirectory>}/${TName}`
 
 const getDirectory = <
   TDirectory extends string,
@@ -34,7 +38,6 @@ export const getPath = <
   TName extends string,
   TIndex extends string,
 >(file: File<TDirectory, TName>, index: TIndex = '/' as TIndex): Path<TDirectory, TName, TIndex> => {
-  /* eslint-disable @typescript-eslint/no-unnecessary-condition */
   const directory = getDirectory(file)
   if (!directory) {
     return '' as Path<TDirectory, TName, TIndex>
