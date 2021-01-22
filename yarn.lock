@@ -8282,10 +8282,10 @@ gatsby-plugin-react-svg@^3.0.0:
   dependencies:
     svg-react-loader "^0.4.4"
 
-gatsby-plugin-sass@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-3.0.0.tgz#72f6179e1d09010ba51edc6489d12d88c0ca093e"
-  integrity sha512-j3E7psI3EB0AlcqdouEtwjudpcorPMud5sbL+DWcxXAcpsbctUcEGCfSZR2pXHsjdip7ghaCR+hXIpXFO/AKnA==
+gatsby-plugin-sass@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-3.1.0.tgz#7b957862904ae84a2f474c5f2ef9cc0b889da78f"
+  integrity sha512-65d+ZTimxMlwRu+o92eaSM44vE+H4LoHWGjlRvdQ0OJbLlY1eQYOWaZwcf+bM6GIgj6uTBAnOslaYyhwg2UR9A==
   dependencies:
     "@babel/runtime" "^7.12.5"
     sass-loader "^10.1.0"
