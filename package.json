@@ -75,7 +75,7 @@
     "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "react-highlight-words": "^0.16.0",
+    "react-highlight-words": "^0.17.0",
     "react-instantsearch-dom": "^6.8.3",
     "react-intl": "^5.10.16",
     "react-recaptcha-v3": "^2.0.1",
