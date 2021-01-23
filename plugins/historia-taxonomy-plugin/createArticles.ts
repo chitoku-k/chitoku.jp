@@ -24,8 +24,8 @@ interface Article<TDirectory extends string, TName extends string> {
 export interface ArticleContext {
   id: string
   page: boolean | null
-  prev: null | string
-  next: null | string
+  prev: string | null
+  next: string | null
 }
 
 interface Data {

@@ -16,7 +16,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
 }) {
   const { formatMessage } = useIntl()
 
-  const [ text, setText ] = useState(null as null | string)
+  const [ text, setText ] = useState(null as string | null)
   const input = useRef<HTMLInputElement>(null)
 
   const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement | React.Component>) => {

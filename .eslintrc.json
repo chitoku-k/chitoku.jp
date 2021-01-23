@@ -108,6 +108,7 @@
         "@typescript-eslint/no-unused-vars": ["error", {
           "ignoreRestSiblings": true
         }],
+        "@typescript-eslint/object-curly-spacing": ["error", "always"],
         "@typescript-eslint/prefer-readonly-parameter-types": "off",
         "@typescript-eslint/quotes": ["error", "single"],
         "@typescript-eslint/restrict-template-expressions": ["error", {
