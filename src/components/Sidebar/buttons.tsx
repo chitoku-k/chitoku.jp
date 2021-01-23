@@ -15,11 +15,11 @@ interface ShareButtonProps {
 }
 
 interface TwitterShareButtonProps extends ShareButtonProps {
-  title: null | string
+  title: string | null
 }
 
 interface PocketShareButtonProps extends ShareButtonProps {
-  title: null | string
+  title: string | null
 }
 
 const hatena: IconDefinition = {

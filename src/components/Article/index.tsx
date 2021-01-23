@@ -147,7 +147,7 @@ export interface ArticleAstTextNode {
 export interface ArticleCategoryItem {
   name: string
   path: string
-  thumbnail: null | string
+  thumbnail: string | null
 }
 
 export interface ArticleTagItem {
