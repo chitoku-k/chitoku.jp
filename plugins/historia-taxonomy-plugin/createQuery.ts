@@ -1,5 +1,5 @@
 import removeMd from 'remove-markdown'
-import stripHtml from 'string-strip-html'
+import { stripHtml } from 'string-strip-html'
 
 import { getPath } from './utils'
 import type { Category, Tag } from './createTaxonomies'
