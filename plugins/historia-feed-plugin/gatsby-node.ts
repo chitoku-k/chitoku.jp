@@ -2,7 +2,7 @@ import type { GatsbyNode } from 'gatsby'
 import { Feed } from 'feed'
 import { promises as fs } from 'fs'
 import * as path from 'path'
-import stripHtml from 'string-strip-html'
+import { stripHtml } from 'string-strip-html'
 
 import { author, description } from '../../package.json'
 
