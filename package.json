@@ -35,7 +35,7 @@
     "clsx": "^1.1.1",
     "core-js": "^3.8.3",
     "dotenv-safe": "^8.2.0",
-    "eslint": "^7.19.0",
+    "eslint": "^7.20.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
