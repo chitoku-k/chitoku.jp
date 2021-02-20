@@ -18,7 +18,7 @@ items:
     component: WindowsIcon
     name: Windows
     to: /windows/
-    description: Windows のデスクトップ向けフリーソフトの紹介コーナーです。でも最近は Windows を使っていません……。
+    description: Windows のデスクトップ向けフリーソフトの紹介コーナーです。
   - id: pspsmartphone
     component: GadgetsIcon
     name: ガジェット
