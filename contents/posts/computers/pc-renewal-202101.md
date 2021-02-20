@@ -103,7 +103,7 @@ M.2 SSD や GPU が PCIe Gen 4 に対応している場合はデフォルトで 
 RTX 3070 を PCIe Gen 4 で接続している状態でグラフィックドライバーを有効にすると「強制的にグラフィック ドライバーを再インストールする」という通知が複数回表示され、そのたびに画面全体が数秒程度の暗転を繰り返します。
 
 類似の問題は複数報告されており、いずれも PCIe Gen 3 で接続すると解決したように書かれています。  
-今回も BIOS 画面から PCIe Gen 4 に設定することで正常に動作させることはできました。
+今回も BIOS 画面から PCIe Gen 3 に設定することで正常に動作させることはできました。
 
 ![Settings\\Advanced\\PCI Subsystem Settings\\PCI\_E1 Gen Switch](../media/pc-renewal-202101-bios-pcie-gen3.png)
 
