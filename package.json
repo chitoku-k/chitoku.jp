@@ -104,6 +104,7 @@
     "react-instantsearch-dom/algoliasearch-helper": "^3.2.2"
   },
   "scripts": {
+    "postinstall": "husky install",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "i18n": "extract-messages -o translations -l=ja -d=ja -f yaml 'src/**/*.ts'",
@@ -111,11 +112,6 @@
     "lint:ts": "eslint '{,src,plugins}/**/*.{ts,tsx}'",
     "lint:css": "stylelint 'src/**/*.scss'",
     "start": "gatsby develop"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
