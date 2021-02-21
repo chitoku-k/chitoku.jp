@@ -9,6 +9,7 @@
   ],
   "plugins": [
     ["@babel/plugin-transform-typescript"],
+    ["@babel/plugin-transform-spread"],
     ["react-intl-auto", { "removePrefix": "src/" }]
   ]
 }
