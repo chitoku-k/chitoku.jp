@@ -64,7 +64,7 @@ contacts:
   - service: はてな
     accounts:
       - name: chitoku_k
-        url: http://profile.hatena.ne.jp/chitoku_k/
+        url: https://profile.hatena.ne.jp/chitoku_k/
   - service: ask.fm
     accounts:
       - name: java_shit
