@@ -25,7 +25,7 @@
     "@types/react-instantsearch-core": "^6.8.1",
     "@types/react-instantsearch-dom": "^6.8.0",
     "@types/sass": "^1.16.0",
-    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
     "@typescript-eslint/parser": "^4.15.1",
     "@webcomponents/shadydom": "^1.8.0",
     "algoliasearch": "^4.8.5",
