@@ -86,7 +86,7 @@
     "rehype-react": "^6.2.0",
     "sass": "^1.32.8",
     "schema-dts": "^0.8.2",
-    "stylelint": "^13.10.0",
+    "stylelint": "^13.11.0",
     "stylelint-config-recess-order": "^2.3.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.19.0",
