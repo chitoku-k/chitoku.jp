@@ -2791,10 +2791,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-instantsearch-core@*", "@types/react-instantsearch-core@^6.8.0":
-  version "6.8.0"
-  resolved "https://registry.yarnpkg.com/@types/react-instantsearch-core/-/react-instantsearch-core-6.8.0.tgz#32ac68bfc47cbb67caf8f7bceb01dc19025832bf"
-  integrity sha512-rrFgUClvorTiVNWgzuMrkVtyWOS8YGv0SOkimZV9AepaRk5l8xquvoGN34avMVwQZB4Zqww0zvuG4GfzEURfoA==
+"@types/react-instantsearch-core@*", "@types/react-instantsearch-core@^6.8.1":
+  version "6.8.1"
+  resolved "https://registry.yarnpkg.com/@types/react-instantsearch-core/-/react-instantsearch-core-6.8.1.tgz#9347a8bdb15bbca655a8202766869ebac07660b3"
+  integrity sha512-70TFZdNDSnxsdHg4lUhYjzdVxpPq02zKQD0EUU3vRjv+QNhk5841FKVV9e53CZ54YO9gFcYPvJBkG2wpUJmGrQ==
   dependencies:
     "@types/algoliasearch-helper" "*"
     "@types/react" "*"
