@@ -17,7 +17,7 @@ fancyBox とは画像やメディアなどを拡大表示するための jQuery 
 ## 設置方法
 
 1. jQuery と fancyBox を head 要素内など、スクリプトの設置場所より前に読み込みます（1 ページにつき 1 回）  
-fancyBox は [fancyBox - Fancy jQuery Lightbox Alternative](http://fancyapps.com/fancybox/) からダウンロードして適切なディレクトリに配置してください。
+fancyBox は [fancyBox - Fancy jQuery Lightbox Alternative](https://fancyapps.com/fancybox/) からダウンロードして適切なディレクトリに配置してください。
 
 ```html
 <!-- CSS -->
@@ -76,7 +76,7 @@ fancyBox は [fancyBox - Fancy jQuery Lightbox Alternative](http://fancyapps.com
 
 ### fancyBox のカスタマイズ
 
-表示ボタン（a 要素）の data-\* 属性を使い、[Documentation](http://fancyapps.com/fancybox/#docs) に記載されているオプションでカスタマイズできます。  
+表示ボタン（a 要素）の data-\* 属性を使い、[Documentation](https://fancyapps.com/fancybox/#docs) に記載されているオプションでカスタマイズできます。  
 例：`fitToView` → `data-fit-to-view`
 
 ```html
@@ -91,7 +91,7 @@ fancyBox は [fancyBox - Fancy jQuery Lightbox Alternative](http://fancyapps.com
 
 ### Twitter のカスタマイズ
 
-埋め込みタイムライン（div 要素）の data-\* 属性を使い、[Scripting: Factory Functions | Twitter Developers](https://dev.twitter.com/web/javascript/creating-widgets) に記載されているオプションでカスタマイズできます。  
+埋め込みタイムライン（div 要素）の data-\* 属性を使い、[Scripting: Factory Functions | Twitter Developer](https://developer.twitter.com/en/docs/twitter-for-websites/javascript-api/guides/scripting-factory-functions) に記載されているオプションでカスタマイズできます。  
 例：`showReplies` → `data-show-replies`
 
 ```html
