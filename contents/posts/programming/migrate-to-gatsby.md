@@ -259,7 +259,7 @@ Gatsby 以外の話がかなり長くなりましたが chitoku.jp の Gatsby �
 
 [^1]: [TypeScript definitions for config & plugin APIs by JamesMessinger · Pull Request #10897 · gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby/pull/10897)
 [^2]: [Normalization | In depth | Managing results | Guide | Algolia Documentation](https://www.algolia.com/doc/guides/managing-results/optimize-search-results/handling-natural-languages-nlp/in-depth/normalization/)
-[^3]: [寿司とビールについて話し合いをしてきました | GREE Engineers' Blog](http://labs.gree.jp/blog/2017/04/16406/)
+[^3]: [寿司とビールについて話し合いをしてきました | GREE Engineers' Blog](https://labs.gree.jp/blog/2017/04/16406/)
 [^4]: [コンポーネント時代のi18n – 赤芽 – Medium](https://medium.com/@akameco/%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E6%99%82%E4%BB%A3%E3%81%AEi18n-ef8d5536c6e7)
 [^5]: [chore(typescript): add TypeScript support by chitoku-k · Pull Request #54 · akameco/babel-plugin-react-intl-auto · GitHub](https://github.com/akameco/babel-plugin-react-intl-auto/pull/54)
 [^6]: [babel-plugin-react-intl-auto/readme.md at master · akameco/babel-plugin-react-intl-auto · GitHub](https://github.com/akameco/babel-plugin-react-intl-auto/blob/master/readme.md#typescript)

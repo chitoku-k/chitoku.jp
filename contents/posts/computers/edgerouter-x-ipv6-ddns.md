@@ -81,9 +81,20 @@ $ commit; save
 $ show dns dynamic status
 ```
 
+### CLI から確認した更新状況がおかしい
+
+ddclient は DNS レコードを更新したあとに更新状況をキャッシュに保存します。
+ただ、ddclient に Cloudflare のレコードを複数個設定した場合、先頭のレコード以外の更新状況が正常にキャッシュされません。
+これは 2021/03 時点で Debian 不安定版最新である 3.9.1-7 においても修正が適用されていません。
+
+ddclient に対して以下の PR のパッチを適用することで正常に更新状況が保存されるようになります。
+EdgeRouter の場合は `/usr/sbin/ddclient` にあります。
+
+- [Fixed cloudflare cache not updating properly by Swell61 · Pull Request #98 · ddclient/ddclient](https://github.com/ddclient/ddclient/pull/98)
+
 ### CLI から強制的に更新を実行する
 
-`/etc/ddclient` 以下に `ddclient_インターフェイス名` という名前で設定ファイルが自動生成されています。  
+`/etc/ddclient` 以下に `ddclient_XXX.conf` のような名前で設定ファイルが自動生成されています。  
 以下のコマンドで `/usr/sbin/ddclient` を実行すると原因がわかるかもしれません。  
 （インターフェイス名は読み替えてください）
 

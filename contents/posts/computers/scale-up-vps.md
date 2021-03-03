@@ -10,7 +10,7 @@ SSD の容量とかスペックが足りなくなってきたのでスケール�
 
 1. コントロールパネルで涙を流す
 ![](../media/vps-scale-up.png)
-1. [さくらのVPS ディスク拡張手順 (標準OS CentOS7.2) – さくらのVPSニュース](http://vps-news.sakura.ad.jp/scaleup/disk-expansion_centos7/) を読む
+1. [CentOS7.2 | さくらの VPS ドキュメント](https://manual.sakura.ad.jp/vps/server/disk-expansion/centos7.html) を読む
 1. 祈りながら再起動する
 
 ## メモ

@@ -21,7 +21,7 @@ PSP 開発の黎明期に利用されていたツールで、現在ではほと�
 UNIX 用のソフトウェアを Windows で動作させるためのもので、入手は容易です。  
 ダウンロードしたら、`%WINDIR%\system32` に移動しておきます。
 1. 1 でダウンロードしたインストーラーを実行します。
-1. [SEC](http://sec.pn.to/) の HelloPSP R1 の source code をダウンロードします。  
+1. [SEC](https://sec.pn.to/) の HelloPSP R1 の source code をダウンロードします。  
 ファイル名: `hellopsp_src_Rel1.zip`
 
 これで必要なファイルはすべて揃いました。

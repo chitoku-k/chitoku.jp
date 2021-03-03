@@ -21,7 +21,7 @@ interests:
       - name: ゆるゆり
         url: https://yuruyuri.com/
       - name: ご注文はうさぎですか？
-        url: http://www.gochiusa.com/
+        url: https://gochiusa.com/
       - name: WORKING!!
         url: https://www.wagnaria.com/
       - name: 這いよれ！ニャル子さん
@@ -31,7 +31,7 @@ interests:
       - name: ガヴリールドロップアウト
         url: http://gabdro.com/
       - name: 小林さんちのメイドラゴン
-        url: http://maidragon.jp/
+        url: https://maidragon.jp/
       - name: ひなこのーと
         url: http://hinakonote.jp/
 contacts:
@@ -64,7 +64,7 @@ contacts:
   - service: はてな
     accounts:
       - name: chitoku_k
-        url: http://profile.hatena.ne.jp/chitoku_k/
+        url: https://profile.hatena.ne.jp/chitoku_k/
   - service: ask.fm
     accounts:
       - name: java_shit
