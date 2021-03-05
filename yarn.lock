@@ -5900,14 +5900,7 @@ debug@^3.0.0, debug@^3.1.0, debug@^3.1.1, debug@^3.2.6, debug@^3.2.7:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.0.0, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0, debug@^4.3.1, debug@~4.3.1:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
-  integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
-  dependencies:
-    ms "2.1.2"
-
-debug@^4.3.2:
+debug@^4.0.0, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0, debug@^4.3.1, debug@^4.3.2, debug@~4.3.1:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
   integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
@@ -8592,10 +8585,10 @@ gatsby-transformer-yaml@^2.11.0:
     lodash "^4.17.20"
     unist-util-select "^1.5.0"
 
-gatsby@^2.32.8:
-  version "2.32.8"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.32.8.tgz#9d42c8e85bbbf23f97df4116475843e00eb920aa"
-  integrity sha512-nMtdImSq5QSpRwhtL8VFhTfuvTCGWoeJtrB4+VJFn78NpbYFbcddErF2pp4QkG6jsqSw+kheOHUg46EH+AMO6A==
+gatsby@^2.32.9:
+  version "2.32.9"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.32.9.tgz#8ce47133b143acaa577f8cf0907be89afa3fa514"
+  integrity sha512-4QyrOUGLG6V51YSOJW+cFmRDcey6DnF8YMbsOQ1efp9MJ91fSgOI3r6dYd6lc1lJwppN4KZWbqE9WOXtFgda7w==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/core" "^7.12.3"
