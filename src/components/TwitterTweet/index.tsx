@@ -1,5 +1,5 @@
 import type { FunctionComponent } from 'react'
-import { useCallback, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import type { TweetProps } from 'react-twitter-widgets'
 import { Tweet } from 'react-twitter-widgets'
 import { useMedia } from 'use-media'
@@ -11,18 +11,9 @@ import Link from 'components/Link'
 
 const TwitterTweetError: FunctionComponent<TwitterTweetProps> = ({
   id,
-  onLoad,
 }) => {
   const base = 'https://twitter.com/i/status/'
   const url = `${base}${id}`
-
-  /* eslint-disable react-hooks/exhaustive-deps */
-  useEffect(() => {
-    if (onLoad) {
-      onLoad()
-    }
-  }, [ id ])
-  /* eslint-enable react-hooks/exhaustive-deps */
 
   return (
     <blockquote className={clsx(styles.errorWrapper, 'twitter-tweet')}>
@@ -48,10 +39,35 @@ const TwitterTweet: FunctionComponent<TwitterTweetProps> = ({
   options.theme = useMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light'
 
   const ref = useRef<HTMLDivElement>(null)
-  const onLoad = useCallback(() => {
-    if (ref.current?.style) {
-      ref.current.style.minHeight = document.defaultView?.getComputedStyle(ref.current).height ?? ''
+
+  useEffect(() => {
+    if (typeof window.ResizeObserver === 'undefined') {
+      return
     }
+
+    let innerWidth = window.innerWidth
+    const observer = new ResizeObserver(() => {
+      if (!ref.current?.firstElementChild) {
+        return
+      }
+
+      const height = document.defaultView?.getComputedStyle(ref.current.firstElementChild).height
+      if (!height || !parseInt(height, 10)) {
+        return
+      }
+
+      const minHeight = ref.current.style.minHeight
+      if (innerWidth !== window.innerWidth || !minHeight || parseInt(height, 10) > parseInt(minHeight, 10)) {
+        innerWidth = window.innerWidth
+        ref.current.style.minHeight = height
+      }
+    })
+
+    if (ref.current?.firstElementChild) {
+      observer.observe(ref.current.firstElementChild)
+    }
+
+    return () => observer.disconnect()
   }, [ ref ])
 
   return (
@@ -59,8 +75,7 @@ const TwitterTweet: FunctionComponent<TwitterTweetProps> = ({
       <Tweet
         tweetId={id}
         options={options}
-        onLoad={onLoad}
-        renderError={renderError({ id, onLoad })}
+        renderError={renderError({ id })}
         {...rest} />
     </div>
   )
