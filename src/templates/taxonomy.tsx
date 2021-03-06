@@ -2,14 +2,14 @@ import type { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from 'components/Layout'
-import ArticleContainer from 'components/ArticleContainer'
-import Container from 'components/Container'
-import Metadata from 'components/Metadata'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
-import type { ArticleCategoryItem, ArticleItem, ArticleTagItem } from 'components/Article'
+import Container from 'components/Container'
 import Article from 'components/Article'
+import ArticleContainer from 'components/ArticleContainer'
+import Metadata from 'components/Metadata'
+import type { ArticleCategoryItem, ArticleItem, ArticleTagItem } from 'components/Article'
 import type { Page } from 'components/Pagination'
 import Pagination, {
   PaginationContainer,
