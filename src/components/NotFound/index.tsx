@@ -4,7 +4,7 @@ import { FormattedMessage, useIntl } from 'react-intl'
 import { Location } from '@reach/router'
 
 import messages from './messages'
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 import type { AboutYamlContacts, NotFoundItemQuery } from 'graphql-types'
 
 import Container from 'components/Container'

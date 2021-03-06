@@ -3,7 +3,7 @@ import { IntlProvider } from 'react-intl'
 
 import '../../styles/styles.scss'
 import messages from 'translations/ja.yml'
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 
 import Search from 'components/Search'
 

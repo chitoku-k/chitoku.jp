@@ -7,7 +7,7 @@ import { faTags } from '@fortawesome/free-solid-svg-icons'
 import { useIntl } from 'react-intl'
 
 import messages from './messages'
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 import type { ArticleFragment, ArticleQuery } from 'graphql-types'
 
 import ArticleBody from 'components/ArticleBody'

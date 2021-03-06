@@ -7,7 +7,7 @@ import type { SearchBoxProvided } from 'react-instantsearch-core'
 import { connectSearchBox } from 'react-instantsearch-dom'
 
 import messages from './messages'
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 
 const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
   search,

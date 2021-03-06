@@ -3,7 +3,7 @@ import { Dropdown } from 'react-bootstrap'
 import { Location } from '@reach/router'
 import clsx from 'clsx'
 
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 
 import type { NavigationLinkItem } from 'components/Navbar'
 import NavDropdown from 'components/NavDropdown'

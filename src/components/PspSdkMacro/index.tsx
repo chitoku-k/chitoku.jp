@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-c'
 
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 import type { MacrosYamlParameters } from 'graphql-types'
 
 import { ArticleContext } from 'components/Article'

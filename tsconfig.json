@@ -11,6 +11,14 @@
         "src/components/*"
       ]
     },
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "classnameTransform": "camelCaseOnly"
+        }
+      }
+    ],
     "target": "es2015",
     "module": "esnext",
     "moduleResolution": "node",
