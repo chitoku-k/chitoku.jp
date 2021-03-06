@@ -1,6 +1,5 @@
 import type { GatsbyConfig } from 'gatsby'
 import * as dotenv from 'dotenv-safe'
-import * as sass from 'sass'
 import postcssCustomProperties from 'postcss-custom-properties'
 
 import { description } from './package.json'
@@ -70,7 +69,6 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        implementation: sass,
         cssLoaderOptions: {
           camelCase: 'only',
         },
