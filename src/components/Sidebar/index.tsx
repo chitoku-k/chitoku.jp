@@ -9,7 +9,7 @@ import { faCoffee, faRss } from '@fortawesome/free-solid-svg-icons'
 import clsx from 'clsx'
 
 import messages from './messages'
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 import type { SidebarItemQuery } from 'graphql-types'
 
 import {

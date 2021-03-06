@@ -7,7 +7,7 @@ import { useIntl } from 'react-intl'
 import clsx from 'clsx'
 
 import messages from './messages'
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 import icon from './icon.png'
 import type { SoarerDownloadItemQuery } from 'graphql-types'
 

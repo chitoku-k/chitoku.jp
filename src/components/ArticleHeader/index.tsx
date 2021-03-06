@@ -1,7 +1,7 @@
 import type { DetailedHTMLProps, FunctionComponent, HTMLAttributes, ReactNode } from 'react'
 import clsx from 'clsx'
 
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 
 const ArticleHeader: FunctionComponent<ArticleHeaderProps & Omit<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>, 'title'>> = ({
   children,

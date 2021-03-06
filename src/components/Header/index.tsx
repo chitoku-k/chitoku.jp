@@ -1,7 +1,7 @@
 import type { FunctionComponent } from 'react'
 import { Container, Row } from 'react-bootstrap'
 
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 import Logo from '../../assets/logo.svg'
 
 import Link from 'components/Link'

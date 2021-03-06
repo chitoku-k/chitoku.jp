@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import messages from './messages'
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 import type { FooterItemQuery } from 'graphql-types'
 
 import Link from 'components/Link'

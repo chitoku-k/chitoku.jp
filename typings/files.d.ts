@@ -3,7 +3,7 @@ declare module 'translations/ja.yml' {
 
 declare module '*.scss' {
   const classes: Record<string, string>
-  export default classes
+  export = classes
 }
 
 declare module '*.svg' {

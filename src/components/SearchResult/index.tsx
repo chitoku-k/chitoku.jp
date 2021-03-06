@@ -5,7 +5,7 @@ import { Hits, PoweredBy, connectStateResults } from 'react-instantsearch-dom'
 import Highlighter from 'react-highlight-words'
 
 import messages from './messages'
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'

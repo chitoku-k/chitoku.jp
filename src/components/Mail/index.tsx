@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faCircleNotch, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 import messages from './messages'
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'

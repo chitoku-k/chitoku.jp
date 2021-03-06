@@ -2,7 +2,7 @@ import type { ComponentType, FunctionComponent } from 'react'
 import { createElement, useMemo } from 'react'
 import RehypeReact from 'rehype-react'
 
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 
 import type { ArticleAstNode } from 'components/Article'
 

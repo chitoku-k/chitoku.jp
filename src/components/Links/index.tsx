@@ -2,7 +2,7 @@ import type { FunctionComponent } from 'react'
 import { useIntl } from 'react-intl'
 
 import messages from './messages'
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 import type { LinksItemQuery } from 'graphql-types'
 
 import Metadata from 'components/Metadata'

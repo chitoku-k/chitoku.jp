@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
 
 import messages from './messages'
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 import type { SoarerHistoryItemQuery } from 'graphql-types'
 
 const query = graphql`

@@ -5,7 +5,7 @@ import { Tweet } from 'react-twitter-widgets'
 import { useMedia } from 'use-media'
 import clsx from 'clsx'
 
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 
 import Link from 'components/Link'
 

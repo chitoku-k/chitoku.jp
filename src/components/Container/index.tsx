@@ -5,7 +5,7 @@ import type { StateResultsProvided } from 'react-instantsearch-core'
 import { connectStateResults } from 'react-instantsearch-dom'
 import clsx from 'clsx'
 
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 
 import Sidebar from 'components/Sidebar'
 import SearchResult from 'components/SearchResult'

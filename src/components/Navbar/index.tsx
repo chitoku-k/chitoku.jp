@@ -6,7 +6,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { graphql, useStaticQuery } from 'gatsby'
 import clsx from 'clsx'
 
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 import type { NavigationLinkItemQuery, NavigationsYamlNav } from 'graphql-types'
 
 import SearchForm from 'components/SearchForm'

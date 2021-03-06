@@ -3,7 +3,7 @@ import { Fragment } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import clsx from 'clsx'
 
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 import type { HomeItemQuery } from 'graphql-types'
 
 import Container from 'components/Container'
