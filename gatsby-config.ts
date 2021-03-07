@@ -53,7 +53,6 @@ const config: GatsbyConfig = {
       options: {
         config: {
           conservativeCollapse: true,
-          preserveLineBreaks: true,
         },
       },
     },
