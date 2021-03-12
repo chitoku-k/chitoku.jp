@@ -23,7 +23,7 @@
     "@types/react-helmet": "^6.1.0",
     "@types/react-highlight-words": "^0.16.1",
     "@types/react-instantsearch-core": "^6.10.1",
-    "@types/react-instantsearch-dom": "^6.8.0",
+    "@types/react-instantsearch-dom": "^6.10.0",
     "@types/sass": "^1.16.0",
     "@typescript-eslint/eslint-plugin": "^4.16.1",
     "@typescript-eslint/parser": "^4.17.0",
