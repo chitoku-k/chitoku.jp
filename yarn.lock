@@ -8052,10 +8052,10 @@ gatsby-source-filesystem@^3.0.0:
     valid-url "^1.0.9"
     xstate "^4.14.0"
 
-gatsby-source-local-git@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-local-git/-/gatsby-source-local-git-1.2.0.tgz#95dc102adc2cd7b5567d642d45c6dceeb780d83e"
-  integrity sha512-q3gzcH4zJ1q9sXYggB+wcKHj8EM7EyVLbTFCAb5XCLlyDUVMWrGEyehtwrMU9tTg41leZlF+tbqPP3AXi8f8kA==
+gatsby-source-local-git@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/gatsby-source-local-git/-/gatsby-source-local-git-1.2.2.tgz#11b61afbf36bf3f57e8ee6364bc9e7d153488a5d"
+  integrity sha512-VVUtBOaSPRYsgj1Fm0fmebadDhWFu9q2Anxa/+LNwYYToRRm5qNblrnQJfzwq1cbchVZ+SxjDz1eDaqk03UJTA==
   dependencies:
     simple-git "^2.36.0"
 
