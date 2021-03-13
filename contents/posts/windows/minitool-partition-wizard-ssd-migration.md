@@ -1,6 +1,6 @@
 ---
 title: MiniTool Partition Wizard で SSD を引っ越してみた
-created: 2021-03-08T22:55:25+09:00
+created: 2021-03-13T20:40:12+09:00
 category: Windows
 ---
 わたしの PC では今まで Windows と Linux を 1 枚の SSD にインストールしていていましたが、SSD をもう 1 枚入手したので引越しと領域拡張をしてみました。
