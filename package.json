@@ -7,7 +7,7 @@
     "@babel/core": "^7.13.10",
     "@babel/plugin-transform-typescript": "^7.13.0",
     "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-regular-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
