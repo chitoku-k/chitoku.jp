@@ -3,9 +3,9 @@ import type { FunctionComponent } from 'react'
 import type { HomeItemQuery } from 'graphql-types'
 
 import Container from 'components/Container'
+import ArticleCard from 'components/ArticleCard'
 import ArticleContainer from 'components/ArticleContainer'
 import Metadata from 'components/Metadata'
-import ArticleCard from '../ArticleCard'
 
 const Home: FunctionComponent<HomeProps> = ({
   pages,

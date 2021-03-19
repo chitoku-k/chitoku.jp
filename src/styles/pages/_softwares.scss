@@ -5,17 +5,18 @@ article.page-softwares {
     background: none;
     border: none;
 
+    &,
     > a {
       display: inline-flex;
       align-items: center;
+    }
 
-      > .gatsby-resp-image-wrapper {
-        width: 48px;
-        max-width: none !important;
-        height: 48px;
-        margin-right: 12px !important;
-        margin-left: 0 !important;
-      }
+    .gatsby-resp-image-wrapper {
+      width: 48px;
+      max-width: none !important;
+      height: 48px;
+      margin-right: 12px !important;
+      margin-left: 0 !important;
     }
   }
 
