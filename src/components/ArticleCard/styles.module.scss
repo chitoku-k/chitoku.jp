@@ -1,0 +1,28 @@
+@import "src/styles/modules";
+
+.col {
+  padding: 0;
+
+  & + & {
+    padding-left: 20px;
+
+    @include media-breakpoint-down(md) {
+      padding-left: 15px;
+    }
+  }
+}
+
+.row {
+  margin-bottom: 8px;
+  margin-left: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.link {
+  font-size: 120%;
+  font-weight: bold;
+  color: var(--containers-color);
+}

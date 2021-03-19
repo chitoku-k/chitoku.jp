@@ -8,24 +8,6 @@
   text-align: right;
 }
 
-.header-attribute-icon {
-  margin-right: 0.2em;
-}
-
-.header-attribute-item {
-  & + & {
-    display: inline-block;
-    margin-left: 0.8em;
-  }
-}
-
-.header-attribute-link {
-  &,
-  &:hover {
-    color: var(--containers-color);
-  }
-}
-
 .navbar {
   padding: 0;
   background-color: var(--subnav-background) !important;

@@ -1,15 +1,13 @@
-import type { FunctionComponent, ReactNode } from 'react'
+import type { FunctionComponent } from 'react'
 import { createContext } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendar, faFolderOpen } from '@fortawesome/free-regular-svg-icons'
-import { faTags } from '@fortawesome/free-solid-svg-icons'
 import { useIntl } from 'react-intl'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
 import type { ArticleFragment, ArticleQuery } from 'graphql-types'
 
+import ArticleAttribute from 'components/ArticleAttribute'
 import ArticleBody from 'components/ArticleBody'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
@@ -18,8 +16,6 @@ import NavItem from 'components/NavItem'
 import { PaginationContainer, SimplePagination } from 'components/Pagination'
 
 export const getClassNameFromPath = (path: string): string => `page${path.replace(/[/]/ug, '-').replace(/-$/u, '')}`
-
-const isTag = (tag: ArticleTagItem | null): tag is ArticleTagItem => Boolean(tag?.name)
 
 const current: ArticleItem = {
   path: '',
@@ -36,15 +32,12 @@ const Article: FunctionComponent<ArticleProps> = ({
   prev,
   next,
 }) => {
-  const { formatMessage, formatDate } = useIntl()
+  const { formatMessage } = useIntl()
   const {
     path,
     attributes: {
       title,
-      created,
       navigation,
-      category,
-      tags,
     },
     htmlAst,
     excerptAst,
@@ -57,37 +50,7 @@ const Article: FunctionComponent<ArticleProps> = ({
       <ArticleContainer className={getClassNameFromPath(path)}>
         <ArticleHeader title={<Link to={path}>{title}</Link>}>
           <div className={styles.headerAttribute}>
-            {category ? (
-              <span className={styles.headerAttributeItem}>
-                <FontAwesomeIcon className={styles.headerAttributeIcon} icon={faFolderOpen} />
-                <Link className={styles.headerAttributeLink} to={category.path}>{category.name}</Link>
-              </span>
-            ) : null}
-            {tags?.filter(isTag).length ? (
-              <span className={styles.headerAttributeItem}>
-                <FontAwesomeIcon className={styles.headerAttributeIcon} icon={faTags} />
-                {tags
-                  .filter(isTag)
-                  .map(({ name, slug }) => <Link key={slug} className={styles.headerAttributeLink} to={`/tag/${slug}`}>{name}</Link>)
-                  .reduce<ReactNode[]>((el, curr) => el.length ? [ el, ', ', curr ] : [ curr ], [])}
-              </span>
-            ) : null}
-            {created ? (
-              <span className={styles.headerAttributeItem} title={formatDate(new Date(created), {
-                year: 'numeric',
-                month: 'narrow',
-                day: 'numeric',
-                hour: 'numeric',
-                minute: 'numeric',
-              })}>
-                <FontAwesomeIcon className={styles.headerAttributeIcon} icon={faCalendar} />
-                {formatDate(new Date(created), {
-                  year: 'numeric',
-                  month: 'narrow',
-                  day: 'numeric',
-                })}
-              </span>
-            ) : null}
+            <ArticleAttribute article={article} />
           </div>
         </ArticleHeader>
         {navigation ? (
