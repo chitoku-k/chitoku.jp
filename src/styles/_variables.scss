@@ -14,7 +14,7 @@ $font-family-sans-serif:
   /* Android */
   "Roboto",
   /* Windows */
-  "Verdana", "Meiryo",
+  "Verdana", "BIZ UDゴシック", "Meiryo",
   /* macOS */
   "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3",
   /* Fallback */
@@ -23,7 +23,7 @@ $font-family-sans-serif:
   #{$font-family-emoji-base};
 $font-family-monospace:
   /* Windows */
-  Consolas,
+  Consolas, "BIZ UDゴシック",
   /* macOS */
   Menlo, Monaco, "Andale Mono",
   /* Ubuntu */
