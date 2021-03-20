@@ -127,7 +127,6 @@
   "workspaces": [
     "plugins/historia-compat-plugin",
     "plugins/historia-feed-plugin",
-    "plugins/historia-recotw-plugin",
     "plugins/historia-remark-plugin",
     "plugins/historia-soarer-update-plugin",
     "plugins/historia-taxonomy-plugin"

@@ -150,7 +150,6 @@ const config: GatsbyConfig = {
     { resolve: 'gatsby-transformer-yaml' },
     { resolve: 'historia-compat-plugin' },
     { resolve: 'historia-feed-plugin' },
-    { resolve: 'historia-recotw-plugin' },
     {
       resolve: 'historia-taxonomy-plugin',
       options: {
