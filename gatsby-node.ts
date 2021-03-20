@@ -48,6 +48,19 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
   createTypes(await fs.readFile(path.resolve('schema.gql'), { encoding: 'utf-8' }))
 }
 
+export const createPages: GatsbyNode['createPages'] = ({
+  actions: {
+    createRedirect,
+  },
+}) => {
+  createRedirect({
+    fromPath: '/latest',
+    toPath: '/',
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+}
+
 export const onCreatePage: GatsbyNode['onCreatePage'] = ({
   page,
   actions: {
