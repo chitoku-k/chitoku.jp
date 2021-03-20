@@ -22,6 +22,7 @@ import {
 import { MetadataContext } from 'components/Metadata'
 import NavItem from 'components/NavItem'
 import Link from 'components/Link'
+import SubHeader from '../SubHeader'
 
 const query = graphql`
   query SidebarItem {
@@ -88,9 +89,9 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
   return (
     <Col className={styles.container} as="aside">
       <div className={styles.item}>
-        <h2 className={styles.title}>
+        <SubHeader className={styles.shareHeader}>
           {formatMessage(messages.share)}
-        </h2>
+        </SubHeader>
         <div className={styles.shareContainer}>
           <TwitterShareButton title={title} url={url} />
           <FacebookShareButton url={url} />
@@ -100,15 +101,13 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
         </div>
       </div>
       <div className={styles.item}>
-        <h2 className={styles.title}>
-          <Link to="/latest">
-            {formatMessage(messages.latest_articles)}
-          </Link>
+        <SubHeader>
+          {formatMessage(messages.latest_articles)}
           <Link className={styles.feed} to={`${siteUrl}/feed/atom/`} target="_blank">
             <FontAwesomeIcon className={styles.icon} icon={faRss} />
             RSS
           </Link>
-        </h2>
+        </SubHeader>
         <ul className={styles.latest}>
           {latest.items.map(({ article }) => (
             <li key={article.path} className={styles.latestItem}>
@@ -142,9 +141,9 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
         </ul>
       </div>
       <div className={styles.item}>
-        <h2 className={styles.title}>
+        <SubHeader>
           {formatMessage(messages.links)}
-        </h2>
+        </SubHeader>
         <ul className={styles.categories}>
           {sidebar.map(item => (
             <NavItem key={item.name} {...item} />

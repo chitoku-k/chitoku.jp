@@ -22,7 +22,11 @@
 }
 
 .link {
+  &,
+  &:hover {
+    color: var(--containers-color);
+  }
+
   font-size: 120%;
   font-weight: bold;
-  color: var(--containers-color);
 }

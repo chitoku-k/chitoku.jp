@@ -75,16 +75,6 @@ type GitCommit implements Node {
   ): Date!
   latest: Boolean!
 }
-type HomeYaml implements Node {
-  items: [HomeYamlItems!]!
-}
-type HomeYamlItems {
-  id: String!
-  component: String!
-  name: String!
-  to: String!
-  description: String!
-}
 type LinksYaml implements Node {
   items: [LinksYamlItems!]!
 }

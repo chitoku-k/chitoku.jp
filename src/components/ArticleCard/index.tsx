@@ -5,7 +5,7 @@ import * as styles from './styles.module.scss'
 import type { ArticleFragment } from 'typings/graphql-types'
 
 import ArticleAttribute from 'components/ArticleAttribute'
-import ArticleIcon from 'components/ArticleIcon'
+import CategoryIcon from 'components/CategoryIcon'
 import Link from 'components/Link'
 
 const ArticleCard: FunctionComponent<ArticleCardProps> = ({
@@ -13,7 +13,7 @@ const ArticleCard: FunctionComponent<ArticleCardProps> = ({
 }) => (
   <Row>
     <Col className={styles.col} xs="auto">
-      <ArticleIcon article={article} />
+      <CategoryIcon to={article.path} category={article.attributes.category} />
     </Col>
     <Col className={styles.col}>
       <Row className={styles.row}>

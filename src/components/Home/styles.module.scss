@@ -1,0 +1,32 @@
+.container {
+  padding-bottom: 0;
+
+  svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.row {
+  padding: 0;
+}
+
+.col {
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+.link {
+  &,
+  &:hover {
+    color: var(--containers-color);
+  }
+
+  margin-left: 10px;
+  font-size: 120%;
+  font-weight: bold;
+}

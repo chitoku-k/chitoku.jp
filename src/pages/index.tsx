@@ -10,6 +10,11 @@ import Home from 'components/Home'
 
 export const pageQuery = graphql`
   query HomeItem {
+    home: homeYaml {
+      categories {
+        ...Category
+      }
+    }
     pages: allMarkdownRemark(
       filter: { frontmatter: { created: { ne: null } } }
       sort: { fields: [ frontmatter___created ], order: DESC }

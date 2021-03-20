@@ -2,7 +2,7 @@ import type { FunctionComponent } from 'react'
 import clsx from 'clsx'
 
 import * as styles from './styles.module.scss'
-import type { ArticleFragment } from 'typings/graphql-types'
+import type { CategoryFragment } from 'typings/graphql-types'
 
 import Link from 'components/Link'
 import computers from '../../assets/computers.svg'
@@ -23,16 +23,10 @@ const icons: Icon = {
   windows,
 }
 
-const ArticleIcon: FunctionComponent<ArticleIconProps> = ({
-  article,
+const CategoryIcon: FunctionComponent<CategoryIconProps> = ({
+  category,
+  to,
 }) => {
-  const {
-    path,
-    attributes: {
-      category,
-    },
-  } = article
-
   if (!category || !(category.thumbnail in icons)) {
     return (
       <div />
@@ -40,17 +34,20 @@ const ArticleIcon: FunctionComponent<ArticleIconProps> = ({
   }
 
   const ThumbnailIcon = icons[category.thumbnail]
-  return (
-    <Link to={path} className={clsx(styles.icon, styles[category.thumbnail])}>
+  return to ? (
+    <Link to={to} className={clsx(styles.icon, styles[category.thumbnail])}>
       <ThumbnailIcon viewBox="0 0 100 100" />
     </Link>
+  ) : (
+    <ThumbnailIcon viewBox="0 0 100 100" />
   )
 }
 
 type Icon = Record<string, React.ComponentType<React.SVGAttributes<Element>>>
 
-interface ArticleIconProps {
-  article: Omit<ArticleFragment, 'excerpted'>
+interface CategoryIconProps {
+  to?: string
+  category?: CategoryFragment | null
 }
 
-export default ArticleIcon
+export default CategoryIcon

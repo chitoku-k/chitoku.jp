@@ -13,6 +13,7 @@ const config: GatsbyConfig = {
     title: description,
   },
   mapping: {
+    'HomeYaml.categories': 'CategoriesYaml',
     'MarkdownRemark.frontmatter.category': 'CategoriesYaml',
     'MarkdownRemark.frontmatter.tags': 'TagsYaml',
     'MarkdownRemark.frontmatter.functions': 'FunctionsYaml.name',
