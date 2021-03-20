@@ -29,4 +29,8 @@
 
   font-size: 120%;
   font-weight: bold;
+
+  @include media-breakpoint-down(md) {
+    font-size: 100%;
+  }
 }

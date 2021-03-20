@@ -1,10 +1,7 @@
+@import "src/styles/modules";
+
 .container {
   padding-bottom: 0;
-
-  svg {
-    width: 60px;
-    height: 60px;
-  }
 }
 
 .header {
@@ -13,11 +10,66 @@
 
 .row {
   padding: 0;
+  -webkit-overflow-scrolling: touch;
+
+  @include media-breakpoint-down(sm) {
+    flex-wrap: nowrap;
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow-x: auto;
+
+    &.row {
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+  }
 }
 
 .col {
   padding: 0;
   padding-bottom: 20px;
+
+  @include media-breakpoint-down(sm) {
+    max-width: 100%;
+    padding-bottom: 15px;
+  }
+}
+
+.category {
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    width: 80px;
+  }
+}
+
+.icon {
+  padding: 0;
+
+  svg {
+    width: 60px;
+    height: 60px;
+
+    @include media-breakpoint-down(sm) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+}
+
+.name {
+  padding: 0;
+  margin: 0 10px;
+
+  @include media-breakpoint-down(sm) {
+    margin: 0;
+    line-height: 1;
+    text-align: center;
+  }
 }
 
 .link {
@@ -26,7 +78,12 @@
     color: var(--containers-color);
   }
 
-  margin-left: 10px;
   font-size: 120%;
   font-weight: bold;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    margin-top: 6px;
+    font-size: 8px;
+  }
 }

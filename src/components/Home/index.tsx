@@ -38,11 +38,17 @@ const Home: FunctionComponent<HomeProps> = ({
         </SubHeader>
         <Row className={styles.row}>
           {home.categories.filter(isCategory).map(category => (
-            <Col key={category.path} className={styles.col} xs={4}>
-              <CategoryIcon to={category.path} category={category} />
-              <Link className={styles.link} to={category.path}>
-                {category.name}
-              </Link>
+            <Col key={category.path} className={styles.col} xs={2} md={4}>
+              <Row className={styles.category}>
+                <Col className={styles.icon} xs={12} md="auto">
+                  <CategoryIcon to={category.path} category={category} />
+                </Col>
+                <Col className={styles.name}>
+                  <Link className={styles.link} to={category.path}>
+                    {category.name}
+                  </Link>
+                </Col>
+              </Row>
             </Col>
           ))}
         </Row>
