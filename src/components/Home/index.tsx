@@ -2,7 +2,7 @@ import type { FunctionComponent } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { useIntl } from 'react-intl'
 
-import type { CategoryFragment, HomeItemQuery } from 'graphql-types'
+import type { CategoryFragment, HomeQuery } from 'graphql-types'
 import messages from './messages'
 
 import Container from 'components/Container'
@@ -10,7 +10,6 @@ import ArticleCard from 'components/ArticleCard'
 import ArticleContainer from 'components/ArticleContainer'
 import CategoryIcon from 'components/CategoryIcon'
 import Link from 'components/Link'
-import Metadata from 'components/Metadata'
 import SubHeader from 'components/SubHeader'
 
 import * as styles from './styles.module.scss'
@@ -18,6 +17,7 @@ import * as styles from './styles.module.scss'
 const isCategory = (category: CategoryFragment | null): category is CategoryFragment => Boolean(category)
 
 const Home: FunctionComponent<HomeProps> = ({
+  children,
   home,
   pages: {
     items,
@@ -31,7 +31,6 @@ const Home: FunctionComponent<HomeProps> = ({
 
   return (
     <Container>
-      <Metadata title={null} />
       <ArticleContainer className={styles.container}>
         <SubHeader className={styles.header}>
           {formatMessage(messages.categories)}
@@ -58,10 +57,11 @@ const Home: FunctionComponent<HomeProps> = ({
           <ArticleCard article={article} />
         </ArticleContainer>
       ))}
+      {children}
     </Container>
   )
 }
 
-type HomeProps = HomeItemQuery
+type HomeProps = HomeQuery
 
 export default Home

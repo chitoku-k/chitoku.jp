@@ -154,7 +154,12 @@ const config: GatsbyConfig = {
     {
       resolve: 'historia-taxonomy-plugin',
       options: {
-        limit: 5,
+        taxonomies: {
+          limit: 5,
+        },
+        home: {
+          limit: 10,
+        },
       },
     },
     { resolve: 'historia-soarer-update-plugin' },

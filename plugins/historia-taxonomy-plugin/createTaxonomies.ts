@@ -1,6 +1,9 @@
 import * as path from 'path'
 import type { BuildArgs, Page } from 'gatsby'
 
+import type { Paginatable } from './utils'
+import { splitPages } from './utils'
+
 type TaxonomiesArgs = Pick<BuildArgs, 'graphql'> & { limit: number }
 
 export interface Category {
@@ -32,24 +35,10 @@ interface Data {
   }
 }
 
-export interface TaxonomyContext {
+export interface TaxonomyContext extends Paginatable {
   category: Category | null
   tag: Tag | null
   ids: string[]
-  page: {
-    current: number
-    total: number
-  }
-}
-
-const splitPages = (items: Article[], limit: number): Article[][] => {
-  const pages: Article[][] = []
-
-  while (pages.length * limit < items.length) {
-    pages.push(items.slice(pages.length * limit, (pages.length + 1) * limit))
-  }
-
-  return pages
 }
 
 const createTaxonomies = async ({
