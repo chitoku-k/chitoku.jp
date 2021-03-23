@@ -76,7 +76,7 @@ const Metadata: FunctionComponent<MetadataItem> = ({
   return (
     <Location>
       {({ location }) => (
-        <Helmet>
+        <Helmet defer={false}>
           <html lang="ja" />
           <meta property="og:type" content={metadata.type} />
           <meta property="og:url" content={siteUrl + location.pathname} />
