@@ -104,12 +104,14 @@
 
 .description {
   margin-top: 2px;
-  font-size: 60%;
+  font-size: 75%;
   color: var(--sidebar-description);
 
   @include media-breakpoint-down(sm) {
     display: inline-block;
     margin-top: 6px;
+    font-size: 65%;
+    line-height: 1.2;
     text-align: left;
   }
 }
