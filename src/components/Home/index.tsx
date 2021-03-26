@@ -14,7 +14,7 @@ import SubHeader from 'components/SubHeader'
 
 import * as styles from './styles.module.scss'
 
-const isCategory = (category: CategoryFragment | null): category is CategoryFragment => Boolean(category)
+const isCategory = (category: CategoryFragment | null): category is Category => Boolean(category)
 
 const Home: FunctionComponent<HomeProps> = ({
   children,
@@ -46,6 +46,7 @@ const Home: FunctionComponent<HomeProps> = ({
                   <Link className={styles.link} to={category.path}>
                     {category.name}
                   </Link>
+                  <div className={styles.description}>{category.description}</div>
                 </Col>
               </Row>
             </Col>
@@ -63,5 +64,9 @@ const Home: FunctionComponent<HomeProps> = ({
 }
 
 type HomeProps = HomeQuery
+
+interface Category extends CategoryFragment {
+  description: string
+}
 
 export default Home

@@ -1,4 +1,5 @@
 id: コンピューター
 name: コンピューター
+description: VM、コンテナーなど
 path: /computers/
 thumbnail: computers

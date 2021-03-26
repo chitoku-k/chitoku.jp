@@ -32,13 +32,20 @@
   @include media-breakpoint-down(sm) {
     max-width: 100%;
     padding-bottom: 15px;
+    margin-right: 5px;
+
+    &:last-child {
+      padding-right: 15px;
+    }
   }
 }
 
 .category {
+  flex-wrap: nowrap;
   align-items: center;
 
   @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
     width: 80px;
   }
 }
@@ -63,10 +70,13 @@
 
 .name {
   padding: 0;
-  margin: 0 10px;
+  margin: 0 0 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   @include media-breakpoint-down(sm) {
     margin: 0;
+    overflow: visible;
     line-height: 1;
     text-align: center;
   }
@@ -80,10 +90,26 @@
 
   font-size: 120%;
   font-weight: bold;
+  white-space: nowrap;
 
   @include media-breakpoint-down(sm) {
     display: block;
     margin-top: 6px;
-    font-size: 8px;
+    overflow: hidden;
+    font-size: 80%;
+    text-align: center;
+    text-overflow: ellipsis;
+  }
+}
+
+.description {
+  margin-top: 2px;
+  font-size: 60%;
+  color: var(--sidebar-description);
+
+  @include media-breakpoint-down(sm) {
+    display: inline-block;
+    margin-top: 6px;
+    text-align: left;
   }
 }

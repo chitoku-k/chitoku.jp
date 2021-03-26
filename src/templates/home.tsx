@@ -41,6 +41,7 @@ export const pageQuery = graphql`
     home: homeYaml {
       categories {
         ...Category
+        description
       }
     }
     pages: allMarkdownRemark(
