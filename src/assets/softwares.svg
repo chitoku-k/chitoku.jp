@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   width="100"
+   height="100"
+   version="1.1">
+  <path
+     shape-rendering="crispEdges"
+     d="m10 15v60h53v-2h-51v-52h76v52h-7l1.6758 2h7.3242v-60zm1.7969 1.0156h14v4h-14z" />
+  <path
+     d="m11.297 15.516v5h15v-5zm2.5156 0.70312c0.99239 0 1.7812 0.82011 1.7812 1.8125s-0.78886 1.7812-1.7812 1.7812-1.8125-0.78886-1.8125-1.7812 0.82011-1.8125 1.8125-1.8125zm5 0c0.99239 0 1.7812 0.82011 1.7812 1.8125s-0.78886 1.7812-1.7812 1.7812-1.8125-0.78886-1.8125-1.7812 0.82011-1.8125 1.8125-1.8125zm5 0c0.99239 0 1.7812 0.82011 1.7812 1.8125s-0.78886 1.7812-1.7812 1.7812-1.8125-0.78886-1.8125-1.7812 0.82011-1.8125 1.8125-1.8125z" />
+  <rect
+     shape-rendering="crispEdges"
+     x="17"
+     y="26"
+     width="20"
+     height="42" />
+  <rect
+     shape-rendering="crispEdges"
+     x="42"
+     y="26"
+     width="10"
+     height="10" />
+  <rect
+     shape-rendering="crispEdges"
+     x="42"
+     y="38"
+     width="41"
+     height="2" />
+  <rect
+     shape-rendering="crispEdges"
+     x="42"
+     y="42"
+     width="41"
+     height="2" />
+  <rect
+     shape-rendering="crispEdges"
+     x="42"
+     y="46"
+     width="41"
+     height="2" />
+  <rect
+     shape-rendering="crispEdges"
+     x="54"
+     y="26"
+     width="29"
+     height="2" />
+  <rect
+     shape-rendering="crispEdges"
+     x="54"
+     y="30"
+     width="29"
+     height="2" />
+  <rect
+     shape-rendering="crispEdges"
+     x="54"
+     y="34"
+     width="29"
+     height="2" />
+  <rect
+     shape-rendering="crispEdges"
+     x="42"
+     y="50"
+     width="41"
+     height="2" />
+  <path
+     d="m71 78.999c1.3333-0.33334 2.6666-0.66667 4-1 2.1346 6.1812 1.2904 3.5322 3.425 9.7142-1.2579 0.44198-2.6223 0.77758-3.8802 1.2195-2.2099-6.2899-1.3348-3.6438-3.5447-9.9338zm-6.0001-24 1.43e-4 28c2.0344-1.3311 4.0344-2.7399 6.0902-4.0225 1.3989-0.30387 2.7759-0.7862 4.1887-0.97745l7.721 5e-6c-6-7.6667-12-15.333-18-23z" />
+</svg>

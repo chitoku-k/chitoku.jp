@@ -1,120 +1,117 @@
 @import "src/styles/modules";
 
-$items: pspprogramming, soarer, recotw, windows, pspsmartphone, programming;
-
-.wrapper {
-  position: relative;
-  width: 175px;
-  height: 175px;
-  margin: 0 auto;
-
-  @include media-breakpoint-down(sm) {
-    float: left;
-    width: 44px;
-    height: 44px;
-  }
+.container {
+  padding-bottom: 0;
 }
 
-.curtain {
-  position: absolute;
-  top: 28px;
-  left: 28px;
-  width: 120px;
-  height: 120px;
-  background-color: var(--home-color);
-  transform: rotate(45deg);
-
-  @include media-breakpoint-down(sm) {
-    top: 8px;
-    left: 8px;
-    width: 29px;
-    height: 29px;
-  }
-}
-
-.item {
-  padding: 10px 0 0 0;
+.header {
   margin-bottom: 20px;
-  text-align: center;
+}
+
+.row {
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
 
   @include media-breakpoint-down(sm) {
-    flex: 0 0 100%;
-    width: 100%;
+    flex-wrap: nowrap;
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow-x: auto;
+
+    &.row {
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+  }
+}
+
+.col {
+  padding: 0;
+  padding-bottom: 20px;
+
+  @include media-breakpoint-down(sm) {
     max-width: 100%;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    margin-bottom: 0;
-    text-align: left;
-    border-bottom: 1px solid var(--table-border);
+    padding-bottom: 15px;
+    margin-right: 5px;
 
-    &:first-of-type {
-      padding-top: 0;
+    &:last-child {
+      padding-right: 15px;
     }
+  }
+}
 
-    &:last-of-type {
-      padding-bottom: 0;
-      margin-bottom: 6px;
-      border: none;
+.category {
+  flex-wrap: nowrap;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
+    width: 80px;
+  }
+}
+
+.icon {
+  padding: 0;
+
+  svg {
+    width: 60px;
+    height: 60px;
+
+    @include media-breakpoint-down(sm) {
+      width: 50px;
+      height: 50px;
     }
+  }
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+}
+
+.name {
+  padding: 0;
+  margin: 0 0 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include media-breakpoint-down(sm) {
+    margin: 0;
+    overflow: visible;
+    line-height: 1;
+    text-align: center;
   }
 }
 
 .link {
-  display: inline-block;
-
+  &,
   &:hover {
-    text-decoration: none;
-
-    @each $item in $items {
-      &.#{$item} svg {
-        fill: var(--home-#{$item}-hover);
-      }
-    }
+    color: var(--containers-color);
   }
 
-  @each $item in $items {
-    &.#{$item} svg {
-      fill: var(--home-#{$item});
-    }
-  }
-
-  svg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    transition: fill 0.3s;
-
-    @include media-breakpoint-down(sm) {
-      width: 44px;
-      height: 44px;
-    }
-  }
-}
-
-.title {
-  padding: 0;
-  margin: 18px 0 14px;
-  font-size: 140%;
-  color: var(--headings-color);
-  background: none;
-  border: none;
+  font-size: 120%;
+  font-weight: bold;
+  white-space: nowrap;
 
   @include media-breakpoint-down(sm) {
-    float: left;
-    margin: 10px 8px;
+    display: block;
+    margin-top: 6px;
+    overflow: hidden;
+    font-size: 80%;
+    text-align: center;
+    text-overflow: ellipsis;
   }
 }
 
 .description {
-  padding: 0 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  line-height: 1.4;
-  text-align: left;
+  margin-top: 2px;
+  font-size: 75%;
+  color: var(--sidebar-description);
 
   @include media-breakpoint-down(sm) {
-    padding: 6px 0 0;
-    clear: both;
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 65%;
+    line-height: 1.2;
+    text-align: left;
   }
 }

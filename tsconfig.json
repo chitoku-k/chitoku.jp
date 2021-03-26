@@ -22,6 +22,7 @@
     "target": "es2015",
     "module": "esnext",
     "moduleResolution": "node",
+    "incremental": true,
     "resolveJsonModule": true,
     "lib": [
       "dom",

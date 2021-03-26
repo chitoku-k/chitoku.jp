@@ -32,6 +32,7 @@ type CategoriesYaml implements Node {
   name: String!
   path: String!
   thumbnail: String!
+  description: String!
   articles: [MarkdownRemark!]!
 }
 type ErrorsYaml implements Node {
@@ -74,16 +75,6 @@ type GitCommit implements Node {
     locale: String
   ): Date!
   latest: Boolean!
-}
-type HomeYaml implements Node {
-  items: [HomeYamlItems!]!
-}
-type HomeYamlItems {
-  id: String!
-  component: String!
-  name: String!
-  to: String!
-  description: String!
 }
 type LinksYaml implements Node {
   items: [LinksYamlItems!]!

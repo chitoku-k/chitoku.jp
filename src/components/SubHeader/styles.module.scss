@@ -1,0 +1,16 @@
+@import "src/styles/modules";
+
+.title {
+  display: inline-flex;
+  padding-left: 8px;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  font-size: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-left: 1em solid var(--headings-primary);
+
+  a {
+    color: var(--containers-color);
+  }
+}

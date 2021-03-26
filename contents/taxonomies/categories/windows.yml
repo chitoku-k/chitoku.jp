@@ -1,4 +1,5 @@
 id: Windows
 name: Windows
+description: フリーソフトなど
 path: /windows/
-thumbnail: /thumbnails/windows.png
+thumbnail: windows

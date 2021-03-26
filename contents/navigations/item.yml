@@ -21,8 +21,6 @@ nav:
     items:
       - name: Soarer for Windows
         to: /softwares/soarer/
-      - name: RecoTw Explorer
-        to: https://recotw.chitoku.jp
       - name: Homo Checker
         to: https://homo.chitoku.jp:4545
       - name: TweetDeck Accounts Switcher

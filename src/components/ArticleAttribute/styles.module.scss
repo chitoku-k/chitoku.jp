@@ -1,0 +1,17 @@
+@import "src/styles/modules";
+
+.icon {
+  margin-right: 0.2em;
+}
+
+.item {
+  display: inline-block;
+  margin-right: 0.8em;
+}
+
+.link {
+  &,
+  &:hover {
+    color: var(--containers-color);
+  }
+}

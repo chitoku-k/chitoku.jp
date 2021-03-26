@@ -25,16 +25,22 @@ const PaginationItem: FunctionComponent<Omit<DetailedHTMLProps<HTMLAttributes<HT
   direction,
   className,
   ...rest
-}) => (
-  <BootstrapPagination.Item as={Link} className={clsx(
-    styles.paginationItem,
-    !visible && styles.hidden,
-    !direction && styles.numbers,
-    direction === 'prev' && styles.prev,
-    direction === 'next' && styles.next,
-    className,
-  )} {...rest} />
-)
+}) => {
+  if (!rest.active && !rest.disabled) {
+    rest.as = Link
+  }
+
+  return (
+    <BootstrapPagination.Item className={clsx(
+      styles.paginationItem,
+      !visible && styles.hidden,
+      !direction && styles.numbers,
+      direction === 'prev' && styles.prev,
+      direction === 'next' && styles.next,
+      className,
+    )} {...rest} />
+  )
+}
 
 const Pagination: FunctionComponent<PaginationProps> = ({
   page,

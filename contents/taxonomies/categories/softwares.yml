@@ -1,4 +1,5 @@
 id: ソフトウェア
 name: ソフトウェア
+description: 配布中のソフトウェア関連
 path: /softwares/
-thumbnail: /thumbnails/default.png
+thumbnail: softwares

@@ -16,8 +16,11 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
             path.join(path.resolve('node_modules/$virtual'), '/'),
             path.join(path.resolve('node_modules/@pmmmwh/react-refresh-webpack-plugin'), '/'),
             path.join(path.resolve('node_modules/debug'), '/'),
+            path.join(path.resolve('node_modules/gatsby'), '/'),
             path.join(path.resolve('node_modules/query-string'), '/'),
             path.join(path.resolve('node_modules/react'), '/'),
+            path.join(path.resolve('node_modules/react-refresh'), '/'),
+            path.join(path.resolve('node_modules/strip-ansi'), '/'),
             path.join(path.resolve('node_modules/split-on-first'), '/'),
           ],
           use: [

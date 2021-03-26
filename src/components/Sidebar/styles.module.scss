@@ -82,21 +82,6 @@ $items: twitter, facebook, pocket, hatena, tumblr;
     border-radius: 0;
   }
 
-  .title {
-    display: inline-flex;
-    padding-left: 8px;
-    margin: 0 0 10px 0;
-    overflow: hidden;
-    font-size: 20px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    border-left: 1em solid var(--headings-primary);
-
-    a {
-      color: var(--containers-color);
-    }
-  }
-
   .latest {
     padding-left: 0;
     margin-top: 5px;
@@ -105,6 +90,7 @@ $items: twitter, facebook, pocket, hatena, tumblr;
     .latest-item {
       display: inline-flex;
       align-items: flex-start;
+      width: 100%;
       margin-bottom: 16px;
       list-style: none;
 
@@ -172,10 +158,13 @@ $items: twitter, facebook, pocket, hatena, tumblr;
     }
   }
 
+  .share-header {
+    margin-bottom: 20px;
+  }
+
   .share-container {
     display: flex;
     justify-content: center;
-    padding: 5px 0 0;
   }
 
   .categories {

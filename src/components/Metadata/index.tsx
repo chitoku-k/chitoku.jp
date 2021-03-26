@@ -8,7 +8,15 @@ import { Location } from '@reach/router'
 import messages from './messages'
 import type { MetadataItemQuery } from 'graphql-types'
 
-const THUMBNAIL_DEFAULT = '/thumbnails/default.png'
+type ThumbnailURL = string
+type ThumbnailFile = string | null | undefined
+type ThumbnailPath<TURL extends string, TFile extends string | null | undefined> =
+  TFile extends string
+    ? `${TURL}/thumbnails/${TFile}.png`
+    : `${TURL}/thumbnails/default.png`
+
+const thumbnailPath =
+  (url: ThumbnailURL, file: ThumbnailFile): ThumbnailPath<ThumbnailURL, ThumbnailFile> => `${url}/thumbnails/${file ?? 'default'}.png` as ThumbnailPath<ThumbnailURL, ThumbnailFile>
 
 const query = graphql`
   query MetadataItem {
@@ -68,7 +76,7 @@ const Metadata: FunctionComponent<MetadataItem> = ({
   return (
     <Location>
       {({ location }) => (
-        <Helmet>
+        <Helmet defer={false}>
           <html lang="ja" />
           <meta property="og:type" content={metadata.type} />
           <meta property="og:url" content={siteUrl + location.pathname} />
@@ -78,7 +86,7 @@ const Metadata: FunctionComponent<MetadataItem> = ({
             <meta key={property} property={property} content={metadata.title ?? ''} />
           ))}
           {[ 'og:image', 'twitter:image' ].map(property => (
-            <meta key={property} property={property} content={`${siteUrl}${metadata.thumbnail ?? THUMBNAIL_DEFAULT}`} />
+            <meta key={property} property={property} content={thumbnailPath(siteUrl, metadata.thumbnail)} />
           ))}
           {metadata.description && [ 'og:description', 'description' ].map(property => (
             <meta key={property} property={property} content={metadata.description} />

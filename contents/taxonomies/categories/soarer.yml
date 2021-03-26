@@ -1,4 +1,5 @@
 id: Soarer for Windows
 name: Soarer for Windows
+description: Windows 向け Twitter クライアント
 path: /softwares/soarer/
-thumbnail: /thumbnails/soarer.png
+thumbnail: soarer

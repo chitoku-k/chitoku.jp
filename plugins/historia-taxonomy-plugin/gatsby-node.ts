@@ -2,13 +2,20 @@ import type { CreateResolversArgs, GatsbyNode, Page, PluginOptions } from 'gatsb
 
 import type { ArticleContext } from './createArticles'
 import createArticles from './createArticles'
+import type { HomeContext } from './createHome'
+import createHome from './createHome'
 import type { Category, Tag, TaxonomyContext } from './createTaxonomies'
 import createTaxonomies from './createTaxonomies'
 import type { File } from './utils'
 import { getPath } from './utils'
 
 interface Options extends PluginOptions {
-  limit: number
+  taxonomies?: {
+    limit: number
+  }
+  home?: {
+    limit: number
+  }
 }
 
 interface GetAllNodesArgs {
@@ -45,12 +52,20 @@ export const createPages: GatsbyNode['createPages'] = async ({
     createPage,
   },
 }, {
-  limit = 3,
+  taxonomies,
+  home,
 }: Options) => {
   const paths = new Set<string>()
-  const pages: Page<ArticleContext | TaxonomyContext>[] = [
+  const pages: Page<ArticleContext | HomeContext | TaxonomyContext>[] = [
     ...await createArticles({ graphql }),
-    ...await createTaxonomies({ graphql, limit }),
+    ...await createTaxonomies({
+      graphql,
+      limit: taxonomies?.limit ?? 3,
+    }),
+    ...await createHome({
+      graphql,
+      limit: home?.limit ?? 5,
+    }),
   ]
 
   for (const page of pages) {

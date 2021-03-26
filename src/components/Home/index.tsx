@@ -1,74 +1,72 @@
 import type { FunctionComponent } from 'react'
-import { Fragment } from 'react'
 import { Col, Row } from 'react-bootstrap'
-import clsx from 'clsx'
+import { useIntl } from 'react-intl'
 
-import * as styles from './styles.module.scss'
-import type { HomeItemQuery } from 'graphql-types'
+import type { CategoryFragment, HomeQuery } from 'graphql-types'
+import messages from './messages'
 
 import Container from 'components/Container'
+import ArticleCard from 'components/ArticleCard'
 import ArticleContainer from 'components/ArticleContainer'
-import Metadata from 'components/Metadata'
+import CategoryIcon from 'components/CategoryIcon'
 import Link from 'components/Link'
-import PspProgrammingIcon from '../../assets/pspprogramming.svg'
-import SoarerIcon from '../../assets/soarer.svg'
-import RecoTwIcon from '../../assets/recotw.svg'
-import WindowsIcon from '../../assets/windows.svg'
-import GadgetsIcon from '../../assets/psp-smartphone.svg'
-import ProgrammingIcon from '../../assets/programming.svg'
+import SubHeader from 'components/SubHeader'
 
-const icons: HomeIcon = {
-  PspProgrammingIcon,
-  SoarerIcon,
-  RecoTwIcon,
-  WindowsIcon,
-  GadgetsIcon,
-  ProgrammingIcon,
-}
+import * as styles from './styles.module.scss'
 
-const Home: FunctionComponent<HomeProps> = ({ home }) => {
-  if (!home) {
+const isCategory = (category: CategoryFragment | null): category is Category => Boolean(category)
+
+const Home: FunctionComponent<HomeProps> = ({
+  children,
+  home,
+  pages: {
+    items,
+  },
+}) => {
+  const { formatMessage } = useIntl()
+
+  if (!home?.categories) {
     throw new Error('Invalid data')
   }
 
-  const { items } = home
-
   return (
     <Container>
-      <Metadata title={null} />
-      <ArticleContainer>
-        <Row>
-          {items.map(({
-            id,
-            component,
-            name,
-            to,
-            description,
-          }) => {
-            const Icon = icons[component]
-            return (
-              <Fragment key={name}>
-                <Col className={styles.item} xs={6} md={4}>
-                  <Link className={clsx(styles.link, styles[id])} to={to} title={name}>
-                    <div className={styles.wrapper}>
-                      <div className={styles.curtain} />
-                      <Icon viewBox="0 0 175 175" />
-                    </div>
-                    <h2 className={styles.title}>{name}</h2>
-                  </Link>
-                  <p className={styles.description}>{description}</p>
+      <ArticleContainer className={styles.container}>
+        <SubHeader className={styles.header}>
+          {formatMessage(messages.categories)}
+        </SubHeader>
+        <Row className={styles.row}>
+          {home.categories.filter(isCategory).map(category => (
+            <Col key={category.path} className={styles.col} xs={2} md={4}>
+              <Row className={styles.category}>
+                <Col className={styles.icon} xs={12} md="auto">
+                  <CategoryIcon to={category.path} category={category} />
                 </Col>
-              </Fragment>
-            )
-          })}
+                <Col className={styles.name}>
+                  <Link className={styles.link} to={category.path}>
+                    {category.name}
+                  </Link>
+                  <div className={styles.description}>{category.description}</div>
+                </Col>
+              </Row>
+            </Col>
+          ))}
         </Row>
       </ArticleContainer>
+      {items.map(({ article }) => (
+        <ArticleContainer key={article.path}>
+          <ArticleCard article={article} />
+        </ArticleContainer>
+      ))}
+      {children}
     </Container>
   )
 }
 
-type HomeProps = HomeItemQuery
+type HomeProps = HomeQuery
 
-type HomeIcon = Record<string, React.ComponentType<React.SVGAttributes<Element>>>
+interface Category extends CategoryFragment {
+  description: string
+}
 
 export default Home

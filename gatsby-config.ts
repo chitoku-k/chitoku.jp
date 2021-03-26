@@ -1,3 +1,4 @@
+import path from 'path'
 import type { GatsbyConfig } from 'gatsby'
 import * as dotenv from 'dotenv-safe'
 import postcssCustomProperties from 'postcss-custom-properties'
@@ -13,6 +14,7 @@ const config: GatsbyConfig = {
     title: description,
   },
   mapping: {
+    'HomeYaml.categories': 'CategoriesYaml',
     'MarkdownRemark.frontmatter.category': 'CategoriesYaml',
     'MarkdownRemark.frontmatter.tags': 'TagsYaml',
     'MarkdownRemark.frontmatter.functions': 'FunctionsYaml.name',
@@ -73,7 +75,9 @@ const config: GatsbyConfig = {
           camelCase: 'only',
         },
         postCssPlugins: [
-          postcssCustomProperties(),
+          postcssCustomProperties({
+            importFrom: path.join(__dirname, 'src/styles/themes/_light.css'),
+          }),
         ],
       },
     },
@@ -150,11 +154,15 @@ const config: GatsbyConfig = {
     { resolve: 'gatsby-transformer-yaml' },
     { resolve: 'historia-compat-plugin' },
     { resolve: 'historia-feed-plugin' },
-    { resolve: 'historia-recotw-plugin' },
     {
       resolve: 'historia-taxonomy-plugin',
       options: {
-        limit: 5,
+        taxonomies: {
+          limit: 5,
+        },
+        home: {
+          limit: 10,
+        },
       },
     },
     { resolve: 'historia-soarer-update-plugin' },

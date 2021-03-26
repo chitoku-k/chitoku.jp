@@ -11,8 +11,8 @@ components:
     more: 続きを読む »
   Footer:
     copyright: '© Chitoku 2014 ({link})'
-  Latest:
-    title: 最近の投稿
+  Home:
+    categories: カテゴリー
   Links:
     title: リンク
   Mail:
