@@ -32,6 +32,7 @@ type CategoriesYaml implements Node {
   name: String!
   path: String!
   thumbnail: String!
+  description: String!
   articles: [MarkdownRemark!]!
 }
 type ErrorsYaml implements Node {
