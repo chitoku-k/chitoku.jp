@@ -1,3 +1,4 @@
+import path from 'path'
 import type { GatsbyConfig } from 'gatsby'
 import * as dotenv from 'dotenv-safe'
 import postcssCustomProperties from 'postcss-custom-properties'
@@ -74,7 +75,9 @@ const config: GatsbyConfig = {
           camelCase: 'only',
         },
         postCssPlugins: [
-          postcssCustomProperties(),
+          postcssCustomProperties({
+            importFrom: path.join(__dirname, 'src/styles/themes/_light.css'),
+          }),
         ],
       },
     },
