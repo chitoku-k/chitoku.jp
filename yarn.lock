@@ -2892,10 +2892,12 @@
   resolved "https://registry.yarnpkg.com/@types/schema-utils/-/schema-utils-1.0.0.tgz#295d36f01e2cb8bc3207ca1d9a68e210db6b40cb"
   integrity sha512-YesPanU1+WCigC/Aj1Mga8UCOjHIfMNHZ3zzDsUY7lI8GlKnh/Kv2QwJOQ+jNQ36Ru7IfzSedlG14hppYaN13A==
 
-"@types/tapable@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.6.tgz#a9ca4b70a18b270ccb2bc0aaafefd1d486b7ea74"
-  integrity sha512-W+bw9ds02rAQaMvaLYxAbJ6cvguW/iJXNT6lTssS1ps6QdrMKttqEAMEG/b5CR8TZl3/L7/lH0ZV5nNR1LXikA==
+"@types/tapable@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-2.2.0.tgz#97fd091e0eb2ef57a06222750f079edaf86748e7"
+  integrity sha512-nMJIv2KFSNfYKpjxt2Rx8pRLEso0ymg308K3hoTLMdlvreUIynlEOX6WeLeJENbIgm4kDO2G+uWhYm1LAg1Sww==
+  dependencies:
+    tapable "^2.2.0"
 
 "@types/tmp@^0.0.33":
   version "0.0.33"
