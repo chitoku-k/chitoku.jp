@@ -7,6 +7,9 @@ category: Windows
 今回は Windows で動作する「[MiniTool Partition Wizard](https://www.partitionwizard.jp/free-partition-manager.html)」の無料版を使ってこの SSD のパーティションを引っ越し、余った領域にデータ用のパーティションを拡大してみます。
 
 <style>
+.partition-table-wrapper {
+  overflow-x: auto;
+}
 .partition-table {
   display: flex;
   white-space: nowrap;
@@ -30,6 +33,11 @@ category: Windows
   background-color: #cacaca;
   background-color: var(--pagination-background);
 }
+@media (max-width: 767.98px) {
+  .partition-table {
+    margin: 0;
+  }
+}
 </style>
 
 ## 引っ越し前
@@ -49,6 +57,7 @@ category: Windows
 
 ### SSD #1（引っ越し前）
 
+<div class="partition-table-wrapper">
 <div class="partition-table">
 <div class="partition system" style="flex-grow: 512;">(1) ESP<br>FAT32<br>512 MiB</div>
 <div class="partition system" style="flex-grow: 128;">(2) MSR<br>-<br>128 MiB</div>
@@ -57,11 +66,14 @@ category: Windows
 <div class="partition" style="flex-grow: 5000;">Swap<br>Linux Swap<br>5 GiB</div>
 <div class="partition" style="flex-grow: 140000;">(5) Linux<br>Linux LVM<br>140 GiB</div>
 </div>
+</div>
 
 ### SSD #2（引っ越し前）
 
+<div class="partition-table-wrapper">
 <div class="partition-table">
 <div class="partition none" style="flex-grow: 1;">なし<br>-<br>512 GB</div>
+</div>
 </div>
 
 <!-- more -->
@@ -78,6 +90,7 @@ category: Windows
 
 ### SSD #1（5. 完了後）
 
+<div class="partition-table-wrapper">
 <div class="partition-table">
 <div class="partition system" style="flex-grow: 512;">(1) ESP<br>FAT32<br>512 MiB</div>
 <div class="partition system" style="flex-grow: 128;">(2) MSR<br>-<br>128 MiB</div>
@@ -85,14 +98,17 @@ category: Windows
 <div class="partition system" style="flex-grow: 564;">(4) WinRE<br>NTFS<br>512 MiB</div>
 <div class="partition none" style="flex-grow: 149000;">なし<br>-<br>145 GiB</div>
 </div>
+</div>
 
 ### SSD #2（5. 完了後）
 
+<div class="partition-table-wrapper">
 <div class="partition-table">
 <div class="partition system" style="flex-grow: 512;">空<br>FAT32<br>512 MiB</div>
 <div class="partition" style="flex-grow: 5000;">空<br>Linux Swap<br>5 GiB</div>
 <div class="partition" style="flex-grow: 140000;">(5) Linux<br>Linux LVM<br>140 GiB</div>
 <div class="partition none" style="flex-grow: 331000;">なし<br>-<br>331 GiB</div>
+</div>
 </div>
 
 ## 手順: 移動作業
@@ -105,6 +121,7 @@ category: Windows
 
 ### SSD #1（6. 完了後）
 
+<div class="partition-table-wrapper">
 <div class="partition-table">
 <div class="partition system" style="flex-grow: 512;">(1) ESP<br>FAT32<br>512 MiB</div>
 <div class="partition system" style="flex-grow: 128;">(2) MSR<br>-<br>128 MiB</div>
@@ -112,14 +129,17 @@ category: Windows
 <div class="partition none" style="flex-grow: 149000;">なし<br>-<br>145 GiB</div>
 <div class="partition system" style="flex-grow: 564;">(4) WinRE<br>NTFS<br>564 MiB</div>
 </div>
+</div>
 
 ### SSD #2（6. 完了後）
 
+<div class="partition-table-wrapper">
 <div class="partition-table">
 <div class="partition system" style="flex-grow: 512;">空<br>FAT32<br>512 MiB</div>
 <div class="partition" style="flex-grow: 5000;">空<br>Linux Swap<br>5 GiB</div>
 <div class="partition" style="flex-grow: 140000;">(5) Linux<br>Linux LVM<br>140 GiB</div>
 <div class="partition none" style="flex-grow: 331000;">なし<br>-<br>331 GiB</div>
+</div>
 </div>
 
 ## 手順: 拡張作業（Windows）
@@ -130,20 +150,24 @@ category: Windows
 
 ### SSD #1（7. 完了後）
 
+<div class="partition-table-wrapper">
 <div class="partition-table">
 <div class="partition system" style="flex-grow: 512;">(1) ESP<br>FAT32<br>512 MiB</div>
 <div class="partition system" style="flex-grow: 128;">(2) MSR<br>-<br>128 MiB</div>
 <div class="partition" style="flex-grow: 465000;">(3) Windows<br>NTFS<br>465 GiB</div>
 <div class="partition system" style="flex-grow: 564;">(4) WinRE<br>NTFS<br>564 MiB</div>
 </div>
+</div>
 
 ### SSD #2（7. 完了後）
 
+<div class="partition-table-wrapper">
 <div class="partition-table">
 <div class="partition system" style="flex-grow: 512;">空<br>FAT32<br>512 MiB</div>
 <div class="partition" style="flex-grow: 5000;">空<br>Linux Swap<br>5 GiB</div>
 <div class="partition" style="flex-grow: 140000;">(5) Linux<br>Linux LVM<br>140 GiB</div>
 <div class="partition none" style="flex-grow: 331000;">なし<br>-<br>331 GiB</div>
+</div>
 </div>
 
 ## MiniTool Partition Wizard
@@ -238,6 +262,7 @@ SSD で作業したためコピーも含めて数分で終了しました。
 
 (4) WinRE パーティションの直後にある［未割り当て領域］を (4) の直前に移動します。
 
+<div class="partition-table-wrapper">
 <div class="partition-table">
 <div class="partition system" style="flex-grow: 512;">(1) ESP<br>FAT32<br>512 MiB</div>
 <div class="partition system" style="flex-grow: 128;">(2) MSR<br>-<br>128 MiB</div>
@@ -245,13 +270,16 @@ SSD で作業したためコピーも含めて数分で終了しました。
 <div class="partition system" style="flex-grow: 564;">(4) WinRE<br>NTFS<br>512 MiB</div>
 <div class="partition none" style="flex-grow: 149000;">なし<br>-<br>145 GiB</div>
 </div>
+</div>
 <div style="text-align: center;">↓ (4) と「なし」を入れ替え</div>
+<div class="partition-table-wrapper">
 <div class="partition-table">
 <div class="partition system" style="flex-grow: 512;">(1) ESP<br>FAT32<br>512 MiB</div>
 <div class="partition system" style="flex-grow: 128;">(2) MSR<br>-<br>128 MiB</div>
 <div class="partition" style="flex-grow: 320000;">(3) Windows<br>NTFS<br>320 GiB</div>
 <div class="partition none" style="flex-grow: 149000;">なし<br>-<br>145 GiB</div>
 <div class="partition system" style="flex-grow: 564;">(4) WinRE<br>NTFS<br>564 MiB</div>
+</div>
 </div>
 
 移動したいパーティションを右クリックして［移動/サイズ変更］をクリックします。
@@ -298,22 +326,25 @@ MiniTool Partition Wizard 無料版は以下の Web サイトからダウンロ�
 
 ### SSD #1（7. 完了後）
 
+<div class="partition-table-wrapper">
 <div class="partition-table">
 <div class="partition system" style="flex-grow: 512;">(1) ESP<br>FAT32<br>512 MiB</div>
 <div class="partition system" style="flex-grow: 128;">(2) MSR<br>-<br>128 MiB</div>
 <div class="partition" style="flex-grow: 465000;">(3) Windows<br>NTFS<br>465 GiB</div>
 <div class="partition system" style="flex-grow: 564;">(4) WinRE<br>NTFS<br>564 MiB</div>
 </div>
+</div>
 
 ### SSD #2（7. 完了後）
 
+<div class="partition-table-wrapper">
 <div class="partition-table">
 <div class="partition system" style="flex-grow: 512;">空<br>FAT32<br>512 MiB</div>
 <div class="partition" style="flex-grow: 5000;">空<br>Linux Swap<br>5 GiB</div>
 <div class="partition" style="flex-grow: 140000;">(5) Linux<br>Linux LVM<br>140 GiB</div>
 <div class="partition none" style="flex-grow: 331000;">なし<br>-<br>331 GiB</div>
 </div>
-
+</div>
 
 ## おまけ: 拡張作業（Linux LVM）
 
@@ -323,17 +354,21 @@ SSD #2 の Linux LVM は `gdisk` などのコマンドラインツールを利�
 
 ### SSD #1（引っ越し後）
 
+<div class="partition-table-wrapper">
 <div class="partition-table">
 <div class="partition system" style="flex-grow: 512;">(1) ESP<br>FAT32<br>512 MiB</div>
 <div class="partition system" style="flex-grow: 128;">(2) MSR<br>-<br>128 MiB</div>
 <div class="partition" style="flex-grow: 465000;">(3) Windows<br>NTFS<br>465 GiB</div>
 <div class="partition system" style="flex-grow: 564;">(4) WinRE<br>NTFS<br>564 MiB</div>
 </div>
+</div>
 
 ### SSD #2（引っ越し後）
 
+<div class="partition-table-wrapper">
 <div class="partition-table">
 <div class="partition system" style="flex-grow: 512;">空<br>FAT32<br>512 MiB</div>
 <div class="partition" style="flex-grow: 5000;">空<br>Linux Swap<br>5 GiB</div>
 <div class="partition" style="flex-grow: 471000;">(5) Linux<br>Linux LVM<br>471 GiB</div>
+</div>
 </div>
