@@ -1,6 +1,6 @@
 title: プロフィール
 name: ちとく
-occupation: Web エンジニア
+occupation: Web エンジニア（SRE）
 icon:
   name: '@ReKriel'
   url: https://twitter.com/ReKriel
@@ -8,6 +8,7 @@ icon:
 interests:
   - type: プログラミング
     items:
+      - name: Go
       - name: C#
       - name: WPF
       - name: C
@@ -15,7 +16,15 @@ interests:
       - name: PHP
   - type: エディター
     items:
-      - name: Vim
+      - name: Neovim
+  - type: OS
+    items:
+      - name: Windows
+      - name: Arch Linux
+  - type: シェル
+    items:
+      - name: Zsh
+      - name: PowerShell
   - type: アニメ
     items:
       - name: ゆるゆり

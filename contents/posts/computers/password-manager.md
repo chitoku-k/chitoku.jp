@@ -30,7 +30,7 @@ category: コンピューター
 朝までかけてすべて変更しました。
 
 <p>
-<iframe style="overflow-x: hidden; overflow-y: hidden; width: 300px; height: 250px; border: 0px;" src="https://banners.itunes.apple.com/banner.html?partnerId=&amp;aId=&amp;bt=catalog&amp;t=catalog_white&amp;id=568903335&amp;c=jp&amp;l=ja-JP&amp;w=300&amp;h=250&amp;store=apps" frameborder="0"></iframe>
+<a href="https://apps.apple.com/us/app/1password-password-manager/id568903335?itsct=apps_box&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83&amp;releaseDate=1355356800&h=2369b12981ba171a6306cc01f09bd429" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
 </p>
 
 macOS 版と iOS 版をインストールしてみましたが完全に予想より遥かによくできていて恋に落ちました。

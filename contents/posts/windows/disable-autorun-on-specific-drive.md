@@ -20,7 +20,7 @@ NoDriveAutoRun は自動再生を無効化するドライブの設定値の合�
 
 <!-- more -->
 
-<iframe scrolling="no" style="border: 1px solid #ccc; width: 0; min-width: 100%; height: 350px;" src="https://chitoku-k.github.io/no-drive-auto-run-generator/"></iframe>
+<iframe scrolling="no" style="border: 1px solid #ccc; border-color: var(--headings-border); width: 0; min-width: 100%; height: 350px;" src="https://chitoku-k.github.io/no-drive-auto-run-generator/"></iframe>
 
 ## 脚注/参考
 
