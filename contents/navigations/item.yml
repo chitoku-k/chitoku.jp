@@ -19,10 +19,16 @@ nav:
   - name: ソフトウェア
     to: /softwares/
     items:
-      - name: Soarer for Windows
-        to: /softwares/soarer/
       - name: Homo Checker
         to: https://homo.chitoku.jp:4545
+      - name: fzf-zsh-completions
+        to: https://github.com/chitoku-k/fzf-zsh-completions
+      - name: cloudflare-exporter
+        to: https://github.com/chitoku-k/cloudflare-exporter
+      - name: healthcheck-k8s
+        to: https://github.com/chitoku-k/healthcheck-k8s
+      - name: Soarer for Windows
+        to: /softwares/soarer/
       - name: TweetDeck Accounts Switcher
         to: /programming/tweetdeck-account-switcher
 sidebar:

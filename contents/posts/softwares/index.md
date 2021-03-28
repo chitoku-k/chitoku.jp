@@ -116,7 +116,7 @@ HTTP の POST で送信されたフォームを Slack にメッセージとし�
 
 ### [![slack-to-ssh](../media/software_icon.png)slack-to-ssh](https://github.com/chitoku-k/slack-to-ssh)
 
-Slack の [interactive message buttons](https://api.slack.com/legacy/message-buttons) でボタン操作が実行された際に、SSH 経由で予め指定したコマンドをコマンドを実行することができる Web サーバーです。
+Slack の [interactive message buttons](https://api.slack.com/legacy/message-buttons) でボタン操作が実行された際に、SSH 経由で予め指定したコマンドを実行することができる Web サーバーです。
 
 利用技術:
 
