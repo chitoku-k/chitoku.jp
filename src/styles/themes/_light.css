@@ -1,6 +1,7 @@
 :root {
   --body-background: #efefef;
   --body-color: #111;
+  --selection-background: #b3d4fc;
   --links-color: #1e61ad;
   --links-hover: #133c6c;
   --header-primary: #2f4255;
