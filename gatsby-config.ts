@@ -21,6 +21,11 @@ const config: GatsbyConfig = {
     'MarkdownRemark.frontmatter.macros': 'MacrosYaml.name',
     'UpdatesYaml.file': 'File.base',
   },
+  flags: {
+    FAST_DEV: true,
+    DEV_SSR: true,
+    PRESERVE_WEBPACK_CACHE: true,
+  },
   plugins: [
     {
       resolve: 'gatsby-plugin-algolia',
