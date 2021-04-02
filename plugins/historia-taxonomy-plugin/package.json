@@ -2,7 +2,7 @@
   "name": "historia-taxonomy-plugin",
   "version": "1.0.0",
   "dependencies": {
-    "@types/remove-markdown": "^0.1.1",
+    "@types/remove-markdown": "^0.3.0",
     "remove-markdown": "^0.3.0",
     "string-strip-html": "^8.2.9"
   }
