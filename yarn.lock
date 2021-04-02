@@ -2523,10 +2523,10 @@
   dependencies:
     schema-utils "*"
 
-"@types/tapable@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-2.2.0.tgz#97fd091e0eb2ef57a06222750f079edaf86748e7"
-  integrity sha512-nMJIv2KFSNfYKpjxt2Rx8pRLEso0ymg308K3hoTLMdlvreUIynlEOX6WeLeJENbIgm4kDO2G+uWhYm1LAg1Sww==
+"@types/tapable@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-2.2.2.tgz#1d324b524190954a5700d86b6328bfc57e1fda48"
+  integrity sha512-ujqOVJEeLcwpDVJPnp/k3u1UXmTKq5urJq9fO8aUKg8Vlel5RNOFbVKEfqfh6wGfF/M+HiTJlBJMLC1aDfyf0Q==
   dependencies:
     tapable "^2.2.0"
 
