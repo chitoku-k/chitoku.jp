@@ -13155,37 +13155,37 @@ range-parser@^1.2.1, range-parser@~1.2.1:
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
 
-ranges-apply@^5.0.12:
-  version "5.0.12"
-  resolved "https://registry.yarnpkg.com/ranges-apply/-/ranges-apply-5.0.12.tgz#1500f58985f2b98b4dfd870831ef0c1387bc5d83"
-  integrity sha512-3Uv0jLpenXzRbgq55xriL1h6WrPpBFnleR+DNlTv82REEEHYk/MzTm5TCSst7d1jVafjBQG/b/29NRppUtLW9A==
+ranges-apply@^5.0.14:
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/ranges-apply/-/ranges-apply-5.0.14.tgz#86531f5a2eb5771de78d2b4e0abd40686ecee8ae"
+  integrity sha512-L8JqoncbDa0I/Nf7qfC51zX4v5eORMaI9FNUE/Fb4IRET5uEZ3oIS9HVNuRmfKaUb8T9BYRVPiJpqTaatBzwcQ==
   dependencies:
     "@babel/runtime" "^7.13.10"
-    ranges-merge "^7.0.12"
+    ranges-merge "^7.0.14"
 
-ranges-merge@^7.0.12:
-  version "7.0.12"
-  resolved "https://registry.yarnpkg.com/ranges-merge/-/ranges-merge-7.0.12.tgz#6cec2a550cf0a18665a1d1c63f92990431f97245"
-  integrity sha512-5h8irfgppRfcmakmNLsYSx27kpRnn8/PbIwh0c2s9uIPY9ypmI3Rh3bzt/kUWedvVlZiKaazs8YOKORu+e3UlA==
+ranges-merge@^7.0.14:
+  version "7.0.14"
+  resolved "https://registry.yarnpkg.com/ranges-merge/-/ranges-merge-7.0.14.tgz#8c9e5d156c588c5d3be5afed1cd11b0c0a42e23f"
+  integrity sha512-ZDSESp3RcdOknY4jb89KZA1eIyqeF6bXij6Q+oQF9DZlKIUrAYMA9fGlpWxS+DQmwYlxIzKoDEdf58+8YqY99g==
   dependencies:
     "@babel/runtime" "^7.13.10"
-    ranges-push "^5.0.12"
-    ranges-sort "^4.0.12"
+    ranges-push "^5.0.14"
+    ranges-sort "^4.0.14"
 
-ranges-push@^5.0.12:
-  version "5.0.12"
-  resolved "https://registry.yarnpkg.com/ranges-push/-/ranges-push-5.0.12.tgz#d1e16214b6a4eebf6cd3b28123a3ee1bc779ac9b"
-  integrity sha512-IJW8NwYBaj5IvjR29A+d4HIeyTDF2SFiti26envanEpI0IjQXW4P5YVY6/IV61k1WoXiRpdk2sdjFc7jg1ZQgw==
+ranges-push@^5.0.14:
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/ranges-push/-/ranges-push-5.0.14.tgz#b218556b07f6f4ac3d21f7502de1daebfebf0538"
+  integrity sha512-J3BKlZnbtGsuC0Y+uUL/6QcWLWegcOySVvIafOi3aYYSV2DGAQ4kCORdgOck+ISFqeF7JcHgFGRHdIum4ILcQQ==
   dependencies:
     "@babel/runtime" "^7.13.10"
-    ranges-merge "^7.0.12"
-    string-collapse-leading-whitespace "^5.0.12"
-    string-trim-spaces-only "^3.0.12"
+    ranges-merge "^7.0.14"
+    string-collapse-leading-whitespace "^5.0.14"
+    string-trim-spaces-only "^3.0.14"
 
-ranges-sort@^4.0.12:
-  version "4.0.12"
-  resolved "https://registry.yarnpkg.com/ranges-sort/-/ranges-sort-4.0.12.tgz#8b577e9c38d748887a310f9d8573781928168690"
-  integrity sha512-iw1r1UH3WLY7MVGD+B/Jtew8+TXYIFM/gTYBYEvZgTJaXKt7kL82QKAEco8sKylU3MncpDXqeAliwhyByPo44g==
+ranges-sort@^4.0.14:
+  version "4.0.14"
+  resolved "https://registry.yarnpkg.com/ranges-sort/-/ranges-sort-4.0.14.tgz#7274cb40add7e8d45c879b09eebabc5d55d7aebc"
+  integrity sha512-uEzHleRB2WXacKR7wsrJc4/iXWa4oCB+oaV9BfGaulakE35I8q9IltCawFt+xVmA9Wgr6N2uHBBmwbUguj2rAw==
   dependencies:
     "@babel/runtime" "^7.13.10"
 
@@ -14961,10 +14961,10 @@ string-argv@0.3.1:
   resolved "https://registry.yarnpkg.com/string-argv/-/string-argv-0.3.1.tgz#95e2fbec0427ae19184935f816d74aaa4c5c19da"
   integrity sha512-a1uQGz7IyVy9YwhqjZIZu1c8JO8dNIe20xBmSS6qu9kv++k3JGzCVmprbNN5Kn+BgzD5E7YYwg1CcjuJMRNsvg==
 
-string-collapse-leading-whitespace@^5.0.12:
-  version "5.0.12"
-  resolved "https://registry.yarnpkg.com/string-collapse-leading-whitespace/-/string-collapse-leading-whitespace-5.0.12.tgz#3f985534997a4c64291d61bdf3793e0aacb823b8"
-  integrity sha512-O82L41hwb5ehFDn9x9ZFV4o1OX9wuV6Q7jjEBHaUuR/H6HjJ0FRAuFqLCLmag1GbgnyenrWZrJtsQbEhUZifdg==
+string-collapse-leading-whitespace@^5.0.14:
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/string-collapse-leading-whitespace/-/string-collapse-leading-whitespace-5.0.14.tgz#d48ec756ab67a35fba3c12220217b89daa9e48ab"
+  integrity sha512-hRMJP/VKbJhYGHZeGsfF6nAgccKARoMfIyqmSnHgYL8YroyWW5YsSRxpZnc8Y0XXUXQLPBWH+88CGS6hWN3siQ==
   dependencies:
     "@babel/runtime" "^7.13.10"
 
@@ -14973,10 +14973,10 @@ string-env-interpolation@1.0.1:
   resolved "https://registry.yarnpkg.com/string-env-interpolation/-/string-env-interpolation-1.0.1.tgz#ad4397ae4ac53fe6c91d1402ad6f6a52862c7152"
   integrity sha512-78lwMoCcn0nNu8LszbP1UA7g55OeE4v7rCeWnM5B453rnNr4aq+5it3FEYtZrSEiMvHZOZ9Jlqb0OD0M2VInqg==
 
-string-left-right@^4.0.12:
-  version "4.0.12"
-  resolved "https://registry.yarnpkg.com/string-left-right/-/string-left-right-4.0.12.tgz#9bcf414da85228a2e91dd5561ae6095b1fc82f09"
-  integrity sha512-/Td2v+0ATu2sh1Oi7XQtGi5APT7hL/rMjsxNjwBDahG8dTqRFgyg0MGR6wfXucR60OTO7MWvq27ESH7xcArVGQ==
+string-left-right@^4.0.14:
+  version "4.0.14"
+  resolved "https://registry.yarnpkg.com/string-left-right/-/string-left-right-4.0.14.tgz#2b12ddca5bdc74db2d20fcc80caea81666af512f"
+  integrity sha512-LMmE5uX3pV+V+NVRhi9M4WuauRsVzXj4qg9XNpSoa16cLK8qwezMLpmt4tbCdNrZouLrNVVnuDG5YSZV9EwMDg==
   dependencies:
     "@babel/runtime" "^7.13.10"
     lodash.clonedeep "^4.5.0"
@@ -14998,24 +14998,24 @@ string-similarity@^1.2.2:
     lodash.map "^4.6.0"
     lodash.maxby "^4.6.0"
 
-string-strip-html@^8.2.9:
-  version "8.2.9"
-  resolved "https://registry.yarnpkg.com/string-strip-html/-/string-strip-html-8.2.9.tgz#05b8b3d7033aaa2b25de87c80243f06bc1fb5028"
-  integrity sha512-ai+pT/181RgwECaEV50SWQCqr2JXoFd2F8Gr56YNWawUkgb+jvZALRFLl1ThP4dj5dAODu8aswHRviiq8BS4CA==
+string-strip-html@^8.2.11:
+  version "8.2.11"
+  resolved "https://registry.yarnpkg.com/string-strip-html/-/string-strip-html-8.2.11.tgz#06ecc5c281e4f22f00501cfabfa70201e90c753c"
+  integrity sha512-+OdaF5wixgqUNlAaye4cHOcT3Qcn1bAmJZkATfOkxwspfuYU9GJMKsE6ItC7ggo7RPMcBGFH01oZq/+SeBUZQw==
   dependencies:
     "@babel/runtime" "^7.13.10"
     html-entities "^2.3.2"
     lodash.isplainobject "^4.0.6"
     lodash.trim "^4.5.1"
     lodash.without "^4.4.0"
-    ranges-apply "^5.0.12"
-    ranges-push "^5.0.12"
-    string-left-right "^4.0.12"
+    ranges-apply "^5.0.14"
+    ranges-push "^5.0.14"
+    string-left-right "^4.0.14"
 
-string-trim-spaces-only@^3.0.12:
-  version "3.0.12"
-  resolved "https://registry.yarnpkg.com/string-trim-spaces-only/-/string-trim-spaces-only-3.0.12.tgz#9f3e1c2e968d82042f93d463cb692dcaef090ace"
-  integrity sha512-H33kRzQvIxPpycP5KyL/FglAKegOU+qJTdMqJVvkE5fKgEgue+lQ7AvsrL9WND9cjYvSiVrSdHf4r72/I6xeKQ==
+string-trim-spaces-only@^3.0.14:
+  version "3.0.14"
+  resolved "https://registry.yarnpkg.com/string-trim-spaces-only/-/string-trim-spaces-only-3.0.14.tgz#d6e5d478a7b085b9b4f974911142ffe4c559df43"
+  integrity sha512-YRluIDmTvYRM3SKFDZLoUzI9pnQotC4IIIY9REdBkdBPScamwfobNVD9/YThdiNbMJVF3ssVB6kIMSokRXtETQ==
   dependencies:
     "@babel/runtime" "^7.13.10"
 
