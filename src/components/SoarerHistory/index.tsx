@@ -54,11 +54,11 @@ const SoarerHistory: FunctionComponent = () => {
           ) : null}
           <br />
           <small>
-            {formatDate(new Date(update.date), {
+            {typeof update.date === 'string' ? formatDate(new Date(update.date), {
               year: 'numeric',
               month: 'narrow',
               day: 'numeric',
-            })}
+            }) : null}
           </small>
           <ul>
             {update.history.map(({ title, message }) => (
