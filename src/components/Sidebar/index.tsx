@@ -120,7 +120,7 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
                 </div>
                 <div className={styles.metadata}>
                   <div className={styles.attribute}>
-                    {article.attributes.created ? formatDate(new Date(article.attributes.created), {
+                    {typeof article.attributes.created === 'string' ? formatDate(new Date(article.attributes.created), {
                       year: 'numeric',
                       month: 'narrow',
                       day: 'numeric',

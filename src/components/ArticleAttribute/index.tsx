@@ -40,7 +40,7 @@ const ArticleAttribute: FunctionComponent<ArticleAttributeProps> = ({
             .reduce<ReactNode[]>((el, curr) => el.length ? [ el, ', ', curr ] : [ curr ], [])}
         </span>
       ) : null}
-      {created ? (
+      {typeof created === 'string' ? (
         <span className={styles.item} title={formatDate(new Date(created), {
           year: 'numeric',
           month: 'narrow',
