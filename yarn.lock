@@ -7488,16 +7488,16 @@ gatsby-remark-attr@^0.1.0:
   dependencies:
     remark-attr "^0.11.0"
 
-gatsby-remark-autolink-headers@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-3.2.0.tgz#efa1901662fad4ddc7ba40c913de20809b43d082"
-  integrity sha512-mH+JI4Huh1FOijj/fI6a6ZTzIroI/KuMRUlMOecTsttg5dr8O1XoUh+6ywyPFohcSLulLVrAPqxt/fg3wsGHow==
+gatsby-remark-autolink-headers@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-4.0.0.tgz#b843f1b32bba2671616f48b298b4fb81a204d222"
+  integrity sha512-HL0Z959MkX7ZNC9WsDZjPo3zj0vCoWW03x0x0OOkAwqbHFZLIYoD+PDEQeT7AeRdDPOO3Ve5AUn3R+o/wnVZXQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
     github-slugger "^1.3.0"
     lodash "^4.17.21"
-    mdast-util-to-string "^1.1.0"
-    unist-util-visit "^1.4.1"
+    mdast-util-to-string "^2.0.0"
+    unist-util-visit "^2.0.3"
 
 gatsby-remark-copy-linked-files@^3.2.0:
   version "3.2.0"
