@@ -7582,14 +7582,14 @@ gatsby-remark-images@^4.2.0:
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
 
-gatsby-remark-prismjs@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-4.2.0.tgz#3a40a0246673d20fdab99b097c8ebf193c86ced2"
-  integrity sha512-PTE4p/f+XosSt/VdHJr9U3ruZ3yhqtUpqDuifsVbOOsS6AyvmEY/7WPUThRC+nSVfueG1geVgxrWB0AoaUPKXQ==
+gatsby-remark-prismjs@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-5.0.0.tgz#edbefd34c3007d6b9e422e32cbd79df1f2b3bdfa"
+  integrity sha512-uFFdTaMEXsLic1He1JZlm4FuoNK0wasFDTk4u7UiI5tpNIZnBsSo3P0KDTKBPjq53xeWVqhGKAFmdRUXW2XGGg==
   dependencies:
     "@babel/runtime" "^7.12.5"
-    parse-numeric-range "^0.0.2"
-    unist-util-visit "^1.4.1"
+    parse-numeric-range "^1.2.0"
+    unist-util-visit "^2.0.3"
 
 gatsby-source-filesystem@^3.3.0:
   version "3.3.0"
@@ -12024,11 +12024,6 @@ parse-latin@^4.0.0:
     nlcst-to-string "^2.0.0"
     unist-util-modify-children "^2.0.0"
     unist-util-visit-children "^1.0.0"
-
-parse-numeric-range@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/parse-numeric-range/-/parse-numeric-range-0.0.2.tgz#b4f09d413c7adbcd987f6e9233c7b4b210c938e4"
-  integrity sha1-tPCdQTx6282Yf26SM8e0shDJOOQ=
 
 parse-numeric-range@^1.2.0:
   version "1.2.0"
