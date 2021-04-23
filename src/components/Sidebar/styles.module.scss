@@ -124,8 +124,8 @@ $items: twitter, facebook, pocket, hatena, tumblr;
       .attribute {
         display: inline-block;
         font-size: 75%;
-        color: var(--sidebar-description);
         font-variant-numeric: tabular-nums;
+        color: var(--sidebar-description);
       }
 
       .category {
