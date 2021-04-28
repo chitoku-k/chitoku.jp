@@ -43,7 +43,7 @@ const metadata: MetadataItem = {
   title: '',
   keywords: [],
   description: '',
-  thumbnail: '',
+  thumbnail: null,
 }
 
 export const MetadataContext = createContext(metadata)
