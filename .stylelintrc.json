@@ -6,6 +6,7 @@
   ],
   "rules": {
     "at-rule-no-unknown": null,
+    "no-invalid-position-at-import-rule": null,
     "selector-pseudo-class-no-unknown": [true, {
       "ignorePseudoClasses": ["global"]
     }],
