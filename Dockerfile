@@ -1,20 +1,22 @@
-FROM node:15.14.0-alpine as build
+FROM node:16.1.0-slim as build
 ARG GATSBY_UPDATE_INDEX=false
 WORKDIR /usr/src
 COPY . /usr/src
 
-RUN apk add --no-cache --virtual build-dependencies \
-        autoconf \
-        git \
-        util-linux && \
+RUN apt-get -y update && \
+    apt-get -y install \
+        git && \
     yarn && \
     yarn build && \
-    apk del --no-cache build-dependencies && \
+    apt-get -y remove \
+        git && \
+    apt-get clean && \
     rm -rf \
         node_modules \
         .cache \
         /root/.npm \
         /usr/local/share/.cache \
+        /var/lib/apt/lists/* \
         /tmp/*
 
 FROM nginx:1.19.10-alpine
