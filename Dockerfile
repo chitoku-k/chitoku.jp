@@ -4,6 +4,7 @@ WORKDIR /usr/src
 COPY . /usr/src
 
 RUN apk add --no-cache --virtual build-dependencies \
+        autoconf \
         git \
         util-linux && \
     yarn && \
