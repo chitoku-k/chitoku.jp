@@ -43,8 +43,8 @@ GATSBY_ALGOLIA_INDEXNAME=
 
 ```shell
 $ git clone https://github.com/chitoku-k/chitoku.jp.git --recursive
-$ yarn install
-$ yarn build
+$ cd chitoku.jp 
+$ docker buildx build .
 ```
 
 [workflow-link]:    https://github.com/chitoku-k/chitoku.jp/actions?query=branch:master                                           
