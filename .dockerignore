@@ -2,8 +2,8 @@ Dockerfile
 LICENSE
 README.md
 node_modules
-public
-.cache
+.dockerignore
 .editorconfig
 .github
+.husky
 .ignore
