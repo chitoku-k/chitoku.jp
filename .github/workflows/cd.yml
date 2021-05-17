@@ -63,6 +63,8 @@ jobs:
           context: .
           push: true
           tags: container.chitoku.jp/chitoku-k/chitoku.jp
+          build-args: |
+            GATSBY_UPDATE_INDEX=true
       - name: Move cache
         run: |
           rm -rf /tmp/buildx-cache
