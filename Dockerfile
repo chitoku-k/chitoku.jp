@@ -1,6 +1,5 @@
 # syntax = docker/dockerfile:experimental
 FROM node:16.1.0-slim AS dependencies
-ARG GATSBY_UPDATE_INDEX=false
 WORKDIR /usr/src
 RUN --mount=type=cache,target=/var/cache/apt \
     --mount=type=cache,target=/var/lib/apt/lists \
@@ -22,6 +21,7 @@ RUN --mount=type=cache,target=/mnt/yarn,id=/usr/local/share/.cache/yarn \
     cp -r /mnt/yarn /usr/local/share/.cache/
 
 FROM dependencies AS build
+ARG GATSBY_UPDATE_INDEX=false
 COPY . /usr/src
 RUN --mount=type=tmpfs,target=/tmp \
     yarn build
