@@ -1,6 +1,6 @@
-import type { DetailedHTMLProps, FunctionComponent } from 'react'
+import type { ComponentPropsWithoutRef, FunctionComponent } from 'react'
 import { Dropdown } from 'react-bootstrap'
-import { Location } from '@reach/router'
+import { useLocation } from '@reach/router'
 import clsx from 'clsx'
 
 import * as styles from './styles.module.scss'
@@ -23,26 +23,26 @@ const NavItem: FunctionComponent<BootstrapNavItemProps & NavigationLinkItem & Na
   dropdown,
   className,
   ...rest
-}) => (
-  <Location>
-    {({ location }) => items ? (
-      <Dropdown id={to} className={clsx(styles.dropdown, to === location.pathname && 'active', className)} bsPrefix={dropdown ? 'dropdown' : 'sub'} as="li">
-        <NavLink to={to} className={clsx(dropdown && 'dropdown-toggle')}>
-          {name}
-        </NavLink>
-        <Dropdown.Menu as="ul" show bsPrefix={dropdown ? 'dropdown-menu' : 'sub-menu'}>
-          <NavDropdown dropdown={dropdown} items={items} />
-        </Dropdown.Menu>
-      </Dropdown>
-    ) : (
-      <li className={clsx(to === location.pathname && !location.search && 'active', className)} {...rest}>
-        <NavLink to={to}>
-          {name}
-        </NavLink>
-      </li>
-    )}
-  </Location>
-)
+}) => {
+  const location = useLocation()
+
+  return items ? (
+    <Dropdown id={to} className={clsx(styles.dropdown, to === location.pathname && 'active', className)} bsPrefix={dropdown ? 'dropdown' : 'sub'} as="li">
+      <NavLink to={to} className={clsx(dropdown && 'dropdown-toggle')}>
+        {name}
+      </NavLink>
+      <Dropdown.Menu as="ul" show bsPrefix={dropdown ? 'dropdown-menu' : 'sub-menu'}>
+        <NavDropdown dropdown={dropdown} items={items} />
+      </Dropdown.Menu>
+    </Dropdown>
+  ) : (
+    <li className={clsx(to === location.pathname && !location.search && 'active', className)} {...rest}>
+      <NavLink to={to}>
+        {name}
+      </NavLink>
+    </li>
+  )
+}
 
 interface BootstrapNavItemProps {
   active?: boolean
@@ -51,7 +51,7 @@ interface BootstrapNavItemProps {
   onSelect?: () => void
 }
 
-interface NavItemProps extends DetailedHTMLProps<React.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement> {
+interface NavItemProps extends ComponentPropsWithoutRef<'li'> {
   dropdown?: boolean
 }
 

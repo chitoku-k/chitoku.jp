@@ -1,4 +1,4 @@
-import type { DetailedHTMLProps, FunctionComponent, ReactNode } from 'react'
+import type { ComponentPropsWithoutRef, FunctionComponent, ReactNode } from 'react'
 
 const HTML: FunctionComponent<HTMLProps> = ({
   htmlAttributes,
@@ -26,9 +26,9 @@ const HTML: FunctionComponent<HTMLProps> = ({
 )
 
 interface HTMLProps {
-  htmlAttributes: DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLHtmlElement>, HTMLHtmlElement>
+  htmlAttributes: ComponentPropsWithoutRef<'html'>
   headComponents: ReactNode[]
-  bodyAttributes: DetailedHTMLProps<React.HTMLAttributes<HTMLBodyElement>, HTMLBodyElement>
+  bodyAttributes: ComponentPropsWithoutRef<'body'>
   preBodyComponents: ReactNode[]
   body: string
   postBodyComponents: ReactNode[]

@@ -72,23 +72,22 @@ const IndexPage: FunctionComponent<HomePageProps> = ({
   pageContext: {
     page,
   },
-}) => (
-  <Layout>
-    <Metadata title={null}>
-      {hasPreviousPage(page) ? (
-        <link rel="prev" href={getPreviousPagePath(page)} />
-      ) : null}
-      {hasNextPage(page) ? (
-        <link rel="next" href={getNextPagePath(page)} />
-      ) : null}
-    </Metadata>
-    <Header />
-    <Navbar />
-    <Home {...data}>
-      <HomePagination page={page} />
-    </Home>
-    <Footer />
-  </Layout>
-)
+}) => {
+  const prev = hasPreviousPage(page) ? getPreviousPagePath(page) : null
+  const next = hasNextPage(page) ? getNextPagePath(page) : null
+
+  return (
+    <Layout>
+      <Metadata title={null} prev={prev} next={next}>
+        <Header />
+        <Navbar />
+        <Home {...data}>
+          <HomePagination page={page} />
+        </Home>
+        <Footer />
+      </Metadata>
+    </Layout>
+  )
+}
 
 export default IndexPage

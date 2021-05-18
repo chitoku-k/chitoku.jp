@@ -1,10 +1,9 @@
-import type { DetailedHTMLProps, FunctionComponent, HTMLAttributes } from 'react'
+import type { ComponentPropsWithoutRef, FunctionComponent } from 'react'
 import clsx from 'clsx'
 
 import * as styles from './styles.module.scss'
 
-const ArticleContainer: FunctionComponent<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>> = ({
-  ref,
+const ArticleContainer: FunctionComponent<ComponentPropsWithoutRef<'article'>> = ({
   className,
   ...rest
 }) => (

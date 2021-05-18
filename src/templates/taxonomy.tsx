@@ -71,26 +71,26 @@ const TaxonomyPage: FunctionComponent<TaxonomyPageProps> = ({
     tag,
     page,
   },
-}) => (
-  <Layout>
-    <Metadata title={category ? category.name : tag ? tag.name : null} thumbnail={category?.thumbnail}>
-      {hasPreviousPage(page) ? (
-        <link rel="prev" href={getPreviousPagePath(page)} />
-      ) : null}
-      {hasNextPage(page) ? (
-        <link rel="next" href={getNextPagePath(page)} />
-      ) : null}
-    </Metadata>
-    <Header />
-    <Navbar />
-    <Container>
-      {items.map(({ article }) => (
-        <Article key={article.path} article={article} />
-      ))}
-      <TaxonomyPagination page={page} />
-    </Container>
-    <Footer />
-  </Layout>
-)
+}) => {
+  const title = category?.name ?? tag?.name ?? null
+  const prev = hasPreviousPage(page) ? getPreviousPagePath(page) : null
+  const next = hasNextPage(page) ? getNextPagePath(page) : null
+
+  return (
+    <Layout>
+      <Metadata title={title} thumbnail={category?.thumbnail} prev={prev} next={next}>
+        <Header />
+        <Navbar />
+        <Container>
+          {items.map(({ article }) => (
+            <Article key={article.path} article={article} />
+          ))}
+          <TaxonomyPagination page={page} />
+        </Container>
+        <Footer />
+      </Metadata>
+    </Layout>
+  )
+}
 
 export default TaxonomyPage

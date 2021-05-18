@@ -1,4 +1,4 @@
-import type { AnchorHTMLAttributes, DetailedHTMLProps, FunctionComponent } from 'react'
+import type { ComponentPropsWithRef, FunctionComponent } from 'react'
 import isUrl from 'is-url'
 import path from 'path'
 import type { GatsbyLinkProps } from 'gatsby-link'
@@ -27,7 +27,7 @@ const Link: FunctionComponent<GatsbyLinkProps<unknown> & LinkProps> = ({
   )
 }
 
-interface LinkProps extends DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement> {
+interface LinkProps extends ComponentPropsWithRef<'a'> {
   as?: string
 }
 

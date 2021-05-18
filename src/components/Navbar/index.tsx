@@ -1,4 +1,4 @@
-import type { DetailedHTMLProps, FunctionComponent, HTMLAttributes } from 'react'
+import type { ComponentPropsWithoutRef, FunctionComponent } from 'react'
 import { useCallback, useState } from 'react'
 import { Navbar as BootstrapNavbar, Container, Nav, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -27,8 +27,7 @@ const query = graphql`
   }
 `
 
-const SearchIcon: FunctionComponent<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>> = ({
-  ref,
+const SearchIcon: FunctionComponent<ComponentPropsWithoutRef<'li'>> = ({
   className,
   ...rest
 }) => (

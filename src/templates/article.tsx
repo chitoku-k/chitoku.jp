@@ -1,7 +1,5 @@
 import type { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
-import type { BreadcrumbList, CreativeWork, DateTime, Thing } from 'schema-dts'
-import { JsonLd } from 'react-schemaorg'
 
 import type { ArticleQuery } from 'graphql-types'
 import Layout from 'components/Layout'
@@ -10,6 +8,7 @@ import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 import Container from 'components/Container'
 import Article from 'components/Article'
+import type { Breadcrumb } from 'components/Metadata'
 import Metadata from 'components/Metadata'
 import { register } from 'components/ArticleBody'
 import Link from 'components/Link'
@@ -116,74 +115,44 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
       title,
     },
   } = site
+  const {
+    attributes,
+  } = article
+
+  const breadcrumb: Breadcrumb[] = attributes.category ? [
+    {
+      id: siteUrl,
+      name: title,
+    },
+    {
+      id: siteUrl + attributes.category.path,
+      name: attributes.category.name,
+    },
+    {
+      id: siteUrl + article.path,
+      name: article.attributes.title,
+    },
+  ] : [
+    {
+      id: siteUrl,
+      name: title,
+    },
+    {
+      id: siteUrl + article.path,
+      name: article.attributes.title,
+    },
+  ]
 
   return (
     <Layout>
-      <Metadata title={article.attributes.title} thumbnail={article.attributes.category?.thumbnail} />
-      <JsonLd<CreativeWork> item={{
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        datePublished: article.attributes.created as DateTime,
-        thumbnailUrl: article.attributes.category?.thumbnail && siteUrl + article.attributes.category.thumbnail,
-      }} />
-      <JsonLd<BreadcrumbList> item={{
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: article.attributes.category ? [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            item: {
-              '@type': 'Thing',
-              id: siteUrl,
-              name: title,
-            } as Thing,
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            item: {
-              '@type': 'Thing',
-              id: siteUrl + article.attributes.category.path,
-              name: article.attributes.category.name,
-            } as Thing,
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            item: {
-              '@type': 'Thing',
-              id: siteUrl + article.path,
-              name: article.attributes.title,
-            } as Thing,
-          },
-        ] : [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            item: {
-              '@type': 'Thing',
-              id: siteUrl,
-              name: title,
-            } as Thing,
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            item: {
-              '@type': 'Thing',
-              id: siteUrl + article.path,
-              name: article.attributes.title,
-            } as Thing,
-          },
-        ],
-      }} />
-      <Header />
-      <Navbar />
-      <Container sidebar={article.attributes.sidebar !== false}>
-        <Article article={article} prev={prev} next={next} />
-      </Container>
-      <Footer />
+      <Metadata title={attributes.title} breadcrumb={breadcrumb} created={attributes.created} thumbnail={attributes.category?.thumbnail}>
+        <Header />
+        <Navbar />
+        <Container sidebar={article.attributes.sidebar !== false}>
+          <Article article={article} prev={prev} next={next} />
+        </Container>
+        <Footer />
+      </Metadata>
     </Layout>
   )
 }

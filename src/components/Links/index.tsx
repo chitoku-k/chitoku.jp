@@ -21,19 +21,20 @@ const Links: FunctionComponent<LinksProps> = ({ links }) => {
   const { items } = links
 
   return (
-    <Container>
-      <Metadata title={formatMessage(messages.title)} />
-      <ArticleContainer>
-        <ArticleHeader title={formatMessage(messages.title)} />
-        <ul className={styles.container}>
-          {items.map(({ name, url }) => (
-            <li key={url}>
-              <Link to={url} title={name}>{name}</Link>
-            </li>
-          ))}
-        </ul>
-      </ArticleContainer>
-    </Container>
+    <Metadata title={formatMessage(messages.title)}>
+      <Container>
+        <ArticleContainer>
+          <ArticleHeader title={formatMessage(messages.title)} />
+          <ul className={styles.container}>
+            {items.map(({ name, url }) => (
+              <li key={url}>
+                <Link to={url} title={name}>{name}</Link>
+              </li>
+            ))}
+          </ul>
+        </ArticleContainer>
+      </Container>
+    </Metadata>
   )
 }
 

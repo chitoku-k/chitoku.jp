@@ -1,7 +1,7 @@
 import type { FunctionComponent, ReactNode } from 'react'
 import type { MessageDescriptor } from 'react-intl'
 import { FormattedMessage, useIntl } from 'react-intl'
-import { Location } from '@reach/router'
+import { useLocation } from '@reach/router'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
@@ -39,52 +39,50 @@ interface ContactProps {
 
 const NotFound: FunctionComponent<NotFoundProps> = ({ contacts }) => {
   const { formatMessage } = useIntl()
+  const location = useLocation()
 
   if (!contacts) {
     throw new Error('Invalid data')
   }
 
   return (
-    <Container>
-      <Metadata title={formatMessage(messages.title)} />
-      <ArticleContainer>
-        <ArticleHeader title={formatMessage(messages.title)} />
-        <p>
-          {formatMessage(messages.description)}
-          <br />
-          <Location>
-            {({ location }) => (
-              <FormattedMessage {...messages.requested} values={{
-                url: <code>{location.href}</code>,
+    <Metadata title={formatMessage(messages.title)}>
+      <Container>
+        <ArticleContainer>
+          <ArticleHeader title={formatMessage(messages.title)} />
+          <p>
+            {formatMessage(messages.description)}
+            <br />
+            <FormattedMessage {...messages.requested} values={{
+              url: <code>{location.href}</code>,
+            }} />
+          </p>
+          <p>
+            {formatMessage(messages.try)}
+          </p>
+          <ul className={styles.tryList}>
+            <li>
+              <FormattedMessage {...messages.go_to_home} values={{
+                home: <a href="/">{formatMessage(messages.home)}</a>,
               }} />
-            )}
-          </Location>
-        </p>
-        <p>
-          {formatMessage(messages.try)}
-        </p>
-        <ul className={styles.tryList}>
-          <li>
-            <FormattedMessage {...messages.go_to_home} values={{
-              home: <a href="/">{formatMessage(messages.home)}</a>,
-            }} />
-          </li>
-          <li>
-            <FormattedMessage {...messages.complain_to_administrator} values={{
-              administrator: <a href="/mail">{formatMessage(messages.administrator)}</a>,
-            }} />
-          </li>
-          <li>
-            {formatMessage(messages.give_up)}
-          </li>
-          {contacts.items.filter(service => service.primary).map(service => (
-            <li key={service.service}>
-              <Contact message={messages.follow_me_on} service={service} />
             </li>
-          ))}
-        </ul>
-      </ArticleContainer>
-    </Container>
+            <li>
+              <FormattedMessage {...messages.complain_to_administrator} values={{
+                administrator: <a href="/mail">{formatMessage(messages.administrator)}</a>,
+              }} />
+            </li>
+            <li>
+              {formatMessage(messages.give_up)}
+            </li>
+            {contacts.items.filter(service => service.primary).map(service => (
+              <li key={service.service}>
+                <Contact message={messages.follow_me_on} service={service} />
+              </li>
+            ))}
+          </ul>
+        </ArticleContainer>
+      </Container>
+    </Metadata>
   )
 }
 
