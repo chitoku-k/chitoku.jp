@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import { Container as BootstrapContainer, Col, Row } from 'react-bootstrap'
-import { Location } from '@reach/router'
+import { useLocation } from '@reach/router'
 import type { StateResultsProvided } from 'react-instantsearch-core'
 import { connectStateResults } from 'react-instantsearch-dom'
 import clsx from 'clsx'
@@ -17,15 +17,15 @@ const Container = connectStateResults<ContainerProps>(function Container({
   children,
   sidebar = true,
 }) {
+  const location = useLocation()
+
   return (
     <BootstrapContainer className={styles.container}>
       <Row className={styles.row}>
         <Col className={clsx(styles.col, sidebar && styles.sidebar)}>
           {searchState.query ? <SearchResult /> : children}
         </Col>
-        <Location>
-          {({ location }) => sidebar ? <MemoizedSidebar location={location} /> : null}
-        </Location>
+        {sidebar ? <MemoizedSidebar location={location} /> : null}
       </Row>
     </BootstrapContainer>
   )

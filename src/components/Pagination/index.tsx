@@ -1,4 +1,4 @@
-import type { DetailedHTMLProps, FunctionComponent, HTMLAttributes, ReactNode } from 'react'
+import type { ComponentPropsWithoutRef, FunctionComponent, ReactNode } from 'react'
 import type { PageItemProps, SafeAnchorProps } from 'react-bootstrap'
 import { Pagination as BootstrapPagination } from 'react-bootstrap'
 import type { BsPrefixProps } from 'react-bootstrap/helpers'
@@ -20,7 +20,7 @@ export const getPagePath = (page: Page, num: number): string => `${page.current 
 export const getPreviousPagePath = (page: Page): string => hasPreviousPage(page) ? getPagePath(page, page.current - 1) : '#'
 export const getNextPagePath = (page: Page): string => hasNextPage(page) ? getPagePath(page, page.current + 1) : '#'
 
-const PaginationItem: FunctionComponent<Omit<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>, keyof PaginationItemProps> & PaginationItemProps> = ({
+const PaginationItem: FunctionComponent<Omit<ComponentPropsWithoutRef<'li'>, keyof PaginationItemProps> & PaginationItemProps> = ({
   visible,
   direction,
   className,
@@ -62,7 +62,7 @@ const Pagination: FunctionComponent<PaginationProps> = ({
   )
 }
 
-export const SimplePagination: FunctionComponent<BsPrefixProps<'ul'> & HTMLAttributes<HTMLUListElement> & SimplePaginationProps> = ({
+export const SimplePagination: FunctionComponent<BsPrefixProps<'ul'> & ComponentPropsWithoutRef<'ul'> & SimplePaginationProps> = ({
   prev,
   next,
   ...rest
@@ -91,8 +91,7 @@ export const SimplePagination: FunctionComponent<BsPrefixProps<'ul'> & HTMLAttri
   )
 }
 
-export const PaginationContainer: FunctionComponent<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>> = ({
-  ref,
+export const PaginationContainer: FunctionComponent<ComponentPropsWithoutRef<'aside'>> = ({
   className,
   ...rest
 }) => (
