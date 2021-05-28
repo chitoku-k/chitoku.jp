@@ -30,6 +30,6 @@ FROM scratch AS cache
 COPY --from=build /usr/src/.cache /usr/src/.cache
 COPY --from=build /usr/src/public /usr/src/public
 
-FROM nginx:1.19.10-alpine
+FROM nginx:1.21.0-alpine
 COPY conf /etc/nginx/conf.d
 COPY --from=build /usr/src/public /usr/share/nginx/html
