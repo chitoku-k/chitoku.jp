@@ -4,6 +4,6 @@
   "dependencies": {
     "@types/remove-markdown": "^0.3.0",
     "remove-markdown": "^0.3.0",
-    "string-strip-html": "^8.2.13"
+    "string-strip-html": "^8.3.0"
   }
 }
