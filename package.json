@@ -102,7 +102,8 @@
   },
   "resolutions": {
     "gatsby/**/postcss": "^8.3.0",
-    "gatsby-plugin-ts/**/@babel/parser": "^7.13.13"
+    "gatsby-plugin-ts/**/@babel/parser": "^7.13.13",
+    "gatsby-plugin-ts/**/ts-loader": "^8.0.5"
   },
   "scripts": {
     "postinstall": "husky install",
