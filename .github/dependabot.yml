@@ -9,6 +9,11 @@ updates:
     timezone: Asia/Tokyo
   open-pull-requests-limit: 99
   versioning-strategy: increase
+  ignore:
+  # TODO: https://github.com/twbs/bootstrap/issues/34051
+  - dependency-name: sass
+    versions:
+    - "> 1.32.13"
 - package-ecosystem: docker
   directory: "/"
   schedule:
