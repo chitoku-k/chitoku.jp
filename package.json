@@ -87,7 +87,7 @@
     "react-twitter-widgets": "^1.10.0",
     "rehype-react": "^6.2.0",
     "sass": "1.32.13",
-    "schema-dts": "^0.8.2",
+    "schema-dts": "^0.8.3",
     "stylelint": "^13.13.1",
     "stylelint-config-recess-order": "^2.4.0",
     "stylelint-config-standard": "^22.0.0",
