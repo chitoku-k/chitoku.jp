@@ -24,4 +24,7 @@ yarn-error.log*
 # Dependency directories
 node_modules/
 
+# TypeScript cache
+*.tsbuildinfo
+
 # End of https://www.gitignore.io/api/node

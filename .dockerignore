@@ -2,6 +2,7 @@ Dockerfile
 LICENSE
 README.md
 node_modules
+*.tsbuildinfo
 .dockerignore
 .editorconfig
 .github
