@@ -64,7 +64,7 @@
     "gatsby-source-filesystem": "^3.7.1",
     "gatsby-source-local-git": "^1.2.2",
     "gatsby-transformer-remark": "^3.2.0",
-    "gatsby-transformer-sharp": "^3.6.0",
+    "gatsby-transformer-sharp": "^3.7.1",
     "gatsby-transformer-yaml": "^3.7.1",
     "graphql": "^15.5.0",
     "husky": "^6.0.0",
