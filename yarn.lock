@@ -7435,10 +7435,10 @@ gatsby-plugin-minify-html@^1.0.4:
     glob "^7.1.6"
     html-minifier-terser "^5.1.1"
 
-gatsby-plugin-no-sourcemaps@^3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-3.8.0.tgz#2d975514242ff17e5ec4781c3d52aefedaeefa19"
-  integrity sha512-SW/NONT9vvkCReZm8W7DH43Zw1AVLFix+l7ALuFyeJu5lHLD/iYIbg1ejl0akjuzeNdNecVrFm/Vsb4RA+W73A==
+gatsby-plugin-no-sourcemaps@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-3.9.0.tgz#a2f29b8353d220f0c88df90f2171c39499bf5058"
+  integrity sha512-C8na6JXQ5uVvvFjquIlXi78gePzG5L7tceEn6QUUx2naceyDEyH3ZZlDZ/h615wAKU1nbzyvFocYsOqw1tTXfQ==
 
 gatsby-plugin-page-creator@^3.8.0:
   version "3.8.0"
