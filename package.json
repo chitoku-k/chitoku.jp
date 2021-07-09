@@ -13,7 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@rstacruz/gatsby-remark-component": "^2.0.0",
-    "@types/dotenv-safe": "^8.1.1",
+    "@types/dotenv-safe": "^8.1.2",
     "@types/is-url": "^1.2.29",
     "@types/postcss-custom-properties": "^9.1.1",
     "@types/prismjs": "^1.16.5",
