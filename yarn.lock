@@ -2745,10 +2745,10 @@
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
-"@types/postcss-custom-properties@^9.1.0":
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/@types/postcss-custom-properties/-/postcss-custom-properties-9.1.0.tgz#b1be7eaf26373fe14b6303b1e8df20422da46e24"
-  integrity sha512-K5Pvbq5qiJ310Vep11SLGT+NnFpR7sSLXg8rSUBhY9E2A6VNDZef8MZYuT9vcHdEh9Usz/szKQDIvLznSWhj1A==
+"@types/postcss-custom-properties@^9.1.1":
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/@types/postcss-custom-properties/-/postcss-custom-properties-9.1.1.tgz#03be5772c8df0d1afc1530c0ae06615e758be815"
+  integrity sha512-rX6juHYgyw8BYlMi7Z5pgX+mKr5iaJpzUfqFmFWPlsR/nLJkiZ2f588L+8eryQe7Q3yUQLpXgmowurBSAajTnw==
   dependencies:
     postcss "^7.0.27"
 
