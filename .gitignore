@@ -1,17 +1,13 @@
 # Created by https://www.gitignore.io/api/node
 # Edit at https://www.gitignore.io/?templates=node
 
-### CI ###
-.travis/*.tar
-
 ### Environment ###
 .env*
 !.env.example
 
 ### Gatsby ###
 public/
-typings/graphql-types.d.ts
-.cache
+.cache/
 
 ### Node ###
 # Logs
