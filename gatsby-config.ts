@@ -97,7 +97,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-ts',
       options: {
-        fileName: 'typings/graphql-types.d.ts',
+        fileName: 'node_modules/graphql-types/index.d.ts',
       },
     },
     {

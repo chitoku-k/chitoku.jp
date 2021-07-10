@@ -1,11 +1,17 @@
 import type { CreateSchemaCustomizationArgs, GatsbyNode } from 'gatsby'
+import type { Configuration } from 'webpack'
 import * as path from 'path'
 import { promises as fs } from 'fs'
+import { LicenseWebpackPlugin } from 'license-webpack-plugin'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
+  stage,
+  plugins,
+  getConfig,
   actions: {
     setWebpackConfig,
+    replaceWebpackConfig,
   },
 }) => {
   setWebpackConfig({
@@ -20,6 +26,14 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
         },
       ],
     },
+    plugins: [
+      new LicenseWebpackPlugin({
+        perChunkOutput: false,
+        excludedPackageTest(packageName: string): boolean {
+          return (/^bundle-optimisations$|^historia-/u).test(packageName)
+        },
+      }),
+    ],
     resolve: {
       fallback: {
         path: require.resolve('path-browserify'),
@@ -29,6 +43,19 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
       ],
     },
   })
+
+  if (stage === 'build-javascript') {
+    const config: Configuration = getConfig()
+    if (config.optimization) {
+      config.optimization.minimizer = [
+        plugins.minifyJs({
+          extractComments: false,
+        }),
+        plugins.minifyCss(),
+      ]
+      replaceWebpackConfig(config)
+    }
+  }
 }
 
 // FIXME: Workaround for Unexpected token error in .cache/*.js

@@ -2,7 +2,7 @@ import type { FunctionComponent } from 'react'
 import { Col, Row } from 'react-bootstrap'
 
 import * as styles from './styles.module.scss'
-import type { ArticleFragment } from 'typings/graphql-types'
+import type { ArticleFragment } from 'graphql-types'
 
 import ArticleAttribute from 'components/ArticleAttribute'
 import CategoryIcon from 'components/CategoryIcon'

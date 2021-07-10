@@ -1,5 +1,6 @@
 import { defineMessages } from 'react-intl'
 
 export default defineMessages({
-  copyright: '© Chitoku 2014 ({link})',
+  copyright: '© Chitoku 2014 ({link}{license})',
+  license: 'LICENSE',
 })
