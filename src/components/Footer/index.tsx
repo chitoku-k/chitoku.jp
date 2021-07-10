@@ -1,5 +1,5 @@
 import type { FunctionComponent } from 'react'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, useIntl } from 'react-intl'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import messages from './messages'
@@ -19,6 +19,7 @@ const query = graphql`
 `
 
 const Footer: FunctionComponent = () => {
+  const { formatMessage } = useIntl()
   const { commit } = useStaticQuery<FooterQueryResult>(query)
   const repositoryName = process.env.GATSBY_REPOSITORY_NAME
   const repositoryTreeUrl = process.env.GATSBY_REPOSITORY_TREE_URL
@@ -34,6 +35,7 @@ const Footer: FunctionComponent = () => {
     <footer className={styles.footer}>
       <FormattedMessage {...messages.copyright} values={{
         link: <Link className={styles.link} to={`${repositoryTreeUrl}${commit.hash}`}>{repositoryName}</Link>,
+        license: <Link className={styles.link} to="/licenses.txt">{formatMessage(messages.license)}</Link>,
       }} />
     </footer>
   )

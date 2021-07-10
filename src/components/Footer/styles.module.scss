@@ -23,4 +23,15 @@
   &:hover {
     color: var(--footer-color);
   }
+
+  & + &::before {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin: 0 4px;
+    vertical-align: middle;
+    content: "";
+    background-color: var(--footer-color);
+    border-radius: 50%;
+  }
 }

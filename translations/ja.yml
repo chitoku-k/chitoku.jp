@@ -10,7 +10,8 @@ components:
   Article:
     more: 続きを読む »
   Footer:
-    copyright: '© Chitoku 2014 ({link})'
+    copyright: '© Chitoku 2014 ({link}{license})'
+    license: LICENSE
   Home:
     categories: カテゴリー
   Links:
