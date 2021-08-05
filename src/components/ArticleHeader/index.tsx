@@ -10,7 +10,7 @@ const ArticleHeader: FunctionComponent<ArticleHeaderProps & Omit<ComponentPropsW
   ...rest
 }) => (
   <div className={clsx(styles.header, className)} {...rest}>
-    <h1 className={styles.title}>{title}</h1>
+    <h1 className={clsx(styles.title, styles.border)}>{title}</h1>
     {children}
   </div>
 )
