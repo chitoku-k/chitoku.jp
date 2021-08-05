@@ -15,7 +15,6 @@
   margin: 0;
   font-size: 190%;
   line-height: 1.25;
-  border-color: var(--headings-primary);
   border-style: solid;
   border-width: 0 0 1px 14px;
 
@@ -29,4 +28,8 @@
     padding-left: 7px;
     font-size: 130%;
   }
+}
+
+.border {
+  border-color: var(--headings-primary);
 }
