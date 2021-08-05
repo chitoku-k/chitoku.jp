@@ -7,12 +7,17 @@ tags:
 ---
 Go でテストを記述する際、モックの生成にはしばしば [GoMock](https://pkg.go.dev/github.com/golang/mock/gomock) が使われますが、引数の検証に使う [Matcher](https://pkg.go.dev/github.com/golang/mock/gomock?tab=doc#Matcher) は標準では限られたもののみが用意されています。
 
-たとえば、以下のテストの 6 行目では `go¦gomock.Eq(...)` を使って `go¦api.Client` に対して `go¦Get("/v1/info")` という呼び出しが 1 回されることを期待しています。
+たとえば、以下のテストの 12 行目では `go¦gomock.Eq(...)` を使って `go¦api.Client` に対して `go¦Get("/v1/info")` という呼び出しが 1 回されることを期待しています。
 
 ```go{numberLines: true}
 //go:generate mockgen -source=client.go -destination=client_mock.go -package=api
 
 package api
+
+import (
+	"io"
+	"net/http"
+)
 
 type Client interface {
 	Get(url string) (*http.Response, error)
@@ -21,6 +26,12 @@ type Client interface {
 ```
 
 ```go{numberLines: true}
+import (
+	"testing"
+
+	"github.com/golang/mock/gomock"
+)
+
 func TestServiceGet(t *testing.T) {
 	ctrl := gomock.NewController(t)
 	defer ctrl.Finish()
@@ -33,11 +44,17 @@ func TestServiceGet(t *testing.T) {
 }
 ```
 
-このような単純な比較であれば標準の Matcher でも事足りますが、以下のテストの 9 行目のように引数の検証が比較演算でできないケースもあり、`go¦gomock.Any()` を使って引数の検証自体を省略したままにしてしまうこともあります。
+このような単純な比較であれば標準の Matcher でも事足りますが、以下のテストの 15 行目のように引数の検証が比較演算でできないケースもあり、`go¦gomock.Any()` を使って引数の検証自体を省略したままにしてしまうこともあります。
 
 <!-- more -->
 
 ```go{numberLines: true}
+import (
+	"testing"
+
+	"github.com/golang/mock/gomock"
+)
+
 func TestServicePost(t *testing.T) {
 	ctrl := gomock.NewController(t)
 	defer ctrl.Finish()
@@ -55,9 +72,14 @@ func TestServicePost(t *testing.T) {
 ```
 
 今回は上記のラッパーの `go¦Post()` が期待した `go¦body` の値で呼び出されているか検証する `go¦Matcher` を記述して対処してみます。
-メインロジックでは、16 行目で `go¦url.Values` をエンコードした文字列をラップする `go¦io.Reader` を渡し、これが正しく渡されているかをテストします[^1]。
+メインロジックでは、21 行目で `go¦url.Values` をエンコードした文字列をラップする `go¦io.Reader` を渡し、これが正しく渡されているかをテストします[^1]。
 
 ```go{numberLines: true}
+import (
+	"net/url"
+	"strings"
+)
+
 type service struct {
 	client api.Client
 }
@@ -80,11 +102,11 @@ func (s *service) DoFancyStuff() {
 
 ## 環境
 
-+--------+------------+
-| Go     | 1.14.3     |
-+--------+------------+
-| GoMock | 1.4.3      |
-+--------+------------+
++--------+--------+
+| Go     | 1.16.6 |
++--------+--------+
+| GoMock | 1.6.0  |
++--------+--------+
 
 ## 設計
 
@@ -151,9 +173,16 @@ type GotFormatter interface {
 ### `go¦io.Reader` の Matcher と GotFormatter
 
 テスト時に読み取った値を `go¦readerMatcher` にキャッシュしておき、マッチしなかった場合にその値を `go¦Got()` でも使えるようにしておきます。
-`go¦Got()` では 27 行目で入れ子の `go¦Matcher` が `GotFormatter` だった場合にその処理を委譲しています。
+`go¦Got()` では 34 行目で入れ子の `go¦Matcher` が `GotFormatter` だった場合にその処理を委譲しています。
 
 ```go{numberLines: true}
+import (
+	"fmt"
+	"io"
+
+	"github.com/golang/mock/gomock"
+)
+
 type readerMatcher struct {
 	m    gomock.Matcher
 	data []byte
@@ -166,7 +195,7 @@ func Reader(m gomock.Matcher) gomock.Matcher {
 
 func (r *readerMatcher) Matches(x interface{}) bool {
 	var err error
-	r.data, err = ioutil.ReadAll(x.(io.Reader))
+	r.data, err = io.ReadAll(x.(io.Reader))
 	if err != nil {
 		return false
 	}
@@ -189,9 +218,16 @@ func (r *readerMatcher) Got(got interface{}) string {
 ### `go¦url.Values` の Matcher と GotFormatter
 
 `go¦io.Reader` への `go¦Read()` とは異なりバイト列の URL デコードは冪等性があるのでキャッシュしません。
-`go¦Got()` では 32 行目で入れ子の `go¦Matcher` が `GotFormatter` だった場合にその処理を委譲しています。
+`go¦Got()` では 39 行目で入れ子の `go¦Matcher` が `GotFormatter` だった場合にその処理を委譲しています。
 
 ```go{numberLines: true}
+import (
+	"fmt"
+	"net/url"
+
+	"github.com/golang/mock/gomock"
+)
+
 type queryMatcher struct {
 	m gomock.Matcher
 }
