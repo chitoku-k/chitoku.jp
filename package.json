@@ -28,7 +28,7 @@
     "@types/tapable": "^2.2.2",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.29.0",
-    "@webcomponents/shadydom": "^1.8.0",
+    "@webcomponents/shadydom": "^1.9.0",
     "algoliasearch": "^4.10.3",
     "babel-plugin-react-intl-auto": "^3.3.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
