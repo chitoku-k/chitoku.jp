@@ -3219,10 +3219,10 @@
     "@webassemblyjs/ast" "1.11.1"
     "@xtuc/long" "4.2.2"
 
-"@webcomponents/shadydom@^1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@webcomponents/shadydom/-/shadydom-1.8.0.tgz#be4bce3549a04c8db0f5fae142bebead5f94b04a"
-  integrity sha512-GYTJ4dr4uUZnut80cA94tpXXVip2RdoJpGMnYNKgh/Diz5x1U/m9Dy0RwZEzoEd7v2aRfEICac7TQ1wc50EKbQ==
+"@webcomponents/shadydom@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webcomponents/shadydom/-/shadydom-1.9.0.tgz#fac8ce835763f17d38b5cad818e2c90a96b2dcc3"
+  integrity sha512-1VoziSoBBsuGM3gk2nlOgLYOQLT9iG5s9ud6CxpdkYxJyGl3YWIVCsRPCXpJpdYp4/8ACkVcuD6GajRtIoJm1w==
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
