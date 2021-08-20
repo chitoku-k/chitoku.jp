@@ -4586,7 +4586,7 @@ cheerio-select@^1.5.0:
     domhandler "^4.2.0"
     domutils "^2.7.0"
 
-cheerio@^1.0.0-rc.10, cheerio@^1.0.0-rc.3, cheerio@^1.0.0-rc.9:
+cheerio@^1.0.0-rc.10, cheerio@^1.0.0-rc.3:
   version "1.0.0-rc.10"
   resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0-rc.10.tgz#2ba3dcdfcc26e7956fc1f440e61d51c643379f3e"
   integrity sha512-g0J0q/O6mW8z5zxQ3A8E8J1hUgp4SMOvEoW/x84OwyHKe/Zccz83PVT4y5Crcr530FV6NgmKI1qvGTKVl9XXVw==
@@ -7733,13 +7733,13 @@ gatsby-remark-autolink-headers@^4.9.0:
     mdast-util-to-string "^2.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-copy-linked-files@^4.8.0:
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-4.8.0.tgz#0b9cc82e753ba12dac2eb1620b7d20ca7c108890"
-  integrity sha512-l+CzW8OA2eOABANH9/ErSzw48XOuGA4DyVxQDCR3XBiqZFKSr2gHOA/jBLUaM9CYrVUlXrZcw2e28N+3jFNdiQ==
+gatsby-remark-copy-linked-files@^4.9.0:
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-4.9.0.tgz#7e1d7a9262a34267a250eeffa40f5b3c712099a7"
+  integrity sha512-NLCHtll0aFg6IViZ3V9WQm+C077R0a1SFvdn7NAe+jbRZBVlvfrVLxzT8UI3toFMj2q3NwK2Rpca+iTP172ifw==
   dependencies:
-    "@babel/runtime" "^7.14.6"
-    cheerio "^1.0.0-rc.9"
+    "@babel/runtime" "^7.14.8"
+    cheerio "^1.0.0-rc.10"
     fs-extra "^8.1.0"
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
