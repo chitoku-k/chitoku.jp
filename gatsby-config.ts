@@ -42,11 +42,9 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
-        test: /\.js$|\.tsx?$/u,
+        extensions: [ 'js', 'tsx' ],
         stages: [ 'build-javascript' ],
-        options: {
-          failOnError: process.env.NODE_ENV === 'production',
-        },
+        failOnError: process.env.NODE_ENV === 'production',
       },
     },
     {
