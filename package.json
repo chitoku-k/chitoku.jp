@@ -45,7 +45,7 @@
     "gatsby": "^3.12.1",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-algolia": "^0.22.1",
-    "gatsby-plugin-eslint": "^3.0.0",
+    "gatsby-plugin-eslint": "^4.0.0",
     "gatsby-plugin-google-analytics": "^3.12.0",
     "gatsby-plugin-minify-html": "^1.0.4",
     "gatsby-plugin-no-sourcemaps": "^3.12.0",
