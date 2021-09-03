@@ -147,8 +147,10 @@
         "react/no-multi-comp": ["error", {
           "ignoreStateless": true
         }],
+        "react/no-unused-prop-types": "off",
         "react/prop-types": "off",
         "react/react-in-jsx-scope": "off",
+        "react/require-default-props": "off",
         "react-hooks/exhaustive-deps": "warn",
         "react-hooks/rules-of-hooks": "error"
       }
