@@ -44,7 +44,7 @@
     "extract-react-intl-messages": "^4.1.1",
     "gatsby": "^3.13.0",
     "gatsby-image": "^3.11.0",
-    "gatsby-plugin-algolia": "^0.22.1",
+    "gatsby-plugin-algolia": "^0.22.2",
     "gatsby-plugin-eslint": "^4.0.0",
     "gatsby-plugin-google-analytics": "^3.13.0",
     "gatsby-plugin-minify-html": "^1.0.4",
