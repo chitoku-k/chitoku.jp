@@ -86,7 +86,7 @@
     "react-refresh": "^0.10.0",
     "react-schemaorg": "^2.0.0",
     "react-twitter-widgets": "^1.10.0",
-    "rehype-react": "^7.0.1",
+    "rehype-react": "^7.0.2",
     "sass": "1.32.13",
     "schema-dts": "^1.0.0",
     "stylelint": "^13.13.1",
