@@ -27,7 +27,7 @@
     "@types/sass": "^1.16.1",
     "@types/tapable": "^2.2.2",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
-    "@typescript-eslint/parser": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.1",
     "@webcomponents/shadydom": "^1.9.0",
     "algoliasearch": "^4.10.5",
     "babel-plugin-react-intl-auto": "^3.3.0",
