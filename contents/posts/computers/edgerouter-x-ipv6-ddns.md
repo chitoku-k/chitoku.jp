@@ -46,24 +46,22 @@ EdgeRouter におけるパッケージのインストールに関しては公式
 - host-name
   - DDNS として IP アドレスが更新されるホスト名を指定します。
 - options
-  - `ipv6=yes` を含めるのがポイントです。`zone=` に続けてゾーン名を指定します。
+  - `ipv6=yes, if-skip=inet6` を含めるのがポイントです。`zone=` に続けてゾーン名を指定します。
+  - `ip addr list dev eth0` から IP アドレスを取得する際、`if-skip` に指定された文字列までが読み飛ばされます。
 - login
   - Cloudflare のログイン時のメールアドレスを指定します。
 - password
   - Cloudflare の API キー[^3]を指定します。
 - protocol
   - `cloudflare` 固定です。
-- web
-  - IPv6 アドレスを返す Web API を指定します。今回は [ident.me API](https://api.ident.me/) を使いました。
 
 ```bash
 $ configure
 $ set service dns dynamic interface eth0 service custom-cloudflare host-name ddns.example.com
-$ set service dns dynamic interface eth0 service custom-cloudflare options 'ipv6=yes, zone=example.com'
+$ set service dns dynamic interface eth0 service custom-cloudflare options 'ipv6=yes, if-skip=inet6, zone=example.com'
 $ set service dns dynamic interface eth0 service custom-cloudflare login ******@*******.**
 $ set service dns dynamic interface eth0 service custom-cloudflare password *************************************
 $ set service dns dynamic interface eth0 service custom-cloudflare protocol cloudflare
-$ set service dns dynamic interface eth0 web 'https://v6.ident.me/'
 $ commit; save
 ```
 
