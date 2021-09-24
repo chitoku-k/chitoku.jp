@@ -2863,12 +2863,12 @@
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
-"@types/postcss-custom-properties@^9.1.1":
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/@types/postcss-custom-properties/-/postcss-custom-properties-9.1.1.tgz#03be5772c8df0d1afc1530c0ae06615e758be815"
-  integrity sha512-rX6juHYgyw8BYlMi7Z5pgX+mKr5iaJpzUfqFmFWPlsR/nLJkiZ2f588L+8eryQe7Q3yUQLpXgmowurBSAajTnw==
+"@types/postcss-custom-properties@^12.0.0":
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/@types/postcss-custom-properties/-/postcss-custom-properties-12.0.0.tgz#5789d5057dea513b5189af71e0b8a9a223db3f94"
+  integrity sha512-11D8E30jJ6L1P2rF/y065z1hrLib2o3rUggEwv4B3jBDhAXnG0gZPNF7LdToV7o8Glc4ety/U9VP2qYCQKDpKw==
   dependencies:
-    postcss "^7.0.27"
+    postcss-custom-properties "*"
 
 "@types/prismjs@^1.16.6":
   version "1.16.6"
@@ -12206,7 +12206,7 @@ postcss-convert-values@^5.0.0:
   dependencies:
     postcss-value-parser "^4.1.0"
 
-postcss-custom-properties@^12.0.0:
+postcss-custom-properties@*, postcss-custom-properties@^12.0.0:
   version "12.0.0"
   resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-12.0.0.tgz#fd01ec9bd1462336ea8af7ba3c1a2c47c203031e"
   integrity sha512-eAyX3rMjZKxdne6tWKjkWbNWfw6bbv4xTsrjNJ7C3uGDODrzbQXR+ueshRkw7Lhlhc3qyTmYH/sFfD0AbhgdSQ==
