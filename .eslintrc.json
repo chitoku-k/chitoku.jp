@@ -102,6 +102,7 @@
         "@typescript-eslint/no-type-alias": ["error", {
           "allowAliases": "always",
           "allowConditionalTypes": "always",
+          "allowGenerics": "always",
           "allowLiterals": "always",
           "allowMappedTypes": "always"
         }],
