@@ -72,7 +72,7 @@
     "license-webpack-plugin": "^2.3.21",
     "lint-staged": "^11.1.2",
     "path-browserify": "^1.0.1",
-    "postcss": "^8.3.8",
+    "postcss": "^8.3.9",
     "postcss-custom-properties": "^12.0.0",
     "prismjs": "^1.25.0",
     "react": "^17.0.2",
