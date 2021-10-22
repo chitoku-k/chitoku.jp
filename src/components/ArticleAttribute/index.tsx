@@ -60,7 +60,7 @@ const ArticleAttribute: FunctionComponent<ArticleAttributeProps> = ({
   )
 }
 
-interface ArticleAttributeProps {
+export interface ArticleAttributeProps {
   article: Pick<ArticleFragment, 'attributes'>
 }
 
