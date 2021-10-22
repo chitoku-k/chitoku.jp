@@ -4,8 +4,7 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
 module.exports = {
   stories: [
-    '../src/**/*.stories.mdx',
-    '../src/**/*.stories.@(js|jsx|ts|tsx)',
+    '../src/**/*.stories.tsx',
   ],
   addons: [
     '@storybook/addon-links',
@@ -16,7 +15,32 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
+  babel: options => {
+    options.plugins.push([ 'react-intl-auto', { removePrefix: 'src/' } ],)
+    return options
+  },
   webpackFinal: config => {
+    const tsx = config.module.rules.find(({ test }) => test.test('.tsx'))
+    const babelLoader = tsx.use.find(({ loader }) => loader.includes('babel-loader'))
+    babelLoader.options.plugins = [
+      ...babelLoader.options.plugins.filter(p => p !== require.resolve('babel-plugin-remove-graphql-queries')),
+      [
+        require.resolve('babel-plugin-remove-graphql-queries'),
+        {
+          stage: 'develop-html',
+          staticQueryDir: 'page-data/sq/d',
+        },
+      ],
+    ]
+
+    config.module.rules.push({
+      test: /\.yml$/u,
+      use: [
+        { loader: 'json-loader' },
+        { loader: 'yaml-flat-loader' },
+      ],
+    })
+
     const svg = config.module.rules.find(({ test }) => test.test('.svg'))
     svg.exclude = /\.svg$/u
 
@@ -49,6 +73,7 @@ module.exports = {
           options: {
             importLoaders: 1,
             modules: {
+              exportLocalsConvention: 'camelCaseOnly',
             },
           },
         },

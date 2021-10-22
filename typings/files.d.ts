@@ -1,4 +1,17 @@
-declare module 'translations/ja.yml' {
+declare module 'translations/*.yml' {
+  const components: Record<string, string>
+  export = components
+}
+
+declare module 'contents/taxonomies/categories/*.yml' {
+  const category: {
+    id: string
+    name: string
+    description: string
+    path: string
+    thumbnail: string
+  }
+  export = category
 }
 
 declare module '*.scss' {
