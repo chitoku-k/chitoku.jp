@@ -1,0 +1,30 @@
+import React from 'react'
+import { IntlProvider } from 'react-intl'
+import { LocationProvider, createHistory, createMemorySource } from '@reach/router'
+import type { Meta, Story } from '@storybook/react'
+
+import '../../styles/styles.scss'
+import messages from 'translations/ja.yml'
+import type { SidebarProps } from 'components/Sidebar'
+import Sidebar from 'components/Sidebar'
+
+const meta: Meta = {
+  component: Sidebar,
+  title: 'Components/Sidebar',
+}
+
+const history = createHistory(createMemorySource('/'))
+
+const Template: Story<SidebarProps> = props => (
+  <IntlProvider locale="ja" messages={messages}>
+    <LocationProvider history={history}>
+      <Sidebar {...props} />
+    </LocationProvider>
+  </IntlProvider>
+)
+
+export default meta
+export const Default = Template
+Default.args = {
+  location: history.location,
+}

@@ -22,7 +22,7 @@ import {
 import { MetadataContext } from 'components/Metadata'
 import NavItem from 'components/NavItem'
 import Link from 'components/Link'
-import SubHeader from '../SubHeader'
+import SubHeader from 'components/SubHeader'
 
 const query = graphql`
   query SidebarItem {

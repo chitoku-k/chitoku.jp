@@ -45,7 +45,7 @@ const CategoryIcon: FunctionComponent<CategoryIconProps> = ({
 
 type Icon = Record<string, React.ComponentType<React.SVGAttributes<Element>>>
 
-interface CategoryIconProps {
+export interface CategoryIconProps {
   to?: string
   category?: CategoryFragment | null
 }

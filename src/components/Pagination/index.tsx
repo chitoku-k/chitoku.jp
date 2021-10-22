@@ -1,7 +1,6 @@
-import type { ComponentPropsWithoutRef, FunctionComponent, ReactNode } from 'react'
+import type { ComponentPropsWithoutRef, FunctionComponent } from 'react'
 import type { PageItemProps, SafeAnchorProps } from 'react-bootstrap'
 import { Pagination as BootstrapPagination } from 'react-bootstrap'
-import type { BsPrefixProps } from 'react-bootstrap/helpers'
 import { useIntl } from 'react-intl'
 import clsx from 'clsx'
 
@@ -20,7 +19,7 @@ export const getPagePath = (page: Page, num: number): string => `${page.current 
 export const getPreviousPagePath = (page: Page): string => hasPreviousPage(page) ? getPagePath(page, page.current - 1) : '#'
 export const getNextPagePath = (page: Page): string => hasNextPage(page) ? getPagePath(page, page.current + 1) : '#'
 
-const PaginationItem: FunctionComponent<Omit<ComponentPropsWithoutRef<'li'>, keyof PaginationItemProps> & PaginationItemProps> = ({
+export const PaginationItem: FunctionComponent<Omit<ComponentPropsWithoutRef<'li'>, keyof PaginationItemProps> & PaginationItemProps> = ({
   visible,
   direction,
   className,
@@ -62,35 +61,6 @@ const Pagination: FunctionComponent<PaginationProps> = ({
   )
 }
 
-export const SimplePagination: FunctionComponent<BsPrefixProps<'ul'> & ComponentPropsWithoutRef<'ul'> & SimplePaginationProps> = ({
-  prev,
-  next,
-  ...rest
-}) => {
-  const { formatMessage } = useIntl()
-
-  return (
-    <BootstrapPagination className={styles.simplePagination} {...rest}>
-      <PaginationItem className={styles.simplePaginationItem} direction="prev" visible={Boolean(prev)} href={prev ? prev.to : '#'}>
-        {prev ? (
-          <>
-            <span className={styles.icon}>{formatMessage(messages.prev)}</span>
-            <span>{prev.title}</span>
-          </>
-        ) : null}
-      </PaginationItem>
-      <PaginationItem className={styles.simplePaginationItem} direction="next" visible={Boolean(next)} href={next ? next.to : '#'}>
-        {next ? (
-          <>
-            <span>{next.title}</span>
-            <span className={styles.icon}>{formatMessage(messages.next)}</span>
-          </>
-        ) : null}
-      </PaginationItem>
-    </BootstrapPagination>
-  )
-}
-
 export const PaginationContainer: FunctionComponent<ComponentPropsWithoutRef<'aside'>> = ({
   className,
   ...rest
@@ -103,7 +73,7 @@ export interface Page {
   total: number
 }
 
-interface PaginationProps {
+export interface PaginationProps {
   page: Page
 }
 
@@ -112,14 +82,5 @@ interface PaginationItemProps extends PageItemProps, SafeAnchorProps {
   visible?: boolean
 }
 
-interface SimplePaginationItem {
-  title: ReactNode
-  to: string
-}
-
-interface SimplePaginationProps {
-  prev?: SimplePaginationItem | null
-  next?: SimplePaginationItem | null
-}
-
+export * from './simple'
 export default Pagination

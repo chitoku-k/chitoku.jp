@@ -86,7 +86,7 @@ interface TwitterTweetOptions {
   theme?: string
 }
 
-interface TwitterTweetProps extends Omit<TweetProps, 'tweetId'> {
+export interface TwitterTweetProps extends Omit<TweetProps, 'tweetId'> {
   id: string
   options?: TwitterTweetOptions
 }
