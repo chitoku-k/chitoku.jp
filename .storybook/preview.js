@@ -11,7 +11,7 @@ module.exports.parameters = {
       },
       {
         name: 'container',
-        value: 'var(--container-background)',
+        value: 'var(--containers-background)',
       },
     ],
   },
