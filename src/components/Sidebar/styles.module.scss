@@ -75,7 +75,7 @@ $items: twitter, facebook, pocket, hatena, tumblr;
 
   @include media-breakpoint-down(md) {
     padding: 15px;
-    margin: 15px 0 0 0;
+    margin: 15px 0 0;
   }
 
   @include media-breakpoint-down(sm) {

@@ -53,7 +53,7 @@ button {
 }
 
 // IE Workaround
-@-ms-viewport {
+@viewport {
   width: auto;
   /* stylelint-disable property-no-unknown */
   initial-scale: 1;

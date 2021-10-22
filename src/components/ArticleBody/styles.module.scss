@@ -14,7 +14,7 @@
 
   h2 {
     padding: 9px 15px 7px;
-    margin: 48px 0 16px 0;
+    margin: 48px 0 16px;
     font-size: 140%;
     color: var(--headings-color);
     background-color: var(--headings-secondary);
@@ -138,11 +138,11 @@
   :global {
     .footnote-ref {
       &::before {
-        content: '[';
+        content: "[";
       }
 
       &::after {
-        content: ']';
+        content: "]";
       }
     }
 
@@ -276,7 +276,7 @@
           > td,
           > th {
             padding: 8px 16px;
-            line-height: 1.42857;
+            line-height: 1.4286;
             vertical-align: top;
             border: 1px solid var(--table-border);
             border-width: 1px 0;
