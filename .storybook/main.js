@@ -56,9 +56,7 @@ module.exports = {
       ],
     })
 
-    config.resolve.fallback = {
-      path: require.resolve('path-browserify'),
-    }
+    config.resolve.fallback.path = require.resolve('path-browserify')
 
     config.resolve.plugins = [
       new TsconfigPathsPlugin({

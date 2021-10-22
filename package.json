@@ -113,7 +113,8 @@
     "yaml-flat-loader": "^1.0.2"
   },
   "resolutions": {
-    "gatsby/**/postcss": "^8.3.0"
+    "gatsby/**/postcss": "^8",
+    "webpack": "^5"
   },
   "scripts": {
     "postinstall": "husky install",
