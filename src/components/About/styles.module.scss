@@ -49,9 +49,7 @@
 .table {
   width: auto;
   margin: 0;
-  border-bottom-color: var(--table-border);
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+  border-bottom: 1px solid var(--table-border);
 
   > tbody > tr {
     > th,

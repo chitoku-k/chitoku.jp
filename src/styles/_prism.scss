@@ -4,8 +4,8 @@
 @media (prefers-color-scheme: dark) {
   @import "~prismjs/themes/prism-tomorrow";
 
-  pre[class*=language],
-  code[class*=language] {
+  pre[class*="language"],
+  code[class*="language"] {
     &::selection,
     ::selection {
       background-color: var(--selection-background);
