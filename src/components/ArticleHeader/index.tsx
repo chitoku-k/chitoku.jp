@@ -15,7 +15,7 @@ const ArticleHeader: FunctionComponent<ArticleHeaderProps & Omit<ComponentPropsW
   </div>
 )
 
-interface ArticleHeaderProps {
+export interface ArticleHeaderProps {
   title: ReactNode
 }
 
