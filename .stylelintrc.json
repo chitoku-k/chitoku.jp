@@ -1,12 +1,15 @@
 {
   "plugins": ["stylelint-scss"],
   "extends": [
-    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
     "stylelint-config-recess-order"
   ],
   "rules": {
     "at-rule-no-unknown": null,
+    "max-line-length": null,
     "no-invalid-position-at-import-rule": null,
+    "selector-class-pattern": null,
+    "selector-id-pattern": null,
     "selector-pseudo-class-no-unknown": [true, {
       "ignorePseudoClasses": ["global"]
     }],
