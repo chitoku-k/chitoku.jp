@@ -28,7 +28,7 @@ const About: FunctionComponent<AboutProps> = ({
         <ArticleContainer className={styles.container}>
           <ArticleHeader title={formatMessage(messages.title)} />
           <Row>
-            <Col sm={2}>
+            <Col md={3} lg={2}>
               <div className={styles.iconContainer}>
                 <img className={styles.icon} src={about.icon.src} />
                 <br />
@@ -39,7 +39,7 @@ const About: FunctionComponent<AboutProps> = ({
                 </small>
               </div>
             </Col>
-            <Col sm={10}>
+            <Col md={9} lg={10}>
               <Table className={styles.table}>
                 <tbody>
                   <tr>

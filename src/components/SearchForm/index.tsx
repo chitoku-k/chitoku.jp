@@ -19,7 +19,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
   const [ text, setText ] = useState(null as string | null)
   const input = useRef<HTMLInputElement>(null)
 
-  const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement | React.Component>) => {
+  const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
   }, [])
 
@@ -42,7 +42,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
       {search ? (
         <Container className={styles.mobileContainer}>
           <Container className={styles.mobile} role="search" as="form" onSubmit={onSubmit}>
-            <Row className={styles.mobileRow}>
+            <Row className={styles.mobileRow} xs="auto">
               <input className={styles.mobileInput} type="search" ref={input} value={text ?? ''} placeholder={formatMessage(messages.search)} onChange={onChange} />
               <div className={styles.mobileCancelContainer} onClick={closeSearch}>
                 {formatMessage(messages.cancel)}

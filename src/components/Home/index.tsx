@@ -35,11 +35,11 @@ const Home: FunctionComponent<HomeProps> = ({
         <SubHeader className={styles.header}>
           {formatMessage(messages.categories)}
         </SubHeader>
-        <Row className={styles.row}>
+        <Row className={styles.row} xs="auto">
           {home.categories.filter(isCategory).map(category => (
-            <Col key={category.path} className={styles.col} xs={2} md={4}>
+            <Col key={category.path} className={styles.col} md={4}>
               <Row className={styles.category}>
-                <Col className={styles.icon} xs={12} md="auto">
+                <Col className={styles.icon} md="auto">
                   <CategoryIcon to={category.path} category={category} />
                 </Col>
                 <Col className={styles.name}>

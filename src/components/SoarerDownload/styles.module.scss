@@ -9,7 +9,7 @@
   width: 48px;
   margin: 0 15px !important;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     margin-left: 0 !important;
   }
 }
@@ -22,7 +22,7 @@
     display: none;
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     font-size: 120% !important;
     line-height: 1.2;
 
@@ -43,7 +43,7 @@
     }
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     margin-top: 20px;
     margin-left: 0;
 

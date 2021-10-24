@@ -33,15 +33,14 @@ $font-family-monospace:
   /* Emoji */
   #{$font-family-emoji-base};
 
-// Body
-$body-bg: var(--body-background);
-$body-color: var(--body-color);
-
 // Link
 $link-color: var(--links-color);
 $link-hover-color: var(--links-hover);
+$link-decoration: none;
+$link-hover-decoration: underline;
 
 // Table
+$table-color: var(--body-color);
 $hr-border-color: var(--table-border);
 $table-border-color: var(--table-border);
 
@@ -55,6 +54,8 @@ $pagination-bg: var(--pagination-background);
 $pagination-color: var(--pagination-color);
 $pagination-hover-color: var(--pagination-color);
 $pagination-hover-bg: var(--pagination-hover);
+$pagination-focus-color: var(--pagination-color);
+$pagination-focus-bg: var(--pagination-hover);
 $pagination-active-bg: var(--pagination-active);
 
 // Popover

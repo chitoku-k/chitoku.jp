@@ -1,12 +1,12 @@
 @import "src/styles/modules";
 
 .body {
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     margin-right: 13px;
     margin-left: 13px;
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     margin-right: 0;
     margin-left: 0;
     border-radius: 0;
@@ -27,11 +27,11 @@
       border: none;
     }
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       padding: 7px 12px;
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       padding: 7px 15px;
       margin: 30px -15px 15px;
       font-size: 120%;
@@ -45,13 +45,13 @@
     font-size: 120%;
     border-bottom: 1px solid var(--headings-border);
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       padding-right: 13px;
       padding-left: 13px;
       font-size: 110%;
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       padding: 6px 15px;
       margin: 10px -15px 15px;
     }
@@ -65,7 +65,7 @@
     top: auto;
     width: 55px;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       right: 8px;
       left: auto;
       width: auto;
@@ -97,12 +97,12 @@
     > p {
       padding: 0 16px;
 
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(lg) {
         padding: 0 13px;
         font-size: 14px;
       }
 
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         padding: 0;
       }
     }
@@ -118,7 +118,7 @@
     padding: 10px 20px 4px;
     border-left: 5px solid var(--blockquote-border);
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       padding-left: 15px;
       margin-left: 10px;
     }
@@ -176,7 +176,7 @@
         margin-bottom: 0;
       }
 
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         text-align: left;
       }
     }
@@ -197,12 +197,12 @@
       border-radius: 0.3em;
       -webkit-overflow-scrolling: touch;
 
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(lg) {
         margin-right: 13px;
         margin-left: 13px;
       }
 
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         margin-right: -15px;
         margin-left: -15px;
         border-radius: 0;
@@ -226,7 +226,7 @@
         user-select: none;
       }
 
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         border-radius: 0;
       }
     }
@@ -286,7 +286,7 @@
               margin-bottom: 0;
             }
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
               white-space: nowrap;
             }
           }
@@ -300,7 +300,7 @@
         }
       }
 
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         display: block;
         width: calc(100% + 30px);
         margin: 10px -15px;

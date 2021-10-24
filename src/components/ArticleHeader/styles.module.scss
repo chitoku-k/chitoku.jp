@@ -22,7 +22,7 @@
     color: var(--containers-color);
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     padding-top: 3px;
     padding-bottom: 7px;
     padding-left: 7px;

@@ -2,7 +2,7 @@ article.page-softwares {
   img {
     margin-right: 6px;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       margin-right: 12px;
     }
   }
@@ -38,17 +38,17 @@ article.page-softwares {
   }
 
   div > p {
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       padding-left: 16px;
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       padding-left: 60px;
     }
   }
 
   div > ul {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       padding-left: 78px;
     }
   }
@@ -62,7 +62,7 @@ article.page-softwares {
       margin-top: 0.5em;
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       margin-left: 44px;
     }
   }

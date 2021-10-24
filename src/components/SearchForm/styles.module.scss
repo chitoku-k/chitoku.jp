@@ -4,7 +4,7 @@
   position: relative;
   padding: 0;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     display: none;
   }
 }
@@ -19,7 +19,7 @@
   border-radius: 16px;
   box-shadow: 0 3px 5px 1px var(--search-shadow) inset;
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     width: 200px;
   }
 
@@ -38,14 +38,18 @@
 
 .mobile-container {
   display: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     display: block;
   }
 }
 
 .mobile-cancel-container {
   display: table-cell;
+  padding: 0;
   margin-right: 8px;
   color: var(--nav-color);
   text-align: center;
@@ -69,6 +73,7 @@
   background-color: var(--search-background);
   border: none;
   border-radius: 4px;
+  appearance: none;
 
   &:focus {
     outline: none;

@@ -10,11 +10,6 @@ updates:
   open-pull-requests-limit: 99
   versioning-strategy: increase
   ignore:
-  # TODO: Update sass when Bootstrap v4.6.1 is released
-  # https://github.com/twbs/bootstrap/issues/34051
-  - dependency-name: sass
-    versions:
-    - "> 1.32.13"
   # TODO: Update unist-* and string-strip-html when Gatsby adds support for ESM
   # https://github.com/gatsbyjs/gatsby/discussions/31599
   - dependency-name: unist-*

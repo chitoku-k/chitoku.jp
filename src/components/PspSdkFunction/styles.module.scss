@@ -4,11 +4,11 @@
   padding: 0 16px;
   margin-bottom: 32px;
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     padding: 0 13px;
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     padding: 0;
   }
 }
@@ -36,7 +36,7 @@
   font-size: 11pt;
   line-height: 1.8;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     ul {
       padding-left: 20px;
     }
