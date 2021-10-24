@@ -10,7 +10,7 @@
   & + & {
     margin-top: 20px;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       margin-top: 15px;
     }
   }
@@ -20,11 +20,11 @@
     margin-left: 0;
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     padding: 15px;
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     border-radius: 0;
   }
 }

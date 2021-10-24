@@ -1,11 +1,13 @@
 @import "src/styles/modules";
 
 .icon {
+  min-width: 20px;
   margin-right: 0.2em;
 }
 
 .item {
   display: inline-block;
+  padding: 0;
   margin-right: 0.8em;
 }
 

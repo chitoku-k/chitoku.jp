@@ -4,13 +4,13 @@
   margin: 0 auto;
 
   @include media-breakpoint-down(sm) {
-    width: auto;
-    margin: 12px 10px 16px;
+    margin: 12px auto 16px;
   }
 }
 
 .title {
   height: 40px;
+  padding: 0;
   margin: 20px 0;
 
   svg {
@@ -22,16 +22,18 @@
     }
   }
 
-  @include media-breakpoint-down(sm) {
-    margin: 6px auto 0;
-    text-align: center;
-
+  @include media-breakpoint-down(md) {
     &,
     svg {
       width: auto;
       max-width: 100%;
       height: 32px;
     }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 6px auto 0;
+    text-align: center;
   }
 }
 

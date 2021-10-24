@@ -1,12 +1,10 @@
 @import "src/styles/modules";
 
 .container {
-  @include media-breakpoint-up(lg) {
-    padding-bottom: 60px;
-  }
+  padding-bottom: 60px;
 
-  @include media-breakpoint-down(md) {
-    padding: 15px;
+  @include media-breakpoint-down(lg) {
+    padding: 15px 12px;
   }
 }
 
@@ -29,7 +27,7 @@
     width: 70%;
     max-width: 70%;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       flex: 0 0 100%;
       width: 100%;
       max-width: 100%;

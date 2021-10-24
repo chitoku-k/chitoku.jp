@@ -8,7 +8,7 @@
   }
 
   div {
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       padding: 0;
     }
   }
@@ -21,13 +21,13 @@
   }
 
   img {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       max-width: 50% !important;
     }
   }
 
   td {
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       padding-right: 0;
     }
   }

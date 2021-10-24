@@ -1,4 +1,4 @@
-import type { CreateSchemaCustomizationArgs, GatsbyNode } from 'gatsby'
+import type { GatsbyNode } from 'gatsby'
 import type { Configuration } from 'webpack'
 import * as path from 'path'
 import { promises as fs } from 'fs'
@@ -74,7 +74,7 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
   actions: {
     createTypes,
   },
-}: CreateSchemaCustomizationArgs) => {
+}) => {
   createTypes(await fs.readFile(path.resolve('schema.gql'), { encoding: 'utf-8' }))
 }
 

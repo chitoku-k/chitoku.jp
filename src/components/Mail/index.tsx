@@ -1,6 +1,6 @@
 import type { FormEvent, FunctionComponent, ReactNode } from 'react'
 import { useCallback, useEffect, useState } from 'react'
-import { Alert, Button, FormControl, FormGroup } from 'react-bootstrap'
+import { Alert, Button, Form } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -103,26 +103,26 @@ const Mail: FunctionComponent = () => {
             }} />
           </Alert>
           <form onSubmit={onSubmit}>
-            <FormGroup>
+            <Form.Group className={styles.group}>
               <Label required title={formatMessage(messages.name)}>
-                <FormControl className={styles.input} name="name" size="sm" required readOnly={readOnly} />
+                <Form.Control className={styles.input} inputMode="text" autoComplete="name" name="name" size="sm" required readOnly={readOnly} />
               </Label>
-            </FormGroup>
-            <FormGroup>
+            </Form.Group>
+            <Form.Group className={styles.group}>
               <Label title={formatMessage(messages.mail)}>
-                <FormControl className={styles.input} name="email" size="sm" readOnly={readOnly} />
+                <Form.Control className={styles.input} inputMode="email" autoComplete="email" name="email" size="sm" readOnly={readOnly} />
               </Label>
-            </FormGroup>
-            <FormGroup>
+            </Form.Group>
+            <Form.Group className={styles.group}>
               <Label required title={formatMessage(messages.subject)}>
-                <FormControl className={styles.input} name="subject" size="sm" required readOnly={readOnly} />
+                <Form.Control className={styles.input} inputMode="text" name="subject" size="sm" required readOnly={readOnly} />
               </Label>
-            </FormGroup>
-            <FormGroup>
+            </Form.Group>
+            <Form.Group className={styles.group}>
               <Label required title={formatMessage(messages.message)}>
-                <FormControl className={styles.input} name="body" as="textarea" cols={40} rows={10} required readOnly={readOnly} />
+                <Form.Control className={styles.input} inputMode="text" name="body" as="textarea" cols={40} rows={10} required readOnly={readOnly} />
               </Label>
-            </FormGroup>
+            </Form.Group>
             <ReCaptcha action="mail" sitekey={siteKey} verifyCallback={setToken} />
             <div className={styles.submission}>
               {status === 'sent' ? (

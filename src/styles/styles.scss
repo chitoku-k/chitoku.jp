@@ -9,7 +9,9 @@
 // Basic
 html,
 body {
+  color: var(--body-color);
   word-wrap: break-word;
+  background-color: var(--body-background);
 
   &,
   div#___gatsby,
@@ -25,6 +27,11 @@ h4,
 h5,
 h6 {
   font-weight: bold;
+}
+
+ol,
+ul {
+  padding-left: 40px;
 }
 
 blockquote {
@@ -87,7 +94,7 @@ button {
 // Prism
 pre[class*="language-"],
 code[class*="language-"] {
-  font-family: var(--font-family-monospace);
+  font-family: var(--bs-font-monospace);
 }
 
 // Alerts

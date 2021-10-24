@@ -16,12 +16,12 @@ const ArticleCard: FunctionComponent<ArticleCardProps> = ({
       <CategoryIcon to={article.path} category={article.attributes.category} />
     </Col>
     <Col className={styles.col}>
-      <Row className={styles.row}>
+      <Row className={styles.row} xs="auto">
         <Link className={styles.link} to={article.path}>
           {article.attributes.title}
         </Link>
       </Row>
-      <Row className={styles.row}>
+      <Row className={styles.row} xs="auto">
         <ArticleAttribute article={article} />
       </Row>
     </Col>

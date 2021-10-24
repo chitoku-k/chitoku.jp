@@ -8,20 +8,12 @@
   background-color: var(--nav-background);
   -webkit-overflow-scrolling: touch;
 
-  @include media-breakpoint-up(md) {
-    margin-bottom: 15px;
-  }
-
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 24px;
-  }
-
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     margin-bottom: 0;
     white-space: nowrap;
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     overflow-x: auto;
   }
 }
@@ -29,28 +21,21 @@
 .row {
   align-items: center;
   justify-content: space-between;
+  height: auto;
+  margin-left: 0;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     height: 45px;
-  }
-
-  @include media-breakpoint-up(md) {
-    height: auto;
+    margin-right: 0;
   }
 }
 
 .navbar {
-  padding: 0 15px;
+  padding: 0;
   margin-bottom: 0;
   background-color: transparent;
   border: none;
   border-radius: 0;
-
-  @include media-breakpoint-down(sm) {
-    &.search {
-      display: none;
-    }
-  }
 
   @include media-breakpoint-up(md) {
     :global {
@@ -59,10 +44,19 @@
       }
     }
   }
+
+  @include media-breakpoint-down(md) {
+    &.search {
+      display: none;
+    }
+
+    width: 100%;
+  }
 }
 
 .nav {
   flex-wrap: nowrap;
+  padding: 0;
 
   > :global(.active) > a {
     &,

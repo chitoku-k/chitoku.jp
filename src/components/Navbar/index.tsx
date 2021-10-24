@@ -51,7 +51,7 @@ const Navbar: FunctionComponent = () => {
   return (
     <div className={styles.container}>
       <Container>
-        <Row className={styles.row}>
+        <Row className={styles.row} xs="auto">
           <BootstrapNavbar className={clsx(styles.navbar, search && styles.search)}>
             <Row>
               <Nav className={styles.nav} as="ul">

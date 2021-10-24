@@ -3,6 +3,10 @@
 .pagination {
   justify-content: center;
   margin: 0;
+
+  :global(.visually-hidden) {
+    display: none;
+  }
 }
 
 .pagination-item {
@@ -17,7 +21,7 @@
     visibility: hidden;
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     margin: 0 6px;
 
     &.numbers {
@@ -48,7 +52,7 @@
   margin: 0;
   text-align: left;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     flex-wrap: wrap;
   }
 }
@@ -80,7 +84,7 @@
     }
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     width: 100%;
 
     + li {
