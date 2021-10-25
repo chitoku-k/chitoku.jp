@@ -2,8 +2,8 @@ import type { FunctionComponent } from 'react'
 import { Col, Row } from 'react-bootstrap'
 
 import * as styles from './styles.module.scss'
-import type { ArticleFragment } from 'graphql-types'
 
+import type { ArticleItem } from 'components/Article'
 import ArticleAttribute from 'components/ArticleAttribute'
 import CategoryIcon from 'components/CategoryIcon'
 import Link from 'components/Link'
@@ -29,7 +29,10 @@ const ArticleCard: FunctionComponent<ArticleCardProps> = ({
 )
 
 interface ArticleCardProps {
-  article: Omit<ArticleFragment, 'excerpted'>
+  article: {
+    path: string
+    attributes: Pick<ArticleItem['attributes'], 'category' | 'created' | 'tags' | 'title'>
+  }
 }
 
 export default ArticleCard

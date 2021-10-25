@@ -6,7 +6,6 @@ import { useIntl } from 'react-intl'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
-import type { PspErrorItemQuery } from 'graphql-types'
 
 const query = graphql`
   query PspErrorItem {
@@ -28,12 +27,8 @@ const query = graphql`
 const PspErrorCodes: FunctionComponent = () => {
   const { formatMessage } = useIntl()
 
-  const {
-    errors: {
-      group,
-    },
-  } = useStaticQuery<PspErrorCodesQueryResult>(query)
-
+  const { errors } = useStaticQuery<PspErrorCodesQueryResult>(query)
+  const group = [ ...errors.group ]
   group.sort(({ items: [ a ] }, { items: [ b ] }) => a && b ? a.error.code - b.error.code : 0)
 
   return (
@@ -63,6 +58,6 @@ const PspErrorCodes: FunctionComponent = () => {
   )
 }
 
-type PspErrorCodesQueryResult = PspErrorItemQuery
+type PspErrorCodesQueryResult = GatsbyTypes.PspErrorItemQuery
 
 export default PspErrorCodes

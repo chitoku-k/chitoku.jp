@@ -38,6 +38,7 @@
     "no-nested-ternary": "off",
     "no-process-env": "off",
     "no-ternary": "off",
+    "no-undefined": "off",
     "no-warning-comments": "warn",
     "object-curly-spacing": ["error", "always"],
     "object-property-newline": "off",

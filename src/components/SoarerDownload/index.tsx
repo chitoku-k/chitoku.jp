@@ -9,7 +9,6 @@ import clsx from 'clsx'
 import messages from './messages'
 import * as styles from './styles.module.scss'
 import icon from './icon.png'
-import type { SoarerDownloadItemQuery } from 'graphql-types'
 
 import Link from 'components/Link'
 
@@ -80,6 +79,6 @@ const SoarerDownload: FunctionComponent = () => {
   )
 }
 
-type SoarerDownloadQueryResult = SoarerDownloadItemQuery
+type SoarerDownloadQueryResult = GatsbyTypes.SoarerDownloadItemQuery
 
 export default SoarerDownload

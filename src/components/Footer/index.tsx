@@ -4,7 +4,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
-import type { FooterItemQuery } from 'graphql-types'
 
 import Link from 'components/Link'
 
@@ -41,6 +40,6 @@ const Footer: FunctionComponent = () => {
   )
 }
 
-type FooterQueryResult = FooterItemQuery
+type FooterQueryResult = GatsbyTypes.FooterItemQuery
 
 export default Footer

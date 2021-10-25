@@ -27,8 +27,8 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
             path.resolve('node_modules/react-refresh'),
             path.resolve('node_modules/react-schemaorg'),
             path.resolve('node_modules/rehype-react'),
-            path.resolve('node_modules/strip-ansi'),
             path.resolve('node_modules/split-on-first'),
+            path.resolve('node_modules/strip-ansi'),
           ],
           use: [
             loaders.js(),

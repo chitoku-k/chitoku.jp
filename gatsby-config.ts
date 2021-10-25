@@ -23,8 +23,6 @@ const config: GatsbyConfig = {
   },
   flags: {
     FAST_DEV: true,
-    DEV_SSR: true,
-    PRESERVE_WEBPACK_CACHE: true,
   },
   plugins: [
     {
@@ -94,9 +92,9 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: 'gatsby-plugin-ts',
+      resolve: 'gatsby-plugin-typegen',
       options: {
-        fileName: 'node_modules/graphql-types/index.d.ts',
+        outputPath: 'typings/gatsby-types.d.ts',
       },
     },
     {
@@ -110,6 +108,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-transformer-remark',
       options: {
         excerpt_separator: '<!-- more -->',
+        gfm: false,
         plugins: [
           { resolve: 'gatsby-remark-attr' },
           {

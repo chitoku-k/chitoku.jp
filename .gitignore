@@ -8,6 +8,7 @@
 ### Gatsby ###
 public/
 .cache/
+typings/gatsby-types.d.ts
 
 ### Node ###
 # Logs

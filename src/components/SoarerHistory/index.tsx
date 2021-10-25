@@ -1,4 +1,4 @@
-import type { FunctionComponent } from 'react'
+import type { FunctionComponent, ReactElement } from 'react'
 import { Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
@@ -7,7 +7,6 @@ import { useIntl } from 'react-intl'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
-import type { SoarerHistoryItemQuery } from 'graphql-types'
 
 const query = graphql`
   query SoarerHistoryItem {
@@ -40,46 +39,40 @@ const SoarerHistory: FunctionComponent = () => {
     },
   } = useStaticQuery<SoarerHistoryQueryResult>(query)
 
-  /* eslint-disable react/jsx-no-useless-fragment */
-  return (
-    <>
-      {items.map(({ update }) => (
-        <div key={update.version}>
-          <big className={styles.version}>{update.version}</big>
-          {update.file?.publicURL ? (
-            <Button as="a" className={styles.button} variant="light" href={update.file.publicURL} download={update.file.base}>
-              <FontAwesomeIcon className={styles.icon} icon={faDownload} />
-              {formatMessage(messages.download)}
-            </Button>
-          ) : null}
-          <br />
-          <small>
-            {typeof update.date === 'string' ? formatDate(new Date(update.date), {
-              year: 'numeric',
-              month: 'narrow',
-              day: 'numeric',
-            }) : null}
-          </small>
-          <ul>
-            {update.history.map(({ title, message }) => (
-              <li key={title}>
-                {title}
-                {message ? (
-                  <ul>
-                    <li>{message}</li>
-                  </ul>
-                ) : null}
-              </li>
-            ))}
-          </ul>
-          <hr />
-        </div>
-      ))}
-    </>
-  )
-  /* eslint-enable react/jsx-no-useless-fragment */
+  return items.map(({ update }) => (
+    <div key={update.version}>
+      <big className={styles.version}>{update.version}</big>
+      {update.file?.publicURL ? (
+        <Button as="a" className={styles.button} variant="light" href={update.file.publicURL} download={update.file.base}>
+          <FontAwesomeIcon className={styles.icon} icon={faDownload} />
+          {formatMessage(messages.download)}
+        </Button>
+      ) : null}
+      <br />
+      <small>
+        {formatDate(new Date(update.date), {
+          year: 'numeric',
+          month: 'narrow',
+          day: 'numeric',
+        })}
+      </small>
+      <ul>
+        {update.history.map(({ title, message }) => (
+          <li key={title}>
+            {title}
+            {message ? (
+              <ul>
+                <li>{message}</li>
+              </ul>
+            ) : null}
+          </li>
+        ))}
+      </ul>
+      <hr />
+    </div>
+  )) as unknown as ReactElement
 }
 
-type SoarerHistoryQueryResult = SoarerHistoryItemQuery
+type SoarerHistoryQueryResult = GatsbyTypes.SoarerHistoryItemQuery
 
 export default SoarerHistory

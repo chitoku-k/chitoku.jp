@@ -1,4 +1,7 @@
 import type { CreateResolversArgs, GatsbyNode, Page, PluginOptions } from 'gatsby'
+import type { GatsbyIterable } from 'gatsby/dist/datastore/common/iterable'
+import type { IRunQueryArgs } from 'gatsby/dist/datastore/types'
+import path from 'path'
 
 import type { ArticleContext } from './createArticles'
 import createArticles from './createArticles'
@@ -18,8 +21,9 @@ interface Options extends PluginOptions {
   }
 }
 
-interface GetAllNodesArgs {
+interface FindArgs {
   type?: string
+  query?: Partial<IRunQueryArgs['queryArgs']>
 }
 
 interface GetNodeByIdArgs {
@@ -27,9 +31,15 @@ interface GetNodeByIdArgs {
   id: string
 }
 
+interface QueryResult<T> {
+  entries: GatsbyIterable<T>
+  totalCount: () => Promise<number>
+}
+
 interface ResolveContext {
   nodeModel: {
-    getAllNodes: <T>(args: GetAllNodesArgs) => T[]
+    findOne: <T>(args: FindArgs) => Promise<T | null>
+    findAll: <T>(args: FindArgs) => Promise<QueryResult<T>>
     getNodeById: <T>(args: GetNodeByIdArgs) => T
   }
 }
@@ -80,16 +90,6 @@ export const createPages: GatsbyNode['createPages'] = async ({
   }
 }
 
-const sortArticles = (a: Article, b: Article): number => {
-  if (!a.frontmatter.created) {
-    return -1
-  }
-  if (!b.frontmatter.created) {
-    return 1
-  }
-  return Number(new Date(b.frontmatter.created)) - Number(new Date(a.frontmatter.created))
-}
-
 /* eslint-disable no-shadow, @typescript-eslint/no-explicit-any, @typescript-eslint/no-shadow */
 export const createResolvers: GatsbyNode['createResolvers'] = ({
   createResolvers,
@@ -100,14 +100,27 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({
         type: [
           'MarkdownRemark!',
         ],
-        resolve(source: Category, _: unknown, context: ResolveContext) {
-          const articles = context.nodeModel.getAllNodes<Article>({
+        async resolve(source: Category, _: unknown, context: ResolveContext) {
+          const { entries } = await context.nodeModel.findAll<Article>({
             type: 'MarkdownRemark',
+            query: {
+              filter: {
+                frontmatter: {
+                  category: {
+                    name: {
+                      eq: source.name,
+                    },
+                  },
+                },
+              },
+              sort: {
+                fields: [ 'frontmatter.created' ],
+                order: [ 'DESC' ],
+              },
+            },
           })
 
-          return articles
-            .filter(article => article.frontmatter.category === source.name)
-            .sort(sortArticles)
+          return entries
         },
       },
     },
@@ -116,14 +129,29 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({
         type: [
           'MarkdownRemark!',
         ],
-        resolve(source: Tag, _: unknown, context: ResolveContext) {
-          const articles = context.nodeModel.getAllNodes<Article>({
+        async resolve(source: Tag, _: unknown, context: ResolveContext) {
+          const { entries } = await context.nodeModel.findAll<Article>({
             type: 'MarkdownRemark',
+            query: {
+              filter: {
+                frontmatter: {
+                  tags: {
+                    elemMatch: {
+                      name: {
+                        eq: source.name,
+                      },
+                    },
+                  },
+                },
+              },
+              sort: {
+                fields: [ 'frontmatter.created' ],
+                order: [ 'DESC' ],
+              },
+            },
           })
 
-          return articles
-            .filter(article => article.frontmatter.tags?.some(tag => tag === source.name))
-            .sort(sortArticles)
+          return entries
         },
       },
     },
@@ -143,43 +171,67 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({
       },
       prev: {
         type: 'MarkdownRemark',
-        resolve(source: Article, _: unknown, context: ResolveContext) {
+        async resolve(source: Article, _: unknown, context: ResolveContext) {
           if (!source.frontmatter.prev) {
             return null
           }
 
-          const files = context.nodeModel.getAllNodes<File<string, string>>({
+          const dirname = path.join('posts', path.dirname(source.frontmatter.prev))
+          const basename = path.basename(source.frontmatter.prev)
+
+          const file = await context.nodeModel.findOne<File<string, string>>({
             type: 'File',
+            query: {
+              filter: {
+                relativeDirectory: {
+                  eq: dirname,
+                },
+                name: {
+                  eq: basename,
+                },
+              },
+            },
           })
 
-          const target = files.find(file => getPath(file) === source.frontmatter.prev)
-          if (!target) {
+          if (!file?.children[0]) {
             return null
           }
 
           return context.nodeModel.getNodeById<Article>({
-            id: target.children[0],
+            id: file.children[0],
           })
         },
       },
       next: {
         type: 'MarkdownRemark',
-        resolve(source: Article, _: unknown, context: ResolveContext) {
+        async resolve(source: Article, _: unknown, context: ResolveContext) {
           if (!source.frontmatter.next) {
             return null
           }
 
-          const files = context.nodeModel.getAllNodes<File<string, string>>({
+          const dirname = path.join('posts', path.dirname(source.frontmatter.next))
+          const basename = path.basename(source.frontmatter.next)
+
+          const file = await context.nodeModel.findOne<File<string, string>>({
             type: 'File',
+            query: {
+              filter: {
+                relativeDirectory: {
+                  eq: dirname,
+                },
+                name: {
+                  eq: basename,
+                },
+              },
+            },
           })
 
-          const target = files.find(file => getPath(file) === source.frontmatter.next)
-          if (!target) {
+          if (!file?.children[0]) {
             return null
           }
 
           return context.nodeModel.getNodeById<Article>({
-            id: target.children[0],
+            id: file.children[0],
           })
         },
       },

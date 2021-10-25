@@ -2,7 +2,6 @@ import type { FunctionComponent } from 'react'
 import clsx from 'clsx'
 
 import * as styles from './styles.module.scss'
-import type { CategoryFragment } from 'graphql-types'
 
 import Link from 'components/Link'
 import computers from '../../assets/computers.svg'
@@ -45,7 +44,7 @@ const CategoryIcon: FunctionComponent<CategoryIconProps> = ({
 
 export interface CategoryIconProps {
   to?: string
-  category?: CategoryFragment | null
+  category?: GatsbyTypes.CategoryFragment | null
 }
 
 export default CategoryIcon

@@ -5,24 +5,22 @@ import { faTags } from '@fortawesome/free-solid-svg-icons'
 import { useIntl } from 'react-intl'
 
 import * as styles from './styles.module.scss'
-import type { ArticleFragment } from 'graphql-types'
 
-import type { ArticleTagItem } from 'components/Article'
+import type { ArticleItem } from 'components/Article'
 import Link from 'components/Link'
 
-const isTag = (tag: ArticleTagItem | null): tag is ArticleTagItem => Boolean(tag?.name)
+const isTag = (tag: GatsbyTypes.TagFragment | undefined): tag is GatsbyTypes.TagFragment => Boolean(tag?.name)
 
 const ArticleAttribute: FunctionComponent<ArticleAttributeProps> = ({
-  article,
-}) => {
-  const { formatDate } = useIntl()
-  const {
+  article: {
     attributes: {
       created,
       category,
       tags,
     },
-  } = article
+  },
+}) => {
+  const { formatDate } = useIntl()
 
   return (
     <>
@@ -61,7 +59,9 @@ const ArticleAttribute: FunctionComponent<ArticleAttributeProps> = ({
 }
 
 export interface ArticleAttributeProps {
-  article: Pick<ArticleFragment, 'attributes'>
+  article: {
+    attributes: Pick<ArticleItem['attributes'], 'category' | 'created' | 'tags'>
+  }
 }
 
 export default ArticleAttribute

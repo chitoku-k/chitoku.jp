@@ -10,7 +10,6 @@ import clsx from 'clsx'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
-import type { SidebarItemQuery } from 'graphql-types'
 
 import {
   FacebookShareButton,
@@ -158,6 +157,6 @@ export interface SidebarProps {
   location: WindowLocation
 }
 
-type SidebarQueryResult = SidebarItemQuery
+type SidebarQueryResult = GatsbyTypes.SidebarItemQuery
 
 export default Sidebar

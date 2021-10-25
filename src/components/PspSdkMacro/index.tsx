@@ -5,7 +5,6 @@ import Prism from 'prismjs'
 import 'prismjs/components/prism-c'
 
 import * as styles from './styles.module.scss'
-import type { MacrosYamlParameters } from 'graphql-types'
 
 import { ArticleContext } from 'components/Article'
 
@@ -64,7 +63,7 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
   )
 }
 
-type PspSdkMacroParameterItem = MacrosYamlParameters
+type PspSdkMacroParameterItem = GatsbyTypes.MacrosYamlParameters
 
 interface PspSdkMacroProps {
   name: string

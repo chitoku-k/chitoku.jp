@@ -5,7 +5,6 @@ import { useLocation } from '@reach/router'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
-import type { AboutYamlContacts, NotFoundItemQuery } from 'graphql-types'
 
 import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
@@ -34,7 +33,7 @@ const Contact: FunctionComponent<ContactProps> = ({
 
 interface ContactProps {
   message: MessageDescriptor
-  service: AboutYamlContacts
+  service: GatsbyTypes.AboutYamlContacts
 }
 
 const NotFound: FunctionComponent<NotFoundProps> = ({ contacts }) => {
@@ -86,6 +85,6 @@ const NotFound: FunctionComponent<NotFoundProps> = ({ contacts }) => {
   )
 }
 
-type NotFoundProps = NotFoundItemQuery
+type NotFoundProps = GatsbyTypes.NotFoundItemQuery
 
 export default NotFound

@@ -8,7 +8,6 @@ import { useLocation } from '@reach/router'
 import type { BreadcrumbList, CreativeWork } from 'schema-dts'
 
 import messages from './messages'
-import type { MetadataItemQuery } from 'graphql-types'
 
 type ThumbnailURL = string
 type ThumbnailFile = string | null | undefined
@@ -135,7 +134,7 @@ const Metadata: FunctionComponent<MetadataProps> = ({
   )
 }
 
-type MetadataQueryResult = MetadataItemQuery
+type MetadataQueryResult = GatsbyTypes.MetadataItemQuery
 
 interface MetadataItem {
   type?: string

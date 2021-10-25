@@ -5,7 +5,6 @@ import { useIntl } from 'react-intl'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
-import type { ArticleFragment, ArticleQuery } from 'graphql-types'
 
 import ArticleAttribute from 'components/ArticleAttribute'
 import ArticleBody from 'components/ArticleBody'
@@ -17,14 +16,20 @@ import { PaginationContainer, SimplePagination } from 'components/Pagination'
 
 export const getClassNameFromPath = (path: string): string => `page${path.replace(/[/]/ug, '-').replace(/-$/u, '')}`
 
-const current: ArticleItem = {
+export const ArticleContext = createContext<ArticleItem>({
   path: '',
   attributes: {
     title: '',
+    navigation: [],
+    category: undefined,
+    tags: [],
+    functions: [],
+    macros: [],
+    created: undefined,
+    sidebar: false,
   },
   excerpted: false,
-}
-export const ArticleContext = createContext(current)
+})
 
 const Article: FunctionComponent<ArticleProps> = ({
   children,
@@ -44,7 +49,6 @@ const Article: FunctionComponent<ArticleProps> = ({
     excerpted,
   } = article
 
-  Object.assign(current, article)
   return (
     <>
       <ArticleContainer className={getClassNameFromPath(path)}>
@@ -57,12 +61,14 @@ const Article: FunctionComponent<ArticleProps> = ({
           <Navbar className={styles.navbar} bg="light">
             <Nav className={styles.nav} as="ul">
               {navigation.map(item => (
-                <NavItem key={item.name} className={styles.navItem} {...item} style={{ width: `calc(100% / ${navigation.length})` }} />
+                <NavItem key={item.name} className={styles.navItem} {...item} items={undefined} style={{ width: `calc(100% / ${navigation.length})` }} />
               ))}
             </Nav>
           </Navbar>
         ) : null}
-        <ArticleBody ast={excerptAst ?? htmlAst ?? null} />
+        <ArticleContext.Provider value={article}>
+          <ArticleBody ast={excerptAst ?? htmlAst ?? null} />
+        </ArticleContext.Provider>
         {excerpted && excerptAst ? (
           <div className={styles.readMoreContainer}>
             <Link className={styles.readMoreButton} to={path}>{formatMessage(messages.more)}</Link>
@@ -83,7 +89,7 @@ const Article: FunctionComponent<ArticleProps> = ({
   )
 }
 
-export interface ArticleItem extends ArticleFragment {
+export interface ArticleItem extends GatsbyTypes.ArticleFragment {
   htmlAst?: ArticleAstNode
   excerptAst?: ArticleAstNode
 }
@@ -118,7 +124,7 @@ export interface ArticleTagItem {
   slug: string
 }
 
-interface ArticleProps extends ArticleQuery {
+interface ArticleProps extends Omit<GatsbyTypes.articleQuery, 'article' | 'site'> {
   article: ArticleItem
 }
 

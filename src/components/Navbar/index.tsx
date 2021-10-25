@@ -7,7 +7,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 import clsx from 'clsx'
 
 import * as styles from './styles.module.scss'
-import type { NavigationLinkItemQuery, NavigationsYamlNav } from 'graphql-types'
 
 import SearchForm from 'components/SearchForm'
 import NavItem, { NavLink } from 'components/NavItem'
@@ -73,7 +72,7 @@ const Navbar: FunctionComponent = () => {
   )
 }
 
-export type NavigationLinkItem = NavigationsYamlNav
-type NavbarQueryResult = NavigationLinkItemQuery
+export type NavigationLinkItem = GatsbyTypes.NavigationsYamlNav
+type NavbarQueryResult = GatsbyTypes.NavigationLinkItemQuery
 
 export default Navbar

@@ -5,7 +5,6 @@ import Prism from 'prismjs'
 import 'prismjs/components/prism-c'
 
 import * as styles from './styles.module.scss'
-import type { FunctionsYamlParameters } from 'graphql-types'
 
 import { ArticleContext } from 'components/Article'
 
@@ -68,7 +67,7 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
   )
 }
 
-type PspSdkFunctionParameterItem = FunctionsYamlParameters
+type PspSdkFunctionParameterItem = GatsbyTypes.FunctionsYamlParameters
 
 interface PspSdkFunctionProps {
   name: string

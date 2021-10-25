@@ -1,7 +1,4 @@
 import type { Node } from 'unist'
-import u from 'unist-builder'
-import { selectAll } from 'unist-util-select'
-import remove from 'unist-util-remove'
 import visit from 'unist-util-visit'
 import twemoji from 'twemoji'
 import unicode from 'unicode-properties'
@@ -68,16 +65,7 @@ const isSegmentBreakSkippable = (before: string, after: string): boolean => isSe
 
 export default ({
   markdownAST,
-  compiler: {
-    generateHTML,
-  },
 }: RemarkPluginArgs): void => {
-  markdownAST.children?.push(
-    u('text', '\n'),
-    u('html', generateHTML(u('root', selectAll('footnoteDefinition', markdownAST)))),
-  )
-  remove(markdownAST, 'footnoteDefinition')
-
   visit<RemarkNode>(markdownAST, [ 'text', 'html' ], node => {
     if (!node.value || !twemoji.test(node.value)) {
       return
