@@ -7,13 +7,11 @@ import { splitPages } from './utils'
 type TaxonomiesArgs = Pick<BuildArgs, 'graphql'> & { limit: number }
 
 export interface Category {
-  id: string
   name: string
   path: string
 }
 
 export interface Tag {
-  id: string
   name: string
   slug: string
 }

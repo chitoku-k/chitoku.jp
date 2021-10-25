@@ -14,9 +14,9 @@ const config: GatsbyConfig = {
     title: description,
   },
   mapping: {
-    'HomeYaml.categories': 'CategoriesYaml',
-    'MarkdownRemark.frontmatter.category': 'CategoriesYaml',
-    'MarkdownRemark.frontmatter.tags': 'TagsYaml',
+    'HomeYaml.categories': 'CategoriesYaml.name',
+    'MarkdownRemark.frontmatter.category': 'CategoriesYaml.name',
+    'MarkdownRemark.frontmatter.tags': 'TagsYaml.name',
     'MarkdownRemark.frontmatter.functions': 'FunctionsYaml.name',
     'MarkdownRemark.frontmatter.macros': 'MacrosYaml.name',
     'UpdatesYaml.file': 'File.base',

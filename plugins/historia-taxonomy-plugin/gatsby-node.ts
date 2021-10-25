@@ -106,7 +106,7 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({
           })
 
           return articles
-            .filter(article => article.frontmatter.category === source.id)
+            .filter(article => article.frontmatter.category === source.name)
             .sort(sortArticles)
         },
       },
@@ -122,7 +122,7 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({
           })
 
           return articles
-            .filter(article => article.frontmatter.tags?.some(tag => tag === source.id))
+            .filter(article => article.frontmatter.tags?.some(tag => tag === source.name))
             .sort(sortArticles)
         },
       },
