@@ -65,11 +65,16 @@ export const onPostBuild: GatsbyNode['onPostBuild'] = async ({
     },
     updates: {
       items: [
-        { update },
+        item,
       ],
     },
   } = data
 
+  if (!item) {
+    return
+  }
+
+  const { update } = item
   if (!update.file) {
     return
   }

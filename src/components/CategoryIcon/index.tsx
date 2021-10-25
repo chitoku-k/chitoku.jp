@@ -13,7 +13,7 @@ import soarer from '../../assets/soarer.svg'
 import softwares from '../../assets/softwares.svg'
 import windows from '../../assets/windows.svg'
 
-const icons: Icon = {
+const icons = {
   computers,
   gadgets,
   programming,
@@ -33,17 +33,15 @@ const CategoryIcon: FunctionComponent<CategoryIconProps> = ({
     )
   }
 
-  const ThumbnailIcon = icons[category.thumbnail]
+  const ThumbnailIcon = icons[category.thumbnail as keyof typeof icons]
   return to ? (
-    <Link to={to} className={clsx(styles.icon, styles[category.thumbnail])}>
+    <Link to={to} className={clsx(styles.icon, styles[category.thumbnail as keyof typeof icons])}>
       <ThumbnailIcon viewBox="0 0 100 100" />
     </Link>
   ) : (
     <ThumbnailIcon viewBox="0 0 100 100" />
   )
 }
-
-type Icon = Record<string, React.ComponentType<React.SVGAttributes<Element>>>
 
 export interface CategoryIconProps {
   to?: string

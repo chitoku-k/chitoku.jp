@@ -32,6 +32,9 @@
     "sourceMap": true,
     "removeComments": false,
     "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
     "allowSyntheticDefaultImports": true
   },
   "include": [

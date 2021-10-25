@@ -27,6 +27,10 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
     return null
   }
 
+  if (!Prism.languages.c) {
+    throw new Error('Invalid highlight')
+  }
+
   const separator = def.parameters?.length && def.parameters.length > linebreakThreshold ? '\n' : ''
   const indentation = separator ? ' '.repeat(indentationWidth) : ''
   const highlighted = Prism.highlight([

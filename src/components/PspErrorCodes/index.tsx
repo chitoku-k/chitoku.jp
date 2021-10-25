@@ -34,7 +34,7 @@ const PspErrorCodes: FunctionComponent = () => {
     },
   } = useStaticQuery<PspErrorCodesQueryResult>(query)
 
-  group.sort(({ items: [ a ] }, { items: [ b ] }) => a.error.code - b.error.code)
+  group.sort(({ items: [ a ] }, { items: [ b ] }) => a && b ? a.error.code - b.error.code : 0)
 
   return (
     <div>

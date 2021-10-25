@@ -40,11 +40,16 @@ const SoarerDownload: FunctionComponent = () => {
   const {
     updates: {
       items: [
-        { update },
+        item,
       ],
     },
   } = useStaticQuery<SoarerDownloadQueryResult>(query)
 
+  if (!item) {
+    return null
+  }
+
+  const { update } = item
   return (
     <>
       <div className={styles.container}>
