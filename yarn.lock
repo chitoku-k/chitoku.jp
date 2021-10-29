@@ -9925,10 +9925,10 @@ gatsby-plugin-catch-links@^4.0.0:
     "@babel/runtime" "^7.15.4"
     escape-string-regexp "^1.0.5"
 
-gatsby-plugin-eslint@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-4.0.0.tgz#c3f7b141fd1ae4eb87838829e5443a558881f238"
-  integrity sha512-f/SS2BqNtpt7BoLsaC6zug6UM0CwN1G+6uU2S/kb7/0HdBJgnf08OchNTE0HOyj7yxM0bj1CV5J1S3x/3Wk8ZQ==
+gatsby-plugin-eslint@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-4.0.1.tgz#1334bcab08d5384c35d21a8c0023bae2d5871862"
+  integrity sha512-OSgMrgcUEKbxqbjIB9hcVnS/d6sXCDylCdMtFjDJs48s8om14XdkfaJfXYHzqTVbfZZsL9ixrdG1JElj59O+vQ==
   dependencies:
     webpack-merge "^5.8.0"
 
