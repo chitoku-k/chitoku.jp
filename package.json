@@ -115,6 +115,7 @@
   },
   "resolutions": {
     "gatsby/**/postcss": "^8",
+    "loader-utils": "^2.0.1",
     "webpack": "^5"
   },
   "scripts": {
