@@ -17,7 +17,7 @@ updates:
   # TODO: Update gatsby-transformer-remark when all plugins support new syntax extensions
   # https://github.com/remarkjs/remark/blob/main/doc/plugins.md#list-of-plugins
   - dependency-name: gatsby-transformer-remark
-  # TODO: Update rehype-react when a whitespace problem with gatsby-remark-embed-gist
+  # TODO: Update rehype-react when a whitespace problem with gatsby-remark-embed-gist is resolved
   - dependency-name: rehype-react
 - package-ecosystem: docker
   directory: "/"
