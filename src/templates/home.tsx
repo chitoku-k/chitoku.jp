@@ -1,8 +1,6 @@
 import type { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 
-import type { HomeQuery } from 'graphql-types'
-
 import Layout from 'components/Layout'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
@@ -23,7 +21,7 @@ interface HomePageProps extends PageProps {
   pageContext: {
     page: Page
   }
-  data: HomeQuery
+  data: GatsbyTypes.homeQuery
 }
 
 const HomePagination: FunctionComponent<{ page: Page }> = ({

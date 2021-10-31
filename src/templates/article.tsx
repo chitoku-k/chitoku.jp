@@ -1,7 +1,6 @@
 import type { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 
-import type { ArticleQuery } from 'graphql-types'
 import Layout from 'components/Layout'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
@@ -158,7 +157,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
 }
 
 interface ArticlePageProps {
-  data: ArticleQuery
+  data: GatsbyTypes.articleQuery
 }
 
 register('a', Link)

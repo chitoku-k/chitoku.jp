@@ -1,21 +1,16 @@
-import type { FunctionComponent } from 'react'
+import type { FunctionComponent, ReactElement } from 'react'
 
 import NavItem from 'components/NavItem'
-import type { NavigationLinkItem } from 'components/Navbar'
 
-/* eslint-disable react/jsx-no-useless-fragment */
 const NavDropdown: FunctionComponent<NavDropdownProps> = ({
   items,
   dropdown,
-}) => (
-  <>
-    {items.map(item => <NavItem key={item.name} {...item} dropdown={dropdown} />)}
-  </>
-)
-/* eslint-enable react/jsx-no-useless-fragment */
+}) => items.map(item => (
+  <NavItem key={item.name} {...item} items={undefined} dropdown={dropdown} />
+)) as unknown as ReactElement
 
 interface NavDropdownProps {
-  items: NavigationLinkItem[]
+  items: readonly GatsbyTypes.NavigationsYamlNavItems[]
   dropdown?: boolean
 }
 

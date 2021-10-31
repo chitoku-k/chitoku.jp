@@ -2,7 +2,6 @@ import type { FunctionComponent } from 'react'
 import clsx from 'clsx'
 
 import * as styles from './styles.module.scss'
-import type { CategoryFragment } from 'graphql-types'
 
 import Link from 'components/Link'
 import computers from '../../assets/computers.svg'
@@ -13,7 +12,7 @@ import soarer from '../../assets/soarer.svg'
 import softwares from '../../assets/softwares.svg'
 import windows from '../../assets/windows.svg'
 
-const icons: Icon = {
+const icons = {
   computers,
   gadgets,
   programming,
@@ -33,9 +32,9 @@ const CategoryIcon: FunctionComponent<CategoryIconProps> = ({
     )
   }
 
-  const ThumbnailIcon = icons[category.thumbnail]
+  const ThumbnailIcon = icons[category.thumbnail as keyof typeof icons]
   return to ? (
-    <Link to={to} className={clsx(styles.icon, styles[category.thumbnail])}>
+    <Link to={to} className={clsx(styles.icon, styles[category.thumbnail as keyof typeof icons])}>
       <ThumbnailIcon viewBox="0 0 100 100" />
     </Link>
   ) : (
@@ -43,11 +42,9 @@ const CategoryIcon: FunctionComponent<CategoryIconProps> = ({
   )
 }
 
-type Icon = Record<string, React.ComponentType<React.SVGAttributes<Element>>>
-
 export interface CategoryIconProps {
   to?: string
-  category?: CategoryFragment | null
+  category?: GatsbyTypes.CategoryFragment | null
 }
 
 export default CategoryIcon

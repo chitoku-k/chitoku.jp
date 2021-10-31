@@ -33,7 +33,6 @@ export const Default = Template
 Default.args = {
   article: {
     attributes: {
-      title: 'The quick brown fox jumps over the lazy dog',
       created: '2021-01-01T00:00:00+09:00',
       category: {
         name: 'プログラミング',

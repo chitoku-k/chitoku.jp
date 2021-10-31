@@ -5,7 +5,6 @@ import Prism from 'prismjs'
 import 'prismjs/components/prism-c'
 
 import * as styles from './styles.module.scss'
-import type { MacrosYamlParameters } from 'graphql-types'
 
 import { ArticleContext } from 'components/Article'
 
@@ -23,6 +22,10 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
   const def = article.attributes.macros?.find(x => x?.name === macroName)
   if (!def) {
     return null
+  }
+
+  if (!Prism.languages.c) {
+    throw new Error('Invalid highlight')
   }
 
   const separator = def.parameters?.length && def.parameters.length > linebreakThreshold ? '\n' : ''
@@ -60,7 +63,7 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
   )
 }
 
-type PspSdkMacroParameterItem = MacrosYamlParameters
+type PspSdkMacroParameterItem = GatsbyTypes.MacrosYamlParameters
 
 interface PspSdkMacroProps {
   name: string

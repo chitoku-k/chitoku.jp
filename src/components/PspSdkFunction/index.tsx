@@ -5,7 +5,6 @@ import Prism from 'prismjs'
 import 'prismjs/components/prism-c'
 
 import * as styles from './styles.module.scss'
-import type { FunctionsYamlParameters } from 'graphql-types'
 
 import { ArticleContext } from 'components/Article'
 
@@ -25,6 +24,10 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
   const def = article.attributes.functions?.find(x => x?.name === functionName)
   if (!def) {
     return null
+  }
+
+  if (!Prism.languages.c) {
+    throw new Error('Invalid highlight')
   }
 
   const separator = def.parameters?.length && def.parameters.length > linebreakThreshold ? '\n' : ''
@@ -64,7 +67,7 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
   )
 }
 
-type PspSdkFunctionParameterItem = FunctionsYamlParameters
+type PspSdkFunctionParameterItem = GatsbyTypes.FunctionsYamlParameters
 
 interface PspSdkFunctionProps {
   name: string

@@ -4,9 +4,9 @@ import { FormattedMessage, useIntl } from 'react-intl'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
-import type { AboutItemQuery } from 'graphql-types'
 
 import Container from 'components/Container'
+import type { ArticleAstNode } from 'components/Article'
 import ArticleBody from 'components/ArticleBody'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
@@ -92,7 +92,7 @@ const About: FunctionComponent<AboutProps> = ({
                   <tr>
                     <th>{formatMessage(messages.introduction)}</th>
                     <td>
-                      <ArticleBody ast={introduction?.markdown?.htmlAst} />
+                      <ArticleBody ast={introduction.markdown.htmlAst ?? null} />
                     </td>
                   </tr>
                 </tbody>
@@ -105,6 +105,12 @@ const About: FunctionComponent<AboutProps> = ({
   )
 }
 
-type AboutProps = AboutItemQuery
+interface AboutProps extends Omit<GatsbyTypes.AboutItemQuery, 'introduction'> {
+  introduction: {
+    markdown: {
+      htmlAst: ArticleAstNode
+    }
+  }
+}
 
 export default About

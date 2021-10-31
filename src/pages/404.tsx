@@ -1,7 +1,6 @@
 import type { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 
-import type { NotFoundItemQuery } from 'graphql-types'
 import Layout from 'components/Layout'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
@@ -33,7 +32,7 @@ const NotFoundPage: FunctionComponent<NotFoundPageProps> = ({ data }) => (
 )
 
 interface NotFoundPageProps extends PageProps {
-  data: NotFoundItemQuery
+  data: GatsbyTypes.NotFoundItemQuery
 }
 
 export default NotFoundPage

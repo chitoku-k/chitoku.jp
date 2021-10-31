@@ -3,7 +3,6 @@ import { useIntl } from 'react-intl'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
-import type { LinksItemQuery } from 'graphql-types'
 
 import Metadata from 'components/Metadata'
 import Link from 'components/Link'
@@ -43,6 +42,6 @@ export interface LinksLinkItem {
   url: string
 }
 
-type LinksProps = LinksItemQuery
+type LinksProps = GatsbyTypes.LinksItemQuery
 
 export default Links

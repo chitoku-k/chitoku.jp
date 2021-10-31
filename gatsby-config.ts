@@ -14,17 +14,15 @@ const config: GatsbyConfig = {
     title: description,
   },
   mapping: {
-    'HomeYaml.categories': 'CategoriesYaml',
-    'MarkdownRemark.frontmatter.category': 'CategoriesYaml',
-    'MarkdownRemark.frontmatter.tags': 'TagsYaml',
+    'HomeYaml.categories': 'CategoriesYaml.name',
+    'MarkdownRemark.frontmatter.category': 'CategoriesYaml.name',
+    'MarkdownRemark.frontmatter.tags': 'TagsYaml.name',
     'MarkdownRemark.frontmatter.functions': 'FunctionsYaml.name',
     'MarkdownRemark.frontmatter.macros': 'MacrosYaml.name',
     'UpdatesYaml.file': 'File.base',
   },
   flags: {
     FAST_DEV: true,
-    DEV_SSR: true,
-    PRESERVE_WEBPACK_CACHE: true,
   },
   plugins: [
     {
@@ -94,9 +92,9 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: 'gatsby-plugin-ts',
+      resolve: 'gatsby-plugin-typegen',
       options: {
-        fileName: 'node_modules/graphql-types/index.d.ts',
+        outputPath: 'typings/gatsby-types.d.ts',
       },
     },
     {
@@ -110,6 +108,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-transformer-remark',
       options: {
         excerpt_separator: '<!-- more -->',
+        gfm: false,
         plugins: [
           { resolve: 'gatsby-remark-attr' },
           {

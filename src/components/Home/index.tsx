@@ -2,7 +2,6 @@ import type { FunctionComponent } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { useIntl } from 'react-intl'
 
-import type { CategoryFragment, HomeQuery } from 'graphql-types'
 import messages from './messages'
 
 import Container from 'components/Container'
@@ -14,7 +13,7 @@ import SubHeader from 'components/SubHeader'
 
 import * as styles from './styles.module.scss'
 
-const isCategory = (category: CategoryFragment | null): category is Category => Boolean(category)
+const isCategory = (category: GatsbyTypes.CategoryFragment | undefined): category is Category => Boolean(category)
 
 const Home: FunctionComponent<HomeProps> = ({
   children,
@@ -63,9 +62,9 @@ const Home: FunctionComponent<HomeProps> = ({
   )
 }
 
-type HomeProps = HomeQuery
+type HomeProps = GatsbyTypes.homeQuery
 
-interface Category extends CategoryFragment {
+interface Category extends GatsbyTypes.CategoryFragment {
   description: string
 }
 

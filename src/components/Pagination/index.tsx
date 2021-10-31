@@ -1,5 +1,5 @@
 import type { ComponentPropsWithoutRef, FunctionComponent } from 'react'
-import type { AnchorProps, PageItemProps } from 'react-bootstrap'
+import type { PageItemProps } from 'react-bootstrap'
 import { Pagination as BootstrapPagination } from 'react-bootstrap'
 import { useIntl } from 'react-intl'
 import clsx from 'clsx'
@@ -69,7 +69,7 @@ export interface PaginationProps {
   page: Page
 }
 
-interface PaginationItemProps extends PageItemProps, Omit<AnchorProps, 'role'> {
+interface PaginationItemProps extends PageItemProps {
   direction?: 'next' | 'prev'
   visible?: boolean
 }
