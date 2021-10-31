@@ -24,11 +24,6 @@ NoDriveAutoRun は自動再生を無効化するドライブの設定値の合�
 
 ## 脚注/参考
 
-[^1]:
-  [NoDriveAutoRun](https://docs.microsoft.com/en-us/windows/win32/shell/autoplay-reg#using-the-registry-to-disable-autorun)
-
-[^2]:
-  [Windows XPで自動再生機能を無効化する | 無趣味な自由帳 第2巻 | 745](https://6322.teacup.com/takonb/bbs/745)
-
-[^3]:
-  [chitoku-k/no-drive-auto-run-generator（GitHub）](https://github.com/chitoku-k/no-drive-auto-run-generator)
+[^1]: [NoDriveAutoRun](https://docs.microsoft.com/en-us/windows/win32/shell/autoplay-reg#using-the-registry-to-disable-autorun)
+[^2]: [Windows XPで自動再生機能を無効化する | 無趣味な自由帳 第2巻 | 745](https://6322.teacup.com/takonb/bbs/745)
+[^3]: [chitoku-k/no-drive-auto-run-generator（GitHub）](https://github.com/chitoku-k/no-drive-auto-run-generator)
