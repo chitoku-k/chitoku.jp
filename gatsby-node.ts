@@ -58,18 +58,6 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   }
 }
 
-// FIXME: Workaround for Unexpected token error in .cache/*.js
-export const onCreateBabelConfig: GatsbyNode['onCreateBabelConfig'] = ({
-  actions: {
-    setBabelPlugin,
-  },
-}) => {
-  setBabelPlugin({
-    name: 'babel-plugin-syntax-jsx',
-    options: {},
-  })
-}
-
 export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = async ({
   actions: {
     createTypes,
