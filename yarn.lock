@@ -9789,10 +9789,10 @@ gatsby-plugin-minify-html@^1.0.4:
     glob "^7.1.6"
     html-minifier-terser "^5.1.1"
 
-gatsby-plugin-no-sourcemaps@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-4.0.0.tgz#b49dc2bc7782802151b15f7d4609dfd3e774ed9c"
-  integrity sha512-JS+osMEgUfbbcwXdYlFSxlyrIP+j+nQ6GqXOLT5R1lQ5ZglopqIPZxf0oZNGJPiyy63cNqTvy0Uo4x9w8xyAuA==
+gatsby-plugin-no-sourcemaps@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-4.1.0.tgz#bb5be0b5a9539e721c54561f2ee62a56dd2c17aa"
+  integrity sha512-gRoxzbUa1K6RpOTPz6DNcbz8EAG+qDLZtiB3/GDtIJSaYbXvVm3BHg3MkSHIQC4gxgkROIivXn92fbzEhC3kLw==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
