@@ -1,5 +1,7 @@
 'use strict'
 
+require('../src/styles/styles.scss')
+
 module.exports.parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   backgrounds: {

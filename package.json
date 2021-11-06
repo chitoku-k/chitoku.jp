@@ -41,6 +41,7 @@
     "algoliasearch": "^4.11.0",
     "babel-loader": "^8.2.3",
     "babel-plugin-react-intl-auto": "^3.3.0",
+    "babel-plugin-remove-graphql-queries": "^4.1.0",
     "babel-preset-gatsby": "^2.1.0",
     "bootstrap": "^5.1.3",
     "clsx": "^1.1.1",
@@ -131,7 +132,7 @@
     "lint:ts": "eslint '{,src,plugins}/**/*.{ts,tsx}'",
     "lint:css": "stylelint 'src/**/*.scss'",
     "start": "gatsby develop",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s public -p 6006",
     "build-storybook": "build-storybook"
   },
   "lint-staged": {

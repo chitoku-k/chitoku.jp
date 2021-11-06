@@ -3,7 +3,6 @@ import { IntlProvider } from 'react-intl'
 import { LocationProvider, createHistory, createMemorySource } from '@reach/router'
 import type { Meta, Story } from '@storybook/react'
 
-import '../../styles/styles.scss'
 import messages from 'translations/ja.yml'
 import type { SimplePaginationProps } from 'components/Pagination'
 import { SimplePagination } from 'components/Pagination'
@@ -32,11 +31,11 @@ export default meta
 export const Default = Template
 Default.args = {
   prev: {
-    title: 'Lorem ipsum',
+    title: 'MiniTool Partition Wizard で SSD を引っ越してみた',
     to: '/1',
   },
   next: {
-    title: 'Lorem ipsum',
+    title: 'Windows バックアップで NAS を使う',
     to: '/3',
   },
 }

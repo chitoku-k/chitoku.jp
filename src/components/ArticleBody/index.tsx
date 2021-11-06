@@ -31,7 +31,7 @@ const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
   )
 }
 
-interface ArticleBodyProps {
+export interface ArticleBodyProps {
   ast: ArticleAstNode
 }
 
