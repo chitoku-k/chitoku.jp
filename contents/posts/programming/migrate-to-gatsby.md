@@ -14,9 +14,9 @@ tags:
 
 1. Gatsby で TypeScript なら [gatsby-plugin-ts-loader](https://www.gatsbyjs.org/packages/gatsby-plugin-ts-loader/) + [tsconfig-paths-webpack-plugin](https://www.npmjs.com/package/tsconfig-paths-webpack-plugin)
 2. Algolia で日本語の検索をするときは _Keep diacritics on characters_ に注意
-3. [babel-plugin-react-intl-auto](https://www.npmjs.com/package/babel-plugin-react-intl-auto) に出した PR がマージされた[^5]
-4. [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) に出した PR がマージされた[^7]
-5. [remark-grid-tables](https://www.npmjs.com/package/remark-grid-tables) に出した PR がマージされた[^8]
+3. [babel-plugin-react-intl-auto](https://www.npmjs.com/package/babel-plugin-react-intl-auto) に出した PR がマージされた[^1]
+4. [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) に出した PR がマージされた[^2]
+5. [remark-grid-tables](https://www.npmjs.com/package/remark-grid-tables) に出した PR がマージされた[^3]
 6. Gatsby の IE サポートは半分嘘なので残り半分は自分でやる
 
 ## Gatsby とは
@@ -66,7 +66,7 @@ exports.onCreateWebpackConfig = ({
 }
 ```
 
-また現状では TypeScript が使えるのは webpack の守備範囲のみです。Gatsby のコアに対して型定義を追加するプルリクエスト[^1]が出てはいますが、そもそもどう導入するのかという部分で決定打がない状況です。
+また現状では TypeScript が使えるのは webpack の守備範囲のみです。Gatsby のコアに対して型定義を追加するプルリクエスト[^4]が出てはいますが、そもそもどう導入するのかという部分で決定打がない状況です。
 
 ## Algolia
 
@@ -74,7 +74,7 @@ exports.onCreateWebpackConfig = ({
 
 ### 日本語圏で Algolia を使う際の注意
 
-関連するドキュメント[^2]では日本語特有のことまでは書かれていませんが、Algolia の検索エンジンがデータを正規化する際のステップによって日本語圏のユーザーには少し頭の痛い問題が発生します。
+関連するドキュメント[^5]では日本語特有のことまでは書かれていませんが、Algolia の検索エンジンがデータを正規化する際のステップによって日本語圏のユーザーには少し頭の痛い問題が発生します。
 
 > What do we mean by normalization
 > - Switch all characters to lower case
@@ -84,7 +84,7 @@ exports.onCreateWebpackConfig = ({
 > - Use word separators (such as spaces, but not only)
 > - Transform traditional Chinese to modern
 
-それは、上記の _Remove all diacritics (eg accents)_ が日本語の濁点・半濁点を対象としており、「ハハ」と「パパ」が区別なく検索される点です（雰囲気がハハパパ問題[^3]と似ていると思いました）。たとえば chitoku.jp の場合、既定の設定だと「ハック」と「バック」の検索結果が同一のものになってしまいます。
+それは、上記の _Remove all diacritics (eg accents)_ が日本語の濁点・半濁点を対象としており、「ハハ」と「パパ」が区別なく検索される点です（雰囲気がハハパパ問題[^6]と似ていると思いました）。たとえば chitoku.jp の場合、既定の設定だと「ハック」と「バック」の検索結果が同一のものになってしまいます。
 
 Algolia ではこの問題に対して個別で設定を変更するようになっています。日本語圏では Algolia のダッシュボードの [Indices] > [Configuration] > [Relevance optimizations] > [Special characters] > [Keep diacritics on characters] に以下のように濁点・半濁点の文字を書き並べると期待したように「ハック」と「バック」が区別され、検索/表示されるようになりました。
 
@@ -98,9 +98,9 @@ Algolia ではこの問題に対して個別で設定を変更するようにな
 
 ## 国際化対応
 
-chitoku.jp は国際化対応する予定はありませんが、コンポーネントのソース内に日本語の文字列リテラルを書いていくのは管理しにくいため [react-intl](https://www.npmjs.com/package/react-intl) をメッセージのカタログとして使うことにしました。react-intl は `javascript¦defineMessages()` を使って `id` を手動で定義する必要があって面倒ですが、[babel-plugin-react-intl-auto](https://www.npmjs.com/package/babel-plugin-react-intl-auto) というパッケージがこれをうまく解決してくれました[^4]。
+chitoku.jp は国際化対応する予定はありませんが、コンポーネントのソース内に日本語の文字列リテラルを書いていくのは管理しにくいため [react-intl](https://www.npmjs.com/package/react-intl) をメッセージのカタログとして使うことにしました。react-intl は `javascript¦defineMessages()` を使って `id` を手動で定義する必要があって面倒ですが、[babel-plugin-react-intl-auto](https://www.npmjs.com/package/babel-plugin-react-intl-auto) というパッケージがこれをうまく解決してくれました[^7]。
 
-開発スタート時は babel-plugin-react-intl-auto が自動生成する `javascript¦defineMessages()` の関数シグネチャーが TypeScript の型定義と合っていないために TypeScript プロジェクトで導入できませんでしたが、型定義を取り込んでもらえたので[^5]良い感じに使えるようになりました[^6]。[@babel/plugin-transform-typescript](https://www.npmjs.com/package/@babel/plugin-transform-typescript) を Babel の設定に追加することで [extract-react-intl-messages](https://www.npmjs.com/package/extract-react-intl-messages) と併用し `messages.ts` からメッセージ用の翻訳ファイルを生成することも可能です！
+開発スタート時は babel-plugin-react-intl-auto が自動生成する `javascript¦defineMessages()` の関数シグネチャーが TypeScript の型定義と合っていないために TypeScript プロジェクトで導入できませんでしたが、型定義を取り込んでもらえたので[^1]良い感じに使えるようになりました[^8]。[@babel/plugin-transform-typescript](https://www.npmjs.com/package/@babel/plugin-transform-typescript) を Babel の設定に追加することで [extract-react-intl-messages](https://www.npmjs.com/package/extract-react-intl-messages) と併用し `messages.ts` からメッセージ用の翻訳ファイルを生成することも可能です！
 
 ```javascript
 import { defineMessages } from 'react-intl'
@@ -142,7 +142,7 @@ query {
 }
 ```
 
-chitoku.jp では gatsby-remark-component というプラグインを使っているため文字列による抜粋では不都合で、`htmlAst` のように AST での抜粋が必要だったものの、従来は文字列型のフィールドしか実装されていませんでした。以前は `excerpt` フィールドを処理する部分に全ての抜粋処理が書かれていたためそれらをすべて剝がしたり、無駄にキャッシュ処理を弄ったせいでバグを出したり、となかなか大変でしたが [gatsby-transformer-remark@2.3.0](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-remark/CHANGELOG.md#230-2019-02-25) で取り込んでもらえました[^7]。
+chitoku.jp では gatsby-remark-component というプラグインを使っているため文字列による抜粋では不都合で、`htmlAst` のように AST での抜粋が必要だったものの、従来は文字列型のフィールドしか実装されていませんでした。以前は `excerpt` フィールドを処理する部分に全ての抜粋処理が書かれていたためそれらをすべて剝がしたり、無駄にキャッシュ処理を弄ったせいでバグを出したり、となかなか大変でしたが [gatsby-transformer-remark@2.3.0](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-remark/CHANGELOG.md#230-2019-02-25) で取り込んでもらえました[^2]。
 
 ## remark-grid-tables (zmarkdown)
 
@@ -198,7 +198,7 @@ chitoku.jp では gatsby-remark-component というプラグインを使って�
 ```
 </div>
 
-これだとエディター上でも表示が揃わないため日本語環境で使うのは厳しい状態だったので、全角文字対応のプルリクエスト[^8]を出したところ無事取り入れられ、今では表示幅基準で表が書けるようになっています。
+これだとエディター上でも表示が揃わないため日本語環境で使うのは厳しい状態だったので、全角文字対応のプルリクエスト[^3]を出したところ無事取り入れられ、今では表示幅基準で表が書けるようになっています。
 
 コンソール上で表示される文字の幅には全角と半角の二種類があり、それらの表示や文字幅計算にはやや面倒な処理が必要になるという事実はなかなか東アジアの外では理解されにくいのかもしれません。わたしも右から左へ向かって書いていく言語の処理の常識を全く知らないので難しいですね……。結局、この対応をするためには以下の処理が必要でした。
 
@@ -257,13 +257,13 @@ Gatsby 以外の話がかなり長くなりましたが chitoku.jp の Gatsby �
 
 ## 脚注
 
-[^1]: [TypeScript definitions for config & plugin APIs by JamesMessinger · Pull Request #10897 · gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby/pull/10897)
-[^2]: [Normalization | In depth | Managing results | Guide | Algolia Documentation](https://www.algolia.com/doc/guides/managing-results/optimize-search-results/handling-natural-languages-nlp/in-depth/normalization/)
-[^3]: [寿司とビールについて話し合いをしてきました | GREE Engineers' Blog](https://labs.gree.jp/blog/2017/04/16406/)
-[^4]: [コンポーネント時代のi18n – 赤芽 – Medium](https://medium.com/@akameco/%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E6%99%82%E4%BB%A3%E3%81%AEi18n-ef8d5536c6e7)
-[^5]: [chore(typescript): add TypeScript support by chitoku-k · Pull Request #54 · akameco/babel-plugin-react-intl-auto · GitHub](https://github.com/akameco/babel-plugin-react-intl-auto/pull/54)
-[^6]: [babel-plugin-react-intl-auto/readme.md at master · akameco/babel-plugin-react-intl-auto · GitHub](https://github.com/akameco/babel-plugin-react-intl-auto/blob/master/readme.md#typescript)
-[^7]: [feat(gatsby-transformer-remark): add excerptAst to be exported as a GraphQL field by chitoku-k · Pull Request #11237 · gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby/pull/11237)
-[^8]: [fix(remark-grid-tables): support fullwidth tables by chitoku-k · Pull Request #312 · zestedesavoir/zmarkdown · GitHub](https://github.com/zestedesavoir/zmarkdown/pull/312)
+[^1]: [chore(typescript): add TypeScript support by chitoku-k · Pull Request #54 · akameco/babel-plugin-react-intl-auto · GitHub](https://github.com/akameco/babel-plugin-react-intl-auto/pull/54)
+[^2]: [feat(gatsby-transformer-remark): add excerptAst to be exported as a GraphQL field by chitoku-k · Pull Request #11237 · gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby/pull/11237)
+[^3]: [fix(remark-grid-tables): support fullwidth tables by chitoku-k · Pull Request #312 · zestedesavoir/zmarkdown · GitHub](https://github.com/zestedesavoir/zmarkdown/pull/312)
+[^4]: [TypeScript definitions for config & plugin APIs by JamesMessinger · Pull Request #10897 · gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby/pull/10897)
+[^5]: [Normalization | In depth | Managing results | Guide | Algolia Documentation](https://www.algolia.com/doc/guides/managing-results/optimize-search-results/handling-natural-languages-nlp/in-depth/normalization/)
+[^6]: [寿司とビールについて話し合いをしてきました | GREE Engineers' Blog](https://labs.gree.jp/blog/2017/04/16406/)
+[^7]: [コンポーネント時代のi18n – 赤芽 – Medium](https://medium.com/@akameco/%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E6%99%82%E4%BB%A3%E3%81%AEi18n-ef8d5536c6e7)
+[^8]: [babel-plugin-react-intl-auto/readme.md at master · akameco/babel-plugin-react-intl-auto · GitHub](https://github.com/akameco/babel-plugin-react-intl-auto/blob/master/readme.md#typescript)
 [^9]: [Browser Support | GatsbyJS](https://www.gatsbyjs.org/docs/browser-support/)
 [^10]: [remove proposals polyfills from default import \[skip ci\] by hzoo · Pull Request #8440 · babel/babel · GitHub](https://github.com/babel/babel/pull/8440)
