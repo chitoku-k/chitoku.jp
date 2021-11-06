@@ -21,5 +21,5 @@ const Template: Story<ArticleHeaderProps> = props => (
 export default meta
 export const Default = Template
 Default.args = {
-  title: 'The quick brown fox jumps over the lazy dog',
+  title: 'Windows の自動再生を特定のドライブでのみ無効化する',
 }
