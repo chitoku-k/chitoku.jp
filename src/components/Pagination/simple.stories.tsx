@@ -3,7 +3,6 @@ import { IntlProvider } from 'react-intl'
 import { LocationProvider, createHistory, createMemorySource } from '@reach/router'
 import type { Meta, Story } from '@storybook/react'
 
-import '../../styles/styles.scss'
 import messages from 'translations/ja.yml'
 import type { SimplePaginationProps } from 'components/Pagination'
 import { SimplePagination } from 'components/Pagination'

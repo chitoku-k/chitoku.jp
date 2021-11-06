@@ -2,7 +2,6 @@ import React from 'react'
 import { LocationProvider, createHistory, createMemorySource } from '@reach/router'
 import type { Meta, Story } from '@storybook/react'
 
-import '../../styles/styles.scss'
 import type { CategoryIconProps } from 'components/CategoryIcon'
 import CategoryIcon from 'components/CategoryIcon'
 import computers from 'contents/taxonomies/categories/computers.yml'
