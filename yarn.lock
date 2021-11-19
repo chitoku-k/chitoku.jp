@@ -9832,10 +9832,10 @@ gatsby-remark-autolink-headers@^5.1.1:
     mdast-util-to-string "^2.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-copy-linked-files@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.1.0.tgz#5b52657e644df7c08610dadd75cc2bb89a0d4ddc"
-  integrity sha512-DePHpFGrbw9V5JMhjIh6bVRnT3cp1eefV5lBhqs7PoThafyi6GXwQ3FTIr320mLRPBh2aie/KfiqON7uoFhzjQ==
+gatsby-remark-copy-linked-files@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.2.0.tgz#ff9a45ad1096631bba3442586cc2ebe8713dddcb"
+  integrity sha512-H4fto7p02bOZdZZwIhCpra6/qY8exmxY2kRMQvcpnZxCR8KjAE9vKSfRIv7RFeodJHJPZpiLYeSFvAkjWb9mJA==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
