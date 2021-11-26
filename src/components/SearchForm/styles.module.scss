@@ -32,7 +32,7 @@
   }
 
   &:focus ~ noscript {
-    opacity: 100%;
+    opacity: 1;
   }
 }
 
@@ -93,7 +93,7 @@
   bottom: -9px;
   left: 0;
   z-index: 1;
-  opacity: 0%;
+  opacity: 0;
   transition: 0.3s opacity;
 
   :global {
