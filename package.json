@@ -14,7 +14,7 @@
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@rstacruz/gatsby-remark-component": "^2.0.0",
     "@storybook/addon-actions": "^6.3.12",
-    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-essentials": "^6.4.5",
     "@storybook/addon-links": "^6.3.12",
     "@storybook/builder-webpack5": "^6.3.12",
     "@storybook/manager-webpack5": "^6.3.12",
