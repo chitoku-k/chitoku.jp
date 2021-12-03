@@ -19,7 +19,7 @@
     "@storybook/builder-webpack5": "^6.3.12",
     "@storybook/manager-webpack5": "^6.4.7",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/react": "^6.3.12",
+    "@storybook/react": "^6.4.7",
     "@svgr/webpack": "^6.1.0",
     "@types/dotenv-safe": "^8.1.2",
     "@types/is-url": "^1.2.30",
