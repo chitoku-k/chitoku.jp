@@ -101,7 +101,7 @@
     "sass": "^1.43.5",
     "sass-loader": "^12.3.0",
     "schema-dts": "^1.0.0",
-    "storybook": "^6.3.12",
+    "storybook": "^6.4.5",
     "storybook-addon-gatsby": "^0.0.3",
     "style-loader": "^3.3.1",
     "stylelint": "^14.1.0",
