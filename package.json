@@ -131,7 +131,7 @@
     "lint:ts": "eslint '{,src,plugins}/**/*.{ts,tsx}'",
     "lint:css": "stylelint 'src/**/*.scss'",
     "start": "gatsby develop",
-    "storybook": "start-storybook -s public -p 6006",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "lint-staged": {
