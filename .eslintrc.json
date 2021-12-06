@@ -1,9 +1,13 @@
 {
   "parserOptions": {
-    "ecmaVersion": 2019
+    "ecmaVersion": 2021
   },
+  "plugins": [
+    "import"
+  ],
   "extends": [
-    "eslint:all"
+    "eslint:all",
+    "plugin:import/recommended"
   ],
   "env": {
     "browser": true,
@@ -63,6 +67,12 @@
       "anonymous": "always",
       "asyncArrow": "always",
       "named": "never"
+    }],
+    "import/order": ["error", {
+      "alphabetize": {
+        "order": "asc"
+      },
+      "newlines-between": "always"
     }]
   },
   "overrides": [
@@ -78,10 +88,12 @@
       ],
       "extends": [
         "plugin:react/all",
+        "plugin:import/typescript",
         "plugin:@typescript-eslint/all",
         "plugin:@typescript-eslint/eslint-recommended"
       ],
       "rules": {
+        "one-var": "off",
         "@typescript-eslint/camelcase": "off",
         "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
         "@typescript-eslint/explicit-function-return-type": ["warn", {
@@ -127,7 +139,7 @@
         "@typescript-eslint/strict-boolean-expressions": "off",
         "@typescript-eslint/typedef": "off",
         "@typescript-eslint/unbound-method": "off",
-        "one-var": "off",
+        "import/no-unresolved": "error",
         "react/forbid-component-props": "off",
         "react/function-component-definition": "off",
         "react/jsx-closing-bracket-location": ["error", "after-props"],
@@ -160,6 +172,18 @@
     }
   ],
   "settings": {
+    "import/internal-regex": "^historia-.+",
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    },
     "react": {
       "version": "detect"
     }
