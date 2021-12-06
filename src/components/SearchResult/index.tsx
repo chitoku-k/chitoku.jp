@@ -1,15 +1,15 @@
 import type { FunctionComponent } from 'react'
-import { FormattedMessage, useIntl } from 'react-intl'
+import Highlighter from 'react-highlight-words'
 import type { Hit, StateResultsProvided } from 'react-instantsearch-core'
 import { Hits, PoweredBy, connectStateResults } from 'react-instantsearch-dom'
-import Highlighter from 'react-highlight-words'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
 
+import type { ArticleCategoryItem, ArticleTagItem } from 'components/Article'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
-import type { ArticleCategoryItem, ArticleTagItem } from 'components/Article'
 import Link from 'components/Link'
 
 const SearchHit: FunctionComponent<SearchHitProps<SearchDocument>> = ({

@@ -1,8 +1,8 @@
+import clsx from 'clsx'
 import type { ComponentPropsWithoutRef, FunctionComponent } from 'react'
 import type { PageItemProps } from 'react-bootstrap'
 import { Pagination as BootstrapPagination } from 'react-bootstrap'
 import { useIntl } from 'react-intl'
-import clsx from 'clsx'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'

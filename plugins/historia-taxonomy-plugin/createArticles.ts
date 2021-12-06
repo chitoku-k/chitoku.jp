@@ -1,5 +1,6 @@
-import type { BuildArgs, Page } from 'gatsby'
 import * as path from 'path'
+
+import type { BuildArgs, Page } from 'gatsby'
 
 import type { File } from './utils'
 import { getPath } from './utils'

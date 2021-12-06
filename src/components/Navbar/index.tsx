@@ -1,15 +1,15 @@
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import clsx from 'clsx'
+import { graphql, useStaticQuery } from 'gatsby'
 import type { ComponentPropsWithoutRef, FunctionComponent } from 'react'
 import { useCallback, useState } from 'react'
 import { Navbar as BootstrapNavbar, Container, Nav, Row } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { graphql, useStaticQuery } from 'gatsby'
-import clsx from 'clsx'
 
 import * as styles from './styles.module.scss'
 
-import SearchForm from 'components/SearchForm'
 import NavItem, { NavLink } from 'components/NavItem'
+import SearchForm from 'components/SearchForm'
 
 const query = graphql`
   query NavigationLinkItem {

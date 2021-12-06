@@ -1,12 +1,12 @@
-import type { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
+import type { FunctionComponent } from 'react'
 
-import type { ArticleAstNode } from 'components/Article'
-import Layout from 'components/Layout'
-import Header from 'components/Header'
-import Navbar from 'components/Navbar'
-import Footer from 'components/Footer'
 import About from 'components/About'
+import type { ArticleAstNode } from 'components/Article'
+import Footer from 'components/Footer'
+import Header from 'components/Header'
+import Layout from 'components/Layout'
+import Navbar from 'components/Navbar'
 
 export const pageQuery = graphql`
   query AboutItem {

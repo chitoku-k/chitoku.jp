@@ -1,7 +1,8 @@
+import path from 'path'
+
 import type { CreateResolversArgs, GatsbyNode, Page, PluginOptions } from 'gatsby'
 import type { GatsbyIterable } from 'gatsby/dist/datastore/common/iterable'
 import type { IRunQueryArgs } from 'gatsby/dist/datastore/types'
-import path from 'path'
 
 import type { ArticleContext } from './createArticles'
 import createArticles from './createArticles'

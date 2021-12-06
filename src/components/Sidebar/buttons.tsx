@@ -1,9 +1,9 @@
-import type { FunctionComponent } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import type { IconDefinition, IconName } from '@fortawesome/fontawesome-svg-core'
 import { faFacebookF, faGetPocket, faTumblr, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { useIntl } from 'react-intl'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import clsx from 'clsx'
+import type { FunctionComponent } from 'react'
+import { useIntl } from 'react-intl'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'

@@ -5,13 +5,13 @@ import { FormattedMessage, useIntl } from 'react-intl'
 import messages from './messages'
 import * as styles from './styles.module.scss'
 
-import Container from 'components/Container'
 import type { ArticleAstNode } from 'components/Article'
 import ArticleBody from 'components/ArticleBody'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
-import Metadata from 'components/Metadata'
+import Container from 'components/Container'
 import Link from 'components/Link'
+import Metadata from 'components/Metadata'
 
 const About: FunctionComponent<AboutProps> = ({
   about,

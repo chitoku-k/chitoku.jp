@@ -3,15 +3,14 @@ import { Col, Row } from 'react-bootstrap'
 import { useIntl } from 'react-intl'
 
 import messages from './messages'
+import * as styles from './styles.module.scss'
 
-import Container from 'components/Container'
 import ArticleCard from 'components/ArticleCard'
 import ArticleContainer from 'components/ArticleContainer'
 import CategoryIcon from 'components/CategoryIcon'
+import Container from 'components/Container'
 import Link from 'components/Link'
 import SubHeader from 'components/SubHeader'
-
-import * as styles from './styles.module.scss'
 
 const isCategory = (category: GatsbyTypes.CategoryFragment | undefined): category is Category => Boolean(category)
 

@@ -1,16 +1,16 @@
+import { useLocation } from '@reach/router'
 import type { FunctionComponent, ReactNode } from 'react'
 import type { MessageDescriptor } from 'react-intl'
 import { FormattedMessage, useIntl } from 'react-intl'
-import { useLocation } from '@reach/router'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
 
-import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
-import Metadata from 'components/Metadata'
+import Container from 'components/Container'
 import Link from 'components/Link'
+import Metadata from 'components/Metadata'
 
 const Contact: FunctionComponent<ContactProps> = ({
   message,

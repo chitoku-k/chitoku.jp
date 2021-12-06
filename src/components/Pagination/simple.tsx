@@ -4,8 +4,9 @@ import type { BsPrefixProps } from 'react-bootstrap/helpers'
 import { useIntl } from 'react-intl'
 
 import messages from './messages'
-import { PaginationItem } from './'
 import * as styles from './styles.module.scss'
+
+import { PaginationItem } from './'
 
 export const SimplePagination: FunctionComponent<BsPrefixProps<'ul'> & ComponentPropsWithoutRef<'ul'> & SimplePaginationProps> = ({
   prev,

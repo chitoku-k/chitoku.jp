@@ -1,5 +1,5 @@
-import React from 'react'
 import type { Meta, Story } from '@storybook/react'
+import React from 'react'
 
 import type { ArticleHeaderProps } from 'components/ArticleHeader'
 import ArticleHeader from 'components/ArticleHeader'

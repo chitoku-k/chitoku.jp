@@ -1,7 +1,7 @@
-import type { FunctionComponent } from 'react'
-import { useContext } from 'react'
 import clsx from 'clsx'
 import Prism from 'prismjs'
+import type { FunctionComponent } from 'react'
+import { useContext } from 'react'
 import 'prismjs/components/prism-c'
 
 import * as styles from './styles.module.scss'

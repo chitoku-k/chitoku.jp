@@ -1,5 +1,6 @@
-import type { BuildArgs, Page } from 'gatsby'
 import path from 'path'
+
+import type { BuildArgs, Page } from 'gatsby'
 
 import type { Paginatable } from './utils'
 import { splitPages } from './utils'

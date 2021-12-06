@@ -1,7 +1,7 @@
-import type { Node } from 'unist'
-import visit from 'unist-util-visit'
 import twemoji from 'twemoji'
 import unicode from 'unicode-properties'
+import type { Node } from 'unist'
+import visit from 'unist-util-visit'
 
 // eslint-disable-next-line no-control-regex
 const WHITE_SPACE_TRANSFORM_PATTERN = /(?<before>[^\x01-\x7E])\s*\n+\s*(?<after>[^\x01-\x7E])/gu

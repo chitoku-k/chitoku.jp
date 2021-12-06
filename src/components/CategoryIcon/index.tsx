@@ -1,9 +1,6 @@
-import type { FunctionComponent } from 'react'
 import clsx from 'clsx'
+import type { FunctionComponent } from 'react'
 
-import * as styles from './styles.module.scss'
-
-import Link from 'components/Link'
 import computers from '../../assets/computers.svg'
 import gadgets from '../../assets/gadgets.svg'
 import programming from '../../assets/programming.svg'
@@ -11,6 +8,10 @@ import pspprogramming from '../../assets/pspprogramming.svg'
 import soarer from '../../assets/soarer.svg'
 import softwares from '../../assets/softwares.svg'
 import windows from '../../assets/windows.svg'
+
+import * as styles from './styles.module.scss'
+
+import Link from 'components/Link'
 
 const icons = {
   computers,

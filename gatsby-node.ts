@@ -1,9 +1,10 @@
-import type { GatsbyNode } from 'gatsby'
-import type { Configuration } from 'webpack'
-import * as path from 'path'
 import { promises as fs } from 'fs'
+import * as path from 'path'
+
+import type { GatsbyNode } from 'gatsby'
 import { LicenseWebpackPlugin } from 'license-webpack-plugin'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
+import type { Configuration } from 'webpack'
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   stage,

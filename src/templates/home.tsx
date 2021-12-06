@@ -1,13 +1,13 @@
-import type { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
+import type { FunctionComponent } from 'react'
 
-import Layout from 'components/Layout'
-import Header from 'components/Header'
-import Navbar from 'components/Navbar'
-import Footer from 'components/Footer'
-import Home from 'components/Home'
 import ArticleContainer from 'components/ArticleContainer'
+import Footer from 'components/Footer'
+import Header from 'components/Header'
+import Home from 'components/Home'
+import Layout from 'components/Layout'
 import Metadata from 'components/Metadata'
+import Navbar from 'components/Navbar'
 import type { Page } from 'components/Pagination'
 import Pagination, {
   PaginationContainer,

@@ -1,14 +1,14 @@
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import clsx from 'clsx'
+import { graphql, useStaticQuery } from 'gatsby'
 import type { FunctionComponent } from 'react'
 import { Button } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
-import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
-import clsx from 'clsx'
 
+import icon from './icon.png'
 import messages from './messages'
 import * as styles from './styles.module.scss'
-import icon from './icon.png'
 
 import Link from 'components/Link'
 

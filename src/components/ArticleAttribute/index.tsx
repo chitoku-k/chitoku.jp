@@ -1,7 +1,7 @@
-import type { FunctionComponent, ReactNode } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar, faFolderOpen } from '@fortawesome/free-regular-svg-icons'
 import { faTags } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import type { FunctionComponent, ReactNode } from 'react'
 import { useIntl } from 'react-intl'
 
 import * as styles from './styles.module.scss'

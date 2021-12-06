@@ -1,6 +1,7 @@
-import type { GatsbyNode } from 'gatsby'
 import { promises as fs } from 'fs'
 import * as path from 'path'
+
+import type { GatsbyNode } from 'gatsby'
 
 interface Data {
   site: {

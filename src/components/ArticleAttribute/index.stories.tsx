@@ -1,11 +1,11 @@
-import React from 'react'
-import { IntlProvider } from 'react-intl'
 import { LocationProvider, createHistory, createMemorySource } from '@reach/router'
 import type { Meta, Story } from '@storybook/react'
+import React from 'react'
+import { IntlProvider } from 'react-intl'
 
-import messages from 'translations/ja.yml'
 import type { ArticleAttributeProps } from 'components/ArticleAttribute'
 import ArticleAttribute from 'components/ArticleAttribute'
+import messages from 'translations/ja.yml'
 
 const meta: Meta = {
   component: ArticleAttribute,

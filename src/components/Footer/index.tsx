@@ -1,6 +1,6 @@
+import { graphql, useStaticQuery } from 'gatsby'
 import type { FunctionComponent } from 'react'
 import { FormattedMessage, useIntl } from 'react-intl'
-import { graphql, useStaticQuery } from 'gatsby'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'

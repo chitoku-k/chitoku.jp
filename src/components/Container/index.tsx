@@ -1,14 +1,14 @@
+import { useLocation } from '@reach/router'
+import clsx from 'clsx'
 import { memo } from 'react'
 import { Container as BootstrapContainer, Col, Row } from 'react-bootstrap'
-import { useLocation } from '@reach/router'
 import type { StateResultsProvided } from 'react-instantsearch-core'
 import { connectStateResults } from 'react-instantsearch-dom'
-import clsx from 'clsx'
 
 import * as styles from './styles.module.scss'
 
-import Sidebar from 'components/Sidebar'
 import SearchResult from 'components/SearchResult'
+import Sidebar from 'components/Sidebar'
 
 const MemoizedSidebar = memo(Sidebar, (prev, next) => prev.location.pathname === next.location.pathname)
 

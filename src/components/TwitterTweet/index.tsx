@@ -1,9 +1,9 @@
+import clsx from 'clsx'
 import type { FunctionComponent } from 'react'
 import { useEffect, useRef } from 'react'
 import type { TweetProps } from 'react-twitter-widgets'
 import { Tweet } from 'react-twitter-widgets'
 import { useMedia } from 'use-media'
-import clsx from 'clsx'
 
 import * as styles from './styles.module.scss'
 

@@ -1,10 +1,10 @@
-import React from 'react'
-import { IntlProvider } from 'react-intl'
 import { LocationProvider, createHistory, createMemorySource } from '@reach/router'
 import type { Meta, Story } from '@storybook/react'
+import React from 'react'
+import { IntlProvider } from 'react-intl'
 
-import messages from 'translations/ja.yml'
 import Footer from 'components/Footer'
+import messages from 'translations/ja.yml'
 
 const meta: Meta = {
   component: Footer,

@@ -1,9 +1,11 @@
 import path from 'path'
-import type { GatsbyConfig } from 'gatsby'
+
 import * as dotenv from 'dotenv-safe'
+import type { GatsbyConfig } from 'gatsby'
 import postcssCustomProperties from 'postcss-custom-properties'
 
 import { description } from './package.json'
+
 import { createQuery } from 'historia-taxonomy-plugin'
 
 dotenv.config()

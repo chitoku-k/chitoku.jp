@@ -1,13 +1,13 @@
-import type { ComponentPropsWithoutRef, FunctionComponent } from 'react'
-import { Dropdown } from 'react-bootstrap'
 import { useLocation } from '@reach/router'
 import clsx from 'clsx'
+import type { ComponentPropsWithoutRef, FunctionComponent } from 'react'
+import { Dropdown } from 'react-bootstrap'
 
 import * as styles from './styles.module.scss'
 
-import type { NavigationLinkItem } from 'components/Navbar'
-import NavDropdown from 'components/NavDropdown'
 import Link from 'components/Link'
+import NavDropdown from 'components/NavDropdown'
+import type { NavigationLinkItem } from 'components/Navbar'
 
 export const NavLink: typeof Link = ({
   className,

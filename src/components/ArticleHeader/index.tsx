@@ -1,5 +1,5 @@
-import type { ComponentPropsWithoutRef, FunctionComponent, ReactNode } from 'react'
 import clsx from 'clsx'
+import type { ComponentPropsWithoutRef, FunctionComponent, ReactNode } from 'react'
 
 import * as styles from './styles.module.scss'
 

@@ -4,11 +4,11 @@ import { useIntl } from 'react-intl'
 import messages from './messages'
 import * as styles from './styles.module.scss'
 
-import Metadata from 'components/Metadata'
-import Link from 'components/Link'
-import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
+import Container from 'components/Container'
+import Link from 'components/Link'
+import Metadata from 'components/Metadata'
 
 const Links: FunctionComponent<LinksProps> = ({ links }) => {
   const { formatMessage } = useIntl()

@@ -2,10 +2,10 @@ import type { FunctionComponent } from 'react'
 import { IntlProvider } from 'react-intl'
 
 import '../../styles/styles.scss'
-import messages from 'translations/ja.yml'
 import * as styles from './styles.module.scss'
 
 import Search from 'components/Search'
+import messages from 'translations/ja.yml'
 
 const Layout: FunctionComponent = ({
   children,

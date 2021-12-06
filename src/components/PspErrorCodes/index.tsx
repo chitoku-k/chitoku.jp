@@ -1,7 +1,7 @@
+import { graphql, useStaticQuery } from 'gatsby'
 import type { FunctionComponent } from 'react'
 import { Fragment } from 'react'
 import { Table } from 'react-bootstrap'
-import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
 
 import messages from './messages'

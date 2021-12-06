@@ -1,8 +1,8 @@
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { graphql, useStaticQuery } from 'gatsby'
 import type { FunctionComponent, ReactElement } from 'react'
 import { Button } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
-import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
 
 import messages from './messages'

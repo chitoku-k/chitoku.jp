@@ -1,10 +1,10 @@
-import type { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
+import type { FunctionComponent } from 'react'
 
-import Layout from 'components/Layout'
-import Header from 'components/Header'
-import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
+import Header from 'components/Header'
+import Layout from 'components/Layout'
+import Navbar from 'components/Navbar'
 import NotFound from 'components/NotFound'
 
 export const pageQuery = graphql`

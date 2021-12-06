@@ -1,6 +1,6 @@
+import algoliasearch from 'algoliasearch/lite'
 import type { FunctionComponent } from 'react'
 import { InstantSearch } from 'react-instantsearch-dom'
-import algoliasearch from 'algoliasearch/lite'
 
 const Search: FunctionComponent = ({
   children,

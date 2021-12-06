@@ -1,6 +1,6 @@
-import React from 'react'
 import { LocationProvider, createHistory, createMemorySource } from '@reach/router'
 import type { Meta, Story } from '@storybook/react'
+import React from 'react'
 
 import type { ArticleBodyProps } from 'components/ArticleBody'
 import ArticleBody, { register } from 'components/ArticleBody'

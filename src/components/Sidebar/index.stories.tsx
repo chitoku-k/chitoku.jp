@@ -1,11 +1,11 @@
-import React from 'react'
-import { IntlProvider } from 'react-intl'
 import { LocationProvider, createHistory, createMemorySource } from '@reach/router'
 import type { Meta, Story } from '@storybook/react'
+import React from 'react'
+import { IntlProvider } from 'react-intl'
 
-import messages from 'translations/ja.yml'
 import type { SidebarProps } from 'components/Sidebar'
 import Sidebar from 'components/Sidebar'
+import messages from 'translations/ja.yml'
 
 const meta: Meta = {
   component: Sidebar,

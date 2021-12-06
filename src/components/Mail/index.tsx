@@ -1,19 +1,19 @@
+import { faCheck, faCircleNotch, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import type { FormEvent, FunctionComponent, ReactNode } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import { Alert, Button, Form } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faCircleNotch, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
 
-import Metadata from 'components/Metadata'
-import Link from 'components/Link'
-import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
+import Container from 'components/Container'
+import Link from 'components/Link'
+import Metadata from 'components/Metadata'
 
 const Label: FunctionComponent<MailLabelProps> = ({
   title,

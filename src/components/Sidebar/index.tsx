@@ -1,15 +1,12 @@
+import { faCoffee, faRss } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import type { WindowLocation } from '@reach/router'
+import clsx from 'clsx'
+import { graphql, useStaticQuery } from 'gatsby'
 import type { FunctionComponent } from 'react'
 import { useContext } from 'react'
 import { Col } from 'react-bootstrap'
-import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
-import type { WindowLocation } from '@reach/router'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faRss } from '@fortawesome/free-solid-svg-icons'
-import clsx from 'clsx'
-
-import messages from './messages'
-import * as styles from './styles.module.scss'
 
 import {
   FacebookShareButton,
@@ -18,9 +15,12 @@ import {
   TumblrShareButton,
   TwitterShareButton,
 } from './buttons'
+import messages from './messages'
+import * as styles from './styles.module.scss'
+
+import Link from 'components/Link'
 import { MetadataContext } from 'components/Metadata'
 import NavItem from 'components/NavItem'
-import Link from 'components/Link'
 import SubHeader from 'components/SubHeader'
 
 const query = graphql`
