@@ -5771,10 +5771,10 @@ babel-preset-fbjs@^3.3.0:
     "@babel/plugin-transform-template-literals" "^7.0.0"
     babel-plugin-syntax-trailing-function-commas "^7.0.0-beta.0"
 
-babel-preset-gatsby@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-2.3.0.tgz#2eafb5e76c25d57f1e53ad09a22e11cd5786c187"
-  integrity sha512-8/y4wntH3IU4K98nnZQ7wItOsJgR/mWSB4swzXlMI+vtVmp8I/HgKwqiXwIECLi/7Ypygus8L/WO+Dwv0kJedg==
+babel-preset-gatsby@^2.3.0, babel-preset-gatsby@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-2.4.0.tgz#5e6c57165c25705299ac79e0b79103c23f3d2024"
+  integrity sha512-kgSs6zyG6Uba5RxRu8QgzhKMCOLpDJ5XDCAINaZZpn0jNKHx+FyCEjtIjWTMREOn4lPInv6G8+NcrHw6zn6y+g==
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.14.0"
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.14.5"
@@ -5789,8 +5789,8 @@ babel-preset-gatsby@^2.3.0:
     babel-plugin-dynamic-import-node "^2.3.3"
     babel-plugin-macros "^2.8.0"
     babel-plugin-transform-react-remove-prop-types "^0.4.24"
-    gatsby-core-utils "^3.3.0"
-    gatsby-legacy-polyfills "^2.3.0"
+    gatsby-core-utils "^3.4.0"
+    gatsby-legacy-polyfills "^2.4.0"
 
 backo2@~1.0.2:
   version "1.0.2"
@@ -9335,10 +9335,10 @@ gatsby-image@^3.11.0:
     object-fit-images "^3.2.4"
     prop-types "^15.7.2"
 
-gatsby-legacy-polyfills@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-legacy-polyfills/-/gatsby-legacy-polyfills-2.3.0.tgz#9def8ab33f094504524e908ae244765c8a1d3ec7"
-  integrity sha512-OSoQvpX5PbBKOnoTVnPkQfQDWjFVgTLF+WP0/Ofd8Mzrb83o7I8Zt4o82W/YE0RexUvKbik2d/zDQlaKY2moKQ==
+gatsby-legacy-polyfills@^2.3.0, gatsby-legacy-polyfills@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/gatsby-legacy-polyfills/-/gatsby-legacy-polyfills-2.4.0.tgz#73325b747e42c2a66ef2448045b02ff360e2065b"
+  integrity sha512-dnSu7fz+a7kaCLNYz0DV0IZ+6Fu/wvsT/sOrPIwFat9c/NiioBMyZe5O2q7Vh7EGs496AsZLfkcvZ0LaDSDeTQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
     core-js-compat "3.9.0"
