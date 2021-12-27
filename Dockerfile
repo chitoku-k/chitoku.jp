@@ -32,5 +32,5 @@ COPY --from=build /usr/src/.cache /usr/src/.cache
 COPY --from=build /usr/src/public /usr/src/public
 
 FROM nginx:1.21.4-alpine
-COPY conf /etc/nginx/conf.d
+COPY conf /etc/nginx/templates
 COPY --from=build /usr/src/public /usr/share/nginx/html
