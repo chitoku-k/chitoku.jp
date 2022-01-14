@@ -59,7 +59,7 @@
     "gatsby-plugin-algolia": "^0.25.0",
     "gatsby-plugin-catch-links": "^4.4.0",
     "gatsby-plugin-eslint": "^4.0.2",
-    "gatsby-plugin-google-analytics": "^4.4.0",
+    "gatsby-plugin-google-analytics": "^4.5.0",
     "gatsby-plugin-minify-html": "^1.0.4",
     "gatsby-plugin-no-sourcemaps": "^4.4.0",
     "gatsby-plugin-react-helmet": "^5.5.0",
