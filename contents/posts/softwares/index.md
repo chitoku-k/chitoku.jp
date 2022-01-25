@@ -50,7 +50,7 @@ category: ソフトウェア
 * Go
 * RabbitMQ
 * Grafana
-* MySQL
+* PostgreSQL
 
 ---
 
@@ -84,7 +84,7 @@ Ubiquiti 社のルーター [EdgeRouter](https://www.ui.com/edgemax/edgerouter/)
 
 利用技術:
 
-* Go
+* Rust
 * Prometheus
 
 ---
@@ -127,7 +127,7 @@ Slack の [interactive message buttons](https://api.slack.com/legacy/message-but
 
 ### [![lampager-cakephp](../media/software_icon.png)lampager-cakephp](https://github.com/lampager/lampager-cakephp)
 
-PHP で `OFFSET` を利用せずにページネーションを行うライブラリー [Lampager](https://github.com/lampager/lampager) を [CakePHP](https://cakephp.org) v2.x、v3.x、v4.x に対応させる CakePHP プラグインです。
+PHP で DB からデータを取得する際に SQL の `OFFSET` 句を利用せずにページネーションを行えるライブラリー、[Lampager](https://github.com/lampager/lampager) を [CakePHP](https://cakephp.org) v2.x、v3.x、v4.x に対応させる CakePHP プラグインです。
 
 詳細: [CakePHP 2 のプラグインを Travis CI でテストする](/programming/cakephp2-plugin-test)  
 利用技術:
@@ -196,6 +196,18 @@ WPF でウィンドウのシステムメニュー（最小化ボタン、最大�
 
 ---
 
+### [![NowPlayingLib](../media/software_icon.png)NowPlayingLib](https://github.com/chitoku-k/NowPlayingLib)
+
+.NET Framework から Windows Media Player、iTunes、x-アプリ、foobar2000 と連携して、再生中の曲の情報を取得したり、基本的な操作を行ったりすることができるライブラリーです。
+
+詳細: [NowPlayingLib を公開しました](/programming/nowplayinglib)  
+利用技術:
+
+* C#
+* COM
+
+---
+
 ### [![Nature Remo Docker](../media/software_icon.png)Nature Remo Docker](https://github.com/chitoku-k/nature-remo-docker)
 
 [Nature Remo API Client](https://github.com/tenntenn/natureremo) を利用して [Nature Remo](https://nature.global/) のローカル API を呼び出す CLI ツールです。
@@ -257,16 +269,3 @@ TweetDeck のアカウント選択を複数選択ではなく切り替えにな�
 * JavaScript
 * Selenium
 * webpack
-
----
-
-### [![NowPlayingLib](../media/software_icon.png)NowPlayingLib](https://github.com/chitoku-k/NowPlayingLib)
-
-.NET Framework から Windows Media Player、iTunes、x-アプリ、foobar2000 と連携して、再生中の曲の情報を取得したり、基本的な操作を行ったりすることができるライブラリーです。
-最新のバージョンにおける動作状況が不明であるためサポートしていません。
-
-詳細: [NowPlayingLib を公開しました](/programming/nowplayinglib)  
-利用技術:
-
-* C#
-* COM
