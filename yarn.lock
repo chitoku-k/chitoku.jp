@@ -5813,13 +5813,13 @@ babel-plugin-react-intl@^7.0.0:
     intl-messageformat-parser "^5.3.7"
     schema-utils "^2.6.6"
 
-babel-plugin-remove-graphql-queries@^4.4.0, babel-plugin-remove-graphql-queries@^4.5.2:
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.5.2.tgz#e233fd63688986a21126c1e1ad9792fc74956b5a"
-  integrity sha512-N/z2vrRBtbPpkzQwgO6vL1GgLvRCxjUwcXPCduMO32xIDlcCeAOAuBUpMSEs7rDyE6YTBhu8FhskeBJl49N0iQ==
+babel-plugin-remove-graphql-queries@^4.5.2, babel-plugin-remove-graphql-queries@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.6.0.tgz#cdda606988fd1d0e0fc2377ea8e4103d461b45e2"
+  integrity sha512-QMbjJhHOkVHBfFDfAXQp1MFSzLWOJdPMe7Dk3+AF8L+dlLcf2Z7zbIrlRoRPEROyoW4CCPzLDi0Vam5leR/+gw==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    gatsby-core-utils "^3.5.2"
+    gatsby-core-utils "^3.6.0"
 
 babel-plugin-syntax-jsx@^6.18.0:
   version "6.18.0"
@@ -18504,7 +18504,7 @@ webpack-sources@^1.1.0, webpack-sources@^1.4.3:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack-sources@^3.0.0, webpack-sources@^3.2.2:
+webpack-sources@^3.0.0:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.2.tgz#d88e3741833efec57c4c789b6010db9977545260"
   integrity sha512-cp5qdmHnu5T8wRg2G3vZZHoJPN14aqQ89SyQ11NpGH5zEMDCclt49rzo+MaRazk7/UeILhAI+/sEtcM+7Fr0nw==
