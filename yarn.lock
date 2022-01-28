@@ -9627,10 +9627,10 @@ gatsby-remark-images@^6.6.0:
     unist-util-select "^3.0.4"
     unist-util-visit-parents "^3.1.1"
 
-gatsby-remark-prismjs@^6.5.0:
-  version "6.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-6.5.0.tgz#a8d0d1aa81cc37d8d59650f19d57a803f74a0285"
-  integrity sha512-48UtIOiLWF37OHE6B2zTHflrJ5vcGLMHVaTXs0OwPc5eXyvGXe2BdWQrmvOWW+DQ0rd7HeUvlBxjnHohTjVP9Q==
+gatsby-remark-prismjs@^6.6.0:
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-6.6.0.tgz#ceb7a9e92cb16301b288b603bc80a68aa13f7921"
+  integrity sha512-GJuf+iMIavVgzO3XEIGXS+jz5l8znw2JI8gGgqlpBXewlTvWlfH12TqMSxApsq0gbrcUXQuakbk48bnwtS7+2A==
   dependencies:
     "@babel/runtime" "^7.15.4"
     parse-numeric-range "^1.2.0"
@@ -18504,7 +18504,7 @@ webpack-sources@^1.1.0, webpack-sources@^1.4.3:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack-sources@^3.0.0, webpack-sources@^3.2.2:
+webpack-sources@^3.0.0:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.2.tgz#d88e3741833efec57c4c789b6010db9977545260"
   integrity sha512-cp5qdmHnu5T8wRg2G3vZZHoJPN14aqQ89SyQ11NpGH5zEMDCclt49rzo+MaRazk7/UeILhAI+/sEtcM+7Fr0nw==
