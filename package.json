@@ -102,7 +102,7 @@
     "sass": "^1.49.0",
     "sass-loader": "^12.4.0",
     "schema-dts": "^1.0.0",
-    "storybook": "^6.4.14",
+    "storybook": "^6.4.15",
     "style-loader": "^3.3.1",
     "stylelint": "^14.2.0",
     "stylelint-config-recess-order": "^3.0.0",
