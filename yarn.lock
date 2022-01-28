@@ -9409,10 +9409,10 @@ gatsby-plugin-minify-html@^1.0.4:
     glob "^7.1.6"
     html-minifier-terser "^5.1.1"
 
-gatsby-plugin-no-sourcemaps@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-4.5.0.tgz#e34e1c72bd1328530c80bafaaeec84840b0fcd94"
-  integrity sha512-fcXDEapMGjUFyhvhDBfKawmDGKrsXNA51nxGzQXgRKo9y85eDiFH17z7mW+6AB+O+biOxqc7VDRV0FFHLhYFjA==
+gatsby-plugin-no-sourcemaps@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-4.6.0.tgz#927966f78e5ae0227fb9bf1c5d6e17f89c4372b7"
+  integrity sha512-E8vNif4aji7BiOzom9BlybSYOk77eJ4eWhjQgbBRBvC9AdTZp5BDhy1q4Ngf782Vkoltl41+3XBb99nwz+5DTw==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
@@ -18456,7 +18456,7 @@ webpack-sources@^1.1.0, webpack-sources@^1.4.3:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack-sources@^3.0.0, webpack-sources@^3.2.2:
+webpack-sources@^3.0.0:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.2.tgz#d88e3741833efec57c4c789b6010db9977545260"
   integrity sha512-cp5qdmHnu5T8wRg2G3vZZHoJPN14aqQ89SyQ11NpGH5zEMDCclt49rzo+MaRazk7/UeILhAI+/sEtcM+7Fr0nw==
