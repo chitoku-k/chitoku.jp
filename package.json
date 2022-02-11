@@ -36,7 +36,7 @@
     "@types/react-instantsearch-dom": "^6.12.2",
     "@types/sass": "^1.43.1",
     "@types/tapable": "^2.2.2",
-    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "@webcomponents/shadydom": "^1.9.0",
     "algoliasearch": "^4.12.1",
