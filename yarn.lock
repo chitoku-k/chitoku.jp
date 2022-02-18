@@ -3398,17 +3398,17 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/cli@6.4.18":
-  version "6.4.18"
-  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-6.4.18.tgz#5499acb75be0cca1f5b61ea5537fe0de23c29e1e"
-  integrity sha512-4QLDyPCvMZYz3XXlpVLrwuNPIf0qMKPBt1UbcoLL+8bbBrOrOLWqtWcsksNJCD+zzr1rDAeoF8oRwcYl+4tnCA==
+"@storybook/cli@6.4.19":
+  version "6.4.19"
+  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-6.4.19.tgz#393091415762280800b7dcc7c533ab2633641a9a"
+  integrity sha512-4UStCbSI9x4RChHsSAGuzBr/hinmijQMQEuUuVVN7xfhaQC4dDTyPCki8fJ4aBBzjYwoHFHz8lQGAnGLpVSpYQ==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/preset-env" "^7.12.11"
-    "@storybook/codemod" "6.4.18"
-    "@storybook/core-common" "6.4.18"
-    "@storybook/csf-tools" "6.4.18"
-    "@storybook/node-logger" "6.4.18"
+    "@storybook/codemod" "6.4.19"
+    "@storybook/core-common" "6.4.19"
+    "@storybook/csf-tools" "6.4.19"
+    "@storybook/node-logger" "6.4.19"
     "@storybook/semver" "^7.3.2"
     boxen "^5.1.2"
     chalk "^4.1.0"
@@ -3500,16 +3500,16 @@
     core-js "^3.8.2"
     global "^4.4.0"
 
-"@storybook/codemod@6.4.18":
-  version "6.4.18"
-  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-6.4.18.tgz#1c984fc3fe1ed74be31ff42a5e46b9e2ed7f5927"
-  integrity sha512-hDq4ZsWmm1XpMA5q/35cCQf+RF/V8+x0ClreKdDFJfnF165jjYQE+AJ87FKsunbZpRMWNbio7xAe2z3m5uxphA==
+"@storybook/codemod@6.4.19":
+  version "6.4.19"
+  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-6.4.19.tgz#f85f3c0e33b8c37533bc230c85bb53f944e3eaba"
+  integrity sha512-av7ZuA8TR63iueGRO31Dxk9TWcXVNKHRm0VoiHfzhuC0kO2jHfkxQrT2KwR9QsmEfFbsAn1NHNNlCP0QK3VbqA==
   dependencies:
     "@babel/types" "^7.12.11"
     "@mdx-js/mdx" "^1.6.22"
     "@storybook/csf" "0.0.2--canary.87bc651.0"
-    "@storybook/csf-tools" "6.4.18"
-    "@storybook/node-logger" "6.4.18"
+    "@storybook/csf-tools" "6.4.19"
+    "@storybook/node-logger" "6.4.19"
     core-js "^3.8.2"
     cross-spawn "^7.0.3"
     globby "^11.0.2"
@@ -3815,6 +3815,29 @@
   version "6.4.18"
   resolved "https://registry.yarnpkg.com/@storybook/csf-tools/-/csf-tools-6.4.18.tgz#cdd40b543f9bea79c1481c236868b8ea04af6bd7"
   integrity sha512-KtwxKrkndEyvyAiBliI6m4yMFMvnyI4fOjU8t1qCit/0gjutOF5JxmmZ+H8FSI5dIyibEOzQmzHe0MyStAjCEQ==
+  dependencies:
+    "@babel/core" "^7.12.10"
+    "@babel/generator" "^7.12.11"
+    "@babel/parser" "^7.12.11"
+    "@babel/plugin-transform-react-jsx" "^7.12.12"
+    "@babel/preset-env" "^7.12.11"
+    "@babel/traverse" "^7.12.11"
+    "@babel/types" "^7.12.11"
+    "@mdx-js/mdx" "^1.6.22"
+    "@storybook/csf" "0.0.2--canary.87bc651.0"
+    core-js "^3.8.2"
+    fs-extra "^9.0.1"
+    global "^4.4.0"
+    js-string-escape "^1.0.1"
+    lodash "^4.17.21"
+    prettier ">=2.2.1 <=2.3.0"
+    regenerator-runtime "^0.13.7"
+    ts-dedent "^2.0.0"
+
+"@storybook/csf-tools@6.4.19":
+  version "6.4.19"
+  resolved "https://registry.yarnpkg.com/@storybook/csf-tools/-/csf-tools-6.4.19.tgz#28bdea11da17501a8bc4e761b821d7721880eaf6"
+  integrity sha512-gf/zRhGoAVsFwSyV2tc+jeJfZQkxF6QsaZgbUSe24/IUvGFCT/PS/jZq1qy7dECAwrTOfykgu8juyBtj6WhWyw==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/generator" "^7.12.11"
@@ -17046,12 +17069,12 @@ storybook-addon-gatsby@^0.0.5:
   resolved "https://registry.yarnpkg.com/storybook-addon-gatsby/-/storybook-addon-gatsby-0.0.5.tgz#94f5b67bab8659d0248b65e60dabc3702818ce8b"
   integrity sha512-18f8Kc6mx8mEFfqY2DgF9ayDfmM58+9IjJqIxGV4bA4r2EtB/Q1LDNELIJmpLLyA5NrSvECxCqzLu7jNBlWgmA==
 
-storybook@^6.4.18:
-  version "6.4.18"
-  resolved "https://registry.yarnpkg.com/storybook/-/storybook-6.4.18.tgz#206135fd92ea0e74d0c708b57efae39e5edde5f5"
-  integrity sha512-7/Lt2TslajYicCC/ls++v2C39uPsyjCJSOgmDLWt6Y4xgdKQ0QXJD+nVecE6w4mtKH+8T5P91mpfHKk3bR7Xhg==
+storybook@^6.4.19:
+  version "6.4.19"
+  resolved "https://registry.yarnpkg.com/storybook/-/storybook-6.4.19.tgz#db16c16d07eb526f0dda0d085800689f87e22df1"
+  integrity sha512-hGReO8MBSMQ88m9LP8IlA/88Zmy8xdNti59zYpTkwsow8hQ62e11whOAruFC1Rw5Uj1fgODsPMuyz4/3F+LSYA==
   dependencies:
-    "@storybook/cli" "6.4.18"
+    "@storybook/cli" "6.4.19"
 
 stream-parser@~0.3.1:
   version "0.3.1"
