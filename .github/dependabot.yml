@@ -10,6 +10,10 @@ updates:
   open-pull-requests-limit: 99
   versioning-strategy: increase
   ignore:
+  # Internet Explorer 11 support
+  - dependency-name: "@fortawesome/fontawesome-svg-core"
+  # Internet Explorer 11 support
+  - dependency-name: "@fortawesome/free-*"
   # TODO: Update unist-* and string-strip-html when Gatsby adds support for ESM
   # https://github.com/gatsbyjs/gatsby/discussions/31599
   - dependency-name: unist-*

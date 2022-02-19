@@ -17,6 +17,7 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
             path.resolve('node_modules/@pmmmwh/react-refresh-webpack-plugin'),
             path.resolve('node_modules/@react-aria/ssr'),
             path.resolve('node_modules/@restart/ui'),
+            path.resolve('node_modules/ansi-regex'),
             path.resolve('node_modules/debug'),
             path.resolve('node_modules/dequal'),
             path.resolve('node_modules/gatsby'),
