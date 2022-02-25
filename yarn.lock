@@ -9375,10 +9375,10 @@ gatsby-plugin-algolia@^0.26.0:
     deep-equal "^2.0.5"
     lodash.chunk "^4.2.0"
 
-gatsby-plugin-catch-links@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-4.7.0.tgz#cffdf4e812fe9dd4839fa8a6980459930b55219a"
-  integrity sha512-jIqUI1+Cu+RV1RxkoHcjQTwUCDjeL3R4b+c2psd1TlQ9xZDe/+OQiXkWawk4EKeW+BlB0vFY0qvOB5CBYJBQpg==
+gatsby-plugin-catch-links@^4.8.0:
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-4.8.0.tgz#3957f121d6e4722fbd0e2d9e1fba2b4b96d7c5d5"
+  integrity sha512-AErfHium3wTj8ojxV9rO9Q9q4fUwrqAqnavLJHFIx+aQuQpE4jF8HL9efyUdbXwwkdPETm1I0kTdxYGTGGEknw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     escape-string-regexp "^1.0.5"
