@@ -116,10 +116,8 @@
     "yaml-flat-loader": "^1.0.2"
   },
   "resolutions": {
-    "loader-utils": "^2.0.1",
     "remark": "^12",
-    "remark-footnotes": "^2",
-    "webpack": "^5"
+    "remark-footnotes": "^2"
   },
   "scripts": {
     "postinstall": "husky install",
