@@ -23,19 +23,6 @@ module.exports = {
     return options
   },
   webpackFinal: config => {
-    const tsx = config.module.rules.find(({ test }) => test.test('.tsx'))
-    const babelLoader = tsx.use.find(({ loader }) => loader.includes('babel-loader'))
-    babelLoader.options.plugins = [
-      ...babelLoader.options.plugins.filter(p => p !== require.resolve('babel-plugin-remove-graphql-queries')),
-      [
-        require.resolve('babel-plugin-remove-graphql-queries'),
-        {
-          stage: 'develop-html',
-          staticQueryDir: 'page-data/sq/d',
-        },
-      ],
-    ]
-
     config.module.rules.push({
       test: /\.yml$/u,
       use: [
