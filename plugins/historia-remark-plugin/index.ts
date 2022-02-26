@@ -78,10 +78,9 @@ export default ({
     if (!node.value || !WHITE_SPACE_TRANSFORM_PATTERN.test(node.value)) {
       return
     }
-    // eslint-disable-next-line max-params
-    node.value = node.value.replace(WHITE_SPACE_TRANSFORM_PATTERN, (_match: string, before: string, after: string, _offset: number, str: string): string => {
+    node.value = node.value.replace(WHITE_SPACE_TRANSFORM_PATTERN, (match: string, before: string, after: string): string => {
       if (!isSegmentBreakSkippable(before, after)) {
-        return str
+        return match
       }
       return before + after
     })
