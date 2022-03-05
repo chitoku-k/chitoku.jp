@@ -35,6 +35,21 @@ const Label: FunctionComponent<MailLabelProps> = ({
 
 type Status = '' | 'error' | 'sending' | 'sent'
 
+const send = async (form: FormData): Promise<void> => {
+  const siteApi = process.env.GATSBY_MAIL_API
+  if (!siteApi) {
+    throw new Error('Invalid env')
+  }
+
+  const response = await fetch(siteApi, {
+    method: 'POST',
+    body: form,
+  })
+  if (!response.ok) {
+    throw new Error(await response.text())
+  }
+}
+
 const Mail: FunctionComponent = () => {
   const { formatMessage } = useIntl()
 
@@ -42,15 +57,9 @@ const Mail: FunctionComponent = () => {
   const [ status, setStatus ] = useState('' as Status)
   const [ readOnly, setReadOnly ] = useState(false)
 
-  const siteApi = process.env.GATSBY_MAIL_API
   const siteKey = process.env.GATSBY_MAIL_SITE_KEY
 
-  const onSubmit = useCallback(async (e: FormEvent<HTMLFormElement>): Promise<void> => {
-    if (!siteApi) {
-      setStatus('error')
-      throw new Error('Invalid env')
-    }
-
+  const onSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
     const form = new FormData(e.currentTarget)
     form.append('g-recaptcha-response', token)
 
@@ -58,21 +67,11 @@ const Mail: FunctionComponent = () => {
     e.stopPropagation()
 
     setStatus('sending')
-
-    try {
-      const response = await fetch(siteApi, {
-        method: 'POST',
-        body: form,
-      })
-      if (!response.ok) {
-        throw new Error(await response.text())
-      }
-      setStatus('sent')
-    } catch (err: unknown) {
-      setStatus('error')
-      throw err
-    }
-  }, [ siteApi, token ])
+    send(form).then(
+      () => setStatus('sent'),
+      () => setStatus('error'),
+    )
+  }, [ token ])
 
   useEffect(() => {
     if (!siteKey) {
