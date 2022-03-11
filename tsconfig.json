@@ -9,6 +9,9 @@
       ],
       "components/*": [
         "src/components/*"
+      ],
+      "twemoji": [
+        "node_modules/@types/twemoji"
       ]
     },
     "plugins": [
