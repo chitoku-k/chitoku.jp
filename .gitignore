@@ -6,6 +6,7 @@
 !.env.example
 
 ### Gatsby ###
+plugins/**/*.js
 public/
 .cache/
 typings/gatsby-types.d.ts

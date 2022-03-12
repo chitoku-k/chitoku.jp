@@ -3,6 +3,9 @@
   "extends": ".",
   "compilerOptions": {
     "module": "CommonJS",
-    "esModuleInterop": true
-  }
+    "sourceMap": false
+  },
+  "include": [
+    "plugins/historia-remark-plugin/**/*.ts"
+  ]
 }

@@ -4,7 +4,7 @@ import * as dotenv from 'dotenv-safe'
 import postcssCustomProperties from 'postcss-custom-properties'
 
 import { description } from './package.json'
-import { createQuery } from 'historia-taxonomy-plugin'
+import { createQuery } from './plugins/historia-taxonomy-plugin'
 
 dotenv.config()
 
@@ -78,7 +78,7 @@ const config: GatsbyConfig = {
         },
         postCssPlugins: [
           postcssCustomProperties({
-            importFrom: path.join(__dirname, 'src/styles/themes/_light.css'),
+            importFrom: path.resolve('src/styles/themes/_light.css'),
           }),
         ],
       },
@@ -156,7 +156,7 @@ const config: GatsbyConfig = {
               ],
             },
           },
-          { resolve: 'historia-remark-plugin' },
+          { resolve: './plugins/historia-remark-plugin' },
         ],
       },
     },
