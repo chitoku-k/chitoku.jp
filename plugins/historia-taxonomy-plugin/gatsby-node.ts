@@ -1,8 +1,9 @@
-import type { CreateResolversArgs, GatsbyNode, Page, PluginOptions } from 'gatsby'
+import type { CreateResolversArgs, GatsbyNode, IPluginRefObject, Page, PluginOptions, PluginRef } from 'gatsby'
 import type { GatsbyIterable } from 'gatsby/dist/datastore/common/iterable'
 import type { IRunQueryArgs } from 'gatsby/dist/datastore/types'
 import path from 'path'
 
+import config from '../../gatsby-config'
 import type { ArticleContext } from './createArticles'
 import createArticles from './createArticles'
 import type { HomeContext } from './createHome'
@@ -90,10 +91,15 @@ export const createPages: GatsbyNode['createPages'] = async ({
   }
 }
 
-/* eslint-disable no-shadow, @typescript-eslint/no-explicit-any, @typescript-eslint/no-shadow */
+const isPluginObject = (plugin: PluginRef): plugin is IPluginRefObject => typeof plugin === 'object'
+
+/* eslint-disable @typescript-eslint/no-shadow */
 export const createResolvers: GatsbyNode['createResolvers'] = ({
   createResolvers,
-}: CreateResolversArgs): any => {
+}: CreateResolversArgs): void => {
+  const plugin = config.plugins?.filter(isPluginObject).find(p => p.resolve === 'gatsby-transformer-remark')
+  const excerptSeparator = plugin?.options?.excerpt_separator as string | undefined
+
   createResolvers({
     CategoriesYaml: {
       articles: {
@@ -159,8 +165,7 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({
       excerpted: {
         type: 'Boolean!',
         resolve(source: Article) {
-          // TODO: read excerpt_separator setting
-          return source.rawMarkdownBody.includes('\n<!-- more -->\n')
+          return excerptSeparator && source.rawMarkdownBody.includes(excerptSeparator)
         },
       },
       path: {
