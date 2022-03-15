@@ -1,5 +1,4 @@
 import type { Node } from 'unist'
-import * as visit from 'unist-util-visit'
 import * as twemoji from 'twemoji'
 import * as unicode from 'unicode-properties'
 
@@ -63,9 +62,11 @@ const isSegmentBreakSkipChar = (ch: string): boolean => {
  */
 const isSegmentBreakSkippable = (before: string, after: string): boolean => isSegmentBreakSkipChar(before) && isSegmentBreakSkipChar(after)
 
-export default ({
+export default async ({
   markdownAST,
-}: RemarkPluginArgs): void => {
+}: RemarkPluginArgs): Promise<void> => {
+  const { visit } = await import('unist-util-visit')
+
   visit<RemarkNode>(markdownAST, [ 'text', 'html' ], node => {
     if (!node.value || !twemoji.test(node.value)) {
       return

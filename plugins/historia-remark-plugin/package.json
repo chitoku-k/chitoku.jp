@@ -5,9 +5,6 @@
     "@types/twemoji": "^13.1.2",
     "twemoji": "^14.0.2",
     "unicode-properties": "^1.4.1",
-    "unist-builder": "^2.0.3",
-    "unist-util-remove": "^2.1.0",
-    "unist-util-select": "^3.0.4",
-    "unist-util-visit": "^2.0.3"
+    "unist-util-visit": "^4.1.1"
   }
 }

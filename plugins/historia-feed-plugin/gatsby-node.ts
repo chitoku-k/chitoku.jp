@@ -2,7 +2,6 @@ import type { GatsbyNode } from 'gatsby'
 import { Feed } from 'feed'
 import { promises as fs } from 'fs'
 import * as path from 'path'
-import { stripHtml } from 'string-strip-html'
 
 import { author, description } from '../../package.json'
 
@@ -32,6 +31,7 @@ interface Data {
 export const onPostBuild: GatsbyNode['onPostBuild'] = async ({
   graphql,
 }) => {
+  const { stripHtml } = await import('string-strip-html')
   const { data } = await graphql<Data>(`
     query {
       site {

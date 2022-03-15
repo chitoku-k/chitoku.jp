@@ -1,5 +1,4 @@
 import removeMd from 'remove-markdown'
-import { stripHtml } from 'string-strip-html'
 
 import { getPath } from './utils'
 import type { Category, Tag } from './createTaxonomies'
@@ -31,18 +30,56 @@ interface Query {
   }
 }
 
+interface TransformedResult {
+  id: string
+  path: string
+  excerpt: string
+  headings: string[]
+  title: string
+  category: Category
+  tags: Tag[]
+  created: string
+}
+
 interface CreateQueryResult {
   query: string
-  transformer: (arg: Query) => {
-    id: string
-    path: string
-    excerpt: string
-    headings: string[]
-    title: string
-    category: Category
-    tags: Tag[]
-    created: string
-  }[]
+  transformer: (arg: Query) => Promise<TransformedResult[]>
+}
+
+
+const transform = async ({
+  data: {
+    pages: {
+      items,
+    },
+  },
+}: Query): Promise<TransformedResult[]> => {
+  const { stripHtml } = await import('string-strip-html')
+  return items
+    .filter(({ article: { file } }) => getPath(file))
+    .map(({
+      article: {
+        id,
+        file,
+        excerpt,
+        headings,
+        attributes: {
+          title,
+          category,
+          tags,
+          created,
+        },
+      },
+    }) => ({
+      id,
+      path: getPath(file),
+      excerpt: removeMd(excerpt),
+      headings: headings.map(x => stripHtml(x.value).result),
+      title,
+      category,
+      tags,
+      created,
+    }))
 }
 
 export default (): CreateQueryResult => ({
@@ -97,33 +134,5 @@ export default (): CreateQueryResult => ({
       }
     }
   `,
-  transformer: ({
-    data: {
-      pages: {
-        items,
-      },
-    },
-  }) => items.filter(({ article: { file } }) => getPath(file)).map(({
-    article: {
-      id,
-      file,
-      excerpt,
-      headings,
-      attributes: {
-        title,
-        category,
-        tags,
-        created,
-      },
-    },
-  }) => ({
-    id,
-    path: getPath(file),
-    excerpt: removeMd(excerpt),
-    headings: headings.map(x => stripHtml(x.value).result),
-    title,
-    category,
-    tags,
-    created,
-  })),
+  transformer: transform,
 })
