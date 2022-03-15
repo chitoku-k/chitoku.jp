@@ -19,7 +19,7 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
   name: macroName,
 }) => {
   const article = useContext(ArticleContext)
-  const def = article.attributes.macros?.find(x => x?.name === macroName)
+  const def = article.attributes.macros?.find(x => x.name === macroName)
   if (!def) {
     return null
   }

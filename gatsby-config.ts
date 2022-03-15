@@ -13,14 +13,6 @@ const config: GatsbyConfig = {
     siteUrl: process.env.HISTORIA_URL,
     title: description,
   },
-  mapping: {
-    'HomeYaml.categories': 'CategoriesYaml.name',
-    'MarkdownRemark.frontmatter.category': 'CategoriesYaml.name',
-    'MarkdownRemark.frontmatter.tags': 'TagsYaml.name',
-    'MarkdownRemark.frontmatter.functions': 'FunctionsYaml.name',
-    'MarkdownRemark.frontmatter.macros': 'MacrosYaml.name',
-    'UpdatesYaml.file': 'File.base',
-  },
   flags: {
     FAST_DEV: true,
   },
