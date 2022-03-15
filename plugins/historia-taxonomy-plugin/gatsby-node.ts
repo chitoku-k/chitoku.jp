@@ -93,10 +93,10 @@ export const createPages: GatsbyNode['createPages'] = async ({
 
 const isPluginObject = (plugin: PluginRef): plugin is IPluginRefObject => typeof plugin === 'object'
 
-/* eslint-disable no-shadow, @typescript-eslint/no-explicit-any, @typescript-eslint/no-shadow */
+/* eslint-disable @typescript-eslint/no-shadow */
 export const createResolvers: GatsbyNode['createResolvers'] = ({
   createResolvers,
-}: CreateResolversArgs): any => {
+}: CreateResolversArgs): void => {
   const plugin = config.plugins?.filter(isPluginObject).find(p => p.resolve === 'gatsby-transformer-remark')
   const excerptSeparator = plugin?.options?.excerpt_separator as string | undefined
 
