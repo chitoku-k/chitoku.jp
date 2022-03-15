@@ -76,6 +76,9 @@ type GitCommit implements Node {
   ): Date!
   latest: Boolean!
 }
+type HomeYaml implements Node {
+  categories: [CategoriesYaml!] @link(by: "name")
+}
 type LinksYaml implements Node {
   items: [LinksYamlItems!]!
 }
@@ -95,6 +98,10 @@ type MarkdownRemark implements Node {
 }
 type MarkdownRemarkFrontmatter {
   title: String!
+  category: CategoriesYaml @link(by: "name")
+  tags: [TagsYaml!] @link(by: "name")
+  functions: [FunctionsYaml!] @link(by: "name")
+  macros: [MacrosYaml!] @link(by: "name")
   navigation: [MarkdownRemarkFrontmatterNavigation!]
 }
 type MarkdownRemarkFrontmatterNavigation {
@@ -142,6 +149,7 @@ type UpdatesYaml implements Node {
     difference: String
     locale: String
   ): Date!
+  file: File @link(by: "base")
   version: String!
   history: [UpdatesYamlHistory!]!
 }

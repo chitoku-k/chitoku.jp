@@ -21,7 +21,7 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
   name: functionName,
 }) => {
   const article = useContext(ArticleContext)
-  const def = article.attributes.functions?.find(x => x?.name === functionName)
+  const def = article.attributes.functions?.find(x => x.name === functionName)
   if (!def) {
     return null
   }

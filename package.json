@@ -120,6 +120,7 @@
   },
   "scripts": {
     "postinstall": "husky install",
+    "clean": "gatsby clean",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "i18n": "extract-messages -o translations -l=ja -d=ja -f yaml 'src/**/*.ts'",
