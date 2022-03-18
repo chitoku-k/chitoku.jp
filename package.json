@@ -103,7 +103,7 @@
     "schema-dts": "^1.1.0",
     "storybook": "^6.4.19",
     "style-loader": "^3.3.1",
-    "stylelint": "^14.5.3",
+    "stylelint": "^14.6.0",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-scss": "^4.1.0",
