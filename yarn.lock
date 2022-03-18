@@ -10614,15 +10614,15 @@ gatsby-remark-grid-tables@^0.1.0:
     "@babel/runtime" "^7.9.2"
     remark-grid-tables "^2.1.1"
 
-gatsby-remark-images@^6.9.1:
-  version "6.9.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.9.1.tgz#61ff17e233a0cc7c0655616b2dfe93efadabdc30"
-  integrity sha512-Z4/Agg/5a+MQYtepY3QmvUMoEBOuxN0p5SEYDAsVNklEK3lfG5TQ3VNFrM9AvauLCrYzSN4GY9K9x9BUH5oC2Q==
+gatsby-remark-images@^6.10.0:
+  version "6.10.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.10.0.tgz#9aedc65c6d2beac94f3b79b4fe330ffdca06ec29"
+  integrity sha512-wt6BeWVYvUNWge0YboM5s7WGXkOiZHTCeIfhvDejwxX9TZHtQy/o4JCwbhEaHVtk0GQ4JZLt5q38kfTI+uNTDQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.10"
-    gatsby-core-utils "^3.9.1"
+    gatsby-core-utils "^3.10.0"
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
     mdast-util-definitions "^4.0.0"
