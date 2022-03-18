@@ -35,6 +35,7 @@ jobs:
           restore-keys: public-
       - name: Build (dependencies)
         uses: docker/build-push-action@v2
+        timeout-minutes: 20
         with:
           context: .
           target: dependencies
@@ -42,6 +43,7 @@ jobs:
           cache-to: type=local,mode=max,dest=/tmp/buildx-cache.new
       - name: Build (cache)
         uses: docker/build-push-action@v2
+        timeout-minutes: 20
         with:
           context: .
           target: cache
@@ -49,6 +51,7 @@ jobs:
           outputs: type=local,dest=/tmp/buildx-result
       - name: Build
         uses: docker/build-push-action@v2
+        timeout-minutes: 20
         with:
           context: .
       - name: Move cache
