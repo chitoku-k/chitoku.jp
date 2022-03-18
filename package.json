@@ -76,7 +76,7 @@
     "gatsby-source-filesystem": "^4.9.1",
     "gatsby-source-local-git": "^1.2.2",
     "gatsby-transformer-remark": "4.10.0",
-    "gatsby-transformer-sharp": "^4.9.0",
+    "gatsby-transformer-sharp": "^4.10.0",
     "gatsby-transformer-yaml": "^4.10.0",
     "husky": "^7.0.4",
     "is-url": "^1.2.4",
