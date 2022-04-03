@@ -89,6 +89,28 @@ Ubiquiti 社のルーター [EdgeRouter](https://www.ui.com/edgemax/edgerouter/)
 
 ---
 
+### [![serde\_vici](../media/software_icon.png)serde\_vici](https://github.com/chitoku-k/serde-vici)
+
+IPsec VPN の strongSwan を設定、監視、制御する charon と対話するために利用する [VICI](https://docs.strongswan.org/strongswan-docs/5.9/plugins/vici.html) プロトコルの形式にシリアライズおよびデシリアライズする [Serde](https://serde.rs/) ベースの crate です。
+
+利用技術:
+
+* Rust
+* Serde
+
+---
+
+### [![rsvici](../media/software_icon.png)rsvici](https://github.com/chitoku-k/rsvici)
+
+IPsec VPN の strongSwan を設定、監視、制御する charon と [VICI](https://docs.strongswan.org/strongswan-docs/5.9/plugins/vici.html) プロトコルを利用して対話するための [Tokio](https://tokio.rs/) ベースのクライアントライブラリーです。
+
+利用技術:
+
+* Rust
+* Tokio
+
+---
+
 ### [![healthcheck-k8s](../media/software_icon.png)healthcheck-k8s](https://github.com/chitoku-k/healthcheck-k8s)
 
 HTTP ヘッダーで指定された Kubernetes の [Node](https://kubernetes.io/docs/concepts/architecture/nodes/) が Schedulable かどうかを HTTP ステータスコードとして返す Web サーバーです。
