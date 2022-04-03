@@ -334,6 +334,12 @@ $ timestr --day
 timestr.bash: illegal option -- day
 ```
 
+## BASH Cheat Sheet
+
+Bash のビルトインコマンドや各種コマンドがまとまったチートシート（PCWDLD.com より）
+
+- [BASH Cheat Sheet](https://www.pcwdld.com/bash-cheat-sheet)
+
 ## 脚注
 
 [^1]: [Bourne Shell Builtins (Bash Reference Manual)](https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Builtins.html#index-getopts)
