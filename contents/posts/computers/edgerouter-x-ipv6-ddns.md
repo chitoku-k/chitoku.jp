@@ -27,7 +27,7 @@ tags:
 ## 事前準備（＋ファームウェアのアップデート時の作業）
 
 EdgeRouter に搭載されている DDNS クライアントは [ddclient](https://sourceforge.net/projects/ddclient/) です。  
-IPv6 サポートのためには Perl ライブラリーである [IO::Socket:INET6](https://packages.debian.org/jessie/libio-socket-inet6-perl) のインストールが必要で、事前準備のほかファームウェアのアップデートの際にも以下を実行する必要があります。
+EdgeOS v1.x では IPv6 サポートのためには Perl ライブラリーである [IO::Socket:INET6](https://packages.debian.org/jessie/libio-socket-inet6-perl) のインストールが必要で、事前準備のほかファームウェアのアップデートの際にも以下を実行する必要があります。
 
 <!-- more -->
 
@@ -47,7 +47,7 @@ EdgeRouter におけるパッケージのインストールに関しては公式
   - DDNS として IP アドレスが更新されるホスト名を指定します。
 - options
   - `ipv6=yes, if-skip=inet6` を含めるのがポイントです。`zone=` に続けてゾーン名を指定します。
-  - `ip addr list dev eth0` から IP アドレスを取得する際、`if-skip` に指定された文字列までが読み飛ばされます。
+  - `ifconfig eth0` から IP アドレスを取得する際、`if-skip` に指定された文字列までが読み飛ばされます。
 - login
   - Cloudflare のログイン時のメールアドレスを指定します。
 - password
