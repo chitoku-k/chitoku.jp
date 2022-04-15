@@ -3831,10 +3831,10 @@
     webpack-hot-middleware "^2.25.1"
     webpack-virtual-modules "^0.2.2"
 
-"@storybook/builder-webpack5@^6.4.20":
-  version "6.4.20"
-  resolved "https://registry.yarnpkg.com/@storybook/builder-webpack5/-/builder-webpack5-6.4.20.tgz#a7e2253f02baf87acd5c5fc7047064a16c308098"
-  integrity sha512-VFhXNYfveUjsDlVdtPIq2heqmG2ISES/idg/2o29yK4BvqNLA7ojYttJJl1XKiW5QDwG4WdL/fM8BYMwfN5+zg==
+"@storybook/builder-webpack5@^6.4.22":
+  version "6.4.22"
+  resolved "https://registry.yarnpkg.com/@storybook/builder-webpack5/-/builder-webpack5-6.4.22.tgz#cd10b3b307f4a6f9c474d3b72ba5555055395681"
+  integrity sha512-vvQ0HgkIIVz+cmaCXIRor0UFZbGZqh4aV0ISSof60BjdW5ld+R+XCr/bdTU6Zg8b2fL9CXh7/LE6fImnIMpRIA==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
@@ -3856,21 +3856,21 @@
     "@babel/preset-env" "^7.12.11"
     "@babel/preset-react" "^7.12.10"
     "@babel/preset-typescript" "^7.12.7"
-    "@storybook/addons" "6.4.20"
-    "@storybook/api" "6.4.20"
-    "@storybook/channel-postmessage" "6.4.20"
-    "@storybook/channels" "6.4.20"
-    "@storybook/client-api" "6.4.20"
-    "@storybook/client-logger" "6.4.20"
-    "@storybook/components" "6.4.20"
-    "@storybook/core-common" "6.4.20"
-    "@storybook/core-events" "6.4.20"
-    "@storybook/node-logger" "6.4.20"
-    "@storybook/preview-web" "6.4.20"
-    "@storybook/router" "6.4.20"
+    "@storybook/addons" "6.4.22"
+    "@storybook/api" "6.4.22"
+    "@storybook/channel-postmessage" "6.4.22"
+    "@storybook/channels" "6.4.22"
+    "@storybook/client-api" "6.4.22"
+    "@storybook/client-logger" "6.4.22"
+    "@storybook/components" "6.4.22"
+    "@storybook/core-common" "6.4.22"
+    "@storybook/core-events" "6.4.22"
+    "@storybook/node-logger" "6.4.22"
+    "@storybook/preview-web" "6.4.22"
+    "@storybook/router" "6.4.22"
     "@storybook/semver" "^7.3.2"
-    "@storybook/store" "6.4.20"
-    "@storybook/theming" "6.4.20"
+    "@storybook/store" "6.4.22"
+    "@storybook/theming" "6.4.22"
     "@types/node" "^14.0.10"
     babel-loader "^8.0.0"
     babel-plugin-macros "^3.0.1"
@@ -10884,7 +10884,7 @@ gatsby-core-utils@^2.13.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.11.1, gatsby-core-utils@^3.12.1, gatsby-core-utils@^3.8.2:
+gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.12.1, gatsby-core-utils@^3.8.2:
   version "3.12.1"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.12.1.tgz#590ec08de7168b086b7d49128732b9ada95b985f"
   integrity sha512-jBG1MfR6t2MZNIl8LQ3Cwc92F6uFNcEC091IK+qKVy9FNT0+WzcKQ6Olip6u1NSvCatfrg1FqrH0K78a6lmnLQ==
