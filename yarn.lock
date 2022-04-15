@@ -10884,7 +10884,7 @@ gatsby-core-utils@^2.13.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.11.1, gatsby-core-utils@^3.12.1, gatsby-core-utils@^3.8.2:
+gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.12.1, gatsby-core-utils@^3.8.2:
   version "3.12.1"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.12.1.tgz#590ec08de7168b086b7d49128732b9ada95b985f"
   integrity sha512-jBG1MfR6t2MZNIl8LQ3Cwc92F6uFNcEC091IK+qKVy9FNT0+WzcKQ6Olip6u1NSvCatfrg1FqrH0K78a6lmnLQ==
@@ -11166,10 +11166,10 @@ gatsby-remark-autolink-headers@^5.12.1:
     mdast-util-to-string "^2.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-copy-linked-files@^5.11.0:
-  version "5.11.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.11.0.tgz#11c7f6340aaf5103223ff048c8d0f9154dc713db"
-  integrity sha512-k64JUPf133iwCges5rLM0tGRRSOoDKOt5sHMuAKw/emscbn2DKbI1m76e9uQxI1xPP+LO7K21DysFou+wPQn/Q==
+gatsby-remark-copy-linked-files@^5.12.1:
+  version "5.12.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.12.1.tgz#288b6dad0497cf6efa5075346e4f7f52bb68bf90"
+  integrity sha512-Xurm1LuEOhti3FP/mAwnK82bkUGXqm/3WnGTy7NIOjn9XjT3gqY1ffJzvMYGQK4v3AE3pj7KTR3XZgEpVHF0Kw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
@@ -11177,7 +11177,7 @@ gatsby-remark-copy-linked-files@^5.11.0:
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
     path-is-inside "^1.0.2"
-    probe-image-size "^7.0.0"
+    probe-image-size "^7.2.3"
     unist-util-visit "^2.0.3"
 
 gatsby-remark-embed-gist@^1.2.1:
@@ -16667,7 +16667,7 @@ probe-image-size@^6.0.0:
     needle "^2.5.2"
     stream-parser "~0.3.1"
 
-probe-image-size@^7.0.0, probe-image-size@^7.2.3:
+probe-image-size@^7.2.3:
   version "7.2.3"
   resolved "https://registry.yarnpkg.com/probe-image-size/-/probe-image-size-7.2.3.tgz#d49c64be540ec8edea538f6f585f65a9b3ab4309"
   integrity sha512-HubhG4Rb2UH8YtV4ba0Vp5bQ7L78RTONYu/ujmCu5nBI8wGv24s4E9xSKBi0N1MowRpxk76pFCpJtW0KPzOK0w==
