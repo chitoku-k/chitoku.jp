@@ -25,58 +25,30 @@ jobs:
           registry: container.chitoku.jp
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
-      - name: Cache Buildx
-        uses: actions/cache@v2
-        with:
-          path: /tmp/buildx-cache
-          key: buildx-${{ github.sha }}
-          restore-keys: buildx-
-      - name: Cache .cache
-        uses: actions/cache@v2
-        with:
-          path: .cache
-          key: cache-${{ github.sha }}
-          restore-keys: cache-
-      - name: Cache public
-        uses: actions/cache@v2
-        with:
-          path: public
-          key: public-${{ github.sha }}
-          restore-keys: public-
       - name: Build (dependencies)
         uses: docker/build-push-action@v2
-        timeout-minutes: 20
         with:
           context: .
           target: dependencies
-          cache-from: type=local,src=/tmp/buildx-cache
-          cache-to: type=local,mode=max,dest=/tmp/buildx-cache.new
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
       - name: Build (cache)
         uses: docker/build-push-action@v2
-        timeout-minutes: 20
         with:
           context: .
           target: cache
-          cache-from: type=local,src=/tmp/buildx-cache
-          outputs: type=local,dest=/tmp/buildx-result
+          cache-from: type=gha
+          cache-to: type=gha
           build-args: |
             GATSBY_UPDATE_INDEX=true
       - name: Build and push
         uses: docker/build-push-action@v2
-        timeout-minutes: 20
         with:
           context: .
           push: true
           tags: container.chitoku.jp/chitoku-k/chitoku.jp
           build-args: |
             GATSBY_UPDATE_INDEX=true
-      - name: Move cache
-        run: |
-          rm -rf /tmp/buildx-cache
-          mv /tmp/buildx-cache{.new,}
-          rm -rf .cache public
-          mv /tmp/buildx-result/usr/src/.cache .
-          mv /tmp/buildx-result/usr/src/public .
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
