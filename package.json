@@ -78,7 +78,7 @@
     "gatsby-transformer-remark": "4.10.0",
     "gatsby-transformer-sharp": "^4.13.0",
     "gatsby-transformer-yaml": "^4.14.0",
-    "husky": "^7.0.4",
+    "husky": "^8.0.1",
     "is-url": "^1.2.4",
     "license-webpack-plugin": "^4.0.2",
     "lint-staged": "^12.4.1",
