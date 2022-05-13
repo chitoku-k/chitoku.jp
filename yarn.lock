@@ -10443,6 +10443,15 @@ fs-extra@^10.0.0:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
+fs-extra@^10.1.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.1.0.tgz#02873cfbc4084dde127eaa5f9905eef2325d1abf"
+  integrity sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==
+  dependencies:
+    graceful-fs "^4.2.0"
+    jsonfile "^6.0.1"
+    universalify "^2.0.0"
+
 fs-extra@^8.0.1:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
@@ -10599,17 +10608,17 @@ gatsby-core-utils@^2.13.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.13.0, gatsby-core-utils@^3.8.2:
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.13.0.tgz#b6137bbd285e41a6811ccd33fcd5d5f6a5a17aef"
-  integrity sha512-uAyy54t9dYAUHjLq38QfX/pxyWxsqDiWN/+Ppg/KXTbE83LUQlD0PctdNxz9jFmJ8CgE1BUbfUKpmemh8BLkjw==
+gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.13.0, gatsby-core-utils@^3.14.0, gatsby-core-utils@^3.8.2:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.14.0.tgz#75d30a4a91701315674a798896a5fcdf4b31c72e"
+  integrity sha512-JavHwcX5L+ZRoL5FKhYex3JfbwwS0273YTpf8y8SRKsObD8H+bbLOUlbOjASpqy+IU3dW+r76gT1dQdaqeH9Og==
   dependencies:
     "@babel/runtime" "^7.15.4"
     ci-info "2.0.0"
     configstore "^5.0.1"
     fastq "^1.13.0"
     file-type "^16.5.3"
-    fs-extra "^10.0.0"
+    fs-extra "^10.1.0"
     got "^11.8.3"
     import-from "^4.0.0"
     lmdb "^2.2.6"
@@ -10917,16 +10926,16 @@ gatsby-remark-grid-tables@^0.1.0:
     "@babel/runtime" "^7.9.2"
     remark-grid-tables "^2.1.1"
 
-gatsby-remark-images@^6.13.0:
-  version "6.13.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.13.0.tgz#2fcd9a17715b32c20e8bd75117fc36585ca1e109"
-  integrity sha512-vooMZq0HmxlQMXofIJ2lFBF9pEuEOTvRPbn2HwL6vWw2L46hL13ZsnwyJge6ZO4DtGlk3c4RlHXybEEhyWmLKw==
+gatsby-remark-images@^6.14.0:
+  version "6.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.14.0.tgz#18d170151fd71aa5665222adb680f39710a66523"
+  integrity sha512-IGNZ8xUVvbThmg4NeRavX+5BDG4DEGus4hKi/GdWYX1kVGn+I3q4H8O7Kpa7NDpruIF+eY2EvbtTmoNpVrk/Ag==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@gatsbyjs/potrace" "^2.2.0"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.10"
-    gatsby-core-utils "^3.13.0"
+    gatsby-core-utils "^3.14.0"
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
     mdast-util-definitions "^4.0.0"
