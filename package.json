@@ -39,7 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
     "@webcomponents/shadydom": "^1.9.0",
-    "algoliasearch": "^4.13.0",
+    "algoliasearch": "^4.13.1",
     "babel-loader": "^8.2.5",
     "babel-plugin-react-intl-auto": "^3.3.0",
     "babel-preset-gatsby": "^2.14.0",
