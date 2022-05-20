@@ -5354,10 +5354,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-instantsearch-core@*", "@types/react-instantsearch-core@^6.10.8":
-  version "6.10.8"
-  resolved "https://registry.yarnpkg.com/@types/react-instantsearch-core/-/react-instantsearch-core-6.10.8.tgz#98bf25a4f9b14a352f1375d10b2785098b14f460"
-  integrity sha512-SbEGzzcHpLKijnNml+7gB3lfE8WD7jVc/M7K4i+79Q1q9822LfkzMMRIG0LawJfO7gEysbgIVMwwCArBOZefzA==
+"@types/react-instantsearch-core@*", "@types/react-instantsearch-core@^6.26.0":
+  version "6.26.0"
+  resolved "https://registry.yarnpkg.com/@types/react-instantsearch-core/-/react-instantsearch-core-6.26.0.tgz#254b9460c8d4b56085a49a413f5bcc16e9221c0c"
+  integrity sha512-CHFrLPPtypyLh4zPB11rjJehCzxlJLfXHExFhq8XXj4HC2hPOI0uFngMqAI1zuqSEbuXZcG7xcsF0ItUMbYLCA==
   dependencies:
     "@types/react" "*"
     algoliasearch ">=4"
