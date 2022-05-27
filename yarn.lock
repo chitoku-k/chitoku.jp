@@ -11442,10 +11442,10 @@ gatsby-plugin-eslint@^4.0.2:
   dependencies:
     webpack-merge "^5.8.0"
 
-gatsby-plugin-google-analytics@^4.14.0:
-  version "4.14.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-4.14.0.tgz#4e6cc2582732959848115c5b9bb63f531ad6057d"
-  integrity sha512-MxeDfAesUGIXHc4zLXuXv3gKGkEZccdxm/VULUrfcVt79GBymoLmvcgY/sAg8OM5o1frH4fI25A1ygOlHcaJ+A==
+gatsby-plugin-google-analytics@^4.15.0:
+  version "4.15.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-4.15.0.tgz#37def2b5bb00f39d4e4fe543c1a9e8c3b2e68b6d"
+  integrity sha512-aR+Jr6Zmco/PQv9iUbHmQc+Ghur4rVT8WBqB6+zcvs5sBtjCGnHTBsDiTg29jhfTPJLJ9xd3pPVG4Q7077kUuA==
   dependencies:
     "@babel/runtime" "^7.15.4"
     minimatch "3.0.4"
