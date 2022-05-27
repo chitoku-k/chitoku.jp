@@ -1871,10 +1871,10 @@
     "@formatjs/ecma402-abstract" "1.4.0"
     tslib "^2.0.1"
 
-"@formatjs/intl@2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl/-/intl-2.2.3.tgz#f226cb4529092eb1e03b17ad6614bc550a0b88dc"
-  integrity sha512-FZ1BlI5KA2VPCuxzLEXJX3hENYWEv7aOynro8uYpKAnYuQT0BhnLoZVtTPyrUZ5VGUbUJ5hRa8oOf4iyGyLC8Q==
+"@formatjs/intl@2.2.5":
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl/-/intl-2.2.5.tgz#888f42750eacdcfb836a062eb889cb429d13f7f7"
+  integrity sha512-b0+5Bjsl3KDAII2frBPRO7ck9Ec/xqZ25BoiJATJhe//e4n6FOvVXk5QKYwBQPDt3JPu/Qa14oqHDiZlZmVdSg==
   dependencies:
     "@formatjs/ecma402-abstract" "1.11.6"
     "@formatjs/fast-memoize" "1.2.3"
@@ -17534,14 +17534,14 @@ react-instantsearch-dom@^6.26.0:
     react-fast-compare "^3.0.0"
     react-instantsearch-core "6.26.0"
 
-react-intl@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-6.0.1.tgz#99cec43a9be3acfbdf785387544a510399bcd721"
-  integrity sha512-vi/Ef15nAnj5Xs2X6egzKT6kRCaNcYPhRxI0IWl+zreQA9oQ2cVU8WQvBlVK+RM5c+wbKcuqCK4S/allIQtSzQ==
+react-intl@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-6.0.3.tgz#eb5857f2fd525c83255bf6c8339562a7fea9f970"
+  integrity sha512-c6wHOnYjOBTbqIt+6TVV2QwdKrqYiFP713tMsw/sJWYgzfaRTjsvGkcxOXhX3SoBrqbUhKTEzjdniuwpAN/qKA==
   dependencies:
     "@formatjs/ecma402-abstract" "1.11.6"
     "@formatjs/icu-messageformat-parser" "2.1.2"
-    "@formatjs/intl" "2.2.3"
+    "@formatjs/intl" "2.2.5"
     "@formatjs/intl-displaynames" "6.0.1"
     "@formatjs/intl-listformat" "7.0.1"
     "@types/hoist-non-react-statics" "^3.3.1"
