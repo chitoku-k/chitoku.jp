@@ -11,6 +11,7 @@ import Sidebar from 'components/Sidebar'
 import SearchResult from 'components/SearchResult'
 
 const MemoizedSidebar = memo(Sidebar, (prev, next) => prev.location.pathname === next.location.pathname)
+MemoizedSidebar.displayName = 'MemoizedSidebar'
 
 const Container = connectStateResults<ContainerProps>(function Container({
   searchState,
