@@ -14,6 +14,10 @@ updates:
   - dependency-name: "@fortawesome/fontawesome-svg-core"
   # Internet Explorer 11 support
   - dependency-name: "@fortawesome/free-*"
+  # Internet Explorer 11 support
+  - dependency-name: "@types/react"
+  # Internet Explorer 11 support
+  - dependency-name: "@types/react-dom"
   # TODO: Update unist-* and string-strip-html when Gatsby adds support for ESM
   # https://github.com/gatsbyjs/gatsby/discussions/31599
   - dependency-name: unist-*
