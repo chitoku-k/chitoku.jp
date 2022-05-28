@@ -85,9 +85,9 @@ const Metadata: FunctionComponent<MetadataProps> = ({
         {[ 'og:image', 'twitter:image' ].map(property => (
           <meta key={property} property={property} content={thumbnailPath(siteUrl, metadata.thumbnail)} />
         ))}
-        {metadata.description && [ 'og:description', 'description' ].map(property => (
+        {metadata.description ? [ 'og:description', 'description' ].map(property => (
           <meta key={property} property={property} content={metadata.description} />
-        ))}
+        )) : null}
         {metadata.keywords?.length ? (
           <meta name="keywords" content={metadata.keywords.join()} />
         ) : null}
