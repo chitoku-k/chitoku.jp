@@ -4240,19 +4240,19 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/cli@6.5.6":
-  version "6.5.6"
-  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-6.5.6.tgz#104c3a008a79aa9361f218302dd9297496e4e01b"
-  integrity sha512-HZ8q3RY/RKo7QXWAcjeXFSbSN/lDt3tsKBYO+6QF4PVY54oLoNLJXf8OlLyOumIC1e+BySEakFOroTvMhmQ/eg==
+"@storybook/cli@6.5.8":
+  version "6.5.8"
+  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-6.5.8.tgz#3f5dd0c880d6bf87dd9bc61bd55dac81a252cf00"
+  integrity sha512-ZdqBIaAdYtQxeK52rx87NDYbWSDaMs8cGoxAeo0P+56cl8g3FLOAl+Q5DKziopKkUardtbTUQH9N/7y4g7onXg==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/preset-env" "^7.12.11"
-    "@storybook/codemod" "6.5.6"
-    "@storybook/core-common" "6.5.6"
-    "@storybook/csf-tools" "6.5.6"
-    "@storybook/node-logger" "6.5.6"
+    "@storybook/codemod" "6.5.8"
+    "@storybook/core-common" "6.5.8"
+    "@storybook/csf-tools" "6.5.8"
+    "@storybook/node-logger" "6.5.8"
     "@storybook/semver" "^7.3.2"
-    "@storybook/telemetry" "6.5.6"
+    "@storybook/telemetry" "6.5.8"
     boxen "^5.1.2"
     chalk "^4.1.0"
     commander "^6.2.1"
@@ -4377,16 +4377,16 @@
     core-js "^3.8.2"
     global "^4.4.0"
 
-"@storybook/codemod@6.5.6":
-  version "6.5.6"
-  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-6.5.6.tgz#6322b3d08a617c76b1d6619dcf30daee48cd1573"
-  integrity sha512-O5XI9bZPf417HX/GwSbCaSfN8zUg6Iu4+trM/dgiOEMHzZgLNViHNAaHI295B88H1bg8NCl4Mfs7pqYabYXbBQ==
+"@storybook/codemod@6.5.8":
+  version "6.5.8"
+  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-6.5.8.tgz#4dcf2920f98d608ba574443f686c054e0575c4cb"
+  integrity sha512-Hkq/WC1ke7hEYdjtEFIYIvGAnH0ekO1/A16uBBp5ewIfg4i5y8LioeezrwKninumPQlSifVfjhspAqdWoXBxLg==
   dependencies:
     "@babel/types" "^7.12.11"
     "@mdx-js/mdx" "^1.6.22"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/csf-tools" "6.5.6"
-    "@storybook/node-logger" "6.5.6"
+    "@storybook/csf-tools" "6.5.8"
+    "@storybook/node-logger" "6.5.8"
     core-js "^3.8.2"
     cross-spawn "^7.0.3"
     globby "^11.0.2"
@@ -4775,10 +4775,10 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/csf-tools@6.5.6":
-  version "6.5.6"
-  resolved "https://registry.yarnpkg.com/@storybook/csf-tools/-/csf-tools-6.5.6.tgz#147ced43313ee217c41b00d5fe32a80cb29b03bd"
-  integrity sha512-Gfah+5mEUoVG7v+E23svRjKAh546KCPIcwAvGU3m26j3hNbpvKq8edKDr+CCMfehG8VEGSZWfZPsgX04c/ItcA==
+"@storybook/csf-tools@6.5.8":
+  version "6.5.8"
+  resolved "https://registry.yarnpkg.com/@storybook/csf-tools/-/csf-tools-6.5.8.tgz#5788aa1e862ee613d11d6528f27c8e267e4dd3a7"
+  integrity sha512-4VrjIMxKcp29OFSMDub52aQOMP4EvtZ5eWZkPeORRNQoJsnQaxhF9GGf71QdSaAQZhMoxdvmpA47ehrFk8Rnfw==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/generator" "^7.12.11"
@@ -5195,13 +5195,13 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/telemetry@6.5.6":
-  version "6.5.6"
-  resolved "https://registry.yarnpkg.com/@storybook/telemetry/-/telemetry-6.5.6.tgz#a7da1fa0019b307ceac24e65ff1e14ee0f36a8a5"
-  integrity sha512-l0vbStCgVA9u0ITvowZ1LNxmf32vAAdnPqSmB9DdA3ZO2wCpttW9rPyg1O4OV8c5uq7QJZ7mrKZ04p9SLo8wrw==
+"@storybook/telemetry@6.5.8":
+  version "6.5.8"
+  resolved "https://registry.yarnpkg.com/@storybook/telemetry/-/telemetry-6.5.8.tgz#2acf9734292d421f84f7f2ac6c17d887c2cb0df4"
+  integrity sha512-QnAhYF8CwcjC1bT2PK7Zqvo6E42TPl0MY6JS+H6qSZU/BmYeS0It8ZURNfPsA/OzVVLHUkQs96CisKh3N0WWaw==
   dependencies:
-    "@storybook/client-logger" "6.5.6"
-    "@storybook/core-common" "6.5.6"
+    "@storybook/client-logger" "6.5.8"
+    "@storybook/core-common" "6.5.8"
     chalk "^4.1.0"
     core-js "^3.8.2"
     detect-package-manager "^2.0.1"
@@ -11368,7 +11368,7 @@ gatsby-core-utils@^2.13.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.15.0, gatsby-core-utils@^3.16.0:
+gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.16.0:
   version "3.16.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.16.0.tgz#055e250614221b77168d0ca507a56a87d2cdbf35"
   integrity sha512-cr3aIlzfzQkXSKng0dfAkg+v+Q0WOFJ1CCpM6HFvMykYtw5vSdaLxs6gwNmtPowG1wmCHkQ+pcyqppP+IdmVsg==
@@ -19420,12 +19420,12 @@ storybook-addon-gatsby@^0.0.5:
   resolved "https://registry.yarnpkg.com/storybook-addon-gatsby/-/storybook-addon-gatsby-0.0.5.tgz#94f5b67bab8659d0248b65e60dabc3702818ce8b"
   integrity sha512-18f8Kc6mx8mEFfqY2DgF9ayDfmM58+9IjJqIxGV4bA4r2EtB/Q1LDNELIJmpLLyA5NrSvECxCqzLu7jNBlWgmA==
 
-storybook@^6.5.6:
-  version "6.5.6"
-  resolved "https://registry.yarnpkg.com/storybook/-/storybook-6.5.6.tgz#d21434b03471019330e8ef13d9da101c902d3922"
-  integrity sha512-ByzbdUx9TITWDTMp6AykAGRTXCzF3zIvZZQjyuSOBLVI9y/CNqCRMuGmvmfVMBhYTq0SleznCgXAVE49Q3zxrg==
+storybook@^6.5.8:
+  version "6.5.8"
+  resolved "https://registry.yarnpkg.com/storybook/-/storybook-6.5.8.tgz#213faa5a521b41e1d4c9fba79892818a0e9e0dde"
+  integrity sha512-e+ZT6P25U+8AF0P/MSWhP3NWGXlbS3SPUEIqBahb6Mhi/fn84H45D09PefmiWgmtdwzacYPipJ9Uf8PbUo2XAQ==
   dependencies:
-    "@storybook/cli" "6.5.6"
+    "@storybook/cli" "6.5.8"
 
 stream-browserify@^2.0.1:
   version "2.0.2"
