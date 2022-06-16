@@ -8,7 +8,6 @@ RUN --mount=type=cache,target=/var/cache/apt \
         git
 COPY package.json yarn.lock /usr/src/
 COPY plugins/historia-feed-plugin/package.json /usr/src/plugins/historia-feed-plugin/
-COPY plugins/historia-compat-plugin/package.json /usr/src/plugins/historia-compat-plugin/
 COPY plugins/historia-remark-plugin/package.json /usr/src/plugins/historia-remark-plugin/
 COPY plugins/historia-soarer-update-plugin/package.json /usr/src/plugins/historia-soarer-update-plugin/
 COPY plugins/historia-storybook-plugin/package.json /usr/src/plugins/historia-storybook-plugin/
