@@ -35,7 +35,7 @@
     "@types/react-instantsearch-dom": "^6.12.3",
     "@types/sass": "^1.43.1",
     "@types/tapable": "^2.2.2",
-    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.27.1",
     "algoliasearch": "^4.13.1",
     "babel-loader": "^8.2.5",
