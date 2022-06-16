@@ -1,7 +1,5 @@
-import path from 'path'
 import type { GatsbyConfig } from 'gatsby'
 import * as dotenv from 'dotenv-safe'
-import postcssCustomProperties from 'postcss-custom-properties'
 
 import { description } from './package.json'
 import { createQuery } from './plugins/historia-taxonomy-plugin'
@@ -68,11 +66,6 @@ const config: GatsbyConfig = {
         cssLoaderOptions: {
           camelCase: 'only',
         },
-        postCssPlugins: [
-          postcssCustomProperties({
-            importFrom: path.resolve('src/styles/themes/_light.css'),
-          }),
-        ],
       },
     },
     { resolve: 'gatsby-plugin-sharp' },
@@ -154,7 +147,6 @@ const config: GatsbyConfig = {
     },
     { resolve: 'gatsby-transformer-sharp' },
     { resolve: 'gatsby-transformer-yaml' },
-    { resolve: 'historia-compat-plugin' },
     { resolve: 'historia-feed-plugin' },
     {
       resolve: 'historia-taxonomy-plugin',

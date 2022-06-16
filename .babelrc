@@ -2,10 +2,7 @@
   "compact": false,
   "presets": [
     ["gatsby", {
-      "reactRuntime": "automatic",
-      "targets": {
-        "browsers": ["> 3% in JP", "ie 11"]
-      }
+      "reactRuntime": "automatic"
     }]
   ],
   "plugins": [
