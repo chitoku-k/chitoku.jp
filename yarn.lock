@@ -6443,10 +6443,10 @@ babel-preset-fbjs@^3.4.0:
     "@babel/plugin-transform-template-literals" "^7.0.0"
     babel-plugin-syntax-trailing-function-commas "^7.0.0-beta.0"
 
-babel-preset-gatsby@^2.16.0:
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-2.16.0.tgz#52da43b753c9d7c4b0f52a37c15cac2fce8e3fb5"
-  integrity sha512-4rQATcv25OUVqn8ThkvRVF7BNVBnTwZVhsy73ABYt8Y4UcsMFDQ5BjHPQYIOTqqeayZH+UHImOM+CuKS1OiojQ==
+babel-preset-gatsby@^2.16.0, babel-preset-gatsby@^2.17.0:
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-2.17.0.tgz#5b158559d1221ff71c95be8a6a60c33d9071d964"
+  integrity sha512-hLeovvehdKkfFAsfTKCATKQasLyQa49TrJtct5VthERrb2dhkV71NIfmbiEa9Ae5x+qGYhYvufqMROGptewXbQ==
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.14.0"
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.14.5"
@@ -6461,8 +6461,8 @@ babel-preset-gatsby@^2.16.0:
     babel-plugin-dynamic-import-node "^2.3.3"
     babel-plugin-macros "^3.1.0"
     babel-plugin-transform-react-remove-prop-types "^0.4.24"
-    gatsby-core-utils "^3.16.0"
-    gatsby-legacy-polyfills "^2.16.0"
+    gatsby-core-utils "^3.17.0"
+    gatsby-legacy-polyfills "^2.17.0"
 
 backo2@~1.0.2:
   version "1.0.2"
@@ -10360,10 +10360,10 @@ gatsby-core-utils@^2.13.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.16.0:
-  version "3.16.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.16.0.tgz#055e250614221b77168d0ca507a56a87d2cdbf35"
-  integrity sha512-cr3aIlzfzQkXSKng0dfAkg+v+Q0WOFJ1CCpM6HFvMykYtw5vSdaLxs6gwNmtPowG1wmCHkQ+pcyqppP+IdmVsg==
+gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.16.0, gatsby-core-utils@^3.17.0:
+  version "3.17.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.17.0.tgz#5fe33c4267a3d0a7439b8065ee9c16f5cc2aead1"
+  integrity sha512-1e0YaqTAEpSSBkpWkY703lu+Bl76ASXUvUcpnNO3CavCYZsRQxAXtMXIKIEvhm1z6zWJmY9HILo6/DjP+PHeyw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     ci-info "2.0.0"
@@ -10373,7 +10373,7 @@ gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.16.0:
     fs-extra "^10.1.0"
     got "^11.8.3"
     import-from "^4.0.0"
-    lmdb "2.3.10"
+    lmdb "2.5.2"
     lock "^1.1.0"
     node-object-hash "^2.3.10"
     proper-lockfile "^4.1.2"
@@ -10397,10 +10397,10 @@ gatsby-image@^3.11.0:
     object-fit-images "^3.2.4"
     prop-types "^15.7.2"
 
-gatsby-legacy-polyfills@^2.16.0:
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/gatsby-legacy-polyfills/-/gatsby-legacy-polyfills-2.16.0.tgz#a80b767df6f4623e0c9e22cd1c1996e34c0f03dd"
-  integrity sha512-nx9m/qqzTcv/3ovASQFEJImzhtkMI1aFXXb863o4ghA6LULtX4cRi9+MbnOf4xuC3l9rOndIKEIqZ6yRzeFEiQ==
+gatsby-legacy-polyfills@^2.16.0, gatsby-legacy-polyfills@^2.17.0:
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/gatsby-legacy-polyfills/-/gatsby-legacy-polyfills-2.17.0.tgz#f8ff869e0aa95503b58a397c8ca538cc67487031"
+  integrity sha512-tpONSDutxEZY3vOdUaZ1yE9d0QWZ5/p47juvnhTv0qjGkBwow3gfCpgJwDzWyzKl0w0geesZwlLnaCA3WSEv7Q==
   dependencies:
     "@babel/runtime" "^7.15.4"
     core-js-compat "3.9.0"
@@ -13416,7 +13416,7 @@ lmdb-win32-x64@2.3.7:
   resolved "https://registry.yarnpkg.com/lmdb-win32-x64/-/lmdb-win32-x64-2.3.7.tgz#7af77cd7a89214e5ede00eb3dd02646aa4ce1a0b"
   integrity sha512-g55xFj+4e22aNwEI1FoI2b4BP5l4HE2r+RwnfYbnHHPpnTrXpoeulcFraoIPLyJj7zBtcvAwbR7u75oUO688pA==
 
-lmdb@2.3.10, lmdb@^2.3.6:
+lmdb@2.3.10, lmdb@2.5.2, lmdb@^2.3.6:
   version "2.3.7"
   resolved "https://registry.yarnpkg.com/lmdb/-/lmdb-2.3.7.tgz#73086412639964c044fdd7f3628f3e2acaac61f6"
   integrity sha512-oI7D1di+LbjISVh1Cv7Y5DUjHHRJ8pbU29PUccfQH72BIBknvC8o3E8ZJmKYHlL2sSmUXUY3yi/aOjd5nSb5WA==
