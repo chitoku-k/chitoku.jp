@@ -10397,7 +10397,7 @@ gatsby-core-utils@^2.13.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.17.0, gatsby-core-utils@^3.18.0:
+gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.18.0:
   version "3.18.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.18.0.tgz#4b03ee01822d399eec06ba83c867967d14669a42"
   integrity sha512-mCoNgH4MilosLhEroklgVffwie9lyxgmvNwe/oIyzXr6NcZ2uxSp8G1KrgxdG2srt2hCNlZLlzS25ltLTeHTjA==
@@ -10568,10 +10568,10 @@ gatsby-plugin-react-svg@^3.1.0:
   dependencies:
     svg-react-loader "^0.4.6"
 
-gatsby-plugin-sass@^5.18.0:
-  version "5.18.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-5.18.0.tgz#d09e40b3592c981dad1aba8332719d8322728012"
-  integrity sha512-78CKsIbEb91ojD+CnpZDfgAUWltl8B+Y1J0afORqXZsxd0QL0/YhmYZU7NdTD+kCqZXSZ4B2x+YeZWXZtgA/Kg==
+gatsby-plugin-sass@^5.18.1:
+  version "5.18.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-5.18.1.tgz#7ebdc3e1a4b39476d892112b1d9f486be839df64"
+  integrity sha512-xZSHG45j1LFabNzSOE9k/xIlknFfH47xqqiZ1+vhuN5gnzf0SGNEN5w414/LELcsSmTzyDsynTaAWE0Li9fg1g==
   dependencies:
     "@babel/runtime" "^7.15.4"
     resolve-url-loader "^3.1.4"
