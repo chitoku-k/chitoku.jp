@@ -6514,10 +6514,10 @@ babel-preset-fbjs@^3.4.0:
     "@babel/plugin-transform-template-literals" "^7.0.0"
     babel-plugin-syntax-trailing-function-commas "^7.0.0-beta.0"
 
-babel-preset-gatsby@^2.18.0:
-  version "2.18.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-2.18.0.tgz#768c77f26e0616935b5340e2df6d79cdbc1ef2dc"
-  integrity sha512-b6BJEl0MlA/nh+IkTJRgvPEgdN09Pu34Szo5dE4QYvQa66++EqfQUK5huqr+FgZJedPPYYbRY2SgKlRXev5QIQ==
+babel-preset-gatsby@^2.18.0, babel-preset-gatsby@^2.18.1:
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-2.18.1.tgz#1dd274e2203f25b381d45342a1292e57baede17f"
+  integrity sha512-oaVV6ULceMjTQKjCA06qvgfLwBNZFJxpacwNZYOJpLygmj+qYiNKDGhJ8vTw/KAIUeDPZAbPMP5P+3wMEPIWYQ==
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.14.0"
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.14.5"
@@ -6532,7 +6532,7 @@ babel-preset-gatsby@^2.18.0:
     babel-plugin-dynamic-import-node "^2.3.3"
     babel-plugin-macros "^3.1.0"
     babel-plugin-transform-react-remove-prop-types "^0.4.24"
-    gatsby-core-utils "^3.18.0"
+    gatsby-core-utils "^3.18.1"
     gatsby-legacy-polyfills "^2.18.0"
 
 backo2@~1.0.2:
@@ -10431,28 +10431,7 @@ gatsby-core-utils@^2.13.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.18.0:
-  version "3.18.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.18.0.tgz#4b03ee01822d399eec06ba83c867967d14669a42"
-  integrity sha512-mCoNgH4MilosLhEroklgVffwie9lyxgmvNwe/oIyzXr6NcZ2uxSp8G1KrgxdG2srt2hCNlZLlzS25ltLTeHTjA==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-    ci-info "2.0.0"
-    configstore "^5.0.1"
-    fastq "^1.13.0"
-    file-type "^16.5.3"
-    fs-extra "^10.1.0"
-    got "^11.8.5"
-    import-from "^4.0.0"
-    lmdb "2.5.2"
-    lock "^1.1.0"
-    node-object-hash "^2.3.10"
-    proper-lockfile "^4.1.2"
-    resolve-from "^5.0.0"
-    tmp "^0.2.1"
-    xdg-basedir "^4.0.0"
-
-gatsby-core-utils@^3.18.1:
+gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.18.0, gatsby-core-utils@^3.18.1:
   version "3.18.1"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.18.1.tgz#7a9451ad1802a6489d24d5b52176720345e1b967"
   integrity sha512-sJTxRqizLxYy/tSFk0ydfqEZ3ek1So9HDVUa39F6Oi8XuPCBTFzaAooUvowKGneI5YUbdk5y4VO4ybwVUynntw==
