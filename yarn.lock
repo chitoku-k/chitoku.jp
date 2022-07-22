@@ -5150,10 +5150,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-instantsearch-core@*", "@types/react-instantsearch-core@^6.26.0":
-  version "6.26.0"
-  resolved "https://registry.yarnpkg.com/@types/react-instantsearch-core/-/react-instantsearch-core-6.26.0.tgz#254b9460c8d4b56085a49a413f5bcc16e9221c0c"
-  integrity sha512-CHFrLPPtypyLh4zPB11rjJehCzxlJLfXHExFhq8XXj4HC2hPOI0uFngMqAI1zuqSEbuXZcG7xcsF0ItUMbYLCA==
+"@types/react-instantsearch-core@*", "@types/react-instantsearch-core@^6.26.2":
+  version "6.26.2"
+  resolved "https://registry.yarnpkg.com/@types/react-instantsearch-core/-/react-instantsearch-core-6.26.2.tgz#e4a6613d02a7f66843c460dc6752e14d8ff2d1a2"
+  integrity sha512-Z7uNsE4wYUDws7QtP3ZKN/UK5xbKLwY76ZiIIWhNQgPXDV0QG3F/6Qn82MChNUiel/nqXCnCr/ZAj7oa5jsMyg==
   dependencies:
     "@types/react" "*"
     algoliasearch ">=4"

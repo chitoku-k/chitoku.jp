@@ -30,7 +30,7 @@
     "@types/react-dom": "^18.0.6",
     "@types/react-helmet": "^6.1.5",
     "@types/react-highlight-words": "^0.16.4",
-    "@types/react-instantsearch-core": "^6.26.0",
+    "@types/react-instantsearch-core": "^6.26.2",
     "@types/react-instantsearch-dom": "^6.12.3",
     "@types/sass": "^1.43.1",
     "@types/tapable": "^2.2.2",
