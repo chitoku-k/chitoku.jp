@@ -3820,23 +3820,6 @@
     global "^4.4.0"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addons@6.5.9":
-  version "6.5.9"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.5.9.tgz#5a9d7395c579a9cbc44dfc122362fb3c95dfb9d5"
-  integrity sha512-adwdiXg+mntfPocLc1KXjZXyLgGk7Aac699Fwe+OUYPEC5tW347Rm/kFatcE556d42o5czcRiq3ZSIGWnm9ieQ==
-  dependencies:
-    "@storybook/api" "6.5.9"
-    "@storybook/channels" "6.5.9"
-    "@storybook/client-logger" "6.5.9"
-    "@storybook/core-events" "6.5.9"
-    "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/router" "6.5.9"
-    "@storybook/theming" "6.5.9"
-    "@types/webpack-env" "^1.16.0"
-    core-js "^3.8.2"
-    global "^4.4.0"
-    regenerator-runtime "^0.13.7"
-
 "@storybook/api@6.5.10":
   version "6.5.10"
   resolved "https://registry.yarnpkg.com/@storybook/api/-/api-6.5.10.tgz#215623844648f0da2ac646fdcdd1345c2e1a8490"
@@ -3849,29 +3832,6 @@
     "@storybook/router" "6.5.10"
     "@storybook/semver" "^7.3.2"
     "@storybook/theming" "6.5.10"
-    core-js "^3.8.2"
-    fast-deep-equal "^3.1.3"
-    global "^4.4.0"
-    lodash "^4.17.21"
-    memoizerific "^1.11.3"
-    regenerator-runtime "^0.13.7"
-    store2 "^2.12.0"
-    telejson "^6.0.8"
-    ts-dedent "^2.0.0"
-    util-deprecate "^1.0.2"
-
-"@storybook/api@6.5.9":
-  version "6.5.9"
-  resolved "https://registry.yarnpkg.com/@storybook/api/-/api-6.5.9.tgz#303733214c9de0422d162f7c54ae05d088b89bf9"
-  integrity sha512-9ylztnty4Y+ALU/ehW3BML9czjCAFsWvrwuCi6UgcwNjswwjSX3VRLhfD1KT3pl16ho//95LgZ0LnSwROCcPOA==
-  dependencies:
-    "@storybook/channels" "6.5.9"
-    "@storybook/client-logger" "6.5.9"
-    "@storybook/core-events" "6.5.9"
-    "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/router" "6.5.9"
-    "@storybook/semver" "^7.3.2"
-    "@storybook/theming" "6.5.9"
     core-js "^3.8.2"
     fast-deep-equal "^3.1.3"
     global "^4.4.0"
@@ -4013,15 +3973,6 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/channels@6.5.9":
-  version "6.5.9"
-  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-6.5.9.tgz#abfab89a6587a2688e9926d4aafeb11c9d8b2e79"
-  integrity sha512-FvGA35nV38UPXWOl9ERapFTJaxwSTamQ339s2Ev7E9riyRG+GRkgTWzf5kECJgS1PAYKd/7m/RqKJT9BVv6A5g==
-  dependencies:
-    core-js "^3.8.2"
-    ts-dedent "^2.0.0"
-    util-deprecate "^1.0.2"
-
 "@storybook/cli@6.5.10":
   version "6.5.10"
   resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-6.5.10.tgz#33ed513e2a7968b4fc2317e67f76ee5d1152c139"
@@ -4087,14 +4038,6 @@
   version "6.5.10"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-6.5.10.tgz#cfea823a5b8444409daa74f854c5d05367986b34"
   integrity sha512-/xA0MHOevXev68hyLMQw8Qo8KczSIdXOxliAgrycMTkDmw5eKeA8TP7B8zP3wGuq/e3MrdD9/8MWhb/IQBNC3w==
-  dependencies:
-    core-js "^3.8.2"
-    global "^4.4.0"
-
-"@storybook/client-logger@6.5.9":
-  version "6.5.9"
-  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-6.5.9.tgz#dc1669abe8c45af1cc38f74c6f4b15ff33e63014"
-  integrity sha512-DOHL6p0uiDd3gV/Sb2FR+Vh6OiPrrf8BrA06uvXWsMRIIvEEvnparxv9EvPg7FlmUX0T3nq7d3juwjx4F8Wbcg==
   dependencies:
     core-js "^3.8.2"
     global "^4.4.0"
@@ -4218,13 +4161,6 @@
   version "6.5.10"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-6.5.10.tgz#66d87c8ea18db8e448018a16a3d0198ddbcbc683"
   integrity sha512-EVb1gO1172klVIAABLOoigFMx0V88uctY0K/qVCO8n6v+wd2+0Ccn63kl+gTxsAC3WZ8XhXh9q2w5ImHklVECw==
-  dependencies:
-    core-js "^3.8.2"
-
-"@storybook/core-events@6.5.9":
-  version "6.5.9"
-  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-6.5.9.tgz#5b0783c7d22a586c0f5e927a61fe1b1223e19637"
-  integrity sha512-tXt7a3ZvJOCeEKpNa/B5rQM5VI7UJLlOh3IHOImWn4HqoBRrZvbourmac+PRZAtXpos0h3c6554Hjapj/Sny5Q==
   dependencies:
     core-js "^3.8.2"
 
@@ -4533,17 +4469,6 @@
     qs "^6.10.0"
     regenerator-runtime "^0.13.7"
 
-"@storybook/router@6.5.9":
-  version "6.5.9"
-  resolved "https://registry.yarnpkg.com/@storybook/router/-/router-6.5.9.tgz#4740248f8517425b2056273fb366ace8a17c65e8"
-  integrity sha512-G2Xp/2r8vU2O34eelE+G5VbEEVFDeHcCURrVJEROh6dq2asFJAPbzslVXSeCqgOTNLSpRDJ2NcN5BckkNqmqJg==
-  dependencies:
-    "@storybook/client-logger" "6.5.9"
-    core-js "^3.8.2"
-    memoizerific "^1.11.3"
-    qs "^6.10.0"
-    regenerator-runtime "^0.13.7"
-
 "@storybook/semver@^7.3.2":
   version "7.3.2"
   resolved "https://registry.yarnpkg.com/@storybook/semver/-/semver-7.3.2.tgz#f3b9c44a1c9a0b933c04e66d0048fcf2fa10dac0"
@@ -4613,16 +4538,6 @@
   integrity sha512-BvTQBBcSEwKKcsVmF+Ol6v0RIQUr+bxP7gb10wtfBd23mZTEFA0C1N5FnZr/dDeiBKG1pvf1UKvoYA731y0BsA==
   dependencies:
     "@storybook/client-logger" "6.5.10"
-    core-js "^3.8.2"
-    memoizerific "^1.11.3"
-    regenerator-runtime "^0.13.7"
-
-"@storybook/theming@6.5.9":
-  version "6.5.9"
-  resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-6.5.9.tgz#13f60a3a3cd73ceb5caf9f188e1627e79f1891aa"
-  integrity sha512-KM0AMP5jMQPAdaO8tlbFCYqx9uYM/hZXGSVUhznhLYu7bhNAIK7ZVmXxyE/z/khM++8eUHzRoZGiO/cwCkg9Xw==
-  dependencies:
-    "@storybook/client-logger" "6.5.9"
     core-js "^3.8.2"
     memoizerific "^1.11.3"
     regenerator-runtime "^0.13.7"
@@ -10961,16 +10876,16 @@ gatsby-sharp@^0.14.0:
     "@types/sharp" "^0.30.0"
     sharp "^0.30.3"
 
-gatsby-source-filesystem@^4.19.0:
-  version "4.19.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-4.19.0.tgz#cd3b01d7b0b54143c5f1854933031e2f0f490db3"
-  integrity sha512-UUBEqRCKpq/rWX5K8Kizmoi2Cls9oOTEtZRUrhdtMqpz5Y6VAmd7Pwina03r0fej+AoebZWOEzPTOh+WhpIDFw==
+gatsby-source-filesystem@^4.20.0:
+  version "4.20.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-4.20.0.tgz#33bcd4d41497a4443dc6922a9706e841d3a6b0fe"
+  integrity sha512-U29GxTqmpDpjEONFoELGmm3q3a/z8SREDcSyfUqkKnbA0UMgSSZQMuWGMcnoNcU2E8GyyY72zjPq0cb7Jps3xw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     chokidar "^3.5.3"
     file-type "^16.5.3"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^3.19.0"
+    gatsby-core-utils "^3.20.0"
     got "^9.6.0"
     md5-file "^5.0.0"
     mime "^2.5.2"
