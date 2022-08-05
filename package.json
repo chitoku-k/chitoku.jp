@@ -92,7 +92,7 @@
     "react-schemaorg": "^2.0.0",
     "react-twitter-widgets": "^1.11.0",
     "rehype-react": "^6.2.0",
-    "sass": "^1.54.0",
+    "sass": "^1.54.3",
     "sass-loader": "^13.0.2",
     "schema-dts": "^1.1.0",
     "storybook": "^6.5.9",
