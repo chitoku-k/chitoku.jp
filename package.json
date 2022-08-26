@@ -86,7 +86,7 @@
     "react-helmet": "^6.1.0",
     "react-highlight-words": "^0.18.0",
     "react-instantsearch-dom": "^6.32.0",
-    "react-intl": "^6.0.5",
+    "react-intl": "^6.0.8",
     "react-recaptcha-v3": "^2.0.1",
     "react-refresh": "^0.14.0",
     "react-schemaorg": "^2.0.0",
