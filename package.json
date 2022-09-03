@@ -109,7 +109,6 @@
     "yaml-flat-loader": "^1.0.2"
   },
   "resolutions": {
-    "lmdb": "^2.3.6",
     "remark": "^12",
     "remark-footnotes": "^2"
   },
