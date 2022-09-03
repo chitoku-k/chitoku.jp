@@ -8,7 +8,7 @@
     "@babel/plugin-transform-typescript": "^7.18.12",
     "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
     "@fortawesome/fontawesome-svg-core": "~6.1",
-    "@fortawesome/free-brands-svg-icons": "^6.1.2",
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
