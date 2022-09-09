@@ -4,7 +4,7 @@
   "author": "ちとく <odango@chitoku.jp>",
   "description": "ちとくのホームページ",
   "devDependencies": {
-    "@babel/core": "^7.18.13",
+    "@babel/core": "^7.19.0",
     "@babel/plugin-transform-typescript": "^7.19.0",
     "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
     "@fortawesome/fontawesome-svg-core": "~6.2",
