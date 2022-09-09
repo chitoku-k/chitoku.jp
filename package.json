@@ -40,7 +40,7 @@
     "babel-loader": "^8.2.5",
     "babel-plugin-react-intl-auto": "^3.3.0",
     "babel-preset-gatsby": "^2.22.1",
-    "bootstrap": "^5.2.0",
+    "bootstrap": "^5.2.1",
     "clsx": "^1.2.1",
     "css-loader": "^6.7.1",
     "dotenv-safe": "^8.2.0",
