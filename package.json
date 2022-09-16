@@ -95,7 +95,7 @@
     "sass": "^1.54.9",
     "sass-loader": "^13.0.2",
     "schema-dts": "^1.1.0",
-    "storybook": "^6.5.10",
+    "storybook": "^6.5.12",
     "style-loader": "^3.3.1",
     "stylelint": "^14.11.0",
     "stylelint-config-recess-order": "^3.0.0",
