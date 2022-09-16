@@ -10264,27 +10264,6 @@ gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.22.0, gatsby-core-utils@^3.23.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^3.23.0:
-  version "3.23.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.23.0.tgz#0c8879ffb655f2d8cfe485f03beed7db6441dc69"
-  integrity sha512-ABVTAkjZh+2H4u6GZ+r1uZrdcWuT5KG2nEpKmBWBp21GWEE+yvUqtGOocBgUeGac1A3ggvn02UzcE6BIEm9PYg==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-    ci-info "2.0.0"
-    configstore "^5.0.1"
-    fastq "^1.13.0"
-    file-type "^16.5.3"
-    fs-extra "^10.1.0"
-    got "^11.8.5"
-    import-from "^4.0.0"
-    lmdb "2.5.3"
-    lock "^1.1.0"
-    node-object-hash "^2.3.10"
-    proper-lockfile "^4.1.2"
-    resolve-from "^5.0.0"
-    tmp "^0.2.1"
-    xdg-basedir "^4.0.0"
-
 gatsby-graphiql-explorer@^2.22.0:
   version "2.22.0"
   resolved "https://registry.yarnpkg.com/gatsby-graphiql-explorer/-/gatsby-graphiql-explorer-2.22.0.tgz#451bf1f53db73638a54b52ef922166dc7b6f84b1"
@@ -10396,10 +10375,10 @@ gatsby-plugin-minify-html@^1.0.4:
     glob "^7.1.6"
     html-minifier-terser "^5.1.1"
 
-gatsby-plugin-no-sourcemaps@^4.22.0:
-  version "4.22.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-4.22.0.tgz#0629bf03ec192cce6a5b8551702ab66029d24cab"
-  integrity sha512-zowyQiHPkuUf9gaGD6I40F8yvqEatQhtwmfpyyDXNeW1NACmg30r15xFoUPh8DLEilPmSYqn/dFyaLCrTAEPgg==
+gatsby-plugin-no-sourcemaps@^4.23.0:
+  version "4.23.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-4.23.0.tgz#c1551d780197c4d0070eec6a4545b3b420bd5b82"
+  integrity sha512-uBZJsf5ll0CsNxiczEqaLRkBULlHhOXDWU3SLWdkaZXLPZQPhVx0teiy5ycfwU7qI+TC++c4oLjQPKbodG/IoQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
