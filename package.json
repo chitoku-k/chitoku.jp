@@ -65,7 +65,7 @@
     "gatsby-plugin-typegen": "^3.0.0",
     "gatsby-remark-attr": "^0.1.0",
     "gatsby-remark-autolink-headers": "^5.24.0",
-    "gatsby-remark-copy-linked-files": "^5.23.0",
+    "gatsby-remark-copy-linked-files": "^5.24.0",
     "gatsby-remark-embed-gist": "^1.2.1",
     "gatsby-remark-grid-tables": "^0.1.0",
     "gatsby-remark-images": "^6.23.1",
