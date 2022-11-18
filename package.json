@@ -43,7 +43,7 @@
     "babel-preset-gatsby": "^3.0.0",
     "bootstrap": "^5.2.2",
     "clsx": "^1.2.1",
-    "css-loader": "^6.7.1",
+    "css-loader": "^6.7.2",
     "dotenv-safe": "^8.2.0",
     "eslint": "^8.27.0",
     "eslint-plugin-react": "^7.31.10",
