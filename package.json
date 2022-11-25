@@ -46,7 +46,7 @@
     "css-loader": "^6.7.2",
     "dotenv-safe": "^8.2.0",
     "eslint": "^8.27.0",
-    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-webpack-plugin": "^3.2.0",
     "extract-react-intl-messages": "^4.1.1",
