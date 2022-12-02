@@ -25,6 +25,13 @@ const config: GatsbyConfig = {
         queries: [
           createQuery(),
         ],
+        algoliasearchOptions: {
+          timeouts: {
+            connect: 2,
+            read: 5,
+            write: 30,
+          },
+        },
       },
     },
     { resolve: 'gatsby-plugin-catch-links' },
