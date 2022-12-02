@@ -25,6 +25,9 @@ interface Query {
             category: Category
             tags: Tag[]
           }
+          internal: {
+            contentDigest: string
+          }
         }
       }[]
     }
@@ -42,6 +45,9 @@ interface CreateQueryResult {
     category: Category
     tags: Tag[]
     created: string
+    internal: {
+      contentDigest: string
+    }
   }[]
 }
 
@@ -76,6 +82,9 @@ export default (): CreateQueryResult => ({
         article: node {
           id
           ...Article
+          internal {
+            contentDigest
+          }
         }
       }
     }
@@ -115,6 +124,7 @@ export default (): CreateQueryResult => ({
         tags,
         created,
       },
+      internal,
     },
   }) => ({
     id,
@@ -125,5 +135,6 @@ export default (): CreateQueryResult => ({
     category,
     tags,
     created,
+    internal,
   })),
 })
