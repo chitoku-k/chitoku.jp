@@ -25,6 +25,8 @@ const config: GatsbyConfig = {
         queries: [
           createQuery(),
         ],
+        enablePartialUpdates: true,
+        matchFields: [ 'internal.contentDigest' ],
       },
     },
     { resolve: 'gatsby-plugin-catch-links' },
