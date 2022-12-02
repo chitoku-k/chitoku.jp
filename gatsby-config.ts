@@ -18,7 +18,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-algolia',
       options: {
-        skipIndexing: process.env.GATSBY_UPDATE_INDEX !== 'true',
+        dryRun: process.env.GATSBY_UPDATE_INDEX !== 'true',
         appId: process.env.GATSBY_ALGOLIA_APPID,
         apiKey: process.env.GATSBY_ALGOLIA_APIKEY,
         indexName: process.env.GATSBY_ALGOLIA_INDEXNAME,
