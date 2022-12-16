@@ -48,4 +48,4 @@ $ docker buildx build .
 ```
 
 [workflow-link]:    https://github.com/chitoku-k/chitoku.jp/actions?query=branch:master                                           
-[workflow-badge]:   https://img.shields.io/github/workflow/status/chitoku-k/chitoku.jp/CI%20Workflow/master.svg?style=flat-square
+[workflow-badge]:   https://img.shields.io/github/actions/workflow/status/chitoku-k/chitoku.jp/ci.yml?branch=master&style=flat-square
