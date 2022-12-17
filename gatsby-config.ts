@@ -141,7 +141,7 @@ const config: GatsbyConfig = {
               ],
             },
           },
-          { resolve: './plugins/historia-remark-plugin' },
+          { resolve: 'historia-remark-plugin' },
         ],
       },
     },
