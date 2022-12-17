@@ -7,6 +7,7 @@ import { createQuery } from './plugins/historia-taxonomy-plugin'
 dotenv.config()
 
 const config: GatsbyConfig = {
+  trailingSlash: 'ignore',
   siteMetadata: {
     siteUrl: process.env.HISTORIA_URL,
     title: description,

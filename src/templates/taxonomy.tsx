@@ -38,7 +38,7 @@ export const pageQuery = graphql`
   query items($ids: [ String! ]) {
     articles: allMarkdownRemark(
       filter: { id: { in: $ids } }
-      sort: { fields: [ frontmatter___created ], order: DESC }
+      sort: { frontmatter: { created: DESC } }
     ) {
       items: edges {
         article: node {

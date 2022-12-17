@@ -42,7 +42,7 @@ const query = graphql`
     }
     latest: allMarkdownRemark(
       filter: { frontmatter: { created: { ne: null } } }
-      sort: { order: DESC, fields: [ frontmatter___created ] }
+      sort: { frontmatter: { created: DESC } }
       limit: 5
     ) {
       items: edges {

@@ -9,8 +9,8 @@ import * as styles from './styles.module.scss'
 
 const query = graphql`
   query PspErrorItem {
-    errors: allErrorsYaml(sort: { fields: [ code ], order: ASC }) {
-      group(field: category) {
+    errors: allErrorsYaml(sort: { code: ASC }) {
+      group(field: { category: SELECT }) {
         title: fieldValue
         items: edges {
           error: node {

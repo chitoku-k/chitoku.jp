@@ -55,7 +55,7 @@ export default (): CreateQueryResult => ({
   query: `
     query {
       pages: allMarkdownRemark(
-        sort: { fields: [ frontmatter___created ], order: DESC }
+        sort: { frontmatter: { created: DESC } }
       ) {
         ...ArticleNode
       }

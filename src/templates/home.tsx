@@ -44,7 +44,7 @@ export const pageQuery = graphql`
     }
     pages: allMarkdownRemark(
       filter: { id: { in: $ids } }
-      sort: { fields: [ frontmatter___created ], order: DESC }
+      sort: { frontmatter: { created: DESC } }
     ) {
       items: edges {
         article: node {

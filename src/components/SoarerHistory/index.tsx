@@ -11,7 +11,7 @@ import * as styles from './styles.module.scss'
 const query = graphql`
   query SoarerHistoryItem {
     updates: allUpdatesYaml(
-      sort: { fields: [ version ], order: DESC }
+      sort: { version: DESC }
     ) {
       items: edges {
         update: node {
