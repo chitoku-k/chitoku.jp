@@ -9688,7 +9688,7 @@ gatsby-page-utils@^3.3.1:
     lodash "^4.17.21"
     micromatch "^4.0.5"
 
-gatsby-parcel-config@1.3.1, "parcel-config-gatsby@npm:gatsby-parcel-config":
+gatsby-parcel-config@1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/gatsby-parcel-config/-/gatsby-parcel-config-1.3.1.tgz#6c9982c57636cc661cdc5313c94547972e57395c"
   integrity sha512-yA/s9rY8pP4PNi2R5ZM9xO88K3wPSLFJebvI1p8o9TBpbXrco4CrpCccx3lHBgf9gyyE9CxfNWYvqH2hbschbw==

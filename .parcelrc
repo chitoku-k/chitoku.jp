@@ -1,6 +1,0 @@
-{
-  "extends": "parcel-config-gatsby",
-  "transformers": {
-    "*.json": ["@parcel/transformer-json"]
-  }
-}
