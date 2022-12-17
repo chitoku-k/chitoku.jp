@@ -1,6 +1,6 @@
 import type { ComponentPropsWithoutRef, FunctionComponent } from 'react'
 import { Dropdown } from 'react-bootstrap'
-import { useLocation } from '@reach/router'
+import { useLocation } from '@gatsbyjs/reach-router'
 import clsx from 'clsx'
 
 import * as styles from './styles.module.scss'

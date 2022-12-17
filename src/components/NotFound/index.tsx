@@ -1,7 +1,7 @@
 import type { FunctionComponent, ReactNode } from 'react'
 import type { MessageDescriptor } from 'react-intl'
 import { FormattedMessage, useIntl } from 'react-intl'
-import { useLocation } from '@reach/router'
+import { useLocation } from '@gatsbyjs/reach-router'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'

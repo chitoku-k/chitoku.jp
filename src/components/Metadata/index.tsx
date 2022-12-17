@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 import { useIntl } from 'react-intl'
 import { JsonLd } from 'react-schemaorg'
 import { graphql, useStaticQuery } from 'gatsby'
-import { useLocation } from '@reach/router'
+import { useLocation } from '@gatsbyjs/reach-router'
 import type { BreadcrumbList, CreativeWork } from 'schema-dts'
 
 import messages from './messages'
