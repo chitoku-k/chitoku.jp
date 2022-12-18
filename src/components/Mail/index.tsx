@@ -156,6 +156,7 @@ const Mail: FunctionComponent = () => {
 }
 
 interface MailLabelProps {
+  children?: ReactNode
   required?: true
   title: ReactNode
 }

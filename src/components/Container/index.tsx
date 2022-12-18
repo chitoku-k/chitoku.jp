@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import { memo } from 'react'
 import { Container as BootstrapContainer, Col, Row } from 'react-bootstrap'
 import { useLocation } from '@gatsbyjs/reach-router'
@@ -33,6 +34,7 @@ const Container = connectStateResults<ContainerProps>(function Container({
 })
 
 interface ContainerProps extends StateResultsProvided<unknown> {
+  children?: ReactNode
   sidebar?: boolean
 }
 

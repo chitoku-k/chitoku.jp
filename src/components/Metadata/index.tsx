@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef, FunctionComponent } from 'react'
+import type { ComponentPropsWithoutRef, FunctionComponent, ReactNode } from 'react'
 import { createContext } from 'react'
 import { Helmet } from 'react-helmet'
 import { useIntl } from 'react-intl'
@@ -147,6 +147,7 @@ interface MetadataItem {
 }
 
 interface MetadataProps extends MetadataItem {
+  children?: ReactNode
   prev?: string | null
   next?: string | null
   bodyAttributes?: ComponentPropsWithoutRef<'body'> & Record<string, unknown>

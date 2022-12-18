@@ -1,4 +1,4 @@
-import type { FunctionComponent } from 'react'
+import type { FunctionComponent, ReactNode } from 'react'
 import { createContext } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
 import { useIntl } from 'react-intl'
@@ -126,6 +126,7 @@ export interface ArticleTagItem {
 
 interface ArticleProps extends Omit<GatsbyTypes.articleQuery, 'article' | 'site'> {
   article: ArticleItem
+  children?: ReactNode
 }
 
 export default Article

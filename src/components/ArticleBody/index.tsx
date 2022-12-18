@@ -1,4 +1,4 @@
-import type { ComponentType, FunctionComponent } from 'react'
+import type { ComponentType, FunctionComponent, PropsWithChildren } from 'react'
 import { createElement, useMemo } from 'react'
 import RehypeReact from 'rehype-react'
 
@@ -9,7 +9,7 @@ import type { ArticleAstNode } from 'components/Article'
 const components: ArticleComponentCollection = {}
 
 export const register = function register<T>(key: string, component: ComponentType<T>): void {
-  components[key] = component as unknown as ComponentType<unknown>
+  components[key] = component as unknown as ComponentType<PropsWithChildren>
 }
 
 const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
@@ -35,6 +35,6 @@ export interface ArticleBodyProps {
   ast: ArticleAstNode
 }
 
-export type ArticleComponentCollection = Record<string, ComponentType<unknown>>
+export type ArticleComponentCollection = Record<string, ComponentType<PropsWithChildren>>
 
 export default ArticleBody

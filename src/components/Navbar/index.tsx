@@ -55,7 +55,7 @@ const Navbar: FunctionComponent = () => {
             <Row>
               <Nav className={styles.nav} as="ul">
                 {nav.map(item => (
-                  <NavItem key={item.to} {...item} dropdown>{item.items}</NavItem>
+                  <NavItem key={item.to} {...item} dropdown />
                 ))}
                 <SearchIcon onClick={openSearch}>
                   <NavLink to="#">

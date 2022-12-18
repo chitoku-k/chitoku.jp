@@ -1,4 +1,4 @@
-import type { FunctionComponent } from 'react'
+import type { FunctionComponent, ReactNode } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { useIntl } from 'react-intl'
 
@@ -62,7 +62,9 @@ const Home: FunctionComponent<HomeProps> = ({
   )
 }
 
-type HomeProps = GatsbyTypes.homeQuery
+interface HomeProps extends Queries.homeQuery {
+  children?: ReactNode
+}
 
 interface Category extends GatsbyTypes.CategoryFragment {
   description: string
