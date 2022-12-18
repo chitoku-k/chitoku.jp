@@ -38,7 +38,7 @@ export const pageQuery = graphql`
   query items($ids: [ String! ]) {
     articles: allMarkdownRemark(
       filter: { id: { in: $ids } }
-      sort: { fields: [ frontmatter___created ], order: DESC }
+      sort: { frontmatter: { created: DESC } }
     ) {
       items: edges {
         article: node {
@@ -83,7 +83,7 @@ const TaxonomyPage: FunctionComponent<TaxonomyPageProps> = ({
         <Navbar />
         <Container>
           {items.map(({ article }) => (
-            <Article key={article.path} article={article} prev={undefined} next={undefined} />
+            <Article key={article.path} article={article} prev={null} next={null} />
           ))}
           <TaxonomyPagination page={page} />
         </Container>

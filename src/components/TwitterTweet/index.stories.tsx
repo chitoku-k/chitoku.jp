@@ -1,5 +1,5 @@
 import React from 'react'
-import { LocationProvider, createHistory, createMemorySource } from '@reach/router'
+import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
 import type { Meta, Story } from '@storybook/react'
 
 import type { TwitterTweetProps } from 'components/TwitterTweet'

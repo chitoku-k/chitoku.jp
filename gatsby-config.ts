@@ -7,12 +7,18 @@ import { createQuery } from './plugins/historia-taxonomy-plugin'
 dotenv.config()
 
 const config: GatsbyConfig = {
+  trailingSlash: 'ignore',
   siteMetadata: {
     siteUrl: process.env.HISTORIA_URL,
     title: description,
   },
   flags: {
     FAST_DEV: true,
+  },
+  graphqlTypegen: {
+    generateOnBuild: true,
+    documentSearchPaths: [ './gatsby-node.ts' ],
+    typesOutputPath: 'typings/gatsby-types.d.ts',
   },
   plugins: [
     {
@@ -32,8 +38,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-eslint',
       options: {
         extensions: [ 'js', 'tsx' ],
-        stages: [ 'build-javascript' ],
-        failOnError: process.env.NODE_ENV === 'production',
+        failOnError: false,
       },
     },
     {
@@ -73,13 +78,6 @@ const config: GatsbyConfig = {
       resolve: '@danbruegge/gatsby-plugin-stylelint',
       options: {
         files: [ 'src/**/*.scss' ],
-        emitErrors: process.env.NODE_ENV === 'production',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-typegen',
-      options: {
-        outputPath: 'typings/gatsby-types.d.ts',
       },
     },
     {
@@ -141,7 +139,7 @@ const config: GatsbyConfig = {
               ],
             },
           },
-          { resolve: './plugins/historia-remark-plugin' },
+          { resolve: 'historia-remark-plugin' },
         ],
       },
     },

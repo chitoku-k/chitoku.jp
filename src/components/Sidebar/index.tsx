@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { Col } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
-import type { WindowLocation } from '@reach/router'
+import type { WindowLocation } from '@gatsbyjs/reach-router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faRss } from '@fortawesome/free-solid-svg-icons'
 import clsx from 'clsx'
@@ -42,7 +42,7 @@ const query = graphql`
     }
     latest: allMarkdownRemark(
       filter: { frontmatter: { created: { ne: null } } }
-      sort: { order: DESC, fields: [ frontmatter___created ] }
+      sort: { frontmatter: { created: DESC } }
       limit: 5
     ) {
       items: edges {
@@ -157,6 +157,6 @@ export interface SidebarProps {
   location: WindowLocation
 }
 
-type SidebarQueryResult = GatsbyTypes.SidebarItemQuery
+type SidebarQueryResult = Queries.SidebarItemQuery
 
 export default Sidebar

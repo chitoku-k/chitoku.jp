@@ -1,4 +1,4 @@
-import type { FunctionComponent } from 'react'
+import type { FunctionComponent, ReactNode } from 'react'
 import { IntlProvider } from 'react-intl'
 
 import '../../styles/styles.scss'
@@ -7,7 +7,7 @@ import * as styles from './styles.module.scss'
 
 import Search from 'components/Search'
 
-const Layout: FunctionComponent = ({
+const Layout: FunctionComponent<LayoutProps> = ({
   children,
 }) => (
   <IntlProvider locale="ja" messages={messages}>
@@ -18,5 +18,9 @@ const Layout: FunctionComponent = ({
     </Search>
   </IntlProvider>
 )
+
+interface LayoutProps {
+  children?: ReactNode
+}
 
 export default Layout

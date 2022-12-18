@@ -2,8 +2,8 @@ import type { ComponentPropsWithRef, FunctionComponent } from 'react'
 import isUrl from 'is-url'
 import path from 'path'
 import type { GatsbyLinkProps } from 'gatsby-link'
-import GatsbyLink from 'gatsby-link'
-import { useLocation } from '@reach/router'
+import { Link as GatsbyLink } from 'gatsby-link'
+import { useLocation } from '@gatsbyjs/reach-router'
 
 const isAnchor = (to: string): boolean => to.startsWith('#')
 

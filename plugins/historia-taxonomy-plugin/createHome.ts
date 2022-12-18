@@ -32,7 +32,7 @@ const createHome = async ({
     query {
       pages: allMarkdownRemark(
         filter: { frontmatter: { created: { ne: null } } }
-        sort: { fields: [ frontmatter___created ], order: DESC }
+        sort: { frontmatter: { created: DESC } }
       ) {
         items: edges {
           article: node {

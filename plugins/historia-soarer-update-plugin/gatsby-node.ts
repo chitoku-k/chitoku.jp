@@ -35,7 +35,7 @@ export const onPostBuild: GatsbyNode['onPostBuild'] = async ({
         }
       }
       updates: allUpdatesYaml(
-        sort: { fields: [ version ], order: DESC }
+        sort: { version: DESC }
         limit: 1
       ) {
         items: edges {

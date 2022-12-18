@@ -1,6 +1,6 @@
 import React from 'react'
 import { IntlProvider } from 'react-intl'
-import { LocationProvider, createHistory, createMemorySource } from '@reach/router'
+import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
 import type { Meta, Story } from '@storybook/react'
 
 import messages from 'translations/ja.yml'

@@ -1,8 +1,8 @@
-import type { FunctionComponent } from 'react'
+import type { FunctionComponent, ReactNode } from 'react'
 import { InstantSearch } from 'react-instantsearch-dom'
 import algoliasearch from 'algoliasearch/lite'
 
-const Search: FunctionComponent = ({
+const Search: FunctionComponent<SearchProps> = ({
   children,
 }) => {
   const indexName = process.env.GATSBY_ALGOLIA_INDEXNAME
@@ -20,6 +20,10 @@ const Search: FunctionComponent = ({
       {children}
     </InstantSearch>
   )
+}
+
+interface SearchProps {
+  children?: ReactNode
 }
 
 export default Search

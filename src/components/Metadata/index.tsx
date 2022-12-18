@@ -1,10 +1,10 @@
-import type { ComponentPropsWithoutRef, FunctionComponent } from 'react'
+import type { ComponentPropsWithoutRef, FunctionComponent, ReactNode } from 'react'
 import { createContext } from 'react'
 import { Helmet } from 'react-helmet'
 import { useIntl } from 'react-intl'
 import { JsonLd } from 'react-schemaorg'
 import { graphql, useStaticQuery } from 'gatsby'
-import { useLocation } from '@reach/router'
+import { useLocation } from '@gatsbyjs/reach-router'
 import type { BreadcrumbList, CreativeWork } from 'schema-dts'
 
 import messages from './messages'
@@ -134,7 +134,7 @@ const Metadata: FunctionComponent<MetadataProps> = ({
   )
 }
 
-type MetadataQueryResult = GatsbyTypes.MetadataItemQuery
+type MetadataQueryResult = Queries.MetadataItemQuery
 
 interface MetadataItem {
   type?: string
@@ -142,11 +142,12 @@ interface MetadataItem {
   keywords?: string[]
   description?: string
   thumbnail?: string | null
-  created?: string
+  created?: string | null
   breadcrumb?: Breadcrumb[]
 }
 
 interface MetadataProps extends MetadataItem {
+  children?: ReactNode
   prev?: string | null
   next?: string | null
   bodyAttributes?: ComponentPropsWithoutRef<'body'> & Record<string, unknown>

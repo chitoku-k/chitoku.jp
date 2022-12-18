@@ -40,6 +40,6 @@ const Footer: FunctionComponent = () => {
   )
 }
 
-type FooterQueryResult = GatsbyTypes.FooterItemQuery
+type FooterQueryResult = Queries.FooterItemQuery
 
 export default Footer

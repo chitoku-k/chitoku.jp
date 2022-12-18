@@ -6,7 +6,7 @@ import { promises as fs } from 'fs'
 import { LicenseWebpackPlugin } from 'license-webpack-plugin'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 
-export const onPreInit: GatsbyNode['onPreInit'] = () => {
+(() => {
   const { config } = ts.readConfigFile('tsconfig.remark.json', ts.sys.readFile)
   const { options, fileNames } = ts.parseJsonConfigFileContent(config, ts.sys, path.resolve())
   const program = ts.createProgram({
@@ -14,7 +14,7 @@ export const onPreInit: GatsbyNode['onPreInit'] = () => {
     rootNames: fileNames,
   })
   program.emit()
-}
+})()
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   stage,

@@ -15,7 +15,7 @@ import Link from 'components/Link'
 const query = graphql`
   query SoarerDownloadItem {
     updates: allUpdatesYaml(
-      sort: { fields: [ version ], order: DESC }
+      sort: { version: DESC }
       limit: 1
     ) {
       items: edges {
@@ -79,6 +79,6 @@ const SoarerDownload: FunctionComponent = () => {
   )
 }
 
-type SoarerDownloadQueryResult = GatsbyTypes.SoarerDownloadItemQuery
+type SoarerDownloadQueryResult = Queries.SoarerDownloadItemQuery
 
 export default SoarerDownload

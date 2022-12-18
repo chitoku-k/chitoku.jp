@@ -9,7 +9,7 @@ import * as styles from './styles.module.scss'
 import type { ArticleItem } from 'components/Article'
 import Link from 'components/Link'
 
-const isTag = (tag: GatsbyTypes.TagFragment | undefined): tag is GatsbyTypes.TagFragment => Boolean(tag?.name)
+const isTag = (tag: Queries.TagFragment | undefined): tag is Queries.TagFragment => Boolean(tag?.name)
 
 const ArticleAttribute: FunctionComponent<ArticleAttributeProps> = ({
   article: {

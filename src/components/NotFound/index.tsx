@@ -1,7 +1,7 @@
 import type { FunctionComponent, ReactNode } from 'react'
 import type { MessageDescriptor } from 'react-intl'
 import { FormattedMessage, useIntl } from 'react-intl'
-import { useLocation } from '@reach/router'
+import { useLocation } from '@gatsbyjs/reach-router'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
@@ -33,7 +33,7 @@ const Contact: FunctionComponent<ContactProps> = ({
 
 interface ContactProps {
   message: MessageDescriptor
-  service: GatsbyTypes.AboutYamlContacts
+  service: Queries.AboutYamlContacts
 }
 
 const NotFound: FunctionComponent<NotFoundProps> = ({ contacts }) => {
@@ -85,6 +85,6 @@ const NotFound: FunctionComponent<NotFoundProps> = ({ contacts }) => {
   )
 }
 
-type NotFoundProps = GatsbyTypes.NotFoundItemQuery
+type NotFoundProps = Queries.NotFoundItemQuery
 
 export default NotFound

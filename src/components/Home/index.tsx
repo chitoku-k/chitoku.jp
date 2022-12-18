@@ -1,4 +1,4 @@
-import type { FunctionComponent } from 'react'
+import type { FunctionComponent, ReactNode } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { useIntl } from 'react-intl'
 
@@ -13,7 +13,7 @@ import SubHeader from 'components/SubHeader'
 
 import * as styles from './styles.module.scss'
 
-const isCategory = (category: GatsbyTypes.CategoryFragment | undefined): category is Category => Boolean(category)
+const isCategory = (category: Queries.CategoryFragment | undefined): category is Category => Boolean(category)
 
 const Home: FunctionComponent<HomeProps> = ({
   children,
@@ -62,9 +62,11 @@ const Home: FunctionComponent<HomeProps> = ({
   )
 }
 
-type HomeProps = GatsbyTypes.homeQuery
+interface HomeProps extends Queries.homeQuery {
+  children?: ReactNode
+}
 
-interface Category extends GatsbyTypes.CategoryFragment {
+interface Category extends Queries.CategoryFragment {
   description: string
 }
 

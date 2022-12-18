@@ -1,4 +1,4 @@
-import type { FunctionComponent } from 'react'
+import type { FunctionComponent, ReactNode } from 'react'
 import { createContext } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
 import { useIntl } from 'react-intl'
@@ -21,11 +21,11 @@ export const ArticleContext = createContext<ArticleItem>({
   attributes: {
     title: '',
     navigation: [],
-    category: undefined,
+    category: null,
     tags: [],
     functions: [],
     macros: [],
-    created: undefined,
+    created: null,
     sidebar: false,
   },
   excerpted: false,
@@ -61,13 +61,13 @@ const Article: FunctionComponent<ArticleProps> = ({
           <Navbar className={styles.navbar} bg="light">
             <Nav className={styles.nav} as="ul">
               {navigation.map(item => (
-                <NavItem key={item.name} className={styles.navItem} {...item} items={undefined} style={{ width: `calc(100% / ${navigation.length})` }} />
+                <NavItem key={item.name} className={styles.navItem} {...item} items={null} style={{ width: `calc(100% / ${navigation.length})` }} />
               ))}
             </Nav>
           </Navbar>
         ) : null}
         <ArticleContext.Provider value={article}>
-          <ArticleBody ast={excerptAst ?? htmlAst ?? null} />
+          <ArticleBody ast={(excerptAst ?? htmlAst ?? null) as ArticleAstNode} />
         </ArticleContext.Provider>
         {excerpted && excerptAst ? (
           <div className={styles.readMoreContainer}>
@@ -89,9 +89,9 @@ const Article: FunctionComponent<ArticleProps> = ({
   )
 }
 
-export interface ArticleItem extends GatsbyTypes.ArticleFragment {
-  htmlAst?: ArticleAstNode
-  excerptAst?: ArticleAstNode
+export interface ArticleItem extends Queries.ArticleFragment {
+  htmlAst?: unknown
+  excerptAst?: unknown
 }
 
 export type ArticleAstNode = ArticleAstCommentNode | ArticleAstElementNode | ArticleAstTextNode | null
@@ -124,8 +124,9 @@ export interface ArticleTagItem {
   slug: string
 }
 
-interface ArticleProps extends Omit<GatsbyTypes.articleQuery, 'article' | 'site'> {
+interface ArticleProps extends Omit<Queries.articleQuery, 'article' | 'site'> {
   article: ArticleItem
+  children?: ReactNode
 }
 
 export default Article

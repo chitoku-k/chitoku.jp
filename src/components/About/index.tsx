@@ -105,7 +105,7 @@ const About: FunctionComponent<AboutProps> = ({
   )
 }
 
-interface AboutProps extends Omit<GatsbyTypes.AboutItemQuery, 'introduction'> {
+interface AboutProps extends Omit<Queries.AboutItemQuery, 'introduction'> {
   introduction: {
     markdown: {
       htmlAst: ArticleAstNode

@@ -45,7 +45,7 @@ export const pageQuery = graphql`
 
 interface AboutPageProps extends PageProps {
   data: {
-    about: GatsbyTypes.AboutItemQuery['about']
+    about: Queries.AboutItemQuery['about']
     introduction: {
       markdown: {
         htmlAst: ArticleAstNode

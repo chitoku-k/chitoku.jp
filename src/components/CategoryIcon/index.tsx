@@ -44,7 +44,7 @@ const CategoryIcon: FunctionComponent<CategoryIconProps> = ({
 
 export interface CategoryIconProps {
   to?: string
-  category?: GatsbyTypes.CategoryFragment | null
+  category?: Queries.CategoryFragment | null
 }
 
 export default CategoryIcon

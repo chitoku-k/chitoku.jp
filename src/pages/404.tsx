@@ -32,7 +32,7 @@ const NotFoundPage: FunctionComponent<NotFoundPageProps> = ({ data }) => (
 )
 
 interface NotFoundPageProps extends PageProps {
-  data: GatsbyTypes.NotFoundItemQuery
+  data: Queries.NotFoundItemQuery
 }
 
 export default NotFoundPage

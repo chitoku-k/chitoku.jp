@@ -55,7 +55,7 @@ const Navbar: FunctionComponent = () => {
             <Row>
               <Nav className={styles.nav} as="ul">
                 {nav.map(item => (
-                  <NavItem key={item.to} {...item} dropdown>{item.items}</NavItem>
+                  <NavItem key={item.to} {...item} dropdown />
                 ))}
                 <SearchIcon onClick={openSearch}>
                   <NavLink to="#">
@@ -72,7 +72,7 @@ const Navbar: FunctionComponent = () => {
   )
 }
 
-export type NavigationLinkItem = GatsbyTypes.NavigationsYamlNav
-type NavbarQueryResult = GatsbyTypes.NavigationLinkItemQuery
+export type NavigationLinkItem = Queries.NavigationsYamlNav
+type NavbarQueryResult = Queries.NavigationLinkItemQuery
 
 export default Navbar

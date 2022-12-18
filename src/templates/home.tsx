@@ -21,7 +21,7 @@ interface HomePageProps extends PageProps {
   pageContext: {
     page: Page
   }
-  data: GatsbyTypes.homeQuery
+  data: Queries.homeQuery
 }
 
 const HomePagination: FunctionComponent<{ page: Page }> = ({
@@ -44,7 +44,7 @@ export const pageQuery = graphql`
     }
     pages: allMarkdownRemark(
       filter: { id: { in: $ids } }
-      sort: { fields: [ frontmatter___created ], order: DESC }
+      sort: { frontmatter: { created: DESC } }
     ) {
       items: edges {
         article: node {

@@ -1,4 +1,4 @@
-import type { FunctionComponent } from 'react'
+import type { FunctionComponent, ReactNode } from 'react'
 import { useContext } from 'react'
 import clsx from 'clsx'
 import Prism from 'prismjs'
@@ -63,9 +63,10 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
   )
 }
 
-type PspSdkMacroParameterItem = GatsbyTypes.MacrosYamlParameters
+type PspSdkMacroParameterItem = Queries.MacrosYamlParameters
 
 interface PspSdkMacroProps {
+  children?: ReactNode
   name: string
 }
 
