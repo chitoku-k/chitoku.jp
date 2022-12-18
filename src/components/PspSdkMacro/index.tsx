@@ -63,7 +63,7 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
   )
 }
 
-type PspSdkMacroParameterItem = GatsbyTypes.MacrosYamlParameters
+type PspSdkMacroParameterItem = Queries.MacrosYamlParameters
 
 interface PspSdkMacroProps {
   children?: ReactNode

@@ -33,7 +33,7 @@ const Contact: FunctionComponent<ContactProps> = ({
 
 interface ContactProps {
   message: MessageDescriptor
-  service: GatsbyTypes.AboutYamlContacts
+  service: Queries.AboutYamlContacts
 }
 
 const NotFound: FunctionComponent<NotFoundProps> = ({ contacts }) => {
@@ -85,6 +85,6 @@ const NotFound: FunctionComponent<NotFoundProps> = ({ contacts }) => {
   )
 }
 
-type NotFoundProps = GatsbyTypes.NotFoundItemQuery
+type NotFoundProps = Queries.NotFoundItemQuery
 
 export default NotFound

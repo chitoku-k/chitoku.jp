@@ -79,6 +79,6 @@ const SoarerDownload: FunctionComponent = () => {
   )
 }
 
-type SoarerDownloadQueryResult = GatsbyTypes.SoarerDownloadItemQuery
+type SoarerDownloadQueryResult = Queries.SoarerDownloadItemQuery
 
 export default SoarerDownload

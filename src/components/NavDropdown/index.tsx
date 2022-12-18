@@ -6,11 +6,11 @@ const NavDropdown: FunctionComponent<NavDropdownProps> = ({
   items,
   dropdown,
 }) => items.map(item => (
-  <NavItem key={item.name} {...item} items={undefined} dropdown={dropdown} />
+  <NavItem key={item.name} {...item} items={null} dropdown={dropdown} />
 )) as unknown as ReactElement
 
 interface NavDropdownProps {
-  items: readonly GatsbyTypes.NavigationsYamlNavItems[]
+  items: readonly Queries.NavigationsYamlNavItems[]
   dropdown?: boolean
 }
 

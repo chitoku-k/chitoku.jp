@@ -157,7 +157,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
 }
 
 interface ArticlePageProps {
-  data: GatsbyTypes.articleQuery
+  data: Queries.articleQuery
 }
 
 register('a', Link)

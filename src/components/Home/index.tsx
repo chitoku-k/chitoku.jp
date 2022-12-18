@@ -13,7 +13,7 @@ import SubHeader from 'components/SubHeader'
 
 import * as styles from './styles.module.scss'
 
-const isCategory = (category: GatsbyTypes.CategoryFragment | undefined): category is Category => Boolean(category)
+const isCategory = (category: Queries.CategoryFragment | undefined): category is Category => Boolean(category)
 
 const Home: FunctionComponent<HomeProps> = ({
   children,
@@ -66,7 +66,7 @@ interface HomeProps extends Queries.homeQuery {
   children?: ReactNode
 }
 
-interface Category extends GatsbyTypes.CategoryFragment {
+interface Category extends Queries.CategoryFragment {
   description: string
 }
 

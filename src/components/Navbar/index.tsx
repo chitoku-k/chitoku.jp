@@ -72,7 +72,7 @@ const Navbar: FunctionComponent = () => {
   )
 }
 
-export type NavigationLinkItem = GatsbyTypes.NavigationsYamlNav
-type NavbarQueryResult = GatsbyTypes.NavigationLinkItemQuery
+export type NavigationLinkItem = Queries.NavigationsYamlNav
+type NavbarQueryResult = Queries.NavigationLinkItemQuery
 
 export default Navbar

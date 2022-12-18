@@ -157,6 +157,6 @@ export interface SidebarProps {
   location: WindowLocation
 }
 
-type SidebarQueryResult = GatsbyTypes.SidebarItemQuery
+type SidebarQueryResult = Queries.SidebarItemQuery
 
 export default Sidebar

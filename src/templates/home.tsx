@@ -21,7 +21,7 @@ interface HomePageProps extends PageProps {
   pageContext: {
     page: Page
   }
-  data: GatsbyTypes.homeQuery
+  data: Queries.homeQuery
 }
 
 const HomePagination: FunctionComponent<{ page: Page }> = ({

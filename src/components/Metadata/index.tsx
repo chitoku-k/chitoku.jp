@@ -134,7 +134,7 @@ const Metadata: FunctionComponent<MetadataProps> = ({
   )
 }
 
-type MetadataQueryResult = GatsbyTypes.MetadataItemQuery
+type MetadataQueryResult = Queries.MetadataItemQuery
 
 interface MetadataItem {
   type?: string
@@ -142,7 +142,7 @@ interface MetadataItem {
   keywords?: string[]
   description?: string
   thumbnail?: string | null
-  created?: string
+  created?: string | null
   breadcrumb?: Breadcrumb[]
 }
 

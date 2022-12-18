@@ -58,6 +58,6 @@ const PspErrorCodes: FunctionComponent = () => {
   )
 }
 
-type PspErrorCodesQueryResult = GatsbyTypes.PspErrorItemQuery
+type PspErrorCodesQueryResult = Queries.PspErrorItemQuery
 
 export default PspErrorCodes

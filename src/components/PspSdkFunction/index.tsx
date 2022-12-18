@@ -67,7 +67,7 @@ const PspSdkFunction: FunctionComponent<PspSdkFunctionProps> = ({
   )
 }
 
-type PspSdkFunctionParameterItem = GatsbyTypes.FunctionsYamlParameters
+type PspSdkFunctionParameterItem = Queries.FunctionsYamlParameters
 
 interface PspSdkFunctionProps {
   children?: ReactNode

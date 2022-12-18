@@ -42,6 +42,6 @@ export interface LinksLinkItem {
   url: string
 }
 
-type LinksProps = GatsbyTypes.LinksItemQuery
+type LinksProps = Queries.LinksItemQuery
 
 export default Links
