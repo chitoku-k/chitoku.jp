@@ -15,7 +15,7 @@
     "@gatsbyjs/reach-router": "^2.0.0",
     "@rstacruz/gatsby-remark-component": "^2.0.0",
     "@storybook/addon-essentials": "^6.5.14",
-    "@storybook/addon-links": "^6.5.14",
+    "@storybook/addon-links": "^6.5.15",
     "@storybook/builder-webpack5": "^6.5.14",
     "@storybook/manager-webpack5": "^6.5.14",
     "@storybook/preset-scss": "^1.0.3",
