@@ -1,6 +1,6 @@
 import type { FunctionComponent, ReactNode } from 'react'
 import { InstantSearch } from 'react-instantsearch-dom'
-import algoliasearch from 'algoliasearch/lite'
+import algoliasearch from 'algoliasearch'
 
 const Search: FunctionComponent<SearchProps> = ({
   children,
@@ -9,14 +9,14 @@ const Search: FunctionComponent<SearchProps> = ({
   const appID = process.env.GATSBY_ALGOLIA_APPID
   const apiKey = process.env.GATSBY_ALGOLIA_APIKEY_SEARCH_ONLY
 
-  if (!indexName || !appID || !apiKey) {
+  if (!indexName) {
     throw new Error('Invalid env')
   }
 
   return (
     <InstantSearch
       indexName={indexName}
-      searchClient={algoliasearch(appID, apiKey)}>
+      searchClient={algoliasearch(appID ?? '', apiKey ?? '')}>
       {children}
     </InstantSearch>
   )
