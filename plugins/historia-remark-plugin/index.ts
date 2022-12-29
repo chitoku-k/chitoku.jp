@@ -71,7 +71,9 @@ export default ({
       return
     }
     node.type = 'html'
-    node.value = twemoji.parse(node.value)
+    node.value = twemoji.parse(node.value, {
+      base: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/',
+    })
   })
 
   visit<RemarkNode>(markdownAST, [ 'text' ], node => {
