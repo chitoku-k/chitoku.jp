@@ -43,9 +43,14 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_ID,
+        trackingIds: [
+          process.env.GATSBY_GOOGLE_ANALYTICS_ID,
+        ],
+        pluginConfig: {
+          respectDNT: true,
+        },
       },
     },
     {
