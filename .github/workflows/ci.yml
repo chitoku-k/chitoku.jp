@@ -22,6 +22,8 @@ jobs:
           target: dependencies
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          build-args: |
+            CI
       - name: Build (cache)
         uses: docker/build-push-action@v3
         with:
@@ -29,7 +31,11 @@ jobs:
           target: cache
           cache-from: type=gha
           cache-to: type=gha
+          build-args: |
+            CI
       - name: Build
         uses: docker/build-push-action@v3
         with:
           context: .
+          build-args: |
+            CI
