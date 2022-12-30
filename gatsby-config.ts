@@ -48,6 +48,9 @@ const config: GatsbyConfig = {
         trackingIds: [
           process.env.GATSBY_GOOGLE_ANALYTICS_ID,
         ],
+        gtagConfig: {
+          cookie_flags: 'samesite=strict; secure',
+        },
         pluginConfig: {
           respectDNT: true,
         },
