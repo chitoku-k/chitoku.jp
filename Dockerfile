@@ -21,6 +21,7 @@ RUN --mount=type=cache,target=/mnt/yarn,id=/usr/local/share/.cache/yarn \
     cp -r /mnt/yarn /usr/local/share/.cache/
 
 FROM dependencies AS build
+ARG CI
 ARG TZ=Asia/Tokyo
 ARG GATSBY_UPDATE_INDEX=false
 COPY . /usr/src

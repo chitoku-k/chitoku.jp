@@ -32,6 +32,8 @@ jobs:
           target: dependencies
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          build-args: |
+            CI
       - name: Build (cache)
         uses: docker/build-push-action@v3
         with:
@@ -40,6 +42,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha
           build-args: |
+            CI
             GATSBY_UPDATE_INDEX=true
       - name: Build and push
         uses: docker/build-push-action@v3
@@ -48,6 +51,7 @@ jobs:
           push: true
           tags: container.chitoku.jp/chitoku-k/chitoku.jp
           build-args: |
+            CI
             GATSBY_UPDATE_INDEX=true
   deploy:
     name: Deploy
