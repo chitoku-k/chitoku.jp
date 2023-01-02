@@ -65,7 +65,6 @@ const Metadata: FunctionComponent<MetadataProps> = ({
   return (
     <>
       <Helmet defer={false}>
-        <html lang="ja" />
         <meta property="og:type" content={metadata.type} />
         <meta property="og:url" content={siteUrl + location.pathname} />
         <meta name="twitter:card" content="summary" />

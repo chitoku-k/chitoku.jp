@@ -9,6 +9,12 @@ import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 import Search from 'components/Search'
 
+export const onRenderBody: GatsbySSR['onRenderBody'] = ({ setHtmlAttributes }) => {
+  setHtmlAttributes({
+    lang: 'ja',
+  })
+}
+
 export const wrapPageElement: GatsbySSR['wrapPageElement'] = ({ element, props }) => (
   <Layout {...props}>
     <Header />
