@@ -59,15 +59,6 @@ button {
   }
 }
 
-// reCAPTCHA
-.grecaptcha-badge {
-  display: none !important;
-
-  body[data-recaptcha] & {
-    display: block !important;
-  }
-}
-
 // Gist
 .gist {
   .gist-data,

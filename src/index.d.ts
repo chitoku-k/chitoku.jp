@@ -4,3 +4,7 @@ interface PageProps {
   path: string
   uri: string
 }
+
+interface Window {
+  grecaptcha: unknown
+}

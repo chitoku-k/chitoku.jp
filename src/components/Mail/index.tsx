@@ -79,6 +79,10 @@ const Mail: FunctionComponent = () => {
     }
 
     loadReCaptcha(siteKey)
+    return () => {
+      delete window.grecaptcha
+      document.querySelector('.grecaptcha-badge')?.parentElement?.remove()
+    }
   }, [ siteKey ])
 
   useEffect(() => {
@@ -90,7 +94,7 @@ const Mail: FunctionComponent = () => {
   }
 
   return (
-    <Metadata title={formatMessage(messages.title)} bodyAttributes={{ 'data-recaptcha': '' }}>
+    <Metadata title={formatMessage(messages.title)}>
       <Container>
         <ArticleContainer>
           <ArticleHeader title={formatMessage(messages.title)} />

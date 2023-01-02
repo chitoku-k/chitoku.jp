@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef, FunctionComponent, ReactNode } from 'react'
+import type { FunctionComponent, ReactNode } from 'react'
 import { Helmet } from 'react-helmet'
 import { useIntl } from 'react-intl'
 import { JsonLd } from 'react-schemaorg'
@@ -40,7 +40,6 @@ const query = graphql`
 
 const Metadata: FunctionComponent<MetadataProps> = ({
   children,
-  bodyAttributes,
   ...metadata
 }) => {
   const location = useLocation()
@@ -95,7 +94,6 @@ const Metadata: FunctionComponent<MetadataProps> = ({
         {metadata.next ? (
           <link rel="next" href={metadata.next} />
         ) : null}
-        <body {...bodyAttributes} />
       </Helmet>
       {metadata.breadcrumb ? (
         <JsonLd<BreadcrumbList> item={{
@@ -140,7 +138,6 @@ interface MetadataProps extends MetadataItem {
   children?: ReactNode
   prev?: string | null
   next?: string | null
-  bodyAttributes?: ComponentPropsWithoutRef<'body'> & Record<string, unknown>
 }
 
 export interface Breadcrumb {
