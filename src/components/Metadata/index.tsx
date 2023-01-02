@@ -1,5 +1,4 @@
 import type { ComponentPropsWithoutRef, FunctionComponent, ReactNode } from 'react'
-import { createContext } from 'react'
 import { Helmet } from 'react-helmet'
 import { useIntl } from 'react-intl'
 import { JsonLd } from 'react-schemaorg'
@@ -39,14 +38,6 @@ const query = graphql`
   }
 `
 
-export const MetadataContext = createContext<MetadataItem>({
-  type: 'article',
-  title: '',
-  keywords: [],
-  description: '',
-  thumbnail: null,
-})
-
 const Metadata: FunctionComponent<MetadataProps> = ({
   children,
   bodyAttributes,
@@ -72,7 +63,7 @@ const Metadata: FunctionComponent<MetadataProps> = ({
     : formatMessage(messages.title)
 
   return (
-    <MetadataContext.Provider value={metadata}>
+    <>
       <Helmet defer={false}>
         <html lang="ja" />
         <meta property="og:type" content={metadata.type} />
@@ -130,7 +121,7 @@ const Metadata: FunctionComponent<MetadataProps> = ({
         }} />
       ) : null}
       {children}
-    </MetadataContext.Provider>
+    </>
   )
 }
 
