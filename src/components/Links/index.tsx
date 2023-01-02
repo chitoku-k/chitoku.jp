@@ -6,7 +6,6 @@ import * as styles from './styles.module.scss'
 
 import Metadata from 'components/Metadata'
 import Link from 'components/Link'
-import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
 
@@ -21,18 +20,16 @@ const Links: FunctionComponent<LinksProps> = ({ links }) => {
 
   return (
     <Metadata title={formatMessage(messages.title)}>
-      <Container>
-        <ArticleContainer>
-          <ArticleHeader title={formatMessage(messages.title)} />
-          <ul className={styles.container}>
-            {items.map(({ name, url }) => (
-              <li key={url}>
-                <Link to={url} title={name}>{name}</Link>
-              </li>
-            ))}
-          </ul>
-        </ArticleContainer>
-      </Container>
+      <ArticleContainer>
+        <ArticleHeader title={formatMessage(messages.title)} />
+        <ul className={styles.container}>
+          {items.map(({ name, url }) => (
+            <li key={url}>
+              <Link to={url} title={name}>{name}</Link>
+            </li>
+          ))}
+        </ul>
+      </ArticleContainer>
     </Metadata>
   )
 }

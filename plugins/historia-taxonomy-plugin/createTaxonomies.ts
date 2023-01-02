@@ -33,7 +33,7 @@ interface Data {
   }
 }
 
-export interface TaxonomyContext extends Paginatable {
+export interface TaxonomyContext extends Context, Paginatable {
   category: Category | null
   tag: Tag | null
   ids: string[]
@@ -114,6 +114,7 @@ const createTaxonomies = async ({
             current: num + 1,
             total: pages.length,
           },
+          sidebar: true,
         },
       })
     }
@@ -134,6 +135,7 @@ const createTaxonomies = async ({
             current: num + 1,
             total: pages.length,
           },
+          sidebar: true,
         },
       })
     }

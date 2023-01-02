@@ -1,7 +1,6 @@
 import type { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 
-import Container from 'components/Container'
 import Article from 'components/Article'
 import type { Breadcrumb } from 'components/Metadata'
 import Metadata from 'components/Metadata'
@@ -140,9 +139,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
 
   return (
     <Metadata title={attributes.title} breadcrumb={breadcrumb} created={attributes.created} thumbnail={attributes.category?.thumbnail}>
-      <Container sidebar={article.attributes.sidebar !== false}>
-        <Article article={article} prev={prev} next={next} />
-      </Container>
+      <Article article={article} prev={prev} next={next} />
     </Metadata>
   )
 }

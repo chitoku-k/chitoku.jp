@@ -1,7 +1,6 @@
 import type { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 
-import Container from 'components/Container'
 import Article from 'components/Article'
 import ArticleContainer from 'components/ArticleContainer'
 import Metadata from 'components/Metadata'
@@ -74,12 +73,10 @@ const TaxonomyPage: FunctionComponent<TaxonomyPageProps> = ({
 
   return (
     <Metadata title={title} thumbnail={category?.thumbnail} prev={prev} next={next}>
-      <Container>
-        {items.map(({ article }) => (
-          <Article key={article.path} article={article} prev={null} next={null} />
-        ))}
-        <TaxonomyPagination page={page} />
-      </Container>
+      {items.map(({ article }) => (
+        <Article key={article.path} article={article} prev={null} next={null} />
+      ))}
+      <TaxonomyPagination page={page} />
     </Metadata>
   )
 }

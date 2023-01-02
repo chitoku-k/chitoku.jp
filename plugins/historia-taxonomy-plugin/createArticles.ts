@@ -18,10 +18,11 @@ interface Article<TDirectory extends string, TName extends string> {
   attributes: {
     created: string
     page: boolean | null
+    sidebar: boolean | null
   }
 }
 
-export interface ArticleContext {
+export interface ArticleContext extends Context {
   id: string
   page: boolean | null
   prev: string | null
@@ -63,6 +64,7 @@ const createArticles = async ({
       attributes: frontmatter {
         created
         page
+        sidebar
       }
     }
     fragment FileNode on File {
@@ -104,6 +106,7 @@ const createArticles = async ({
           page: article.attributes.page,
           prev: prev && (!('attributes' in prev) || prev.attributes.created) ? prev.id : null,
           next: next && (!('attributes' in next) || next.attributes.created) ? next.id : null,
+          sidebar: article.attributes.sidebar,
         },
       })
     }

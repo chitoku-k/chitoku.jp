@@ -17,7 +17,7 @@ MemoizedSidebar.displayName = 'MemoizedSidebar'
 const Container = connectStateResults<ContainerProps>(function Container({
   searchState,
   children,
-  sidebar = true,
+  sidebar,
 }) {
   const location = useLocation()
 
@@ -35,7 +35,7 @@ const Container = connectStateResults<ContainerProps>(function Container({
 
 interface ContainerProps extends StateResultsProvided<unknown> {
   children?: ReactNode
-  sidebar?: boolean
+  sidebar: boolean
 }
 
 export default Container
