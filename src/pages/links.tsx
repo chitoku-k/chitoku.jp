@@ -1,10 +1,6 @@
 import type { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from 'components/Layout'
-import Header from 'components/Header'
-import Navbar from 'components/Navbar'
-import Footer from 'components/Footer'
 import type { LinksLinkItem } from 'components/Links'
 import Links from 'components/Links'
 
@@ -20,16 +16,9 @@ export const pageQuery = graphql`
 `
 
 const LinksPage: FunctionComponent<LinksPageProps> = ({
-  data: {
-    links,
-  },
+  data,
 }) => (
-  <Layout>
-    <Header />
-    <Navbar />
-    <Links links={links} />
-    <Footer />
-  </Layout>
+  <Links {...data} />
 )
 
 interface LinksPageProps extends PageProps {

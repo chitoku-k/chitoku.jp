@@ -1,10 +1,6 @@
 import type { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from 'components/Layout'
-import Header from 'components/Header'
-import Navbar from 'components/Navbar'
-import Footer from 'components/Footer'
 import Home from 'components/Home'
 import ArticleContainer from 'components/ArticleContainer'
 import Metadata from 'components/Metadata'
@@ -75,16 +71,11 @@ const IndexPage: FunctionComponent<HomePageProps> = ({
   const next = hasNextPage(page) ? getNextPagePath(page) : null
 
   return (
-    <Layout>
-      <Metadata title={null} prev={prev} next={next}>
-        <Header />
-        <Navbar />
-        <Home {...data}>
-          <HomePagination page={page} />
-        </Home>
-        <Footer />
-      </Metadata>
-    </Layout>
+    <Metadata title={null} prev={prev} next={next}>
+      <Home {...data}>
+        <HomePagination page={page} />
+      </Home>
+    </Metadata>
   )
 }
 
