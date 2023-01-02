@@ -1,4 +1,5 @@
 import type { FunctionComponent } from 'react'
+import type { PageProps } from 'gatsby'
 import { graphql } from 'gatsby'
 
 import Article from 'components/Article'
@@ -144,9 +145,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
   )
 }
 
-interface ArticlePageProps {
-  data: Queries.articleQuery
-}
+type ArticlePageProps = PageProps<Queries.articleQuery>
 
 register('a', Link)
 register('psp-error-codes', PspErrorCodes)

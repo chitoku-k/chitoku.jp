@@ -1,4 +1,5 @@
 import type { FunctionComponent } from 'react'
+import type { PageProps } from 'gatsby'
 import { graphql } from 'gatsby'
 
 import Home from 'components/Home'
@@ -13,12 +14,7 @@ import Pagination, {
   hasPreviousPage,
 } from 'components/Pagination'
 
-interface HomePageProps extends PageProps {
-  pageContext: {
-    page: Page
-  }
-  data: Queries.homeQuery
-}
+type HomePageProps = PageProps<Queries.homeQuery, { page: Page }>
 
 const HomePagination: FunctionComponent<{ page: Page }> = ({
   page,

@@ -90,7 +90,7 @@ const About: FunctionComponent<AboutProps> = ({
                 <tr>
                   <th>{formatMessage(messages.introduction)}</th>
                   <td>
-                    <ArticleBody ast={introduction.markdown.htmlAst ?? null} />
+                    <ArticleBody ast={(introduction?.markdown?.htmlAst ?? null) as ArticleAstNode} />
                   </td>
                 </tr>
               </tbody>
@@ -102,12 +102,6 @@ const About: FunctionComponent<AboutProps> = ({
   )
 }
 
-interface AboutProps extends Omit<Queries.AboutItemQuery, 'introduction'> {
-  introduction: {
-    markdown: {
-      htmlAst: ArticleAstNode
-    }
-  }
-}
+type AboutProps = Queries.AboutItemQuery
 
 export default About

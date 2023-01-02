@@ -1,10 +1,11 @@
 import type { FunctionComponent } from 'react'
+import type { PageProps } from 'gatsby'
 import { graphql } from 'gatsby'
 
 import Article from 'components/Article'
 import ArticleContainer from 'components/ArticleContainer'
 import Metadata from 'components/Metadata'
-import type { ArticleCategoryItem, ArticleItem, ArticleTagItem } from 'components/Article'
+import type { ArticleCategoryItem, ArticleTagItem } from 'components/Article'
 import type { Page } from 'components/Pagination'
 import Pagination, {
   PaginationContainer,
@@ -14,20 +15,13 @@ import Pagination, {
   hasPreviousPage,
 } from 'components/Pagination'
 
-interface TaxonomyPageProps extends PageProps {
-  pageContext: {
-    category: ArticleCategoryItem | null
-    tag: ArticleTagItem | null
-    page: Page
-  }
-  data: {
-    articles: {
-      items: {
-        article: ArticleItem
-      }[]
-    }
-  }
+interface TaxonomyContext {
+  category: ArticleCategoryItem | null
+  tag: ArticleTagItem | null
+  page: Page
 }
+
+type TaxonomyPageProps = PageProps<Queries.itemsQuery, TaxonomyContext>
 
 export const pageQuery = graphql`
   query items($ids: [ String! ]) {

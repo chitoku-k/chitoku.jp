@@ -34,11 +34,6 @@ const Links: FunctionComponent<LinksProps> = ({ links }) => {
   )
 }
 
-export interface LinksLinkItem {
-  name: string
-  url: string
-}
-
 type LinksProps = Queries.LinksItemQuery
 
 export default Links

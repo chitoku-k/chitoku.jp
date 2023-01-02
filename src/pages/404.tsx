@@ -1,4 +1,5 @@
 import type { FunctionComponent } from 'react'
+import type { PageProps } from 'gatsby'
 import { graphql } from 'gatsby'
 
 import NotFound from 'components/NotFound'
@@ -22,8 +23,6 @@ const NotFoundPage: FunctionComponent<NotFoundPageProps> = ({ data }) => (
   <NotFound {...data} />
 )
 
-interface NotFoundPageProps extends PageProps {
-  data: Queries.NotFoundItemQuery
-}
+type NotFoundPageProps = PageProps<Queries.NotFoundItemQuery>
 
 export default NotFoundPage

@@ -1,7 +1,7 @@
 import type { FunctionComponent } from 'react'
+import type { PageProps } from 'gatsby'
 import { graphql } from 'gatsby'
 
-import type { ArticleAstNode } from 'components/Article'
 import About from 'components/About'
 
 export const pageQuery = graphql`
@@ -39,16 +39,7 @@ export const pageQuery = graphql`
   }
 `
 
-interface AboutPageProps extends PageProps {
-  data: {
-    about: Queries.AboutItemQuery['about']
-    introduction: {
-      markdown: {
-        htmlAst: ArticleAstNode
-      }
-    }
-  }
-}
+type AboutPageProps = PageProps<Queries.AboutItemQuery>
 
 const AboutPage: FunctionComponent<AboutPageProps> = ({
   data,
