@@ -18,7 +18,7 @@ interface Data {
   }
 }
 
-export interface HomeContext extends Paginatable {
+export interface HomeContext extends Context, Paginatable {
   ids: string[]
 }
 
@@ -58,6 +58,7 @@ const createHome = async ({
           current: num + 1,
           total: pages.length,
         },
+        sidebar: true,
       },
     })
   }

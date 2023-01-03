@@ -14,14 +14,6 @@ interface ShareButtonProps {
   url: string
 }
 
-interface TwitterShareButtonProps extends ShareButtonProps {
-  title: string | null
-}
-
-interface PocketShareButtonProps extends ShareButtonProps {
-  title: string | null
-}
-
 const hatena: IconDefinition = {
   prefix: 'fab',
   iconName: 'hatena' as IconName,
@@ -34,13 +26,12 @@ const hatena: IconDefinition = {
   ],
 }
 
-export const TwitterShareButton: FunctionComponent<TwitterShareButtonProps> = ({
-  title,
+export const TwitterShareButton: FunctionComponent<ShareButtonProps> = ({
   url,
 }) => {
   const { formatMessage } = useIntl()
   const base = 'https://twitter.com/share'
-  const to = `${base}?text=${encodeURIComponent(title ?? '')}&url=${encodeURIComponent(url)}`
+  const to = `${base}?url=${encodeURIComponent(url)}`
 
   return (
     <Link className={clsx(styles.button, styles.twitter)} to={to} title={formatMessage(messages.share_on, { service: formatMessage(messages.twitter) })}>
@@ -63,13 +54,12 @@ export const FacebookShareButton: FunctionComponent<ShareButtonProps> = ({
   )
 }
 
-export const PocketShareButton: FunctionComponent<PocketShareButtonProps> = ({
-  title,
+export const PocketShareButton: FunctionComponent<ShareButtonProps> = ({
   url,
 }) => {
   const { formatMessage } = useIntl()
   const base = 'https://getpocket.com/edit'
-  const to = `${base}?title=${encodeURIComponent(title ?? '')}&url=${encodeURIComponent(url)}`
+  const to = `${base}?url=${encodeURIComponent(url)}`
 
   return (
     <Link className={clsx(styles.button, styles.pocket)} to={to} title={formatMessage(messages.share_on, { service: formatMessage(messages.pocket) })}>

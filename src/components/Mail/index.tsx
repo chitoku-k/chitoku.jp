@@ -11,7 +11,6 @@ import * as styles from './styles.module.scss'
 
 import Metadata from 'components/Metadata'
 import Link from 'components/Link'
-import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
 
@@ -79,6 +78,10 @@ const Mail: FunctionComponent = () => {
     }
 
     loadReCaptcha(siteKey)
+    return () => {
+      delete window.grecaptcha
+      document.querySelector('.grecaptcha-badge')?.parentElement?.remove()
+    }
   }, [ siteKey ])
 
   useEffect(() => {
@@ -90,67 +93,65 @@ const Mail: FunctionComponent = () => {
   }
 
   return (
-    <Metadata title={formatMessage(messages.title)} bodyAttributes={{ 'data-recaptcha': '' }}>
-      <Container>
-        <ArticleContainer>
-          <ArticleHeader title={formatMessage(messages.title)} />
-          <Alert className={styles.notice} variant="info">
-            {formatMessage(messages.contact_me_on_sns)}
-            <br />
-            <FormattedMessage {...messages.contact_me_from_about} values={{
-              about: <Link to="/about">{formatMessage(messages.about)}</Link>,
-            }} />
-          </Alert>
-          <form onSubmit={onSubmit}>
-            <Form.Group className={styles.group}>
-              <Label required title={formatMessage(messages.name)}>
-                <Form.Control className={styles.input} inputMode="text" autoComplete="name" name="name" size="sm" required readOnly={readOnly} />
-              </Label>
-            </Form.Group>
-            <Form.Group className={styles.group}>
-              <Label title={formatMessage(messages.mail)}>
-                <Form.Control className={styles.input} inputMode="email" autoComplete="email" name="email" size="sm" readOnly={readOnly} />
-              </Label>
-            </Form.Group>
-            <Form.Group className={styles.group}>
-              <Label required title={formatMessage(messages.subject)}>
-                <Form.Control className={styles.input} inputMode="text" name="subject" size="sm" required readOnly={readOnly} />
-              </Label>
-            </Form.Group>
-            <Form.Group className={styles.group}>
-              <Label required title={formatMessage(messages.message)}>
-                <Form.Control className={styles.input} inputMode="text" name="body" as="textarea" cols={40} rows={10} required readOnly={readOnly} />
-              </Label>
-            </Form.Group>
-            <ReCaptcha action="mail" sitekey={siteKey} verifyCallback={setToken} />
-            <div className={styles.submission}>
-              {status === 'sent' ? (
-                <div className={styles.area}>
-                  <FontAwesomeIcon className={styles.accepted} icon={faCheck} />
-                  {formatMessage(messages.submission_accepted)}
-                </div>
-              ) : status === 'sending' ? (
-                <div className={styles.area}>
-                  <FontAwesomeIcon className={styles.processing} icon={faCircleNotch} spin />
-                  {formatMessage(messages.submission_processing)}
-                </div>
-              ) : (
-                <>
-                  {status === 'error' ? (
-                    <div className={styles.area}>
-                      <FontAwesomeIcon className={styles.error} icon={faTimes} />
-                      {formatMessage(messages.submission_error)}
-                    </div>
-                  ) : null}
-                  <Button type="submit" variant="primary" disabled={!token}>
-                    {formatMessage(messages.send)}
-                  </Button>
-                </>
-              )}
-            </div>
-          </form>
-        </ArticleContainer>
-      </Container>
+    <Metadata title={formatMessage(messages.title)}>
+      <ArticleContainer>
+        <ArticleHeader title={formatMessage(messages.title)} />
+        <Alert className={styles.notice} variant="info">
+          {formatMessage(messages.contact_me_on_sns)}
+          <br />
+          <FormattedMessage {...messages.contact_me_from_about} values={{
+            about: <Link to="/about">{formatMessage(messages.about)}</Link>,
+          }} />
+        </Alert>
+        <form onSubmit={onSubmit}>
+          <Form.Group className={styles.group}>
+            <Label required title={formatMessage(messages.name)}>
+              <Form.Control className={styles.input} inputMode="text" autoComplete="name" name="name" size="sm" required readOnly={readOnly} />
+            </Label>
+          </Form.Group>
+          <Form.Group className={styles.group}>
+            <Label title={formatMessage(messages.mail)}>
+              <Form.Control className={styles.input} inputMode="email" autoComplete="email" name="email" size="sm" readOnly={readOnly} />
+            </Label>
+          </Form.Group>
+          <Form.Group className={styles.group}>
+            <Label required title={formatMessage(messages.subject)}>
+              <Form.Control className={styles.input} inputMode="text" name="subject" size="sm" required readOnly={readOnly} />
+            </Label>
+          </Form.Group>
+          <Form.Group className={styles.group}>
+            <Label required title={formatMessage(messages.message)}>
+              <Form.Control className={styles.input} inputMode="text" name="body" as="textarea" cols={40} rows={10} required readOnly={readOnly} />
+            </Label>
+          </Form.Group>
+          <ReCaptcha action="mail" sitekey={siteKey} verifyCallback={setToken} />
+          <div className={styles.submission}>
+            {status === 'sent' ? (
+              <div className={styles.area}>
+                <FontAwesomeIcon className={styles.accepted} icon={faCheck} />
+                {formatMessage(messages.submission_accepted)}
+              </div>
+            ) : status === 'sending' ? (
+              <div className={styles.area}>
+                <FontAwesomeIcon className={styles.processing} icon={faCircleNotch} spin />
+                {formatMessage(messages.submission_processing)}
+              </div>
+            ) : (
+              <>
+                {status === 'error' ? (
+                  <div className={styles.area}>
+                    <FontAwesomeIcon className={styles.error} icon={faTimes} />
+                    {formatMessage(messages.submission_error)}
+                  </div>
+                ) : null}
+                <Button type="submit" variant="primary" disabled={!token}>
+                  {formatMessage(messages.send)}
+                </Button>
+              </>
+            )}
+          </div>
+        </form>
+      </ArticleContainer>
     </Metadata>
   )
 }

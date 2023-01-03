@@ -4,7 +4,6 @@ import { useIntl } from 'react-intl'
 
 import messages from './messages'
 
-import Container from 'components/Container'
 import ArticleCard from 'components/ArticleCard'
 import ArticleContainer from 'components/ArticleContainer'
 import CategoryIcon from 'components/CategoryIcon'
@@ -29,7 +28,7 @@ const Home: FunctionComponent<HomeProps> = ({
   }
 
   return (
-    <Container>
+    <>
       <ArticleContainer className={styles.container}>
         <SubHeader className={styles.header}>
           {formatMessage(messages.categories)}
@@ -58,7 +57,7 @@ const Home: FunctionComponent<HomeProps> = ({
         </ArticleContainer>
       ))}
       {children}
-    </Container>
+    </>
   )
 }
 

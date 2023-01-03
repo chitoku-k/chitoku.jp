@@ -6,7 +6,6 @@ import { useLocation } from '@gatsbyjs/reach-router'
 import messages from './messages'
 import * as styles from './styles.module.scss'
 
-import Container from 'components/Container'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
 import Metadata from 'components/Metadata'
@@ -46,41 +45,39 @@ const NotFound: FunctionComponent<NotFoundProps> = ({ contacts }) => {
 
   return (
     <Metadata title={formatMessage(messages.title)}>
-      <Container>
-        <ArticleContainer>
-          <ArticleHeader title={formatMessage(messages.title)} />
-          <p>
-            {formatMessage(messages.description)}
-            <br />
-            <FormattedMessage {...messages.requested} values={{
-              url: <code>{location.href}</code>,
+      <ArticleContainer>
+        <ArticleHeader title={formatMessage(messages.title)} />
+        <p>
+          {formatMessage(messages.description)}
+          <br />
+          <FormattedMessage {...messages.requested} values={{
+            url: <code>{location.href}</code>,
+          }} />
+        </p>
+        <p>
+          {formatMessage(messages.try)}
+        </p>
+        <ul className={styles.tryList}>
+          <li>
+            <FormattedMessage {...messages.go_to_home} values={{
+              home: <a href="/">{formatMessage(messages.home)}</a>,
             }} />
-          </p>
-          <p>
-            {formatMessage(messages.try)}
-          </p>
-          <ul className={styles.tryList}>
-            <li>
-              <FormattedMessage {...messages.go_to_home} values={{
-                home: <a href="/">{formatMessage(messages.home)}</a>,
-              }} />
+          </li>
+          <li>
+            <FormattedMessage {...messages.complain_to_administrator} values={{
+              administrator: <a href="/mail">{formatMessage(messages.administrator)}</a>,
+            }} />
+          </li>
+          <li>
+            {formatMessage(messages.give_up)}
+          </li>
+          {contacts.items.filter(service => service.primary).map(service => (
+            <li key={service.service}>
+              <Contact message={messages.follow_me_on} service={service} />
             </li>
-            <li>
-              <FormattedMessage {...messages.complain_to_administrator} values={{
-                administrator: <a href="/mail">{formatMessage(messages.administrator)}</a>,
-              }} />
-            </li>
-            <li>
-              {formatMessage(messages.give_up)}
-            </li>
-            {contacts.items.filter(service => service.primary).map(service => (
-              <li key={service.service}>
-                <Contact message={messages.follow_me_on} service={service} />
-              </li>
-            ))}
-          </ul>
-        </ArticleContainer>
-      </Container>
+          ))}
+        </ul>
+      </ArticleContainer>
     </Metadata>
   )
 }

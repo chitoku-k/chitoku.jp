@@ -1,5 +1,4 @@
 import type { FunctionComponent } from 'react'
-import { useContext } from 'react'
 import { Col } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
@@ -18,7 +17,6 @@ import {
   TumblrShareButton,
   TwitterShareButton,
 } from './buttons'
-import { MetadataContext } from 'components/Metadata'
 import NavItem from 'components/NavItem'
 import Link from 'components/Link'
 import SubHeader from 'components/SubHeader'
@@ -66,7 +64,6 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
 }) => {
   const { formatMessage, formatDate } = useIntl()
 
-  const { title } = useContext(MetadataContext)
   const {
     site,
     navigation,
@@ -92,9 +89,9 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
           {formatMessage(messages.share)}
         </SubHeader>
         <div className={styles.shareContainer}>
-          <TwitterShareButton title={title} url={url} />
+          <TwitterShareButton url={url} />
           <FacebookShareButton url={url} />
-          <PocketShareButton title={title} url={url} />
+          <PocketShareButton url={url} />
           <HatenaShareButton url={url} />
           <TumblrShareButton url={url} />
         </div>

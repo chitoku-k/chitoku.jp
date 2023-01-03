@@ -1,10 +1,7 @@
 import type { FunctionComponent } from 'react'
+import type { PageProps } from 'gatsby'
 import { graphql } from 'gatsby'
 
-import Layout from 'components/Layout'
-import Header from 'components/Header'
-import Navbar from 'components/Navbar'
-import Footer from 'components/Footer'
 import Home from 'components/Home'
 import ArticleContainer from 'components/ArticleContainer'
 import Metadata from 'components/Metadata'
@@ -17,12 +14,7 @@ import Pagination, {
   hasPreviousPage,
 } from 'components/Pagination'
 
-interface HomePageProps extends PageProps {
-  pageContext: {
-    page: Page
-  }
-  data: Queries.homeQuery
-}
+type HomePageProps = PageProps<Queries.homeQuery, { page: Page }>
 
 const HomePagination: FunctionComponent<{ page: Page }> = ({
   page,
@@ -75,16 +67,11 @@ const IndexPage: FunctionComponent<HomePageProps> = ({
   const next = hasNextPage(page) ? getNextPagePath(page) : null
 
   return (
-    <Layout>
-      <Metadata title={null} prev={prev} next={next}>
-        <Header />
-        <Navbar />
-        <Home {...data}>
-          <HomePagination page={page} />
-        </Home>
-        <Footer />
-      </Metadata>
-    </Layout>
+    <Metadata title={null} prev={prev} next={next}>
+      <Home {...data}>
+        <HomePagination page={page} />
+      </Home>
+    </Metadata>
   )
 }
 

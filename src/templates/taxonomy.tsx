@@ -1,15 +1,11 @@
 import type { FunctionComponent } from 'react'
+import type { PageProps } from 'gatsby'
 import { graphql } from 'gatsby'
 
-import Layout from 'components/Layout'
-import Header from 'components/Header'
-import Navbar from 'components/Navbar'
-import Footer from 'components/Footer'
-import Container from 'components/Container'
 import Article from 'components/Article'
 import ArticleContainer from 'components/ArticleContainer'
 import Metadata from 'components/Metadata'
-import type { ArticleCategoryItem, ArticleItem, ArticleTagItem } from 'components/Article'
+import type { ArticleCategoryItem, ArticleTagItem } from 'components/Article'
 import type { Page } from 'components/Pagination'
 import Pagination, {
   PaginationContainer,
@@ -19,20 +15,13 @@ import Pagination, {
   hasPreviousPage,
 } from 'components/Pagination'
 
-interface TaxonomyPageProps extends PageProps {
-  pageContext: {
-    category: ArticleCategoryItem | null
-    tag: ArticleTagItem | null
-    page: Page
-  }
-  data: {
-    articles: {
-      items: {
-        article: ArticleItem
-      }[]
-    }
-  }
+interface TaxonomyContext {
+  category: ArticleCategoryItem | null
+  tag: ArticleTagItem | null
+  page: Page
 }
+
+type TaxonomyPageProps = PageProps<Queries.itemsQuery, TaxonomyContext>
 
 export const pageQuery = graphql`
   query items($ids: [ String! ]) {
@@ -77,19 +66,12 @@ const TaxonomyPage: FunctionComponent<TaxonomyPageProps> = ({
   const next = hasNextPage(page) ? getNextPagePath(page) : null
 
   return (
-    <Layout>
-      <Metadata title={title} thumbnail={category?.thumbnail} prev={prev} next={next}>
-        <Header />
-        <Navbar />
-        <Container>
-          {items.map(({ article }) => (
-            <Article key={article.path} article={article} prev={null} next={null} />
-          ))}
-          <TaxonomyPagination page={page} />
-        </Container>
-        <Footer />
-      </Metadata>
-    </Layout>
+    <Metadata title={title} thumbnail={category?.thumbnail} prev={prev} next={next}>
+      {items.map(({ article }) => (
+        <Article key={article.path} article={article} prev={null} next={null} />
+      ))}
+      <TaxonomyPagination page={page} />
+    </Metadata>
   )
 }
 
