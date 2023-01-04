@@ -1,8 +1,8 @@
 import type { FormEvent, FunctionComponent, ReactNode } from 'react'
 import { useCallback, useEffect, useState } from 'react'
-import { Alert, Button, Form } from 'react-bootstrap'
+import { Alert, Button, Card, Form } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
-import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3'
+import Turnstile from 'react-turnstile'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faCircleNotch, faTimes } from '@fortawesome/free-solid-svg-icons'
 
@@ -57,40 +57,31 @@ const Mail: FunctionComponent = () => {
   const [ readOnly, setReadOnly ] = useState(false)
 
   const siteKey = process.env.GATSBY_MAIL_SITE_KEY
+  if (!siteKey) {
+    throw new Error('Invalid env')
+  }
 
   const onSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
     const form = new FormData(e.currentTarget)
-    form.append('g-recaptcha-response', token)
 
     e.preventDefault()
     e.stopPropagation()
 
     setStatus('sending')
-    send(form).then(
-      () => setStatus('sent'),
-      () => setStatus('error'),
-    )
-  }, [ token ])
-
-  useEffect(() => {
-    if (!siteKey) {
-      throw new Error('Invalid env')
-    }
-
-    loadReCaptcha(siteKey)
-    return () => {
-      delete window.grecaptcha
-      document.querySelector('.grecaptcha-badge')?.parentElement?.remove()
-    }
-  }, [ siteKey ])
+    send(form)
+      .then(
+        () => setStatus('sent'),
+        () => setStatus('error'),
+      )
+      .finally(() => {
+        setToken('')
+        window.turnstile.reset()
+      })
+  }, [])
 
   useEffect(() => {
     setReadOnly(status === 'sending' || status === 'sent')
   }, [ status ])
-
-  if (!siteKey) {
-    throw new Error('Invalid env')
-  }
 
   return (
     <Metadata title={formatMessage(messages.title)}>
@@ -124,7 +115,11 @@ const Mail: FunctionComponent = () => {
               <Form.Control className={styles.input} inputMode="text" name="body" as="textarea" cols={40} rows={10} required readOnly={readOnly} />
             </Label>
           </Form.Group>
-          <ReCaptcha action="mail" sitekey={siteKey} verifyCallback={setToken} />
+          <Card className={styles.group}>
+            <Card.Body className={styles.verification}>
+              <Turnstile responseFieldName="g-recaptcha-response" action="mail" sitekey={siteKey} onVerify={setToken} autoResetOnExpire />
+            </Card.Body>
+          </Card>
           <div className={styles.submission}>
             {status === 'sent' ? (
               <div className={styles.area}>

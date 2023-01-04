@@ -50,6 +50,15 @@
   margin-bottom: 5px;
 }
 
+.verification {
+  min-height: 100px;
+  padding-bottom: 8px;
+
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+}
+
 .submission {
   text-align: center;
 }
