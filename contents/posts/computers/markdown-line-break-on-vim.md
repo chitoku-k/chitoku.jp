@@ -34,4 +34,4 @@ let g:extra_whitespace_ignored_filetypes = [
 ## 脚注
 
 [^1]: [syntax - Vim日本語ドキュメント](https://vim-jp.org/vimdoc-ja/syntax.html#conceal)
-[^2]: [usr\_41 - Vim日本語ドキュメント](https://vim-jp.org/vimdoc-ja/usr_41.html#write-filetype-plugin)
+[^2]: [usr\_51 - Vim日本語ドキュメント](https://vim-jp.org/vimdoc-ja/usr_51.html#write-filetype-plugin)
