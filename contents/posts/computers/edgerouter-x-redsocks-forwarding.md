@@ -212,10 +212,10 @@ $ commit; save
 
 ### TCP
 
-TCP の設定のみの場合は `curl` や `ssh` などが IP アドレスによるホスト指定で疎通することや、TCP による `dig` で名前解決が行えることを確認します。
+TCP の設定のみの場合は `curl` や `ssh` などが IP アドレスによる指定で疎通することや、TCP による `dig` で名前解決が行えることを確認します。
 
 ```bash
-$ curl -H 'private.example.com' 'http://198.51.100.1'
+$ curl -H 'Host: private.example.com' 'http://198.51.100.1'
 ```
 
 ```bash
