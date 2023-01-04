@@ -7,7 +7,7 @@ tags:
 ---
 ## 概要
 
-[EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) にはビルトインの DDNS 機能[^1]が搭載されていますがドキュメントは具体的な設定例を掲載していません。
+[EdgeRouter X](https://store.ui.com/collections/routing-switching/products/edgerouter-x) にはビルトインの DDNS 機能[^1]が搭載されていますがドキュメントは具体的な設定例を掲載していません。
 設定を調整してみたところ EdgeRouter でも Cloudflare の DNS サーバーの AAAA レコードが自動更新されるような設定ができたのでご紹介します。
 
 ## 環境
@@ -106,4 +106,4 @@ $ sudo ddclient -verbose -force -file /etc/ddclient/ddclient_eth0.conf
 
 [^1]: [EdgeRouter - Built-in Dynamic DNS – Ubiquiti Networks Support and Help Center](https://help.ubnt.com/hc/en-us/articles/204952234-EdgeRouter-Built-in-Dynamic-DNS)
 [^2]: [EdgeRouter - Add Debian Packages to EdgeOS – Ubiquiti Networks Support and Help Center](https://help.ubnt.com/hc/en-us/articles/205202560-EdgeRouter-Add-Debian-Packages-to-EdgeOS)
-[^3]: [Where do I find my Cloudflare API key? – Cloudflare Support](https://support.cloudflare.com/hc/en-us/articles/200167836-Where-do-I-find-my-Cloudflare-API-key-)
+[^3]: [Get API keys (legacy) · Cloudflare Fundamentals docs](https://developers.cloudflare.com/fundamentals/api/get-started/keys/)
