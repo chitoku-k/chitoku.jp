@@ -142,10 +142,10 @@ EdgeOS の設定と strongSwan の設定で記述方法が異なる部分があ�
 たとえば、EdgeOS では IKE の DH グループの番号を `14` のように指定しますが、
 strongSwan ではキーワードを使用して `modp2048` のように指定します。
 
-strongSwan の Wiki に暗号スイートの一覧[^3]が掲載されているのでこれを参照するのが吉です。
+strongSwan のドキュメントに暗号スイートの一覧[^3]が掲載されているのでこれを参照するのが吉です。
 
 ## 脚注
 
 [^1]: [固定回線でも「ギガ不足」におびえる時代が到来か、トラフィック急増により現場で起きている悲劇とは (1/2)：ものになるモノ、ならないモノ（81） - ＠IT](https://www.atmarkit.co.jp/ait/articles/1902/19/news013.html)
 [^2]: [「超軽量」VPNを試してみよう、フレッツIPv6オプションで (1/2)：羽ばたけ！ネットワークエンジニア（13） - ＠IT](https://www.atmarkit.co.jp/ait/articles/1902/25/news018.html)
-[^3]: [IKEv2 Cipher Suites - strongSwan](https://wiki.strongswan.org/projects/strongswan/wiki/IKEv2CipherSuites)
+[^3]: [IKEv2 Cipher Suites :: strongSwan Documentation](https://docs.strongswan.org/docs/5.9/config/IKEv2CipherSuites.html)
