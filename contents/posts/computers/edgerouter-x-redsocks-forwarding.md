@@ -7,11 +7,11 @@ tags:
 ---
 ## 概要
 
-SOCKS プロキシーは OpenSSH などで手軽に建てられるプロキシーの一つですが、[redsocks](https://github.com/darkk/redsocks) を使用することで TCP のパケットが透過的に SOCKS プロキシーを経由するように設定することができます。今回は [EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) に redsocks をインストールし、LAN 内のコンピューターから特定の宛先への TCP 通信と名前解決が透過的に SOCKS プロキシーを経由するように設定してみます。
+SOCKS プロキシーは OpenSSH などで手軽に建てられるプロキシーの一つですが、[redsocks](https://github.com/darkk/redsocks) を使用することで TCP のパケットが透過的に SOCKS プロキシーを経由するように設定することができます。今回は [EdgeRouter X](https://store.ui.com/collections/routing-switching/products/edgerouter-x) に redsocks をインストールし、LAN 内のコンピューターから特定の宛先への TCP 通信と名前解決が透過的に SOCKS プロキシーを経由するように設定してみます。
 
 ## redsocks とは
 
-redsocks は TCP パケットを受け取り、SOCKS/HTTPS プロキシーを通過させて返すソフトウェアです。iptables の [REDIRECT](http://ipset.netfilter.org/iptables-extensions.man.html#lbDK) や [DNAT](http://ipset.netfilter.org/iptables-extensions.man.html#lbCU) と組み合わせて、redsocks の動作しているポートにプロキシーを通過させたいパケットを転送して使用します。このとき、iptables が REDIRECT や DNAT で付け替える前の本来の宛先アドレスや宛先ポートは、`c¦getsockopt()` でソケットを取得する際の `c¦SO_ORIGINAL_DST` というオプションによって取得されるため[^1]、iptables のルールを設定するホストと redsocks が動作するホストは同一のマシンである必要があります。
+redsocks は TCP パケットを受け取り、SOCKS/HTTPS プロキシーを通過させて返すソフトウェアです。iptables の [REDIRECT](https://ipset.netfilter.org/iptables-extensions.man.html#lbDK) や [DNAT](https://ipset.netfilter.org/iptables-extensions.man.html#lbCU) と組み合わせて、redsocks の動作しているポートにプロキシーを通過させたいパケットを転送して使用します。このとき、iptables が REDIRECT や DNAT で付け替える前の本来の宛先アドレスや宛先ポートは、`c¦getsockopt()` でソケットを取得する際の `c¦SO_ORIGINAL_DST` というオプションによって取得されるため[^1]、iptables のルールを設定するホストと redsocks が動作するホストは同一のマシンである必要があります。
 
 ## TCP の場合
 
@@ -238,5 +238,5 @@ $ dig 'private.example.com' @198.51.100.254
 
 ## 脚注
 
-[^1]: [iptablesでREDIRECTする前のポート番号を取得する - ももいろテクノロジー](http://inaz2.hatenablog.com/entry/2016/03/31/192037)
-[^2]: [Releases · darkk/redsocks · GitHub](https://github.com/darkk/redsocks/releases)
+[^1]: [iptablesでREDIRECTする前のポート番号を取得する - ももいろテクノロジー](https://inaz2.hatenablog.com/entry/2016/03/31/192037)
+[^2]: [Tags · darkk/redsocks · GitHub](https://github.com/darkk/redsocks/tags)
