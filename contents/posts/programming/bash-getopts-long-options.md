@@ -343,7 +343,7 @@ Bash のビルトインコマンドや各種コマンドがまとまったチー
 ## 脚注
 
 [^1]: [Bourne Shell Builtins (Bash Reference Manual)](https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Builtins.html#index-getopts)
-[^2]: [bash によるオプション解析 - Qiita](https://qiita.com/b4b4r07/items/dcd6be0bb9c9185475bb)
+[^2]: [bash によるオプション解析 - Qiita](https://web.archive.org/web/20211216092819/https://qiita.com/b4b4r07/items/dcd6be0bb9c9185475bb)（Wayback Machine）
 [^3]: [Bashでちょっと凝ったオプションの解析をする - ねこのて](https://dojineko.hateblo.jp/entry/2016/06/30/225113)
 [^4]: [shell scriptでlong optionを処理する │ うしねずみの技術メモ](https://usinezumi.com/blog/2016/10/16/304/)
 [^5]: [bashでロングオプションとショートオプションの両方に対応する - Qiita](https://qiita.com/akameco/items/0e932d8ec372b87ccb34)
