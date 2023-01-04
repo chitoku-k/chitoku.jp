@@ -5,7 +5,7 @@ category: プログラミング
 tags:
   - Go
 ---
-Go でテストを記述する際、モックの生成にはしばしば [GoMock](https://pkg.go.dev/github.com/golang/mock/gomock) が使われますが、引数の検証に使う [Matcher](https://pkg.go.dev/github.com/golang/mock/gomock?tab=doc#Matcher) は標準では限られたもののみが用意されています。
+Go でテストを記述する際、モックの生成にはしばしば [GoMock](https://pkg.go.dev/github.com/golang/mock/gomock) が使われますが、引数の検証に使う [Matcher](https://pkg.go.dev/github.com/golang/mock/gomock#Matcher) は標準では限られたもののみが用意されています。
 
 たとえば、以下のテストの 12 行目では `go¦gomock.Eq(...)` を使って `go¦api.Client` に対して `go¦Get("/v1/info")` という呼び出しが 1 回されることを期待しています。
 
@@ -291,7 +291,7 @@ FAIL
 
 ## 脚注
 
-[^1]: 本来は単に実装側で [Client.PostForm(string, url.Values)](https://pkg.go.dev/net/http?tab=doc#Client.PostForm) を使えば済みます
-[^2]: [func Not(interface{}) Matcher](https://pkg.go.dev/github.com/golang/mock/gomock?tab=doc#Not)
-[^3]: [GotFormatter](https://pkg.go.dev/github.com/golang/mock/gomock?tab=doc#GotFormatter)
-[^4]: [func GotFormatterAdapter(GotFormatter, Matcher) Matcher](https://pkg.go.dev/github.com/golang/mock/gomock?tab=doc#GotFormatterAdapter)
+[^1]: 本来は単に実装側で [Client.PostForm(string, url.Values)](https://pkg.go.dev/net/http#Client.PostForm) を使えば済みます
+[^2]: [func Not(interface{}) Matcher](https://pkg.go.dev/github.com/golang/mock/gomock#Not)
+[^3]: [GotFormatter](https://pkg.go.dev/github.com/golang/mock/gomock#GotFormatter)
+[^4]: [func GotFormatterAdapter(GotFormatter, Matcher) Matcher](https://pkg.go.dev/github.com/golang/mock/gomock#GotFormatterAdapter)

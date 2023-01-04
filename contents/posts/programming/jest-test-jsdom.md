@@ -6,6 +6,25 @@ tags:
   - JavaScript
   - Node.js
 ---
+<div class="alert alert-danger text-center">
+
+この記事はもう古くなってしまいました。  
+Jest v28 以降では、下記のように JSDOM のオプションを指定することができるようになっています。
+
+<div class="text-start">
+
+```javascript
+/**
+ * @jest-environment jsdom
+ * @jest-environment-options {"url": "https://example.com/"}
+ */
+it('detects PC', () => {
+  expect(location.hostname).toBe('example.com');
+});
+```
+</div>
+</div>
+
 ## 目的
 
 Node.js におけるテストで [Jest](https://jestjs.io/) を使用する場合、DOM API が関連するテストは [JSDOM](https://github.com/jsdom/jsdom) の実装によって実行されます。
