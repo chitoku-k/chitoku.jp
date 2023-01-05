@@ -2,7 +2,7 @@ import type { FunctionComponent } from 'react'
 import { useEffect, useRef } from 'react'
 import type { TweetProps } from 'react-twitter-widgets'
 import { Tweet } from 'react-twitter-widgets'
-import { useMedia } from 'use-media'
+import { useMedia } from 'react-use'
 import clsx from 'clsx'
 
 import * as styles from './styles.module.scss'
@@ -36,7 +36,7 @@ const TwitterTweet: FunctionComponent<TwitterTweetProps> = ({
   ...rest
 }) => {
   options.lang = 'ja'
-  options.theme = useMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light'
+  options.theme = useMedia('(prefers-color-scheme: dark)', false) ? 'dark' : 'light'
 
   const ref = useRef<HTMLDivElement>(null)
 
