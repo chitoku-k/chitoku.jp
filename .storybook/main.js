@@ -13,14 +13,13 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/preset-scss',
-    'storybook-addon-gatsby',
   ],
+  framework: '@storybook/react',
   core: {
     builder: 'webpack5',
   },
-  babel: options => {
-    options.plugins.push([ 'react-intl-auto', { removePrefix: 'src/' } ],)
-    return options
+  features: {
+    babelModeV7: true,
   },
   webpackFinal: config => {
     config.module.rules.push({
@@ -30,6 +29,18 @@ module.exports = {
         { loader: 'yaml-flat-loader' },
       ],
     })
+
+    const js = config.module.rules.find(({ test }) => test.test('.js'))
+    js.exclude = /node_modules\/(?!(gatsby|gatsby-script)\/)/u
+
+    const babel = js.use.find(({ loader }) => loader.includes('babel-loader'))
+    babel.options.plugins.push([
+      require.resolve('babel-plugin-remove-graphql-queries'),
+      {
+        stage: config.mode === 'development' ? 'develop-html' : 'build-html',
+        staticQueryDir: 'page-data/sq/d',
+      },
+    ])
 
     const svg = config.module.rules.find(({ test }) => test.test('.svg'))
     svg.exclude = /\.svg$/u
@@ -71,6 +82,7 @@ module.exports = {
       ],
     })
 
+    config.resolve.fallback.fs = false
     config.resolve.fallback.path = require.resolve('path-browserify')
 
     config.resolve.plugins = [
