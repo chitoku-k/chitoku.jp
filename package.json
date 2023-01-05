@@ -5,7 +5,7 @@
   "description": "ちとくのホームページ",
   "devDependencies": {
     "@babel/core": "^7.20.7",
-    "@babel/plugin-transform-typescript": "^7.20.7",
+    "@babel/preset-typescript": "^7.18.6",
     "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
@@ -14,6 +14,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@gatsbyjs/reach-router": "^2.0.0",
     "@rstacruz/gatsby-remark-component": "^2.0.0",
+    "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-essentials": "^6.5.15",
     "@storybook/addon-links": "^6.5.15",
     "@storybook/builder-webpack5": "^6.5.15",
@@ -136,7 +137,6 @@
     "plugins/historia-feed-plugin",
     "plugins/historia-remark-plugin",
     "plugins/historia-soarer-update-plugin",
-    "plugins/historia-storybook-plugin",
     "plugins/historia-taxonomy-plugin"
   ]
 }

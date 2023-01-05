@@ -1,12 +1,12 @@
 {
   "compact": false,
   "presets": [
+    ["@babel/preset-typescript"],
     ["gatsby", {
       "reactRuntime": "automatic"
     }]
   ],
   "plugins": [
-    ["@babel/plugin-transform-typescript"],
     ["react-intl-auto", { "removePrefix": "src/" }]
   ]
 }

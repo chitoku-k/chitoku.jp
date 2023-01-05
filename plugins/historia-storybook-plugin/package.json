@@ -1,7 +1,0 @@
-{
-  "name": "historia-storybook-plugin",
-  "version": "1.0.0",
-  "dependencies": {
-    "storybook-addon-gatsby": "^0.0.5"
-  }
-}
