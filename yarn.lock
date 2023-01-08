@@ -9752,14 +9752,6 @@ gatsby-plugin-algolia@^1.0.2:
     algoliasearch "^4.9.1"
     lodash.chunk "^4.2.0"
 
-gatsby-plugin-catch-links@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-5.3.0.tgz#55f6069850397769e910df942ef5202484c927e6"
-  integrity sha512-/ErNP1T1mJIkpZEgjO9mf3j6YieQWH19xmVmuXIB40Jg5pz23RERi0Sr/TdgQcWUTtY3sHF4W8xdghhd5O94ZQ==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-    escape-string-regexp "^1.0.5"
-
 gatsby-plugin-eslint@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-4.0.3.tgz#9b7145ae5810e76f6124324065b29a5f6bcc5551"

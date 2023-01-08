@@ -111,6 +111,7 @@ const createTaxonomies = async ({
           tag: null,
           ids: page.flatMap(x => x.id),
           page: {
+            base: category.path,
             current: num + 1,
             total: pages.length,
           },
@@ -132,6 +133,7 @@ const createTaxonomies = async ({
           tag,
           ids: page.flatMap(x => x.id),
           page: {
+            base: `/tag/${tag.slug}`,
             current: num + 1,
             total: pages.length,
           },

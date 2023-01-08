@@ -55,6 +55,7 @@ const createHome = async ({
       context: {
         ids: page.flatMap(x => x.article.id),
         page: {
+          base: '/',
           current: num + 1,
           total: pages.length,
         },

@@ -31,6 +31,7 @@ export default meta
 export const Default = Template
 Default.args = {
   page: {
+    base: '/',
     total: 5,
     current: 3,
   },

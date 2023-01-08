@@ -2,6 +2,7 @@ import * as path from 'path'
 
 export interface Paginatable {
   page: {
+    base: string
     current: number
     total: number
   }

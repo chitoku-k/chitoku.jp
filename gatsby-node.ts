@@ -46,9 +46,6 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
       }),
     ],
     resolve: {
-      fallback: {
-        path: path.resolve('node_modules/path-browserify'),
-      },
       plugins: [
         new TsconfigPathsPlugin(),
       ],
