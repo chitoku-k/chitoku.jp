@@ -1,10 +1,12 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useContext, useEffect, useRef } from 'react'
 import { Container, Nav, Popover, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useIntl } from 'react-intl'
 import type { SearchBoxProvided } from 'react-instantsearch-core'
 import { connectSearchBox } from 'react-instantsearch-dom'
+
+import { SearchContext } from 'components/Search'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
@@ -16,7 +18,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
 }) {
   const { formatMessage } = useIntl()
 
-  const [ text, setText ] = useState(null as string | null)
+  const { query, setQuery } = useContext(SearchContext)
   const input = useRef<HTMLInputElement>(null)
 
   const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
@@ -24,12 +26,13 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
   }, [])
 
   const onChange = useCallback((e: React.FormEvent<HTMLInputElement>) => {
-    setText(e.currentTarget.value)
+    setQuery(e.currentTarget.value)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
-    refine(text)
-  }, [ text, refine ])
+    refine(query)
+  }, [ query, refine ])
 
   useEffect(() => {
     if (search && input.current) {
@@ -43,7 +46,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
         <Container className={styles.mobileContainer}>
           <Container className={styles.mobile} role="search" as="form" onSubmit={onSubmit}>
             <Row className={styles.mobileRow} xs="auto">
-              <input className={styles.mobileInput} type="search" ref={input} value={text ?? ''} placeholder={formatMessage(messages.search)} onChange={onChange} />
+              <input className={styles.mobileInput} type="search" ref={input} value={query ?? ''} placeholder={formatMessage(messages.search)} onChange={onChange} />
               <div className={styles.mobileCancelContainer} onClick={closeSearch}>
                 {formatMessage(messages.cancel)}
               </div>
@@ -52,7 +55,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
         </Container>
       ) : null}
       <Nav className={styles.desktop} role="search" as="form" onSubmit={onSubmit}>
-        <input className={styles.desktopInput} type="search" value={text ?? ''} placeholder={formatMessage(messages.search)} onChange={onChange} />
+        <input className={styles.desktopInput} type="search" value={query ?? ''} placeholder={formatMessage(messages.search)} onChange={onChange} />
         <noscript className={styles.unsupportedNotice}>
           <Popover id="search-form-noscript" placement="bottom">
             {formatMessage(messages.enable_javascript)}

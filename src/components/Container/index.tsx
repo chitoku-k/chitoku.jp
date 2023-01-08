@@ -1,39 +1,38 @@
-import type { ReactNode } from 'react'
-import { memo } from 'react'
+import type { FunctionComponent, ReactNode } from 'react'
+import { memo, useContext } from 'react'
 import { Container as BootstrapContainer, Col, Row } from 'react-bootstrap'
 import { useLocation } from '@gatsbyjs/reach-router'
-import type { StateResultsProvided } from 'react-instantsearch-core'
-import { connectStateResults } from 'react-instantsearch-dom'
 import clsx from 'clsx'
 
 import * as styles from './styles.module.scss'
 
 import Sidebar from 'components/Sidebar'
+import { SearchContext } from 'components/Search'
 import SearchResult from 'components/SearchResult'
 
 const MemoizedSidebar = memo(Sidebar, (prev, next) => prev.location.pathname === next.location.pathname)
 MemoizedSidebar.displayName = 'MemoizedSidebar'
 
-const Container = connectStateResults<ContainerProps>(function Container({
-  searchState,
+const Container: FunctionComponent<ContainerProps> = ({
   children,
   sidebar,
-}) {
+}) => {
   const location = useLocation()
+  const { query } = useContext(SearchContext)
 
   return (
     <BootstrapContainer className={styles.container}>
       <Row className={styles.row}>
         <Col className={clsx(styles.col, sidebar && styles.sidebar)}>
-          {searchState.query ? <SearchResult /> : children}
+          {query ? <SearchResult /> : children}
         </Col>
         {sidebar ? <MemoizedSidebar location={location} /> : null}
       </Row>
     </BootstrapContainer>
   )
-})
+}
 
-interface ContainerProps extends StateResultsProvided<unknown> {
+interface ContainerProps {
   children?: ReactNode
   sidebar: boolean
 }
