@@ -34,7 +34,6 @@ const config: GatsbyConfig = {
         ],
       },
     },
-    { resolve: 'gatsby-plugin-catch-links' },
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
