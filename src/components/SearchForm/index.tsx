@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import { Container, Nav, Popover, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -6,7 +6,7 @@ import { useIntl } from 'react-intl'
 import type { SearchBoxProvided } from 'react-instantsearch-core'
 import { connectSearchBox } from 'react-instantsearch-dom'
 
-import { SearchContext } from 'components/Search'
+import { useSearch } from 'components/Search'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
@@ -18,7 +18,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
 }) {
   const { formatMessage } = useIntl()
 
-  const { query, setQuery } = useContext(SearchContext)
+  const { query, setQuery } = useSearch()
   const input = useRef<HTMLInputElement>(null)
 
   const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {

@@ -1,15 +1,17 @@
 import type { FunctionComponent, ReactNode } from 'react'
-import { useMemo } from 'react'
+import { useContext, useMemo } from 'react'
 import { createContext, useState } from 'react'
 import { InstantSearch } from 'react-instantsearch-dom'
 import algoliasearch from 'algoliasearch'
 
-export const SearchContext = createContext<SearchState>({
+const SearchContext = createContext<SearchState>({
   query: null,
   setQuery: () => {
     throw new Error('setQuery is not provided')
   },
 })
+
+export const useSearch = (): SearchState => useContext(SearchContext)
 
 const Search: FunctionComponent<SearchProps> = ({
   children,
