@@ -12,9 +12,6 @@ const config: GatsbyConfig = {
     siteUrl: process.env.HISTORIA_URL,
     title: description,
   },
-  flags: {
-    FAST_DEV: true,
-  },
   graphqlTypegen: {
     generateOnBuild: true,
     documentSearchPaths: [ './gatsby-node.ts' ],
