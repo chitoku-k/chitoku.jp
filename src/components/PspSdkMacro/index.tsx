@@ -1,12 +1,11 @@
 import type { FunctionComponent, ReactNode } from 'react'
-import { useContext } from 'react'
 import clsx from 'clsx'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-c'
 
 import * as styles from './styles.module.scss'
 
-import { ArticleContext } from 'components/Article'
+import { useArticle } from 'components/Article'
 
 const indentationWidth = 4
 const linebreakThreshold = 2
@@ -18,7 +17,7 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
   children,
   name: macroName,
 }) => {
-  const article = useContext(ArticleContext)
+  const article = useArticle()
   const def = article.attributes.macros?.find(x => x.name === macroName)
   if (!def) {
     return null

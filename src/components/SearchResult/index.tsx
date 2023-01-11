@@ -1,5 +1,5 @@
 import type { FunctionComponent, MouseEvent } from 'react'
-import { useCallback, useContext } from 'react'
+import { useCallback } from 'react'
 import { FormattedMessage, useIntl } from 'react-intl'
 import type { Hit, StateResultsProvided } from 'react-instantsearch-core'
 import { Hits, PoweredBy, connectStateResults } from 'react-instantsearch-dom'
@@ -13,7 +13,7 @@ import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
 import type { ArticleCategoryItem, ArticleTagItem } from 'components/Article'
 import Link from 'components/Link'
-import { SearchContext } from 'components/Search'
+import { useSearch } from 'components/Search'
 
 const SearchHit: FunctionComponent<SearchHitProps<SearchDocument>> = ({
   hit: {
@@ -25,7 +25,7 @@ const SearchHit: FunctionComponent<SearchHitProps<SearchDocument>> = ({
   },
 }) => {
   const { formatMessage } = useIntl()
-  const { setQuery } = useContext(SearchContext)
+  const { setQuery } = useSearch()
   const handleClick = useCallback((e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
 

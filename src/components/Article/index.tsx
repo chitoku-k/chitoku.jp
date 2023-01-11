@@ -1,5 +1,5 @@
 import type { FunctionComponent, ReactNode } from 'react'
-import { createContext } from 'react'
+import { createContext, useContext } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
 import { useIntl } from 'react-intl'
 
@@ -16,7 +16,7 @@ import { PaginationContainer, SimplePagination } from 'components/Pagination'
 
 export const getClassNameFromPath = (path: string): string => `page${path.replace(/[/]/ug, '-').replace(/-$/u, '')}`
 
-export const ArticleContext = createContext<ArticleItem>({
+const ArticleContext = createContext<ArticleItem>({
   path: '',
   attributes: {
     title: '',
@@ -30,6 +30,8 @@ export const ArticleContext = createContext<ArticleItem>({
   },
   excerpted: false,
 })
+
+export const useArticle = (): ArticleItem => useContext(ArticleContext)
 
 const Article: FunctionComponent<ArticleProps> = ({
   children,

@@ -1,5 +1,5 @@
 import type { FunctionComponent, ReactNode } from 'react'
-import { memo, useContext } from 'react'
+import { memo } from 'react'
 import { Container as BootstrapContainer, Col, Row } from 'react-bootstrap'
 import { useLocation } from '@gatsbyjs/reach-router'
 import clsx from 'clsx'
@@ -7,7 +7,7 @@ import clsx from 'clsx'
 import * as styles from './styles.module.scss'
 
 import Sidebar from 'components/Sidebar'
-import { SearchContext } from 'components/Search'
+import { useSearch } from 'components/Search'
 import SearchResult from 'components/SearchResult'
 
 const MemoizedSidebar = memo(Sidebar, (prev, next) => prev.location.pathname === next.location.pathname)
@@ -18,7 +18,7 @@ const Container: FunctionComponent<ContainerProps> = ({
   sidebar,
 }) => {
   const location = useLocation()
-  const { query } = useContext(SearchContext)
+  const { query } = useSearch()
 
   return (
     <BootstrapContainer className={styles.container}>
