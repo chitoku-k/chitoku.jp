@@ -1,13 +1,9 @@
 @import "src/styles/modules";
 
-.result-container {
-  :global {
-    .ais-Hits-list {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-  }
+.status {
+  display: block;
+  height: 30px;
+  margin: 60px auto 40px;
 }
 
 .result-header {
@@ -16,23 +12,18 @@
     align-items: center;
     justify-content: space-between;
 
-    :global {
-      .ais-PoweredBy {
-        display: inline-flex;
-        align-items: center;
-        font-size: 10pt;
-        font-weight: normal;
+    .logo {
+      width: 200px;
 
-        .ais-PoweredBy-text {
-          margin-right: 5px;
-        }
+      @include media-breakpoint-down(md) {
+        width: 150px;
       }
     }
   }
 }
 
 .hit-container {
-  + li {
+  + & {
     margin-top: 25px;
   }
 
@@ -45,6 +36,7 @@
 
   p {
     margin-top: 4px;
+    margin-bottom: 0;
     font-size: 95%;
     line-height: 1.6;
   }

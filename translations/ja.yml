@@ -52,18 +52,18 @@ components:
   PspErrorCodes:
     description: 説明
     error_code: エラー番号
-  SearchForm:
-    cancel: キャンセル
-    enable_javascript: 検索を利用するためには、JavaScript の設定を有効にしてください
-    search: 検索
-  SearchResult:
-    breadcrumb_category: 'https://chitoku.jp › {category}'
-    breadcrumb_path: 'https://chitoku.jp{path}'
+  Search:
+    breadcrumb_category: '{url} › {category}'
+    breadcrumb_path: '{url}{path}'
     how_to_search: 検索したいキーワードを入力してください。
     not_found: '{text} を含む記事が見つかりませんでした。'
     not_found_hints: 記事のタイトル、カテゴリー、タグ、本文冒頭のみが検索の対象です。
     title: 検索
     title_text: '検索結果: {text}'
+  SearchForm:
+    cancel: キャンセル
+    enable_javascript: 検索を利用するためには、JavaScript の設定を有効にしてください
+    search: 検索
   Sidebar:
     facebook: Facebook
     hatena: はてなブックマーク

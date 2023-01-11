@@ -9,7 +9,7 @@ import Container from 'components/Container'
 import Header from 'components/Header'
 import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
-import Search from 'components/Search'
+import { SearchProvider } from 'components/Search'
 
 export const onClientEntry: GatsbyBrowser['onClientEntry'] = () => {
   Prism.manual = true
@@ -35,8 +35,8 @@ export const wrapPageElement: GatsbyBrowser<unknown, Context>['wrapPageElement']
 
 export const wrapRootElement: GatsbyBrowser['wrapRootElement'] = ({ element }) => (
   <IntlProvider locale="ja" messages={messages}>
-    <Search>
+    <SearchProvider>
       {element}
-    </Search>
+    </SearchProvider>
   </IntlProvider>
 )
