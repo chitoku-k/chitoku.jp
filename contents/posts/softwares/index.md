@@ -80,7 +80,7 @@ git、kubectl、systemctl、docker コマンドなどの補完を行う際に、
 
 ### [![edgerouter-exporter](../media/software_icon.png)edgerouter-exporter](https://github.com/chitoku-k/edgerouter-exporter)
 
-Ubiquiti 社のルーター [EdgeRouter](https://www.ui.com/edgemax/edgerouter/) の DDNS、ロードバランサー、PPPoE セッションなどの情報を Prometheus のメトリクスとして出力します。
+Ubiquiti 社のルーター [EdgeRouter](https://store.ui.com/collections/routing-switching/products/edgerouter-x) の DDNS、ロードバランサー、PPPoE セッションなどの情報を Prometheus のメトリクスとして出力します。
 
 利用技術:
 
@@ -91,7 +91,7 @@ Ubiquiti 社のルーター [EdgeRouter](https://www.ui.com/edgemax/edgerouter/)
 
 ### [![serde\_vici](../media/software_icon.png)serde\_vici](https://github.com/chitoku-k/serde-vici)
 
-IPsec VPN の strongSwan を設定、監視、制御する charon と対話するために利用する [VICI](https://docs.strongswan.org/strongswan-docs/5.9/plugins/vici.html) プロトコルの形式にシリアライズおよびデシリアライズする [Serde](https://serde.rs/) ベースの crate です。
+IPsec VPN の strongSwan を設定、監視、制御する charon と対話するために利用する [VICI](https://docs.strongswan.org/docs/5.9/plugins/vici.html) プロトコルの形式にシリアライズおよびデシリアライズする [Serde](https://serde.rs/) ベースの crate です。
 
 利用技術:
 
@@ -102,7 +102,7 @@ IPsec VPN の strongSwan を設定、監視、制御する charon と対話す�
 
 ### [![rsvici](../media/software_icon.png)rsvici](https://github.com/chitoku-k/rsvici)
 
-IPsec VPN の strongSwan を設定、監視、制御する charon と [VICI](https://docs.strongswan.org/strongswan-docs/5.9/plugins/vici.html) プロトコルを利用して対話するための [Tokio](https://tokio.rs/) ベースのクライアントライブラリーです。
+IPsec VPN の strongSwan を設定、監視、制御する charon と [VICI](https://docs.strongswan.org/docs/5.9/plugins/vici.html) プロトコルを利用して対話するための [Tokio](https://tokio.rs/) ベースのクライアントライブラリーです。
 
 利用技術:
 
@@ -164,7 +164,7 @@ PHP で DB からデータを取得する際に SQL の `OFFSET` 句を利用せ
 
 ### [![zsh-togglecursor](../media/software_icon.png)zsh-togglecursor](https://github.com/chitoku-k/zsh-togglecursor)
 
-[Zsh Line Editor](http://zsh.sourceforge.net/Guide/zshguide04.html) のキーバインドで `vi` モードを選択した際に、ノーマルモードと挿入モードが切り替わるたびにターミナルのカーソルの形を変更する Zsh プラグインです。
+[Zsh Line Editor](https://zsh.sourceforge.io/Guide/zshguide04.html) のキーバインドで `vi` モードを選択した際に、ノーマルモードと挿入モードが切り替わるたびにターミナルのカーソルの形を変更する Zsh プラグインです。
 
 利用技術:
 
@@ -174,7 +174,7 @@ PHP で DB からデータを取得する際に SQL の `OFFSET` 句を利用せ
 
 ### [![zsh-vcs-extended](../media/software_icon.png)zsh-vcs-extended](https://github.com/chitoku-k/zsh-vcs-extended)
 
-Zsh の [vcs\_info](http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Version-Control-Information) に untracked files の有無を表示する機能を追加する Zsh プラグインです。
+Zsh の [vcs\_info](https://zsh.sourceforge.io/Doc/Release/User-Contributions.html#Version-Control-Information) に untracked files の有無を表示する機能を追加する Zsh プラグインです。
 
 利用技術:
 
@@ -207,7 +207,7 @@ Windows の自動再生を設定する `NoDriveAutoRun` というレジストリ
 
 ### [![Chipmunk](../media/software_icon.png)Chipmunk](https://github.com/chitoku-k/Chipmunk)
 
-WPF でウィンドウのシステムメニュー（最小化ボタン、最大化ボタン、閉じるボタンなど）を変更したり、[DWM](https://docs.microsoft.com/en-us/windows/win32/dwm/dwm-overview) の Aero Glass を有効化したりするための添付ビヘイビア/添付プロパティーです。
+WPF でウィンドウのシステムメニュー（最小化ボタン、最大化ボタン、閉じるボタンなど）を変更したり、[DWM](https://learn.microsoft.com/en-us/windows/win32/dwm/dwm-overview) の Aero Glass を有効化したりするための添付ビヘイビア/添付プロパティーです。
 
 また、`TextBox` にバリデーション機能を追加したり、`PasswordBox` の `Password` プロパティーで `Binding` を有効化したり、`NumericUpDown` コントロールを追加したりする機能もあります。
 
