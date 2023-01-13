@@ -30,9 +30,10 @@ const renderError = (props: TwitterTweetProps) => function RenderTwitterTweetErr
   )
 }
 
+const defaultTwitterTweetOptions: TwitterTweetOptions = {}
 const TwitterTweet: FunctionComponent<TwitterTweetProps> = ({
   id,
-  options = {},
+  options = defaultTwitterTweetOptions,
   ...rest
 }) => {
   options.lang = 'ja'
@@ -41,10 +42,6 @@ const TwitterTweet: FunctionComponent<TwitterTweetProps> = ({
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (typeof window.ResizeObserver === 'undefined') {
-      return
-    }
-
     let innerWidth = window.innerWidth
     const observer = new ResizeObserver(() => {
       if (!ref.current?.firstElementChild) {
