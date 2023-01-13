@@ -14,8 +14,7 @@ body {
   background-color: var(--body-background);
 
   &,
-  div#___gatsby,
-  div#gatsby-focus-wrapper {
+  div#___gatsby {
     height: 100%;
   }
 }

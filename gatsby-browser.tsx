@@ -1,4 +1,8 @@
+import { isValidElement } from 'react'
+import type { FunctionComponent, PropsWithChildren } from 'react'
 import type { GatsbyBrowser } from 'gatsby'
+import { BaseContext } from '@gatsbyjs/reach-router'
+
 import Prism from 'prismjs'
 import { IntlProvider } from 'react-intl'
 
@@ -10,6 +14,8 @@ import Header from 'components/Header'
 import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 import { SearchProvider } from 'components/Search'
+
+const Wrapper: FunctionComponent<PropsWithChildren> = ({ children }) => isValidElement(children) ? children : null
 
 export const onClientEntry: GatsbyBrowser['onClientEntry'] = () => {
   Prism.manual = true
@@ -36,7 +42,9 @@ export const wrapPageElement: GatsbyBrowser<unknown, Context>['wrapPageElement']
 export const wrapRootElement: GatsbyBrowser['wrapRootElement'] = ({ element }) => (
   <IntlProvider locale="ja" messages={messages}>
     <SearchProvider>
-      {element}
+      <BaseContext.Provider value={{ component: Wrapper, primary: false }}>
+        {element}
+      </BaseContext.Provider>
     </SearchProvider>
   </IntlProvider>
 )
