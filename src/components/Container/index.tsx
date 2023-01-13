@@ -8,7 +8,7 @@ import * as styles from './styles.module.scss'
 
 import Sidebar from 'components/Sidebar'
 
-const MemoizedSidebar = memo(Sidebar, (prev, next) => prev.location.pathname === next.location.pathname)
+const MemoizedSidebar = memo(Sidebar, (prev, next) => prev.location.href === next.location.href)
 MemoizedSidebar.displayName = 'MemoizedSidebar'
 
 const Container: FunctionComponent<ContainerProps> = ({
