@@ -42,10 +42,6 @@ const TwitterTweet: FunctionComponent<TwitterTweetProps> = ({
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (typeof window.ResizeObserver === 'undefined') {
-      return
-    }
-
     let innerWidth = window.innerWidth
     const observer = new ResizeObserver(() => {
       if (!ref.current?.firstElementChild) {
