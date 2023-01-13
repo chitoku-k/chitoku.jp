@@ -81,7 +81,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-highlight-words": "^0.18.0",
-    "react-instantsearch-dom": "^6.38.2",
+    "react-instantsearch-dom": "^6.38.3",
     "react-intl": "^6.2.5",
     "react-refresh": "^0.14.0",
     "react-schemaorg": "^2.0.0",
