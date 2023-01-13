@@ -1,5 +1,5 @@
 import type { FunctionComponent } from 'react'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { TweetProps } from 'react-twitter-widgets'
 import { Tweet } from 'react-twitter-widgets'
 import { useMedia } from 'react-use'
@@ -30,48 +30,45 @@ const renderError = (props: TwitterTweetProps) => function RenderTwitterTweetErr
   )
 }
 
-const defaultTwitterTweetOptions: TwitterTweetOptions = {}
 const TwitterTweet: FunctionComponent<TwitterTweetProps> = ({
   id,
-  options = defaultTwitterTweetOptions,
+  options,
   ...rest
 }) => {
-  options.lang = 'ja'
-  options.theme = useMedia('(prefers-color-scheme: dark)', false) ? 'dark' : 'light'
+  const tweetOptions = {
+    ...options,
+    lang: 'ja',
+    theme: useMedia('(prefers-color-scheme: dark)', false) ? 'dark' : 'light',
+  }
 
   const ref = useRef<HTMLDivElement>(null)
+  const [ minHeight, setMinHeight ] = useState(0)
 
   useEffect(() => {
-    let innerWidth = window.innerWidth
-    const observer = new ResizeObserver(() => {
-      if (!ref.current?.firstElementChild) {
+    if (!ref.current?.firstElementChild) {
+      return
+    }
+
+    const observer = new ResizeObserver(([ entry ]) => {
+      const height = entry?.contentRect.height
+      if (!height) {
         return
       }
 
-      const height = document.defaultView?.getComputedStyle(ref.current.firstElementChild).height
-      if (!height || !parseInt(height, 10)) {
-        return
-      }
-
-      const minHeight = ref.current.style.minHeight
-      if (innerWidth !== window.innerWidth || !minHeight || parseInt(height, 10) > parseInt(minHeight, 10)) {
-        innerWidth = window.innerWidth
-        ref.current.style.minHeight = height
+      if (!minHeight || height !== minHeight) {
+        setMinHeight(height)
       }
     })
 
-    if (ref.current?.firstElementChild) {
-      observer.observe(ref.current.firstElementChild)
-    }
-
+    observer.observe(ref.current.firstElementChild)
     return () => observer.disconnect()
-  }, [ ref ])
+  }, [ ref, minHeight ])
 
   return (
-    <div className={styles.wrapper} ref={ref}>
+    <div className={styles.wrapper} ref={ref} style={{ minHeight }}>
       <Tweet
         tweetId={id}
-        options={options}
+        options={tweetOptions}
         renderError={renderError({ id })}
         {...rest} />
     </div>
