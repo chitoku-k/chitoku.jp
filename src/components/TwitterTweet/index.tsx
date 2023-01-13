@@ -1,5 +1,5 @@
 import type { FunctionComponent } from 'react'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { TweetProps } from 'react-twitter-widgets'
 import { Tweet } from 'react-twitter-widgets'
 import { useMedia } from 'react-use'
@@ -42,32 +42,30 @@ const TwitterTweet: FunctionComponent<TwitterTweetProps> = ({
   }
 
   const ref = useRef<HTMLDivElement>(null)
+  const [ minHeight, setMinHeight ] = useState(0)
 
   useEffect(() => {
     if (!ref.current?.firstElementChild) {
       return
     }
 
-    let innerWidth = window.innerWidth
     const observer = new ResizeObserver(([ entry ]) => {
       const height = entry?.contentRect.height
       if (!height || !ref.current) {
         return
       }
 
-      const minHeight = ref.current.style.minHeight
-      if (innerWidth !== window.innerWidth || !minHeight || height > parseInt(minHeight, 10)) {
-        innerWidth = window.innerWidth
-        ref.current.style.minHeight = `${height}px`
+      if (!minHeight || height !== minHeight) {
+        setMinHeight(height)
       }
     })
 
     observer.observe(ref.current.firstElementChild)
     return () => observer.disconnect()
-  }, [ ref ])
+  }, [ ref, minHeight ])
 
   return (
-    <div className={styles.wrapper} ref={ref}>
+    <div className={styles.wrapper} ref={ref} style={{ minHeight }}>
       <Tweet
         tweetId={id}
         options={tweetOptions}
