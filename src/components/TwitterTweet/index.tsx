@@ -30,40 +30,39 @@ const renderError = (props: TwitterTweetProps) => function RenderTwitterTweetErr
   )
 }
 
-const defaultTwitterTweetOptions: TwitterTweetOptions = {}
 const TwitterTweet: FunctionComponent<TwitterTweetProps> = ({
   id,
-  options = defaultTwitterTweetOptions,
+  options,
   ...rest
 }) => {
-  options.lang = 'ja'
-  options.theme = useMedia('(prefers-color-scheme: dark)', false) ? 'dark' : 'light'
+  const tweetOptions = {
+    ...options,
+    lang: 'ja',
+    theme: useMedia('(prefers-color-scheme: dark)', false) ? 'dark' : 'light',
+  }
 
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    let innerWidth = window.innerWidth
-    const observer = new ResizeObserver(() => {
-      if (!ref.current?.firstElementChild) {
-        return
-      }
+    if (!ref.current?.firstElementChild) {
+      return
+    }
 
-      const height = document.defaultView?.getComputedStyle(ref.current.firstElementChild).height
-      if (!height || !parseInt(height, 10)) {
+    let innerWidth = window.innerWidth
+    const observer = new ResizeObserver(([ entry ]) => {
+      const height = entry?.contentRect.height
+      if (!height || !ref.current) {
         return
       }
 
       const minHeight = ref.current.style.minHeight
-      if (innerWidth !== window.innerWidth || !minHeight || parseInt(height, 10) > parseInt(minHeight, 10)) {
+      if (innerWidth !== window.innerWidth || !minHeight || height > parseInt(minHeight, 10)) {
         innerWidth = window.innerWidth
-        ref.current.style.minHeight = height
+        ref.current.style.minHeight = `${height}px`
       }
     })
 
-    if (ref.current?.firstElementChild) {
-      observer.observe(ref.current.firstElementChild)
-    }
-
+    observer.observe(ref.current.firstElementChild)
     return () => observer.disconnect()
   }, [ ref ])
 
@@ -71,7 +70,7 @@ const TwitterTweet: FunctionComponent<TwitterTweetProps> = ({
     <div className={styles.wrapper} ref={ref}>
       <Tweet
         tweetId={id}
-        options={options}
+        options={tweetOptions}
         renderError={renderError({ id })}
         {...rest} />
     </div>
