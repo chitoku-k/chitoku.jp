@@ -9658,27 +9658,6 @@ gatsby-core-utils@^4.3.1, gatsby-core-utils@^4.4.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-4.4.0.tgz#458673d22be3eb511ab8e12be4ea233a74591531"
-  integrity sha512-/ibilcGENKH6qqkcT17SIZgc2kjZn3HiGpD+ixbXYkMGqHiM5pj9XIHjy3DfvZvDt2ujkYV5EinmUdqx7CI81w==
-  dependencies:
-    "@babel/runtime" "^7.20.7"
-    ci-info "2.0.0"
-    configstore "^5.0.1"
-    fastq "^1.13.0"
-    file-type "^16.5.3"
-    fs-extra "^10.1.0"
-    got "^11.8.5"
-    import-from "^4.0.0"
-    lmdb "2.5.3"
-    lock "^1.1.0"
-    node-object-hash "^2.3.10"
-    proper-lockfile "^4.1.2"
-    resolve-from "^5.0.0"
-    tmp "^0.2.1"
-    xdg-basedir "^4.0.0"
-
 gatsby-graphiql-explorer@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/gatsby-graphiql-explorer/-/gatsby-graphiql-explorer-3.3.0.tgz#232add5735b09f0cd60861379a782d1a8c587fc4"
@@ -9962,16 +9941,16 @@ gatsby-sharp@^1.4.0:
     "@types/sharp" "^0.31.0"
     sharp "^0.31.3"
 
-gatsby-source-filesystem@^5.3.1:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-5.3.1.tgz#6d041fb2838e84c68843cf944de1727d1b48e1ea"
-  integrity sha512-UcvRHYnL1uRDTVPDGmmOMneLhFARZX8XbN7kmr1P4an03FTdiX9XYJV4k+4h+8lta05ezGt0N0bPH36jjK8HcA==
+gatsby-source-filesystem@^5.4.0:
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-5.4.0.tgz#e2ab3ced3a190a68f4aea0609eeb21b3604aaf4a"
+  integrity sha512-vYJM5mJu3vJAo9x5i1k+teBNHi2Fn9aPIrF2zgzqMz6x3iAaila0rD3hMLhNBCzo+GosCnkkQW9g/Tk4OcR0gg==
   dependencies:
-    "@babel/runtime" "^7.15.4"
+    "@babel/runtime" "^7.20.7"
     chokidar "^3.5.3"
     file-type "^16.5.4"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^4.3.1"
+    gatsby-core-utils "^4.4.0"
     md5-file "^5.0.0"
     mime "^2.6.0"
     pretty-bytes "^5.6.0"
