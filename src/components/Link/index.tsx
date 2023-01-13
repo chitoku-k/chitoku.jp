@@ -15,7 +15,9 @@ const Link: FunctionComponent<GatsbyLinkProps<unknown> & LinkProps> = ({
 
   return isUrl(dest) || target ? (
     <a href={dest} ref={ref} target={target ?? '_blank'} rel="nofollow noopener noreferrer" {...rest} />
-  ) : rest.download ? (
+  ) : dest === '#' ? (
+    <a ref={ref} {...rest} />
+  ) : dest.startsWith('#') || rest.download ? (
     <a href={dest} ref={ref} {...rest} />
   ) : (
     <GatsbyLink to={dest} {...rest} />

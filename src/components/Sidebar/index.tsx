@@ -80,7 +80,7 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
     },
   } = site
   const { sidebar } = navigation
-  const url = siteUrl + location.pathname
+  const url = siteUrl + location.pathname + location.search + location.hash
 
   return (
     <Col className={styles.container} as="aside">

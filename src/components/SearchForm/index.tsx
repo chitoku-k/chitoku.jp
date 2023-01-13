@@ -1,52 +1,73 @@
-import { useCallback, useEffect, useRef } from 'react'
+import type { FormEvent, FunctionComponent } from 'react'
+import { useCallback, useEffect } from 'react'
 import { Container, Nav, Popover, Row } from 'react-bootstrap'
+import { useLocation } from '@gatsbyjs/reach-router'
+import { useSearchBox } from 'react-instantsearch-hooks-web'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { navigate } from 'gatsby'
 import { useIntl } from 'react-intl'
-import type { SearchBoxProvided } from 'react-instantsearch-core'
-import { connectSearchBox } from 'react-instantsearch-dom'
 
 import { useSearch } from 'components/Search'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
 
-const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
+const action = '/search'
+
+const navigateToSearch = async (query: string | null, pathname: string): Promise<void> => {
+  if (query) {
+    const params = new URLSearchParams()
+    params.append('q', query)
+
+    return navigate(`${action}?${params.toString()}`, { replace: pathname === action })
+  }
+
+  if (pathname === action) {
+    return navigate(action)
+  }
+
+  return Promise.resolve()
+}
+
+const SearchForm: FunctionComponent<SearchFormProps> = ({
   search,
   closeSearch,
-  refine,
-}) {
+}) => {
   const { formatMessage } = useIntl()
-
   const { query, setQuery } = useSearch()
-  const input = useRef<HTMLInputElement>(null)
+  const { refine } = useSearchBox()
+  const { pathname } = useLocation()
 
-  const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-  }, [])
 
-  const onChange = useCallback((e: React.FormEvent<HTMLInputElement>) => {
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    navigateToSearch(query, pathname)
+  }, [ query, pathname ])
+
+  const onChange = useCallback((e: FormEvent<HTMLInputElement>) => {
     setQuery(e.currentTarget.value)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [ setQuery ])
 
   useEffect(() => {
-    refine(query)
-  }, [ query, refine ])
-
-  useEffect(() => {
-    if (search && input.current) {
-      input.current.focus()
+    if (query) {
+      refine(query)
     }
-  }, [ input, search ])
+
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    navigateToSearch(query, pathname)
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ query, refine ])
 
   return (
     <>
       {search ? (
         <Container className={styles.mobileContainer}>
-          <Container className={styles.mobile} role="search" as="form" onSubmit={onSubmit}>
+          <Container className={styles.mobile} role="search" as="form" action={action} onSubmit={onSubmit}>
             <Row className={styles.mobileRow} xs="auto">
-              <input className={styles.mobileInput} type="search" ref={input} value={query ?? ''} placeholder={formatMessage(messages.search)} onChange={onChange} />
+              <input className={styles.mobileInput} type="search" autoFocus value={query ?? ''} placeholder={formatMessage(messages.search)} onChange={onChange} />
               <div className={styles.mobileCancelContainer} onClick={closeSearch}>
                 {formatMessage(messages.cancel)}
               </div>
@@ -54,7 +75,7 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
           </Container>
         </Container>
       ) : null}
-      <Nav className={styles.desktop} role="search" as="form" onSubmit={onSubmit}>
+      <Nav className={styles.desktop} role="search" as="form" action={action} onSubmit={onSubmit}>
         <input className={styles.desktopInput} type="search" value={query ?? ''} placeholder={formatMessage(messages.search)} onChange={onChange} />
         <noscript className={styles.unsupportedNotice}>
           <Popover id="search-form-noscript" placement="bottom">
@@ -65,9 +86,9 @@ const SearchForm = connectSearchBox<SearchFormProps>(function SearchForm({
       </Nav>
     </>
   )
-})
+}
 
-interface SearchFormProps extends SearchBoxProvided {
+interface SearchFormProps {
   search: boolean
   openSearch: () => void
   closeSearch: () => void

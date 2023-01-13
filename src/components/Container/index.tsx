@@ -7,10 +7,8 @@ import clsx from 'clsx'
 import * as styles from './styles.module.scss'
 
 import Sidebar from 'components/Sidebar'
-import { useSearch } from 'components/Search'
-import SearchResult from 'components/SearchResult'
 
-const MemoizedSidebar = memo(Sidebar, (prev, next) => prev.location.pathname === next.location.pathname)
+const MemoizedSidebar = memo(Sidebar, (prev, next) => prev.location.href === next.location.href)
 MemoizedSidebar.displayName = 'MemoizedSidebar'
 
 const Container: FunctionComponent<ContainerProps> = ({
@@ -18,13 +16,12 @@ const Container: FunctionComponent<ContainerProps> = ({
   sidebar,
 }) => {
   const location = useLocation()
-  const { query } = useSearch()
 
   return (
     <BootstrapContainer className={styles.container}>
       <Row className={styles.row}>
         <Col className={clsx(styles.col, sidebar && styles.sidebar)}>
-          {query ? <SearchResult /> : children}
+          {children}
         </Col>
         {sidebar ? <MemoizedSidebar location={location} /> : null}
       </Row>
