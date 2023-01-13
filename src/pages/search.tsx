@@ -16,9 +16,8 @@ export const pageQuery = graphql`
 
 const SearchPage: FunctionComponent<SearchPageProps> = ({
   data,
-  location,
 }) => (
-  <Search location={location} {...data} />
+  <Search {...data} />
 )
 
 type SearchPageProps = PageProps<Queries.SearchItemQuery>

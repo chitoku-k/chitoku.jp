@@ -1,10 +1,10 @@
 import type { FunctionComponent, ReactNode } from 'react'
-import { createContext, useContext, useEffect, useMemo, useState } from 'react'
-import type { WindowLocation } from '@gatsbyjs/reach-router'
+import { createContext, useContext, useMemo, useState } from 'react'
+import { useSearchParam } from 'react-use'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
-import { Highlight, InstantSearch, PoweredBy, useHits, useInstantSearch, useSearchBox } from 'react-instantsearch-hooks-web'
+import { Highlight, InstantSearch, PoweredBy, Snippet, useHits, useInstantSearch } from 'react-instantsearch-hooks-web'
 import type { BaseHit } from 'instantsearch.js'
 import algoliasearch from 'algoliasearch/lite'
 
@@ -30,28 +30,61 @@ const SearchContext = createContext<SearchState>({
 
 export const useSearch = (): SearchState => useContext(SearchContext)
 
+const Hits: FunctionComponent<HitsProps> = ({
+  url,
+}) => {
+  const { formatMessage } = useIntl()
+  const { status } = useInstantSearch()
+  const { hits, results } = useHits<SearchDocument>()
+
+  if (status === 'stalled') {
+    return <FontAwesomeIcon className={styles.status} icon={faCircleNotch} spin />
+  }
+
+  if (!results?.query) {
+    return null
+  }
+
+  if (!results.nbHits) {
+    return (
+      <div className={styles.noHits}>
+        <FormattedMessage {...messages.not_found} values={{
+          text: <strong>{results.query}</strong>,
+        }} />
+        <br />
+        <FormattedMessage {...messages.not_found_hints} />
+      </div>
+    )
+  }
+
+  return (
+    <>
+      {hits.map(hit => (
+        <div key={hit.objectID} className={styles.hitContainer}>
+          <Link className={styles.hitLink} to={hit.path}>
+            <h2 className={styles.hitHeader}>
+              <Highlight attribute="title" hit={hit} />
+            </h2>
+            <span className={styles.hitPath}>
+              {hit.category
+                ? formatMessage(messages.breadcrumb_category, { url, category: hit.category.name })
+                : formatMessage(messages.breadcrumb_path, { url, path: hit.path })}
+            </span>
+          </Link>
+          <p>
+            <Snippet attribute="excerpt" hit={hit} />
+          </p>
+        </div>
+      ))}
+    </>
+  )
+}
+
 const Search: FunctionComponent<SearchProps> = ({
-  location,
   site,
 }) => {
   const { formatMessage } = useIntl()
-  const { query, setQuery } = useSearch()
-
-  const { status } = useInstantSearch()
-  const { refine } = useSearchBox()
-  const { hits, results } = useHits<SearchDocument>()
-
-  const params = new URLSearchParams(location.search)
-  const q = params.get('q')
-
-  useEffect(() => {
-    if (query === null) {
-      setQuery(q)
-    }
-    if (q && q !== results?.query) {
-      refine(q)
-    }
-  }, [ query, setQuery, q, results?.query, refine ])
+  const { query } = useSearch()
 
   if (!site) {
     throw new Error('Invalid data')
@@ -63,8 +96,8 @@ const Search: FunctionComponent<SearchProps> = ({
     },
   } = site
 
-  const title = q
-    ? formatMessage(messages.title_text, { text: q })
+  const title = query
+    ? formatMessage(messages.title_text, { text: query })
     : formatMessage(messages.title)
 
   return (
@@ -76,39 +109,9 @@ const Search: FunctionComponent<SearchProps> = ({
             <PoweredBy classNames={{ logo: styles.logo }} />
           </>
         } />
-        {status === 'stalled'
-          ? <FontAwesomeIcon className={styles.status} icon={faCircleNotch} spin />
-          : !q
-            ? formatMessage(messages.how_to_search)
-            : q !== results?.query
-              ? null
-              : results.nbHits
-                ? hits.map(hit => (
-                  <div key={hit.objectID} className={styles.hitContainer}>
-                    <Link className={styles.hitLink} to={hit.path}>
-                      <h2 className={styles.hitHeader}>
-                        <Highlight attribute="title" hit={hit} />
-                      </h2>
-                      <span className={styles.hitPath}>
-                        {hit.category
-                          ? formatMessage(messages.breadcrumb_category, { url, category: hit.category.name })
-                          : formatMessage(messages.breadcrumb_path, { url, path: hit.path })}
-                      </span>
-                    </Link>
-                    <p>
-                      <Highlight attribute="excerpt" hit={hit} />
-                    </p>
-                  </div>
-                ))
-                : (
-                  <div className={styles.noHits}>
-                    <FormattedMessage {...messages.not_found} values={{
-                      text: <strong>{results.query}</strong>,
-                    }} />
-                    <br />
-                    <FormattedMessage {...messages.not_found_hints} />
-                  </div>
-                )}
+        {query
+          ? <Hits url={url} />
+          : formatMessage(messages.how_to_search)}
       </ArticleContainer>
     </Metadata>
   )
@@ -117,7 +120,7 @@ const Search: FunctionComponent<SearchProps> = ({
 export const SearchProvider: FunctionComponent<SearchProviderProps> = ({
   children,
 }) => {
-  const [ query, setQuery ] = useState<string | null>(null)
+  const [ query, setQuery ] = useState<string | null>(useSearchParam('q'))
   const state = useMemo(() => ({ query, setQuery }), [ query ])
 
   const indexName = process.env.GATSBY_ALGOLIA_INDEXNAME
@@ -127,7 +130,7 @@ export const SearchProvider: FunctionComponent<SearchProviderProps> = ({
 
   return (
     <SearchContext.Provider value={state}>
-      <InstantSearch indexName={indexName} searchClient={searchClient} stalledSearchDelay={50}>
+      <InstantSearch indexName={indexName} searchClient={searchClient}>
         {children}
       </InstantSearch>
     </SearchContext.Provider>
@@ -153,8 +156,10 @@ interface SearchProviderProps {
   children?: ReactNode
 }
 
-interface SearchProps extends Queries.SearchItemQuery {
-  location: WindowLocation
+type SearchProps = Queries.SearchItemQuery
+
+interface HitsProps {
+  url: string
 }
 
 export default Search

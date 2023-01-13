@@ -1,6 +1,8 @@
 import type { FormEvent, FunctionComponent } from 'react'
-import { useCallback } from 'react'
+import { useCallback, useEffect } from 'react'
 import { Container, Nav, Popover, Row } from 'react-bootstrap'
+import { useLocation } from '@gatsbyjs/reach-router'
+import { useSearchBox } from 'react-instantsearch-hooks-web'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { navigate } from 'gatsby'
@@ -13,30 +15,51 @@ import * as styles from './styles.module.scss'
 
 const action = '/search'
 
+const navigateToSearch = async (query: string | null, pathname: string): Promise<void> => {
+  if (query) {
+    const params = new URLSearchParams()
+    params.append('q', query)
+
+    return navigate(`${action}?${params.toString()}`, { replace: pathname === action })
+  }
+
+  if (pathname === action) {
+    return navigate(action)
+  }
+
+  return Promise.resolve()
+}
+
 const SearchForm: FunctionComponent<SearchFormProps> = ({
   search,
   closeSearch,
 }) => {
   const { formatMessage } = useIntl()
   const { query, setQuery } = useSearch()
+  const { refine } = useSearchBox()
+  const { pathname } = useLocation()
 
   const onSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    if (!query) {
-      return
-    }
-
-    const params = new URLSearchParams()
-    params.append('q', query)
-
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
-    navigate(`${action}?${params.toString()}`)
-  }, [ query ])
+    navigateToSearch(query, pathname)
+  }, [ query, pathname ])
 
   const onChange = useCallback((e: FormEvent<HTMLInputElement>) => {
     setQuery(e.currentTarget.value)
   }, [ setQuery ])
+
+  useEffect(() => {
+    if (query) {
+      refine(query)
+    }
+
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    navigateToSearch(query, pathname)
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ query, refine ])
 
   return (
     <>
