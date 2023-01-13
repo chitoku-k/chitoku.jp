@@ -51,7 +51,7 @@ const TwitterTweet: FunctionComponent<TwitterTweetProps> = ({
 
     const observer = new ResizeObserver(([ entry ]) => {
       const height = entry?.contentRect.height
-      if (!height || !ref.current) {
+      if (!height) {
         return
       }
 
