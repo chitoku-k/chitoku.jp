@@ -1,5 +1,5 @@
-import removeMd from 'remove-markdown'
-import { stripHtml } from 'string-strip-html'
+import type { HtmlToTextOptions } from 'html-to-text'
+import { htmlToText } from 'html-to-text'
 
 import { getPath } from './utils'
 import type { Category, Tag } from './createTaxonomies'
@@ -15,7 +15,7 @@ interface Query {
             relativeDirectory: string
             name: string
           }
-          excerpt: string
+          excerpt?: string
           headings: {
             value: string
           }[]
@@ -51,6 +51,36 @@ interface CreateQueryResult {
   }[]
 }
 
+const htmlToTextOptions: HtmlToTextOptions = {
+  wordwrap: false,
+  formatters: {
+    emoji: (node, _walk, builder) => {
+      const attribs = node.attribs as Record<string, string>
+      builder.addInline(attribs.alt ?? '')
+    },
+  },
+  selectors: [
+    // Inline
+    { selector: 'a', format: 'inline' },
+    // Heading
+    ...[ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ].map(selector => ({
+      selector,
+      format: 'heading',
+      options: {
+        uppercase: false,
+      },
+    })),
+    // Emoji
+    { selector: 'img.emoji', format: 'emoji' },
+    // Skip
+    { selector: 'a[href*="#fnref-"]', format: 'skip' },
+    { selector: 'sup[id*="fnref-"]', format: 'skip' },
+    { selector: 'hr', format: 'skip' },
+    { selector: 'img', format: 'skip' },
+    { selector: 'table', format: 'skip' },
+  ],
+}
+
 export default (): CreateQueryResult => ({
   query: `
     query {
@@ -61,7 +91,7 @@ export default (): CreateQueryResult => ({
       }
     }
     fragment Article on MarkdownRemark {
-      excerpt
+      excerpt(format: HTML)
       headings {
         value
       }
@@ -129,8 +159,8 @@ export default (): CreateQueryResult => ({
   }) => ({
     id,
     path: getPath(file),
-    excerpt: removeMd(excerpt),
-    headings: headings.map(x => stripHtml(x.value).result),
+    excerpt: htmlToText(excerpt ?? '', htmlToTextOptions),
+    headings: headings.map(x => htmlToText(x.value, htmlToTextOptions)),
     title,
     category,
     tags,

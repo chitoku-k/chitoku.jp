@@ -19,10 +19,9 @@ updates:
   ignore:
   # TODO: Remove @types/twemoji when type definitions in twemoji get fixed
   - dependency-name: "@types/twemoji"
-  # TODO: Update unist-* and string-strip-html when Gatsby adds support for ESM
+  # TODO: Update unist-* when Gatsby adds support for ESM
   # https://github.com/gatsbyjs/gatsby/discussions/31599
   - dependency-name: unist-*
-  - dependency-name: string-strip-html
   # TODO: Update rehype-react when a whitespace problem with gatsby-remark-embed-gist is resolved
   - dependency-name: rehype-react
 - package-ecosystem: docker
