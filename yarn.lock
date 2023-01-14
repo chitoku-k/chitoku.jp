@@ -4744,6 +4744,11 @@
   dependencies:
     source-map "^0.6.1"
 
+"@types/unicode-properties@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@types/unicode-properties/-/unicode-properties-1.3.0.tgz#3413d065ce7cde96471b42b17a8442664535f42b"
+  integrity sha512-kDVlxpdkCfgvzfXcglkr7j4OSMjCEEo/Jloj4tFuldYZpQ9Uypy7FGXPhNstoj4eGvhddwuu5n0EfI+XdWVoVA==
+
 "@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.2", "@types/unist@^2.0.3":
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.6.tgz#250a7b16c3b91f672a24552ec64678eeb1d3a08d"
