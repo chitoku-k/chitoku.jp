@@ -1,10 +1,10 @@
 import type { FunctionComponent, ReactNode } from 'react'
-import { createContext, useContext, useMemo, useState } from 'react'
+import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import { useSearchParam } from 'react-use'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
-import { Highlight, InstantSearch, PoweredBy, Snippet, useHits, useInstantSearch } from 'react-instantsearch-hooks-web'
+import { Highlight, InstantSearch, PoweredBy, Snippet, useHits, useInstantSearch, useSearchBox } from 'react-instantsearch-hooks-web'
 import type { BaseHit } from 'instantsearch.js'
 import algoliasearch from 'algoliasearch/lite'
 
@@ -29,6 +29,20 @@ const SearchContext = createContext<SearchState>({
 })
 
 export const useSearch = (): SearchState => useContext(SearchContext)
+
+const Refine: FunctionComponent<RefineProps> = ({
+  query,
+}) => {
+  const { refine } = useSearchBox()
+
+  useEffect(() => {
+    if (query) {
+      refine(query)
+    }
+  }, [ refine, query ])
+
+  return null
+}
 
 const Hits: FunctionComponent<HitsProps> = ({
   url,
@@ -90,6 +104,11 @@ const Search: FunctionComponent<SearchProps> = ({
     throw new Error('Invalid data')
   }
 
+  const indexName = process.env.GATSBY_ALGOLIA_INDEXNAME
+  if (!indexName) {
+    throw new Error('Invalid env')
+  }
+
   const {
     siteMetadata: {
       siteUrl: url,
@@ -109,9 +128,12 @@ const Search: FunctionComponent<SearchProps> = ({
             <PoweredBy classNames={{ logo: styles.logo }} />
           </>
         } />
-        {query
-          ? <Hits url={url} />
-          : formatMessage(messages.how_to_search)}
+        <InstantSearch indexName={indexName} searchClient={searchClient}>
+          <Refine query={query} />
+          {query
+            ? <Hits url={url} />
+            : formatMessage(messages.how_to_search)}
+        </InstantSearch>
       </ArticleContainer>
     </Metadata>
   )
@@ -123,16 +145,9 @@ export const SearchProvider: FunctionComponent<SearchProviderProps> = ({
   const [ query, setQuery ] = useState<string | null>(useSearchParam('q'))
   const state = useMemo(() => ({ query, setQuery }), [ query ])
 
-  const indexName = process.env.GATSBY_ALGOLIA_INDEXNAME
-  if (!indexName) {
-    throw new Error('Invalid env')
-  }
-
   return (
     <SearchContext.Provider value={state}>
-      <InstantSearch indexName={indexName} searchClient={searchClient}>
-        {children}
-      </InstantSearch>
+      {children}
     </SearchContext.Provider>
   )
 }
@@ -157,6 +172,10 @@ interface SearchProviderProps {
 }
 
 type SearchProps = Queries.SearchItemQuery
+
+interface RefineProps {
+  query: string | null
+}
 
 interface HitsProps {
   url: string

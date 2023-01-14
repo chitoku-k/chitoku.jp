@@ -6,6 +6,7 @@ declare module '@gatsbyjs/reach-router' {
   }
 
   interface RouterContextProps {
+    basepath: string
     component?: ComponentType<PropsWithChildren> | string
     primary?: boolean
   }
