@@ -42,7 +42,7 @@ export const wrapPageElement: GatsbySSR<unknown, Context>['wrapPageElement'] = (
 export const wrapRootElement: GatsbySSR['wrapRootElement'] = ({ element }) => (
   <IntlProvider locale="ja" messages={messages}>
     <SearchProvider>
-      <BaseContext.Provider value={{ component: Wrapper, primary: false }}>
+      <BaseContext.Provider value={{ basepath: '/', component: Wrapper, primary: false }}>
         {element}
       </BaseContext.Provider>
     </SearchProvider>
