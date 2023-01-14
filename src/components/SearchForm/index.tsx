@@ -2,7 +2,6 @@ import type { FormEvent, FunctionComponent } from 'react'
 import { useCallback, useEffect } from 'react'
 import { Container, Nav, Popover, Row } from 'react-bootstrap'
 import { useLocation } from '@gatsbyjs/reach-router'
-import { useSearchBox } from 'react-instantsearch-hooks-web'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { navigate } from 'gatsby'
@@ -36,7 +35,6 @@ const SearchForm: FunctionComponent<SearchFormProps> = ({
 }) => {
   const { formatMessage } = useIntl()
   const { query, setQuery } = useSearch()
-  const { refine } = useSearchBox()
   const { pathname } = useLocation()
 
   const onSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
@@ -51,15 +49,11 @@ const SearchForm: FunctionComponent<SearchFormProps> = ({
   }, [ setQuery ])
 
   useEffect(() => {
-    if (query) {
-      refine(query)
-    }
-
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
     navigateToSearch(query, pathname)
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ query, refine ])
+  }, [ query ])
 
   return (
     <>
