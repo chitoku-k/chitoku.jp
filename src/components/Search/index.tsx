@@ -30,18 +30,26 @@ const SearchContext = createContext<SearchState>({
 
 export const useSearch = (): SearchState => useContext(SearchContext)
 
-const Hits: FunctionComponent<HitsProps> = ({
+const Refine: FunctionComponent<RefineProps> = ({
   query,
+}) => {
+  const { refine } = useSearchBox()
+
+  useEffect(() => {
+    if (query) {
+      refine(query)
+    }
+  }, [ refine, query ])
+
+  return null
+}
+
+const Hits: FunctionComponent<HitsProps> = ({
   url,
 }) => {
   const { formatMessage } = useIntl()
   const { status } = useInstantSearch()
-  const { refine } = useSearchBox()
   const { hits, results } = useHits<SearchDocument>()
-
-  useEffect(() => {
-    refine(query)
-  }, [ refine, query ])
 
   if (status === 'stalled') {
     return <FontAwesomeIcon className={styles.status} icon={faCircleNotch} spin />
@@ -121,8 +129,9 @@ const Search: FunctionComponent<SearchProps> = ({
           </>
         } />
         <InstantSearch indexName={indexName} searchClient={searchClient}>
+          <Refine query={query} />
           {query
-            ? <Hits query={query} url={url} />
+            ? <Hits url={url} />
             : formatMessage(messages.how_to_search)}
         </InstantSearch>
       </ArticleContainer>
@@ -164,8 +173,11 @@ interface SearchProviderProps {
 
 type SearchProps = Queries.SearchItemQuery
 
+interface RefineProps {
+  query: string | null
+}
+
 interface HitsProps {
-  query: string
   url: string
 }
 
