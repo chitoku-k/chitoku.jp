@@ -1,6 +1,9 @@
 import type { ComponentType, FunctionComponent, PropsWithChildren } from 'react'
 import { createElement, useMemo } from 'react'
-import RehypeReact from 'rehype-react'
+import unified from 'unified'
+import type { Node } from 'unist'
+import type { ComponentLike } from 'rehype-react'
+import rehypeReact from 'rehype-react'
 
 import * as styles from './styles.module.scss'
 
@@ -15,15 +18,18 @@ export const register = function register<T>(key: string, component: ComponentTy
 const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
   ast,
 }) => {
-  const content = useMemo(() => {
-    const { Compiler: compiler } = new RehypeReact({
-      createElement,
-      components,
-    })
-
-    return compiler(ast)
-  }, [ ast ])
-
+  const processor = useMemo(
+    () => unified()
+      .use(rehypeReact, {
+        createElement,
+        components: components as Record<string, ReactComponentLike>,
+      }),
+    [],
+  )
+  const content = useMemo(
+    () => processor.stringify(ast as Node),
+    [ ast, processor ],
+  )
   return (
     <div className={styles.body}>
       {content}
@@ -36,5 +42,6 @@ export interface ArticleBodyProps {
 }
 
 export type ArticleComponentCollection = Record<string, ComponentType<PropsWithChildren>>
+type ReactComponentLike = ComponentLike<ReturnType<typeof createElement>>
 
 export default ArticleBody
