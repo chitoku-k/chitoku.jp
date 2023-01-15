@@ -71,7 +71,7 @@ CFW ではプラグインの設定画面などでも頻繁に使用されてい�
 
 ## API リファレンス
 
-<pspsdk-macro name="PSP_MODULE_INFO"><div>
+<psp-sdk-macro name="PSP_MODULE_INFO"><div>
 実行モードには次の定数が定義されています。
 
 - `c¦PSP_MODULE_KERNEL (0x1000)` - カーネルモード
@@ -79,7 +79,7 @@ CFW ではプラグインの設定画面などでも頻繁に使用されてい�
 
 </div></psp-sdk-macro>
 
-<pspsdk-macro name="PSP_MAIN_THREAD_ATTR"><div>
+<psp-sdk-macro name="PSP_MAIN_THREAD_ATTR"><div>
 スレッドの種類には次の定数が定義されています。  
 
 - `c¦PSP_THREAD_ATTR_VFPU` - VFPU（ベクトル演算を行うための FPU）へのアクセスを有効化
@@ -93,13 +93,13 @@ CFW ではプラグインの設定画面などでも頻繁に使用されてい�
 
 </div></psp-sdk-macro>
 
-<pspsdk-function name="pspDebugScreenInit"></psp-sdk-function>
+<psp-sdk-function name="pspDebugScreenInit"></psp-sdk-function>
 
-<pspsdk-function name="pspDebugScreenSetXY"></psp-sdk-function>
+<psp-sdk-function name="pspDebugScreenSetXY"></psp-sdk-function>
 
-<pspsdk-function name="pspDebugScreenPrintf"></psp-sdk-function>
+<psp-sdk-function name="pspDebugScreenPrintf"></psp-sdk-function>
 
-<pspsdk-function name="pspDebugScreenClear"></psp-sdk-function>
+<psp-sdk-function name="pspDebugScreenClear"></psp-sdk-function>
 
 ## 脚注
 
