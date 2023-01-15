@@ -108,20 +108,20 @@ PSP のアプリケーションを HOME ボタンによる終了に対応させ�
 
 ## API リファレンス
 
-<pspsdk-function name="sceKernelCreateCallback"></psp-sdk-function>
+<psp-sdk-function name="sceKernelCreateCallback"></psp-sdk-function>
 
-<pspsdk-function name="sceKernelRegisterExitCallback"></psp-sdk-function>
+<psp-sdk-function name="sceKernelRegisterExitCallback"></psp-sdk-function>
 
-<pspsdk-function name="sceKernelSleepThreadCB"></psp-sdk-function>
+<psp-sdk-function name="sceKernelSleepThreadCB"></psp-sdk-function>
 
-<pspsdk-function name="sceKernelCreateThread"><div>
+<psp-sdk-function name="sceKernelCreateThread"><div>
 
 スレッドの種類は [Hello World のビルド](/programming/psp/helloworld#api-リファレンス)で紹介した `c¦PSP_MAIN_THREAD_ATTR()` のものと同じです。
 
 </div></psp-sdk-function>
 
-<pspsdk-function name="sceKernelStartThread"></psp-sdk-function>
+<psp-sdk-function name="sceKernelStartThread"></psp-sdk-function>
 
-<pspsdk-function name="sceDisplayWaitVblankStart"></psp-sdk-function>
+<psp-sdk-function name="sceDisplayWaitVblankStart"></psp-sdk-function>
 
-<pspsdk-function name="sceKernelExitGame"></psp-sdk-function>
+<psp-sdk-function name="sceKernelExitGame"></psp-sdk-function>

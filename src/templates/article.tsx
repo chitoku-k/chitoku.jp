@@ -149,8 +149,8 @@ type ArticlePageProps = PageProps<Queries.articleQuery>
 
 register('a', Link)
 register('psp-error-codes', PspErrorCodes)
-register('pspsdk-function', PspSdkFunction)
-register('pspsdk-macro', PspSdkMacro)
+register('psp-sdk-function', PspSdkFunction)
+register('psp-sdk-macro', PspSdkMacro)
 register('soarer-download', SoarerDownload)
 register('soarer-history', SoarerHistory)
 register('twitter-tweet', TwitterTweet)
