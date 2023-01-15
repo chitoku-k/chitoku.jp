@@ -112,7 +112,6 @@ const config: GatsbyConfig = {
               offsetY: 10,
             },
           },
-          { resolve: '@rstacruz/gatsby-remark-component' },
           { resolve: 'gatsby-remark-copy-linked-files' },
           { resolve: 'gatsby-remark-embed-gist' },
           {

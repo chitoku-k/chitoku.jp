@@ -6,6 +6,8 @@ import * as unicode from 'unicode-properties'
 // eslint-disable-next-line no-control-regex
 const WHITE_SPACE_TRANSFORM_PATTERN = /(?<before>[^\x01-\x7E])\s*\n+\s*(?<after>[^\x01-\x7E])/gu
 
+const CUSTOM_ELEMENT_HTML_PATTERN = /<\/?[a-z]+-/u
+
 interface RemarkPluginArgs {
   markdownAST: RemarkNode
   compiler: {
@@ -66,6 +68,15 @@ const isSegmentBreakSkippable = (before: string, after: string): boolean => isSe
 export default ({
   markdownAST,
 }: RemarkPluginArgs): void => {
+  // Unwrap custom elements in an HTMLParagraphElement
+  visit<RemarkNode>(markdownAST, [ 'paragraph' ], (node, index, parent) => {
+    if (!parent || !node.children?.some(child => CUSTOM_ELEMENT_HTML_PATTERN.test(child.value ?? ''))) {
+      return
+    }
+    parent.children.splice(index, 1, ...node.children)
+  })
+
+  // Replace all emoji with twemoji
   visit<RemarkNode>(markdownAST, [ 'text', 'html' ], node => {
     if (!node.value || !twemoji.test(node.value)) {
       return
@@ -76,6 +87,7 @@ export default ({
     })
   })
 
+  // Remove whitespaces between the fullwidth characters
   visit<RemarkNode>(markdownAST, [ 'text' ], node => {
     if (!node.value || !WHITE_SPACE_TRANSFORM_PATTERN.test(node.value)) {
       return

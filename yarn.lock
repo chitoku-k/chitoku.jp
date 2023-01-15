@@ -3075,11 +3075,6 @@
     uncontrollable "^7.2.1"
     warning "^4.0.3"
 
-"@rstacruz/gatsby-remark-component@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@rstacruz/gatsby-remark-component/-/gatsby-remark-component-2.0.0.tgz#ecc81499c43729379b7ea80b909ef120c9afa7dd"
-  integrity sha512-R6HyaD/k5tC+ffpx4j6CyXWkp2fk59zAlEaeXIgvTZ2bARNcXcBwOZ2kA4kAHtVRQgtA982r/xIdAIIBAD+yDQ==
-
 "@selderee/plugin-htmlparser2@^0.10.0":
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/@selderee/plugin-htmlparser2/-/plugin-htmlparser2-0.10.0.tgz#8a304d18df907e086f3cfc71ea0ced52d6524430"
