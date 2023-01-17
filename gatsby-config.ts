@@ -143,6 +143,7 @@ const config: GatsbyConfig = {
               ],
             },
           },
+          { resolve: 'gatsby-remark-remove-cjk-breaks' },
           { resolve: 'historia-remark-plugin' },
         ],
       },
