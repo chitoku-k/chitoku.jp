@@ -4238,6 +4238,16 @@
   resolved "https://registry.yarnpkg.com/@turist/time/-/time-0.0.2.tgz#32fe0ce708ea0f4512776bd313409f1459976dda"
   integrity sha512-qLOvfmlG2vCVw5fo/oz8WAZYlpe5a5OurgTj3diIxJCdjRHpapC+vQCz3er9LV79Vcat+DifBjeAhOAdmndtDQ==
 
+"@twemoji/api@^14.1.0":
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/@twemoji/api/-/api-14.1.0.tgz#374716e67649d734dfee1b696e4e236539008d8d"
+  integrity sha512-1QjJ5blZtKuskHGztGH4bo6tCEDGcstD9ng15kTefLi/S+HkaETdm+aAhX641V62aE2rvnfbpIxa8efTyREQMw==
+  dependencies:
+    fs-extra "^8.0.1"
+    jsonfile "^5.0.0"
+    twemoji-parser "14.0.0"
+    universalify "^0.1.2"
+
 "@types/babel__core@^7.1.7":
   version "7.1.14"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.14.tgz#faaeefc4185ec71c389f4501ee5ec84b170cc402"
@@ -4714,11 +4724,6 @@
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.33.tgz#1073c4bc824754ae3d10cfab88ab0237ba964e4d"
   integrity sha512-gVC1InwyVrO326wbBZw+AO3u2vRXz/iRWq9jYhpG4W8LXyIgDv3ZmcLQ5Q4Gs+gFMyqx+viFoFT+l3p61QFCmQ==
 
-"@types/twemoji@~12":
-  version "12.1.2"
-  resolved "https://registry.yarnpkg.com/@types/twemoji/-/twemoji-12.1.2.tgz#52578fd22665311e6a78d04f800275449d51c97e"
-  integrity sha512-3eMyKenMi0R1CeKzBYtk/Z2JIHsTMQrIrTah0q54o45pHTpWVNofU2oHx0jS8tqsDRhis2TbB6238WP9oh2l2w==
-
 "@types/uglify-js@*":
   version "3.17.1"
   resolved "https://registry.yarnpkg.com/@types/uglify-js/-/uglify-js-3.17.1.tgz#e0ffcef756476410e5bce2cb01384ed878a195b5"
@@ -4726,7 +4731,7 @@
   dependencies:
     source-map "^0.6.1"
 
-"@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.2", "@types/unist@^2.0.3", "@types/unist@^2.0.6":
+"@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.2", "@types/unist@^2.0.3":
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.6.tgz#250a7b16c3b91f672a24552ec64678eeb1d3a08d"
   integrity sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==
@@ -18617,16 +18622,6 @@ twemoji-parser@14.0.0:
   version "14.0.0"
   resolved "https://registry.yarnpkg.com/twemoji-parser/-/twemoji-parser-14.0.0.tgz#13dabcb6d3a261d9efbf58a1666b182033bf2b62"
   integrity sha512-9DUOTGLOWs0pFWnh1p6NF+C3CkQ96PWmEFwhOVmT3WbecRC+68AIqpsnJXygfkFcp4aXbOp8Dwbhh/HQgvoRxA==
-
-twemoji@^14.0.2:
-  version "14.0.2"
-  resolved "https://registry.yarnpkg.com/twemoji/-/twemoji-14.0.2.tgz#c53adb01dab22bf4870f648ca8cc347ce99ee37e"
-  integrity sha512-BzOoXIe1QVdmsUmZ54xbEH+8AgtOKUiG53zO5vVP2iUu6h5u9lN15NcuS6te4OY96qx0H7JK9vjjl9WQbkTRuA==
-  dependencies:
-    fs-extra "^8.0.1"
-    jsonfile "^5.0.0"
-    twemoji-parser "14.0.0"
-    universalify "^0.1.2"
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"

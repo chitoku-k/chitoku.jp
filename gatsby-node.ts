@@ -1,20 +1,9 @@
 import type { GatsbyNode } from 'gatsby'
 import type { Configuration } from 'webpack'
 import * as path from 'path'
-import ts from 'typescript'
 import { promises as fs } from 'fs'
 import { LicenseWebpackPlugin } from 'license-webpack-plugin'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
-
-(() => {
-  const { config } = ts.readConfigFile('tsconfig.remark.json', ts.sys.readFile)
-  const { options, fileNames } = ts.parseJsonConfigFileContent(config, ts.sys, path.resolve())
-  const program = ts.createProgram({
-    options,
-    rootNames: fileNames,
-  })
-  program.emit()
-})()
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   stage,

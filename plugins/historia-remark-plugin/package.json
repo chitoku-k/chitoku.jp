@@ -2,8 +2,7 @@
   "name": "historia-remark-plugin",
   "version": "1.0.0",
   "dependencies": {
-    "@types/twemoji": "~12",
-    "twemoji": "^14.0.2",
+    "@twemoji/api": "^14.1.0",
     "unist-util-visit": "^2.0.3"
   }
 }
