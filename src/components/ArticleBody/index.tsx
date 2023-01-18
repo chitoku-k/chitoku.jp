@@ -1,5 +1,5 @@
 import type { ComponentType, FunctionComponent } from 'react'
-import { createElement, useMemo } from 'react'
+import { Fragment, createElement, useMemo } from 'react'
 import { unified } from 'unified'
 import type { Root } from 'hast'
 import rehypeReact from 'rehype-react'
@@ -19,6 +19,7 @@ const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
     () => unified()
       .use(rehypeReact, {
         createElement,
+        Fragment,
         components,
       }),
     [],
