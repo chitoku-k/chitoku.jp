@@ -2,6 +2,7 @@ import type { FunctionComponent, ReactNode } from 'react'
 import { createContext, useContext } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
 import { useIntl } from 'react-intl'
+import type { Root } from 'hast'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
@@ -69,7 +70,7 @@ const Article: FunctionComponent<ArticleProps> = ({
           </Navbar>
         ) : null}
         <ArticleContext.Provider value={article}>
-          <ArticleBody ast={(excerptAst ?? htmlAst ?? null) as ArticleAstNode} />
+          <ArticleBody ast={(excerptAst ?? htmlAst ?? null) as Root} />
         </ArticleContext.Provider>
         {excerpted && excerptAst ? (
           <div className={styles.readMoreContainer}>
@@ -94,25 +95,6 @@ const Article: FunctionComponent<ArticleProps> = ({
 export interface ArticleItem extends Queries.ArticleFragment {
   htmlAst?: unknown
   excerptAst?: unknown
-}
-
-export type ArticleAstNode = ArticleAstCommentNode | ArticleAstElementNode | ArticleAstTextNode | null
-
-export interface ArticleAstCommentNode {
-  type: 'comment'
-  value: string
-}
-
-export interface ArticleAstElementNode {
-  type: 'element'
-  children: ArticleAstNode[]
-  properties: Record<string, unknown>
-  tagName: string
-}
-
-export interface ArticleAstTextNode {
-  type: 'text'
-  value: string
 }
 
 export interface ArticleCategoryItem {
