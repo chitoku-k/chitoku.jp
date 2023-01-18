@@ -1,5 +1,5 @@
 import type { ComponentPropsWithRef, FunctionComponent } from 'react'
-import isUrl from 'is-url'
+import isAbsoluteUrl from 'is-absolute-url'
 import type { GatsbyLinkProps } from 'gatsby-link'
 import { Link as GatsbyLink } from 'gatsby-link'
 
@@ -13,7 +13,7 @@ const Link: FunctionComponent<GatsbyLinkProps<unknown> & LinkProps> = ({
 }) => {
   const dest = (to || href) ?? ''
 
-  return isUrl(dest) || target ? (
+  return isAbsoluteUrl(dest) || target ? (
     <a href={dest} ref={ref} target={target ?? '_blank'} rel="nofollow noopener noreferrer" {...rest} />
   ) : dest === '#' ? (
     <a ref={ref} {...rest} />
