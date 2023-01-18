@@ -73,6 +73,25 @@
     }
   }
 
+  > p {
+    padding: 0 16px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 0 13px;
+      font-size: 14px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 0;
+    }
+  }
+
+  > p,
+  > ul,
+  > ol {
+    margin-bottom: 1.8em;
+  }
+
   p {
     font-size: 11pt;
     line-height: 1.8;
@@ -90,27 +109,6 @@
 
     pre {
       margin: 5px 0 0;
-    }
-  }
-
-  > div {
-    > p {
-      padding: 0 16px;
-
-      @include media-breakpoint-down(lg) {
-        padding: 0 13px;
-        font-size: 14px;
-      }
-
-      @include media-breakpoint-down(md) {
-        padding: 0;
-      }
-    }
-
-    > p,
-    > ul,
-    > ol {
-      margin-bottom: 1.8em;
     }
   }
 

@@ -1,18 +1,15 @@
-import type { ComponentType, FunctionComponent, PropsWithChildren } from 'react'
-import { createElement, useMemo } from 'react'
-import unified from 'unified'
-import type { Node } from 'unist'
-import type { ComponentLike } from 'rehype-react'
+import type { ComponentType, FunctionComponent } from 'react'
+import { Fragment, createElement, useMemo } from 'react'
+import { unified } from 'unified'
+import type { Root } from 'hast'
 import rehypeReact from 'rehype-react'
 
 import * as styles from './styles.module.scss'
 
-import type { ArticleAstNode } from 'components/Article'
-
-const components: ArticleComponentCollection = {}
+const components: Record<string, ComponentType<unknown>> = {}
 
 export const register = function register<T>(key: string, component: ComponentType<T>): void {
-  components[key] = component as unknown as ComponentType<PropsWithChildren>
+  components[key] = component as ComponentType<unknown>
 }
 
 const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
@@ -22,12 +19,13 @@ const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
     () => unified()
       .use(rehypeReact, {
         createElement,
-        components: components as Record<string, ReactComponentLike>,
+        Fragment,
+        components,
       }),
     [],
   )
   const content = useMemo(
-    () => processor.stringify(ast as Node),
+    () => processor.stringify(ast),
     [ ast, processor ],
   )
   return (
@@ -38,10 +36,7 @@ const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
 }
 
 export interface ArticleBodyProps {
-  ast: ArticleAstNode
+  ast: Root
 }
-
-export type ArticleComponentCollection = Record<string, ComponentType<PropsWithChildren>>
-type ReactComponentLike = ComponentLike<ReturnType<typeof createElement>>
 
 export default ArticleBody

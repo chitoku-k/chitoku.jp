@@ -1,11 +1,11 @@
 import type { FunctionComponent } from 'react'
 import { Col, Row, Table } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
+import type { Root } from 'hast'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
 
-import type { ArticleAstNode } from 'components/Article'
 import ArticleBody from 'components/ArticleBody'
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
@@ -90,7 +90,7 @@ const About: FunctionComponent<AboutProps> = ({
                 <tr>
                   <th>{formatMessage(messages.introduction)}</th>
                   <td>
-                    <ArticleBody ast={(introduction?.markdown?.htmlAst ?? null) as ArticleAstNode} />
+                    <ArticleBody ast={(introduction?.markdown?.htmlAst ?? null) as unknown as Root} />
                   </td>
                 </tr>
               </tbody>
