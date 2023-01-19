@@ -9,10 +9,11 @@ interests:
   - type: プログラミング
     items:
       - name: Go
+      - name: Rust
       - name: C#
       - name: WPF
       - name: C
-      - name: JavaScript
+      - name: TypeScript
       - name: PHP
   - type: エディター
     items:

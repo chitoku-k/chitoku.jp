@@ -37,7 +37,6 @@ category: ソフトウェア
 * webpack
 * Sass
 * PostgreSQL
-* Redis
 
 ---
 
