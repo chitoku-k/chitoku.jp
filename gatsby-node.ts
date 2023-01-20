@@ -48,7 +48,6 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
         plugins.minifyJs({
           extractComments: false,
         }),
-        plugins.minifyCss(),
       ]
       replaceWebpackConfig(config)
     }
