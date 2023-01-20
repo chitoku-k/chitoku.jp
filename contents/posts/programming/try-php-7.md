@@ -24,44 +24,39 @@ phpenv でバージョン切り替えが可能な環境で実験してみます�
 ## 手順
 
 1. phpenv と php-build をインストールする
-2. php-build のビルドオプションの設定ファイルを開く
+1. php-build のビルドオプションの設定ファイルを開く
 
-```bash
-$ vim /usr/local/share/php-build/default_configure_options
-```
+   ```bash
+   $ vim /usr/local/share/php-build/default_configure_options
+   ```
+1. 次の行を追加（apxs の位置は環境依存）
 
-3.  次の行を追加（apxs の位置は環境依存）
+   ```diff
+   --with-apxs2=/usr/bin/apxs
+   --enable-mysqlnd
+   --with-pdo-mysql=mysqlnd
+   ```
+1. 保存してビルド
 
-```
---with-apxs2=/usr/bin/apxs
---enable-mysqlnd
---with-pdo-mysql=mysqlnd
-```
+   ```bash
+   $ php-build 7.0.0RC1 ~/.phpenv/versions/7.0.0RC1
+   ```
+1. バージョンを切り替える
 
-4. 保存してビルド
+   ```bash
+   $ phpenv global 7.0.0RC1
 
-```bash
-$ php-build 7.0.0RC1 ~/.phpenv/versions/7.0.0RC1
-```
+   $ phpenv versions
+     system
+   * 7.0.0RC1
+   ```
+1. httpd.conf を開いて書き換える
 
-5.  バージョンを切り替える
-
-```bash
-$ phpenv global 7.0.0RC1
-
-$ phpenv versions
-  system
-* 7.0.0RC1
-```
-
-6. httpd.conf を開いて書き換える
-
-```apacheconf
-# LoadModule php5_module modules/libphp5.so
-LoadModule php7_module /usr/lib/httpd/modules/libphp7.so
-```
-
-7. httpd を再起動
+   ```apacheconf
+   #LoadModule php5_module modules/libphp5.so
+   LoadModule php7_module /usr/lib/httpd/modules/libphp7.so
+   ```
+1. httpd を再起動
 
 ## 所感
 
