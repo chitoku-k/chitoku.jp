@@ -9,11 +9,11 @@
   -webkit-overflow-scrolling: touch;
 
   @include media-breakpoint-down(lg) {
-    margin-bottom: 0;
     white-space: nowrap;
   }
 
   @include media-breakpoint-down(md) {
+    margin-bottom: 12px;
     overflow-x: auto;
   }
 }

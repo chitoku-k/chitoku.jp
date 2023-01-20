@@ -4,7 +4,11 @@
   padding-bottom: 60px;
 
   @include media-breakpoint-down(lg) {
-    padding: 15px 12px;
+    padding-bottom: 24px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 12px;
   }
 }
 
