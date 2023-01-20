@@ -52,14 +52,7 @@ const config: GatsbyConfig = {
         },
       },
     },
-    {
-      resolve: 'gatsby-plugin-minify-html',
-      options: {
-        config: {
-          conservativeCollapse: true,
-        },
-      },
-    },
+    { resolve: 'gatsby-plugin-minify-html' },
     { resolve: 'gatsby-plugin-no-sourcemaps' },
     { resolve: 'gatsby-plugin-react-helmet' },
     {
