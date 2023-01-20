@@ -99,9 +99,19 @@
 
   ul,
   ol {
+    padding-left: 55px;
     font-size: 11pt;
     font-variant-numeric: tabular-nums;
     line-height: 1.8;
+
+    ul,
+    ol {
+      padding-left: 40px;
+
+      @include media-breakpoint-down(md) {
+        padding-left: 25px;
+      }
+    }
 
     p {
       margin-bottom: 0;
@@ -109,6 +119,10 @@
 
     pre {
       margin: 5px 0 0;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-left: 35px;
     }
   }
 
@@ -188,6 +202,18 @@
       margin: 0.9em 0 1.8em;
     }
 
+    .gist {
+      padding: 0 16px;
+
+      @include media-breakpoint-down(lg) {
+        padding: 0 13px;
+      }
+
+      @include media-breakpoint-down(md) {
+        padding: 0;
+      }
+    }
+
     .gatsby-highlight {
       margin: 0.5em 16px 1.8em;
       overflow: auto;
@@ -204,6 +230,14 @@
         margin-right: -15px;
         margin-left: -15px;
         border-radius: 0;
+      }
+    }
+
+    li > .gatsby-highlight {
+      margin: 0.5em 0 0.9em;
+
+      @include media-breakpoint-down(md) {
+        border-radius: 0.3em;
       }
     }
 
