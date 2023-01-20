@@ -31,7 +31,7 @@ phpenv でバージョン切り替えが可能な環境で実験してみます�
    ```
 1. 次の行を追加（apxs の位置は環境依存）
 
-   ```diff
+   ```
    --with-apxs2=/usr/bin/apxs
    --enable-mysqlnd
    --with-pdo-mysql=mysqlnd
