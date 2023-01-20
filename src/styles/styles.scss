@@ -58,21 +58,6 @@ button {
   }
 }
 
-// Gist
-.gist {
-  .gist-data,
-  .gist-meta {
-    @include media-breakpoint-up(md) {
-      padding-left: 16px;
-    }
-  }
-
-  .gist-meta {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 12px;
-  }
-}
-
 // Prism
 pre[class*="language-"],
 code[class*="language-"] {
