@@ -233,6 +233,15 @@
       }
     }
 
+    .gatsby-highlight-code-line {
+      display: block;
+      padding-right: 1em;
+      padding-left: 4.6em;
+      margin-right: -1em;
+      margin-left: -4.6em;
+      background-color: var(--code-highlight);
+    }
+
     li > .gatsby-highlight {
       margin: 0.5em 0 0.9em;
 
@@ -270,6 +279,7 @@
       overflow: visible;
 
       &.line-numbers {
+        min-width: calc(100% - 2em);
         padding-left: 3.6em;
 
         .line-numbers-rows {

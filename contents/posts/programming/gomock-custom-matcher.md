@@ -37,6 +37,7 @@ func TestServiceGet(t *testing.T) {
 	defer ctrl.Finish()
 
 	mock := api.NewMockClient(ctrl)
+	// highlight-next-line
 	mock.EXPECT().Get(gomock.Eq("/v1/info")).Return(nil, nil)
 
 	service := domain.NewService(mock)
@@ -63,6 +64,7 @@ func TestServicePost(t *testing.T) {
 	mock.EXPECT().Post(
 		gomock.Eq("/v1/comments"),
 		gomock.Eq("application/x-www-form-urlencoded"),
+		// highlight-next-line
 		gomock.Any(),
 	).Return(nil, nil)
 
@@ -95,6 +97,7 @@ func (s *service) DoFancyStuff() {
 	s.client.Post(
 		"/v1/comments",
 		"application/x-www-form-urlencoded",
+		// highlight-next-line
 		strings.NewReader(values.Encode()),
 	)
 }
@@ -209,6 +212,7 @@ func (r *readerMatcher) String() string {
 func (r *readerMatcher) Got(got interface{}) string {
 	f, ok := r.m.(gomock.GotFormatter)
 	if ok {
+		// highlight-next-line
 		return fmt.Sprintf("data(%s)", f.Got(r.data))
 	}
 	return fmt.Sprintf("%#v", r.data)
@@ -259,6 +263,7 @@ func (q *queryGotFormatter) Got(got interface{}) string {
 	values, _ := url.ParseQuery(string(got.([]byte)))
 	f, ok := q.m.(gomock.GotFormatter)
 	if ok {
+		// highlight-next-line
 		return fmt.Sprintf("url.Values(%s)", f.Got(values))
 	}
 	return fmt.Sprintf("url.Values(%v)", values)
