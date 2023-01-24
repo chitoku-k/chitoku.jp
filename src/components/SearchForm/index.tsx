@@ -1,7 +1,6 @@
 import type { FormEvent, FunctionComponent } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import { Container, Nav, Popover, Row } from 'react-bootstrap'
-import { useLocation } from '@gatsbyjs/reach-router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { navigate } from 'gatsby'
@@ -30,13 +29,15 @@ const navigateToSearch = async (query: string | null, pathname: string): Promise
 }
 
 const SearchForm: FunctionComponent<SearchFormProps> = ({
+  location: {
+    pathname,
+  },
   search,
   closeSearch,
 }) => {
   const [ readOnly, setReadOnly ] = useState(true)
   const { formatMessage } = useIntl()
   const { query, setQuery } = useSearch()
-  const { pathname } = useLocation()
 
   const onSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -86,6 +87,9 @@ const SearchForm: FunctionComponent<SearchFormProps> = ({
 }
 
 interface SearchFormProps {
+  location: {
+    pathname: string
+  }
   search: boolean
   openSearch: () => void
   closeSearch: () => void
