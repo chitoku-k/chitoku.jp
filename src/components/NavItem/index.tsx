@@ -1,6 +1,5 @@
 import type { ComponentPropsWithoutRef, FunctionComponent } from 'react'
 import { Dropdown } from 'react-bootstrap'
-import { useLocation } from '@gatsbyjs/reach-router'
 import clsx from 'clsx'
 
 import * as styles from './styles.module.scss'
@@ -17,32 +16,29 @@ export const NavLink: typeof Link = ({
 )
 
 const NavItem: FunctionComponent<BootstrapNavItemProps & NavigationLinkItem & NavItemProps> = ({
+  location,
   name,
   to,
   items,
   dropdown,
   className,
   ...rest
-}) => {
-  const location = useLocation()
-
-  return items ? (
-    <Dropdown id={to} className={clsx(styles.dropdown, to === location.pathname && 'active', className)} bsPrefix={dropdown ? 'dropdown' : 'sub'} as="li">
-      <NavLink to={to} className={clsx(dropdown && 'dropdown-toggle')}>
-        {name}
-      </NavLink>
-      <Dropdown.Menu as="ul" show bsPrefix={dropdown ? 'dropdown-menu' : 'sub-menu'}>
-        <NavDropdown dropdown={dropdown} items={items} />
-      </Dropdown.Menu>
-    </Dropdown>
-  ) : (
-    <li className={clsx(to === location.pathname && !location.search && 'active', className)} {...rest}>
-      <NavLink to={to}>
-        {name}
-      </NavLink>
-    </li>
-  )
-}
+}) => items ? (
+  <Dropdown id={to} className={clsx(styles.dropdown, to === location.pathname && 'active', className)} bsPrefix={dropdown ? 'dropdown' : 'sub'} as="li">
+    <NavLink to={to} className={clsx(dropdown && 'dropdown-toggle')}>
+      {name}
+    </NavLink>
+    <Dropdown.Menu as="ul" show bsPrefix={dropdown ? 'dropdown-menu' : 'sub-menu'}>
+      <NavDropdown location={location} dropdown={dropdown} items={items} />
+    </Dropdown.Menu>
+  </Dropdown>
+) : (
+  <li className={clsx(to === location.pathname && 'active', className)} {...rest}>
+    <NavLink to={to}>
+      {name}
+    </NavLink>
+  </li>
+)
 
 interface BootstrapNavItemProps {
   active?: boolean
@@ -52,6 +48,9 @@ interface BootstrapNavItemProps {
 }
 
 interface NavItemProps extends ComponentPropsWithoutRef<'li'> {
+  location: {
+    pathname: string
+  }
   dropdown?: boolean
 }
 

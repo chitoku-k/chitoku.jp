@@ -2,7 +2,6 @@ import type { FunctionComponent } from 'react'
 import { Col } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
-import type { WindowLocation } from '@gatsbyjs/reach-router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faRss } from '@fortawesome/free-solid-svg-icons'
 import clsx from 'clsx'
@@ -142,7 +141,7 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
         </SubHeader>
         <ul className={styles.categories}>
           {sidebar.map(item => (
-            <NavItem key={item.name} {...item} />
+            <NavItem key={item.name} location={location} {...item} />
           ))}
         </ul>
       </div>
@@ -151,7 +150,12 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
 }
 
 export interface SidebarProps {
-  location: WindowLocation
+  location: {
+    href: string
+    pathname: string
+    search: string
+    hash: string
+  }
 }
 
 type SidebarQueryResult = Queries.SidebarItemQuery

@@ -2,6 +2,7 @@ import type { FunctionComponent, ReactNode } from 'react'
 import { createContext, useContext } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
 import { useIntl } from 'react-intl'
+import { useLocation } from '@gatsbyjs/reach-router'
 import type { Root } from 'hast'
 
 import messages from './messages'
@@ -40,6 +41,7 @@ const Article: FunctionComponent<ArticleProps> = ({
   prev,
   next,
 }) => {
+  const location = useLocation()
   const { formatMessage } = useIntl()
   const {
     path,
@@ -64,7 +66,7 @@ const Article: FunctionComponent<ArticleProps> = ({
           <Navbar className={styles.navbar} bg="light">
             <Nav className={styles.nav} as="ul">
               {navigation.map(item => (
-                <NavItem key={item.name} className={styles.navItem} {...item} items={null} style={{ width: `calc(100% / ${navigation.length})` }} />
+                <NavItem key={item.name} location={location} className={styles.navItem} {...item} items={null} style={{ width: `calc(100% / ${navigation.length})` }} />
               ))}
             </Nav>
           </Navbar>

@@ -1,21 +1,16 @@
 import type { FunctionComponent, ReactNode } from 'react'
-import { memo } from 'react'
 import { Container as BootstrapContainer, Col, Row } from 'react-bootstrap'
+import { Slice } from 'gatsby'
 import { useLocation } from '@gatsbyjs/reach-router'
 import clsx from 'clsx'
 
 import * as styles from './styles.module.scss'
 
-import Sidebar from 'components/Sidebar'
-
-const MemoizedSidebar = memo(Sidebar, (prev, next) => prev.location.href === next.location.href)
-MemoizedSidebar.displayName = 'MemoizedSidebar'
-
 const Container: FunctionComponent<ContainerProps> = ({
   children,
   sidebar,
 }) => {
-  const location = useLocation()
+  const { href, pathname, search, hash } = useLocation()
 
   return (
     <BootstrapContainer className={styles.container}>
@@ -23,7 +18,9 @@ const Container: FunctionComponent<ContainerProps> = ({
         <Col className={clsx(styles.col, sidebar && styles.sidebar)}>
           {children}
         </Col>
-        {sidebar ? <MemoizedSidebar location={location} /> : null}
+        {sidebar
+          ? <Slice alias="sidebar" location={{ href, pathname, search, hash }} />
+          : null}
       </Row>
     </BootstrapContainer>
   )

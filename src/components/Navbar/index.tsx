@@ -33,7 +33,9 @@ const SearchIcon: FunctionComponent<ComponentPropsWithoutRef<'li'>> = ({
   <li className={clsx(styles.searchIcon, className)} {...rest} />
 )
 
-const Navbar: FunctionComponent = () => {
+const Navbar: FunctionComponent<NavbarProps> = ({
+  location,
+}) => {
   const { navigation } = useStaticQuery<NavbarQueryResult>(query)
 
   const [ search, setSearch ] = useState(false)
@@ -55,7 +57,7 @@ const Navbar: FunctionComponent = () => {
             <Row>
               <Nav className={styles.nav} as="ul">
                 {nav.map(item => (
-                  <NavItem key={item.to} {...item} dropdown />
+                  <NavItem key={item.to} location={location} {...item} dropdown />
                 ))}
                 <SearchIcon onClick={openSearch}>
                   <NavLink to="#">
@@ -65,7 +67,7 @@ const Navbar: FunctionComponent = () => {
               </Nav>
             </Row>
           </BootstrapNavbar>
-          <SearchForm search={search} openSearch={openSearch} closeSearch={closeSearch} />
+          <SearchForm location={location} search={search} openSearch={openSearch} closeSearch={closeSearch} />
         </Row>
       </Container>
     </div>
@@ -74,5 +76,11 @@ const Navbar: FunctionComponent = () => {
 
 export type NavigationLinkItem = Queries.NavigationsYamlNav
 type NavbarQueryResult = Queries.NavigationLinkItemQuery
+
+interface NavbarProps {
+  location: {
+    pathname: string
+  }
+}
 
 export default Navbar

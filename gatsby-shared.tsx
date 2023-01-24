@@ -10,9 +10,6 @@ import messages from 'translations/ja.yml'
 
 import Layout from 'components/Layout'
 import Container from 'components/Container'
-import Header from 'components/Header'
-import Navbar from 'components/Navbar'
-import Footer from 'components/Footer'
 import { SearchProvider } from 'components/Search'
 
 const Wrapper: FunctionComponent<PropsWithChildren> = ({ children }) => isValidElement(children) ? children : null
@@ -32,12 +29,9 @@ export const wrapPageElement: GatsbyBrowser<unknown, Context>['wrapPageElement']
   },
 }): JSX.Element => (
   <Layout>
-    <Header />
-    <Navbar />
     <Container sidebar={sidebar !== false}>
       {element}
     </Container>
-    <Footer />
   </Layout>
 )
 

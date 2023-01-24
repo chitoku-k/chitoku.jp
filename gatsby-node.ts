@@ -65,6 +65,7 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
 export const createPages: GatsbyNode['createPages'] = ({
   actions: {
     createRedirect,
+    createSlice,
   },
 }) => {
   createRedirect({
@@ -72,6 +73,26 @@ export const createPages: GatsbyNode['createPages'] = ({
     toPath: '/',
     isPermanent: true,
     redirectInBrowser: true,
+  })
+
+  createSlice({
+    id: 'header',
+    component: path.resolve('src/components/Header/index.tsx'),
+  })
+
+  createSlice({
+    id: 'navbar',
+    component: path.resolve('src/components/Navbar/index.tsx'),
+  })
+
+  createSlice({
+    id: 'sidebar',
+    component: path.resolve('src/components/Sidebar/index.tsx'),
+  })
+
+  createSlice({
+    id: 'footer',
+    component: path.resolve('src/components/Footer/index.tsx'),
   })
 }
 
