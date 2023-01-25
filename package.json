@@ -56,7 +56,7 @@
     "gatsby-plugin-sharp": "chitoku-k/gatsby-plugin-sharp#948b74c",
     "gatsby-remark-attr": "^0.1.0",
     "gatsby-remark-autolink-headers": "^6.5.0",
-    "gatsby-remark-copy-linked-files": "^6.4.0",
+    "gatsby-remark-copy-linked-files": "^6.5.0",
     "gatsby-remark-embed-gist": "^1.2.1",
     "gatsby-remark-grid-tables": "^0.1.0",
     "gatsby-remark-images": "^7.5.0",
