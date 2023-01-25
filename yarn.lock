@@ -10105,13 +10105,13 @@ gatsby-telemetry@^4.5.0:
     lodash "^4.17.21"
     node-fetch "^2.6.7"
 
-gatsby-transformer-remark@^6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-6.4.0.tgz#24181e5afd6bdfeaf7a2b39b30669d9c9e0061d9"
-  integrity sha512-ffzdxuSARq/cFR/oNbJ+IiMTUvyDExk5nlmBo+7b6rg4lgJwew/6npZjtJKLCHU+O/C2mp33RFvvI4+ua0Njkw==
+gatsby-transformer-remark@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-6.5.0.tgz#7a0489248671bb142dac34214fa546d8239f2bb8"
+  integrity sha512-8YnoXcJISesK/ch8qZzmp+jewCi4xnnDHpBQWcIg/zTQ5jhyLI+CGYiAyRlxqbJ1f7Tkjp2K+M/CiJG5r28Jsw==
   dependencies:
     "@babel/runtime" "^7.20.7"
-    gatsby-core-utils "^4.4.0"
+    gatsby-core-utils "^4.5.0"
     gray-matter "^4.0.3"
     hast-util-raw "^6.1.0"
     hast-util-to-html "^7.1.3"
