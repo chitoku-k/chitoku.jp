@@ -1,6 +1,6 @@
 import type { FunctionComponent, ReactNode } from 'react'
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
-import { useSearchParam } from 'react-use'
+import { useMedia, useSearchParam } from 'react-use'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
@@ -99,6 +99,7 @@ const Search: FunctionComponent<SearchProps> = ({
 }) => {
   const { formatMessage } = useIntl()
   const { query } = useSearch()
+  const theme = useMedia('(prefers-color-scheme: dark)', false) ? 'dark' : 'light'
 
   if (!site) {
     throw new Error('Invalid data')
@@ -125,7 +126,7 @@ const Search: FunctionComponent<SearchProps> = ({
         <ArticleHeader className={styles.resultHeader} title={
           <>
             {title}
-            <PoweredBy classNames={{ logo: styles.logo }} />
+            <PoweredBy classNames={{ logo: styles.logo }} theme={theme} />
           </>
         } />
         <InstantSearch indexName={indexName} searchClient={searchClient}>
@@ -142,7 +143,7 @@ const Search: FunctionComponent<SearchProps> = ({
 export const SearchProvider: FunctionComponent<SearchProviderProps> = ({
   children,
 }) => {
-  const [ query, setQuery ] = useState<string | null>(useSearchParam('q'))
+  const [ query, setQuery ] = useState(useSearchParam('q'))
   const state = useMemo(() => ({ query, setQuery }), [ query ])
 
   return (
