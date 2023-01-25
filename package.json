@@ -112,7 +112,7 @@
     "develop": "gatsby develop",
     "i18n": "extract-messages -o translations -l=ja -d=ja -f yaml 'src/**/*.ts'",
     "lint": "yarn lint:js && yarn lint:ts && yarn lint:css",
-    "lint:js": "eslint 'plugins/**/*.js'",
+    "lint:js": "eslint 'plugins/**/*.{js,mjs}'",
     "lint:ts": "eslint '{,src,plugins}/**/*.{ts,tsx}'",
     "lint:css": "stylelint 'src/**/*.scss'",
     "start": "gatsby develop",
@@ -120,7 +120,7 @@
     "build-storybook": "build-storybook"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
+    "*.{js,mjs,ts,tsx}": [
       "eslint --fix"
     ],
     "*.scss": [
