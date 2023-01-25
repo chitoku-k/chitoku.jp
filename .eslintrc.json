@@ -67,6 +67,12 @@
   },
   "overrides": [
     {
+      "files": ["**/*.mjs"],
+      "parserOptions": {
+        "sourceType": "module"
+      }
+    },
+    {
       "files": ["**/*.{ts,tsx}"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {

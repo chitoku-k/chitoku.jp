@@ -1,11 +1,9 @@
-'use strict'
-
-const visit = require('unist-util-visit')
-const twemoji = require('@twemoji/api')
+import { visit } from 'unist-util-visit'
+import twemoji from '@twemoji/api'
 
 const CUSTOM_ELEMENT_HTML_PATTERN = /<\/?[a-z]+-/u
 
-module.exports = ({
+export default ({
   markdownAST,
 }) => {
   // Unwrap custom elements in an HTMLParagraphElement
