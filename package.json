@@ -68,7 +68,7 @@
     "gatsby-transformer-sharp": "^5.4.0",
     "gatsby-transformer-yaml": "^5.4.0",
     "husky": "^8.0.3",
-    "instantsearch.js": "^4.49.4",
+    "instantsearch.js": "^4.50.0",
     "is-absolute-url": "^4.0.1",
     "license-webpack-plugin": "^4.0.2",
     "lint-staged": "^13.1.0",
