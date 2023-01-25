@@ -9667,6 +9667,15 @@ fs-extra@^10.0.0, fs-extra@^10.1.0:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
+fs-extra@^11.1.0:
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.1.0.tgz#5784b102104433bb0e090f48bfc4a30742c357ed"
+  integrity sha512-0rcTq621PD5jM/e0a3EJoGC/1TC5ZBCERW82LQuwfGnCa1V8w7dpYH1yNu+SLb6E5dkeCBzKEyLGlFrnr+dUyw==
+  dependencies:
+    graceful-fs "^4.2.0"
+    jsonfile "^6.0.1"
+    universalify "^2.0.0"
+
 fs-extra@^8.0.1:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
@@ -9798,18 +9807,19 @@ gatsby-cli@^5.4.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^4.3.1, gatsby-core-utils@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-4.4.0.tgz#458673d22be3eb511ab8e12be4ea233a74591531"
-  integrity sha512-/ibilcGENKH6qqkcT17SIZgc2kjZn3HiGpD+ixbXYkMGqHiM5pj9XIHjy3DfvZvDt2ujkYV5EinmUdqx7CI81w==
+gatsby-core-utils@^4.3.1, gatsby-core-utils@^4.4.0, gatsby-core-utils@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-4.5.0.tgz#728ef510ee987839628f704cf849347f3e60dbcc"
+  integrity sha512-8ckCNXB7iasqLLoBTJLDzXwUcJ/cNUZVHo3+3cyMA9CLc8pfZiXtlp5qaOl0J+Q1qdorfENAnTvNEddXABfIZw==
   dependencies:
     "@babel/runtime" "^7.20.7"
     ci-info "2.0.0"
     configstore "^5.0.1"
     fastq "^1.13.0"
     file-type "^16.5.3"
-    fs-extra "^10.1.0"
+    fs-extra "^11.1.0"
     got "^11.8.5"
+    hash-wasm "^4.9.0"
     import-from "^4.0.0"
     lmdb "2.5.3"
     lock "^1.1.0"
@@ -10101,18 +10111,17 @@ gatsby-sharp@^1.4.0:
     "@types/sharp" "^0.31.0"
     sharp "^0.31.3"
 
-gatsby-source-filesystem@^5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-5.4.0.tgz#e2ab3ced3a190a68f4aea0609eeb21b3604aaf4a"
-  integrity sha512-vYJM5mJu3vJAo9x5i1k+teBNHi2Fn9aPIrF2zgzqMz6x3iAaila0rD3hMLhNBCzo+GosCnkkQW9g/Tk4OcR0gg==
+gatsby-source-filesystem@^5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-5.5.0.tgz#fd7e86f1eb63171db1b181a372c1e2954d3fe301"
+  integrity sha512-STuHuf3who/9Nx5NW00fpRnaob0TXB3YftrPJ1qnZ+N5pfT0hyOrRm1EhSvrDAlXm3qT45fWddVDFLpaMU8+8g==
   dependencies:
     "@babel/runtime" "^7.20.7"
     chokidar "^3.5.3"
     file-type "^16.5.4"
-    fs-extra "^10.1.0"
-    gatsby-core-utils "^4.4.0"
-    md5-file "^5.0.0"
-    mime "^2.6.0"
+    fs-extra "^11.1.0"
+    gatsby-core-utils "^4.5.0"
+    mime "^3.0.0"
     pretty-bytes "^5.6.0"
     valid-url "^1.0.9"
     xstate "^4.34.0"
@@ -10872,6 +10881,11 @@ hash-base@^3.0.0:
     inherits "^2.0.4"
     readable-stream "^3.6.0"
     safe-buffer "^5.2.0"
+
+hash-wasm@^4.9.0:
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/hash-wasm/-/hash-wasm-4.9.0.tgz#7e9dcc9f7d6bd0cc802f2a58f24edce999744206"
+  integrity sha512-7SW7ejyfnRxuOc7ptQHSf4LDoZaWOivfzqw+5rpcQku0nHfmicPKE51ra9BiRLAmT8+gGLestr1XroUkqdjL6w==
 
 hash.js@^1.0.0, hash.js@^1.0.3:
   version "1.1.7"
