@@ -16,10 +16,6 @@ updates:
     timezone: Asia/Tokyo
   open-pull-requests-limit: 99
   versioning-strategy: increase
-  ignore:
-  # TODO: Update unist-* when Gatsby adds support for ESM
-  # https://github.com/gatsbyjs/gatsby/discussions/31599
-  - dependency-name: unist-*
 - package-ecosystem: docker
   directory: "/"
   schedule:

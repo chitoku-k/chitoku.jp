@@ -1,8 +1,10 @@
 {
   "name": "historia-remark-plugin",
   "version": "1.0.0",
+  "type": "module",
+  "main": "index.mjs",
   "dependencies": {
     "@twemoji/api": "^14.1.0",
-    "unist-util-visit": "^2.0.3"
+    "unist-util-visit": "^4.1.2"
   }
 }
