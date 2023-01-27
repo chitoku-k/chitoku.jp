@@ -2150,10 +2150,10 @@
     "@parcel/plugin" "2.8.2"
     gatsby-core-utils "^4.5.0"
 
-"@gatsbyjs/reach-router@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@gatsbyjs/reach-router/-/reach-router-2.0.0.tgz#de8520ef719c5bf849beb1f43f57b7dd3c7db5b1"
-  integrity sha512-n5nifEBtQCo4Wc/ErBvFEGyX5y8dKPSERre3pmuizkJl9J4l0M0bhu6aMc4uOXhG66UR4jgVDjN2Q2I2FSrVkw==
+"@gatsbyjs/reach-router@^2.0.0", "@gatsbyjs/reach-router@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@gatsbyjs/reach-router/-/reach-router-2.0.1.tgz#8c4ddb6c38589fb4650408430e51220e31d04fca"
+  integrity sha512-gmSZniS9/phwgEgpFARMpNg21PkYDZEpfgEzvkgpE/iku4uvXqCrxr86fXbTpI9mkrhKS1SCTYmLGe60VdHcdQ==
   dependencies:
     invariant "^2.2.4"
     prop-types "^15.8.1"
