@@ -74,8 +74,7 @@ lampager-cakephp2 では次のように [php-coveralls/php-coveralls](https://gi
 ## 最後に
 
 <div class="text-center">
-
-[![](https://user-images.githubusercontent.com/1351893/32145370-967f8572-bd0a-11e7-8324-10854958fd7f.png){style="width: 310px;"}](https://github.com/lampager/lampager-cakephp2)
+<a href="https://github.com/lampager/lampager-cakephp2"><img src="https://user-images.githubusercontent.com/1351893/32145370-967f8572-bd0a-11e7-8324-10854958fd7f.png" style="width: 310px;"></a>
 </div>
 
 この記事で紹介した [lampager/lampager](https://github.com/lampager/lampager) はページ単位ではなくカーソルを使用したページネーションを行うためのライブラリーで、

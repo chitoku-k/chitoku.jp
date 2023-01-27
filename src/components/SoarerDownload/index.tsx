@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from 'react-intl'
-import clsx from 'clsx'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
@@ -53,7 +52,7 @@ const SoarerDownload: FunctionComponent = () => {
     <>
       <div className={styles.container}>
         <img className={styles.icon} src={icon} />
-        <h2 className={clsx(styles.title, 'no-border')}>
+        <h2 className={styles.title}>
           <span>Soarer for Windows </span><br />
           <span>ver {update.version}</span>
         </h2>

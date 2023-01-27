@@ -4,7 +4,7 @@ category: ソフトウェア
 ---
 ## サポート中
 
-### [![chitoku.jp](/thumbnails/default.png)chitoku.jp](https://github.com/chitoku-k/chitoku.jp)
+### [![](/thumbnails/default.png)chitoku.jp](https://github.com/chitoku-k/chitoku.jp)
 
 [ちとくのホームページ](/)を静的サイト生成を利用して出力するアプリケーションです。
 
@@ -21,7 +21,7 @@ category: ソフトウェア
 
 ---
 
-### [![Homo Checker](../media/homo_icon.png)Homo Checker](https://github.com/chitoku-k/HomoChecker)
+### [![](../media/homo_icon.png)Homo Checker](https://github.com/chitoku-k/HomoChecker)
 
 [まっぴー](https://twitter.com/mpyw)にリダイレクトしている URL を自動チェックする Web アプリケーションです。
 こらそこ誰得とか言わない。
@@ -40,7 +40,7 @@ category: ソフトウェア
 
 ---
 
-### [![ぴゅっぴゅカウンター](../media/software_icon.png)ぴゅっぴゅカウンター](https://github.com/chitoku-k/ejaculation-counter)
+### [![](../media/software_icon.png)ぴゅっぴゅカウンター](https://github.com/chitoku-k/ejaculation-counter)
 
 ぴゅっぴゅ回数をカウントしたり、Mastodon に接続してガチャなどのリプライを行ったりする bot アプリケーションです。
 
@@ -53,7 +53,7 @@ category: ソフトウェア
 
 ---
 
-### [![fzf-zsh-completions](../media/software_icon.png)fzf-zsh-completions](https://github.com/chitoku-k/fzf-zsh-completions)
+### [![](../media/software_icon.png)fzf-zsh-completions](https://github.com/chitoku-k/fzf-zsh-completions)
 
 Zsh で [fzf](https://github.com/junegunn/fzf) を利用してコマンドに特化したファジー補完を行う Zsh プラグインです。
 git、kubectl、systemctl、docker コマンドなどの補完を行う際に、対象の詳細な情報を表形式で表示します。
@@ -65,7 +65,7 @@ git、kubectl、systemctl、docker コマンドなどの補完を行う際に、
 
 ---
 
-### [![cloudflare-exporter](../media/software_icon.png)cloudflare-exporter](https://github.com/chitoku-k/cloudflare-exporter)
+### [![](../media/software_icon.png)cloudflare-exporter](https://github.com/chitoku-k/cloudflare-exporter)
 
 [Cloudflare Load Balancing](https://www.cloudflare.com/load-balancing/) に登録した Origin のヘルスチェック結果と RTT を Prometheus のメトリクスとして出力します。
 
@@ -77,7 +77,7 @@ git、kubectl、systemctl、docker コマンドなどの補完を行う際に、
 
 ---
 
-### [![edgerouter-exporter](../media/software_icon.png)edgerouter-exporter](https://github.com/chitoku-k/edgerouter-exporter)
+### [![](../media/software_icon.png)edgerouter-exporter](https://github.com/chitoku-k/edgerouter-exporter)
 
 Ubiquiti 社のルーター [EdgeRouter](https://store.ui.com/collections/routing-switching/products/edgerouter-x) の DDNS、ロードバランサー、PPPoE セッションなどの情報を Prometheus のメトリクスとして出力します。
 
@@ -88,7 +88,7 @@ Ubiquiti 社のルーター [EdgeRouter](https://store.ui.com/collections/routin
 
 ---
 
-### [![serde\_vici](../media/software_icon.png)serde\_vici](https://github.com/chitoku-k/serde-vici)
+### [![](../media/software_icon.png)serde\_vici](https://github.com/chitoku-k/serde-vici)
 
 IPsec VPN の strongSwan を設定、監視、制御する charon と対話するために利用する [VICI](https://docs.strongswan.org/docs/5.9/plugins/vici.html) プロトコルの形式にシリアライズおよびデシリアライズする [Serde](https://serde.rs/) ベースの crate です。
 
@@ -99,7 +99,7 @@ IPsec VPN の strongSwan を設定、監視、制御する charon と対話す�
 
 ---
 
-### [![rsvici](../media/software_icon.png)rsvici](https://github.com/chitoku-k/rsvici)
+### [![](../media/software_icon.png)rsvici](https://github.com/chitoku-k/rsvici)
 
 IPsec VPN の strongSwan を設定、監視、制御する charon と [VICI](https://docs.strongswan.org/docs/5.9/plugins/vici.html) プロトコルを利用して対話するための [Tokio](https://tokio.rs/) ベースのクライアントライブラリーです。
 
@@ -110,7 +110,7 @@ IPsec VPN の strongSwan を設定、監視、制御する charon と [VICI](htt
 
 ---
 
-### [![healthcheck-k8s](../media/software_icon.png)healthcheck-k8s](https://github.com/chitoku-k/healthcheck-k8s)
+### [![](../media/software_icon.png)healthcheck-k8s](https://github.com/chitoku-k/healthcheck-k8s)
 
 HTTP ヘッダーで指定された Kubernetes の [Node](https://kubernetes.io/docs/concepts/architecture/nodes/) が Schedulable かどうかを HTTP ステータスコードとして返す Web サーバーです。
 ロードバランサーが Ingress Controller の Node に対し、Node が Schedulable かどうかをチェックするためなどに使用します。
@@ -123,7 +123,7 @@ HTTP ヘッダーで指定された Kubernetes の [Node](https://kubernetes.io/
 
 ---
 
-### [![form-to-slack](../media/software_icon.png)form-to-slack](https://github.com/chitoku-k/form-to-slack)
+### [![](../media/software_icon.png)form-to-slack](https://github.com/chitoku-k/form-to-slack)
 
 HTTP の POST で送信されたフォームを Slack にメッセージとして転送する Web サーバーです。
 
@@ -135,7 +135,7 @@ HTTP の POST で送信されたフォームを Slack にメッセージとし�
 
 ---
 
-### [![slack-to-ssh](../media/software_icon.png)slack-to-ssh](https://github.com/chitoku-k/slack-to-ssh)
+### [![](../media/software_icon.png)slack-to-ssh](https://github.com/chitoku-k/slack-to-ssh)
 
 Slack の [interactive message buttons](https://api.slack.com/legacy/message-buttons) でボタン操作が実行された際に、SSH 経由で予め指定したコマンドを実行することができる Web サーバーです。
 
@@ -146,7 +146,7 @@ Slack の [interactive message buttons](https://api.slack.com/legacy/message-but
 
 ---
 
-### [![lampager-cakephp](../media/software_icon.png)lampager-cakephp](https://github.com/lampager/lampager-cakephp)
+### [![](../media/software_icon.png)lampager-cakephp](https://github.com/lampager/lampager-cakephp)
 
 PHP で DB からデータを取得する際に SQL の `OFFSET` 句を利用せずにページネーションを行えるライブラリー、[Lampager](https://github.com/lampager/lampager) を [CakePHP](https://cakephp.org) v2.x、v3.x、v4.x に対応させる CakePHP プラグインです。
 
@@ -161,7 +161,7 @@ PHP で DB からデータを取得する際に SQL の `OFFSET` 句を利用せ
 
 ---
 
-### [![zsh-togglecursor](../media/software_icon.png)zsh-togglecursor](https://github.com/chitoku-k/zsh-togglecursor)
+### [![](../media/software_icon.png)zsh-togglecursor](https://github.com/chitoku-k/zsh-togglecursor)
 
 [Zsh Line Editor](https://zsh.sourceforge.io/Guide/zshguide04.html) のキーバインドで `vi` モードを選択した際に、ノーマルモードと挿入モードが切り替わるたびにターミナルのカーソルの形を変更する Zsh プラグインです。
 
@@ -171,7 +171,7 @@ PHP で DB からデータを取得する際に SQL の `OFFSET` 句を利用せ
 
 ---
 
-### [![zsh-vcs-extended](../media/software_icon.png)zsh-vcs-extended](https://github.com/chitoku-k/zsh-vcs-extended)
+### [![](../media/software_icon.png)zsh-vcs-extended](https://github.com/chitoku-k/zsh-vcs-extended)
 
 Zsh の [vcs\_info](https://zsh.sourceforge.io/Doc/Release/User-Contributions.html#Version-Control-Information) に untracked files の有無を表示する機能を追加する Zsh プラグインです。
 
@@ -181,7 +181,7 @@ Zsh の [vcs\_info](https://zsh.sourceforge.io/Doc/Release/User-Contributions.ht
 
 ---
 
-### [![buffalo-utils](../media/software_icon.png)buffalo-utils](https://github.com/chitoku-k/buffalo-utils)
+### [![](../media/software_icon.png)buffalo-utils](https://github.com/chitoku-k/buffalo-utils)
 
 BUFFALO 社の Wi-Fi ルーター AirStation シリーズの管理画面をシェルスクリプトで操作するスクレイピングツールです。
 管理画面へのログイン、設定の取得、設定の反映、ログの取得、再起動、などが行えます。
@@ -193,7 +193,7 @@ BUFFALO 社の Wi-Fi ルーター AirStation シリーズの管理画面をシ�
 
 ---
 
-### [![NoDriveAutoRun Generator](../media/software_icon.png)NoDriveAutoRun Generator](https://github.com/chitoku-k/no-drive-auto-run-generator)
+### [![](../media/software_icon.png)NoDriveAutoRun Generator](https://github.com/chitoku-k/no-drive-auto-run-generator)
 
 Windows の自動再生を設定する `NoDriveAutoRun` というレジストリーの値を生成する Web アプリケーションです。
 
@@ -204,7 +204,7 @@ Windows の自動再生を設定する `NoDriveAutoRun` というレジストリ
 
 ---
 
-### [![Chipmunk](../media/software_icon.png)Chipmunk](https://github.com/chitoku-k/Chipmunk)
+### [![](../media/software_icon.png)Chipmunk](https://github.com/chitoku-k/Chipmunk)
 
 WPF でウィンドウのシステムメニュー（最小化ボタン、最大化ボタン、閉じるボタンなど）を変更したり、[DWM](https://learn.microsoft.com/en-us/windows/win32/dwm/dwm-overview) の Aero Glass を有効化したりするための添付ビヘイビア/添付プロパティーです。
 
@@ -217,7 +217,7 @@ WPF でウィンドウのシステムメニュー（最小化ボタン、最大�
 
 ---
 
-### [![NowPlayingLib](../media/software_icon.png)NowPlayingLib](https://github.com/chitoku-k/NowPlayingLib)
+### [![](../media/software_icon.png)NowPlayingLib](https://github.com/chitoku-k/NowPlayingLib)
 
 .NET Framework から Windows Media Player、iTunes、x-アプリ、foobar2000 と連携して、再生中の曲の情報を取得したり、基本的な操作を行ったりすることができるライブラリーです。
 
@@ -229,7 +229,7 @@ WPF でウィンドウのシステムメニュー（最小化ボタン、最大�
 
 ---
 
-### [![Nature Remo Docker](../media/software_icon.png)Nature Remo Docker](https://github.com/chitoku-k/nature-remo-docker)
+### [![](../media/software_icon.png)Nature Remo Docker](https://github.com/chitoku-k/nature-remo-docker)
 
 [Nature Remo API Client](https://github.com/tenntenn/natureremo) を利用して [Nature Remo](https://nature.global/) のローカル API を呼び出す CLI ツールです。
 
@@ -239,7 +239,7 @@ WPF でウィンドウのシステムメニュー（最小化ボタン、最大�
 
 ## サポート終了
 
-### [![Soarer for Windows](../media/soarer_icon.png)Soarer for Windows](/softwares/soarer/)
+### [![](../media/soarer_icon.png)Soarer for Windows](/softwares/soarer/)
 
 Windows 用の Twitter クライアントです。
 更新ボタンを押すことなくリアルタイムにタイムラインが更新される User Streams にも対応しているほか、Twitter 公式 Web 同様のリプライ/お気に入り/リツイートの履歴表示、TwitPic や Vine など多くの Web サービスに対応した画像/動画サムネイルの表示と直接表示/再生などが可能です。
@@ -252,7 +252,7 @@ Windows 用の Twitter クライアントです。
 
 ---
 
-### [![RecoTw Explorer](../media/recotw_icon.png)RecoTw Explorer](https://github.com/RecoTwExplorer/RecoTwExplorer)
+### [![](../media/recotw_icon.png)RecoTw Explorer](https://github.com/RecoTwExplorer/RecoTwExplorer)
 
 RecoTw のサービス終了に伴い、RecoTw Explorer の提供は終了しました。
 
@@ -267,7 +267,7 @@ RecoTw のサービス終了に伴い、RecoTw Explorer の提供は終了しま
 
 ---
 
-### [![Minecraft Superflat Editor](../media/minecraft_icon.png)Minecraft Superflat Editor](/softwares/superflat/){target="_blank"}
+### [![](../media/minecraft_icon.png)Minecraft Superflat Editor](https://chitoku.jp/softwares/superflat/)
 
 Minecraft（Java 版）のワールド生成時のスーパーフラットモードにて使用可能なコードを生成するツールです。
 ブロックリストの編集やバイオーム種別の変更、廃坑などの出現頻度をマウス操作で簡単に変更できます。
@@ -279,7 +279,7 @@ Minecraft バージョン 1.6 までしかサポートしておらず、現在�
 
 ---
 
-### [![TweetDeck Accounts Switcher](../media/tweet-deck-account-switcher_icon.png)TweetDeck Accounts Switcher](https://github.com/chitoku-k/TweetDeckAccountsSwitcher)
+### [![](../media/tweet-deck-account-switcher_icon.png)TweetDeck Accounts Switcher](https://github.com/chitoku-k/TweetDeckAccountsSwitcher)
 
 TweetDeck のアカウント選択を複数選択ではなく切り替えになるように拡張する Chrome/Firefox 用の拡張機能です。
 アカウント選択の仕様が複数選択から切り替えに変更されたため役目を終えることとなりました。
