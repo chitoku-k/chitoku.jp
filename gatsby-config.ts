@@ -98,7 +98,6 @@ const config: GatsbyConfig = {
         excerpt_separator: '<!-- more -->',
         gfm: false,
         plugins: [
-          { resolve: 'gatsby-remark-attr' },
           {
             resolve: 'gatsby-remark-autolink-headers',
             options: {

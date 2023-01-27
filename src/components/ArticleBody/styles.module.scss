@@ -12,20 +12,12 @@
     border-radius: 0;
   }
 
-  h2 {
+  > h2 {
     padding: 9px 15px 7px;
     margin: 48px 0 16px;
     font-size: 140%;
-    color: var(--headings-color);
     background-color: var(--headings-secondary);
     border: 1px solid var(--headings-border);
-
-    &:global(.no-border) {
-      padding: 0;
-      margin: 0;
-      background: none;
-      border: none;
-    }
 
     @include media-breakpoint-down(lg) {
       padding: 7px 12px;
@@ -39,7 +31,11 @@
     }
   }
 
-  h3 {
+  h2 {
+    color: var(--headings-color);
+  }
+
+  > h3 {
     padding: 0 16px 5px;
     margin: 50px 0 15px;
     font-size: 120%;

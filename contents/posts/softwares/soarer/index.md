@@ -22,13 +22,13 @@ Twitter によってアプリケーションの機能が制限されました。
 ---
 <div class="text-center">
 
-![](../../media/release_notice_ss.png){style="width: 760px; max-width: 100%;"}
+![](../../media/release_notice_ss.png)
 </div>
 
 ---
 <div class="row">
 <div class="col-md-6" style="padding-top: 12px;">
-<h2 class="no-border">
+<h2>
 <div class="text-left">サイズの小さなウィンドウでも</div>
 <div class="text-right">快適な Twitter クライアント。</div>
 </h2>
@@ -39,12 +39,11 @@ Twitter によってアプリケーションの機能が制限されました。
 ツイートするときも、別ウィンドウなので場所をとりません。
 タイムラインを閉じても大丈夫。Twitter がもっと身近になります。
 
-[ダウンロードはこちら ▶](/softwares/soarer/download){class="btn btn-primary btn-lg"}
+<a href="/softwares/soarer/download" class="btn btn-primary btn-lg">ダウンロードはこちら ▶</a>
 
 ---
 
 ## 必要最低限のシンプルな作り。
-{class="no-border"}
 
 ![](../../media/account.png)
 
@@ -61,7 +60,6 @@ Twitter によってアプリケーションの機能が制限されました。
 <div class="col-xs-12">
 
 ## つぶやくまで最速
-{class="no-border"}
 
 多機能ながら動作は軽快です。
 高速な起動に加え、ログイン中でもツイートを入力することができるので、ふと思ったことでもすぐにつぶやくことができます。

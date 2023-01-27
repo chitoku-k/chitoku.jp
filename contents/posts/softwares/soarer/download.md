@@ -22,7 +22,7 @@ Twitter によってアプリケーションの機能が制限されました。
 ---
 <div class="text-center">
 
-![](../../media/release_notice.png){style="width: 690px; max-width: 100%;"}
+![](../../media/release_notice.png)
 </div>
 
 ---
