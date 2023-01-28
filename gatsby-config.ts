@@ -34,7 +34,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
-        extensions: [ 'js', 'tsx' ],
+        extensions: [ 'js', 'mjs', 'tsx' ],
         failOnError: false,
       },
     },

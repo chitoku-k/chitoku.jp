@@ -4,6 +4,6 @@ root = true
 end_of_line = lf
 insert_final_newline = true
 
-[*.{js,ts,tsx,scss,json,yml,md,babelrc}]
+[*.{js,mjs,ts,tsx,scss,json,yml,md,babelrc}]
 indent_style = space
 indent_size = 2
