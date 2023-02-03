@@ -26,7 +26,7 @@ jobs:
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
       - name: Build (dependencies)
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: .
           target: dependencies
@@ -35,7 +35,7 @@ jobs:
           build-args: |
             CI
       - name: Build (cache)
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: .
           target: cache
@@ -45,7 +45,7 @@ jobs:
             CI
             GATSBY_UPDATE_INDEX=true
       - name: Build and push
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: .
           push: true
