@@ -9937,12 +9937,12 @@ gatsby-plugin-eslint@^4.0.3:
   dependencies:
     webpack-merge "^5.8.0"
 
-gatsby-plugin-google-gtag@^5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-5.5.0.tgz#ce684fa946b1a18aafcaa7c619d2866d5aed572e"
-  integrity sha512-y6hcbsVG9xV+djfeX9clfScX4mW6NeYzEs72lU1YpTYV2+NXxglZgk6OB2l99GyEq0fUpYEGwn9jPHwyHCFSLg==
+gatsby-plugin-google-gtag@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-5.6.0.tgz#b51b94a68424b7043872199d42433fe483b4944b"
+  integrity sha512-GUKqBwhJZ5OU3P7BvlKn3Q6ctWMzt0Bfa+uCGouc5eREDsCswpl7TFXYuNAkNVksYMVX3TPtOS27VgDbZTznuQ==
   dependencies:
-    "@babel/runtime" "^7.20.7"
+    "@babel/runtime" "^7.20.13"
     minimatch "^3.1.2"
 
 gatsby-plugin-minify-html@^1.0.4:
