@@ -84,8 +84,7 @@
       ],
       "extends": [
         "plugin:react/all",
-        "plugin:@typescript-eslint/all",
-        "plugin:@typescript-eslint/eslint-recommended"
+        "plugin:@typescript-eslint/all"
       ],
       "rules": {
         "@typescript-eslint/camelcase": "off",
@@ -133,6 +132,7 @@
         "@typescript-eslint/strict-boolean-expressions": "off",
         "@typescript-eslint/typedef": "off",
         "@typescript-eslint/unbound-method": "off",
+        "no-duplicate-imports": "off",
         "one-var": "off",
         "react/forbid-component-props": "off",
         "react/function-component-definition": "off",
