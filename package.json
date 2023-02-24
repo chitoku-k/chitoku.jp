@@ -57,7 +57,7 @@
     "gatsby-remark-copy-linked-files": "^6.7.0",
     "gatsby-remark-embed-gist": "^1.2.1",
     "gatsby-remark-grid-tables": "^0.1.0",
-    "gatsby-remark-images": "^7.6.0",
+    "gatsby-remark-images": "^7.7.0",
     "gatsby-remark-prismjs": "^7.7.0",
     "gatsby-remark-remove-cjk-breaks": "^1.2.1",
     "gatsby-source-filesystem": "^5.7.0",

@@ -9832,7 +9832,7 @@ gatsby-cli@^5.7.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^4.3.1, gatsby-core-utils@^4.6.0, gatsby-core-utils@^4.7.0:
+gatsby-core-utils@^4.3.1, gatsby-core-utils@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-4.7.0.tgz#f2c9d74da334979b0ae847bc6cfe283670c2f752"
   integrity sha512-J8bjc+ASIfkrNbbOTvHbqgPtj/scgmLVB9rGuItZrbJyyHqyB6NLNbJeN8tHL//fjQ8B3vwyoHy6B09TMLQitQ==
@@ -10084,15 +10084,15 @@ gatsby-remark-grid-tables@^0.1.0:
     "@babel/runtime" "^7.9.2"
     remark-grid-tables "^2.1.1"
 
-gatsby-remark-images@^7.6.0:
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-7.6.0.tgz#15812dc93856ca238e7708aece07c2f62ecf9501"
-  integrity sha512-4ly79wiERirkZQednpmAcpPGDHA13gF1UjqzX87doupG4K0bumsEK1vmZ2T/e52icNoKMEavIhuZ1r7z1e0xlQ==
+gatsby-remark-images@^7.7.0:
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-7.7.0.tgz#0e584896cd0c465c69c72a22cd50278f97cecdaa"
+  integrity sha512-WjjgUpFz+L+aeUQD9lHYPLmxP76vO7mz1OZa3RbP8/EIWQu8YBP1LkM0xsbjzbCrFjRf+AlStRuVnPSywskvDw==
   dependencies:
     "@babel/runtime" "^7.20.13"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.10"
-    gatsby-core-utils "^4.6.0"
+    gatsby-core-utils "^4.7.0"
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
     mdast-util-definitions "^4.0.0"
