@@ -9800,10 +9800,10 @@ gatsby-cli@^5.6.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^4.3.1, gatsby-core-utils@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-4.6.0.tgz#43211a386e4115f720fc461ca7568f3315c25ecf"
-  integrity sha512-wXqWZWn6VuL2caWHCryt/pYyJJxJiv2JKyzXlJ1mLac0ZB24PP3Uc9NXPgFy8XzEtcL+23+9i9CiIiz+VNgxpQ==
+gatsby-core-utils@^4.3.1, gatsby-core-utils@^4.6.0, gatsby-core-utils@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-4.7.0.tgz#f2c9d74da334979b0ae847bc6cfe283670c2f752"
+  integrity sha512-J8bjc+ASIfkrNbbOTvHbqgPtj/scgmLVB9rGuItZrbJyyHqyB6NLNbJeN8tHL//fjQ8B3vwyoHy6B09TMLQitQ==
   dependencies:
     "@babel/runtime" "^7.20.13"
     ci-info "2.0.0"
@@ -10137,13 +10137,13 @@ gatsby-telemetry@^4.6.0:
     lodash "^4.17.21"
     node-fetch "^2.6.8"
 
-gatsby-transformer-remark@^6.6.0:
-  version "6.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-6.6.0.tgz#abe9bae919b24ce7dc4abb1e9bb7884455eb04ca"
-  integrity sha512-OhpuidOj4PCiIy33EIclJo6ehaBTWobuZ9k1YhNOQ2YTNLkdvNcdm7HM/QKNBJ4xUdG/jwrN5/exFjzWz4/4QQ==
+gatsby-transformer-remark@^6.7.0:
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-6.7.0.tgz#09943f9f03c4eac9c65ab963b98f7ca55f32272e"
+  integrity sha512-Ieac33Y8Q74pvoWPN67QCXu34O1Qs2AL1tuyaCGnkYlaw3vqKb2SJfBuu3+8iW6b//GkWnBYd7HqZ46vQIG+vw==
   dependencies:
     "@babel/runtime" "^7.20.13"
-    gatsby-core-utils "^4.6.0"
+    gatsby-core-utils "^4.7.0"
     gray-matter "^4.0.3"
     hast-util-raw "^6.1.0"
     hast-util-to-html "^7.1.3"
