@@ -117,7 +117,7 @@ const Mail: FunctionComponent = () => {
           </Form.Group>
           <Card className={styles.group}>
             <Card.Body className={styles.verification}>
-              <Turnstile responseFieldName="g-recaptcha-response" action="mail" sitekey={siteKey} onVerify={setToken} autoResetOnExpire />
+              <Turnstile responseFieldName="g-recaptcha-response" action="mail" language="en" sitekey={siteKey} onVerify={setToken} refreshExpired="auto" />
             </Card.Body>
           </Card>
           <div className={styles.submission}>
