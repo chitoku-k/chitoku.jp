@@ -18546,10 +18546,10 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-turnstile-types@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/turnstile-types/-/turnstile-types-1.1.1.tgz#6ea2edca257b2688d7089607894bf3ef213ea29f"
-  integrity sha512-NqcfhO4Pc2BjIm5DMr0Id+Mee1Ysb+NIEGOMc0U3dAonXrFpbNGXr1RIL5OLAtKfkcLT6vO3Zsk595j+4lphAw==
+turnstile-types@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/turnstile-types/-/turnstile-types-1.1.2.tgz#38b407a525e3d0a645ca391f76fc6be190d0c3d3"
+  integrity sha512-MJXbAeRPpORqPViZbHrpu8LWOHv1dp9i5GYSfoedu7GUmkUZpHWlAVLCFAhWlpRA5PQLBRworOGCEu4o6Ks7Zw==
 
 twemoji-parser@14.0.0:
   version "14.0.0"
