@@ -86,7 +86,7 @@
     "sass-loader": "^13.2.0",
     "schema-dts": "^1.1.2",
     "storybook": "^6.5.16",
-    "style-loader": "^3.3.1",
+    "style-loader": "^3.3.2",
     "stylelint": "^14.16.1",
     "stylelint-config-recess-order": "^3.1.0",
     "stylelint-config-standard-scss": "^6.1.0",
