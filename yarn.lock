@@ -7837,11 +7837,6 @@ deepmerge@^4.2.2, deepmerge@^4.3.0, deepmerge@^4.3.1:
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.3.1.tgz#44b5f2147cd3b00d4b56137685966f26fd25dd4a"
   integrity sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==
 
-deepmerge@^4.3.1:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.3.1.tgz#44b5f2147cd3b00d4b56137685966f26fd25dd4a"
-  integrity sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==
-
 default-browser-id@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/default-browser-id/-/default-browser-id-1.0.4.tgz#e59d09a5d157b828b876c26816e61c3d2a2c203a"
@@ -9740,7 +9735,7 @@ gatsby-cli@^5.8.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^4.3.1, gatsby-core-utils@^4.7.0, gatsby-core-utils@^4.8.0:
+gatsby-core-utils@^4.3.1, gatsby-core-utils@^4.8.0:
   version "4.8.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-4.8.0.tgz#b9baac9f9434d0c789e470e8caf8003edf91d7ac"
   integrity sha512-C2uOZBd9j6AYIyiB+DdxRtbQgAa3kMDRsKR5eCwALp0Bkg3W5I/YiXhSF7zQxVckaqNXzXvmedJESKCJNIvO7w==
@@ -9872,10 +9867,10 @@ gatsby-plugin-page-creator@^5.8.0:
     globby "^11.1.0"
     lodash "^4.17.21"
 
-gatsby-plugin-react-helmet@^6.7.0:
-  version "6.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-6.7.0.tgz#073d1fe06341890db96c7e09bf3db452cf8720c1"
-  integrity sha512-cLUaQxkc4Luxq/S5w9qN2/2ZYaIdCpf0o00qsfk9LRcVJPUvySbOBSuAhfydzPRuEf2X7nrH2MCGtMv4cgm/Ig==
+gatsby-plugin-react-helmet@^6.8.0:
+  version "6.8.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-6.8.0.tgz#bc6ddcb71e462e2e60a7655c06ae3b901a074dab"
+  integrity sha512-Y8DnjW+kJUyNLPdWHwlx5VQ7ynI57Walkfp0mamsv/q4nZp5sJvhSN/HN/NSWRjg61WCr4v3uMwtzS/N3blohA==
   dependencies:
     "@babel/runtime" "^7.20.13"
 
