@@ -7837,11 +7837,6 @@ deepmerge@^4.2.2, deepmerge@^4.3.0, deepmerge@^4.3.1:
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.3.1.tgz#44b5f2147cd3b00d4b56137685966f26fd25dd4a"
   integrity sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==
 
-deepmerge@^4.3.1:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.3.1.tgz#44b5f2147cd3b00d4b56137685966f26fd25dd4a"
-  integrity sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==
-
 default-browser-id@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/default-browser-id/-/default-browser-id-1.0.4.tgz#e59d09a5d157b828b876c26816e61c3d2a2c203a"
@@ -9740,7 +9735,7 @@ gatsby-cli@^5.8.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^4.3.1, gatsby-core-utils@^4.7.0, gatsby-core-utils@^4.8.0:
+gatsby-core-utils@^4.3.1, gatsby-core-utils@^4.8.0:
   version "4.8.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-4.8.0.tgz#b9baac9f9434d0c789e470e8caf8003edf91d7ac"
   integrity sha512-C2uOZBd9j6AYIyiB+DdxRtbQgAa3kMDRsKR5eCwALp0Bkg3W5I/YiXhSF7zQxVckaqNXzXvmedJESKCJNIvO7w==
@@ -9948,10 +9943,10 @@ gatsby-react-router-scroll@^6.8.0:
     "@babel/runtime" "^7.20.13"
     prop-types "^15.8.1"
 
-gatsby-remark-autolink-headers@^6.7.0:
-  version "6.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-6.7.0.tgz#bd89fd4dad1eefc81de3768c394d17ecff2c6f00"
-  integrity sha512-fugVBjVwBaUUgHIyY3Z+wlU/3xEjYpZvjDHR63TZ4LOMyklND73Vj9qEg2J83VIGCuXTD8uajT7wWJByxqxr/A==
+gatsby-remark-autolink-headers@^6.8.0:
+  version "6.8.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-6.8.0.tgz#1aad91fbaf2a46426240a2f11c2e6395a9e1973f"
+  integrity sha512-we0u+YupYgQgJC1i4PqSG6TgR9PXCvlBvwy6nhMujnkVswHqngKU5mkGP+Ub4a4d66gr3PLbWaSEIVUMU7h8UQ==
   dependencies:
     "@babel/runtime" "^7.20.13"
     github-slugger "^1.3.0"
