@@ -94,7 +94,7 @@
     "tsconfig-paths-webpack-plugin": "^4.0.1",
     "turnstile-types": "^1.1.2",
     "typescript": "^5.0.2",
-    "typescript-plugin-css-modules": "^4.2.3",
+    "typescript-plugin-css-modules": "^5.0.0",
     "unified": "^10.1.2",
     "webpack": "^5.76.2",
     "yaml-flat-loader": "^1.0.2"
