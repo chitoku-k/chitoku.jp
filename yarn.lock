@@ -4121,10 +4121,10 @@
   resolved "https://registry.yarnpkg.com/@turist/time/-/time-0.0.2.tgz#32fe0ce708ea0f4512776bd313409f1459976dda"
   integrity sha512-qLOvfmlG2vCVw5fo/oz8WAZYlpe5a5OurgTj3diIxJCdjRHpapC+vQCz3er9LV79Vcat+DifBjeAhOAdmndtDQ==
 
-"@twemoji/api@^14.1.1":
-  version "14.1.1"
-  resolved "https://registry.yarnpkg.com/@twemoji/api/-/api-14.1.1.tgz#22f2b737b977226dd15b316e9d9f0e380c5f52cf"
-  integrity sha512-8IYxv33kC3ijizk73pT9yiTfbsSVubDzehJL6iPxWOtMALc4BJB/wBF2IhJ1645PPRKhC/3yZAOxlKN+Iahy7A==
+"@twemoji/api@^14.1.2":
+  version "14.1.2"
+  resolved "https://registry.yarnpkg.com/@twemoji/api/-/api-14.1.2.tgz#9e75a59cc2ff64c6c9106902823c9b6bc5bb4a9f"
+  integrity sha512-JLuszRq7t+NWJTaNwBD+Hbhf67gzn6jAqhNIDTPndEGT55kHiZTJAYRGCHZB/eA58OGVSp7mIvsJs+F/ZDJanA==
   dependencies:
     fs-extra "^8.0.1"
     jsonfile "^5.0.0"
