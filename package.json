@@ -16,10 +16,8 @@
     "@storybook/addon-actions": "^7.0.2",
     "@storybook/addon-essentials": "^7.0.2",
     "@storybook/addon-links": "^7.0.2",
-    "@storybook/builder-webpack5": "^6.5.16",
-    "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/react": "^7.0.2",
+    "@storybook/react-webpack5": "^7.0.2",
     "@svgr/webpack": "^7.0.0",
     "@types/dotenv-safe": "^8.1.2",
     "@types/gatsbyjs__reach-router": "^2.0.0",
@@ -41,6 +39,7 @@
     "eslint": "^8.37.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.11",
     "eslint-webpack-plugin": "^4.0.0",
     "extract-react-intl-messages": "^4.1.1",
     "gatsby": "^5.8.1",
@@ -115,8 +114,8 @@
     "lint:ts": "eslint '{,src,plugins}/**/*.{ts,tsx}'",
     "lint:css": "stylelint 'src/**/*.scss'",
     "start": "gatsby develop",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "lint-staged": {
     "*.{js,mjs,ts,tsx}": [
