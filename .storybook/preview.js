@@ -11,25 +11,29 @@ global.___loader = {
 global.__BASE_PATH__ = '/'
 global.___navigate = pathname => action('Navigate')(pathname)
 
-module.exports.parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  backgrounds: {
-    default: 'page',
-    values: [
-      {
-        name: 'page',
-        value: 'var(--body-background)',
+const preview = {
+  parameters: {
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    backgrounds: {
+      default: 'page',
+      values: [
+        {
+          name: 'page',
+          value: 'var(--body-background)',
+        },
+        {
+          name: 'container',
+          value: 'var(--containers-background)',
+        },
+      ],
+    },
+    controls: {
+      matchers: {
+        color: /(?:background|color)$/iu,
+        date: /Date$/u,
       },
-      {
-        name: 'container',
-        value: 'var(--containers-background)',
-      },
-    ],
-  },
-  controls: {
-    matchers: {
-      color: /(?:background|color)$/iu,
-      date: /Date$/u,
     },
   },
 }
+
+export default preview

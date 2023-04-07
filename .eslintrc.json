@@ -3,7 +3,8 @@
     "ecmaVersion": 2019
   },
   "extends": [
-    "eslint:all"
+    "eslint:all",
+    "plugin:storybook/recommended"
   ],
   "env": {
     "browser": true,
