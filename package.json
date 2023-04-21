@@ -13,7 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@gatsbyjs/reach-router": "^2.0.1",
-    "@storybook/addon-actions": "^7.0.4",
+    "@storybook/addon-actions": "^7.0.6",
     "@storybook/addon-essentials": "^7.0.4",
     "@storybook/addon-links": "^7.0.4",
     "@storybook/preset-scss": "^1.0.3",
