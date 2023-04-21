@@ -24,7 +24,7 @@
     "@types/hast": "^2.3.4",
     "@types/node": "^18.15.11",
     "@types/prismjs": "^1.26.0",
-    "@types/react": "^18.0.35",
+    "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@types/react-helmet": "^6.1.6",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
