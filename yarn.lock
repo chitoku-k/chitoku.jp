@@ -3170,7 +3170,7 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@storybook/addon-actions@7.0.4", "@storybook/addon-actions@^7.0.4":
+"@storybook/addon-actions@7.0.4":
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-7.0.4.tgz#9131fb8811661fa47ead11604a67301b13de3b97"
   integrity sha512-fYnYYU2QW1FWJbKchhH4fFHM9V2CFGqYNQ+T65+fBGrR6vtE/+yPqozCOHcmeZ6f5i6xeHuQfKiFInDNZC4AzA==
@@ -3183,6 +3183,28 @@
     "@storybook/preview-api" "7.0.4"
     "@storybook/theming" "7.0.4"
     "@storybook/types" "7.0.4"
+    dequal "^2.0.2"
+    lodash "^4.17.21"
+    polished "^4.2.2"
+    prop-types "^15.7.2"
+    react-inspector "^6.0.0"
+    telejson "^7.0.3"
+    ts-dedent "^2.0.0"
+    uuid-browser "^3.1.0"
+
+"@storybook/addon-actions@^7.0.6":
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-7.0.6.tgz#96f37c687769f282d4746de07eda8a305d4b21ad"
+  integrity sha512-H592lkj06bJMX4uwmZI3AVpRFPQ8nkM5j+eo+JQdv0QX9lLZWKnhrGkGDTC/QMSnXMdgHooq0ce9PdGaDvUm1Q==
+  dependencies:
+    "@storybook/client-logger" "7.0.6"
+    "@storybook/components" "7.0.6"
+    "@storybook/core-events" "7.0.6"
+    "@storybook/global" "^5.0.0"
+    "@storybook/manager-api" "7.0.6"
+    "@storybook/preview-api" "7.0.6"
+    "@storybook/theming" "7.0.6"
+    "@storybook/types" "7.0.6"
     dequal "^2.0.2"
     lodash "^4.17.21"
     polished "^4.2.2"
@@ -3605,6 +3627,20 @@
     "@storybook/global" "^5.0.0"
     "@storybook/theming" "7.0.4"
     "@storybook/types" "7.0.4"
+    memoizerific "^1.11.3"
+    use-resize-observer "^9.1.0"
+    util-deprecate "^1.0.2"
+
+"@storybook/components@7.0.6":
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-7.0.6.tgz#b4b3042042dd0d5a77910c78a5b131016f01d316"
+  integrity sha512-SiHkSgYR8CcAGrWLof85FImcPIb+ApRW6K3LVcyinctJzOQCWLgh0poKUQ5och3CjSxQbM1G4S1ZXrAfZdU9Cg==
+  dependencies:
+    "@storybook/client-logger" "7.0.6"
+    "@storybook/csf" "^0.1.0"
+    "@storybook/global" "^5.0.0"
+    "@storybook/theming" "7.0.6"
+    "@storybook/types" "7.0.6"
     memoizerific "^1.11.3"
     use-resize-observer "^9.1.0"
     util-deprecate "^1.0.2"
