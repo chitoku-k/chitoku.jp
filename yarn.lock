@@ -8754,10 +8754,10 @@ fs-extra@^10.0.0, fs-extra@^10.1.0:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
-fs-extra@^11.1.0:
-  version "11.1.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.1.0.tgz#5784b102104433bb0e090f48bfc4a30742c357ed"
-  integrity sha512-0rcTq621PD5jM/e0a3EJoGC/1TC5ZBCERW82LQuwfGnCa1V8w7dpYH1yNu+SLb6E5dkeCBzKEyLGlFrnr+dUyw==
+fs-extra@^11.1.0, fs-extra@^11.1.1:
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.1.1.tgz#da69f7c39f3b002378b0954bb6ae7efdc0876e2d"
+  integrity sha512-MGIE4HOvQCeUCzmlHs0vXpih4ysz4wg9qiSAu6cd42lVwPbTM1TjV7RusoyQqMmk/95gdQZX72u+YW+c3eEpFQ==
   dependencies:
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
@@ -9095,14 +9095,14 @@ gatsby-remark-autolink-headers@^6.8.0:
     mdast-util-to-string "^2.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-copy-linked-files@^6.8.0:
-  version "6.8.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-6.8.0.tgz#ba9e13a072cb81986027fe897111d2fc24758aae"
-  integrity sha512-7BfvRfuJSMkq4pvDGB43iyg6TZfUEQy7URWRxYq4VdUixDWazqkE887v/Ry390YWXQe/DPSEiC62Fl7l5UiRmQ==
+gatsby-remark-copy-linked-files@^6.9.0:
+  version "6.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-6.9.0.tgz#d50d86c04233cb3f30427eb52a5ebc47763a0ea6"
+  integrity sha512-qdwLWCVv5WRrFJltavNd8j2sGlm7ESbedByrhN2bE01Oog00cdVI0P3j0Pqwf5rmfZXecbz+VK7M8VMC6lb5Vg==
   dependencies:
     "@babel/runtime" "^7.20.13"
     cheerio "^1.0.0-rc.10"
-    fs-extra "^11.1.0"
+    fs-extra "^11.1.1"
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
     path-is-inside "^1.0.2"
