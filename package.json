@@ -15,7 +15,7 @@
     "@gatsbyjs/reach-router": "^2.0.1",
     "@storybook/addon-actions": "^7.0.6",
     "@storybook/addon-essentials": "^7.0.6",
-    "@storybook/addon-links": "^7.0.6",
+    "@storybook/addon-links": "^7.0.7",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react-webpack5": "^7.0.6",
     "@svgr/webpack": "^7.0.0",
