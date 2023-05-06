@@ -17,7 +17,7 @@
     "@storybook/addon-essentials": "^7.0.9",
     "@storybook/addon-links": "^7.0.7",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/react-webpack5": "^7.0.7",
+    "@storybook/react-webpack5": "^7.0.9",
     "@svgr/webpack": "^7.0.0",
     "@types/dotenv-safe": "^8.1.2",
     "@types/gatsbyjs__reach-router": "^2.0.0",
