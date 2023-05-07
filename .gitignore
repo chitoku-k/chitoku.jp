@@ -1,13 +1,11 @@
-# Created by https://www.gitignore.io/api/node
-# Edit at https://www.gitignore.io/?templates=node
+# Created by https://www.toptal.com/developers/gitignore/api/node,yarn
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,yarn
 
 ### Environment ###
 .env*
 !.env.example
 
 ### Gatsby ###
-public/
-.cache/
 typings/gatsby-types.d.ts
 
 ### Node ###
@@ -17,6 +15,16 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
 
 # Dependency directories
 node_modules/
@@ -24,4 +32,47 @@ node_modules/
 # TypeScript cache
 *.tsbuildinfo
 
-# End of https://www.gitignore.io/api/node
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Gatsby files
+.cache/
+public
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+### Node Patch ###
+# Serverless Webpack directories
+.webpack/
+
+### yarn ###
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+
+.yarn/*
+!.yarn/releases
+!.yarn/patches
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# End of https://www.toptal.com/developers/gitignore/api/node,yarn
