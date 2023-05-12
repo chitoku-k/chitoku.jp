@@ -13466,7 +13466,7 @@ __metadata:
     storybook: ^7.0.9
     style-loader: ^3.3.2
     stylelint: ^14.16.1
-    stylelint-config-recess-order: ^3.1.0
+    stylelint-config-recess-order: ^4.0.0
     stylelint-config-standard-scss: ^6.1.0
     stylelint-scss: ^5.0.0
     tsconfig-paths-webpack-plugin: ^4.0.1
@@ -18451,12 +18451,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-sorting@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "postcss-sorting@npm:7.0.1"
+"postcss-sorting@npm:^8.0.2":
+  version: 8.0.2
+  resolution: "postcss-sorting@npm:8.0.2"
   peerDependencies:
-    postcss: ^8.3.9
-  checksum: 79cca6703ef7c60ea913c3bfb91f85bd7adce35e60b834a40cadd1c7e18f37961d63f0e641387651ee3bf1df1996e952d8fe443f93a271aa2d23f239ea3145bc
+    postcss: ^8.4.20
+  checksum: ebb5cc6a2982a1f0bb8332669e425793ebc01c30fa83ea981c765d64d212e289bef5fdb1e627904c471cb75f1ad0727ed9e85c0d879e263590c8fc64eecf31c2
   languageName: node
   linkType: hard
 
@@ -21489,14 +21489,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-config-recess-order@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "stylelint-config-recess-order@npm:3.1.0"
+"stylelint-config-recess-order@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "stylelint-config-recess-order@npm:4.0.0"
   dependencies:
-    stylelint-order: 5.x
+    stylelint-order: 6.x
   peerDependencies:
-    stylelint: ">=14"
-  checksum: e5fec58f0c69829cc5a51da309727400beb8853bb65b27d7e71dcb4a3f453ea30079afe19744ae12004b253a7edf803dd6aadfcee74ae087f35ea79c809145a2
+    stylelint: ">=15"
+  checksum: 7c3bef9ac07f710ae80710a05177a299d54012dc394dfbc8804cd7d4a1f8c7f07c3dfa5c9cfa3a3499de8f88b9ca92f94f31a54faaf8184c2bd5ae57eaa11644
   languageName: node
   linkType: hard
 
@@ -21553,15 +21553,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-order@npm:5.x":
-  version: 5.0.0
-  resolution: "stylelint-order@npm:5.0.0"
+"stylelint-order@npm:6.x":
+  version: 6.0.3
+  resolution: "stylelint-order@npm:6.0.3"
   dependencies:
-    postcss: ^8.3.11
-    postcss-sorting: ^7.0.1
+    postcss: ^8.4.21
+    postcss-sorting: ^8.0.2
   peerDependencies:
-    stylelint: ^14.0.0
-  checksum: fa3ace3cc65486b9f94165603bd04983636fda5ac959cd29bf87847a95b32f366b16faf612bd49e3b9f96073f8fe28a22a5c5727cc08c8f9d7327c89084b3f30
+    stylelint: ^14.0.0 || ^15.0.0
+  checksum: dc2883a8a7918a752928f6cc2c860508e3f21c7189c0675ddba15056c683c234f5548f0c4a410e9a9ac0d2be8b4a4657e5674f01b6ad39f2b89053bf907aa744
   languageName: node
   linkType: hard
 
