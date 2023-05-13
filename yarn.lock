@@ -4367,7 +4367,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-actions@npm:7.0.11":
+"@storybook/addon-actions@npm:7.0.11, @storybook/addon-actions@npm:^7.0.11":
   version: 7.0.11
   resolution: "@storybook/addon-actions@npm:7.0.11"
   dependencies:
@@ -4396,38 +4396,6 @@ __metadata:
     react-dom:
       optional: true
   checksum: 5b2779fad45da848b733f7ef47347b0664adc83c8083140c47c63c14628de0a2ae829ab124d67f692e4387ae53b46c286200785a9be746d8023a9357f9906c93
-  languageName: node
-  linkType: hard
-
-"@storybook/addon-actions@npm:^7.0.7":
-  version: 7.0.9
-  resolution: "@storybook/addon-actions@npm:7.0.9"
-  dependencies:
-    "@storybook/client-logger": 7.0.9
-    "@storybook/components": 7.0.9
-    "@storybook/core-events": 7.0.9
-    "@storybook/global": ^5.0.0
-    "@storybook/manager-api": 7.0.9
-    "@storybook/preview-api": 7.0.9
-    "@storybook/theming": 7.0.9
-    "@storybook/types": 7.0.9
-    dequal: ^2.0.2
-    lodash: ^4.17.21
-    polished: ^4.2.2
-    prop-types: ^15.7.2
-    react-inspector: ^6.0.0
-    telejson: ^7.0.3
-    ts-dedent: ^2.0.0
-    uuid: ^9.0.0
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  peerDependenciesMeta:
-    react:
-      optional: true
-    react-dom:
-      optional: true
-  checksum: 304552a872a26283f0617bfda79d92701d8cdc79782857dcd6cb05f090766363434d6cd2daa94952f5c7dd633b9e19be6d4e955fd5a386157a8cff64fb0546e6
   languageName: node
   linkType: hard
 
@@ -13773,7 +13741,7 @@ __metadata:
     "@fortawesome/free-solid-svg-icons": ^6.4.0
     "@fortawesome/react-fontawesome": ^0.2.0
     "@gatsbyjs/reach-router": ^2.0.1
-    "@storybook/addon-actions": ^7.0.7
+    "@storybook/addon-actions": ^7.0.11
     "@storybook/addon-essentials": ^7.0.11
     "@storybook/addon-links": ^7.0.9
     "@storybook/preset-scss": ^1.0.3
