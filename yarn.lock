@@ -4552,18 +4552,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-links@npm:^7.0.9":
-  version: 7.0.9
-  resolution: "@storybook/addon-links@npm:7.0.9"
+"@storybook/addon-links@npm:^7.0.11":
+  version: 7.0.11
+  resolution: "@storybook/addon-links@npm:7.0.11"
   dependencies:
-    "@storybook/client-logger": 7.0.9
-    "@storybook/core-events": 7.0.9
+    "@storybook/client-logger": 7.0.11
+    "@storybook/core-events": 7.0.11
     "@storybook/csf": ^0.1.0
     "@storybook/global": ^5.0.0
-    "@storybook/manager-api": 7.0.9
-    "@storybook/preview-api": 7.0.9
-    "@storybook/router": 7.0.9
-    "@storybook/types": 7.0.9
+    "@storybook/manager-api": 7.0.11
+    "@storybook/preview-api": 7.0.11
+    "@storybook/router": 7.0.11
+    "@storybook/types": 7.0.11
     prop-types: ^15.7.2
     ts-dedent: ^2.0.0
   peerDependencies:
@@ -4574,7 +4574,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 8aa5a66898994c5027c235ad74f1401ae31aa008cc3570686962323de0ebe1c88daf072e91b6ee565f192708b5c14b7acf40f0cfb3ee2d2f27b15326dc2f945b
+  checksum: a26b1b92b417444eccab2910a49443e201d5cafafce62853348189a14c576afe4dc7a81fc3ddd7ca4d39481598a1bae728c723e90a1ed5dd288fffa73d22b1d9
   languageName: node
   linkType: hard
 
@@ -13775,7 +13775,7 @@ __metadata:
     "@gatsbyjs/reach-router": ^2.0.1
     "@storybook/addon-actions": ^7.0.7
     "@storybook/addon-essentials": ^7.0.11
-    "@storybook/addon-links": ^7.0.9
+    "@storybook/addon-links": ^7.0.11
     "@storybook/preset-scss": ^1.0.3
     "@storybook/react-webpack5": ^7.0.9
     "@svgr/webpack": ^7.0.0
