@@ -12272,6 +12272,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-core-utils@npm:^4.10.0":
+  version: 4.10.0
+  resolution: "gatsby-core-utils@npm:4.10.0"
+  dependencies:
+    "@babel/runtime": ^7.20.13
+    ci-info: 2.0.0
+    configstore: ^5.0.1
+    fastq: ^1.15.0
+    file-type: ^16.5.4
+    fs-extra: ^11.1.1
+    got: ^11.8.6
+    hash-wasm: ^4.9.0
+    import-from: ^4.0.0
+    lmdb: 2.5.3
+    lock: ^1.1.0
+    node-object-hash: ^2.3.10
+    proper-lockfile: ^4.1.2
+    resolve-from: ^5.0.0
+    tmp: ^0.2.1
+    xdg-basedir: ^4.0.0
+  checksum: 605d29475d3b204965888cfbaf043091ea56f8ee5a6682c74a578ded7e9fc3d005ee86df91bf6347f87946a01bc2366b65c63e8d7110184f030edde7acb8e753
+  languageName: node
+  linkType: hard
+
 "gatsby-core-utils@npm:^4.3.1, gatsby-core-utils@npm:^4.9.0":
   version: 4.9.0
   resolution: "gatsby-core-utils@npm:4.9.0"
@@ -12685,22 +12709,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-source-filesystem@npm:^5.9.0":
-  version: 5.9.0
-  resolution: "gatsby-source-filesystem@npm:5.9.0"
+"gatsby-source-filesystem@npm:^5.10.0":
+  version: 5.10.0
+  resolution: "gatsby-source-filesystem@npm:5.10.0"
   dependencies:
     "@babel/runtime": ^7.20.13
     chokidar: ^3.5.3
     file-type: ^16.5.4
     fs-extra: ^11.1.1
-    gatsby-core-utils: ^4.9.0
+    gatsby-core-utils: ^4.10.0
     mime: ^3.0.0
     pretty-bytes: ^5.6.0
     valid-url: ^1.0.9
-    xstate: ^4.37.1
+    xstate: ^4.37.2
   peerDependencies:
     gatsby: ^5.0.0-next
-  checksum: 26b40f435526696a6ce721650d71ab37e1c28f72fb94d20fe0e320063260c8f93ee8ad66356df40d527fb69e16ba552ae2560e822f90ee85a8ed658a1ca59ef9
+  checksum: 10b3d187556b89e99930038e5dede24528372f70496b2cd7610350e932403f58804c74b14391bb82b249c713dbd3546fa6df3ecb1369a470e6c36bfca977b38c
   languageName: node
   linkType: hard
 
@@ -13825,7 +13849,7 @@ __metadata:
     gatsby-remark-images: ^7.9.0
     gatsby-remark-prismjs: ^7.9.0
     gatsby-remark-remove-cjk-breaks: ^1.2.1
-    gatsby-source-filesystem: ^5.9.0
+    gatsby-source-filesystem: ^5.10.0
     gatsby-source-local-git: ^1.3.0
     gatsby-transformer-remark: ^6.9.0
     gatsby-transformer-sharp: ^5.9.0
@@ -24096,10 +24120,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xstate@npm:^4.35.3, xstate@npm:^4.37.1":
+"xstate@npm:^4.35.3":
   version: 4.37.1
   resolution: "xstate@npm:4.37.1"
   checksum: 919fa88003b081636b4d003ab4eab6e58b582b2c2461b62ddd2eb6356d5795f183e78daa540ba70be711a8daa90db17bd6b3288851a5356e6b4775094d459e1c
+  languageName: node
+  linkType: hard
+
+"xstate@npm:^4.37.2":
+  version: 4.37.2
+  resolution: "xstate@npm:4.37.2"
+  checksum: 79380fa82b32048033689813532c2f88949a613c6c0764c5e3dc5d318839abbaf887fcf99bc4cd66531d4a8249d9045fc00acab08b94483d4ca84407a3b74f23
   languageName: node
   linkType: hard
 
