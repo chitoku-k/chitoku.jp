@@ -12459,9 +12459,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-autolink-headers@npm:^6.9.0":
-  version: 6.9.0
-  resolution: "gatsby-remark-autolink-headers@npm:6.9.0"
+"gatsby-remark-autolink-headers@npm:^6.10.0":
+  version: 6.10.0
+  resolution: "gatsby-remark-autolink-headers@npm:6.10.0"
   dependencies:
     "@babel/runtime": ^7.20.13
     github-slugger: ^1.5.0
@@ -12472,7 +12472,7 @@ __metadata:
     gatsby: ^5.0.0-next
     react: ^18.0.0 || ^0.0.0
     react-dom: ^18.0.0 || ^0.0.0
-  checksum: 6bfb0de870a0832e0204d996eb569144dd1d25dd7198f0bc4662ac62d0818180e8aed87d48e53bdb827470be2cd8f2da58b0cace7fe6e2932ed802ebe51ee0f6
+  checksum: 4d0c65698e27814834f7234d659670401b46e4fead8fd36bda68bbffaae60b145835de8e4de79923f764778892538699712c1c902f0b112edd86f2623e80ff43
   languageName: node
   linkType: hard
 
@@ -13728,7 +13728,7 @@ __metadata:
     gatsby-plugin-react-svg: ^3.3.0
     gatsby-plugin-sass: ^6.10.0
     gatsby-plugin-sharp: "chitoku-k/gatsby-plugin-sharp#948b74c"
-    gatsby-remark-autolink-headers: ^6.9.0
+    gatsby-remark-autolink-headers: ^6.10.0
     gatsby-remark-copy-linked-files: ^6.10.0
     gatsby-remark-embed-gist: ^1.2.1
     gatsby-remark-grid-tables: ^0.1.0
