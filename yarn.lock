@@ -12821,12 +12821,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-transformer-remark@npm:^6.9.0":
-  version: 6.9.0
-  resolution: "gatsby-transformer-remark@npm:6.9.0"
+"gatsby-transformer-remark@npm:^6.10.0":
+  version: 6.10.0
+  resolution: "gatsby-transformer-remark@npm:6.10.0"
   dependencies:
     "@babel/runtime": ^7.20.13
-    gatsby-core-utils: ^4.9.0
+    gatsby-core-utils: ^4.10.0
     gray-matter: ^4.0.3
     hast-util-raw: ^6.1.0
     hast-util-to-html: ^7.1.3
@@ -12849,7 +12849,7 @@ __metadata:
     unist-util-visit: ^2.0.3
   peerDependencies:
     gatsby: ^5.0.0-next
-  checksum: 4c1a680e0432aadaddf4bf8021bdab7a004e2505df5027e5e08ed9d735f5decfbb8702d6ef2e29c69f25afb3373c19003334134f390ac5c9f2bab315b9adeedf
+  checksum: acc2bb099b4b62716e0cadfb73d1cafc687e43b5c06fadc5b260fdd9e2859712a093da09852536d63904c9efa3b388ee7d3ee9960ae2cb19af2ff9609fef6106
   languageName: node
   linkType: hard
 
@@ -13913,7 +13913,7 @@ __metadata:
     gatsby-remark-remove-cjk-breaks: ^1.2.1
     gatsby-source-filesystem: ^5.10.0
     gatsby-source-local-git: ^1.3.0
-    gatsby-transformer-remark: ^6.9.0
+    gatsby-transformer-remark: ^6.10.0
     gatsby-transformer-sharp: ^5.9.0
     gatsby-transformer-yaml: ^5.10.0
     husky: ^8.0.3
