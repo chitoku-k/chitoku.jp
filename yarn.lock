@@ -12657,14 +12657,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-images@npm:^7.9.0":
-  version: 7.9.0
-  resolution: "gatsby-remark-images@npm:7.9.0"
+"gatsby-remark-images@npm:^7.10.0":
+  version: 7.10.0
+  resolution: "gatsby-remark-images@npm:7.10.0"
   dependencies:
     "@babel/runtime": ^7.20.13
     chalk: ^4.1.2
     cheerio: ^1.0.0-rc.10
-    gatsby-core-utils: ^4.9.0
+    gatsby-core-utils: ^4.10.0
     is-relative-url: ^3.0.0
     lodash: ^4.17.21
     mdast-util-definitions: ^4.0.0
@@ -12674,7 +12674,7 @@ __metadata:
   peerDependencies:
     gatsby: ^5.0.0-next
     gatsby-plugin-sharp: ^5.0.0-next
-  checksum: e82d597a57be9cbc0018c9da5b2436ec5b83a6a6a74ee905d31933ff00aeed787d120c311d39be4dc98ac3fbe670e591dddbb1590660df46206351973fa55b09
+  checksum: c13a0c26c65c058832c43254c73a1fdcea8394f34f181056f75566a409523b5dfcd1f1fb2a15270b33e8a8600ced37d9b21335fb381f6f20a6b3dc970cda7bb1
   languageName: node
   linkType: hard
 
@@ -13859,7 +13859,7 @@ __metadata:
     gatsby-remark-copy-linked-files: ^6.10.0
     gatsby-remark-embed-gist: ^1.2.1
     gatsby-remark-grid-tables: ^0.1.0
-    gatsby-remark-images: ^7.9.0
+    gatsby-remark-images: ^7.10.0
     gatsby-remark-prismjs: ^7.9.0
     gatsby-remark-remove-cjk-breaks: ^1.2.1
     gatsby-source-filesystem: ^5.10.0
