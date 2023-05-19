@@ -12599,9 +12599,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-copy-linked-files@npm:^6.9.0":
-  version: 6.9.0
-  resolution: "gatsby-remark-copy-linked-files@npm:6.9.0"
+"gatsby-remark-copy-linked-files@npm:^6.10.0":
+  version: 6.10.0
+  resolution: "gatsby-remark-copy-linked-files@npm:6.10.0"
   dependencies:
     "@babel/runtime": ^7.20.13
     cheerio: ^1.0.0-rc.10
@@ -12613,7 +12613,7 @@ __metadata:
     unist-util-visit: ^2.0.3
   peerDependencies:
     gatsby: ^5.0.0-next
-  checksum: 16d4d1b2d066acd7f44c57c983b44f8c9f404854b93ecee4230635a7fa08ffdb2520a2171803ff3362932aa4b3a8897cc5c98f6e9cedc4714949fea95737bce4
+  checksum: f5d5d70088ee7d01087df6b01f2210769529746ef76fccd8ef1db5990ab3bb78fcc7801fdf872b1e6bf7be09db1d9952e1f8b83567bb9d08c0c94b55300e9f65
   languageName: node
   linkType: hard
 
@@ -13843,7 +13843,7 @@ __metadata:
     gatsby-plugin-sass: ^6.10.0
     gatsby-plugin-sharp: "chitoku-k/gatsby-plugin-sharp#948b74c"
     gatsby-remark-autolink-headers: ^6.9.0
-    gatsby-remark-copy-linked-files: ^6.9.0
+    gatsby-remark-copy-linked-files: ^6.10.0
     gatsby-remark-embed-gist: ^1.2.1
     gatsby-remark-grid-tables: ^0.1.0
     gatsby-remark-images: ^7.9.0
