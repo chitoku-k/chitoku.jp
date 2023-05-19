@@ -96,7 +96,7 @@
     "typescript": "^5.0.4",
     "typescript-plugin-css-modules": "^5.0.1",
     "unified": "^10.1.2",
-    "webpack": "^5.82.1",
+    "webpack": "^5.83.1",
     "yaml-flat-loader": "^1.0.2"
   },
   "resolutions": {
