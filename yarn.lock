@@ -9528,7 +9528,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-loader@npm:^6.7.1, css-loader@npm:^6.7.3":
+"css-loader@npm:^6.7.1":
   version: 6.7.3
   resolution: "css-loader@npm:6.7.3"
   dependencies:
@@ -9543,6 +9543,24 @@ __metadata:
   peerDependencies:
     webpack: ^5.0.0
   checksum: 473cc32b6c837c2848e2051ad1ba331c1457449f47442e75a8c480d9891451434ada241f7e3de2347e57de17fcd84610b3bcfc4a9da41102cdaedd1e17902d31
+  languageName: node
+  linkType: hard
+
+"css-loader@npm:^6.7.4":
+  version: 6.7.4
+  resolution: "css-loader@npm:6.7.4"
+  dependencies:
+    icss-utils: ^5.1.0
+    postcss: ^8.4.21
+    postcss-modules-extract-imports: ^3.0.0
+    postcss-modules-local-by-default: ^4.0.1
+    postcss-modules-scope: ^3.0.0
+    postcss-modules-values: ^4.0.0
+    postcss-value-parser: ^4.2.0
+    semver: ^7.3.8
+  peerDependencies:
+    webpack: ^5.0.0
+  checksum: 6021fa9e375d767b9675e295c1513f2ee4ae04f76d9de69a75b8446e05f6e02b2170407ea72939925b788dcd5aa308527f6b41be3870dc1f4b0bfff8d2532c6e
   languageName: node
   linkType: hard
 
@@ -13837,7 +13855,7 @@ __metadata:
     babel-plugin-react-intl-auto: ^3.3.0
     bootstrap: ^5.2.3
     clsx: ^1.2.1
-    css-loader: ^6.7.3
+    css-loader: ^6.7.4
     dotenv-safe: ^8.2.0
     eslint: ^8.40.0
     eslint-plugin-react: ^7.32.2
@@ -18717,6 +18735,19 @@ __metadata:
   peerDependencies:
     postcss: ^8.1.0
   checksum: 6cf570badc7bc26c265e073f3ff9596b69bb954bc6ac9c5c1b8cba2995b80834226b60e0a3cbb87d5f399dbb52e6466bba8aa1d244f6218f99d834aec431a69d
+  languageName: node
+  linkType: hard
+
+"postcss-modules-local-by-default@npm:^4.0.1":
+  version: 4.0.3
+  resolution: "postcss-modules-local-by-default@npm:4.0.3"
+  dependencies:
+    icss-utils: ^5.0.0
+    postcss-selector-parser: ^6.0.2
+    postcss-value-parser: ^4.1.0
+  peerDependencies:
+    postcss: ^8.1.0
+  checksum: 2f8083687f3d6067885f8863dd32dbbb4f779cfcc7e52c17abede9311d84faf6d3ed8760e7c54c6380281732ae1f78e5e56a28baf3c271b33f450a11c9e30485
   languageName: node
   linkType: hard
 

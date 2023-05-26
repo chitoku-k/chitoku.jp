@@ -35,7 +35,7 @@
     "babel-plugin-react-intl-auto": "^3.3.0",
     "bootstrap": "^5.2.3",
     "clsx": "^1.2.1",
-    "css-loader": "^6.7.3",
+    "css-loader": "^6.7.4",
     "dotenv-safe": "^8.2.0",
     "eslint": "^8.40.0",
     "eslint-plugin-react": "^7.32.2",
