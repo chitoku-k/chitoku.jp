@@ -14151,6 +14151,7 @@ __metadata:
     algoliasearch: ^4.17.1
     babel-loader: ^9.1.2
     babel-plugin-react-intl-auto: ^3.3.0
+    babel-preset-gatsby: ^3.10.0
     bootstrap: ^5.2.3
     clsx: ^1.2.1
     css-loader: ^6.7.4
