@@ -34,7 +34,7 @@
     "babel-loader": "^9.1.2",
     "babel-plugin-react-intl-auto": "^3.3.0",
     "babel-preset-gatsby": "^3.10.0",
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^5.3.0",
     "clsx": "^1.2.1",
     "css-loader": "^6.8.1",
     "dotenv-safe": "^8.2.0",

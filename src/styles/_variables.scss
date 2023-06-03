@@ -1,4 +1,5 @@
 $fa-font-path: "~font-awesome/fonts";
+$color-mode-type: media-query;
 $headings-line-height: 1.1;
 $font-size-base: 0.875rem;
 $font-family-emoji-base:
@@ -34,14 +35,15 @@ $font-family-monospace:
   #{$font-family-emoji-base};
 
 // Link
-$link-color: var(--links-color);
-$link-hover-color: var(--links-hover);
 $link-decoration: none;
 $link-hover-decoration: underline;
 
+// Typography
+$hr-border-color: var(--table-border);
+
 // Table
 $table-color: var(--body-color);
-$hr-border-color: var(--table-border);
+$table-bg: var(--containers-background);
 $table-border-color: var(--table-border);
 
 // Input
@@ -50,6 +52,7 @@ $input-color: var(--body-color);
 $input-border-color: var(--table-border);
 
 // Pagination
+$pagination-font-size: .875rem;
 $pagination-bg: var(--pagination-background);
 $pagination-color: var(--pagination-color);
 $pagination-hover-color: var(--pagination-color);
