@@ -1,9 +1,9 @@
 :root {
-  --body-background: #efefef;
-  --body-color: #111;
+  --body-background: #{$body-bg};
+  --body-color: #{$body-color};
   --selection-background: #b3d4fc;
-  --links-color: #1e61ad;
-  --links-hover: #133c6c;
+  --links-color: #{$link-color};
+  --links-hover: #{$link-hover-color};
   --header-primary: #2f4255;
   --header-secondary: #e11010;
   --footer-background: #44607b;
@@ -32,7 +32,7 @@
   --headings-secondary: #efefef;
   --headings-border: #d4d4d4;
   --blockquote-border: #eee;
-  --table-border: #ddd;
+  --table-border: #{$border-color};
   --code-background: #f4f2f0;
   --code-highlight: #faedbb;
   --code-prompt: #708090;
@@ -48,8 +48,8 @@
   --readmore-background: #e11010;
   --readmore-color: #fff;
   --readmore-hover: #a30c0c;
-  --pagination-background: #efefef;
-  --pagination-color: #111;
+  --pagination-background: #{$body-bg};
+  --pagination-color: #{$body-color};
   --pagination-hover: #cacaca;
   --pagination-active: #e11010;
   --sidebar-description: #757575;

@@ -1,9 +1,9 @@
 :root {
-  --body-background: #484848;
-  --body-color: #c3c4c7;
+  --body-background: #{$body-bg-dark};
+  --body-color: #{$body-color-dark};
   --selection-background: #4a5056;
-  --links-color: #688bb4;
-  --links-hover: #6b94c4;
+  --links-color: #{$link-color-dark};
+  --links-hover: #{$link-hover-color-dark};
   --header-primary: #c3c4c7;
   --header-secondary: #a21919;
   --footer-background: #283848;
@@ -32,7 +32,7 @@
   --headings-secondary: #4a5056;
   --headings-border: #62666b;
   --blockquote-border: #484848;
-  --table-border: #62666b;
+  --table-border: #{$border-color-dark};
   --code-background: #2d2d2d;
   --code-highlight: #201d10;
   --code-prompt: #999;
@@ -48,8 +48,8 @@
   --readmore-background: #a21919;
   --readmore-color: #e0e0e0;
   --readmore-hover: #901c1c;
-  --pagination-background: #484848;
-  --pagination-color: #c3c4c7;
+  --pagination-background: #{$body-bg-dark};
+  --pagination-color: #{$body-color-dark};
   --pagination-hover: #565656;
   --pagination-active: #a21919;
   --sidebar-description: #9c9c9c;

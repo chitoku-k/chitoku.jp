@@ -1,5 +1,6 @@
+@import "themes/common";
 @import "themes/light";
 
-@media (prefers-color-scheme: dark) {
+@include color-mode(dark) {
   @import "themes/dark";
 }
