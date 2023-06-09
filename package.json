@@ -30,7 +30,7 @@
     "@types/react-helmet": "^6.1.6",
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@typescript-eslint/parser": "^5.59.8",
-    "algoliasearch": "^4.17.1",
+    "algoliasearch": "^4.17.2",
     "babel-loader": "^9.1.2",
     "babel-plugin-react-intl-auto": "^3.3.0",
     "babel-preset-gatsby": "^3.10.0",
