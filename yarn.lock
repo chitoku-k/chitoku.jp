@@ -14693,7 +14693,7 @@ __metadata:
     react-bootstrap: ^2.7.4
     react-dom: ^18.2.0
     react-helmet: ^6.1.0
-    react-instantsearch-hooks-web: ^6.44.1
+    react-instantsearch-hooks-web: ^6.44.2
     react-intl: ^6.4.3
     react-refresh: ^0.14.0
     react-schemaorg: ^2.0.0
@@ -20483,24 +20483,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-instantsearch-hooks-web@npm:^6.44.1":
-  version: 6.44.1
-  resolution: "react-instantsearch-hooks-web@npm:6.44.1"
+"react-instantsearch-hooks-web@npm:^6.44.2":
+  version: 6.44.2
+  resolution: "react-instantsearch-hooks-web@npm:6.44.2"
   dependencies:
     "@babel/runtime": ^7.1.2
     instantsearch.js: 4.56.1
-    react-instantsearch-hooks: 6.44.1
+    react-instantsearch-hooks: 6.44.2
   peerDependencies:
     algoliasearch: ">= 3.1 < 5"
     react: ">= 16.8.0 < 19"
     react-dom: ">= 16.8.0 < 19"
-  checksum: a47ae22b399fe2c3d2ad1491a86434eac53ea922793eeb5bfb69cf1e8afcf0398a33e0c050aac400f3f0f2f9931af8427173a14d1d46f2ecccf25be50397ef03
+  checksum: 58f40899e5fb99ea25cefeeb8745ddfd67d64a9423571015db53bb9856ee4faf8bcdf42305f03ddbf9dd73f385f1cc039255ba83ac0cc2110ca687c57d720e3f
   languageName: node
   linkType: hard
 
-"react-instantsearch-hooks@npm:6.44.1":
-  version: 6.44.1
-  resolution: "react-instantsearch-hooks@npm:6.44.1"
+"react-instantsearch-hooks@npm:6.44.2":
+  version: 6.44.2
+  resolution: "react-instantsearch-hooks@npm:6.44.2"
   dependencies:
     "@babel/runtime": ^7.1.2
     algoliasearch-helper: ^3.13.0
@@ -20509,7 +20509,7 @@ __metadata:
   peerDependencies:
     algoliasearch: ">= 3.1 < 5"
     react: ">= 16.8.0 < 19"
-  checksum: 5ad11b6bb99863330c90b71eb561683c967971365d590ce690542a86b8626a2fbc64951b0008cdf8f2016c1b2ed781815d94f9c2d7b449f842b874b2a43d7d74
+  checksum: de2be8d2c8bec183dbee200ea01d217c69f921ff941c1229bb39025d8ed3dfc5dd8d09d6490088bfc2da877c7fdc46837549d98a9effdd2a63e0216c979fd204
   languageName: node
   linkType: hard
 
