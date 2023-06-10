@@ -89,7 +89,7 @@
     "storybook": "^7.0.20",
     "style-loader": "^3.3.3",
     "stylelint": "^15.7.0",
-    "stylelint-config-recess-order": "^4.0.0",
+    "stylelint-config-recess-order": "^4.2.0",
     "stylelint-config-standard-scss": "^9.0.0",
     "stylelint-scss": "^5.0.1",
     "tsconfig-paths-webpack-plugin": "^4.0.1",
