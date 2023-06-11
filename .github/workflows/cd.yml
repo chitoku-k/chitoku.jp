@@ -62,7 +62,7 @@ jobs:
         with:
           registry: container.chitoku.jp
           username: github-actions:repo:chitoku-k/chitoku.jp
-          password: ${{ secrets.id-token.outputs.result }}
+          password: ${{ steps.id-token.outputs.result }}
       - name: Push to Container Registry
         run: |
           docker push container.chitoku.jp/chitoku-k/chitoku.jp
