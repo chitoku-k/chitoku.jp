@@ -1,6 +1,7 @@
-# syntax = docker/dockerfile:experimental
+# syntax = docker/dockerfile:1
 FROM node:20.2.0-slim AS dependencies
 WORKDIR /usr/src
+ARG CI
 RUN --mount=type=cache,target=/var/cache/apt \
     --mount=type=cache,target=/var/lib/apt/lists \
     apt-get -y update && \
