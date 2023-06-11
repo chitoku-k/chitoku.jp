@@ -46,6 +46,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
+          load: true
           tags: container.chitoku.jp/chitoku-k/chitoku.jp
           build-args: |
             CI
