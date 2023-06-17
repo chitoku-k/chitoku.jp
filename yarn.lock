@@ -13259,26 +13259,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-utils@npm:^4.10.0":
-  version: 4.10.0
-  resolution: "gatsby-plugin-utils@npm:4.10.0"
-  dependencies:
-    "@babel/runtime": ^7.20.13
-    fastq: ^1.15.0
-    fs-extra: ^11.1.1
-    gatsby-core-utils: ^4.10.0
-    gatsby-sharp: ^1.10.0
-    graphql-compose: ^9.0.10
-    import-from: ^4.0.0
-    joi: ^17.9.2
-    mime: ^3.0.0
-  peerDependencies:
-    gatsby: ^5.0.0-next
-    graphql: ^16.0.0
-  checksum: 9923390cc215c9bddf4c255c3393d624f14068e5c03ad83fb67ab9bea16295398ac9e9ca0803f9b30bf8715d7866f1fe3fc86330d7afdd828f7f3288ec6602ae
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-utils@npm:^4.11.0":
   version: 4.11.0
   resolution: "gatsby-plugin-utils@npm:4.11.0"
@@ -13395,14 +13375,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-images@npm:^7.10.0":
-  version: 7.10.0
-  resolution: "gatsby-remark-images@npm:7.10.0"
+"gatsby-remark-images@npm:^7.11.0":
+  version: 7.11.0
+  resolution: "gatsby-remark-images@npm:7.11.0"
   dependencies:
     "@babel/runtime": ^7.20.13
     chalk: ^4.1.2
     cheerio: ^1.0.0-rc.10
-    gatsby-core-utils: ^4.10.0
+    gatsby-core-utils: ^4.11.0
     is-relative-url: ^3.0.0
     lodash: ^4.17.21
     mdast-util-definitions: ^4.0.0
@@ -13412,7 +13392,7 @@ __metadata:
   peerDependencies:
     gatsby: ^5.0.0-next
     gatsby-plugin-sharp: ^5.0.0-next
-  checksum: c13a0c26c65c058832c43254c73a1fdcea8394f34f181056f75566a409523b5dfcd1f1fb2a15270b33e8a8600ced37d9b21335fb381f6f20a6b3dc970cda7bb1
+  checksum: 7abbac1ee927b0f2df87ed8049cfa21eb1def3d21b10968dbc88a6a8acaf16703df6506d87fc30b1694ec7d44c197ab2dfc84ce5816159f3c39761f436087057
   languageName: node
   linkType: hard
 
@@ -13447,15 +13427,6 @@ __metadata:
     react: ^18.0.0 || ^0.0.0
     react-dom: ^18.0.0 || ^0.0.0
   checksum: 184d880df97ca22a73afcd65d17e24323988c568ccb8b77304b8311d49f8880a023f857416720d0a69a99c4588fe6e4a0fb26410b737568e36588e2f3a170735
-  languageName: node
-  linkType: hard
-
-"gatsby-sharp@npm:^1.10.0":
-  version: 1.10.0
-  resolution: "gatsby-sharp@npm:1.10.0"
-  dependencies:
-    sharp: ^0.32.1
-  checksum: a2c46bfc8450d65f9ad8d896766ca5d50cfbfd66196655490510d105d54d28745358f9c8fa83da8e957bbbbea85ddd9ed19a4febc497af857c2810549e9dc1ea
   languageName: node
   linkType: hard
 
@@ -14624,7 +14595,7 @@ __metadata:
     gatsby-remark-copy-linked-files: ^6.11.0
     gatsby-remark-embed-gist: ^1.2.1
     gatsby-remark-grid-tables: ^0.1.0
-    gatsby-remark-images: ^7.10.0
+    gatsby-remark-images: ^7.11.0
     gatsby-remark-prismjs: ^7.10.0
     gatsby-remark-remove-cjk-breaks: ^1.2.1
     gatsby-source-filesystem: ^5.10.0
