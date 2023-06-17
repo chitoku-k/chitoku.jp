@@ -7148,7 +7148,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.59.8":
+"@typescript-eslint/parser@npm:^5.59.11, @typescript-eslint/parser@npm:^5.59.8":
   version: 5.59.11
   resolution: "@typescript-eslint/parser@npm:5.59.11"
   dependencies:
@@ -7162,23 +7162,6 @@ __metadata:
     typescript:
       optional: true
   checksum: 75eb6e60577690e3c9dd66fde83c9b4e9e5fd818fe9673e532052d5ba8fa21a5f7a69aad19be99e6ef5825e9f52036262b25e918e51f96e1dc26e862448d2d3a
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/parser@npm:^5.59.9":
-  version: 5.59.9
-  resolution: "@typescript-eslint/parser@npm:5.59.9"
-  dependencies:
-    "@typescript-eslint/scope-manager": 5.59.9
-    "@typescript-eslint/types": 5.59.9
-    "@typescript-eslint/typescript-estree": 5.59.9
-    debug: ^4.3.4
-  peerDependencies:
-    eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: 69b07d0a5bc6e1d24d23916c057ea9f2f53a0e7fb6dabadff92987c299640edee2c013fb93269322c7124e87b5c515529001397eae33006dfb40e1dcdf1902d7
   languageName: node
   linkType: hard
 
@@ -13259,26 +13242,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-utils@npm:^4.10.0":
-  version: 4.10.0
-  resolution: "gatsby-plugin-utils@npm:4.10.0"
-  dependencies:
-    "@babel/runtime": ^7.20.13
-    fastq: ^1.15.0
-    fs-extra: ^11.1.1
-    gatsby-core-utils: ^4.10.0
-    gatsby-sharp: ^1.10.0
-    graphql-compose: ^9.0.10
-    import-from: ^4.0.0
-    joi: ^17.9.2
-    mime: ^3.0.0
-  peerDependencies:
-    gatsby: ^5.0.0-next
-    graphql: ^16.0.0
-  checksum: 9923390cc215c9bddf4c255c3393d624f14068e5c03ad83fb67ab9bea16295398ac9e9ca0803f9b30bf8715d7866f1fe3fc86330d7afdd828f7f3288ec6602ae
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-utils@npm:^4.11.0":
   version: 4.11.0
   resolution: "gatsby-plugin-utils@npm:4.11.0"
@@ -13447,15 +13410,6 @@ __metadata:
     react: ^18.0.0 || ^0.0.0
     react-dom: ^18.0.0 || ^0.0.0
   checksum: 184d880df97ca22a73afcd65d17e24323988c568ccb8b77304b8311d49f8880a023f857416720d0a69a99c4588fe6e4a0fb26410b737568e36588e2f3a170735
-  languageName: node
-  linkType: hard
-
-"gatsby-sharp@npm:^1.10.0":
-  version: 1.10.0
-  resolution: "gatsby-sharp@npm:1.10.0"
-  dependencies:
-    sharp: ^0.32.1
-  checksum: a2c46bfc8450d65f9ad8d896766ca5d50cfbfd66196655490510d105d54d28745358f9c8fa83da8e957bbbbea85ddd9ed19a4febc497af857c2810549e9dc1ea
   languageName: node
   linkType: hard
 
@@ -14595,7 +14549,7 @@ __metadata:
     "@types/react-dom": ^18.2.5
     "@types/react-helmet": ^6.1.6
     "@typescript-eslint/eslint-plugin": ^5.59.9
-    "@typescript-eslint/parser": ^5.59.9
+    "@typescript-eslint/parser": ^5.59.11
     algoliasearch: ^4.17.2
     babel-loader: ^9.1.2
     babel-plugin-react-intl-auto: ^3.3.0
