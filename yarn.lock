@@ -13259,26 +13259,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-utils@npm:^4.10.0":
-  version: 4.10.0
-  resolution: "gatsby-plugin-utils@npm:4.10.0"
-  dependencies:
-    "@babel/runtime": ^7.20.13
-    fastq: ^1.15.0
-    fs-extra: ^11.1.1
-    gatsby-core-utils: ^4.10.0
-    gatsby-sharp: ^1.10.0
-    graphql-compose: ^9.0.10
-    import-from: ^4.0.0
-    joi: ^17.9.2
-    mime: ^3.0.0
-  peerDependencies:
-    gatsby: ^5.0.0-next
-    graphql: ^16.0.0
-  checksum: 9923390cc215c9bddf4c255c3393d624f14068e5c03ad83fb67ab9bea16295398ac9e9ca0803f9b30bf8715d7866f1fe3fc86330d7afdd828f7f3288ec6602ae
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-utils@npm:^4.11.0":
   version: 4.11.0
   resolution: "gatsby-plugin-utils@npm:4.11.0"
@@ -13450,15 +13430,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-sharp@npm:^1.10.0":
-  version: 1.10.0
-  resolution: "gatsby-sharp@npm:1.10.0"
-  dependencies:
-    sharp: ^0.32.1
-  checksum: a2c46bfc8450d65f9ad8d896766ca5d50cfbfd66196655490510d105d54d28745358f9c8fa83da8e957bbbbea85ddd9ed19a4febc497af857c2810549e9dc1ea
-  languageName: node
-  linkType: hard
-
 "gatsby-sharp@npm:^1.11.0":
   version: 1.11.0
   resolution: "gatsby-sharp@npm:1.11.0"
@@ -13528,12 +13499,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-transformer-remark@npm:^6.10.0":
-  version: 6.10.0
-  resolution: "gatsby-transformer-remark@npm:6.10.0"
+"gatsby-transformer-remark@npm:^6.11.0":
+  version: 6.11.0
+  resolution: "gatsby-transformer-remark@npm:6.11.0"
   dependencies:
     "@babel/runtime": ^7.20.13
-    gatsby-core-utils: ^4.10.0
+    gatsby-core-utils: ^4.11.0
     gray-matter: ^4.0.3
     hast-util-raw: ^6.1.0
     hast-util-to-html: ^7.1.3
@@ -13556,7 +13527,7 @@ __metadata:
     unist-util-visit: ^2.0.3
   peerDependencies:
     gatsby: ^5.0.0-next
-  checksum: acc2bb099b4b62716e0cadfb73d1cafc687e43b5c06fadc5b260fdd9e2859712a093da09852536d63904c9efa3b388ee7d3ee9960ae2cb19af2ff9609fef6106
+  checksum: c1a3b3384e21e53b58a218b8b2e9b757064392870cd95d4d14163ee519bc17cbb0e543323c2804618625048ca2818e6b98f28a90673482d13698632dfc1c519c
   languageName: node
   linkType: hard
 
@@ -14629,7 +14600,7 @@ __metadata:
     gatsby-remark-remove-cjk-breaks: ^1.2.1
     gatsby-source-filesystem: ^5.10.0
     gatsby-source-local-git: ^1.3.0
-    gatsby-transformer-remark: ^6.10.0
+    gatsby-transformer-remark: ^6.11.0
     gatsby-transformer-sharp: ^5.11.0
     gatsby-transformer-yaml: ^5.10.0
     husky: ^8.0.3
