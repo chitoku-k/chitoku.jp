@@ -13182,9 +13182,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-google-gtag@npm:^5.10.0":
-  version: 5.10.0
-  resolution: "gatsby-plugin-google-gtag@npm:5.10.0"
+"gatsby-plugin-google-gtag@npm:^5.11.0":
+  version: 5.11.0
+  resolution: "gatsby-plugin-google-gtag@npm:5.11.0"
   dependencies:
     "@babel/runtime": ^7.20.13
     minimatch: ^3.1.2
@@ -13192,7 +13192,7 @@ __metadata:
     gatsby: ^5.0.0-next
     react: ^18.0.0 || ^0.0.0
     react-dom: ^18.0.0 || ^0.0.0
-  checksum: 09ea392fca49569aad024c83f7d9a7b478e3c79555223a57c18be7541924b1ca151311c2ce0504f9adbce5f10b22dc1c4d1b70a2d365fe8bcb5c3900d98c7b24
+  checksum: 4661bc1550d33ea879c0d7d291fb6f4a5d46c3ac9d2fee82472e68bc3ff6ad99eb263e3f7f858667255d8f5bf04ac8a5aeb38f061047ed5358ed158a90caf9d0
   languageName: node
   linkType: hard
 
@@ -14640,7 +14640,7 @@ __metadata:
     gatsby: ^5.11.0
     gatsby-plugin-algolia: ^1.0.3
     gatsby-plugin-eslint: ^4.0.4
-    gatsby-plugin-google-gtag: ^5.10.0
+    gatsby-plugin-google-gtag: ^5.11.0
     gatsby-plugin-minify-html: ^1.0.4
     gatsby-plugin-no-sourcemaps: ^5.11.0
     gatsby-plugin-react-helmet: ^6.10.0
