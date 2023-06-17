@@ -13452,9 +13452,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-prismjs@npm:^7.10.0":
-  version: 7.10.0
-  resolution: "gatsby-remark-prismjs@npm:7.10.0"
+"gatsby-remark-prismjs@npm:^7.11.0":
+  version: 7.11.0
+  resolution: "gatsby-remark-prismjs@npm:7.11.0"
   dependencies:
     "@babel/runtime": ^7.20.13
     parse-numeric-range: ^1.3.0
@@ -13462,7 +13462,7 @@ __metadata:
   peerDependencies:
     gatsby: ^5.0.0-next
     prismjs: ^1.15.0
-  checksum: 50a8319e8314549d66cc0449dd73b8aff32ae3516ca1a41f6f563c55e919eb4e9c8ebb2fed43c3b8ffcc6a8768eaded076b62a3b36183eba9dee3920cf7e00e9
+  checksum: 3069481a5a2605021d2d2957aa28b75334ec33b3a52c687ec5cc7a33b2782f51489b6adb61b333961d5616d1bef544f5a8655427047b8b4b01f592168e133d8c
   languageName: node
   linkType: hard
 
@@ -14652,7 +14652,7 @@ __metadata:
     gatsby-remark-embed-gist: ^1.2.1
     gatsby-remark-grid-tables: ^0.1.0
     gatsby-remark-images: ^7.11.0
-    gatsby-remark-prismjs: ^7.10.0
+    gatsby-remark-prismjs: ^7.11.0
     gatsby-remark-remove-cjk-breaks: ^1.2.1
     gatsby-source-filesystem: ^5.10.0
     gatsby-source-local-git: ^1.3.0
