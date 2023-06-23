@@ -13774,16 +13774,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-transformer-yaml@npm:^5.10.0":
-  version: 5.10.0
-  resolution: "gatsby-transformer-yaml@npm:5.10.0"
+"gatsby-transformer-yaml@npm:^5.11.0":
+  version: 5.11.0
+  resolution: "gatsby-transformer-yaml@npm:5.11.0"
   dependencies:
     "@babel/runtime": ^7.20.13
     js-yaml: ^4.1.0
     lodash: ^4.17.21
   peerDependencies:
     gatsby: ^5.0.0-next
-  checksum: 09911e8ecb547ad3e4aa0ce9ba496635b794155e740aca4b1b1d15f57922e30909b837c641d9263fe40c9dad0c87402296513787b852e88e9b86927a45608ef6
+  checksum: ab4fb29618fa3067ef59389ee67c2153048dbcd90737ee5f96ea3dbcf98970625d9e68ae3f372c76c08be4e5a4ba1ac7bfa518a43dbcc4d7f99c7025183f5f6e
   languageName: node
   linkType: hard
 
@@ -14826,7 +14826,7 @@ __metadata:
     gatsby-source-local-git: ^1.3.0
     gatsby-transformer-remark: ^6.11.0
     gatsby-transformer-sharp: ^5.11.0
-    gatsby-transformer-yaml: ^5.10.0
+    gatsby-transformer-yaml: ^5.11.0
     husky: ^8.0.3
     is-absolute-url: ^4.0.1
     license-webpack-plugin: ^4.0.2
