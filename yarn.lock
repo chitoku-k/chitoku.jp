@@ -8897,32 +8897,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-preset-gatsby@npm:^3.10.0":
-  version: 3.10.0
-  resolution: "babel-preset-gatsby@npm:3.10.0"
-  dependencies:
-    "@babel/plugin-proposal-class-properties": ^7.18.6
-    "@babel/plugin-proposal-nullish-coalescing-operator": ^7.18.6
-    "@babel/plugin-proposal-optional-chaining": ^7.20.7
-    "@babel/plugin-syntax-dynamic-import": ^7.8.3
-    "@babel/plugin-transform-classes": ^7.20.7
-    "@babel/plugin-transform-runtime": ^7.19.6
-    "@babel/plugin-transform-spread": ^7.20.7
-    "@babel/preset-env": ^7.20.2
-    "@babel/preset-react": ^7.18.6
-    "@babel/runtime": ^7.20.13
-    babel-plugin-dynamic-import-node: ^2.3.3
-    babel-plugin-macros: ^3.1.0
-    babel-plugin-transform-react-remove-prop-types: ^0.4.24
-    gatsby-core-utils: ^4.10.0
-    gatsby-legacy-polyfills: ^3.10.0
-  peerDependencies:
-    "@babel/core": ^7.11.6
-    core-js: ^3.0.0
-  checksum: 303ce552f9c7660ef23fcac94ab813f648405a7c177d8ba44c3f0a52c4dc8af10323e8cb114618dc4af32dd5e0166f85a73eaa8b8efd916bfff5a491ea81de99
-  languageName: node
-  linkType: hard
-
 "babel-preset-gatsby@npm:^3.11.0":
   version: 3.11.0
   resolution: "babel-preset-gatsby@npm:3.11.0"
@@ -10248,15 +10222,6 @@ __metadata:
   dependencies:
     toggle-selection: ^1.0.6
   checksum: e0a325e39b7615108e6c1c8ac110ae7b829cdc4ee3278b1df6a0e4228c490442cc86444cd643e2da344fbc424b3aab8909e2fec82f8bc75e7e5b190b7c24eecf
-  languageName: node
-  linkType: hard
-
-"core-js-compat@npm:3.30.1":
-  version: 3.30.1
-  resolution: "core-js-compat@npm:3.30.1"
-  dependencies:
-    browserslist: ^4.21.5
-  checksum: e450a9771fc927ce982333929e1c4b32f180f641e4cfff9de6ed44b5930de19be7707cf74f45d1746ca69b8e8ac0698a555cb7244fbfbed6c38ca93844207bf7
   languageName: node
   linkType: hard
 
@@ -13242,30 +13207,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-core-utils@npm:^4.10.0":
-  version: 4.10.0
-  resolution: "gatsby-core-utils@npm:4.10.0"
-  dependencies:
-    "@babel/runtime": ^7.20.13
-    ci-info: 2.0.0
-    configstore: ^5.0.1
-    fastq: ^1.15.0
-    file-type: ^16.5.4
-    fs-extra: ^11.1.1
-    got: ^11.8.6
-    hash-wasm: ^4.9.0
-    import-from: ^4.0.0
-    lmdb: 2.5.3
-    lock: ^1.1.0
-    node-object-hash: ^2.3.10
-    proper-lockfile: ^4.1.2
-    resolve-from: ^5.0.0
-    tmp: ^0.2.1
-    xdg-basedir: ^4.0.0
-  checksum: 605d29475d3b204965888cfbaf043091ea56f8ee5a6682c74a578ded7e9fc3d005ee86df91bf6347f87946a01bc2366b65c63e8d7110184f030edde7acb8e753
-  languageName: node
-  linkType: hard
-
 "gatsby-core-utils@npm:^4.11.0":
   version: 4.11.0
   resolution: "gatsby-core-utils@npm:4.11.0"
@@ -13318,16 +13259,6 @@ __metadata:
   version: 3.11.0
   resolution: "gatsby-graphiql-explorer@npm:3.11.0"
   checksum: 921f6bda02e4a9c8ad5f010282f24f4488b35c3b87377f81bf84af44d2d846d3dcdf8fe1932181c1926600bd15427ed29bf3f4f4f1e7d7f369e557b3b8b6c444
-  languageName: node
-  linkType: hard
-
-"gatsby-legacy-polyfills@npm:^3.10.0":
-  version: 3.10.0
-  resolution: "gatsby-legacy-polyfills@npm:3.10.0"
-  dependencies:
-    "@babel/runtime": ^7.20.13
-    core-js-compat: 3.30.1
-  checksum: 523ff00fbf7106ae467715c4b3440bd46387697e1b2c1de5fbeef0470a0f7842c8a3a0e694654ad4a484b0e11012c4595ddf87ee210a44ba3be7e530364f4f5c
   languageName: node
   linkType: hard
 
@@ -14863,7 +14794,7 @@ __metadata:
     algoliasearch: ^4.17.2
     babel-loader: ^9.1.2
     babel-plugin-react-intl-auto: ^3.3.0
-    babel-preset-gatsby: ^3.10.0
+    babel-preset-gatsby: ^3.11.0
     bootstrap: ^5.3.0
     clsx: ^1.2.1
     css-loader: ^6.8.1
