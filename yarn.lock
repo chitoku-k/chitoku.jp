@@ -5086,18 +5086,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-links@npm:^7.0.21":
-  version: 7.0.21
-  resolution: "@storybook/addon-links@npm:7.0.21"
+"@storybook/addon-links@npm:^7.0.23":
+  version: 7.0.23
+  resolution: "@storybook/addon-links@npm:7.0.23"
   dependencies:
-    "@storybook/client-logger": 7.0.21
-    "@storybook/core-events": 7.0.21
+    "@storybook/client-logger": 7.0.23
+    "@storybook/core-events": 7.0.23
     "@storybook/csf": ^0.1.0
     "@storybook/global": ^5.0.0
-    "@storybook/manager-api": 7.0.21
-    "@storybook/preview-api": 7.0.21
-    "@storybook/router": 7.0.21
-    "@storybook/types": 7.0.21
+    "@storybook/manager-api": 7.0.23
+    "@storybook/preview-api": 7.0.23
+    "@storybook/router": 7.0.23
+    "@storybook/types": 7.0.23
     prop-types: ^15.7.2
     ts-dedent: ^2.0.0
   peerDependencies:
@@ -5108,7 +5108,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 0ceb0025d4389aeb0a55ecf2747e1c3b9f057e6119a7640c418703643bc12d52b9fe67605325eeebe5393b048c3ba3ce6785af51038161a12255df05f7cfae27
+  checksum: 541101115965c5a6d73bb9d152ba569ed86d5adaaac0a0351944b9d2cba4a25f591cf3c2231095f698955fdfef2191175aa307e4cc77cc8ef1983b4773371687
   languageName: node
   linkType: hard
 
@@ -5881,32 +5881,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/manager-api@npm:7.0.21":
-  version: 7.0.21
-  resolution: "@storybook/manager-api@npm:7.0.21"
-  dependencies:
-    "@storybook/channels": 7.0.21
-    "@storybook/client-logger": 7.0.21
-    "@storybook/core-events": 7.0.21
-    "@storybook/csf": ^0.1.0
-    "@storybook/global": ^5.0.0
-    "@storybook/router": 7.0.21
-    "@storybook/theming": 7.0.21
-    "@storybook/types": 7.0.21
-    dequal: ^2.0.2
-    lodash: ^4.17.21
-    memoizerific: ^1.11.3
-    semver: ^7.3.7
-    store2: ^2.14.2
-    telejson: ^7.0.3
-    ts-dedent: ^2.0.0
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 4fa42e2ca2ff000dcf7959decfcb14172d31dd596ffedf6e40dffc7ce6a9a45955d6822cc49d82f5f2995d0d9c33d40cbeb6c16868f4607386745c43419388fa
-  languageName: node
-  linkType: hard
-
 "@storybook/manager-api@npm:7.0.23":
   version: 7.0.23
   resolution: "@storybook/manager-api@npm:7.0.23"
@@ -6218,20 +6192,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/router@npm:7.0.21":
-  version: 7.0.21
-  resolution: "@storybook/router@npm:7.0.21"
-  dependencies:
-    "@storybook/client-logger": 7.0.21
-    memoizerific: ^1.11.3
-    qs: ^6.10.0
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 1c8a6d1de844fd2b3aec83fd1abe3f6db3533fbdd4febc751d396c1c7da46b3c37e0c3f2a8598e77b393351ddd92c96935356ccaf2b8262313e37b21f09f780e
-  languageName: node
-  linkType: hard
-
 "@storybook/router@npm:7.0.23":
   version: 7.0.23
   resolution: "@storybook/router@npm:7.0.23"
@@ -6285,21 +6245,6 @@ __metadata:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
   checksum: 71f992d7664d1c5236f7caffdfe347812aaf1031b78ed1b6100d0990e5f3b3c712e86170467d6bcc1197759344a3fc25d336db0baa560c74ccda6f72bf45af79
-  languageName: node
-  linkType: hard
-
-"@storybook/theming@npm:7.0.21":
-  version: 7.0.21
-  resolution: "@storybook/theming@npm:7.0.21"
-  dependencies:
-    "@emotion/use-insertion-effect-with-fallbacks": ^1.0.0
-    "@storybook/client-logger": 7.0.21
-    "@storybook/global": ^5.0.0
-    memoizerific: ^1.11.3
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 6202c66c55f35911c4acbf8af1b67a163fc4ca4567fd5c1b2b3183a7ede5cb1ca428df68b53377cd95de91055485c5ebdfd9d467e429bf5975a1db6785002194
   languageName: node
   linkType: hard
 
@@ -14777,7 +14722,7 @@ __metadata:
     "@gatsbyjs/reach-router": ^2.0.1
     "@storybook/addon-actions": ^7.0.20
     "@storybook/addon-essentials": ^7.0.23
-    "@storybook/addon-links": ^7.0.21
+    "@storybook/addon-links": ^7.0.23
     "@storybook/preset-scss": ^1.0.3
     "@storybook/react-webpack5": ^7.0.20
     "@svgr/webpack": ^8.0.1
