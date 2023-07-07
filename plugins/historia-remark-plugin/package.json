@@ -5,6 +5,6 @@
   "main": "index.mjs",
   "dependencies": {
     "@twemoji/api": "^14.1.2",
-    "unist-util-visit": "^4.1.2"
+    "unist-util-visit": "^5.0.0"
   }
 }
