@@ -81,7 +81,7 @@ const Article: FunctionComponent<ArticleProps> = ({
         ) : null}
         {children}
       </ArticleContainer>
-      {prev || next ? (
+      {prev ?? next ? (
         <ArticleContainer>
           <PaginationContainer>
             <SimplePagination
