@@ -40,6 +40,7 @@ updates:
       - react-dom
     storybook:
       patterns:
+      - storybook
       - "@storybook/addon-*"
       - "@storybook/react-*"
     typescript-eslint:
