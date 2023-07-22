@@ -158,6 +158,7 @@
           "ignoreStateless": true
         }],
         "react/no-unused-prop-types": "off",
+        "react/prefer-read-only-props": "off",
         "react/prop-types": "off",
         "react/react-in-jsx-scope": "off",
         "react/require-default-props": "off",
