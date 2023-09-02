@@ -3,6 +3,7 @@ import { useMemo } from 'react'
 import * as jsxRuntime from 'react/jsx-runtime'
 import { unified } from 'unified'
 import type { Root } from 'hast'
+import type { Components, Production } from 'hast-util-to-jsx-runtime/lib'
 import rehypeReact from 'rehype-react'
 
 import * as styles from './styles.module.scss'
@@ -19,8 +20,8 @@ const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
   const processor = useMemo(
     () => unified()
       .use(rehypeReact, {
-        ...jsxRuntime,
-        components,
+        ...jsxRuntime as Production,
+        components: components as Components,
       }),
     [],
   )
