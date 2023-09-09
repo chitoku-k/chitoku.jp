@@ -51,7 +51,7 @@ interests:
       - name: 原神
         url: https://genshin.hoyoverse.com/
 contacts:
-  - service: Twitter
+  - service: X
     primary: true
     accounts:
     - name: '@java_shit'

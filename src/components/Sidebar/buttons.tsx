@@ -1,7 +1,7 @@
 import type { FunctionComponent } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import type { IconDefinition, IconName } from '@fortawesome/fontawesome-svg-core'
-import { faFacebookF, faGetPocket, faTumblr, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faGetPocket, faTumblr, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { useIntl } from 'react-intl'
 import clsx from 'clsx'
 
@@ -26,7 +26,7 @@ const hatena: IconDefinition = {
   ],
 }
 
-export const TwitterShareButton: FunctionComponent<ShareButtonProps> = ({
+export const XShareButton: FunctionComponent<ShareButtonProps> = ({
   url,
 }) => {
   const { formatMessage } = useIntl()
@@ -34,8 +34,8 @@ export const TwitterShareButton: FunctionComponent<ShareButtonProps> = ({
   const to = `${base}?url=${encodeURIComponent(url)}`
 
   return (
-    <Link className={clsx(styles.button, styles.twitter)} to={to} title={formatMessage(messages.share_on, { service: formatMessage(messages.twitter) })}>
-      <FontAwesomeIcon className={styles.icon} icon={faTwitter} />
+    <Link className={clsx(styles.button, styles.x)} to={to} title={formatMessage(messages.share_on, { service: formatMessage(messages.x) })}>
+      <FontAwesomeIcon className={styles.icon} icon={faXTwitter} />
     </Link>
   )
 }

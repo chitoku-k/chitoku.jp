@@ -14,7 +14,7 @@ import {
   HatenaShareButton,
   PocketShareButton,
   TumblrShareButton,
-  TwitterShareButton,
+  XShareButton,
 } from './buttons'
 import NavItem from 'components/NavItem'
 import Link from 'components/Link'
@@ -88,7 +88,7 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
           {formatMessage(messages.share)}
         </SubHeader>
         <div className={styles.shareContainer}>
-          <TwitterShareButton url={url} />
+          <XShareButton url={url} />
           <FacebookShareButton url={url} />
           <PocketShareButton url={url} />
           <HatenaShareButton url={url} />
