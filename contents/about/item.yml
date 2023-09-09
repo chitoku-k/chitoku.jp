@@ -28,6 +28,8 @@ interests:
       - name: PowerShell
   - type: アニメ
     items:
+      - name: らき☆すた
+        url: http://www.lucky-ch.com/
       - name: ゆるゆり
         url: https://yuruyuri.com/
       - name: ご注文はうさぎですか？
@@ -44,6 +46,10 @@ interests:
         url: https://maidragon.jp/
       - name: ひなこのーと
         url: http://hinakonote.jp/
+  - type: ゲーム
+    items:
+      - name: 原神
+        url: https://genshin.hoyoverse.com/
 contacts:
   - service: Twitter
     primary: true
