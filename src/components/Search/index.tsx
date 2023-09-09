@@ -4,7 +4,7 @@ import { useMedia, useSearchParam } from 'react-use'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
-import { Highlight, InstantSearch, PoweredBy, Snippet, useHits, useInstantSearch, useSearchBox } from 'react-instantsearch-hooks-web'
+import { Highlight, InstantSearch, PoweredBy, Snippet, useHits, useInstantSearch, useSearchBox } from 'react-instantsearch'
 import type { BaseHit } from 'instantsearch.js'
 import algoliasearch from 'algoliasearch/lite'
 
