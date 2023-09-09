@@ -73,7 +73,7 @@ components:
     share: 共有
     share_on: '{service} で共有'
     tumblr: Tumblr
-    twitter: Twitter
+    x: X
   SoarerDownload:
     download: 'ダウンロード ({size})'
     history: 更新履歴 ▶

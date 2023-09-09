@@ -45,7 +45,7 @@ interests:
       - name: ひなこのーと
         url: http://hinakonote.jp/
 contacts:
-  - service: Twitter
+  - service: X
     primary: true
     accounts:
     - name: '@java_shit'
