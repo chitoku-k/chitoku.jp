@@ -83,7 +83,7 @@
     "react-twitter-widgets": "^1.11.0",
     "react-use": "^17.4.0",
     "rehype-react": "^7.2.0",
-    "sass": "^1.67.0",
+    "sass": "^1.68.0",
     "sass-loader": "^13.3.2",
     "schema-dts": "^1.1.2",
     "storybook": "^7.4.2",
