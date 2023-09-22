@@ -16504,7 +16504,7 @@ __metadata:
     react-intl: ^6.4.6
     react-refresh: ^0.14.0
     react-schemaorg: ^2.0.0
-    react-turnstile: ^1.1.1
+    react-turnstile: ^1.1.2
     react-twitter-widgets: ^1.11.0
     react-use: ^17.4.0
     rehype-react: ^7.2.0
@@ -22650,13 +22650,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-turnstile@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "react-turnstile@npm:1.1.1"
+"react-turnstile@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "react-turnstile@npm:1.1.2"
   peerDependencies:
     react: ">= 17.0.0"
     react-dom: ">= 17.0.0"
-  checksum: 40eee3320cff056a87d6d1e02ea4a8037a462097d4112125fbaca66b2bf6f7c0c6358cdcc8fc2860a9a9049263f97a5793df0f565a46c1da42663d6a87cff016
+  checksum: c0547197e069ce861e30f28d7b46ce34ad898202f9706aafe635c4714c9e1bbe9463324e314661cdf90cbda7ed56e4e52e227a73a14c91311f76522ee638c052
   languageName: node
   linkType: hard
 
