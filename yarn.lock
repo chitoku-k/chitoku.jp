@@ -16518,7 +16518,7 @@ __metadata:
     stylelint-config-standard-scss: ^11.0.0
     stylelint-scss: ^5.2.1
     tsconfig-paths-webpack-plugin: ^4.1.0
-    turnstile-types: ^1.1.2
+    turnstile-types: ^1.1.3
     typescript: ^5.2.2
     typescript-plugin-css-modules: ^5.0.1
     unified: ^10.1.2
@@ -25911,10 +25911,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"turnstile-types@npm:^1.1.2":
-  version: 1.1.2
-  resolution: "turnstile-types@npm:1.1.2"
-  checksum: cd9ce766369952676bf8b610417ea5d84b158d40e307d9b39c54cbcf91f69b01e46e93897ba2d4c95bf359ef58d8ec4ebd5d5d4bd55785f74b66ba94700c9b1b
+"turnstile-types@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "turnstile-types@npm:1.1.3"
+  checksum: 444f54a02cf614bb8196b48041afc4f5a0eafd0a177958078934d68cb0af43e89429ffb141ecf72d7e6ef261e1110b68083181394f024336b1e4f5ca71bd3ceb
   languageName: node
   linkType: hard
 
