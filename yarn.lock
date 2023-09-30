@@ -8402,10 +8402,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.6.3":
-  version: 20.6.3
-  resolution: "@types/node@npm:20.6.3"
-  checksum: 444a6f1f41cfa8d3e20ce0108e6e43960fb2ae0e481f233bb1c14d6252aa63a92e021de561cd317d9fdb411688f871065f40175a1f18763282dee2613a08f8a3
+"@types/node@npm:^20.7.2":
+  version: 20.7.2
+  resolution: "@types/node@npm:20.7.2"
+  checksum: 5baa09368c8daa50ad1eaa2499b988b2f4c06cacf8b251d1e63f68ad32df97b21d8104f1ac06889481f1d3e84056842732bb848dd1136164d823c1d4a6baf435
   languageName: node
   linkType: hard
 
@@ -16456,7 +16456,7 @@ __metadata:
     "@types/dotenv-safe": ^8.1.2
     "@types/gatsbyjs__reach-router": ^2.0.1
     "@types/hast": ^3.0.1
-    "@types/node": ^20.6.3
+    "@types/node": ^20.7.2
     "@types/prismjs": ^1.26.0
     "@types/react": ^18.2.22
     "@types/react-dom": ^18.2.7
