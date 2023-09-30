@@ -1070,21 +1070,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helper-module-transforms@npm:^7.22.15":
-  version: 7.22.17
-  resolution: "@babel/helper-module-transforms@npm:7.22.17"
-  dependencies:
-    "@babel/helper-environment-visitor": ^7.22.5
-    "@babel/helper-module-imports": ^7.22.15
-    "@babel/helper-simple-access": ^7.22.5
-    "@babel/helper-split-export-declaration": ^7.22.6
-    "@babel/helper-validator-identifier": ^7.22.15
-  peerDependencies:
-    "@babel/core": ^7.0.0
-  checksum: 458021c74093e66179765fcc9d1c1cb694f7bdf98656f23486901d35636495c38aab4661547fac2142e13d887987d1ea30cc9fe42968376a51a99bcd207b4989
-  languageName: node
-  linkType: hard
-
 "@babel/helper-module-transforms@npm:^7.22.5":
   version: 7.22.5
   resolution: "@babel/helper-module-transforms@npm:7.22.5"
@@ -2773,19 +2758,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-modules-commonjs@npm:^7.22.15":
-  version: 7.22.15
-  resolution: "@babel/plugin-transform-modules-commonjs@npm:7.22.15"
-  dependencies:
-    "@babel/helper-module-transforms": ^7.22.15
-    "@babel/helper-plugin-utils": ^7.22.5
-    "@babel/helper-simple-access": ^7.22.5
-  peerDependencies:
-    "@babel/core": ^7.0.0-0
-  checksum: f8fc85fefa6be8626a378ca38fb84c7359043e7c692c854e9ee250a05121553b7f4a58e127099efe12662ec6bebbfd304ce638a0b4563d7cbd5982f3d877321c
-  languageName: node
-  linkType: hard
-
 "@babel/plugin-transform-modules-commonjs@npm:^7.22.5":
   version: 7.22.5
   resolution: "@babel/plugin-transform-modules-commonjs@npm:7.22.5"
@@ -2796,6 +2768,19 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 2067aca8f6454d54ffcce69b02c457cfa61428e11372f6a1d99ff4fcfbb55c396ed2ca6ca886bf06c852e38c1a205b8095921b2364fd0243f3e66bc1dda61caa
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-transform-modules-commonjs@npm:^7.23.0":
+  version: 7.23.0
+  resolution: "@babel/plugin-transform-modules-commonjs@npm:7.23.0"
+  dependencies:
+    "@babel/helper-module-transforms": ^7.23.0
+    "@babel/helper-plugin-utils": ^7.22.5
+    "@babel/helper-simple-access": ^7.22.5
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 7fb25997194053e167c4207c319ff05362392da841bd9f42ddb3caf9c8798a5d203bd926d23ddf5830fdf05eddc82c2810f40d1287e3a4f80b07eff13d1024b5
   languageName: node
   linkType: hard
 
@@ -3782,18 +3767,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:^7.22.15":
-  version: 7.22.15
-  resolution: "@babel/preset-typescript@npm:7.22.15"
+"@babel/preset-typescript@npm:^7.23.0":
+  version: 7.23.0
+  resolution: "@babel/preset-typescript@npm:7.23.0"
   dependencies:
     "@babel/helper-plugin-utils": ^7.22.5
     "@babel/helper-validator-option": ^7.22.15
     "@babel/plugin-syntax-jsx": ^7.22.5
-    "@babel/plugin-transform-modules-commonjs": ^7.22.15
+    "@babel/plugin-transform-modules-commonjs": ^7.23.0
     "@babel/plugin-transform-typescript": ^7.22.15
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 02ac4d5c812a52357c8f517f81584725f06f385d54ccfda89dd082e0ed89a94bd9f4d9b05fa1cbdcf426e3489c1921f04c93c5acc5deea83407a64c22ad2feb4
+  checksum: 3d5fce83e83f11c07e0ea13542bca181abb3b482b8981ec9c64e6add9d7beed3c54d063dc4bc9fd383165c71114a245abef89a289680833c5a8552fe3e7c4407
   languageName: node
   linkType: hard
 
@@ -16448,7 +16433,7 @@ __metadata:
   resolution: "historia@workspace:."
   dependencies:
     "@babel/core": ^7.23.0
-    "@babel/preset-typescript": ^7.22.15
+    "@babel/preset-typescript": ^7.23.0
     "@danbruegge/gatsby-plugin-stylelint": ^4.1.0
     "@fortawesome/fontawesome-svg-core": ^6.4.2
     "@fortawesome/free-brands-svg-icons": ^6.4.2
