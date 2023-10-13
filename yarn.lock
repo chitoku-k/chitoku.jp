@@ -8501,12 +8501,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.2.10":
-  version: 18.2.10
-  resolution: "@types/react-dom@npm:18.2.10"
+"@types/react-dom@npm:^18.2.13":
+  version: 18.2.13
+  resolution: "@types/react-dom@npm:18.2.13"
   dependencies:
     "@types/react": "*"
-  checksum: ced70643d82dd9d165cd6d1a98ec7556daf77d8fdec1ed19badb744a2a2370a84cc109248667536d7f850409e85432c300ec9f8c87d46e066ad295ddf9b6ab03
+  checksum: 22ba066b141dca5a5a9227fae0afc7c94b470fff8e8a38ade72649da57a8ea04d0cb2ba3e22005e7d8e772d49bddd28855b1dd98e6defd033bba6afb6edff883
   languageName: node
   linkType: hard
 
@@ -16475,7 +16475,7 @@ __metadata:
     "@types/node": ^20.8.5
     "@types/prismjs": ^1.26.1
     "@types/react": ^18.2.28
-    "@types/react-dom": ^18.2.10
+    "@types/react-dom": ^18.2.13
     "@types/react-helmet": ^6.1.7
     "@typescript-eslint/eslint-plugin": ^6.7.5
     "@typescript-eslint/parser": ^6.7.5
