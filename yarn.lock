@@ -290,20 +290,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@algolia/ui-components-highlight-vdom@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "@algolia/ui-components-highlight-vdom@npm:1.2.1"
+"@algolia/ui-components-highlight-vdom@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "@algolia/ui-components-highlight-vdom@npm:1.2.2"
   dependencies:
-    "@algolia/ui-components-shared": 1.2.1
+    "@algolia/ui-components-shared": 1.2.2
     "@babel/runtime": ^7.0.0
-  checksum: d06721372406678d7d3dcbc75894ff727994e7f71d9d53a0c7b94705d694826977082b4ae2cd1bd847a271661d2b6921ba9ffed26401289d06b1c609415b7e74
+  checksum: 9b438b9138396b44221381a86ac8e6d68f310fe3617c9879db6473b2931c24a206c466ad9f97e2566283b9f5b834120b0dd951a630e41cfeed45f1639e881836
   languageName: node
   linkType: hard
 
-"@algolia/ui-components-shared@npm:1.2.1, @algolia/ui-components-shared@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "@algolia/ui-components-shared@npm:1.2.1"
-  checksum: e0e7c06fbfc855c24283446a903adff3e4523c9a1652cfb187f3d701278d246f9ef23b7d80c0ec9e933f9a835d0a2227906f6e92b4fca5e315e89abcf8049b2f
+"@algolia/ui-components-shared@npm:1.2.2, @algolia/ui-components-shared@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "@algolia/ui-components-shared@npm:1.2.2"
+  checksum: ee9bd8eaa4c6fbe7664ac4d053be1cb74ee1bd88fa447e5af2c87a0d83bf8a2bf25cdb68dc137e013b065e85ddebe23f1f18e8dbdda555f8babfa00105b55bb9
   languageName: node
   linkType: hard
 
@@ -16524,7 +16524,7 @@ __metadata:
     react-bootstrap: ^2.9.0
     react-dom: ^18.2.0
     react-helmet: ^6.1.0
-    react-instantsearch: ^7.1.0
+    react-instantsearch: ^7.2.0
     react-intl: ^6.4.7
     react-refresh: ^0.14.0
     react-schemaorg: ^2.0.0
@@ -17076,13 +17076,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"instantsearch.js@npm:4.57.0":
-  version: 4.57.0
-  resolution: "instantsearch.js@npm:4.57.0"
+"instantsearch.js@npm:4.58.0":
+  version: 4.58.0
+  resolution: "instantsearch.js@npm:4.58.0"
   dependencies:
     "@algolia/events": ^4.0.1
-    "@algolia/ui-components-highlight-vdom": ^1.2.1
-    "@algolia/ui-components-shared": ^1.2.1
+    "@algolia/ui-components-highlight-vdom": ^1.2.2
+    "@algolia/ui-components-shared": ^1.2.2
     "@types/dom-speech-recognition": ^0.0.1
     "@types/google.maps": ^3.45.3
     "@types/hogan.js": ^3.0.0
@@ -17095,7 +17095,7 @@ __metadata:
     search-insights: ^2.6.0
   peerDependencies:
     algoliasearch: ">= 3.1 < 6"
-  checksum: 70ebe78f55e4ac6eb94ae2923e77b24bd551cb4aea0ff33ff3feefb754f30d33783b8e29fbfc2c541d0a52dfba7725e616d193a487e0c9c9d1f0cb46429ee5ca
+  checksum: db51e19a565d7ef0000a116d69a039aa04a9730565f8d3b2c05234ca9345ef83f7bb0a77781dd21f018ba67aaafe7ac3ea677caf7b963643fc3ea5f955657059
   languageName: node
   linkType: hard
 
@@ -22484,33 +22484,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-instantsearch-core@npm:7.1.0":
-  version: 7.1.0
-  resolution: "react-instantsearch-core@npm:7.1.0"
+"react-instantsearch-core@npm:7.2.0":
+  version: 7.2.0
+  resolution: "react-instantsearch-core@npm:7.2.0"
   dependencies:
     "@babel/runtime": ^7.1.2
     algoliasearch-helper: 3.14.2
-    instantsearch.js: 4.57.0
+    instantsearch.js: 4.58.0
     use-sync-external-store: ^1.0.0
   peerDependencies:
     algoliasearch: ">= 3.1 < 5"
     react: ">= 16.8.0 < 19"
-  checksum: 03956de83f651981b232695e31ffc0d2d0ba443ba6b43d6ef59ecb1291c3bedf3f77c910668a6e57b44102d040d27fe01283bbbb59ce8a0e7c42ee66ae43676f
+  checksum: 60c5d0f4efc6eab427f2be868698a27163a7b6998dfa43e60abb1065933366de12141ca34d14d471ebfbb1bdaf6df9f7e0f2ce98e929102a13bf965bc60c89f5
   languageName: node
   linkType: hard
 
-"react-instantsearch@npm:^7.1.0":
-  version: 7.1.0
-  resolution: "react-instantsearch@npm:7.1.0"
+"react-instantsearch@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "react-instantsearch@npm:7.2.0"
   dependencies:
     "@babel/runtime": ^7.1.2
-    instantsearch.js: 4.57.0
-    react-instantsearch-core: 7.1.0
+    instantsearch.js: 4.58.0
+    react-instantsearch-core: 7.2.0
   peerDependencies:
     algoliasearch: ">= 3.1 < 5"
     react: ">= 16.8.0 < 19"
     react-dom: ">= 16.8.0 < 19"
-  checksum: 08dd5fe4650ba1bad8a08c7a043c5e549cb0ca985ac5820e3e7da5131cc2c8179979bcb104a496d7b608da642bd41ae9125e4ae6c734f6dbd08211826c3eee18
+  checksum: ed6f2358c1c305b40ff6f81df9a9ef185cfef050c79d669c6ca419ec15c9f3b1b9cfe82e91bb34d9dbf267cdfad7bd7ac523f9c8e7ff7f3494ac9028c6239415
   languageName: node
   linkType: hard
 
