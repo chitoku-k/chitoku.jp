@@ -2,7 +2,7 @@
   "name": "historia-taxonomy-plugin",
   "version": "1.0.0",
   "dependencies": {
-    "@types/html-to-text": "^9.0.2",
+    "@types/html-to-text": "^9.0.3",
     "html-to-text": "^9.0.5"
   }
 }
