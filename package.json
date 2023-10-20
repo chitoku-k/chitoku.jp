@@ -22,7 +22,7 @@
     "@svgr/webpack": "^8.1.0",
     "@types/dotenv-safe": "^8.1.4",
     "@types/gatsbyjs__reach-router": "^2.0.1",
-    "@types/hast": "^3.0.1",
+    "@types/hast": "^3.0.2",
     "@types/node": "^20.8.7",
     "@types/prismjs": "^1.26.1",
     "@types/react": "^18.2.28",
