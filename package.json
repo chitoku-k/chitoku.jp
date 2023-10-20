@@ -88,7 +88,7 @@
     "schema-dts": "^1.1.2",
     "storybook": "^7.4.6",
     "style-loader": "^3.3.3",
-    "stylelint": "^15.10.3",
+    "stylelint": "^15.11.0",
     "stylelint-config-recess-order": "^4.3.0",
     "stylelint-config-standard-scss": "^11.0.0",
     "stylelint-scss": "^5.2.1",
