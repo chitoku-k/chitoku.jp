@@ -47,7 +47,7 @@
     "gatsby": "^5.12.9",
     "gatsby-plugin-algolia": "^1.0.3",
     "gatsby-plugin-eslint": "^4.0.4",
-    "gatsby-plugin-google-gtag": "^5.12.2",
+    "gatsby-plugin-google-gtag": "^5.12.3",
     "gatsby-plugin-minify-html": "^1.0.4",
     "gatsby-plugin-no-sourcemaps": "^5.12.0",
     "gatsby-plugin-react-helmet": "^6.12.0",
