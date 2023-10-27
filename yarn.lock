@@ -10227,6 +10227,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-preset-gatsby@npm:^3.12.1":
+  version: 3.12.1
+  resolution: "babel-preset-gatsby@npm:3.12.1"
+  dependencies:
+    "@babel/plugin-proposal-class-properties": ^7.18.6
+    "@babel/plugin-proposal-nullish-coalescing-operator": ^7.18.6
+    "@babel/plugin-proposal-optional-chaining": ^7.20.7
+    "@babel/plugin-syntax-dynamic-import": ^7.8.3
+    "@babel/plugin-transform-classes": ^7.20.7
+    "@babel/plugin-transform-runtime": ^7.19.6
+    "@babel/plugin-transform-spread": ^7.20.7
+    "@babel/preset-env": ^7.20.2
+    "@babel/preset-react": ^7.18.6
+    "@babel/runtime": ^7.20.13
+    babel-plugin-dynamic-import-node: ^2.3.3
+    babel-plugin-macros: ^3.1.0
+    babel-plugin-transform-react-remove-prop-types: ^0.4.24
+    gatsby-core-utils: ^4.12.1
+    gatsby-legacy-polyfills: ^3.12.0
+  peerDependencies:
+    "@babel/core": ^7.11.6
+    core-js: ^3.0.0
+  checksum: 66b6368122bcc18e946bb62ce95d750dfabb89de5815f078e7cae43d0a17804e1d317e6e4ebf1ccc5f07af4e4b066a593878c1d149e941f4fc781a6d79bc9433
+  languageName: node
+  linkType: hard
+
 "bail@npm:^1.0.0":
   version: 1.0.5
   resolution: "bail@npm:1.0.5"
@@ -14816,6 +14842,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-core-utils@npm:^4.12.1":
+  version: 4.12.1
+  resolution: "gatsby-core-utils@npm:4.12.1"
+  dependencies:
+    "@babel/runtime": ^7.20.13
+    ci-info: 2.0.0
+    configstore: ^5.0.1
+    fastq: ^1.15.0
+    file-type: ^16.5.4
+    fs-extra: ^11.1.1
+    got: ^11.8.6
+    hash-wasm: ^4.9.0
+    import-from: ^4.0.0
+    lmdb: 2.5.3
+    lock: ^1.1.0
+    node-object-hash: ^2.3.10
+    proper-lockfile: ^4.1.2
+    resolve-from: ^5.0.0
+    tmp: ^0.2.1
+    xdg-basedir: ^4.0.0
+  checksum: 97caf27b9ab0f5fe249b45c7c039474b220a2cc2a004cf21883b311be35d1600f4c633e443af99ac2becd2efe75c91b7e38c2595f7147cf696971e9bcb20ce14
+  languageName: node
+  linkType: hard
+
 "gatsby-core-utils@npm:^4.3.1, gatsby-core-utils@npm:^4.9.0":
   version: 4.9.0
   resolution: "gatsby-core-utils@npm:4.9.0"
@@ -16410,7 +16460,7 @@ __metadata:
     algoliasearch: ^4.20.0
     babel-loader: ^9.1.3
     babel-plugin-react-intl-auto: ^3.3.0
-    babel-preset-gatsby: ^3.12.0
+    babel-preset-gatsby: ^3.12.1
     bootstrap: ^5.3.2
     clsx: ^2.0.0
     css-loader: ^6.8.1
