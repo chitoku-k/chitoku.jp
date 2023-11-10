@@ -8087,10 +8087,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/html-to-text@npm:^9.0.3":
-  version: 9.0.3
-  resolution: "@types/html-to-text@npm:9.0.3"
-  checksum: 24f9bdce50957a03e8f304c318aac201485c31b4a676b1ec1c20fbcbf55856605781d59423d555356f8ff0330247982d44a7be317fd3759f07fb1ce9cb29e15d
+"@types/html-to-text@npm:^9.0.4":
+  version: 9.0.4
+  resolution: "@types/html-to-text@npm:9.0.4"
+  checksum: dd06963e7e11cf49cfab65fdadef62db43e098963999f307cfb77c6917cc26bc2634034203f5c1268eac47af6671d50af0ce341fd085726dfec0f6228a9cd016
   languageName: node
   linkType: hard
 
@@ -16356,7 +16356,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "historia-feed-plugin@workspace:plugins/historia-feed-plugin"
   dependencies:
-    "@types/html-to-text": "npm:^9.0.3"
+    "@types/html-to-text": "npm:^9.0.4"
     feed: "npm:^4.2.2"
     html-to-text: "npm:^9.0.5"
   languageName: unknown
@@ -16381,7 +16381,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "historia-taxonomy-plugin@workspace:plugins/historia-taxonomy-plugin"
   dependencies:
-    "@types/html-to-text": "npm:^9.0.3"
+    "@types/html-to-text": "npm:^9.0.4"
     html-to-text: "npm:^9.0.5"
   languageName: unknown
   linkType: soft
