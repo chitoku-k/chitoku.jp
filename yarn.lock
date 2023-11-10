@@ -8450,10 +8450,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prismjs@npm:^1.26.2":
-  version: 1.26.2
-  resolution: "@types/prismjs@npm:1.26.2"
-  checksum: d86561508d423eaf1dc2dda1e7f465888731a6af40577eac1a8a52aaac330dee121c702f23868e0a96fca9c907f960286e2f3431e3f16cd13612276745e9235c
+"@types/prismjs@npm:^1.26.3":
+  version: 1.26.3
+  resolution: "@types/prismjs@npm:1.26.3"
+  checksum: 4bd55230ffc0b2b16f4008be3a7f1d7c6b32dd3bed8006e64d24fb22c44fc7e300dac77b856f732803ccdc9a3472b2c0ee7776cad048843c47d608c41a89b6a6
   languageName: node
   linkType: hard
 
@@ -16508,7 +16508,7 @@ __metadata:
     "@types/gatsbyjs__reach-router": "npm:^2.0.3"
     "@types/hast": "npm:^3.0.3"
     "@types/node": "npm:^20.9.0"
-    "@types/prismjs": "npm:^1.26.2"
+    "@types/prismjs": "npm:^1.26.3"
     "@types/react": "npm:^18.2.37"
     "@types/react-dom": "npm:^18.2.15"
     "@types/react-helmet": "npm:^6.1.8"
