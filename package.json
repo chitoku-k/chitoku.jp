@@ -20,7 +20,7 @@
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react-webpack5": "^7.5.3",
     "@svgr/webpack": "^8.1.0",
-    "@types/dotenv-safe": "^8.1.4",
+    "@types/dotenv-safe": "^8.1.5",
     "@types/gatsbyjs__reach-router": "^2.0.2",
     "@types/hast": "^3.0.3",
     "@types/node": "^20.8.10",
