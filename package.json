@@ -76,7 +76,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-instantsearch": "^7.3.0",
-    "react-intl": "^6.5.2",
+    "react-intl": "^6.5.5",
     "react-refresh": "^0.14.0",
     "react-schemaorg": "^2.0.0",
     "react-turnstile": "^1.1.2",
