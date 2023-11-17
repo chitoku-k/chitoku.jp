@@ -52,7 +52,7 @@ jobs:
             CI
             GATSBY_UPDATE_INDEX=true
       - name: Set up ID token
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         id: id-token
         with:
           result-encoding: string
@@ -76,7 +76,7 @@ jobs:
       - name: Set up kubectl
         uses: azure/setup-kubectl@v3
       - name: Set up ID token
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         id: id-token
         with:
           result-encoding: string
