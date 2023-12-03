@@ -1,11 +1,11 @@
 ---
-title: GoMock の Matcher を自作して gomock.Any() 回避！
+title: gomock の Matcher を自作して gomock.Any() 回避！
 created: 2020-05-24T22:25:50+09:00
 category: プログラミング
 tags:
   - Go
 ---
-Go でテストを記述する際、モックの生成にはしばしば [GoMock](https://pkg.go.dev/github.com/golang/mock/gomock) が使われますが、引数の検証に使う [Matcher](https://pkg.go.dev/github.com/golang/mock/gomock#Matcher) は標準では限られたもののみが用意されています。
+Go でテストを記述する際、モックの生成にはしばしば [gomock](https://pkg.go.dev/go.uber.org/mock) が使われますが、引数の検証に使う [Matcher](https://pkg.go.dev/go.uber.org/mock/gomock#Matcher) は標準では限られたもののみが用意されています。
 
 たとえば、以下のテストの 12 行目では `go¦gomock.Eq(...)` を使って `go¦api.Client` に対して `go¦Get("/v1/info")` という呼び出しが 1 回されることを期待しています。
 
@@ -29,7 +29,7 @@ type Client interface {
 import (
 	"testing"
 
-	"github.com/golang/mock/gomock"
+	"go.uber.org/mock/gomock"
 )
 
 func TestServiceGet(t *testing.T) {
@@ -53,7 +53,7 @@ func TestServiceGet(t *testing.T) {
 import (
 	"testing"
 
-	"github.com/golang/mock/gomock"
+	"go.uber.org/mock/gomock"
 )
 
 func TestServicePost(t *testing.T) {
@@ -105,15 +105,15 @@ func (s *service) DoFancyStuff() {
 
 ## 環境
 
-+--------+--------+
-| Go     | 1.16.6 |
-+--------+--------+
-| GoMock | 1.6.0  |
-+--------+--------+
++------------------+--------+
+| Go               | 1.21.4 |
++------------------+--------+
+| go.uber.org/mock | 0.3.0  |
++------------------+--------+
 
 ## 設計
 
-GoMock には別の Matcher を入れ子に持つ `go¦Not`[^2] のような Matcher がすでにあるため、汎化するために `go¦io.Reader` を検証する Reader の Matcher と、`go¦url.Values` を検証する Query の Matcher の 2 つに分けて、以下のように呼び出せるようにしておきます。
+gomock には別の Matcher を入れ子に持つ `go¦Not`[^2] のような Matcher がすでにあるため、汎化するために `go¦io.Reader` を検証する Reader の Matcher と、`go¦url.Values` を検証する Query の Matcher の 2 つに分けて、以下のように呼び出せるようにしておきます。
 
 ```go
 mock.EXPECT().Post(
@@ -183,7 +183,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/golang/mock/gomock"
+	"go.uber.org/mock/gomock"
 )
 
 type readerMatcher struct {
@@ -229,7 +229,7 @@ import (
 	"fmt"
 	"net/url"
 
-	"github.com/golang/mock/gomock"
+	"go.uber.org/mock/gomock"
 )
 
 type queryMatcher struct {
@@ -297,6 +297,6 @@ FAIL
 ## 脚注
 
 [^1]: 本来は単に実装側で [Client.PostForm(string, url.Values)](https://pkg.go.dev/net/http#Client.PostForm) を使えば済みます
-[^2]: [func Not(interface{}) Matcher](https://pkg.go.dev/github.com/golang/mock/gomock#Not)
-[^3]: [GotFormatter](https://pkg.go.dev/github.com/golang/mock/gomock#GotFormatter)
-[^4]: [func GotFormatterAdapter(GotFormatter, Matcher) Matcher](https://pkg.go.dev/github.com/golang/mock/gomock#GotFormatterAdapter)
+[^2]: [func Not(interface{}) Matcher](https://pkg.go.dev/go.uber.org/mock/gomock#Not)
+[^3]: [GotFormatter](https://pkg.go.dev/go.uber.org/mock/gomock#GotFormatter)
+[^4]: [func GotFormatterAdapter(GotFormatter, Matcher) Matcher](https://pkg.go.dev/go.uber.org/mock/gomock#GotFormatterAdapter)
