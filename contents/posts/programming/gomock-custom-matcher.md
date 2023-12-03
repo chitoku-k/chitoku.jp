@@ -162,14 +162,14 @@ func Query(m gomock.Matcher) gomock.Matcher {
 
 ```go
 type Matcher interface {
-	Matches(x interface{}) bool
+	Matches(x any) bool
 	String() string
 }
 ```
 
 ```go
 type GotFormatter interface {
-	Got(got interface{}) string
+	Got(got any) string
 }
 ```
 
@@ -196,7 +196,7 @@ func Reader(m gomock.Matcher) gomock.Matcher {
 	return gomock.GotFormatterAdapter(r, r)
 }
 
-func (r *readerMatcher) Matches(x interface{}) bool {
+func (r *readerMatcher) Matches(x any) bool {
 	var err error
 	r.data, err = io.ReadAll(x.(io.Reader))
 	if err != nil {
@@ -209,7 +209,7 @@ func (r *readerMatcher) String() string {
 	return fmt.Sprintf("data(%s)", r.m.String())
 }
 
-func (r *readerMatcher) Got(got interface{}) string {
+func (r *readerMatcher) Got(got any) string {
 	f, ok := r.m.(gomock.GotFormatter)
 	if ok {
 		// highlight-next-line
@@ -247,7 +247,7 @@ func Query(m gomock.Matcher) gomock.Matcher {
 	)
 }
 
-func (q *queryMatcher) Matches(x interface{}) bool {
+func (q *queryMatcher) Matches(x any) bool {
 	values, err := url.ParseQuery(string(x.([]byte)))
 	if err != nil {
 		return false
@@ -259,7 +259,7 @@ func (q *queryMatcher) String() string {
 	return fmt.Sprintf("url.Values(%s)", q.m.String())
 }
 
-func (q *queryGotFormatter) Got(got interface{}) string {
+func (q *queryGotFormatter) Got(got any) string {
 	values, _ := url.ParseQuery(string(got.([]byte)))
 	f, ok := q.m.(gomock.GotFormatter)
 	if ok {
@@ -297,6 +297,6 @@ FAIL
 ## 脚注
 
 [^1]: 本来は単に実装側で [Client.PostForm(string, url.Values)](https://pkg.go.dev/net/http#Client.PostForm) を使えば済みます
-[^2]: [func Not(interface{}) Matcher](https://pkg.go.dev/go.uber.org/mock/gomock#Not)
+[^2]: [func Not(any) Matcher](https://pkg.go.dev/go.uber.org/mock/gomock#Not)
 [^3]: [GotFormatter](https://pkg.go.dev/go.uber.org/mock/gomock#GotFormatter)
 [^4]: [func GotFormatterAdapter(GotFormatter, Matcher) Matcher](https://pkg.go.dev/go.uber.org/mock/gomock#GotFormatterAdapter)
