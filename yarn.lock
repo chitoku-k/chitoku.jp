@@ -16450,7 +16450,7 @@ __metadata:
     react-schemaorg: "npm:^2.0.0"
     react-turnstile: "npm:^1.1.2"
     react-twitter-widgets: "npm:^1.11.0"
-    react-use: "npm:^17.4.1"
+    react-use: "npm:^17.4.2"
     rehype-react: "npm:^7.2.0"
     sass: "npm:^1.69.5"
     sass-loader: "npm:^13.3.2"
@@ -22594,9 +22594,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-use@npm:^17.4.1":
-  version: 17.4.1
-  resolution: "react-use@npm:17.4.1"
+"react-use@npm:^17.4.2":
+  version: 17.4.2
+  resolution: "react-use@npm:17.4.2"
   dependencies:
     "@types/js-cookie": "npm:^2.2.6"
     "@xobotyi/scrollbar-width": "npm:^1.9.5"
@@ -22613,9 +22613,9 @@ __metadata:
     ts-easing: "npm:^0.2.0"
     tslib: "npm:^2.1.0"
   peerDependencies:
-    react: ^16.8.0  || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0  || ^17.0.0 || ^18.0.0
-  checksum: 777481ad3a462eb224fac40a41073b2de4bac3dfce0677ba270158eec6867b248a4bd7fad80e90966acde70826a0b10b9129875aa7b022e98b44b4b375042636
+    react: "*"
+    react-dom: "*"
+  checksum: 56d2da474d949d22eb34ff3ffccf5526986d51ed68a8f4e64f4b79bdcff3f0ea55d322c104e3fc0819b08b8765e8eb3fa47d8b506e9d61ff1fdc7bd1374c17d6
   languageName: node
   linkType: hard
 
