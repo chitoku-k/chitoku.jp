@@ -81,7 +81,7 @@
     "react-schemaorg": "^2.0.0",
     "react-turnstile": "^1.1.2",
     "react-twitter-widgets": "^1.11.0",
-    "react-use": "^17.4.1",
+    "react-use": "^17.4.2",
     "rehype-react": "^7.2.0",
     "sass": "^1.69.5",
     "sass-loader": "^13.3.2",
