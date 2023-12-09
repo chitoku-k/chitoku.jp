@@ -44,7 +44,7 @@
     "eslint-plugin-storybook": "^0.6.15",
     "eslint-webpack-plugin": "^4.0.1",
     "extract-react-intl-messages": "^4.1.1",
-    "gatsby": "^5.12.11",
+    "gatsby": "^5.12.12",
     "gatsby-plugin-algolia": "^1.0.3",
     "gatsby-plugin-eslint": "^4.0.4",
     "gatsby-plugin-google-gtag": "^5.12.3",
