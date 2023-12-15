@@ -7688,15 +7688,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@twemoji/api@npm:^15.0.2":
-  version: 15.0.2
-  resolution: "@twemoji/api@npm:15.0.2"
+"@twemoji/api@npm:^15.0.3":
+  version: 15.0.3
+  resolution: "@twemoji/api@npm:15.0.3"
   dependencies:
     "@twemoji/parser": "npm:15.0.0"
     fs-extra: "npm:^8.0.1"
     jsonfile: "npm:^5.0.0"
     universalify: "npm:^0.1.2"
-  checksum: 198922e1f699e4f275a47c1e2b62bca842cbb9725559ee3afbe53b18a3ecca625480c7567f1aacee3a48166dbdce2bd14f6f6468b88c0bcdb93007347ddaa3cb
+  checksum: c7ce3a84b440def0092f9b34da108a77d24f8dbd26297a9b2fb68ee3f0dfc54667f954f33f7130797dfe261c7babc3fca042bdec4c1d0365055a0895dd79313d
   languageName: node
   linkType: hard
 
@@ -16371,7 +16371,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "historia-remark-plugin@workspace:plugins/historia-remark-plugin"
   dependencies:
-    "@twemoji/api": "npm:^15.0.2"
+    "@twemoji/api": "npm:^15.0.3"
     unist-util-visit: "npm:^5.0.0"
   languageName: unknown
   linkType: soft
