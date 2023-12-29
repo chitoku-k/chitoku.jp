@@ -84,7 +84,7 @@
     "react-use": "^17.4.2",
     "rehype-react": "^7.2.0",
     "sass": "^1.69.6",
-    "sass-loader": "^13.3.2",
+    "sass-loader": "^13.3.3",
     "schema-dts": "^1.1.2",
     "storybook": "^7.6.6",
     "style-loader": "^3.3.3",
