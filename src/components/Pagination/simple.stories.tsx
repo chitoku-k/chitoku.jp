@@ -1,7 +1,7 @@
 import React from 'react'
 import { IntlProvider } from 'react-intl'
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
-import type { Meta, Story } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 
 import messages from 'translations/ja.yml'
 import type { SimplePaginationProps } from 'components/Pagination'
@@ -19,7 +19,7 @@ const meta: Meta = {
 
 const history = createHistory(createMemorySource('/'))
 
-const Template: Story<SimplePaginationProps> = props => (
+const Template: StoryFn<SimplePaginationProps> = props => (
   <IntlProvider locale="ja" messages={messages}>
     <LocationProvider history={history}>
       <SimplePagination {...props} />

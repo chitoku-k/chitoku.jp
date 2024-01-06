@@ -1,6 +1,6 @@
 import React from 'react'
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
-import type { Meta, Story } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 
 import type { CategoryIconProps } from 'components/CategoryIcon'
 import CategoryIcon from 'components/CategoryIcon'
@@ -24,7 +24,7 @@ const meta: Meta = {
 
 const history = createHistory(createMemorySource('/'))
 
-const Template: Story<CategoryIconProps> = props => (
+const Template: StoryFn<CategoryIconProps> = props => (
   <LocationProvider history={history}>
     <CategoryIcon {...props} />
   </LocationProvider>
