@@ -1,5 +1,5 @@
 import React from 'react'
-import type { Meta, Story } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 
 import type { ArticleHeaderProps } from 'components/ArticleHeader'
 import ArticleHeader from 'components/ArticleHeader'
@@ -14,7 +14,7 @@ const meta: Meta = {
   },
 }
 
-const Template: Story<ArticleHeaderProps> = props => (
+const Template: StoryFn<ArticleHeaderProps> = props => (
   <ArticleHeader {...props} />
 )
 

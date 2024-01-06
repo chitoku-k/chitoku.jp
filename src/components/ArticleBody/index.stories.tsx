@@ -1,6 +1,6 @@
 import React from 'react'
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
-import type { Meta, Story } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 
 import type { ArticleBodyProps } from 'components/ArticleBody'
 import ArticleBody, { register } from 'components/ArticleBody'
@@ -20,7 +20,7 @@ const meta: Meta = {
 
 const history = createHistory(createMemorySource('/'))
 
-const Template: Story<ArticleBodyProps> = props => (
+const Template: StoryFn<ArticleBodyProps> = props => (
   <LocationProvider history={history}>
     <ArticleBody {...props} />
   </LocationProvider>

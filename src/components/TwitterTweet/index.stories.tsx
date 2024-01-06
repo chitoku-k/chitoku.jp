@@ -1,6 +1,6 @@
 import React from 'react'
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
-import type { Meta, Story } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 
 import type { TwitterTweetProps } from 'components/TwitterTweet'
 import TwitterTweet from 'components/TwitterTweet'
@@ -17,7 +17,7 @@ const meta: Meta = {
 
 const history = createHistory(createMemorySource('/'))
 
-const Template: Story<TwitterTweetProps> = props => (
+const Template: StoryFn<TwitterTweetProps> = props => (
   <LocationProvider history={history}>
     <TwitterTweet {...props} />
   </LocationProvider>
