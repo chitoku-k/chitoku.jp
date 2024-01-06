@@ -41,7 +41,6 @@
     "**/*.ts",
     "**/*.tsx",
     "typings/**/*.d.ts",
-    "node_modules/babel-plugin-react-intl-auto/**/*.d.ts",
-    "node_modules/turnstile-types/**/*.d.ts"
+    "node_modules/babel-plugin-react-intl-auto/**/*.d.ts"
   ]
 }
