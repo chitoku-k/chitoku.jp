@@ -3,6 +3,7 @@ import type { PageProps } from 'gatsby'
 import { graphql } from 'gatsby'
 
 import NotFound from 'components/NotFound'
+export { Head } from 'components/NotFound'
 
 export const pageQuery = graphql`
   query NotFoundItem {

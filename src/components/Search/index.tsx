@@ -121,22 +121,33 @@ const Search: FunctionComponent<SearchProps> = ({
     : formatMessage(messages.title)
 
   return (
-    <Metadata title={title}>
-      <ArticleContainer>
-        <ArticleHeader className={styles.resultHeader} title={
-          <>
-            {title}
-            <PoweredBy classNames={{ logo: styles.logo }} theme={theme} />
-          </>
-        } />
-        <InstantSearch indexName={indexName} searchClient={searchClient}>
-          <Refine query={query} />
-          {query
-            ? <Hits url={url} />
-            : formatMessage(messages.how_to_search)}
-        </InstantSearch>
-      </ArticleContainer>
-    </Metadata>
+    <ArticleContainer>
+      <ArticleHeader className={styles.resultHeader} title={
+        <>
+          {title}
+          <PoweredBy classNames={{ logo: styles.logo }} theme={theme} />
+        </>
+      } />
+      <InstantSearch indexName={indexName} searchClient={searchClient}>
+        <Refine query={query} />
+        {query
+          ? <Hits url={url} />
+          : formatMessage(messages.how_to_search)}
+      </InstantSearch>
+    </ArticleContainer>
+  )
+}
+
+export const Head: FunctionComponent = () => {
+  const { formatMessage } = useIntl()
+  const { query } = useSearch()
+
+  const title = query
+    ? formatMessage(messages.title_text, { text: query })
+    : formatMessage(messages.title)
+
+  return (
+    <Metadata title={title} />
   )
 }
 

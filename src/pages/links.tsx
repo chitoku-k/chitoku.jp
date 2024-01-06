@@ -3,6 +3,7 @@ import type { PageProps } from 'gatsby'
 import { graphql } from 'gatsby'
 
 import Links from 'components/Links'
+export { Head } from 'components/Links'
 
 export const pageQuery = graphql`
   query LinksItem {

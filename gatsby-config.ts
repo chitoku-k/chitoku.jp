@@ -54,7 +54,6 @@ const config: GatsbyConfig = {
     },
     { resolve: 'gatsby-plugin-minify-html' },
     { resolve: 'gatsby-plugin-no-sourcemaps' },
-    { resolve: 'gatsby-plugin-react-helmet' },
     {
       resolve: 'gatsby-plugin-sass',
       options: {

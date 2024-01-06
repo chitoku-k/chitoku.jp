@@ -1,5 +1,4 @@
-import type { FunctionComponent, ReactNode } from 'react'
-import { Helmet } from 'react-helmet'
+import type { FunctionComponent } from 'react'
 import { useIntl } from 'react-intl'
 import { JsonLd } from 'react-schemaorg'
 import { graphql, useStaticQuery } from 'gatsby'
@@ -38,12 +37,9 @@ const query = graphql`
   }
 `
 
-const Metadata: FunctionComponent<MetadataProps> = ({
-  children,
-  ...metadata
-}) => {
+const Metadata: FunctionComponent<MetadataProps> = ({ ...metadata }) => {
   const location = useLocation()
-  const { formatMessage } = useIntl()
+  const { formatMessage, locale } = useIntl()
   const { about, site } = useStaticQuery<MetadataQueryResult>(query)
 
   if (!about || !site) {
@@ -63,38 +59,37 @@ const Metadata: FunctionComponent<MetadataProps> = ({
 
   return (
     <>
-      <Helmet defer={false}>
-        <meta property="og:type" content={metadata.type} />
-        <meta property="og:url" content={siteUrl + location.pathname} />
-        <meta name="twitter:card" content="summary" />
-        <title>{title}</title>
-        {[ 'og:title', 'twitter:title' ].map(property => (
-          <meta key={property} property={property} content={title} />
+      <html lang={locale} />
+      <meta property="og:type" content={metadata.type} />
+      <meta property="og:url" content={siteUrl + location.pathname} />
+      <meta name="twitter:card" content="summary" />
+      <title>{title}</title>
+      {[ 'og:title', 'twitter:title' ].map(property => (
+        <meta key={property} property={property} content={title} />
+      ))}
+      {[ 'og:image', 'twitter:image' ].map(property => (
+        <meta key={property} property={property} content={thumbnailPath(siteUrl, metadata.thumbnail)} />
+      ))}
+      {metadata.description ? [ 'og:description', 'description' ].map(property => (
+        <meta key={property} property={property} content={metadata.description} />
+      )) : null}
+      {metadata.keywords?.length ? (
+        <meta name="keywords" content={metadata.keywords.join()} />
+      ) : null}
+      {contacts
+        .filter(contact => contact.primary)
+        .flatMap(contact => contact.accounts)
+        .map(({ url }) => (
+          <link key={url} rel="me" href={url} />
         ))}
-        {[ 'og:image', 'twitter:image' ].map(property => (
-          <meta key={property} property={property} content={thumbnailPath(siteUrl, metadata.thumbnail)} />
-        ))}
-        {metadata.description ? [ 'og:description', 'description' ].map(property => (
-          <meta key={property} property={property} content={metadata.description} />
-        )) : null}
-        {metadata.keywords?.length ? (
-          <meta name="keywords" content={metadata.keywords.join()} />
-        ) : null}
-        {contacts
-          .filter(contact => contact.primary)
-          .flatMap(contact => contact.accounts)
-          .map(({ url }) => (
-            <link key={url} rel="me" href={url} />
-          ))}
-        <link rel="alternate" type="application/rss+xml" href={`${siteUrl}/feed/rss2/`} />
-        <link rel="alternate" type="application/atom+xml" href={`${siteUrl}/feed/atom/`} />
-        {metadata.prev ? (
-          <link rel="prev" href={metadata.prev} />
-        ) : null}
-        {metadata.next ? (
-          <link rel="next" href={metadata.next} />
-        ) : null}
-      </Helmet>
+      <link rel="alternate" type="application/rss+xml" href={`${siteUrl}/feed/rss2/`} />
+      <link rel="alternate" type="application/atom+xml" href={`${siteUrl}/feed/atom/`} />
+      {metadata.prev ? (
+        <link rel="prev" href={metadata.prev} />
+      ) : null}
+      {metadata.next ? (
+        <link rel="next" href={metadata.next} />
+      ) : null}
       {metadata.breadcrumb ? (
         <JsonLd<BreadcrumbList> item={{
           '@context': 'https://schema.org',
@@ -117,7 +112,6 @@ const Metadata: FunctionComponent<MetadataProps> = ({
           thumbnailUrl: thumbnailPath(siteUrl, metadata.thumbnail),
         }} />
       ) : null}
-      {children}
     </>
   )
 }
@@ -135,7 +129,6 @@ interface MetadataItem {
 }
 
 interface MetadataProps extends MetadataItem {
-  children?: ReactNode
   prev?: string | null
   next?: string | null
 }

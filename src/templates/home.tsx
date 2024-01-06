@@ -62,16 +62,22 @@ const IndexPage: FunctionComponent<HomePageProps> = ({
   pageContext: {
     page,
   },
+}) => (
+  <Home {...data}>
+    <HomePagination page={page} />
+  </Home>
+)
+
+export const Head: FunctionComponent<HomePageProps> = ({
+  pageContext: {
+    page,
+  },
 }) => {
   const prev = hasPreviousPage(page) ? getPreviousPagePath(page) : null
   const next = hasNextPage(page) ? getNextPagePath(page) : null
 
   return (
-    <Metadata title={null} prev={prev} next={next}>
-      <Home {...data}>
-        <HomePagination page={page} />
-      </Home>
-    </Metadata>
+    <Metadata title={null} prev={prev} next={next} />
   )
 }
 

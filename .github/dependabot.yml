@@ -24,7 +24,6 @@ updates:
       - gatsby
       - gatsby-plugin-google-etag
       - gatsby-plugin-no-sourcemaps
-      - gatsby-plugin-react-helmet
       - gatsby-plugin-sass
       - gatsby-remark-autolink-headers
       - gatsby-remark-copy-linked-files
