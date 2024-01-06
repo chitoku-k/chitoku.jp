@@ -2,7 +2,7 @@ import type { FormEvent, FunctionComponent, ReactNode } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import { Alert, Button, Card, Form } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
-import Turnstile from 'react-turnstile'
+import Turnstile, { useTurnstile } from 'react-turnstile'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faCircleNotch, faTimes } from '@fortawesome/free-solid-svg-icons'
 
@@ -51,6 +51,7 @@ const send = async (form: FormData): Promise<void> => {
 
 const Mail: FunctionComponent = () => {
   const { formatMessage } = useIntl()
+  const turnstile = useTurnstile()
 
   const [ token, setToken ] = useState('')
   const [ status, setStatus ] = useState('' as Status)
@@ -75,9 +76,9 @@ const Mail: FunctionComponent = () => {
       )
       .finally(() => {
         setToken('')
-        window.turnstile.reset()
+        turnstile.reset()
       })
-  }, [])
+  }, [ turnstile ])
 
   useEffect(() => {
     setReadOnly(status === 'sending' || status === 'sent')
