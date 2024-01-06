@@ -56,6 +56,19 @@ const TaxonomyPage: FunctionComponent<TaxonomyPageProps> = ({
     },
   },
   pageContext: {
+    page,
+  },
+}) => (
+  <>
+    {items.map(({ article }) => (
+      <Article key={article.path} article={article} prev={null} next={null} />
+    ))}
+    <TaxonomyPagination page={page} />
+  </>
+)
+
+export const Head: FunctionComponent<TaxonomyPageProps> = ({
+  pageContext: {
     category,
     tag,
     page,
@@ -66,12 +79,7 @@ const TaxonomyPage: FunctionComponent<TaxonomyPageProps> = ({
   const next = hasNextPage(page) ? getNextPagePath(page) : null
 
   return (
-    <Metadata title={title} thumbnail={category?.thumbnail} prev={prev} next={next}>
-      {items.map(({ article }) => (
-        <Article key={article.path} article={article} prev={null} next={null} />
-      ))}
-      <TaxonomyPagination page={page} />
-    </Metadata>
+    <Metadata title={title} thumbnail={category?.thumbnail} prev={prev} next={next} />
   )
 }
 

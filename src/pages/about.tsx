@@ -3,6 +3,7 @@ import type { PageProps } from 'gatsby'
 import { graphql } from 'gatsby'
 
 import About from 'components/About'
+export { Head } from 'components/About'
 
 export const pageQuery = graphql`
   query AboutItem {

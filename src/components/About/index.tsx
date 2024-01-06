@@ -22,83 +22,89 @@ const About: FunctionComponent<AboutProps> = ({
   }
 
   return (
-    <Metadata title={formatMessage(messages.title)}>
-      <ArticleContainer className={styles.container}>
-        <ArticleHeader title={formatMessage(messages.title)} />
-        <Row>
-          <Col md={3} lg={2}>
-            <div className={styles.iconContainer}>
-              <img className={styles.icon} src={about.icon.src} />
-              <br />
-              <small>
-                <FormattedMessage {...messages.icon} values={{
-                  name: <Link to={about.icon.url}>{about.icon.name}</Link>,
-                }} />
-              </small>
-            </div>
-          </Col>
-          <Col md={9} lg={10}>
-            <Table className={styles.table}>
-              <tbody>
-                <tr>
-                  <th>{formatMessage(messages.name)}</th>
-                  <td>{about.name}</td>
-                </tr>
-                <tr>
-                  <th>{formatMessage(messages.occupation)}</th>
-                  <td>{about.occupation}</td>
-                </tr>
-                <tr>
-                  <th>{formatMessage(messages.interests)}</th>
+    <ArticleContainer className={styles.container}>
+      <ArticleHeader title={formatMessage(messages.title)} />
+      <Row>
+        <Col md={3} lg={2}>
+          <div className={styles.iconContainer}>
+            <img className={styles.icon} src={about.icon.src} />
+            <br />
+            <small>
+              <FormattedMessage {...messages.icon} values={{
+                name: <Link to={about.icon.url}>{about.icon.name}</Link>,
+              }} />
+            </small>
+          </div>
+        </Col>
+        <Col md={9} lg={10}>
+          <Table className={styles.table}>
+            <tbody>
+              <tr>
+                <th>{formatMessage(messages.name)}</th>
+                <td>{about.name}</td>
+              </tr>
+              <tr>
+                <th>{formatMessage(messages.occupation)}</th>
+                <td>{about.occupation}</td>
+              </tr>
+              <tr>
+                <th>{formatMessage(messages.interests)}</th>
+                <td>
+                  {about.interests.map(({ type, items }) => (
+                    <div key={type}>
+                      {type}
+                      <ul>
+                        {items.map(item => (
+                          <li key={item.name}>
+                            {item.url ? (
+                              <Link to={item.url}>{item.name}</Link>
+                            ) : item.name}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </td>
+              </tr>
+              <tr>
+                <th>{formatMessage(messages.mail)}</th>
+                <td>
+                  <Link to="/mail">{formatMessage(messages.mail)}</Link>
+                </td>
+              </tr>
+              {about.contacts.map(contact => (
+                <tr key={contact.service}>
+                  <th>{contact.service}</th>
                   <td>
-                    {about.interests.map(({ type, items }) => (
-                      <div key={type}>
-                        {type}
-                        <ul>
-                          {items.map(item => (
-                            <li key={item.name}>
-                              {item.url ? (
-                                <Link to={item.url}>{item.name}</Link>
-                              ) : item.name}
-                            </li>
-                          ))}
-                        </ul>
+                    {contact.accounts.map(account => (
+                      <div key={account.name}>
+                        {account.url ? (
+                          <Link to={account.url}>{account.name}</Link>
+                        ) : null}
                       </div>
                     ))}
                   </td>
                 </tr>
-                <tr>
-                  <th>{formatMessage(messages.mail)}</th>
-                  <td>
-                    <Link to="/mail">{formatMessage(messages.mail)}</Link>
-                  </td>
-                </tr>
-                {about.contacts.map(contact => (
-                  <tr key={contact.service}>
-                    <th>{contact.service}</th>
-                    <td>
-                      {contact.accounts.map(account => (
-                        <div key={account.name}>
-                          {account.url ? (
-                            <Link to={account.url}>{account.name}</Link>
-                          ) : null}
-                        </div>
-                      ))}
-                    </td>
-                  </tr>
-                ))}
-                <tr>
-                  <th>{formatMessage(messages.introduction)}</th>
-                  <td>
-                    <ArticleBody ast={(introduction?.markdown?.htmlAst ?? null) as unknown as Root} />
-                  </td>
-                </tr>
-              </tbody>
-            </Table>
-          </Col>
-        </Row>
-      </ArticleContainer>
-    </Metadata>
+              ))}
+              <tr>
+                <th>{formatMessage(messages.introduction)}</th>
+                <td>
+                  <ArticleBody ast={(introduction?.markdown?.htmlAst ?? null) as unknown as Root} />
+                </td>
+              </tr>
+            </tbody>
+          </Table>
+        </Col>
+      </Row>
+    </ArticleContainer>
+  )
+}
+
+export const Head: FunctionComponent = () => {
+  const { formatMessage } = useIntl()
+
+  return (
+    <Metadata title={formatMessage(messages.title)} />
   )
 }
 

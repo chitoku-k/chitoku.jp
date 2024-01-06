@@ -94,10 +94,24 @@ export const pageQuery = graphql`
 
 const ArticlePage: FunctionComponent<ArticlePageProps> = ({
   data: {
-    site,
     article,
     prev,
     next,
+  },
+}) => {
+  if (!article) {
+    throw new Error('Invalid data')
+  }
+
+  return (
+    <Article article={article} prev={prev} next={next} />
+  )
+}
+
+export const Head: FunctionComponent<ArticlePageProps> = ({
+  data: {
+    site,
+    article,
   },
 }) => {
   if (!site || !article) {
@@ -139,9 +153,7 @@ const ArticlePage: FunctionComponent<ArticlePageProps> = ({
   ]
 
   return (
-    <Metadata title={attributes.title} breadcrumb={breadcrumb} created={attributes.created} thumbnail={attributes.category?.thumbnail}>
-      <Article article={article} prev={prev} next={next} />
-    </Metadata>
+    <Metadata title={attributes.title} breadcrumb={breadcrumb} created={attributes.created} thumbnail={attributes.category?.thumbnail} />
   )
 }
 
