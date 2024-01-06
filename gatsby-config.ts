@@ -56,14 +56,6 @@ const config: GatsbyConfig = {
     { resolve: 'gatsby-plugin-no-sourcemaps' },
     { resolve: 'gatsby-plugin-react-helmet' },
     {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: /assets/u,
-        },
-      },
-    },
-    {
       resolve: 'gatsby-plugin-sass',
       options: {
         cssLoaderOptions: {
@@ -78,6 +70,7 @@ const config: GatsbyConfig = {
         files: [ 'src/**/*.scss' ],
       },
     },
+    { resolve: 'gatsby-plugin-svgr-svgo' },
     {
       resolve: 'gatsby-plugin-typescript',
       options: {

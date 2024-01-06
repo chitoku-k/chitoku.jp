@@ -17,7 +17,7 @@
     vertical-align: baseline;
     fill: var(--header-primary);
 
-    > :global(.secondary) {
+    > :global(.logo_inline_svg__secondary) {
       fill: var(--header-secondary);
     }
   }
