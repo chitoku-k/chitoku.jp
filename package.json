@@ -102,8 +102,7 @@
   },
   "resolutions": {
     "remark": "^12",
-    "remark-footnotes": "^2",
-    "source-map": "^0"
+    "remark-footnotes": "^2"
   },
   "scripts": {
     "postinstall": "husky install",
