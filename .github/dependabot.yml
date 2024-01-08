@@ -15,7 +15,7 @@ updates:
     time: "00:00"
     timezone: Asia/Tokyo
   groups:
-    fontawesome:
+    fortawesome:
       patterns:
       - "@fortawesome/*-core"
       - "@fortawesome/*-icons"
@@ -42,6 +42,11 @@ updates:
       - storybook
       - "@storybook/addon-*"
       - "@storybook/react-*"
+    stylelint:
+      patterns:
+      - stylelint
+      - stylelint-config-standard-scss
+      - stylelint-scss
     typescript-eslint:
       patterns:
       - "@typescript-eslint/*"
