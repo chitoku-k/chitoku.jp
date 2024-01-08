@@ -15,7 +15,7 @@ updates:
     time: "00:00"
     timezone: Asia/Tokyo
   groups:
-    fontawesome:
+    fortawesome:
       patterns:
       - "@fortawesome/*-core"
       - "@fortawesome/*-icons"
