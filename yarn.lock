@@ -11860,21 +11860,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-loader@npm:^6.8.1":
-  version: 6.8.1
-  resolution: "css-loader@npm:6.8.1"
+"css-loader@npm:^6.9.0":
+  version: 6.9.0
+  resolution: "css-loader@npm:6.9.0"
   dependencies:
     icss-utils: "npm:^5.1.0"
-    postcss: "npm:^8.4.21"
+    postcss: "npm:^8.4.31"
     postcss-modules-extract-imports: "npm:^3.0.0"
     postcss-modules-local-by-default: "npm:^4.0.3"
-    postcss-modules-scope: "npm:^3.0.0"
+    postcss-modules-scope: "npm:^3.1.0"
     postcss-modules-values: "npm:^4.0.0"
     postcss-value-parser: "npm:^4.2.0"
-    semver: "npm:^7.3.8"
+    semver: "npm:^7.5.4"
   peerDependencies:
     webpack: ^5.0.0
-  checksum: f20bb2a181c64d2f49586ab3922cae884519cfc8ae9ba8513065032255ed7bbdb4de75362f99d641d39d36d3732b7932884cd0e6fc71c8b0fb8b99a654f9cd08
+  checksum: 2dbbd922d88fa81d26638889b227dc6d18f82b0919a83e7f3d7ddbd07893be80956f647f8c8a96d5c3f2016771b8ca84854c981616ef77dae99c0fc8b285bbea
   languageName: node
   linkType: hard
 
@@ -16416,7 +16416,7 @@ __metadata:
     babel-preset-gatsby: "npm:^3.13.0"
     bootstrap: "npm:^5.3.2"
     clsx: "npm:^2.1.0"
-    css-loader: "npm:^6.8.1"
+    css-loader: "npm:^6.9.0"
     dotenv-safe: "npm:^8.2.0"
     eslint: "npm:^8.56.0"
     eslint-plugin-react: "npm:^7.33.2"
@@ -21487,6 +21487,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-modules-scope@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "postcss-modules-scope@npm:3.1.0"
+  dependencies:
+    postcss-selector-parser: "npm:^6.0.4"
+  peerDependencies:
+    postcss: ^8.1.0
+  checksum: 39fb2e3549faf086df654932c24e24e1f267f8b2ce3a5397d44087b443bb03c9476c4a4f25c4c283b92ba249c2ba3a89d4a447e6cfc46c295369f731966c0bce
+  languageName: node
+  linkType: hard
+
 "postcss-modules-values@npm:^4.0.0":
   version: 4.0.0
   resolution: "postcss-modules-values@npm:4.0.0"
@@ -21745,7 +21756,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.0.0, postcss@npm:^8.2.15, postcss@npm:^8.2.9, postcss@npm:^8.3.11, postcss@npm:^8.4.19, postcss@npm:^8.4.21, postcss@npm:^8.4.24, postcss@npm:^8.4.28":
+"postcss@npm:^8.0.0, postcss@npm:^8.2.15, postcss@npm:^8.2.9, postcss@npm:^8.3.11, postcss@npm:^8.4.19, postcss@npm:^8.4.21, postcss@npm:^8.4.24, postcss@npm:^8.4.28, postcss@npm:^8.4.31":
   version: 8.4.33
   resolution: "postcss@npm:8.4.33"
   dependencies:
