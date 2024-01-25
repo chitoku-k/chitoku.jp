@@ -102,7 +102,7 @@
     "remark-footnotes": "^2"
   },
   "scripts": {
-    "postinstall": "husky install",
+    "prepare": "husky",
     "clean": "gatsby clean",
     "build": "gatsby build",
     "develop": "gatsby develop",
