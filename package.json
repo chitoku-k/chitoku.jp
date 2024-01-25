@@ -79,7 +79,7 @@
     "react-turnstile": "^1.1.2",
     "react-twitter-widgets": "^1.11.0",
     "react-use": "^17.5.0",
-    "rehype-react": "^7.2.0",
+    "rehype-react": "^8.0.0",
     "sass": "^1.70.0",
     "sass-loader": "^14.0.0",
     "schema-dts": "^1.1.2",
@@ -93,7 +93,7 @@
     "turnstile-types": "^1.2.0",
     "typescript": "^5.3.3",
     "typescript-plugin-css-modules": "^5.0.2",
-    "unified": "^10.1.2",
+    "unified": "^11.0.4",
     "webpack": "^5.90.0",
     "yaml-flat-loader": "^1.0.2"
   },
