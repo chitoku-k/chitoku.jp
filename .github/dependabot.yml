@@ -21,8 +21,9 @@ updates:
       - "@fortawesome/*-icons"
     gatsby:
       patterns:
+      - babel-preset-gatsby
       - gatsby
-      - gatsby-plugin-google-etag
+      - gatsby-plugin-google-gtag
       - gatsby-plugin-no-sourcemaps
       - gatsby-plugin-sass
       - gatsby-remark-autolink-headers
