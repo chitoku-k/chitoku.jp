@@ -15084,7 +15084,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-parcel-config@npm:^1.13.1":
+"gatsby-parcel-config@npm:1.13.1":
   version: 1.13.1
   resolution: "gatsby-parcel-config@npm:1.13.1"
   dependencies:
@@ -15560,9 +15560,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby@npm:^5.13.2":
-  version: 5.13.2
-  resolution: "gatsby@npm:5.13.2"
+"gatsby@npm:^5.13.3":
+  version: 5.13.3
+  resolution: "gatsby@npm:5.13.3"
   dependencies:
     "@babel/code-frame": "npm:^7.18.6"
     "@babel/core": "npm:^7.20.12"
@@ -15651,7 +15651,7 @@ __metadata:
     gatsby-legacy-polyfills: "npm:^3.13.0"
     gatsby-link: "npm:^5.13.1"
     gatsby-page-utils: "npm:^3.13.1"
-    gatsby-parcel-config: "npm:^1.13.1"
+    gatsby-parcel-config: "npm:1.13.1"
     gatsby-plugin-page-creator: "npm:^5.13.1"
     gatsby-plugin-typescript: "npm:^5.13.1"
     gatsby-plugin-utils: "npm:^4.13.1"
@@ -15740,7 +15740,7 @@ __metadata:
       optional: true
   bin:
     gatsby: ./cli.js
-  checksum: e09dd291ada4198a0a572d6b98fa2c4555cb4aa4574f0fb754574571cd50b64aa3d0ed9a933c0f94d5e370b344fed2434dfff99f32645d8f037a6adc0e50a1f9
+  checksum: 8858fa79a80a32ac15b12e2a5a123be5154b030450d090538dfe6ccb3f55cfad7f1da97a6c3cb81449e4def63f9a3773431847f19bd648e85d542e01a308abe5
   languageName: node
   linkType: hard
 
@@ -16606,7 +16606,7 @@ __metadata:
     eslint-plugin-storybook: "npm:^0.6.15"
     eslint-webpack-plugin: "npm:^4.0.1"
     extract-react-intl-messages: "npm:^4.1.1"
-    gatsby: "npm:^5.13.2"
+    gatsby: "npm:^5.13.3"
     gatsby-plugin-algolia: "npm:^1.0.3"
     gatsby-plugin-eslint: "npm:^4.0.4"
     gatsby-plugin-google-gtag: "npm:^5.13.1"
