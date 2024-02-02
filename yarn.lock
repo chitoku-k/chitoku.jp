@@ -8228,12 +8228,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/hast@npm:^3.0.0, @types/hast@npm:^3.0.3":
+"@types/hast@npm:^3.0.0":
   version: 3.0.3
   resolution: "@types/hast@npm:3.0.3"
   dependencies:
     "@types/unist": "npm:*"
   checksum: cf380cb351215847a598b06c10c0139a694fbb9a5cca27e7a836df4c9d616873ff5b01326530907b5a95b6a4b8fc928bcecb46424cc6f9bd1f53ba377f190d86
+  languageName: node
+  linkType: hard
+
+"@types/hast@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "@types/hast@npm:3.0.4"
+  dependencies:
+    "@types/unist": "npm:*"
+  checksum: 732920d81bb7605895776841b7658b4d8cc74a43a8fa176017cc0fb0ecc1a4c82a2b75a4fe6b71aa262b649d3fb62858c6789efa3793ea1d40269953af96ecb5
   languageName: node
   linkType: hard
 
@@ -16607,7 +16616,7 @@ __metadata:
     "@svgr/webpack": "npm:^8.1.0"
     "@types/dotenv-safe": "npm:^8.1.5"
     "@types/gatsbyjs__reach-router": "npm:^2.0.4"
-    "@types/hast": "npm:^3.0.3"
+    "@types/hast": "npm:^3.0.4"
     "@types/node": "npm:^20.11.7"
     "@types/prismjs": "npm:^1.26.3"
     "@types/react": "npm:^18.2.51"
