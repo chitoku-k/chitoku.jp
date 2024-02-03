@@ -7,7 +7,6 @@
   "rules": {
     "at-rule-no-unknown": null,
     "custom-property-pattern": null,
-    "max-line-length": null,
     "no-invalid-position-at-import-rule": null,
     "selector-class-pattern": null,
     "selector-id-pattern": null,

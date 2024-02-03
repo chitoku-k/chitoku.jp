@@ -63,12 +63,6 @@ const config: GatsbyConfig = {
       },
     },
     { resolve: 'gatsby-plugin-sharp' },
-    {
-      resolve: '@danbruegge/gatsby-plugin-stylelint',
-      options: {
-        files: [ 'src/**/*.scss' ],
-      },
-    },
     { resolve: 'gatsby-plugin-svgr-svgo' },
     {
       resolve: 'gatsby-plugin-typescript',
@@ -147,6 +141,12 @@ const config: GatsbyConfig = {
       },
     },
     { resolve: 'historia-soarer-update-plugin' },
+    {
+      resolve: 'historia-stylelint-plugin',
+      options: {
+        files: [ 'src/**/*.scss' ],
+      },
+    },
   ],
 }
 

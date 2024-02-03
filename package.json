@@ -7,7 +7,6 @@
   "devDependencies": {
     "@babel/core": "^7.23.9",
     "@babel/preset-typescript": "^7.23.3",
-    "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
@@ -85,10 +84,10 @@
     "schema-dts": "^1.1.2",
     "storybook": "^7.6.12",
     "style-loader": "^3.3.4",
-    "stylelint": "^15.11.0",
+    "stylelint": "^16.2.1",
     "stylelint-config-recess-order": "^4.4.0",
-    "stylelint-config-standard-scss": "^12.0.0",
-    "stylelint-scss": "^6.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-scss": "^6.1.0",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
     "turnstile-types": "^1.2.0",
     "typescript": "^5.3.3",
@@ -127,6 +126,7 @@
     "plugins/historia-feed-plugin",
     "plugins/historia-remark-plugin",
     "plugins/historia-soarer-update-plugin",
+    "plugins/historia-stylelint-plugin",
     "plugins/historia-taxonomy-plugin"
   ]
 }
