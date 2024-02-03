@@ -4130,17 +4130,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@danbruegge/gatsby-plugin-stylelint@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "@danbruegge/gatsby-plugin-stylelint@npm:4.1.0"
-  dependencies:
-    stylelint-bare-webpack-plugin: "npm:^2.0.0"
-  peerDependencies:
-    gatsby: ^2.0.0
-  checksum: 10/74ed3cd1c5d13e870ae7ae991717845933a2bd9b9c3e039fa3283a3e253b4166a1d8ba6830e1d7e839ea489642ce4bc2769ea2c667a221176a742ae612f180a7
-  languageName: node
-  linkType: hard
-
 "@discoveryjs/json-ext@npm:^0.5.3":
   version: 0.5.5
   resolution: "@discoveryjs/json-ext@npm:0.5.5"
@@ -5060,6 +5049,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jest/schemas@npm:^29.6.3":
+  version: 29.6.3
+  resolution: "@jest/schemas@npm:29.6.3"
+  dependencies:
+    "@sinclair/typebox": "npm:^0.27.8"
+  checksum: 10/910040425f0fc93cd13e68c750b7885590b8839066dfa0cd78e7def07bbb708ad869381f725945d66f2284de5663bbecf63e8fdd856e2ae6e261ba30b1687e93
+  languageName: node
+  linkType: hard
+
 "@jest/transform@npm:^29.3.1":
   version: 29.5.0
   resolution: "@jest/transform@npm:29.5.0"
@@ -5094,6 +5092,20 @@ __metadata:
     "@types/yargs": "npm:^17.0.8"
     chalk: "npm:^4.0.0"
   checksum: 10/910a134cd1c2cd7d74dfcf9981c2f1a6c1d9772edecb7738947b059c4e0bb843a0d26a3c7dfff112f2fc4a473ecc18679edda498416f0048a8d181ff43a08bee
+  languageName: node
+  linkType: hard
+
+"@jest/types@npm:^29.6.3":
+  version: 29.6.3
+  resolution: "@jest/types@npm:29.6.3"
+  dependencies:
+    "@jest/schemas": "npm:^29.6.3"
+    "@types/istanbul-lib-coverage": "npm:^2.0.0"
+    "@types/istanbul-reports": "npm:^3.0.0"
+    "@types/node": "npm:*"
+    "@types/yargs": "npm:^17.0.8"
+    chalk: "npm:^4.0.0"
+  checksum: 10/f74bf512fd09bbe2433a2ad460b04668b7075235eea9a0c77d6a42222c10a79b9747dc2b2a623f140ed40d6865a2ed8f538f3cbb75169120ea863f29a7ed76cd
   languageName: node
   linkType: hard
 
@@ -6598,6 +6610,13 @@ __metadata:
   version: 0.25.24
   resolution: "@sinclair/typebox@npm:0.25.24"
   checksum: 10/d415546153478befa3c8386a4723e3061ac065867c7e22fe0374d36091991676d231e5381e66daa0ed21639217c6c80e0d6224a9c89aaac269e58b82b2f4a2f4
+  languageName: node
+  linkType: hard
+
+"@sinclair/typebox@npm:^0.27.8":
+  version: 0.27.8
+  resolution: "@sinclair/typebox@npm:0.27.8"
+  checksum: 10/297f95ff77c82c54de8c9907f186076e715ff2621c5222ba50b8d40a170661c0c5242c763cba2a4791f0f91cb1d8ffa53ea1d7294570cf8cd4694c0e383e484d
   languageName: node
   linkType: hard
 
@@ -9473,7 +9492,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv-keywords@npm:^5.0.0":
+"ajv-keywords@npm:^5.0.0, ajv-keywords@npm:^5.1.0":
   version: 5.1.0
   resolution: "ajv-keywords@npm:5.1.0"
   dependencies:
@@ -9505,6 +9524,18 @@ __metadata:
     require-from-string: "npm:^2.0.2"
     uri-js: "npm:^4.2.2"
   checksum: 10/aa0dfd6cebdedde8e77747e84e7b7c55921930974b8547f54b4156164ff70445819398face32dafda4bd4c61bbc7513d308d4c2bf769f8ea6cb9c8449f9faf54
+  languageName: node
+  linkType: hard
+
+"ajv@npm:^8.9.0":
+  version: 8.12.0
+  resolution: "ajv@npm:8.12.0"
+  dependencies:
+    fast-deep-equal: "npm:^3.1.1"
+    json-schema-traverse: "npm:^1.0.0"
+    require-from-string: "npm:^2.0.2"
+    uri-js: "npm:^4.2.2"
+  checksum: 10/b406f3b79b5756ac53bfe2c20852471b08e122bc1ee4cde08ae4d6a800574d9cd78d60c81c69c63ff81e4da7cd0b638fafbb2303ae580d49cf1600b9059efb85
   languageName: node
   linkType: hard
 
@@ -10857,24 +10888,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001400, caniuse-lite@npm:^1.0.30001449, caniuse-lite@npm:^1.0.30001464, caniuse-lite@npm:^1.0.30001503":
-  version: 1.0.30001519
-  resolution: "caniuse-lite@npm:1.0.30001519"
-  checksum: 10/8b5cdf098f7fce8ecf01912a2a80211de9c6b4d1b5230d2b7e578fa4331b1a76c54f6fa8a2b7a37952064bc92c189ffdfa511ac407840e7ce6aaa25da4616721
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001541":
-  version: 1.0.30001565
-  resolution: "caniuse-lite@npm:1.0.30001565"
-  checksum: 10/abc58bf3504508c4cb62f0e4a3267a222140935cb63ff252f1e960bf8680cc17368da1d29fb1f68343dfa8b046de7b9e7c2003b822732adc4c68e8ab6ae82c0e
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001565":
-  version: 1.0.30001570
-  resolution: "caniuse-lite@npm:1.0.30001570"
-  checksum: 10/a9b939e003dd70580cc18bce54627af84f298af7c774415c8d6c99871e7cee13bd8278b67955a979cd338369c73e8821a10b37e607d1fff2fbc8ff92fc489653
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001400, caniuse-lite@npm:^1.0.30001449, caniuse-lite@npm:^1.0.30001464, caniuse-lite@npm:^1.0.30001503, caniuse-lite@npm:^1.0.30001541, caniuse-lite@npm:^1.0.30001565":
+  version: 1.0.30001583
+  resolution: "caniuse-lite@npm:1.0.30001583"
+  checksum: 10/8e7b5ffeb1229efacc1022fbe19eb136f39e4512363322d175e836fef9d798d7308a0763ce654670d45a55c3f25f34c12f87e90e1da34c5d9531fac2327d2063
   languageName: node
   linkType: hard
 
@@ -15903,15 +15920,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-value@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "get-value@npm:3.0.1"
-  dependencies:
-    isobject: "npm:^3.0.1"
-  checksum: 10/3ba777d33448181d8b6c21ce11f31194257119d32dbd632b27db6e3f27fe78100405b4dd93137eea9f4aa2d0a9c623b13747d728d472a7ca6cb93046c3f521a1
-  languageName: node
-  linkType: hard
-
 "giget@npm:^1.0.0":
   version: 1.1.2
   resolution: "giget@npm:1.1.2"
@@ -16579,6 +16587,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"historia-stylelint-plugin@workspace:plugins/historia-stylelint-plugin":
+  version: 0.0.0-use.local
+  resolution: "historia-stylelint-plugin@workspace:plugins/historia-stylelint-plugin"
+  dependencies:
+    stylelint-webpack-plugin: "npm:^5.0.0"
+  languageName: unknown
+  linkType: soft
+
 "historia-taxonomy-plugin@workspace:plugins/historia-taxonomy-plugin":
   version: 0.0.0-use.local
   resolution: "historia-taxonomy-plugin@workspace:plugins/historia-taxonomy-plugin"
@@ -16594,7 +16610,6 @@ __metadata:
   dependencies:
     "@babel/core": "npm:^7.23.9"
     "@babel/preset-typescript": "npm:^7.23.3"
-    "@danbruegge/gatsby-plugin-stylelint": "npm:^4.1.0"
     "@fortawesome/fontawesome-svg-core": "npm:^6.5.1"
     "@fortawesome/free-brands-svg-icons": "npm:^6.5.1"
     "@fortawesome/free-regular-svg-icons": "npm:^6.5.1"
@@ -18255,6 +18270,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jest-util@npm:^29.7.0":
+  version: 29.7.0
+  resolution: "jest-util@npm:29.7.0"
+  dependencies:
+    "@jest/types": "npm:^29.6.3"
+    "@types/node": "npm:*"
+    chalk: "npm:^4.0.0"
+    ci-info: "npm:^3.2.0"
+    graceful-fs: "npm:^4.2.9"
+    picomatch: "npm:^2.2.3"
+  checksum: 10/30d58af6967e7d42bd903ccc098f3b4d3859ed46238fbc88d4add6a3f10bea00c226b93660285f058bc7a65f6f9529cf4eb80f8d4707f79f9e3a23686b4ab8f3
+  languageName: node
+  linkType: hard
+
 "jest-worker@npm:^26.3.0":
   version: 26.6.2
   resolution: "jest-worker@npm:26.6.2"
@@ -18286,6 +18315,18 @@ __metadata:
     merge-stream: "npm:^2.0.0"
     supports-color: "npm:^8.0.0"
   checksum: 10/3daf0a13d020985ce28d8436f3f94b0be9f8fc5f63ad753aa0779008d0a23b4e16bca38e2a2e9ae20d5d5ded8c43217b5e1bd54f25c5afe41b1be369aee30d4d
+  languageName: node
+  linkType: hard
+
+"jest-worker@npm:^29.7.0":
+  version: 29.7.0
+  resolution: "jest-worker@npm:29.7.0"
+  dependencies:
+    "@types/node": "npm:*"
+    jest-util: "npm:^29.7.0"
+    merge-stream: "npm:^2.0.0"
+    supports-color: "npm:^8.0.0"
+  checksum: 10/364cbaef00d8a2729fc760227ad34b5e60829e0869bd84976bdfbd8c0d0f9c2f22677b3e6dd8afa76ed174765351cd12bae3d4530c62eefb3791055127ca9745
   languageName: node
   linkType: hard
 
@@ -20340,13 +20381,6 @@ __metadata:
   bin:
     mkdirp: bin/cmd.js
   checksum: 10/d71b8dcd4b5af2fe13ecf3bd24070263489404fe216488c5ba7e38ece1f54daf219e72a833a3a2dc404331e870e9f44963a33399589490956bff003a3404d3b2
-  languageName: node
-  linkType: hard
-
-"module-available@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "module-available@npm:1.0.6"
-  checksum: 10/4c45138b8419fd313961df94af5f1dd3c1f8b64449ed8a3ae39b9bd649b69a0390e5d634b46809201ca85d9999da22e997147c4d8c08fce35834e94845372114
   languageName: node
   linkType: hard
 
@@ -24291,6 +24325,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"schema-utils@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "schema-utils@npm:4.2.0"
+  dependencies:
+    "@types/json-schema": "npm:^7.0.9"
+    ajv: "npm:^8.9.0"
+    ajv-formats: "npm:^2.1.1"
+    ajv-keywords: "npm:^5.1.0"
+  checksum: 10/808784735eeb153ab7f3f787f840aa3bc63f423d2a5a7e96c9e70a0e53d0bc62d7b37ea396fc598ce19196e4fb86a72f897154b7c6ce2358bbc426166f205e14
+  languageName: node
+  linkType: hard
+
 "screenfull@npm:^5.1.0":
   version: 5.2.0
   resolution: "screenfull@npm:5.2.0"
@@ -25423,23 +25469,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-bare-webpack-plugin@npm:^2.0.0":
-  version: 2.1.0
-  resolution: "stylelint-bare-webpack-plugin@npm:2.1.0"
-  dependencies:
-    chalk: "npm:^4.1.0"
-    get-value: "npm:^3.0.1"
-    is-plain-object: "npm:^5.0.0"
-    lodash: "npm:^4.17.20"
-    module-available: "npm:^1.0.6"
-    webpack-merge: "npm:^5.3.0"
-  peerDependencies:
-    stylelint: "*"
-    webpack: ^4.0.0 || ^5.0.0
-  checksum: 10/149df53cc950878b17282cdc7de331c3a9c021af06c28f1290cac1b8c5763870509c517ab45569727d5c4e26d76a5fc602fc645840fa96bd93980d84ef4fd85a
-  languageName: node
-  linkType: hard
-
 "stylelint-config-recess-order@npm:^4.4.0":
   version: 4.4.0
   resolution: "stylelint-config-recess-order@npm:4.4.0"
@@ -25543,6 +25572,22 @@ __metadata:
   peerDependencies:
     stylelint: ^16.0.2
   checksum: 10/d1a37af38e6793f60ad3d836741ed624a7a07a56bea094750e72ed6e549243f966efcbe247940c6f1337328db700b1004f49e2119ff421235c979b2574995426
+  languageName: node
+  linkType: hard
+
+"stylelint-webpack-plugin@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "stylelint-webpack-plugin@npm:5.0.0"
+  dependencies:
+    globby: "npm:^11.1.0"
+    jest-worker: "npm:^29.7.0"
+    micromatch: "npm:^4.0.5"
+    normalize-path: "npm:^3.0.0"
+    schema-utils: "npm:^4.2.0"
+  peerDependencies:
+    stylelint: ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    webpack: ^5.0.0
+  checksum: 10/ca0d4474c802cdfe2d05b3a629d19a7c79d554822fe577822ec19fc382e6275d9cf773b0d88682fb81afc5c483b479f20575c932eec9ba79a25fda589ce589e9
   languageName: node
   linkType: hard
 
@@ -27437,7 +27482,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack-merge@npm:^5.3.0, webpack-merge@npm:^5.8.0":
+"webpack-merge@npm:^5.8.0":
   version: 5.8.0
   resolution: "webpack-merge@npm:5.8.0"
   dependencies:

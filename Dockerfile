@@ -12,6 +12,7 @@ COPY package.json yarn.lock .yarnrc.yml /usr/src/
 COPY plugins/historia-feed-plugin/package.json /usr/src/plugins/historia-feed-plugin/
 COPY plugins/historia-remark-plugin/package.json /usr/src/plugins/historia-remark-plugin/
 COPY plugins/historia-soarer-update-plugin/package.json /usr/src/plugins/historia-soarer-update-plugin/
+COPY plugins/historia-stylelint-plugin/package.json /usr/src/plugins/historia-stylelint-plugin/
 COPY plugins/historia-taxonomy-plugin/package.json /usr/src/plugins/historia-taxonomy-plugin/
 RUN --mount=type=tmpfs,target=/tmp \
     --mount=type=cache,target=/usr/local/share/.cache/yarn \

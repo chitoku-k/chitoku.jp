@@ -1,0 +1,7 @@
+{
+  "name": "historia-stylelint-plugin",
+  "version": "1.0.0",
+  "dependencies": {
+    "stylelint-webpack-plugin": "^5.0.0"
+  }
+}
