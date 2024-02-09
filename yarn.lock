@@ -12860,12 +12860,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv-safe@npm:^8.2.0":
-  version: 8.2.0
-  resolution: "dotenv-safe@npm:8.2.0"
-  dependencies:
-    dotenv: "npm:^8.2.0"
-  checksum: 10/18c92083f55fd84b75ab3c6f4c4ebeca84ec195e5c4ec67f4420182602e3bb37b203b1c4fad6d501c33b6a912915e0ed4bcc7d25790719f3ea937a2f4c72439a
+"dotenv-safe@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "dotenv-safe@npm:9.0.0"
+  peerDependencies:
+    dotenv: ">= 8.2.0"
+  checksum: 10/420c01f70a5b2d172d652d0b3744482f8864ef0ee7c7d0cdc58deae501c6eaa847c55521d04d4d88c71b8fc75e6993b5db0c0a0a5d62f3207b417f42429c036b
   languageName: node
   linkType: hard
 
@@ -16641,7 +16641,7 @@ __metadata:
     bootstrap: "npm:^5.3.2"
     clsx: "npm:^2.1.0"
     css-loader: "npm:^6.10.0"
-    dotenv-safe: "npm:^8.2.0"
+    dotenv-safe: "npm:^9.0.0"
     eslint: "npm:^8.56.0"
     eslint-plugin-react: "npm:^7.33.2"
     eslint-plugin-react-hooks: "npm:^4.6.0"
