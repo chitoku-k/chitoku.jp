@@ -34,6 +34,6 @@ FROM scratch AS cache
 COPY --from=build /usr/src/.cache /usr/src/.cache
 COPY --from=build /usr/src/public /usr/src/public
 
-FROM nginx:1.25.3-alpine
+FROM nginx:1.25.4-alpine
 COPY conf /etc/nginx/templates
 COPY --from=build /usr/src/public /usr/share/nginx/html
