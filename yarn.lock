@@ -12,10 +12,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/css-tools@npm:^4.0.1":
-  version: 4.3.2
-  resolution: "@adobe/css-tools@npm:4.3.2"
-  checksum: 10/973dcb7ba5141f57ec726ddec2e94e8947361bb0c5f0e8ebd1e8aa3a84b28e66db4ad843908825f99730d59784ff3c43868b014a7268676a65950cdb850c42cc
+"@adobe/css-tools@npm:~4.3.1":
+  version: 4.3.3
+  resolution: "@adobe/css-tools@npm:4.3.3"
+  checksum: 10/0e77057efb4e18182560855503066b75edca98671be327d3f8a7ae89ec3da6821e693114b55225909fca00d7e7ed8422f3d79d71fe95dd4d5df1f2026a9fda02
   languageName: node
   linkType: hard
 
@@ -8513,21 +8513,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/postcss-modules-local-by-default@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@types/postcss-modules-local-by-default@npm:4.0.0"
+"@types/postcss-modules-local-by-default@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "@types/postcss-modules-local-by-default@npm:4.0.2"
   dependencies:
     postcss: "npm:^8.0.0"
-  checksum: 10/093a869240ddafc1b6946f3f6197c2de0ebd2f8ae3d5de7a6ec51aad5d6c8837a503496168f3d6230ddaa2bc4c815426a2353e8ddd88acae6bcb4a03477592d5
+  checksum: 10/c4a50f0fab1bacbf2968a05156f0acf10225a605b021dcfb4e39892429507089a91919609111c79d1ed5902c55f9b4ee35c00aa75d98bb18d5415b3cd1223239
   languageName: node
   linkType: hard
 
-"@types/postcss-modules-scope@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@types/postcss-modules-scope@npm:3.0.1"
+"@types/postcss-modules-scope@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "@types/postcss-modules-scope@npm:3.0.4"
   dependencies:
     postcss: "npm:^8.0.0"
-  checksum: 10/5c6359d885872bb8d92db8239283d9732c19311b378e56f9da2cfaa25aafa0a6b8b6997a6940c4505efdfeff251b5161ecb2e8e4e5d0bf3493ff09f99db25fc3
+  checksum: 10/4249ace34023dc797b47a1041c844d6a772d6339a96e7a45fdacc70d03db8fb2917ac90728c390a743ecf2da821f921761ad2bdb57f4d6936ad4690bc572ad5c
   languageName: node
   linkType: hard
 
@@ -12789,10 +12789,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^16.0.0, dotenv@npm:^16.0.3":
+"dotenv@npm:^16.0.0":
   version: 16.0.3
   resolution: "dotenv@npm:16.0.3"
   checksum: 10/d6788c8e40b35ad9a9ca29249dccf37fa6b3ad26700fcbc87f2f41101bf914f5193a04e36a3d23de70b1dcb8e5d5a3b21e151debace2c4cd08d868be500a1b29
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^16.4.2":
+  version: 16.4.4
+  resolution: "dotenv@npm:16.4.4"
+  checksum: 10/ddf43ede209d5f54c9da688e93326162eb0fc367ad1869909568cb15571ab8c87a0fab4e1d4af9860be0571c707a8b4aefa060a4f1b0bb14298a81e0ccf0017d
   languageName: node
   linkType: hard
 
@@ -16617,7 +16624,7 @@ __metadata:
     tsconfig-paths-webpack-plugin: "npm:^4.1.0"
     turnstile-types: "npm:^1.2.0"
     typescript: "npm:^5.3.3"
-    typescript-plugin-css-modules: "npm:^5.0.2"
+    typescript-plugin-css-modules: "npm:^5.1.0"
     unified: "npm:^11.0.4"
     webpack: "npm:^5.90.2"
     yaml-flat-loader: "npm:^1.0.2"
@@ -18561,9 +18568,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"less@npm:^4.1.3":
-  version: 4.1.3
-  resolution: "less@npm:4.1.3"
+"less@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "less@npm:4.2.0"
   dependencies:
     copy-anything: "npm:^2.0.1"
     errno: "npm:^0.1.1"
@@ -18592,7 +18599,7 @@ __metadata:
       optional: true
   bin:
     lessc: bin/lessc
-  checksum: 10/d0688b6b46196b6d5378e4de153678e8b52d991d1a738e469fbc798a61d39df37ad4496ee398e26d59aad4bd463839441046542080b17e5719628fb4196e6ecc
+  checksum: 10/98200dce570cdc396e03cafc95fb7bbbecdbe3ae28e456a6dcf7a1ac75c3b1979aa56749ac7581ace1814f8a03c9d3456b272280cc098a6e1e24295c4b7caddb
   languageName: node
   linkType: hard
 
@@ -22292,7 +22299,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.0.0, postcss@npm:^8.2.15, postcss@npm:^8.2.9, postcss@npm:^8.3.11, postcss@npm:^8.4.19, postcss@npm:^8.4.21, postcss@npm:^8.4.24, postcss@npm:^8.4.32, postcss@npm:^8.4.33":
+"postcss@npm:^8.0.0, postcss@npm:^8.2.15, postcss@npm:^8.2.9, postcss@npm:^8.3.11, postcss@npm:^8.4.19, postcss@npm:^8.4.24, postcss@npm:^8.4.32, postcss@npm:^8.4.33":
   version: 8.4.33
   resolution: "postcss@npm:8.4.33"
   dependencies:
@@ -22300,6 +22307,17 @@ __metadata:
     picocolors: "npm:^1.0.0"
     source-map-js: "npm:^1.0.2"
   checksum: 10/e22a4594c255f26117f38419fb494d7ecab0f596cd409f7aadc8a6173abf180ed7ea970cd13fd366ab12b5840be901d2a09b25197700c2ebcb5a8077326bf519
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.4.35":
+  version: 8.4.35
+  resolution: "postcss@npm:8.4.35"
+  dependencies:
+    nanoid: "npm:^3.3.7"
+    picocolors: "npm:^1.0.0"
+    source-map-js: "npm:^1.0.2"
+  checksum: 10/93a7ce50cd6188f5f486a9ca98950ad27c19dfed996c45c414fa242944497e4d084a8760d3537f078630226f2bd3c6ab84b813b488740f4432e7c7039cd73a20
   languageName: node
   linkType: hard
 
@@ -24148,20 +24166,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.58.3":
-  version: 1.62.1
-  resolution: "sass@npm:1.62.1"
-  dependencies:
-    chokidar: "npm:>=3.0.0 <4.0.0"
-    immutable: "npm:^4.0.0"
-    source-map-js: "npm:>=0.6.2 <2.0.0"
-  bin:
-    sass: sass.js
-  checksum: 10/4e9f3db604b4a9d50bc0986b1a748cff1986d8545d744c06cac2357057817c8951c605a06f6742df7cc47f98cdb9801cbfa819f3337e7c9a70be2ab1f7d5b343
-  languageName: node
-  linkType: hard
-
-"sass@npm:^1.71.0":
+"sass@npm:^1.70.0, sass@npm:^1.71.0":
   version: 1.71.0
   resolution: "sass@npm:1.71.0"
   dependencies:
@@ -24174,10 +24179,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sax@npm:^1.2.4, sax@npm:~1.2.4":
+"sax@npm:^1.2.4":
   version: 1.2.4
   resolution: "sax@npm:1.2.4"
   checksum: 10/09b79ff6dc09689a24323352117c94593c69db348997b2af0edbd82fa08aba47d778055bf9616b57285bb73d25d790900c044bf631a8f10c8252412e3f3fe5dd
+  languageName: node
+  linkType: hard
+
+"sax@npm:~1.3.0":
+  version: 1.3.0
+  resolution: "sax@npm:1.3.0"
+  checksum: 10/bb571b31d30ecb0353c2ff5f87b117a03e5fb9eb4c1519141854c1a8fbee0a77ddbe8045f413259e711833aa03da210887df8527d19cdc55f299822dbf4b34de
   languageName: node
   linkType: hard
 
@@ -25576,18 +25588,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylus@npm:^0.59.0":
-  version: 0.59.0
-  resolution: "stylus@npm:0.59.0"
+"stylus@npm:^0.62.0":
+  version: 0.62.0
+  resolution: "stylus@npm:0.62.0"
   dependencies:
-    "@adobe/css-tools": "npm:^4.0.1"
+    "@adobe/css-tools": "npm:~4.3.1"
     debug: "npm:^4.3.2"
     glob: "npm:^7.1.6"
-    sax: "npm:~1.2.4"
+    sax: "npm:~1.3.0"
     source-map: "npm:^0.7.3"
   bin:
     stylus: bin/stylus
-  checksum: 10/f8414237d7b0edf57ddbb0d782de7876bba15dc71e475e8713377b8dbc4767a1b1f101f966e33beb7f0c8d092e17a42d557f73bc94cbae5a8311d3bc2f64bbbb
+  checksum: 10/a2d975e619c622a6646fec43489f4a7d0fe824e5dab6343295bca381dd9f1ae9f9d32710c0ca28219eebeb1609448112ba99a246c215824369aec3dc4652b6cf
   languageName: node
   linkType: hard
 
@@ -26309,6 +26321,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tsconfig-paths@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "tsconfig-paths@npm:4.2.0"
+  dependencies:
+    json5: "npm:^2.2.2"
+    minimist: "npm:^1.2.6"
+    strip-bom: "npm:^3.0.0"
+  checksum: 10/5e55cc2fb6b800eb72011522e10edefccb45b1f9af055681a51354c9b597d1390c6fa9cc356b8c7529f195ac8a90a78190d563159f3a1eed10e01bbd4d01a8ab
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^1.10.0, tslib@npm:^1.13.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
@@ -26516,29 +26539,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-plugin-css-modules@npm:^5.0.2":
-  version: 5.0.2
-  resolution: "typescript-plugin-css-modules@npm:5.0.2"
+"typescript-plugin-css-modules@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "typescript-plugin-css-modules@npm:5.1.0"
   dependencies:
-    "@types/postcss-modules-local-by-default": "npm:^4.0.0"
-    "@types/postcss-modules-scope": "npm:^3.0.1"
-    dotenv: "npm:^16.0.3"
+    "@types/postcss-modules-local-by-default": "npm:^4.0.2"
+    "@types/postcss-modules-scope": "npm:^3.0.4"
+    dotenv: "npm:^16.4.2"
     icss-utils: "npm:^5.1.0"
-    less: "npm:^4.1.3"
+    less: "npm:^4.2.0"
     lodash.camelcase: "npm:^4.3.0"
-    postcss: "npm:^8.4.21"
+    postcss: "npm:^8.4.35"
     postcss-load-config: "npm:^3.1.4"
     postcss-modules-extract-imports: "npm:^3.0.0"
-    postcss-modules-local-by-default: "npm:^4.0.0"
-    postcss-modules-scope: "npm:^3.0.0"
+    postcss-modules-local-by-default: "npm:^4.0.4"
+    postcss-modules-scope: "npm:^3.1.1"
     reserved-words: "npm:^0.1.2"
-    sass: "npm:^1.58.3"
+    sass: "npm:^1.70.0"
     source-map-js: "npm:^1.0.2"
-    stylus: "npm:^0.59.0"
-    tsconfig-paths: "npm:^4.1.2"
+    stylus: "npm:^0.62.0"
+    tsconfig-paths: "npm:^4.2.0"
   peerDependencies:
     typescript: ">=4.0.0"
-  checksum: 10/97104f17f4ee902277a70e90c1e6a8c597effc6d8515902c3ab21b96995f1e4df46ee2f97637db8c7915569d337ec94ca17a6ae34978242122d181fd56304013
+  checksum: 10/a87487f88262ea9b21108a00a68ccdc1f86f59c73c5faed432e834593679d973a4c7a72479b3a7556913ede1a1527e2f47cada282236194de0a44ee1581c4e81
   languageName: node
   linkType: hard
 
