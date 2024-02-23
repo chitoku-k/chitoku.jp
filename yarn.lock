@@ -8038,13 +8038,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/dotenv-safe@npm:^8.1.5":
-  version: 8.1.5
-  resolution: "@types/dotenv-safe@npm:8.1.5"
+"@types/dotenv-safe@npm:^8.1.6":
+  version: 8.1.6
+  resolution: "@types/dotenv-safe@npm:8.1.6"
   dependencies:
     "@types/node": "npm:*"
     dotenv: "npm:^8.2.0"
-  checksum: 10/0f45e297d497590824e826db28b142ddc28d918fafc67c4c25a84520e332bde2e5b91a2cef15347e86c6cbbaaa0665b375a9558f9626d8024260855ca39b85c7
+  checksum: 10/fcc2995a3a06d54ecf6589c2ffac83a1e65a90e0dce0b1a116ae58e00feb895588bd1336cad529a221acb4ce6a44e963920f818d0dc84e1eb0e17a4111968623
   languageName: node
   linkType: hard
 
@@ -16552,7 +16552,7 @@ __metadata:
     "@storybook/preset-scss": "npm:^1.0.3"
     "@storybook/react-webpack5": "npm:^7.6.17"
     "@svgr/webpack": "npm:^8.1.0"
-    "@types/dotenv-safe": "npm:^8.1.5"
+    "@types/dotenv-safe": "npm:^8.1.6"
     "@types/gatsbyjs__reach-router": "npm:^2.0.4"
     "@types/hast": "npm:^3.0.4"
     "@types/node": "npm:^20.11.19"
