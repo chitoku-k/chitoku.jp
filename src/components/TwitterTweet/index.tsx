@@ -46,7 +46,7 @@ const TwitterTweet: FunctionComponent<TwitterTweetProps> = ({
 
   useEffect(() => {
     if (!ref.current?.firstElementChild) {
-      return
+      return undefined
     }
 
     const observer = new ResizeObserver(([ entry ]) => {
