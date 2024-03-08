@@ -16633,7 +16633,7 @@ __metadata:
     stylelint: "npm:^16.2.1"
     stylelint-config-recess-order: "npm:^4.6.0"
     stylelint-config-standard-scss: "npm:^13.0.0"
-    stylelint-scss: "npm:^6.1.0"
+    stylelint-scss: "npm:^6.2.1"
     tsconfig-paths-webpack-plugin: "npm:^4.1.0"
     turnstile-types: "npm:^1.2.0"
     typescript: "npm:^5.3.3"
@@ -25523,9 +25523,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-scss@npm:^6.1.0":
-  version: 6.1.0
-  resolution: "stylelint-scss@npm:6.1.0"
+"stylelint-scss@npm:^6.2.1":
+  version: 6.2.1
+  resolution: "stylelint-scss@npm:6.2.1"
   dependencies:
     known-css-properties: "npm:^0.29.0"
     postcss-media-query-parser: "npm:^0.2.3"
@@ -25534,7 +25534,7 @@ __metadata:
     postcss-value-parser: "npm:^4.2.0"
   peerDependencies:
     stylelint: ^16.0.2
-  checksum: 10/d1a37af38e6793f60ad3d836741ed624a7a07a56bea094750e72ed6e549243f966efcbe247940c6f1337328db700b1004f49e2119ff421235c979b2574995426
+  checksum: 10/87a7af5775cb7b361b3ac143c5fe1dd59c25466f3255b501dd1bff3084d3af25cc7c6e00ec4a0bda18c30be481c885ff13255fdaa8245576aa44f38bfcfe4f70
   languageName: node
   linkType: hard
 
