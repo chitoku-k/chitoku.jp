@@ -1,14 +1,12 @@
-import React from 'react'
 import { IntlProvider } from 'react-intl'
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
-import type { Meta, Story } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 
 import messages from 'translations/ja.yml'
 import Footer from 'components/Footer'
 
 const meta: Meta = {
   component: Footer,
-  title: 'Components/Footer',
   parameters: {
     layout: 'fullscreen',
   },
@@ -16,7 +14,7 @@ const meta: Meta = {
 
 const history = createHistory(createMemorySource('/'))
 
-const Template: Story = () => (
+const Template: StoryFn = () => (
   <IntlProvider locale="ja" messages={messages}>
     <LocationProvider history={history}>
       <Footer />

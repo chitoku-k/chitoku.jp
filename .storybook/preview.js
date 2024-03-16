@@ -13,7 +13,6 @@ global.___navigate = pathname => action('Navigate')(pathname)
 
 const preview = {
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
     backgrounds: {
       default: 'page',
       values: [

@@ -1,15 +1,13 @@
-import React from 'react'
 import { IntlProvider } from 'react-intl'
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
-import type { Meta, Story } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 
 import messages from 'translations/ja.yml'
 import Navbar from 'components/Navbar'
-import Search from 'components/Search'
+import { SearchProvider } from 'components/Search'
 
 const meta: Meta = {
   component: Navbar,
-  title: 'Components/Navbar',
   parameters: {
     layout: 'fullscreen',
   },
@@ -17,14 +15,14 @@ const meta: Meta = {
 
 const history = createHistory(createMemorySource('/'))
 
-const Template: Story = () => (
-  <Search>
-    <IntlProvider locale="ja" messages={messages}>
+const Template: StoryFn = () => (
+  <IntlProvider locale="ja" messages={messages}>
+    <SearchProvider>
       <LocationProvider history={history}>
-        <Navbar />
+        <Navbar location={history} />
       </LocationProvider>
-    </IntlProvider>
-  </Search>
+    </SearchProvider>
+  </IntlProvider>
 )
 
 export default meta

@@ -1,4 +1,3 @@
-import React from 'react'
 import { IntlProvider } from 'react-intl'
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
 import type { Meta, StoryFn } from '@storybook/react'
@@ -9,7 +8,6 @@ import Pagination from 'components/Pagination'
 
 const meta: Meta = {
   component: Pagination,
-  title: 'Components/Pagination',
   parameters: {
     backgrounds: {
       default: 'container',

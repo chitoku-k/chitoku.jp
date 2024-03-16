@@ -1,4 +1,3 @@
-import React from 'react'
 import type { Meta, StoryFn } from '@storybook/react'
 
 import type { ArticleHeaderProps } from 'components/ArticleHeader'
@@ -6,7 +5,6 @@ import ArticleHeader from 'components/ArticleHeader'
 
 const meta: Meta = {
   component: ArticleHeader,
-  title: 'Components/ArticleHeader',
   parameters: {
     backgrounds: {
       default: 'container',

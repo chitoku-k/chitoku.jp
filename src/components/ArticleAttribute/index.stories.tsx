@@ -1,4 +1,3 @@
-import React from 'react'
 import { IntlProvider } from 'react-intl'
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
 import type { Meta, StoryFn } from '@storybook/react'
@@ -9,7 +8,6 @@ import ArticleAttribute from 'components/ArticleAttribute'
 
 const meta: Meta = {
   component: ArticleAttribute,
-  title: 'Components/ArticleAttribute',
   parameters: {
     backgrounds: {
       default: 'container',

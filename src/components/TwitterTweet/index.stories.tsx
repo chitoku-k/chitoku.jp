@@ -1,4 +1,3 @@
-import React from 'react'
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
 import type { Meta, StoryFn } from '@storybook/react'
 
@@ -7,7 +6,6 @@ import TwitterTweet from 'components/TwitterTweet'
 
 const meta: Meta = {
   component: TwitterTweet,
-  title: 'Components/TwitterTweet',
   parameters: {
     backgrounds: {
       default: 'container',

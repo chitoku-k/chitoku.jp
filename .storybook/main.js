@@ -12,14 +12,12 @@ const config = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    '@storybook/addon-webpack5-compiler-babel',
     '@storybook/preset-scss',
   ],
   framework: {
     name: '@storybook/react-webpack5',
     options: {},
-  },
-  features: {
-    storyStoreV7: false,
   },
   webpackFinal: config => {
     config.module.rules.push({
@@ -30,27 +28,31 @@ const config = {
       ],
     })
 
-    const js = config.module.rules.find(({ test }) => test.test('.js'))
-    js.exclude = /node_modules\/(?!(gatsby|gatsby-script)\/)/u
-    js.use = [
-      {
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            '@babel/preset-react',
-          ],
-          plugins: [
-            [
-              require.resolve('babel-plugin-remove-graphql-queries'),
-              {
-                stage: config.mode === 'development' ? 'develop-html' : 'build-html',
-                staticQueryDir: 'page-data/sq/d',
-              },
-            ],
-          ],
+    const js = config.module.rules.find(({ test, use }) => test?.test('.js') && use?.[0]?.loader?.includes?.('babel'))
+    js.use[0].options.plugins = [
+      [
+        require.resolve('babel-plugin-remove-graphql-queries'),
+        {
+          stage: config.mode === 'development' ? 'develop-html' : 'build-html',
+          staticQueryDir: 'page-data/sq/d',
         },
-      },
+      ],
     ]
+
+    config.module.rules.push({
+      test: /\.m?js$/u,
+      include: /node_modules\/(gatsby|gatsby-script)\//u,
+      use: [
+        {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-react',
+            ],
+          },
+        },
+      ],
+    })
 
     const svg = config.module.rules.find(({ test }) => test.test('.svg'))
     svg.exclude = /\.svg$/u
@@ -58,12 +60,7 @@ const config = {
     config.module.rules.push({
       test: /\.svg$/u,
       use: [
-        {
-          loader: '@svgr/webpack',
-          options: {
-            svgo: false,
-          },
-        },
+        { loader: '@svgr/webpack' },
       ],
     })
 
