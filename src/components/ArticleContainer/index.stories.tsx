@@ -1,14 +1,12 @@
-import React from 'react'
-import type { Meta, Story } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 
 import ArticleContainer from 'components/ArticleContainer'
 
 const meta: Meta = {
   component: ArticleContainer,
-  title: 'Components/ArticleContainer',
 }
 
-const Template: Story = () => (
+const Template: StoryFn = () => (
   <ArticleContainer />
 )
 

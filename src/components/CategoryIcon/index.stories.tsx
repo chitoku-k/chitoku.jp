@@ -1,4 +1,3 @@
-import React from 'react'
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
 import type { Meta, StoryFn } from '@storybook/react'
 
@@ -14,7 +13,6 @@ import windows from 'contents/taxonomies/categories/windows.yml'
 
 const meta: Meta = {
   component: CategoryIcon,
-  title: 'Components/CategoryIcon',
   parameters: {
     backgrounds: {
       default: 'container',

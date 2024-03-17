@@ -1,4 +1,3 @@
-import React from 'react'
 import { IntlProvider } from 'react-intl'
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
 import type { Meta, StoryFn } from '@storybook/react'
@@ -9,7 +8,6 @@ import Sidebar from 'components/Sidebar'
 
 const meta: Meta = {
   component: Sidebar,
-  title: 'Components/Sidebar',
 }
 
 const history = createHistory(createMemorySource('/'))

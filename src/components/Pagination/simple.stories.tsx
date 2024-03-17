@@ -1,4 +1,3 @@
-import React from 'react'
 import { IntlProvider } from 'react-intl'
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
 import type { Meta, StoryFn } from '@storybook/react'
