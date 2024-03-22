@@ -5743,9 +5743,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@restart/ui@npm:^1.6.6":
-  version: 1.6.6
-  resolution: "@restart/ui@npm:1.6.6"
+"@restart/ui@npm:^1.6.8":
+  version: 1.6.8
+  resolution: "@restart/ui@npm:1.6.8"
   dependencies:
     "@babel/runtime": "npm:^7.21.0"
     "@popperjs/core": "npm:^2.11.6"
@@ -5759,7 +5759,7 @@ __metadata:
   peerDependencies:
     react: ">=16.14.0"
     react-dom: ">=16.14.0"
-  checksum: 10/297e70ea7f454de82bc59d2d32bbd9c7f022d5d0132d7ff202594068bc3caa9b52923608c5a5dee5c3610877cad3af6ca2336fd311a77cc8530c522a16a94ea8
+  checksum: 10/53af992e9a32b358a1fd553f9d0846bf9c3809cb0e93eafdcd81bccdaf38796ea31db07e7a889c7a31999ed781adc560f124dbac1c2bc8d26f3fb8a852e23bd6
   languageName: node
   linkType: hard
 
@@ -15582,7 +15582,7 @@ __metadata:
     lint-staged: "npm:^15.2.2"
     prismjs: "npm:^1.29.0"
     react: "npm:^18.2.0"
-    react-bootstrap: "npm:^2.10.1"
+    react-bootstrap: "npm:^2.10.2"
     react-dom: "npm:^18.2.0"
     react-instantsearch: "npm:^7.7.0"
     react-intl: "npm:^6.6.2"
@@ -21600,13 +21600,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-bootstrap@npm:^2.10.1":
-  version: 2.10.1
-  resolution: "react-bootstrap@npm:2.10.1"
+"react-bootstrap@npm:^2.10.2":
+  version: 2.10.2
+  resolution: "react-bootstrap@npm:2.10.2"
   dependencies:
     "@babel/runtime": "npm:^7.22.5"
     "@restart/hooks": "npm:^0.4.9"
-    "@restart/ui": "npm:^1.6.6"
+    "@restart/ui": "npm:^1.6.8"
     "@types/react-transition-group": "npm:^4.4.6"
     classnames: "npm:^2.3.2"
     dom-helpers: "npm:^5.2.1"
@@ -21623,7 +21623,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/5de221ab35e90db04a7a4b34f704e8810b89e3758e40d38cb57ff3c816eb416098b27dac788b64e39b418f1a99cd25b14cb952d6bec5a887501e022b2b937ff4
+  checksum: 10/848ce845ef4ec1da954785ab8271f0468485080a1266ae97a21df726f6d70ff85a955e3f3e61b9d38a801a35a8e629fea4047f8667eaf083236598a159b4cb35
   languageName: node
   linkType: hard
 
