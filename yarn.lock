@@ -7920,14 +7920,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.2.68":
-  version: 18.2.68
-  resolution: "@types/react@npm:18.2.68"
+"@types/react@npm:^18.2.73":
+  version: 18.2.73
+  resolution: "@types/react@npm:18.2.73"
   dependencies:
     "@types/prop-types": "npm:*"
-    "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10/1d254c96e3bb092a2875e4a5e9c786d80194fb23c9b5b7e05c48a3f6a098c8cb38ed4d51deedec7d1d8baa47402b508c0094e826abbc2c5e7a9b7386154b6c5c
+  checksum: 10/799e30e73464dff40e04f4eb7499ebc31f99b1711a69263b9af340af738e35c9cdf53084e3dacc3b21c031aaa0cba1b51f4ba60490204b7abb75f115b841583f
   languageName: node
   linkType: hard
 
@@ -16233,7 +16232,7 @@ __metadata:
     "@types/hast": "npm:^3.0.4"
     "@types/node": "npm:^20.11.30"
     "@types/prismjs": "npm:^1.26.3"
-    "@types/react": "npm:^18.2.68"
+    "@types/react": "npm:^18.2.73"
     "@types/react-dom": "npm:^18.2.23"
     "@typescript-eslint/eslint-plugin": "npm:^7.4.0"
     "@typescript-eslint/parser": "npm:^7.4.0"
