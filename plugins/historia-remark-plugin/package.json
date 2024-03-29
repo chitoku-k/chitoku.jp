@@ -4,7 +4,7 @@
   "type": "module",
   "main": "index.mjs",
   "dependencies": {
-    "@twemoji/api": "^15.0.3",
+    "@twemoji/api": "^15.1.0",
     "unist-util-visit": "^5.0.0"
   }
 }
