@@ -1,5 +1,5 @@
 # syntax = docker/dockerfile:1
-FROM node:21.7.2-slim AS dependencies
+FROM node:21.7.3-slim AS dependencies
 WORKDIR /usr/src
 ARG CI
 RUN --mount=type=cache,target=/var/cache/apt \
