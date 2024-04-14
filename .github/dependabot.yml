@@ -48,9 +48,6 @@ updates:
       - stylelint
       - stylelint-config-standard-scss
       - stylelint-scss
-    typescript-eslint:
-      patterns:
-      - "@typescript-eslint/*"
   open-pull-requests-limit: 99
   versioning-strategy: increase
 - package-ecosystem: docker

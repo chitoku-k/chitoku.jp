@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef, FunctionComponent } from 'react'
+import type { ComponentPropsWithoutRef, FunctionComponent, MouseEvent } from 'react'
 import { cloneElement, isValidElement, useCallback } from 'react'
 import type { GatsbyLinkProps } from 'gatsby-link'
 import { navigate } from 'gatsby-link'
@@ -11,7 +11,7 @@ const LinkContainer: FunctionComponent<GatsbyLinkProps<object>> = ({
   replace,
   ...props
 }) => {
-  const handleClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleClick = useCallback((e: MouseEvent<HTMLAnchorElement>) => {
     if (onClick) {
       onClick(e)
     }

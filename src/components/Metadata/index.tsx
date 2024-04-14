@@ -94,10 +94,10 @@ const Metadata: FunctionComponent<MetadataProps> = ({ ...metadata }) => {
         <JsonLd<BreadcrumbList> item={{
           '@context': 'https://schema.org',
           '@type': 'BreadcrumbList',
-          itemListElement: metadata.breadcrumb.map((item, position) => ({
+          'itemListElement': metadata.breadcrumb.map((item, position) => ({
             '@type': 'ListItem',
             position,
-            item: {
+            'item': {
               '@type': 'Thing',
               ...item,
             },
@@ -108,8 +108,8 @@ const Metadata: FunctionComponent<MetadataProps> = ({ ...metadata }) => {
         <JsonLd<CreativeWork> item={{
           '@context': 'https://schema.org',
           '@type': 'Article',
-          datePublished: metadata.created,
-          thumbnailUrl: thumbnailPath(siteUrl, metadata.thumbnail),
+          'datePublished': metadata.created,
+          'thumbnailUrl': thumbnailPath(siteUrl, metadata.thumbnail),
         }} />
       ) : null}
     </>
