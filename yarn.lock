@@ -15747,10 +15747,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^15.1.0":
-  version: 15.1.0
-  resolution: "globals@npm:15.1.0"
-  checksum: 10/441931212b8b629940484aa6e505a4b7f590bed9f04f381d22e65d412bdb0c1e463aa6ca997ca0ce8a1a4966e934dc68c80ddbe74769adb33b6c7765ee6bef21
+"globals@npm:^15.2.0":
+  version: 15.2.0
+  resolution: "globals@npm:15.2.0"
+  checksum: 10/a3cb67b037c84bfae1a6bedbe316a392a0e40a602b7730fe846312bcc460dd7b08059210762ae6f0e4343259334d473a821d537246983399b10c30c6911b7f9c
   languageName: node
   linkType: hard
 
@@ -16406,7 +16406,7 @@ __metadata:
     gatsby-transformer-remark: "npm:^6.13.1"
     gatsby-transformer-sharp: "npm:^5.13.1"
     gatsby-transformer-yaml: "npm:^5.13.1"
-    globals: "npm:^15.1.0"
+    globals: "npm:^15.2.0"
     husky: "npm:^9.0.11"
     is-absolute-url: "npm:^4.0.1"
     license-webpack-plugin: "npm:^4.0.2"
