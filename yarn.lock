@@ -4858,9 +4858,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/eslintrc@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "@eslint/eslintrc@npm:3.0.2"
+"@eslint/eslintrc@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@eslint/eslintrc@npm:3.1.0"
   dependencies:
     ajv: "npm:^6.12.4"
     debug: "npm:^4.3.2"
@@ -4871,7 +4871,7 @@ __metadata:
     js-yaml: "npm:^4.1.0"
     minimatch: "npm:^3.1.2"
     strip-json-comments: "npm:^3.1.1"
-  checksum: 10/04e3d7de2b16fd59ba8985ecd6922eb488e630f94e4433858567a8a6c99b478bb7b47854b166b830b44905759547d0a03654eb1265952c812d5d1d70e3e4ccf9
+  checksum: 10/02bf892d1397e1029209dea685e9f4f87baf643315df2a632b5f121ec7e8548a3b34f428a007234fa82772218fa8a3ac2d10328637b9ce63b7f8344035b74db3
   languageName: node
   linkType: hard
 
@@ -16974,7 +16974,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:^7.24.6"
     "@babel/preset-typescript": "npm:^7.24.1"
-    "@eslint/eslintrc": "npm:^3.0.2"
+    "@eslint/eslintrc": "npm:^3.1.0"
     "@fortawesome/fontawesome-svg-core": "npm:^6.5.2"
     "@fortawesome/free-brands-svg-icons": "npm:^6.5.2"
     "@fortawesome/free-regular-svg-icons": "npm:^6.5.2"
