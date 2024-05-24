@@ -6,7 +6,7 @@
   "packageManager": "yarn@4.2.2",
   "devDependencies": {
     "@babel/core": "^7.24.6",
-    "@babel/preset-typescript": "^7.24.1",
+    "@babel/preset-typescript": "^7.24.6",
     "@eslint/eslintrc": "^3.1.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
