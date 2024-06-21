@@ -4387,12 +4387,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.22.5":
-  version: 7.23.1
-  resolution: "@babel/runtime@npm:7.23.1"
+"@babel/runtime@npm:^7.24.7":
+  version: 7.24.7
+  resolution: "@babel/runtime@npm:7.24.7"
   dependencies:
     regenerator-runtime: "npm:^0.14.0"
-  checksum: 10/a9fdd322ae1f5d5e3446b6181745300f863164a30acb35ee296c6989cf0ecfd57598a7a6ef209b414575cabe81ef17756412052b3d85fcaf8729332b5b70c45f
+  checksum: 10/7b77f566165dee62db3db0296e71d08cafda3f34e1b0dcefcd68427272e17c1704f4e4369bff76651b07b6e49d3ea5a0ce344818af9116e9292e4381e0918c76
   languageName: node
   linkType: hard
 
@@ -6730,9 +6730,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@restart/ui@npm:^1.6.8":
-  version: 1.6.8
-  resolution: "@restart/ui@npm:1.6.8"
+"@restart/ui@npm:^1.6.9":
+  version: 1.6.9
+  resolution: "@restart/ui@npm:1.6.9"
   dependencies:
     "@babel/runtime": "npm:^7.21.0"
     "@popperjs/core": "npm:^2.11.6"
@@ -6746,7 +6746,7 @@ __metadata:
   peerDependencies:
     react: ">=16.14.0"
     react-dom: ">=16.14.0"
-  checksum: 10/53af992e9a32b358a1fd553f9d0846bf9c3809cb0e93eafdcd81bccdaf38796ea31db07e7a889c7a31999ed781adc560f124dbac1c2bc8d26f3fb8a852e23bd6
+  checksum: 10/86b77d423fdf35dbd329d28618daeae5dcf9c2b331bee2f4bb12a3620c81acec8cd7a4f968c3916085ef9647436100d4f4952aff7bb195aa5fb4bb5de81fea8c
   languageName: node
   linkType: hard
 
@@ -17165,7 +17165,7 @@ __metadata:
     lint-staged: "npm:^15.2.7"
     prismjs: "npm:^1.29.0"
     react: "npm:^18.3.1"
-    react-bootstrap: "npm:^2.10.2"
+    react-bootstrap: "npm:^2.10.3"
     react-dom: "npm:^18.3.1"
     react-instantsearch: "npm:^7.11.3"
     react-intl: "npm:^6.6.8"
@@ -23328,13 +23328,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-bootstrap@npm:^2.10.2":
-  version: 2.10.2
-  resolution: "react-bootstrap@npm:2.10.2"
+"react-bootstrap@npm:^2.10.3":
+  version: 2.10.3
+  resolution: "react-bootstrap@npm:2.10.3"
   dependencies:
-    "@babel/runtime": "npm:^7.22.5"
+    "@babel/runtime": "npm:^7.24.7"
     "@restart/hooks": "npm:^0.4.9"
-    "@restart/ui": "npm:^1.6.8"
+    "@restart/ui": "npm:^1.6.9"
     "@types/react-transition-group": "npm:^4.4.6"
     classnames: "npm:^2.3.2"
     dom-helpers: "npm:^5.2.1"
@@ -23351,7 +23351,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/848ce845ef4ec1da954785ab8271f0468485080a1266ae97a21df726f6d70ff85a955e3f3e61b9d38a801a35a8e629fea4047f8667eaf083236598a159b4cb35
+  checksum: 10/14098a52ae41603d339aff885ca120ff2e85ae7053196016f40cc8ed2ffe88f835cfb5c2ceaa9a1060978fdd58d3a97f9d7f9930f8d0f22421813c07ce3518c7
   languageName: node
   linkType: hard
 
