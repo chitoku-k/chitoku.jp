@@ -24,7 +24,7 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Build (dependencies)
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           target: dependencies
@@ -33,7 +33,7 @@ jobs:
           build-args: |
             CI
       - name: Build (cache)
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           target: cache
@@ -43,7 +43,7 @@ jobs:
             CI
             GATSBY_UPDATE_INDEX=true
       - name: Build
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           load: true
