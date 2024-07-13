@@ -46,11 +46,11 @@
   }
 
   @include media-breakpoint-down(md) {
+    width: 100%;
+
     &.search {
       display: none;
     }
-
-    width: 100%;
   }
 }
 
