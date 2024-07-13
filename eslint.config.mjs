@@ -153,6 +153,7 @@ export default [
           allowMappedTypes: 'always',
         },
       ],
+      '@typescript-eslint/no-unnecessary-type-parameters': 'off',
       '@typescript-eslint/no-unsafe-assignment': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
