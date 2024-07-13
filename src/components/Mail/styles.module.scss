@@ -31,14 +31,14 @@
 }
 
 .input {
+  font-size: 16px;
+  resize: vertical;
+
   &,
   &:focus {
     color: var(--containers-color);
     background-color: var(--containers-background);
   }
-
-  font-size: 16px;
-  resize: vertical;
 }
 
 .wrapper {
