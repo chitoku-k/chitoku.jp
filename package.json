@@ -93,7 +93,7 @@
     "tsconfig-paths-webpack-plugin": "^4.1.0",
     "turnstile-types": "^1.2.1",
     "typescript": "^5.5.3",
-    "typescript-eslint": "^7.16.1",
+    "typescript-eslint": "^7.17.0",
     "typescript-plugin-css-modules": "^5.1.0",
     "unified": "^11.0.5",
     "webpack": "^5.93.0",
