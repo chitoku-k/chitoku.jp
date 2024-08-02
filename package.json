@@ -64,7 +64,7 @@
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "gatsby-transformer-yaml": "^5.13.1",
-    "globals": "^15.8.0",
+    "globals": "^15.9.0",
     "husky": "^9.1.2",
     "is-absolute-url": "^4.0.1",
     "license-webpack-plugin": "^4.0.2",
