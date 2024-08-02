@@ -16276,7 +16276,7 @@ __metadata:
     gatsby-transformer-sharp: "npm:^5.13.1"
     gatsby-transformer-yaml: "npm:^5.13.1"
     globals: "npm:^15.9.0"
-    husky: "npm:^9.1.2"
+    husky: "npm:^9.1.4"
     is-absolute-url: "npm:^4.0.1"
     license-webpack-plugin: "npm:^4.0.2"
     lint-staged: "npm:^15.2.7"
@@ -16589,12 +16589,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^9.1.2":
-  version: 9.1.2
-  resolution: "husky@npm:9.1.2"
+"husky@npm:^9.1.4":
+  version: 9.1.4
+  resolution: "husky@npm:9.1.4"
   bin:
     husky: bin.js
-  checksum: 10/0a187a0b7808f8dda700c14210adf2e894a9639c61dea801551afa2d9fd776aa96ec0bcd3bb7efbaecc8539de593622ebad907ea58dc9ef6c12e24916f0be2a6
+  checksum: 10/c43aa7cbf98246d4f347bc3da807049555b5003af7c6e1658c5cea44a9743b4d0683c72973a4fe02a4ccceb81031a664ecaa7a1a86efe4d37a80a0af17c988ea
   languageName: node
   linkType: hard
 
