@@ -116,7 +116,6 @@ export default [
     rules: {
       ...Object.assign({}, ...typescriptEslint.configs.all.map(({ rules }) => rules)),
       '@typescript-eslint/camelcase': 'off',
-      '@typescript-eslint/comma-dangle': [ 'error', 'always-multiline' ],
       '@typescript-eslint/explicit-function-return-type': [
         'warn',
         {
@@ -124,24 +123,8 @@ export default [
           allowTypedFunctionExpressions: true,
         },
       ],
-      '@typescript-eslint/indent': [ 'error', 2 ],
-      '@typescript-eslint/member-delimiter-style': [
-        'error',
-        {
-          multiline: {
-            delimiter: 'none',
-          },
-        },
-      ],
       '@typescript-eslint/naming-convention': 'off',
       '@typescript-eslint/no-confusing-void-expression': 'off',
-      '@typescript-eslint/no-extra-parens': [
-        'error',
-        'all',
-        {
-          ignoreJSX: 'all'
-        },
-      ],
       '@typescript-eslint/no-magic-numbers': 'off',
       '@typescript-eslint/no-type-alias': [
         'error',
@@ -161,23 +144,12 @@ export default [
           ignoreRestSiblings: true,
         },
       ],
-      '@typescript-eslint/object-curly-spacing': [ 'error', 'always' ],
       '@typescript-eslint/prefer-readonly-parameter-types': 'off',
-      '@typescript-eslint/quotes': [ 'error', 'single' ],
       '@typescript-eslint/restrict-template-expressions': [
         'error',
         {
           allowBoolean: true,
           allowNumber: true,
-        },
-      ],
-      '@typescript-eslint/semi': [ 'error', 'never' ],
-      '@typescript-eslint/space-before-function-paren': [
-        'error',
-        {
-          anonymous: 'always',
-          asyncArrow: 'always',
-          named: 'never',
         },
       ],
       '@typescript-eslint/strict-boolean-expressions': 'off',
