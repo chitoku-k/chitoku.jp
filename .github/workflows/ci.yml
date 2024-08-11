@@ -1,6 +1,9 @@
 name: CI Workflow
 on:
-  - push
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
   build:
@@ -15,27 +18,23 @@ jobs:
         run: cp .env{.example,}
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-      - name: Build (dependencies)
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          target: dependencies
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-          build-args: |
-            CI
-      - name: Build (cache)
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          target: cache
-          cache-from: type=gha
-          cache-to: type=gha
-          build-args: |
-            CI
       - name: Build
         uses: docker/build-push-action@v6
         with:
           context: .
+          target: build
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          load: true
+          tags: chitoku-k/chitoku.jp:build
           build-args: |
             CI
+      - name: Lint
+        run: |
+          docker run --rm chitoku-k/chitoku.jp:build yarn lint:js --format=json --output-file=eslint_report.json
+          docker run --rm chitoku-k/chitoku.jp:build yarn lint:css
+      - name: Annotate eslint results
+        if: ${{ always() }}
+        uses: ataylorme/eslint-annotate-action@v3
+        with:
+          only-pr-files: false
