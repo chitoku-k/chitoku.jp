@@ -28,11 +28,7 @@ ARG TZ=Asia/Tokyo
 ARG GATSBY_UPDATE_INDEX=false
 COPY . /usr/src
 RUN --mount=type=tmpfs,target=/tmp \
-    yarn build && yarn lint
-
-FROM scratch AS cache
-COPY --from=build /usr/src/.cache /usr/src/.cache
-COPY --from=build /usr/src/public /usr/src/public
+    yarn build
 
 FROM nginx:1.27.0
 COPY conf /etc/nginx/templates

@@ -23,29 +23,12 @@ jobs:
           ENVFILE: ${{ secrets.ENVFILE }}
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-      - name: Build (dependencies)
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          target: dependencies
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-          build-args: |
-            CI
-      - name: Build (cache)
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          target: cache
-          cache-from: type=gha
-          cache-to: type=gha
-          build-args: |
-            CI
-            GATSBY_UPDATE_INDEX=true
       - name: Build
         uses: docker/build-push-action@v6
         with:
           context: .
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
           load: true
           tags: container.chitoku.jp/chitoku-k/chitoku.jp
           build-args: |
