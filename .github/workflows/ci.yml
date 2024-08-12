@@ -14,6 +14,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: true
+      - name: Set up reviewdog
+        uses: reviewdog/action-setup@v1
       - name: Set up .env
         run: cp .env{.example,}
       - name: Set up Docker Buildx
@@ -29,12 +31,16 @@ jobs:
           tags: chitoku-k/chitoku.jp:build
           build-args: |
             CI
-      - name: Lint
-        run: |
-          docker run --rm chitoku-k/chitoku.jp:build yarn lint:js --format=json --output-file=eslint_report.json
-          docker run --rm chitoku-k/chitoku.jp:build yarn lint:css
-      - name: Annotate eslint results
+      - name: Run eslint
         if: ${{ always() }}
-        uses: ataylorme/eslint-annotate-action@v3
-        with:
-          only-pr-files: false
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cwd=$(docker run --rm chitoku-k/chitoku.jp:build pwd)
+          docker run --rm chitoku-k/chitoku.jp:build yarn lint:js | sed "s!$cwd/!!g" | reviewdog -f=eslint -reporter=github-pr-annotations -fail-on-error -tee
+      - name: Run stylelint
+        if: ${{ always() }}
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          docker run --rm chitoku-k/chitoku.jp:build yarn lint:css 2>&1 | reviewdog -f=stylelint -reporter=github-pr-annotations -fail-on-error -tee
