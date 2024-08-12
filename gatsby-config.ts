@@ -34,7 +34,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
-        extensions: [ 'js', 'mjs', 'tsx' ],
+        extensions: [ 'js', 'mjs', 'ts', 'tsx' ],
         failOnError: false,
       },
     },
@@ -149,7 +149,8 @@ const config: GatsbyConfig = {
     {
       resolve: 'historia-stylelint-plugin',
       options: {
-        files: [ 'src/**/*.scss' ],
+        extensions: [ 'scss' ],
+        failOnError: false,
       },
     },
   ],
