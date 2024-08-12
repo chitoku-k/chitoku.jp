@@ -37,10 +37,13 @@ jobs:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cwd=$(docker run --rm ${{ steps.build.outputs.imageid }} pwd)
-          docker run --rm ${{ steps.build.outputs.imageid }} yarn lint:js | sed "s!$cwd/!!g" | reviewdog -f=eslint -reporter=github-pr-annotations -fail-on-error -tee
+          docker run --rm ${{ steps.build.outputs.imageid }} yarn lint:js |
+            sed "s!$cwd/!!g" |
+            reviewdog -f=eslint -reporter=github-pr-annotations -filter-mode=nofilter -fail-on-error -tee
       - name: Run stylelint
         if: ${{ always() && steps.build.conclusion == 'success' }}
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          docker run --rm ${{ steps.build.outputs.imageid }} yarn lint:css 2>&1 | reviewdog -f=stylelint -reporter=github-pr-annotations -fail-on-error -tee
+          docker run --rm ${{ steps.build.outputs.imageid }} yarn lint:css 2>&1 |
+            reviewdog -f=stylelint -reporter=github-pr-annotations -filter-mode=nofilter -fail-on-error -tee
