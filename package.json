@@ -91,7 +91,7 @@
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-scss": "^6.5.0",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
-    "turnstile-types": "^1.2.1",
+    "turnstile-types": "^1.2.2",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.1",
     "typescript-plugin-css-modules": "^5.1.0",
