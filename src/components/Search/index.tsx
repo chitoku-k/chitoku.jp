@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
 import { Highlight, InstantSearch, PoweredBy, Snippet, useHits, useInstantSearch, useSearchBox } from 'react-instantsearch'
 import type { BaseHit } from 'instantsearch.js'
-import algoliasearch from 'algoliasearch/lite'
+import { liteClient as algoliasearch } from 'algoliasearch/lite'
 
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
@@ -49,7 +49,7 @@ const Hits: FunctionComponent<HitsProps> = ({
 }) => {
   const { formatMessage } = useIntl()
   const { status } = useInstantSearch()
-  const { hits, results } = useHits<SearchDocument>()
+  const { items, results } = useHits<SearchDocument>()
 
   if (status === 'stalled') {
     return <FontAwesomeIcon className={styles.status} icon={faCircleNotch} spin />
@@ -73,7 +73,7 @@ const Hits: FunctionComponent<HitsProps> = ({
 
   return (
     <>
-      {hits.map(hit => (
+      {items.map(hit => (
         <div key={hit.objectID} className={styles.hitContainer}>
           <Link className={styles.hitLink} to={hit.path}>
             <h2 className={styles.hitHeader}>
