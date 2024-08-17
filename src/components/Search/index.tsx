@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
 import { Highlight, InstantSearch, PoweredBy, Snippet, useHits, useInstantSearch, useSearchBox } from 'react-instantsearch'
 import type { BaseHit } from 'instantsearch.js'
-import algoliasearch from 'algoliasearch/lite'
+import { liteClient as algoliasearch } from 'algoliasearch/lite'
 
 import ArticleContainer from 'components/ArticleContainer'
 import ArticleHeader from 'components/ArticleHeader'
@@ -16,10 +16,6 @@ import Link from 'components/Link'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
-
-const appID = process.env.GATSBY_ALGOLIA_APPID ?? ''
-const apiKey = process.env.GATSBY_ALGOLIA_APIKEY_SEARCH_ONLY ?? ''
-const searchClient = algoliasearch(appID, apiKey)
 
 const SearchContext = createContext<SearchState>({
   query: null,
@@ -49,7 +45,7 @@ const Hits: FunctionComponent<HitsProps> = ({
 }) => {
   const { formatMessage } = useIntl()
   const { status } = useInstantSearch()
-  const { hits, results } = useHits<SearchDocument>()
+  const { items, results } = useHits<SearchDocument>()
 
   if (status === 'stalled') {
     return <FontAwesomeIcon className={styles.status} icon={faCircleNotch} spin />
@@ -73,7 +69,7 @@ const Hits: FunctionComponent<HitsProps> = ({
 
   return (
     <>
-      {hits.map(hit => (
+      {items.map(hit => (
         <div key={hit.objectID} className={styles.hitContainer}>
           <Link className={styles.hitLink} to={hit.path}>
             <h2 className={styles.hitHeader}>
@@ -105,10 +101,9 @@ const Search: FunctionComponent<SearchProps> = ({
     throw new Error('Invalid data')
   }
 
+  const appID = process.env.GATSBY_ALGOLIA_APPID
+  const apiKey = process.env.GATSBY_ALGOLIA_APIKEY_SEARCH_ONLY
   const indexName = process.env.GATSBY_ALGOLIA_INDEXNAME
-  if (!indexName) {
-    throw new Error('Invalid env')
-  }
 
   const {
     siteMetadata: {
@@ -120,6 +115,10 @@ const Search: FunctionComponent<SearchProps> = ({
     ? formatMessage(messages.title_text, { text: query })
     : formatMessage(messages.title)
 
+  const searchClient = appID && apiKey
+    ? algoliasearch(appID, apiKey)
+    : null
+
   return (
     <ArticleContainer>
       <ArticleHeader className={styles.resultHeader} title={
@@ -128,12 +127,14 @@ const Search: FunctionComponent<SearchProps> = ({
           <PoweredBy classNames={{ logo: styles.logo }} theme={theme} />
         </>
       } />
-      <InstantSearch indexName={indexName} searchClient={searchClient}>
-        <Refine query={query} />
-        {query
-          ? <Hits url={url} />
-          : formatMessage(messages.how_to_search)}
-      </InstantSearch>
+      {searchClient && indexName ? (
+        <InstantSearch indexName={indexName} searchClient={searchClient}>
+          <Refine query={query} />
+          {query
+            ? <Hits url={url} />
+            : formatMessage(messages.how_to_search)}
+        </InstantSearch>
+      ) : null}
     </ArticleContainer>
   )
 }
