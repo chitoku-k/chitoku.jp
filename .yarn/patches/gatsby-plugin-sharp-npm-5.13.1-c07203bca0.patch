@@ -1,0 +1,56 @@
+diff --git a/index.js b/index.js
+index 23eda865dacc0f6f7f7cef9796397f38ee7f567d..d5cc5720513d20d82168baf13ce6e752e9a408b5 100644
+--- a/index.js
++++ b/index.js
+@@ -410,6 +410,10 @@ async function fluid({
+     density,
+     format
+   } = metadata;
++  const defaultImagePPI = 72;
++
++  // Standard digital image pixel density
++  const pixelRatio = options.sizeByPixelDensity && typeof density === `number` && density > 0 ? density / defaultImagePPI : 1;
+ 
+   // if no maxWidth is passed, we need to resize the image based on the passed maxHeight
+   const fixedDimension = options.maxWidth === undefined ? `maxHeight` : `maxWidth`;
+@@ -419,6 +423,16 @@ async function fluid({
+     throw new Error(`${fixedDimension} has to be a positive int larger than zero (> 0), now it's ${options[fixedDimension]}`);
+   }
+ 
++  let presentationWidth, presentationHeight;
++
++  if (fixedDimension === `maxWidth`) {
++    presentationWidth = Math.min(options.maxWidth, Math.round(width / pixelRatio));
++    presentationHeight = Math.round(presentationWidth * (height / width));
++  } else {
++    presentationHeight = Math.min(options.maxHeight, Math.round(height / pixelRatio));
++    presentationWidth = Math.round(presentationHeight * (width / height));
++  }
++
+   // Create sizes (in width) for the image if no custom breakpoints are
+   // provided. If the max width of the container for the rendered markdown file
+   // is 800px, the sizes would then be: 200, 400, 800, 1200, 1600.
+@@ -547,11 +561,6 @@ async function fluid({
+     }
+   }
+ 
+-  // calculate presentationSizes
+-  const imageWithDensityOne = images[imageWithDensityOneIndex];
+-  const presentationWidth = imageWithDensityOne.width;
+-  const presentationHeight = imageWithDensityOne.height;
+-
+   // If the users didn't set default sizes, we'll make one.
+   const sizes = options.sizes || `(max-width: ${presentationWidth}px) 100vw, ${presentationWidth}px`;
+   return {
+diff --git a/plugin-options.js b/plugin-options.js
+index 38d8289133d088815dc60586e2d1f36ef834b6b1..bf64973ad832a9b9d095c6ca318c858e3be4808a 100644
+--- a/plugin-options.js
++++ b/plugin-options.js
+@@ -37,6 +37,7 @@ const generalArgs = {
+   pathPrefix: ``,
+   toFormat: ``,
+   toFormatBase64: ``,
++  sizeByPixelDensity: false,
+   rotate: 0
+ };
+ let pluginOptions = Object.assign({}, pluginDefaults);

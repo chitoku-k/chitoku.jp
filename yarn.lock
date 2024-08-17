@@ -10593,7 +10593,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-core-utils@npm:^4.13.0, gatsby-core-utils@npm:^4.13.1":
+"gatsby-core-utils@npm:^4.13.1":
   version: 4.13.1
   resolution: "gatsby-core-utils@npm:4.13.1"
   dependencies:
@@ -10770,9 +10770,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-sharp@chitoku-k/gatsby-plugin-sharp#commit=d5968b9f32f93155110364488d8d2d8b621f088c":
-  version: 5.13.0
-  resolution: "gatsby-plugin-sharp@https://github.com/chitoku-k/gatsby-plugin-sharp.git#commit=d5968b9f32f93155110364488d8d2d8b621f088c"
+"gatsby-plugin-sharp@npm:5.13.1":
+  version: 5.13.1
+  resolution: "gatsby-plugin-sharp@npm:5.13.1"
   dependencies:
     "@babel/runtime": "npm:^7.20.13"
     async: "npm:^3.2.4"
@@ -10780,15 +10780,37 @@ __metadata:
     debug: "npm:^4.3.4"
     filenamify: "npm:^4.3.0"
     fs-extra: "npm:^11.1.1"
-    gatsby-core-utils: "npm:^4.13.0"
-    gatsby-plugin-utils: "npm:^4.13.0"
+    gatsby-core-utils: "npm:^4.13.1"
+    gatsby-plugin-utils: "npm:^4.13.1"
     lodash: "npm:^4.17.21"
     probe-image-size: "npm:^7.2.3"
     semver: "npm:^7.5.3"
     sharp: "npm:^0.32.6"
   peerDependencies:
     gatsby: ^5.0.0-next
-  checksum: 10/c2281c60fb1bc386a9a01bf3960d063bb7c7480454d5a75ba509612c5284fbb33b092fca6d0306e14e457f4a2b9628c0b78fa35cdcba39d6cfd146f47fe65854
+  checksum: 10/4a502a543f974f686c036562fd52572eaa8d8635e6be6fd60d9f1c56bc9119c5ac79acdeb8369ecc06ce51e44c406d5df3c92f8bdaead004e7738fa57d286d27
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-sharp@patch:gatsby-plugin-sharp@npm%3A5.13.1#~/.yarn/patches/gatsby-plugin-sharp-npm-5.13.1-c07203bca0.patch":
+  version: 5.13.1
+  resolution: "gatsby-plugin-sharp@patch:gatsby-plugin-sharp@npm%3A5.13.1#~/.yarn/patches/gatsby-plugin-sharp-npm-5.13.1-c07203bca0.patch::version=5.13.1&hash=253397"
+  dependencies:
+    "@babel/runtime": "npm:^7.20.13"
+    async: "npm:^3.2.4"
+    bluebird: "npm:^3.7.2"
+    debug: "npm:^4.3.4"
+    filenamify: "npm:^4.3.0"
+    fs-extra: "npm:^11.1.1"
+    gatsby-core-utils: "npm:^4.13.1"
+    gatsby-plugin-utils: "npm:^4.13.1"
+    lodash: "npm:^4.17.21"
+    probe-image-size: "npm:^7.2.3"
+    semver: "npm:^7.5.3"
+    sharp: "npm:^0.32.6"
+  peerDependencies:
+    gatsby: ^5.0.0-next
+  checksum: 10/d41be99546d8acc8397bb8a9d56ceee88b82b64f7101ae4467919ad9bb7cd5595b2f01568d1c6f5cbf1802c63b1bc19d1d86bc858fc71a23a00f69185dc8c025
   languageName: node
   linkType: hard
 
@@ -10822,7 +10844,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-utils@npm:^4.13.0, gatsby-plugin-utils@npm:^4.13.1":
+"gatsby-plugin-utils@npm:^4.13.1":
   version: 4.13.1
   resolution: "gatsby-plugin-utils@npm:4.13.1"
   dependencies:
@@ -10918,7 +10940,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-images@npm:^7.13.1":
+"gatsby-remark-images@npm:7.13.1":
   version: 7.13.1
   resolution: "gatsby-remark-images@npm:7.13.1"
   dependencies:
@@ -10936,6 +10958,27 @@ __metadata:
     gatsby: ^5.0.0-next
     gatsby-plugin-sharp: ^5.0.0-next
   checksum: 10/fc1032bb41e96e90168d135d059bc2ddef76136a3e1bb3b3c59a5cefb910491efdf28a7831f06689dc7107b27d1ec7ef8f43164a88fded1ab1c01d292977dc0a
+  languageName: node
+  linkType: hard
+
+"gatsby-remark-images@patch:gatsby-remark-images@npm%3A7.13.1#~/.yarn/patches/gatsby-remark-images-npm-7.13.1-bfe6d0ffe3.patch":
+  version: 7.13.1
+  resolution: "gatsby-remark-images@patch:gatsby-remark-images@npm%3A7.13.1#~/.yarn/patches/gatsby-remark-images-npm-7.13.1-bfe6d0ffe3.patch::version=7.13.1&hash=87fd2e"
+  dependencies:
+    "@babel/runtime": "npm:^7.20.13"
+    chalk: "npm:^4.1.2"
+    cheerio: "npm:^1.0.0-rc.10"
+    gatsby-core-utils: "npm:^4.13.1"
+    is-relative-url: "npm:^3.0.0"
+    lodash: "npm:^4.17.21"
+    mdast-util-definitions: "npm:^4.0.0"
+    query-string: "npm:^6.14.1"
+    unist-util-select: "npm:^3.0.4"
+    unist-util-visit-parents: "npm:^3.1.1"
+  peerDependencies:
+    gatsby: ^5.0.0-next
+    gatsby-plugin-sharp: ^5.0.0-next
+  checksum: 10/b3860b5869e35605dc0f0ab9d526434cc881ef8f98056ec175b415aaf39e31f5831e9e052b6a56ffe84a8aa3c310c8a8a0bcaef1c6281f8daa107c2841778627
   languageName: node
   linkType: hard
 
@@ -12099,13 +12142,13 @@ __metadata:
     gatsby-plugin-minify-html: "npm:^1.0.4"
     gatsby-plugin-no-sourcemaps: "npm:^5.13.0"
     gatsby-plugin-sass: "npm:^6.13.1"
-    gatsby-plugin-sharp: "chitoku-k/gatsby-plugin-sharp#commit=d5968b9f32f93155110364488d8d2d8b621f088c"
+    gatsby-plugin-sharp: "patch:gatsby-plugin-sharp@npm%3A5.13.1#~/.yarn/patches/gatsby-plugin-sharp-npm-5.13.1-c07203bca0.patch"
     gatsby-plugin-svgr-svgo: "npm:^2.0.0"
     gatsby-remark-autolink-headers: "npm:^6.13.1"
     gatsby-remark-copy-linked-files: "npm:^6.13.1"
     gatsby-remark-embed-gist: "npm:^1.2.1"
     gatsby-remark-grid-tables: "npm:^0.1.0"
-    gatsby-remark-images: "npm:^7.13.1"
+    gatsby-remark-images: "patch:gatsby-remark-images@npm%3A7.13.1#~/.yarn/patches/gatsby-remark-images-npm-7.13.1-bfe6d0ffe3.patch"
     gatsby-remark-prismjs: "npm:^7.13.1"
     gatsby-remark-remove-cjk-breaks: "npm:^1.2.1"
     gatsby-source-filesystem: "npm:^5.13.1"

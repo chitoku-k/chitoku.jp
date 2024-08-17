@@ -67,5 +67,6 @@ public
 
 ### yarn ###
 .yarn/*
+!.yarn/patches
 
 # End of https://www.toptal.com/developers/gitignore/api/node,yarn

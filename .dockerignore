@@ -8,3 +8,5 @@ node_modules
 .github
 .husky
 .ignore
+.yarn/*
+!.yarn/patches
