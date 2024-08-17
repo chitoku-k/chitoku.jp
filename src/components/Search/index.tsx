@@ -17,10 +17,6 @@ import Link from 'components/Link'
 import messages from './messages'
 import * as styles from './styles.module.scss'
 
-const appID = process.env.GATSBY_ALGOLIA_APPID ?? ''
-const apiKey = process.env.GATSBY_ALGOLIA_APIKEY_SEARCH_ONLY ?? ''
-const searchClient = algoliasearch(appID, apiKey)
-
 const SearchContext = createContext<SearchState>({
   query: null,
   setQuery: () => {
@@ -110,6 +106,9 @@ const Search: FunctionComponent<SearchProps> = ({
     throw new Error('Invalid env')
   }
 
+  const appID = process.env.GATSBY_ALGOLIA_APPID
+  const apiKey = process.env.GATSBY_ALGOLIA_APIKEY_SEARCH_ONLY
+
   const {
     siteMetadata: {
       siteUrl: url,
@@ -120,6 +119,10 @@ const Search: FunctionComponent<SearchProps> = ({
     ? formatMessage(messages.title_text, { text: query })
     : formatMessage(messages.title)
 
+  const searchClient = appID && apiKey
+    ? algoliasearch(appID, apiKey)
+    : null
+
   return (
     <ArticleContainer>
       <ArticleHeader className={styles.resultHeader} title={
@@ -128,12 +131,14 @@ const Search: FunctionComponent<SearchProps> = ({
           <PoweredBy classNames={{ logo: styles.logo }} theme={theme} />
         </>
       } />
-      <InstantSearch indexName={indexName} searchClient={searchClient}>
-        <Refine query={query} />
-        {query
-          ? <Hits url={url} />
-          : formatMessage(messages.how_to_search)}
-      </InstantSearch>
+      {searchClient ? (
+        <InstantSearch indexName={indexName} searchClient={searchClient}>
+          <Refine query={query} />
+          {query
+            ? <Hits url={url} />
+            : formatMessage(messages.how_to_search)}
+        </InstantSearch>
+      ) : null}
     </ArticleContainer>
   )
 }
