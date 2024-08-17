@@ -32,13 +32,6 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: 'gatsby-plugin-eslint',
-      options: {
-        extensions: [ 'js', 'mjs', 'ts', 'tsx' ],
-        failOnError: false,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-google-gtag',
       options: {
         trackingIds: process.env.GATSBY_GOOGLE_ANALYTICS_ID
@@ -146,13 +139,6 @@ const config: GatsbyConfig = {
       },
     },
     { resolve: 'historia-soarer-update-plugin' },
-    {
-      resolve: 'historia-stylelint-plugin',
-      options: {
-        extensions: [ 'scss' ],
-        failOnError: false,
-      },
-    },
   ],
 }
 
