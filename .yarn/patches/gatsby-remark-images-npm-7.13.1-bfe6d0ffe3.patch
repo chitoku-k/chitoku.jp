@@ -1,0 +1,12 @@
+diff --git a/gatsby-node.js b/gatsby-node.js
+index e03267c557064f37bb64a4a547cdd7502692a1a9..e556cecf8a1db97bd4ab60f04d9b632967043823 100644
+--- a/gatsby-node.js
++++ b/gatsby-node.js
+@@ -7,6 +7,7 @@ exports.pluginOptionsSchema = function (_ref) {
+     linkImagesToOriginal: Joi.boolean().default(true).description("Add a link to each image to the original image. Sometimes people want to see a full-sized version of an image e.g. to see extra detail on a part of the image and this is a convenient and common pattern for enabling this. Set this option to false to disable this behavior."),
+     showCaptions: Joi.alternatives().try(Joi.boolean(), Joi.array().items(Joi.string().valid("title"), Joi.string().valid("alt"))).default(false).description("Add a caption to each image with the contents of the title attribute, when this is not empty. If the title attribute is empty but the alt attribute is not, it will be used instead. Set this option to true to enable this behavior. You can also pass an array instead to specify which value should be used for the caption \u2014 for example, passing ['alt', 'title'] would use the alt attribute first, and then the title. When this is set to true it is the same as passing ['title', 'alt']. If you just want to use the title (and omit captions for images that have alt attributes but no title), pass ['title']."),
+     markdownCaptions: Joi.boolean().default(false).description("Parse the caption as markdown instead of raw text. Ignored if showCaptions is false."),
++    sizeByPixelDensity: Joi.boolean().default(false).description("Pixel density is only used in vector images, which Gatsby’s implementation of Sharp doesn’t support. This option is currently a no-op and will be removed in the next major version of Gatsby."),
+     wrapperStyle: Joi.alternatives().try(Joi.object({}).unknown(true), Joi.function().maxArity(1), Joi.string()),
+     backgroundColor: Joi.string().default("white").description("Set the background color of the image to match the background image of your design.\n\n      Note:\n      - set this option to transparent for a transparent image background.\n      - set this option to none to completely remove the image background."),
+     quality: Joi.number().default(50).description("The quality level of the generated files."),

@@ -7,6 +7,7 @@ RUN --mount=type=cache,target=/var/cache/apt \
     apt-get -y update && \
     apt-get -y install \
         git
+COPY .yarn/ /usr/src/.yarn/
 COPY package.json yarn.lock .yarnrc.yml /usr/src/
 COPY plugins/historia-feed-plugin/package.json /usr/src/plugins/historia-feed-plugin/
 COPY plugins/historia-remark-plugin/package.json /usr/src/plugins/historia-remark-plugin/

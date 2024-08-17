@@ -26,6 +26,7 @@ updates:
       - gatsby-plugin-google-gtag
       - gatsby-plugin-no-sourcemaps
       - gatsby-plugin-sass
+      - gatsby-plugin-sharp
       - gatsby-remark-autolink-headers
       - gatsby-remark-copy-linked-files
       - gatsby-remark-images
