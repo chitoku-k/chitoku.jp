@@ -5,6 +5,10 @@ on:
       - master
   pull_request:
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build:
     name: Build
