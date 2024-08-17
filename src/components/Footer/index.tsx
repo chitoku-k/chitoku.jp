@@ -23,19 +23,19 @@ const Footer: FunctionComponent = () => {
   const repositoryName = process.env.GATSBY_REPOSITORY_NAME
   const repositoryTreeUrl = process.env.GATSBY_REPOSITORY_TREE_URL
 
-  if (!commit) {
-    throw new Error('Invalid data')
-  }
-  if (!repositoryName || !repositoryTreeUrl) {
-    throw new Error('Invalid env')
-  }
-
   return (
     <footer className={styles.footer}>
-      <FormattedMessage {...messages.copyright} values={{
-        link: <Link className={styles.link} to={`${repositoryTreeUrl}${commit.hash}`}>{repositoryName}</Link>,
-        license: <Link className={styles.link} to="/licenses.txt">{formatMessage(messages.license)}</Link>,
-      }} />
+      {commit && repositoryName && repositoryTreeUrl ? (
+        <FormattedMessage {...messages.copyright} values={{
+          link: <Link className={styles.link} to={`${repositoryTreeUrl}${commit.hash}`}>{repositoryName}</Link>,
+          license: <Link className={styles.link} to="/licenses.txt">{formatMessage(messages.license)}</Link>,
+        }} />
+      ) : (
+        <FormattedMessage {...messages.copyright} values={{
+          link: null,
+          license: <Link className={styles.link} to="/licenses.txt">{formatMessage(messages.license)}</Link>,
+        }} />
+      )}
     </footer>
   )
 }
