@@ -101,13 +101,9 @@ const Search: FunctionComponent<SearchProps> = ({
     throw new Error('Invalid data')
   }
 
-  const indexName = process.env.GATSBY_ALGOLIA_INDEXNAME
-  if (!indexName) {
-    throw new Error('Invalid env')
-  }
-
   const appID = process.env.GATSBY_ALGOLIA_APPID
   const apiKey = process.env.GATSBY_ALGOLIA_APIKEY_SEARCH_ONLY
+  const indexName = process.env.GATSBY_ALGOLIA_INDEXNAME
 
   const {
     siteMetadata: {
@@ -131,7 +127,7 @@ const Search: FunctionComponent<SearchProps> = ({
           <PoweredBy classNames={{ logo: styles.logo }} theme={theme} />
         </>
       } />
-      {searchClient ? (
+      {searchClient && indexName ? (
         <InstantSearch indexName={indexName} searchClient={searchClient}>
           <Refine query={query} />
           {query
