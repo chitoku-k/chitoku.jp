@@ -16,7 +16,6 @@
     "scss/at-each-key-value-single-line": true,
     "scss/at-function-named-arguments": "never",
     "scss/at-function-parentheses-space-before": "never",
-    "scss/at-import-partial-extension": "never",
     "scss/at-mixin-argumentless-call-parentheses": "never",
     "scss/at-mixin-named-arguments": "never",
     "scss/at-mixin-parentheses-space-before": "never",
@@ -39,6 +38,7 @@
     "scss/double-slash-comment-whitespace-inside": "always",
     "scss/function-quote-no-quoted-strings-inside": true,
     "scss/function-unquote-no-unquoted-strings-inside": true,
+    "scss/load-partial-extension": "never",
     "scss/map-keys-quotes": "always",
     "scss/media-feature-value-dollar-variable": ["always", {
       "ignore": ["keywords"]
