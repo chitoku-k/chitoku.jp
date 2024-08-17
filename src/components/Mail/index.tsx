@@ -58,9 +58,6 @@ const Mail: FunctionComponent = () => {
   const [ readOnly, setReadOnly ] = useState(false)
 
   const siteKey = process.env.GATSBY_MAIL_SITE_KEY
-  if (!siteKey) {
-    throw new Error('Invalid env')
-  }
 
   const onSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
     const form = new FormData(e.currentTarget)
@@ -115,11 +112,13 @@ const Mail: FunctionComponent = () => {
             <Form.Control className={styles.input} inputMode="text" name="body" as="textarea" cols={40} rows={10} required readOnly={readOnly} />
           </Label>
         </Form.Group>
-        <Card className={styles.group}>
-          <Card.Body className={styles.verification}>
-            <Turnstile responseFieldName="g-recaptcha-response" action="mail" language="en" sitekey={siteKey} onVerify={setToken} refreshExpired="auto" />
-          </Card.Body>
-        </Card>
+        {siteKey ? (
+          <Card className={styles.group}>
+            <Card.Body className={styles.verification}>
+              <Turnstile responseFieldName="g-recaptcha-response" action="mail" language="en" sitekey={siteKey} onVerify={setToken} refreshExpired="auto" />
+            </Card.Body>
+          </Card>
+        ) : null}
         <div className={styles.submission}>
           {status === 'sent' ? (
             <div className={styles.area}>
