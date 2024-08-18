@@ -12080,12 +12080,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"historia-soarer-update-plugin@workspace:plugins/historia-soarer-update-plugin":
-  version: 0.0.0-use.local
-  resolution: "historia-soarer-update-plugin@workspace:plugins/historia-soarer-update-plugin"
-  languageName: unknown
-  linkType: soft
-
 "historia-taxonomy-plugin@workspace:plugins/historia-taxonomy-plugin":
   version: 0.0.0-use.local
   resolution: "historia-taxonomy-plugin@workspace:plugins/historia-taxonomy-plugin"
