@@ -138,7 +138,6 @@ const config: GatsbyConfig = {
         },
       },
     },
-    { resolve: 'historia-soarer-update-plugin' },
   ],
 }
 
