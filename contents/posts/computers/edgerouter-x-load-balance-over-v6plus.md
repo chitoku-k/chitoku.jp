@@ -11,7 +11,7 @@ tags:
 EdgeOS は標準で WAN へのロードバランサー機能を搭載しており、パケットのルーティング先を予め指定した方法でインターフェイスごとに振り分けることができます[^1]。
 たとえば複数の回線を契約しているような[逸般の誤家庭](https://twitter.com/hashtag/%E9%80%B8%E8%88%AC%E3%81%AE%E8%AA%A4%E5%AE%B6%E5%BA%AD)で負荷をそれぞれに分散させたり、一方の回線が利用できなくなったときにもう一方の回線に自動で切り替えたり、といったユースケースがあります。
 
-この記事では [So-net 光 プラス](https://www.so-net.ne.jp/access/hikari/collabo/) を契約している我が家（VDSL 😢）で、フレッツ光の PPPoE 方式による接続と [v6 プラス](https://www.so-net.ne.jp/access/hikari/v6plus/) を EdgeRouter から利用しつつ、v6 プラスが利用できないときに PPPoE 接続にフォールバックさせるように設定してみます。
+この記事では [So-net 光](https://www.so-net.ne.jp/access/hikari/) を契約している我が家（VDSL 😢）で、フレッツ光の PPPoE 方式による接続と [v6 プラス](https://www.so-net.ne.jp/access/hikari/v6plus/) を EdgeRouter から利用しつつ、v6 プラスが利用できないときに PPPoE 接続にフォールバックさせるように設定してみます。
 
 ## v6 プラスのデメリット
 
@@ -22,7 +22,7 @@ So-net による v6 プラスの説明では以下のようにサービスの制
 
 > 「v6プラス」をご利用の場合、「固定IPサービス」は利用できません。
 >
-> ※PPPoEのIPv4を有効化いただくことでご利用可能です。 (詳しくは[こちら](https://support.so-net.ne.jp/supportsitedetailpage?id=000013893))  
+> ※PPPoEのIPv4を有効化いただくことでご利用可能です。 (詳しくは[「v6プラス」 （IPoE方式でのIPv4通信)）を無効にする （または有効にする） 方法を知りたい](https://support.so-net.ne.jp/supportsitedetailpage?id=000013893))  
 > 　また、以下に該当するサービスについても、ご利用いただけない場合があります。
 >
 > - 特定のプロトコル (PPTP、SCTP) を利用するサービス
@@ -154,9 +154,9 @@ EdgeRouter は現在のところ MAP-E に対応していないため、v6 プ�
 
 ## 脚注
 
-[^1]: [EdgeRouter - WAN Load-Balancing – Ubiquiti Support and Help Center](https://help.ubnt.com/hc/en-us/articles/205145990-EdgeRouter-WAN-Load-Balancing)
+[^1]: [EdgeRouter - WAN Load-Balancing  Ubiquiti Help Center](https://help.ui.com/hc/en-us/articles/205145990-EdgeRouter-WAN-Load-Balancing)
 [^2]: [次世代通信 v6プラス | So-net (ソネット)](https://www.so-net.ne.jp/access/hikari/v6plus/)
-[^3]: [v6プラス(IPv6/IPv4インターネットサービス) | 株式会社JPIX](https://www.jpne.co.jp/service/v6plus/#v6pbbr)
-[^4]: [EdgeRouter X をなるべくCLIで設定する - Qiita](https://qiita.com/maiani/items/08dbfbd9e6663da86079#%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E5%85%89%E5%90%91%E3%81%91%E8%A8%AD%E5%AE%9Amtumss)
-[^5]: [v6プラス対応機能](http://www.rtpro.yamaha.co.jp/RT/docs/v6plus/)
+[^3]: [【VNEサービス】v6プラス(IPv6/IPv4インターネットサービス) | 株式会社JPIX](https://www.jpne.co.jp/service/v6plus/#v6pbbr)
+[^4]: [EdgeRouter X をなるべくCLIで設定する #Network - Qiita](https://qiita.com/maiani/items/08dbfbd9e6663da86079#%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E5%85%89%E5%90%91%E3%81%91%E8%A8%AD%E5%AE%9Amtumss)
+[^5]: [v6プラス対応機能](https://www.rtpro.yamaha.co.jp/RT/docs/v6plus/)
 [^6]: [IPv4でPPPoEとDS-Lite/MAP-Eを併用しよう](https://www.marbacka.net/blog/ipv4_pppoe_ds-lite_simultaneously/#n002)

@@ -7,7 +7,7 @@ tags:
 ---
 ## 概要
 
-[EdgeRouter X](https://store.ui.com/collections/routing-switching/products/edgerouter-x) にはビルトインの DDNS 機能[^1]が搭載されていますがドキュメントは具体的な設定例を掲載していません。
+[EdgeRouter X](https://store.ui.com/us/en/products/er-x) にはビルトインの DDNS 機能[^1]が搭載されていますがドキュメントは具体的な設定例を掲載していません。
 設定を調整してみたところ EdgeRouter でも Cloudflare の DNS サーバーの AAAA レコードが自動更新されるような設定ができたのでご紹介します。
 
 ## 環境
@@ -26,8 +26,8 @@ tags:
 
 ## 事前準備（＋ファームウェアのアップデート時の作業）
 
-EdgeRouter に搭載されている DDNS クライアントは [ddclient](https://sourceforge.net/projects/ddclient/) です。  
-EdgeOS v1.x では IPv6 サポートのためには Perl ライブラリーである [IO::Socket:INET6](https://packages.debian.org/jessie/libio-socket-inet6-perl) のインストールが必要で、事前準備のほかファームウェアのアップデートの際にも以下を実行する必要があります。
+EdgeRouter に搭載されている DDNS クライアントは [ddclient](https://github.com/ddclient/ddclient) です。  
+EdgeOS v1.x では IPv6 サポートのためには Perl ライブラリーである [IO::Socket:INET6](https://tracker.debian.org/pkg/libio-socket-inet6-perl) のインストールが必要で、事前準備のほかファームウェアのアップデートの際にも以下を実行する必要があります。
 
 <!-- more -->
 
@@ -104,6 +104,6 @@ $ sudo ddclient -verbose -force -file /etc/ddclient/ddclient_eth0.conf
 
 ## 脚注
 
-[^1]: [EdgeRouter - Built-in Dynamic DNS – Ubiquiti Networks Support and Help Center](https://help.ubnt.com/hc/en-us/articles/204952234-EdgeRouter-Built-in-Dynamic-DNS)
+[^1]: [EdgeRouter - Built-in Dynamic DNS – Ubiquiti Networks Support and Help Center](https://help.ui.com/hc/en-us/articles/204952234-EdgeRouter-Built-in-Dynamic-DNS)
 [^2]: [EdgeRouter - Add Debian Packages to EdgeOS – Ubiquiti Networks Support and Help Center](https://help.ubnt.com/hc/en-us/articles/205202560-EdgeRouter-Add-Debian-Packages-to-EdgeOS)
 [^3]: [Get API keys (legacy) · Cloudflare Fundamentals docs](https://developers.cloudflare.com/fundamentals/api/get-started/keys/)

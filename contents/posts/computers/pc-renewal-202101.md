@@ -242,11 +242,11 @@ GPU の相性問題のようなトラブルでは頭を抱えましたが、正�
 
 ## 脚注
 
-[^1]: [AMD Ryzen 9 3900X](https://www.amd.com/ja/products/cpu/amd-ryzen-9-3900x)
+[^1]: [AMD Ryzen 9 3900X](https://www.amd.com/en/product/8436)
 [^2]: [MPG B550I GAMING EDGE WIFI](https://jp.msi.com/Motherboard/MPG-B550I-GAMING-EDGE-WIFI)
 [^3]: [GG-RTX3070-E8GB/TP](https://web.archive.org/web/20210119183245/https://www.kuroutoshikou.com/gaming/product/graphics_bord/nvidia/gg-rtx3070-e8gb_tp/)（Wayback Machine）
 [^4]: [SUPER FLOWER LEADEX III GOLD 850W](https://www.super-flower.com.tw/product-data.php?productID=100&lang=en)
-[^5]: [ADATA AD4U3200716G22-D](https://www.adata.com/jp/consumer/655)
+[^5]: [ADATA AD4U3200716G22-D](https://www.adata.com/jp/consumer/category/computer-memory/655/)
 [^6]: [CSSD-M2B5GPG3VND](https://www.cfd.co.jp/biz/product/detail/cssd-m2b5gpg3vnd.html)
 [^7]: [SCYTHE 虎徹 MarkⅡ](https://web.archive.org/web/20210116182355/https://www.scythe.co.jp/product/cpu-cooler/scktt-2000)（Wayback Machine）
 [^8]: [SilverStone SUGO 15](https://www.silverstonetek.com/jp/product/info/computer-chassis/SUGO15/)

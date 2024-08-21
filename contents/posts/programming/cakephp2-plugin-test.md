@@ -81,7 +81,7 @@ lampager-cakephp2 では次のように [php-coveralls/php-coveralls](https://gi
 [lampager-cakephp2](https://github.com/lampager/lampager-cakephp2) はそれを CakePHP 2 のモデルやコントローラーから呼び出すためのプラグインです。
 
 現在 Lampager では CakePHP 3 やそれ以外の各種フレームワークも含めてアダプター/プラグインの実装を募集しています。
-あわせて [@mpyw](https://qiita.com/mpyw) さんの「[OFFSETを使わない高速ページネーションを任意のPHPフレームワークで超簡単に実現する - Qiita](https://qiita.com/mpyw/items/b94b7d69146777f7a407)」もご覧ください。
+あわせて [@mpyw](https://qiita.com/mpyw) さんの「[OFFSETを使わない高速ページネーションを任意のPHPフレームワークで超簡単に実現する #Laravel - Qiita](https://qiita.com/mpyw/items/b94b7d69146777f7a407)」もご覧ください。
 
 長い記事でしたがお読みいただきありがとうございました。  
 明日の担当は [@yuzoiwasaki](https://qiita.com/yuzoiwasaki) さんです。

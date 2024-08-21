@@ -42,7 +42,7 @@ WPF 4 では次のようにしてスクロール単位を切り替えること�
 ```
 
 しかしながら、この方法でスクロール単位を切り替えると、UI 仮想化が無効に設定されるため、アプリケーションのパフォーマンスが悪化します。  
-参考：[パフォーマンスの最適化 : コントロール](https://docs.microsoft.com/ja-jp/dotnet/framework/wpf/advanced/optimizing-performance-controls)
+参考：[コントロールのパフォーマンスを最適化する - WPF .NET Framework | Microsoft Learn](https://learn.microsoft.com/ja-jp/dotnet/desktop/wpf/advanced/optimizing-performance-controls)
 
 WPF 4.5 ではこれを解決するために、`VirtualizingPanel` に設定できる添付プロパティが追加されました。
 

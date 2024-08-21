@@ -15,15 +15,14 @@ Ubuntu 以外の Linux の場合は `prepare-debian-ubuntu.sh` の中身を見�
 
 Xcode と Homebrew をインストールしてから、ターミナルで環境を構築します。
 
-1. Mac App Store にて [Xcode](https://itunes.apple.com/jp/app/xcode/id497799835) をインストールして、未起動なら一度起動しておきます。
+1. Mac App Store にて [Xcode](https://apps.apple.com/jp/app/xcode/id497799835) をインストールして、未起動なら一度起動しておきます。
 1. [Homebrew](https://brew.sh/) をインストールします。
 1. ターミナルで [pspdev/psptoolchain](https://github.com/pspdev/psptoolchain) をインストールします。
 
 ```bash
 $ git clone 'https://github.com/pspdev/psptoolchain.git'
 $ cd psptoolchain
-$ ./prepare-mac-os.sh
-$ sudo ./toolchain-sudo.sh
+$ sudo ./prepare-mac-os.sh
 ```
 
 ## Ubuntu
@@ -33,8 +32,7 @@ $ sudo ./toolchain-sudo.sh
 ```bash
 $ git clone 'https://github.com/pspdev/psptoolchain.git'
 $ cd psptoolchain
-$ ./prepare-debian-ubuntu.sh
-$ sudo ./toolchain-sudo.sh
+$ sudo ./prepare-debian-ubuntu.sh
 ```
 
 ## エラーが出た場合

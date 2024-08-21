@@ -12,7 +12,7 @@ tags:
 
 ## 棒読みちゃんのセットアップ
 
-1. [棒読みちゃん](http://chi.usamimi.info/Program/Application/BouyomiChan/)のホームページを開きます。
+1. [棒読みちゃん](https://chi.usamimi.info/Program/Application/BouyomiChan/)のホームページを開きます。
 1. 中央の [ダウンロードはこちら] からダウンロードします。
 1. ダウンロードしたファイルを展開（解凍）します。
 1. 展開したファイルの中にある、唇のアイコンの BouyomiChan.exe を起動します。  

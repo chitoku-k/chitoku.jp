@@ -30,7 +30,7 @@ Windows XP には音声認識を利用するためのソフトウェアが標準
 
 ### ファイルをダウンロードしてセットアップする
 
-1. [Speech SDK 5.1](https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=10121) を開きます。
+1. [Speech SDK 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=10121) を開きます。
 2. SpeechSDK51.exe, SpeechSDK51LangPack.exe をダウンロードします。
 3. 上の表記の順にセットアップを実行します。  
    適当なフォルダを指定して UnZip をクリックし、展開された Setup.exe を実行します。
@@ -73,7 +73,7 @@ Windows XP には音声認識を利用するためのソフトウェアが標準
 番外編として、パソコンに文字を入力するのではなく、逆にパソコンが文章を読み上げる「音声合成」も試してみます。
 ここでは、無料で公開されている「棒読みちゃん」というソフトウェアを使用します。
 
-1. [棒読みちゃん](http://chi.usamimi.info/Program/Application/BouyomiChan/)のホームページを開きます。
+1. [棒読みちゃん](https://chi.usamimi.info/Program/Application/BouyomiChan/)のホームページを開きます。
 2. 中央の \[ダウンロードはこちら\] からダウンロードします。
 3. ダウンロードしたファイルを展開（解凍）します。
 4. 展開したファイルの中にある、唇のアイコンの BouyomiChan.exe を起動します。  

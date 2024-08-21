@@ -20,7 +20,7 @@ Bash で書かれたシェルスクリプトで引数を処理するためには
 
 ### `--foo bar`: 引数を分けて受け入れる
 
-[FreeBSD tar](https://www.freebsd.org/cgi/man.cgi?query=tar&sektion=1&manpath=FreeBSD+12.0-RELEASE+and+Ports)、[curl](https://curl.haxx.se/docs/manual.html)、[Ruby](https://docs.ruby-lang.org/ja/latest/doc/spec=2frubycmd.html#ruby)、[Python](https://docs.python.org/3/using/cmdline.html) などで採用されている方式です。  
+[FreeBSD tar](https://www.freebsd.org/cgi/man.cgi?query=tar&sektion=1)、[curl](https://curl.se/docs/manpage.html)、[Ruby](https://docs.ruby-lang.org/ja/latest/doc/spec=2frubycmd.html#ruby)、[Python](https://docs.python.org/3/using/cmdline.html) などで採用されている方式です。  
 この記事の [--foo bar を処理する方法](#--foo-bar-を処理する方法)で扱っています。
 
 ### `--foo=bar` と `--foo bar` の両方を受け入れる
@@ -32,11 +32,11 @@ Bash で書かれたシェルスクリプトで引数を処理するためには
 
 ### `-foo:bar`: 区切り文字として `:` を使って受け入れる
 
-[Java](https://docs.oracle.com/en/java/javase/12/tools/java.html#GUID-3B1CE181-CD30-4178-9602-230B800D4FAE) で採用されている方式です。
+[Java](https://docs.oracle.com/en/java/javase/22/docs/specs/man/java.html#standard-options-for-java) で採用されている方式です。
 
 ### `-foo bar`: 引数を分けて受け入れる
 
-[OpenSSL](https://www.openssl.org/docs/manmaster/man1/openssl-s_client.html)、[Go](https://golang.org/cmd/go/) で採用されている方式です。
+[OpenSSL](https://docs.openssl.org/master/man1/openssl-s_client/)、[Go](https://pkg.go.dev/cmd/go) で採用されている方式です。
 
 ## getopts の機能
 
@@ -334,19 +334,19 @@ $ timestr --day
 timestr.bash: illegal option -- day
 ```
 
-## BASH Cheat Sheet
+## Bash Cheat Sheet
 
-Bash のビルトインコマンドや各種コマンドがまとまったチートシート（PCWDLD.com より）
+Bash のビルトインコマンドや各種コマンドがまとまったチートシート（websentra.com より）
 
-- [BASH Cheat Sheet](https://www.pcwdld.com/bash-cheat-sheet)
+- [Bash Cheat Sheet](https://www.websentra.com/bash-cheat-sheet/)
 
 ## 脚注
 
 [^1]: [Bourne Shell Builtins (Bash Reference Manual)](https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Builtins.html#index-getopts)
 [^2]: [bash によるオプション解析 - Qiita](https://web.archive.org/web/20211216092819/https://qiita.com/b4b4r07/items/dcd6be0bb9c9185475bb)（Wayback Machine）
-[^3]: [Bashでちょっと凝ったオプションの解析をする - ねこのて](https://dojineko.hateblo.jp/entry/2016/06/30/225113)
-[^4]: [shell scriptでlong optionを処理する │ うしねずみの技術メモ](https://usinezumi.com/blog/2016/10/16/304/)
-[^5]: [bashでロングオプションとショートオプションの両方に対応する - Qiita](https://qiita.com/akameco/items/0e932d8ec372b87ccb34)
+[^3]: [Bashでちょっと凝ったオプションの解析をする - 🐾 Nekonote.](https://dojineko.hateblo.jp/entry/2016/06/30/225113)
+[^4]: [shell scriptでlong optionを処理する - うしねずみの技術メモ](https://usinezumi.com/blog/2016/10/16/304/)
+[^5]: [bashでロングオプションとショートオプションの両方に対応する #Bash - Qiita](https://qiita.com/akameco/items/0e932d8ec372b87ccb34)
 [^6]: [Bourne Shell Builtins (Bash Reference Manual)](https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Builtins.html#index-shift)
 [^7]: [Shell Parameter Expansion (Bash Reference Manual)](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html)
 [^8]: [Bourne Shell Variables (Bash Reference Manual)](https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Variables.html#index-OPTIND)

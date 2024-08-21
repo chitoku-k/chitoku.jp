@@ -13,7 +13,7 @@ Windows 上で動作している音楽プレーヤーと連携して、再生中
 - iTunes
 - x-アプリ
 - LISMO Port（x-アプリ for LISMO）
-- foobar2000（要 [COM Automation server](http://foosion.foobar2000.org/0.9/#comserver) コンポーネント）
+- foobar2000（要 [COM Automation server](https://foosion.foobar2000.org/0.9/#comserver) コンポーネント）
 
 ライブラリならびにソースコードは GitHub 上で MIT ライセンスで公開されています。  
 [https://github.com/chitoku-k/NowPlayingLib](https://github.com/chitoku-k/NowPlayingLib)
