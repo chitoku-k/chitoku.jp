@@ -51,8 +51,8 @@ category: Windows
 
 **略語:**  
 [ESP](https://wiki.archlinux.jp/index.php/EFI_%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3): EFI System Partition  
-[MSR](https://docs.microsoft.com/ja-jp/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions): Microsoft Reserved Partition  
-[WinRE](https://docs.microsoft.com/ja-jp/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference): Windows Recovery Environment  
+[MSR](https://learn.microsoft.com/ja-jp/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions): Microsoft Reserved Partition  
+[WinRE](https://learn.microsoft.com/ja-jp/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference): Windows Recovery Environment  
 [LVM](https://wiki.archlinux.jp/index.php/LVM): Logical Volume Manager
 
 ### SSD #1（引っ越し前）

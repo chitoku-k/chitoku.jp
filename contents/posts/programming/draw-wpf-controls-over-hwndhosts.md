@@ -51,4 +51,4 @@ Windows の API では WPF と違い、ウィンドウ、ボタン、ドロッ�
 
 ただ、高度なイベントを取得して連携する場合などは同じサイズのウィンドウをぴったり貼り付けて追従させるなどの実装が必要になるかもしれません。
 
-参考：[WPF と Win32 の相互運用性](https://docs.microsoft.com/ja-jp/dotnet/framework/wpf/advanced/wpf-and-win32-interoperation)
+参考：[WPF と Win32 の相互運用性 | Microsoft Learn](https://learn.microsoft.com/ja-jp/dotnet/desktop/wpf/advanced/wpf-and-win32-interoperation)

@@ -35,8 +35,7 @@ category: PSP プログラミング
 +------------------+-----------------------------------------------------------------+
 
 参考:  
-[ハードウェアの取扱説明書 | プレイステーション® オフィシャルサイト](https://www.jp.playstation.com/support/manual/manual_list.html)  
-[PSP®「プレイステーション・ポータブル」 ピアノ・ブラック | プレイステーション® オフィシャルサイト](https://www.jp.playstation.com/psp/hardware/psp3000pb.html)
+[ハードウェアの取扱説明書](https://www.playstation.com/ja-jp/support/hardware/manuals/#PSP)
 
 ## その他の性能
 

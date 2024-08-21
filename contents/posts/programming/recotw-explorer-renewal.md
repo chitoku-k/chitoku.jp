@@ -3,7 +3,7 @@ title: RecoTw Explorer を書き直したら思ったより大きくなった話
 created: 2015-02-08T15:35:45+09:00
 category: プログラミング
 ---
-今までバグをたくさん放置したままレンタルサーバーで抱えていた [RecoTw Explorer](https://recotw.chitoku.jp/)（詳細は [GitHub](https://github.com/RecoTwExplorer/RecoTwExplorer) へ）をいろいろ変更してリニューアルしたので告知ついでに。
+今までバグをたくさん放置したままレンタルサーバーで抱えていた RecoTw Explorer（詳細は [GitHub](https://github.com/RecoTwExplorer/RecoTwExplorer) へ）をいろいろ変更してリニューアルしたので告知ついでに。
 
 ## TypeScript で書き直した
 
@@ -116,7 +116,7 @@ Windows XP 最新の IE 8 なんかもう滅びたんや…………。
 
 ## BrowserSync でのデバッグ
 
-また [BrowserSync](https://www.browsersync.io/)（gulp では [gulp-browser-sync](https://www.browsersync.io/docs/gulp/)）というデバッグ支援のツールも導入してもらいました。
+また [BrowserSync](https://browsersync.io/)（gulp では [gulp-browser-sync](https://browsersync.io/docs/gulp/)）というデバッグ支援のツールも導入してもらいました。
 自動的にローカル サーバーを立ち上げて、各種ブラウザや同じネットワークに接続するスマートフォンやタブレット（！！！）からリアルタイムでその状況を同期できるツールです。
 スクロールやフォームの入力内容など開いているブラウザがソケット通信を通じて、全ての状態が自動的に同期されるときの快適さは圧巻です。
 こちらは [gulp-watch](https://github.com/floatdrop/gulp-watch) のような機能を持ち合わせていて、対象のファイルが PC 上で変更されると必要に応じてページが読み込み直されたり、CSS や画像の場合は再読み込みなしでそれが適用されるようになっています。

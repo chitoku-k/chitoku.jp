@@ -18,7 +18,7 @@ Host foo.example.com
 ```
 
 しかしながら、このような設定はルーター側で設定しておいたほうがクライアント側の設定が少なくて済むので楽です。
-今回は [EdgeRouter X](https://store.ui.com/collections/routing-switching/products/edgerouter-x) のファイアウォール機能を使って、ルーターにやってきた SSH のパケットの DSCP 値を変更するように設定してみます。
+今回は [EdgeRouter X](https://store.ui.com/us/en/products/er-x) のファイアウォール機能を使って、ルーターにやってきた SSH のパケットの DSCP 値を変更するように設定してみます。
 
 ## 環境
 

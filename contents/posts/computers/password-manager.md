@@ -30,7 +30,7 @@ category: コンピューター
 朝までかけてすべて変更しました。
 
 <p>
-<a href="https://apps.apple.com/us/app/1password-password-manager/id568903335?itsct=apps_box&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83&amp;releaseDate=1355356800&h=2369b12981ba171a6306cc01f09bd429" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
+<a href="https://apps.apple.com/us/app/1password-7-password-manager/id568903335?itsct=apps_box&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83&amp;releaseDate=1355356800&h=2369b12981ba171a6306cc01f09bd429" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
 </p>
 
 macOS 版と iOS 版をインストールしてみましたが完全に予想より遥かによくできていて恋に落ちました。
@@ -70,11 +70,6 @@ PC でログインするときに 1Password アプリがクリップボードに
 わたしは Wi-Fi ルーターの情報や Parallels Desktop のプロダクトキーなども入れてみました。
 
 ## Chrome 拡張機能
-
-パスワードを入力したい場合はブラウザーの拡張機能を使用しますが Chrome の拡張機能は公式に複数が存在します。
-オススメなのは Windows または macOS 上で動作しているローカルの 1Password 自体を呼び出すタイプである [1Password: Password Manager and Secure Wallet](https://chrome.google.com/webstore/detail/1password-password-manage/aomjjhallfgjeglblehebfpbcfeobpgk?hl=ja) です。
-
-ブラウザー上で動作するタイプの拡張はマスターパスワードの入力がローカルのものと別になってしまうため煩雑ですが、こちらはシームレスに連携してログインすることができました。
 
 ![](../media/1password_ss4.png)
 
@@ -120,5 +115,5 @@ Chrome の DevTools を使用して input 要素をインスペクターで表�
 
 ## 参考
 
-二段階認証: [AgileBits Blog | TOTP for 1Password users](https://blog.1password.com/totp-for-1password-users/)（英語）  
+二段階認証: [TOTP support comes to 1Password | 1Password](https://blog.1password.com/totp-for-1password-users/)（英語）  
 イラスト: [口を抑えてショックを受けている女性のイラスト | かわいいフリー素材集 いらすとや](https://www.irasutoya.com/2014/11/blog-post_317.html)

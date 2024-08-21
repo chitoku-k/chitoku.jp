@@ -67,7 +67,7 @@ git、kubectl、systemctl、docker コマンドなどの補完を行う際に、
 
 ### [![](../media/software_icon.png)cloudflare-exporter](https://github.com/chitoku-k/cloudflare-exporter)
 
-[Cloudflare Load Balancing](https://www.cloudflare.com/load-balancing/) に登録した Origin のヘルスチェック結果と RTT を Prometheus のメトリクスとして出力します。
+[Cloudflare Load Balancing](https://www.cloudflare.com/application-services/products/load-balancing/) に登録した Origin のヘルスチェック結果と RTT を Prometheus のメトリクスとして出力します。
 
 利用技術:
 
@@ -79,7 +79,7 @@ git、kubectl、systemctl、docker コマンドなどの補完を行う際に、
 
 ### [![](../media/software_icon.png)edgerouter-exporter](https://github.com/chitoku-k/edgerouter-exporter)
 
-Ubiquiti 社のルーター [EdgeRouter](https://store.ui.com/collections/routing-switching/products/edgerouter-x) の DDNS、ロードバランサー、PPPoE セッションなどの情報を Prometheus のメトリクスとして出力します。
+Ubiquiti 社のルーター [EdgeRouter](https://store.ui.com/us/en/products/er-x) の DDNS、ロードバランサー、PPPoE セッションなどの情報を Prometheus のメトリクスとして出力します。
 
 利用技術:
 

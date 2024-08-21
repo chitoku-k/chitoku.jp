@@ -7,7 +7,7 @@ category: コンピューター
 
 ![](../media/quit-sakura-cloud.png)
 
-さくらのクラウドでは [Antergos](https://antergos.com/) を利用して Arch Linux のインストールを行いましたが、
+さくらのクラウドでは Antergos を利用して Arch Linux のインストールを行いましたが、
 「Antergos は甘え」という意見を受けたため[*要出典*]、
 今回は人生初の [#ArchLinuxInstallBattle](https://twitter.com/search?q=#ArchLinuxInstallBattle) に挑戦する運びとなりました。はー、こわ………。
 
@@ -18,7 +18,7 @@ ConoHa はキャラクターが可愛いことが主な特徴ですが、ぼく�
 
 当初は数年前に書かれたさくらの VPS への Arch Linux のインストール記事を参考にして進めようとしましたが、状況が変わっていたのかうまくいかない部分があったため、ArchWiki 一本に絞って作業しました。ArchWiki 神。
 
-基本的には [インストールガイド – ArchWiki](https://wiki.archlinuxjp.org/index.php/インストールガイド) を読めばうまくいくので細かな手順は割愛しますが、ハマったところだけメモしておきます。
+基本的には [インストールガイド – ArchWiki](https://wiki.archlinux.jp/index.php/インストールガイド) を読めばうまくいくので細かな手順は割愛しますが、ハマったところだけメモしておきます。
 
 ## ハマったところ
 

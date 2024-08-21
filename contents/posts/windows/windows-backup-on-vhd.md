@@ -55,7 +55,7 @@ ATTACH VDISK
 
 [^1]: [バックアップの保存に適した場所](https://web.archive.org/web/20160609082103/http://windows.microsoft.com/ja-jp/windows7/Where-should-I-save-my-backup)（Wayback Machine）
 [^2]: [徒然事: Windows 7 Home Premiumで、NASにバックアップをとる方法](https://tomoseki.blogspot.com/2013/09/windows-7-home-premiumnas.html)
-[^3]: [澤田 賢也 | Windows 7 の VHD 形式ファイル利用について : VHD ファイルを使ってみる (基礎編)](https://docs.microsoft.com/ja-jp/previous-versions/msdn10/dd875657(v=msdn.10))
-[^4]: [Windows 10でVHDファイルをドライブとしてマウントする：Tech TIPS - ＠IT](https://www.atmarkit.co.jp/ait/articles/1702/03/news153.html)
+[^3]: [澤田 賢也 | Windows 7 の VHD 形式ファイル利用について : VHD ファイルを使ってみる (基礎編)](https://learn.microsoft.com/ja-jp/previous-versions/msdn10/dd875657(v=msdn.10))
+[^4]: [Windows 10でVHDファイルをドライブとしてマウントする：Tech TIPS - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/1702/03/news153.html)
 [^5]: [管理者権限のあるコマンドプロンプトからマップしたドライブにアクセスする：Tech TIPS - ＠IT](https://www.atmarkit.co.jp/ait/articles/1502/27/news149.html)
-[^6]: [タスクスケジュールの実行アカウント](http://www.vwnet.jp/windows/WS12R2/TaskSchedule/ExecAccunt.htm)
+[^6]: [タスクスケジュールの実行アカウント](https://www.vwnet.jp/windows/WS12R2/TaskSchedule/ExecAccunt.htm)

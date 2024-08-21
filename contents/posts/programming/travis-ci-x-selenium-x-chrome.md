@@ -86,10 +86,4 @@ npm に依存したくなければ簡単なシェルスクリプトでも良い�
 
 あとはテストを書くだけです！ お疲れさまでした！
 
-API ドキュメント: [https://seleniumhq.github.io/selenium/docs/api/javascript/index.html](https://seleniumhq.github.io/selenium/docs/api/javascript/index.html)
-
-## おまけ
-
-TweetDeck Accounts Switcher  
-[![](https://img.shields.io/travis/chitoku-k/TweetDeckAccountsSwitcher.svg?style=flat-square&label=mac%2Flinux)](https://travis-ci.org/chitoku-k/TweetDeckAccountsSwitcher)
-[![](https://img.shields.io/appveyor/ci/chitoku-k/TweetDeckAccountsSwitcher.svg?style=flat-square&label=windows)](https://ci.appveyor.com/project/chitoku-k/tweetdeckaccountsswitcher)
+API ドキュメント: [Selenium WebDriver JavaScript API](https://www.selenium.dev/selenium/docs/api/javascript/index.html)

@@ -1,5 +1,5 @@
 ---
-title: fancyBox に Twitter を表示する
+title: Fancybox に Twitter を表示する
 created: 2014-10-26T21:10:34+09:00
 category: プログラミング
 tags:
@@ -7,7 +7,7 @@ tags:
   - jQuery
   - Twitter
 ---
-fancyBox とは画像やメディアなどを拡大表示するための jQuery プラグインですが、今回はその中に Twitter の埋め込みタイムラインを表示させてみます。
+Fancybox とは画像やメディアなどを拡大表示するための jQuery プラグインですが、今回はその中に Twitter の埋め込みタイムラインを表示させてみます。
 実際に今回のスクリプトを使用すると以下のようになります。
 
 ![](../media/embedded-timeline.png)
@@ -16,8 +16,8 @@ fancyBox とは画像やメディアなどを拡大表示するための jQuery 
 
 ## 設置方法
 
-1. jQuery と fancyBox を head 要素内など、スクリプトの設置場所より前に読み込みます（1 ページにつき 1 回）  
-fancyBox は [fancyBox - Fancy jQuery Lightbox Alternative](https://fancyapps.com/fancybox/) からダウンロードして適切なディレクトリに配置してください。
+1. jQuery と Fancybox を head 要素内など、スクリプトの設置場所より前に読み込みます（1 ページにつき 1 回）  
+Fancybox は [Fancybox | Fancyapps UI - Robust JavaScript UI Component Library](https://fancyapps.com/fancybox/) からダウンロードして適切なディレクトリに配置してください。
 
 ```html
 <!-- CSS -->
@@ -74,7 +74,7 @@ fancyBox は [fancyBox - Fancy jQuery Lightbox Alternative](https://fancyapps.co
 
 ## カスタマイズ
 
-### fancyBox のカスタマイズ
+### Fancybox のカスタマイズ
 
 表示ボタン（a 要素）の data-\* 属性を使い、[Documentation](https://fancyapps.com/fancybox/#docs) に記載されているオプションでカスタマイズできます。  
 例：`fitToView` → `data-fit-to-view`
@@ -91,7 +91,7 @@ fancyBox は [fancyBox - Fancy jQuery Lightbox Alternative](https://fancyapps.co
 
 ### Twitter のカスタマイズ
 
-埋め込みタイムライン（div 要素）の data-\* 属性を使い、[Scripting: Factory Functions | Twitter Developer](https://developer.twitter.com/en/docs/twitter-for-websites/javascript-api/guides/scripting-factory-functions) に記載されているオプションでカスタマイズできます。  
+埋め込みタイムライン（div 要素）の data-\* 属性を使い、[Scripting: Factory Functions | Twitter Developer](https://developer.twitter.com/en/docs/x-for-websites/javascript-api/guides/scripting-factory-functions) に記載されているオプションでカスタマイズできます。  
 例：`showReplies` → `data-show-replies`
 
 ```html

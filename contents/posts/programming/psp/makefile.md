@@ -103,4 +103,4 @@ include $(PSPSDK)/lib/build.mak
 ## 脚注
 
 [^1]: PMF の作成方法: [それとPSP 自作gameboot.pmf動画（起動画面）の作り方メモ](http://touyatakagiri.blog38.fc2.com/blog-entry-390.html)
-[^2]: ATRCA3plus の作成方法: [ループ再生できる！at3ファイルの作り方 - ゆうじろうの部屋](http://bandersnatch.blog54.fc2.com/blog-entry-89.html)
+[^2]: ATRCA3plus の作成方法: [ループ再生できる！at3ファイルの作り方 - ゆうじろうの部屋](https://web.archive.org/web/20170720003555/http://bandersnatch.blog54.fc2.com/blog-entry-89.html)（Wayback Machine）

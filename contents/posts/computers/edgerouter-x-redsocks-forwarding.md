@@ -7,7 +7,7 @@ tags:
 ---
 ## 概要
 
-SOCKS プロキシーは OpenSSH などで手軽に建てられるプロキシーの一つですが、[redsocks](https://github.com/darkk/redsocks) を使用することで TCP のパケットが透過的に SOCKS プロキシーを経由するように設定することができます。今回は [EdgeRouter X](https://store.ui.com/collections/routing-switching/products/edgerouter-x) に redsocks をインストールし、LAN 内のコンピューターから特定の宛先への TCP 通信と名前解決が透過的に SOCKS プロキシーを経由するように設定してみます。
+SOCKS プロキシーは OpenSSH などで手軽に建てられるプロキシーの一つですが、[redsocks](https://github.com/darkk/redsocks) を使用することで TCP のパケットが透過的に SOCKS プロキシーを経由するように設定することができます。今回は [EdgeRouter X](https://store.ui.com/us/en/products/er-x) に redsocks をインストールし、LAN 内のコンピューターから特定の宛先への TCP 通信と名前解決が透過的に SOCKS プロキシーを経由するように設定してみます。
 
 ## redsocks とは
 
