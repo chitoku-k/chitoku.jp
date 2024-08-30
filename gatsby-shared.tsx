@@ -1,5 +1,5 @@
 import { isValidElement } from 'react'
-import type { FunctionComponent, PropsWithChildren } from 'react'
+import type { FunctionComponent, JSX, PropsWithChildren } from 'react'
 import type { GatsbyBrowser, GatsbySSR } from 'gatsby'
 
 import type { RouterContextProps } from '@gatsbyjs/reach-router'
