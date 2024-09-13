@@ -12032,7 +12032,7 @@ __metadata:
     stylelint: "npm:^16.9.0"
     stylelint-config-recess-order: "npm:^5.1.0"
     stylelint-config-standard-scss: "npm:^13.1.0"
-    stylelint-scss: "npm:^6.5.1"
+    stylelint-scss: "npm:^6.6.0"
     tsconfig-paths-webpack-plugin: "npm:^4.1.0"
     turnstile-types: "npm:^1.2.2"
     typescript: "npm:^5.5.4"
@@ -19879,20 +19879,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-scss@npm:^6.5.1":
-  version: 6.5.1
-  resolution: "stylelint-scss@npm:6.5.1"
+"stylelint-scss@npm:^6.6.0":
+  version: 6.6.0
+  resolution: "stylelint-scss@npm:6.6.0"
   dependencies:
     css-tree: "npm:2.3.1"
     is-plain-object: "npm:5.0.0"
     known-css-properties: "npm:^0.34.0"
     postcss-media-query-parser: "npm:^0.2.3"
-    postcss-resolve-nested-selector: "npm:^0.1.4"
-    postcss-selector-parser: "npm:^6.1.1"
+    postcss-resolve-nested-selector: "npm:^0.1.6"
+    postcss-selector-parser: "npm:^6.1.2"
     postcss-value-parser: "npm:^4.2.0"
   peerDependencies:
     stylelint: ^16.0.2
-  checksum: 10/a43d2231cc4dbd1fba5dfe8d1c26bb8cd95ad67396040ed00e5844141a8ae7fdefce6957c5fff6b2fb0091a5eb5f16d4ed6d33d4d02c623161d5f11c3c0bd57e
+  checksum: 10/8a18dd56ba551bc20cbd8cac1136e84be12734e0708d63f16485224107394537c90cb580727c0eff248e4862825c5bb53f2f1f56088ee79ddfa6ce0cf7f39623
   languageName: node
   linkType: hard
 
