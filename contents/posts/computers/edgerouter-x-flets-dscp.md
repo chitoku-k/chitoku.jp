@@ -14,7 +14,7 @@ tags:
 ```
 Host foo.example.com
     HostName  foo.example.com
-    IPQoS     0x00
+    IPQoS     0
 ```
 
 しかしながら、このような設定はルーター側で設定しておいたほうがクライアント側の設定が少なくて済むので楽です。
