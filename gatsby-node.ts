@@ -42,9 +42,11 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   })
 
   if (stage === 'build-javascript') {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     const config: Configuration = getConfig()
     if (config.optimization) {
       config.optimization.minimizer = [
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         plugins.minifyJs({
           extractComments: false,
         }),

@@ -35,10 +35,10 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
     ');',
   ].join(separator), Prism.languages.c, 'c')
 
-  /* eslint-disable react/no-danger */
   return (
     <div className={styles.entry}>
       <pre className={clsx(styles.prototype, 'language-c')}>
+        {/* eslint-disable-next-line react/no-danger */}
         <code className="language-c" dangerouslySetInnerHTML={{ __html: highlighted }} />
       </pre>
       <div className={styles.description}>
