@@ -15,6 +15,9 @@ updates:
     time: "00:00"
     timezone: Asia/Tokyo
   groups:
+    babel:
+      patterns:
+      - "@babel/*"
     fortawesome:
       patterns:
       - "@fortawesome/*-core"
