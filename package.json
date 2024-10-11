@@ -5,7 +5,7 @@
   "description": "ちとくのホームページ",
   "packageManager": "yarn@4.5.0",
   "devDependencies": {
-    "@babel/core": "^7.25.7",
+    "@babel/core": "^7.25.8",
     "@babel/preset-typescript": "^7.25.7",
     "@eslint/eslintrc": "^3.1.0",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
