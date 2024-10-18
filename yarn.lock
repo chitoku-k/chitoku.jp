@@ -4645,13 +4645,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/gatsbyjs__reach-router@npm:^2.0.4":
-  version: 2.0.4
-  resolution: "@types/gatsbyjs__reach-router@npm:2.0.4"
+"@types/gatsbyjs__reach-router@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "@types/gatsbyjs__reach-router@npm:2.0.5"
   dependencies:
     "@types/reach__router": "npm:*"
     "@types/react": "npm:*"
-  checksum: 10/0c9e385b05d84d4a0713c8425323a1138e15c86ae4a7449a3c947513aa0bfddfbf3059502c6b820f7f484d27c10eec191ff2c5d06fa0f2f5999d54c9c2bf9e96
+  checksum: 10/7666716b4089eb6dc342e89273bfe1a6d7312f0600ece2cd2c8cd17834b5ab2e81e8be3ee095d458c7f8519416a276a0584e9c9c2e553b16171bdee855aeddd1
   languageName: node
   linkType: hard
 
@@ -12080,7 +12080,7 @@ __metadata:
     "@storybook/react-webpack5": "npm:^8.3.6"
     "@svgr/webpack": "npm:^8.1.0"
     "@types/dotenv-safe": "npm:^8.1.6"
-    "@types/gatsbyjs__reach-router": "npm:^2.0.4"
+    "@types/gatsbyjs__reach-router": "npm:^2.0.5"
     "@types/hast": "npm:^3.0.4"
     "@types/node": "npm:^22.7.6"
     "@types/prismjs": "npm:^1.26.4"
