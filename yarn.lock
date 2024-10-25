@@ -5265,6 +5265,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react@npm:^18.3.12":
+  version: 18.3.12
+  resolution: "@types/react@npm:18.3.12"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    csstype: "npm:^3.0.2"
+  checksum: 10/c9bbdfeacd5347d2240e0d2cb5336bc57dbc1b9ff557b6c4024b49df83419e4955553518169d3736039f1b62608e15b35762a6c03d49bd86e33add4b43b19033
+  languageName: node
+  linkType: hard
+
 "@types/resolve@npm:^1.20.2":
   version: 1.20.6
   resolution: "@types/resolve@npm:1.20.6"
@@ -12417,7 +12427,7 @@ __metadata:
     "@types/hast": "npm:^3.0.4"
     "@types/node": "npm:^22.8.0"
     "@types/prismjs": "npm:^1.26.5"
-    "@types/react": "npm:^18.3.11"
+    "@types/react": "npm:^18.3.12"
     "@types/react-dom": "npm:^18.3.1"
     algoliasearch: "npm:^5.10.2"
     babel-loader: "npm:^9.2.1"
