@@ -7,7 +7,6 @@
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-typescript": "^7.26.0",
-    "@eslint/eslintrc": "^3.1.0",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
@@ -37,7 +36,7 @@
     "clsx": "^2.1.1",
     "css-loader": "^7.1.2",
     "dotenv-safe": "^9.1.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.13.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-storybook": "^0.10.1",

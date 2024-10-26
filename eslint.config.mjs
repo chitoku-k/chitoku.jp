@@ -1,15 +1,15 @@
-import { FlatCompat } from '@eslint/eslintrc'
 import eslintJs from '@eslint/js'
+import eslintPluginReact from 'eslint-plugin-react'
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks'
+import eslintPluginStorybook from 'eslint-plugin-storybook'
 import globals from 'globals'
 import typescriptEslint from 'typescript-eslint'
 
-const compat = new FlatCompat()
-
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 export default [
   eslintJs.configs.all,
-  ...compat.extends('plugin:storybook/recommended', 'plugin:react/all'),
+  eslintPluginReact.configs.flat.all,
+  ...eslintPluginStorybook.configs['flat/recommended'],
   {
     ignores: [
       '.cache',
