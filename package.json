@@ -7,7 +7,6 @@
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-typescript": "^7.26.0",
-    "@eslint/eslintrc": "^3.1.0",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
