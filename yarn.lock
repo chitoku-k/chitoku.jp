@@ -4741,12 +4741,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>=10.0.0, @types/node@npm:^22.0.0, @types/node@npm:^22.8.0":
+"@types/node@npm:*, @types/node@npm:>=10.0.0, @types/node@npm:^22.0.0":
   version: 22.8.0
   resolution: "@types/node@npm:22.8.0"
   dependencies:
     undici-types: "npm:~6.19.8"
   checksum: 10/2ffb407fd94c362a2b712cff32e59e5f988bff6cb32334f884554a1acf85ff41f4f43815e71be39a16970d2d71939f732e4981bfb515cc6f557b9face24476e0
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^22.8.6":
+  version: 22.8.6
+  resolution: "@types/node@npm:22.8.6"
+  dependencies:
+    undici-types: "npm:~6.19.8"
+  checksum: 10/27bb73f033eeec05b4ed52dbc521cac28fb7ac14af267119c9bae0318c97848cd790ac7f0a65924ace7ea717eae62e91bd227da4bd6c0217d0016a7a6cd0a156
   languageName: node
   linkType: hard
 
@@ -11934,7 +11943,7 @@ __metadata:
     "@types/dotenv-safe": "npm:^8.1.6"
     "@types/gatsbyjs__reach-router": "npm:^2.0.5"
     "@types/hast": "npm:^3.0.4"
-    "@types/node": "npm:^22.8.0"
+    "@types/node": "npm:^22.8.6"
     "@types/prismjs": "npm:^1.26.5"
     "@types/react": "npm:^18.3.12"
     "@types/react-dom": "npm:^18.3.1"
