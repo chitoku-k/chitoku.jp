@@ -24,6 +24,7 @@ updates:
       - "@fortawesome/*-icons"
     gatsby:
       patterns:
+      - babel-plugin-remove-graphql-queries
       - babel-preset-gatsby
       - gatsby
       - gatsby-plugin-google-gtag
