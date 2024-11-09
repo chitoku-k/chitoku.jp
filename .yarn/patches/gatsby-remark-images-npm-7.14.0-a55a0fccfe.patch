@@ -1,5 +1,5 @@
 diff --git a/gatsby-node.js b/gatsby-node.js
-index e03267c557064f37bb64a4a547cdd7502692a1a9..e556cecf8a1db97bd4ab60f04d9b632967043823 100644
+index e03267c557064f37bb64a4a547cdd7502692a1a9..d6bcf01e8f1e816be3e9404419c7a7a7159d7647 100644
 --- a/gatsby-node.js
 +++ b/gatsby-node.js
 @@ -7,6 +7,7 @@ exports.pluginOptionsSchema = function (_ref) {
