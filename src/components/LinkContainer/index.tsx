@@ -23,7 +23,6 @@ const LinkContainer: FunctionComponent<GatsbyLinkProps<object>> = ({
     e.preventDefault()
     e.stopPropagation()
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     navigate(to, { state, replace })
   }, [ to, onClick, state, replace ])
 
