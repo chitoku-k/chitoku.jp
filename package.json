@@ -30,7 +30,7 @@
     "algoliasearch": "^5.13.0",
     "babel-loader": "^9.2.1",
     "babel-plugin-react-intl-auto": "^3.3.0",
-    "babel-plugin-remove-graphql-queries": "^5.13.1",
+    "babel-plugin-remove-graphql-queries": "^5.14.0",
     "babel-preset-gatsby": "^3.14.0",
     "bootstrap": "^5.3.3",
     "clsx": "^2.1.1",
