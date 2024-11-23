@@ -22,20 +22,22 @@ const icons = {
   windows,
 }
 
+const isIcon = (s: string): s is keyof typeof icons => s in icons
+
 const CategoryIcon: FunctionComponent<CategoryIconProps> = ({
   category,
   to,
 }) => {
-  if (!category || !(category.thumbnail in icons)) {
+  if (!category || !isIcon(category.thumbnail)) {
     return (
       <div />
     )
   }
 
   // eslint-disable-next-line no-useless-assignment
-  const ThumbnailIcon = icons[category.thumbnail as keyof typeof icons]
+  const ThumbnailIcon = icons[category.thumbnail]
   return to ? (
-    <Link to={to} className={clsx(styles.icon, styles[category.thumbnail as keyof typeof icons])}>
+    <Link to={to} className={clsx(styles.icon, styles[category.thumbnail])}>
       <ThumbnailIcon viewBox="0 0 100 100" />
     </Link>
   ) : (

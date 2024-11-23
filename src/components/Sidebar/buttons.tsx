@@ -16,6 +16,7 @@ interface ShareButtonProps {
 
 const hatena: IconDefinition = {
   prefix: 'fab',
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
   iconName: 'hatena' as IconName,
   icon: [
     14,

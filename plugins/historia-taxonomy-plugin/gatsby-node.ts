@@ -80,7 +80,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
   ]
 
   for (const page of pages) {
-    if ('page' in page.context && page.context.page === false) {
+    if (page.context && 'page' in page.context && page.context.page === false) {
       continue
     }
     if (paths.has(page.path)) {
@@ -98,7 +98,7 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({
   createResolvers,
 }: CreateResolversArgs): void => {
   const plugin = config.plugins?.filter(isPluginObject).find(p => p.resolve === 'gatsby-transformer-remark')
-  const excerptSeparator = plugin?.options?.excerpt_separator as string | undefined
+  const excerptSeparator = plugin?.options?.excerpt_separator
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   createResolvers({
@@ -166,13 +166,13 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({
       excerpted: {
         type: 'Boolean!',
         resolve(source: Article) {
-          return excerptSeparator && source.rawMarkdownBody.includes(excerptSeparator)
+          return typeof excerptSeparator === 'string' && source.rawMarkdownBody.includes(excerptSeparator)
         },
       },
       path: {
         type: 'String!',
         resolve(source: Article, _: unknown, context: ResolveContext) {
-          return getPath(context.nodeModel.getNodeById({ id: source.parent }))
+          return getPath(context.nodeModel.getNodeById<File<string, string>>({ id: source.parent }))
         },
       },
       prev: {

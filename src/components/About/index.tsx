@@ -89,6 +89,7 @@ const About: FunctionComponent<AboutProps> = ({
               <tr>
                 <th>{formatMessage(messages.introduction)}</th>
                 <td>
+                  {/* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion */}
                   <ArticleBody ast={(introduction?.markdown?.htmlAst ?? null) as unknown as Root} />
                 </td>
               </tr>

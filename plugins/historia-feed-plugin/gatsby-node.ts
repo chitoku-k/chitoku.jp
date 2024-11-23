@@ -2,7 +2,7 @@ import type { GatsbyNode } from 'gatsby'
 import { Feed } from 'feed'
 import { promises as fs } from 'fs'
 import * as path from 'path'
-import type { HtmlToTextOptions } from 'html-to-text'
+import type { DomNode, HtmlToTextOptions } from 'html-to-text'
 import { htmlToText } from 'html-to-text'
 
 import { author, description } from '../../package.json'
@@ -30,12 +30,18 @@ interface Data {
   }
 }
 
+interface DomElement extends DomNode {
+  attribs: Record<string, string>
+}
+
+const isDomElement = (node: DomNode): node is DomElement => 'attribs' in node
+
 const htmlToTextOptions: HtmlToTextOptions = {
   wordwrap: false,
   formatters: {
     emoji: (node, _walk, builder) => {
-      const attribs = node.attribs as Record<string, string>
-      builder.addInline(attribs.alt ?? '')
+      const alt = isDomElement(node) ? node.attribs.alt : ''
+      builder.addInline(alt ?? '')
     },
   },
   selectors: [
