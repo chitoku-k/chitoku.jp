@@ -11,6 +11,7 @@ import * as styles from './styles.module.scss'
 const components: Record<string, ComponentType<unknown>> = {}
 
 export const register = function register<T>(key: string, component: ComponentType<T>): void {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
   components[key] = component as ComponentType<unknown>
 }
 
@@ -20,7 +21,9 @@ const ArticleBody: FunctionComponent<ArticleBodyProps> = ({
   const processor = useMemo(
     () => unified()
       .use(rehypeReact, {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
         ...jsxRuntime as Production,
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
         components: components as Components,
       }),
     [],

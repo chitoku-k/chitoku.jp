@@ -72,6 +72,7 @@ const Article: FunctionComponent<ArticleProps> = ({
           </Navbar>
         ) : null}
         <ArticleContext.Provider value={article}>
+          {/* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion */}
           <ArticleBody ast={(excerptAst ?? htmlAst ?? null) as Root} />
         </ArticleContext.Provider>
         {excerpted && excerptAst ? (
