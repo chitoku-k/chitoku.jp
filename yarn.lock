@@ -12018,7 +12018,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     react-instantsearch: "npm:^7.13.8"
     react-intl: "npm:^7.0.1"
-    react-refresh: "npm:^0.14.2"
+    react-refresh: "npm:^0.16.0"
     react-schemaorg: "npm:^2.0.0"
     react-turnstile: "npm:^1.1.4"
     react-twitter-widgets: "npm:^1.11.0"
@@ -17513,10 +17513,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-refresh@npm:^0.14.0, react-refresh@npm:^0.14.2":
+"react-refresh@npm:^0.14.0":
   version: 0.14.2
   resolution: "react-refresh@npm:0.14.2"
   checksum: 10/512abf97271ab8623486061be04b608c39d932e3709f9af1720b41573415fa4993d0009fa5138b6705b60a98f4102f744d4e26c952b14f41a0e455521c6be4cc
+  languageName: node
+  linkType: hard
+
+"react-refresh@npm:^0.16.0":
+  version: 0.16.0
+  resolution: "react-refresh@npm:0.16.0"
+  checksum: 10/725019d21cede4cea57c20b85fa3a7fe5b0969c99d62ac37dc7b2d3505ea9a33f14f003034ed214d41bacf74c48ab174464c236e5815dff31e23f519c21d8752
   languageName: node
   linkType: hard
 
