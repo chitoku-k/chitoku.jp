@@ -34,7 +34,6 @@ const CategoryIcon: FunctionComponent<CategoryIconProps> = ({
     )
   }
 
-  // eslint-disable-next-line no-useless-assignment
   const ThumbnailIcon = icons[category.thumbnail]
   return to ? (
     <Link to={to} className={clsx(styles.icon, styles[category.thumbnail])}>
