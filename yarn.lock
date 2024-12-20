@@ -3559,9 +3559,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@restart/ui@npm:^1.9.0":
-  version: 1.9.1
-  resolution: "@restart/ui@npm:1.9.1"
+"@restart/ui@npm:^1.9.2":
+  version: 1.9.2
+  resolution: "@restart/ui@npm:1.9.2"
   dependencies:
     "@babel/runtime": "npm:^7.26.0"
     "@popperjs/core": "npm:^2.11.8"
@@ -3575,7 +3575,7 @@ __metadata:
   peerDependencies:
     react: ">=16.14.0"
     react-dom: ">=16.14.0"
-  checksum: 10/81f0f5742c298cf93a1ff8b941fd198d1413a13e34117f66e855eaa69a4479fedcd4ce2b1d6b330316d9ff881b87a0bbee03a096cee3ecdd99b774e6abcf0af2
+  checksum: 10/9993f1983d0f98216cfaa2bbd9818e1199590a2dccdf89ce99ae039031979a887ac8ac5647bab430e7d8a9f788c93c8f96888f0df7871a60884a2de824dead22
   languageName: node
   linkType: hard
 
@@ -4782,6 +4782,13 @@ __metadata:
   version: 15.7.4
   resolution: "@types/prop-types@npm:15.7.4"
   checksum: 10/ef6e1899e59b876c273811b1bd845022fc66d5a3d11cb38a25b6c566b30514ae38fe20a40f67622f362a4f4f7f9224e22d8da101cff3d6e97e11d7b4c307cfc1
+  languageName: node
+  linkType: hard
+
+"@types/prop-types@npm:^15.7.12":
+  version: 15.7.14
+  resolution: "@types/prop-types@npm:15.7.14"
+  checksum: 10/d0c5407b9ccc3dd5fae0ccf9b1007e7622ba5e6f1c18399b4f24dff33619d469da4b9fa918a374f19dc0d9fe6a013362aab0b844b606cfc10676efba3f5f736d
   languageName: node
   linkType: hard
 
@@ -12035,7 +12042,7 @@ __metadata:
     lint-staged: "npm:^15.2.11"
     prismjs: "npm:^1.29.0"
     react: "npm:^18.3.1"
-    react-bootstrap: "npm:^2.10.6"
+    react-bootstrap: "npm:^2.10.7"
     react-dom: "npm:^18.3.1"
     react-instantsearch: "npm:^7.13.9"
     react-intl: "npm:^7.0.4"
@@ -17363,13 +17370,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-bootstrap@npm:^2.10.6":
-  version: 2.10.6
-  resolution: "react-bootstrap@npm:2.10.6"
+"react-bootstrap@npm:^2.10.7":
+  version: 2.10.7
+  resolution: "react-bootstrap@npm:2.10.7"
   dependencies:
     "@babel/runtime": "npm:^7.24.7"
     "@restart/hooks": "npm:^0.4.9"
-    "@restart/ui": "npm:^1.9.0"
+    "@restart/ui": "npm:^1.9.2"
+    "@types/prop-types": "npm:^15.7.12"
     "@types/react-transition-group": "npm:^4.4.6"
     classnames: "npm:^2.3.2"
     dom-helpers: "npm:^5.2.1"
@@ -17386,7 +17394,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/81117e02480e6d5c6ea709ac1c1ea1d5f0b66474abb315599d270c7c056039849437a660cbf809f550c25a9e62c85a3711998f08535f090be40b4b6f26ab7eba
+  checksum: 10/9cf2bb2f31b9090580186118f052368fe45d6e116d62dae106036e4df0e9860ed2023b6e585e5aebd6d43e8c38afd5b5277f5706672bd8b10b14f8624533101f
   languageName: node
   linkType: hard
 
