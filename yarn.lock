@@ -10616,9 +10616,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-link@npm:^5.14.0":
-  version: 5.14.0
-  resolution: "gatsby-link@npm:5.14.0"
+"gatsby-link@npm:^5.14.1":
+  version: 5.14.1
+  resolution: "gatsby-link@npm:5.14.1"
   dependencies:
     "@types/reach__router": "npm:^1.3.10"
     gatsby-page-utils: "npm:^3.14.0"
@@ -10627,7 +10627,7 @@ __metadata:
     "@gatsbyjs/reach-router": ^2.0.0
     react: ^18.0.0 || ^0.0.0
     react-dom: ^18.0.0 || ^0.0.0
-  checksum: 10/e7212f82c87c18a4ee9456c669282633557c949f00ddf12a9862e438b33f2f31ee204341cda2746dad1c759942f014ebe8bbdbe1c121565bc6267635e52c0325
+  checksum: 10/fc471b51a338d954f310e7ab43998012d35a38659b1112f72758f8832a4c6ed4d26e8af77bfb45dfcd26146361aef6475b3e402b05164a8f599aa2b00bf4a09e
   languageName: node
   linkType: hard
 
@@ -11112,9 +11112,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby@npm:^5.14.0":
-  version: 5.14.0
-  resolution: "gatsby@npm:5.14.0"
+"gatsby@npm:^5.14.1":
+  version: 5.14.1
+  resolution: "gatsby@npm:5.14.1"
   dependencies:
     "@babel/code-frame": "npm:^7.18.6"
     "@babel/core": "npm:^7.20.12"
@@ -11201,7 +11201,7 @@ __metadata:
     gatsby-core-utils: "npm:^4.14.0"
     gatsby-graphiql-explorer: "npm:^3.14.0"
     gatsby-legacy-polyfills: "npm:^3.14.0"
-    gatsby-link: "npm:^5.14.0"
+    gatsby-link: "npm:^5.14.1"
     gatsby-page-utils: "npm:^3.14.0"
     gatsby-parcel-config: "npm:1.14.0"
     gatsby-plugin-page-creator: "npm:^5.14.0"
@@ -11291,7 +11291,7 @@ __metadata:
       optional: true
   bin:
     gatsby: ./cli.js
-  checksum: 10/ae1ac7e4c965caa1bf3c3901240790a7be9fe2ed5fa8af487ae4f837d40dcab52939e6ab63932b629ce81f214ec629fa7705f97e66f7064f0908785545b67cbb
+  checksum: 10/07b45c1f19233164013dfc4593666eac8d378c7a8326be89665a2f65e152fb7cb383a4e4300f358ea5565edf2eaf22879898b7459376857fc2450f455925a764
   languageName: node
   linkType: hard
 
@@ -12015,7 +12015,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^5.1.0"
     eslint-plugin-storybook: "npm:^0.11.1"
     extract-react-intl-messages: "npm:^4.1.1"
-    gatsby: "npm:^5.14.0"
+    gatsby: "npm:^5.14.1"
     gatsby-plugin-algolia: "npm:^1.0.3"
     gatsby-plugin-google-gtag: "npm:^5.14.0"
     gatsby-plugin-minify-html: "npm:^1.0.4"
