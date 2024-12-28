@@ -8,33 +8,14 @@ export interface Paginatable {
   }
 }
 
-export interface File<TDirectory extends string, TName extends string> {
+export interface File {
   children: string[]
-  relativeDirectory: TDirectory
-  name: TName
+  relativeDirectory: Directory
+  name: string
 }
 
-type Directory<
-  TDirectory extends string,
-> = TDirectory extends `posts/${infer Subdirectory}`
-  ? `/${Subdirectory}`
-  : TDirectory extends 'posts'
-    ? '/'
-    : TDirectory
-
-type Path<
-  TDirectory extends string,
-  TName extends string,
-  TIndex extends string,
-> = Directory<TDirectory> extends ''
-  ? ''
-  : Directory<TDirectory> extends '/'
-    ? `/${TName}`
-    : Directory<TDirectory> extends string
-      ? string
-      : TName extends 'index'
-        ? `${Directory<TDirectory>}${TIndex}`
-        : `${Directory<TDirectory>}/${TName}`
+type Directory = string
+type Path = string
 
 export const splitPages = <T>(items: T[], limit: number): T[][] => {
   const pages: T[][] = []
@@ -46,20 +27,13 @@ export const splitPages = <T>(items: T[], limit: number): T[][] => {
   return pages
 }
 
-const getDirectory = <
-  TDirectory extends string,
-  TName extends string,
->(file: File<TDirectory, TName>): Directory<TDirectory> => file.relativeDirectory.replace(/^posts(?:\/|$)/u, '/') as Directory<TDirectory>
+const getDirectory = (file: File): Directory => file.relativeDirectory.replace(/^posts(?:\/|$)/u, '/')
 
-export const getPath = <
-  TDirectory extends string,
-  TName extends string,
-  TIndex extends string,
->(file: File<TDirectory, TName>, index: TIndex = '/' as TIndex): Path<TDirectory, TName, TIndex> => {
+export const getPath = (file: File, index = '/'): Path => {
   const directory = getDirectory(file)
   if (!directory) {
-    return '' as Path<TDirectory, TName, TIndex>
+    return ''
   }
 
-  return path.join(directory, file.name === 'index' ? index : file.name) as Path<TDirectory, TName, TIndex>
+  return path.join(directory, file.name === 'index' ? index : file.name)
 }

@@ -10,11 +10,11 @@ interface PaginatedArticle {
   id: string
 }
 
-interface Article<TDirectory extends string, TName extends string> {
+interface Article {
   id: string
   prev?: PaginatedArticle
   next?: PaginatedArticle
-  file: File<TDirectory, TName>
+  file: File
   attributes: {
     created: string
     page: boolean | null
@@ -32,7 +32,7 @@ export interface ArticleContext extends Context {
 interface Data {
   categories?: {
     items: {
-      articles: Article<string, string>[]
+      articles: Article[]
     }[]
   }
 }
@@ -90,8 +90,8 @@ const createArticles = async ({
         file,
       } = article
 
-      let prev: Article<string, string> | PaginatedArticle | undefined = article.prev
-      let next: Article<string, string> | PaginatedArticle | undefined = article.next
+      let prev: Article | PaginatedArticle | undefined = article.prev
+      let next: Article | PaginatedArticle | undefined = article.next
 
       if (!prev && !next) {
         prev = articles[index - 1]

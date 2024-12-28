@@ -172,7 +172,7 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({
       path: {
         type: 'String!',
         resolve(source: Article, _: unknown, context: ResolveContext) {
-          return getPath(context.nodeModel.getNodeById<File<string, string>>({ id: source.parent }))
+          return getPath(context.nodeModel.getNodeById<File>({ id: source.parent }))
         },
       },
       prev: {
@@ -185,7 +185,7 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({
           const dirname = path.join('posts', path.dirname(source.frontmatter.prev))
           const basename = path.basename(source.frontmatter.prev)
 
-          const file = await context.nodeModel.findOne<File<string, string>>({
+          const file = await context.nodeModel.findOne<File>({
             type: 'File',
             query: {
               filter: {
@@ -218,7 +218,7 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({
           const dirname = path.join('posts', path.dirname(source.frontmatter.next))
           const basename = path.basename(source.frontmatter.next)
 
-          const file = await context.nodeModel.findOne<File<string, string>>({
+          const file = await context.nodeModel.findOne<File>({
             type: 'File',
             query: {
               filter: {
