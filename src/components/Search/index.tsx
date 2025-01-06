@@ -5,7 +5,6 @@ import { FormattedMessage, useIntl } from 'react-intl'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
 import { Highlight, InstantSearch, PoweredBy, Snippet, useHits, useInstantSearch, useSearchBox } from 'react-instantsearch'
-import type { BaseHit } from 'instantsearch.js'
 import { liteClient as algoliasearch } from 'algoliasearch/lite'
 
 import ArticleContainer from 'components/ArticleContainer'
@@ -170,7 +169,7 @@ interface SearchState {
   setQuery: (query: string | null) => void
 }
 
-interface SearchDocument extends BaseHit {
+interface SearchDocument {
   headings: string[]
   path: string
   title: string
