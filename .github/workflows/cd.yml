@@ -42,7 +42,6 @@ jobs:
           cache-to: type=gha,mode=max
           push: true
           tags: |
-            ghcr.io/chitoku-k/chitoku.jp:latest
             ghcr.io/chitoku-k/chitoku.jp:${{ github.ref_name }}
           build-args: |
             CI
