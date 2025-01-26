@@ -69,7 +69,7 @@ jobs:
           kubectl config use-context k8s.chitoku.jp
       - name: Update image
         run: |
-          kubectl set image deployment/chitokujp web=ghcr.io/chitoku-k/chitoku.jp:${{ github.ref_name }}
+          kubectl set image --field-manager=github-actions deployment/chitokujp web=ghcr.io/chitoku-k/chitoku.jp:${{ github.ref_name }}
       - name: Purge cache
         uses: jakejarvis/cloudflare-purge-action@v0.3.0
         env:
