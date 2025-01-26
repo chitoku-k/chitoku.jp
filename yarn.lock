@@ -12125,7 +12125,7 @@ __metadata:
     storybook: "npm:^8.5.1"
     style-loader: "npm:^4.0.0"
     stylelint: "npm:^16.13.2"
-    stylelint-config-recess-order: "npm:^5.1.1"
+    stylelint-config-recess-order: "npm:^6.0.0"
     stylelint-config-standard-scss: "npm:^14.0.0"
     stylelint-scss: "npm:^6.10.1"
     tsconfig-paths-webpack-plugin: "npm:^4.2.0"
@@ -19816,14 +19816,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-config-recess-order@npm:^5.1.1":
-  version: 5.1.1
-  resolution: "stylelint-config-recess-order@npm:5.1.1"
+"stylelint-config-recess-order@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "stylelint-config-recess-order@npm:6.0.0"
   dependencies:
     stylelint-order: "npm:^6.0.4"
   peerDependencies:
     stylelint: ">=16"
-  checksum: 10/dd4518510e2392dc157b2f124782cc8ce90d8754b7b5ac911652bcd0f4be1827e14175302f973eb9dba0e20f6f28b292bbf6c6eb9988c0c62d64f43cab70bc01
+  checksum: 10/b38fbc0e79d3b40c8d049e35d71f47354167b44d6e8548e706cbe2679e23e0cf34ad1d9d74f6162f2f7e15a8422c586db175dbf2391bd7327fb2ad6593408ec9
   languageName: node
   linkType: hard
 
