@@ -3675,9 +3675,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@restart/ui@npm:^1.9.3":
-  version: 1.9.3
-  resolution: "@restart/ui@npm:1.9.3"
+"@restart/ui@npm:^1.9.4":
+  version: 1.9.4
+  resolution: "@restart/ui@npm:1.9.4"
   dependencies:
     "@babel/runtime": "npm:^7.26.0"
     "@popperjs/core": "npm:^2.11.8"
@@ -3691,7 +3691,7 @@ __metadata:
   peerDependencies:
     react: ">=16.14.0"
     react-dom: ">=16.14.0"
-  checksum: 10/548edcea8d629afe232f2cbe37f3d40a504d5122f00fb8b0591fab84bd78957d4a4c5ec34b5a6cbc8783ac87252cc6ed1a50d028c1fdeb306cabdfc1f648b04b
+  checksum: 10/97a851ab7195c229956be6dd669170d9459b1503313969107146ff6c830f8a8f214439fe083087dee49341e9ad476b7b45c3f95249e3a303cd60b4ce9c8cf9d7
   languageName: node
   linkType: hard
 
@@ -12109,7 +12109,7 @@ __metadata:
     lint-staged: "npm:^15.4.2"
     prismjs: "npm:^1.29.0"
     react: "npm:^18.3.1"
-    react-bootstrap: "npm:^2.10.8"
+    react-bootstrap: "npm:^2.10.9"
     react-dom: "npm:^18.3.1"
     react-instantsearch: "npm:^7.15.1"
     react-intl: "npm:^7.1.5"
@@ -17447,13 +17447,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-bootstrap@npm:^2.10.8":
-  version: 2.10.8
-  resolution: "react-bootstrap@npm:2.10.8"
+"react-bootstrap@npm:^2.10.9":
+  version: 2.10.9
+  resolution: "react-bootstrap@npm:2.10.9"
   dependencies:
     "@babel/runtime": "npm:^7.24.7"
     "@restart/hooks": "npm:^0.4.9"
-    "@restart/ui": "npm:^1.9.3"
+    "@restart/ui": "npm:^1.9.4"
     "@types/prop-types": "npm:^15.7.12"
     "@types/react-transition-group": "npm:^4.4.6"
     classnames: "npm:^2.3.2"
@@ -17471,7 +17471,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/645c00f2979b92ba7ea90faad6912c37c43eeb15195b608f4b1c4098d1a600b8047ba76ad823abae33fe6d3ad3c695bb11dd6beba14784e6173f9d253dba60f2
+  checksum: 10/aaa923af1cf724471f8c9dd7aa365b0e5556cb3aa63b023912353b6874d7f274b4362a9b97df91fb0c04e998c7a49fa8c5e071f3ba468e888afa26b2d0d27ca2
   languageName: node
   linkType: hard
 
