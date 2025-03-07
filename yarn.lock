@@ -12163,7 +12163,7 @@ __metadata:
     rehype-react: "npm:^8.0.0"
     sass: "npm:<1.77.7"
     sass-loader: "npm:^16.0.5"
-    schema-dts: "npm:^1.1.2"
+    schema-dts: "npm:^1.1.5"
     storybook: "npm:^8.6.4"
     style-loader: "npm:^4.0.0"
     stylelint: "npm:^16.15.0"
@@ -18723,12 +18723,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"schema-dts@npm:^1.1.2":
-  version: 1.1.2
-  resolution: "schema-dts@npm:1.1.2"
-  peerDependencies:
-    typescript: ">=4.1.0"
-  checksum: 10/c87489241cd042641e549c9e41e7687afa71494521f13ddf1ab5fecfc08803c312c4e7a286e077fcc3efece9b5b41aeee9e653ab673ca4988687a890f5831ec6
+"schema-dts@npm:^1.1.5":
+  version: 1.1.5
+  resolution: "schema-dts@npm:1.1.5"
+  checksum: 10/74f8376449241f008349cbd938e30e2174f0c974bb5155c852bdbbb4873a0f151a12601cf2fe115ae0811a0f7ccaefd3525e21c2a8f0fab7ada9c0309230db0a
   languageName: node
   linkType: hard
 
