@@ -57,7 +57,6 @@ updates:
   versioning-strategy: increase
   ignore:
   # TODO: Update sass when bootstrap comes with a new version that fixes for deprecations
-  # https://github.com/twbs/bootstrap/issues/40621
   # https://github.com/twbs/bootstrap/issues/40849
   - dependency-name: sass
 - package-ecosystem: docker
