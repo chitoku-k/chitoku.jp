@@ -12426,7 +12426,7 @@ __metadata:
     stylelint: "npm:^16.19.1"
     stylelint-config-recess-order: "npm:^6.0.0"
     stylelint-config-standard-scss: "npm:^14.0.0"
-    stylelint-scss: "npm:^6.11.1"
+    stylelint-scss: "npm:^6.12.0"
     tsconfig-paths-webpack-plugin: "npm:^4.2.0"
     turnstile-types: "npm:^1.2.3"
     typescript: "npm:^5.8.3"
@@ -14972,10 +14972,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mdn-data@npm:^2.15.0":
-  version: 2.15.0
-  resolution: "mdn-data@npm:2.15.0"
-  checksum: 10/1f50b10b16ae92450f0a7b64fd0519d7085d001152f34dec2238c4002f3f562cf3bff47b60b9cb82fa1d8dd6cf36f87b3c79e10079e7823b955461bb165efc90
+"mdn-data@npm:^2.21.0":
+  version: 2.21.0
+  resolution: "mdn-data@npm:2.21.0"
+  checksum: 10/b1e52805eeee301479b498f3443d4148257ea0c1edf87d6350a233de9b2b9e939405c5a121246df3e3e8aed7aa729a37a9b0070fc0a849221001f6dc77aea88b
   languageName: node
   linkType: hard
 
@@ -20294,21 +20294,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-scss@npm:^6.11.1":
-  version: 6.11.1
-  resolution: "stylelint-scss@npm:6.11.1"
+"stylelint-scss@npm:^6.12.0":
+  version: 6.12.0
+  resolution: "stylelint-scss@npm:6.12.0"
   dependencies:
     css-tree: "npm:^3.0.1"
     is-plain-object: "npm:^5.0.0"
-    known-css-properties: "npm:^0.35.0"
-    mdn-data: "npm:^2.15.0"
+    known-css-properties: "npm:^0.36.0"
+    mdn-data: "npm:^2.21.0"
     postcss-media-query-parser: "npm:^0.2.3"
     postcss-resolve-nested-selector: "npm:^0.1.6"
     postcss-selector-parser: "npm:^7.1.0"
     postcss-value-parser: "npm:^4.2.0"
   peerDependencies:
     stylelint: ^16.0.2
-  checksum: 10/cb3826ea7be6d235a42d8e4a5bbcbafeb157bcb89ecd03ee9f7be6b1333400fbe147e6c558f477679352103574ff773f82673aa4a6cb39ea83128d2ceedbc29f
+  checksum: 10/bb519ea8a81a480caf0483abdc26078d9048b493c4e207a45d6d787129d7e25a3b9c69c9bf83aa42bd65b3c54957f5a1e880c5da14e78e851901bce96d335936
   languageName: node
   linkType: hard
 
