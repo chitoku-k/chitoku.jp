@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "@types/html-to-text": "^9.0.4",
-    "feed": "^5.0.0",
+    "feed": "^5.0.1",
     "html-to-text": "^9.0.5"
   }
 }
