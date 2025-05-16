@@ -12570,7 +12570,7 @@ __metadata:
     lint-staged: "npm:^15.5.2"
     prismjs: "npm:^1.30.0"
     react: "npm:^18.3.1"
-    react-bootstrap: "npm:^2.10.9"
+    react-bootstrap: "npm:^2.10.10"
     react-dom: "npm:^18.3.1"
     react-instantsearch: "npm:^7.15.7"
     react-intl: "npm:^7.1.11"
@@ -18034,9 +18034,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-bootstrap@npm:^2.10.9":
-  version: 2.10.9
-  resolution: "react-bootstrap@npm:2.10.9"
+"react-bootstrap@npm:^2.10.10":
+  version: 2.10.10
+  resolution: "react-bootstrap@npm:2.10.10"
   dependencies:
     "@babel/runtime": "npm:^7.24.7"
     "@restart/hooks": "npm:^0.4.9"
@@ -18058,7 +18058,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/aaa923af1cf724471f8c9dd7aa365b0e5556cb3aa63b023912353b6874d7f274b4362a9b97df91fb0c04e998c7a49fa8c5e071f3ba468e888afa26b2d0d27ca2
+  checksum: 10/0ed950e0705779312bc625a422d86981c3dbf5d53ff5a038983dee70463c66430b6f3ccac08dd8129665952745e151ff8c35c7dd48a4de89d8322e8cbc23337b
   languageName: node
   linkType: hard
 
