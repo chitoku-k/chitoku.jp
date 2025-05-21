@@ -56,6 +56,20 @@ updates:
   open-pull-requests-limit: 99
   versioning-strategy: increase
   ignore:
+  # TODO: Update react when gatsby becomes compatible with react 19.x
+  # https://github.com/gatsbyjs/gatsby/issues/39180
+  - dependency-name: "@types/react"
+    versions:
+    - ">= 19.0.0"
+  - dependency-name: "@types/react-dom"
+    versions:
+    - ">= 19.0.0"
+  - dependency-name: react
+    versions:
+    - ">= 19.0.0"
+  - dependency-name: react-dom
+    versions:
+    - ">= 19.0.0"
   # TODO: Update sass when bootstrap comes with a new version that fixes for deprecations
   # https://github.com/twbs/bootstrap/issues/40849
   - dependency-name: sass
