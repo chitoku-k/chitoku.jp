@@ -1,14 +1,14 @@
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-webpack5'
 
 import type { TwitterTweetProps } from 'components/TwitterTweet'
 import TwitterTweet from 'components/TwitterTweet'
 
 const meta: Meta = {
   component: TwitterTweet,
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'container',
+      value: 'container',
     },
   },
 }

@@ -1,5 +1,5 @@
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-webpack5'
 
 import Header from 'components/Header'
 

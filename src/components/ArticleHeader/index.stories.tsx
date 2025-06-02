@@ -1,13 +1,13 @@
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-webpack5'
 
 import type { ArticleHeaderProps } from 'components/ArticleHeader'
 import ArticleHeader from 'components/ArticleHeader'
 
 const meta: Meta = {
   component: ArticleHeader,
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'container',
+      value: 'container',
     },
   },
 }

@@ -1,5 +1,5 @@
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-webpack5'
 
 import type { CategoryIconProps } from 'components/CategoryIcon'
 import CategoryIcon from 'components/CategoryIcon'
@@ -13,9 +13,9 @@ import windows from 'contents/taxonomies/categories/windows.yml'
 
 const meta: Meta = {
   component: CategoryIcon,
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'container',
+      value: 'container',
     },
   },
 }

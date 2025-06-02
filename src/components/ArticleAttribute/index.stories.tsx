@@ -1,6 +1,6 @@
 import { IntlProvider } from 'react-intl'
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-webpack5'
 
 import messages from 'translations/ja.yml'
 import type { ArticleAttributeProps } from 'components/ArticleAttribute'
@@ -8,9 +8,9 @@ import ArticleAttribute from 'components/ArticleAttribute'
 
 const meta: Meta = {
   component: ArticleAttribute,
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'container',
+      value: 'container',
     },
   },
 }
