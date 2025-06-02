@@ -1,7 +1,7 @@
 'use strict'
 
-const { action } = require('@storybook/addon-actions')
-require('../src/styles/styles.scss')
+import { action } from 'storybook/actions'
+import '../src/styles/styles.scss'
 
 // Overrides Link behavior.
 global.___loader = {
@@ -14,17 +14,16 @@ global.___navigate = pathname => action('Navigate')(pathname)
 const preview = {
   parameters: {
     backgrounds: {
-      default: 'page',
-      values: [
-        {
-          name: 'page',
+      options: {
+        page: {
+          name: 'Page',
           value: 'var(--body-background)',
         },
-        {
-          name: 'container',
+        container: {
+          name: 'Container',
           value: 'var(--containers-background)',
         },
-      ],
+      },
     },
     controls: {
       matchers: {

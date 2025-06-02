@@ -1,6 +1,6 @@
 import { IntlProvider } from 'react-intl'
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-webpack5'
 
 import messages from 'translations/ja.yml'
 import type { SimplePaginationProps } from 'components/Pagination'
@@ -9,9 +9,9 @@ import { SimplePagination } from 'components/Pagination'
 const meta: Meta = {
   component: SimplePagination,
   title: 'Components/SimplePagination',
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'container',
+      value: 'container',
     },
   },
 }

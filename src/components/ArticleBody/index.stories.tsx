@@ -1,5 +1,5 @@
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-webpack5'
 
 import type { ArticleBodyProps } from 'components/ArticleBody'
 import ArticleBody, { register } from 'components/ArticleBody'
@@ -9,9 +9,9 @@ register('a', Link)
 
 const meta: Meta = {
   component: ArticleBody,
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'container',
+      value: 'container',
     },
   },
 }

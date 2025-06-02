@@ -1,6 +1,7 @@
 'use strict'
 
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+import webpack from 'webpack'
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 
 const config = {
   stories: [
@@ -11,9 +12,7 @@ const config = {
   ],
   addons: [
     '@storybook/addon-links',
-    '@storybook/addon-essentials',
     '@storybook/addon-webpack5-compiler-babel',
-    '@storybook/preset-scss',
   ],
   framework: {
     name: '@storybook/react-webpack5',
@@ -31,7 +30,7 @@ const config = {
     const js = config.module.rules.find(({ test, use }) => test?.test('.js') && use?.[0]?.loader?.includes?.('babel'))
     js.use[0].options.plugins = [
       [
-        require.resolve('babel-plugin-remove-graphql-queries'),
+        'babel-plugin-remove-graphql-queries',
         {
           stage: config.mode === 'development' ? 'develop-html' : 'build-html',
           staticQueryDir: 'page-data/sq/d',
@@ -64,18 +63,38 @@ const config = {
       ],
     })
 
-    const scss = config.module.rules.find(({ test }) => test.test('.scss'))
-    scss.exclude = /\.module\.scss$/u
+    config.module.rules.push({
+      test: /\.css$/u,
+      use: [
+        { loader: 'style-loader' },
+        { loader: 'css-loader' },
+      ],
+    })
+
+    config.module.rules.push({
+      test: /\.scss$/u,
+      exclude: /\.module\.scss$/u,
+      use: [
+        { loader: 'style-loader' },
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1,
+          },
+        },
+        {
+          loader: 'sass-loader',
+          options: {
+            api: 'legacy',
+          },
+        },
+      ],
+    })
 
     config.module.rules.push({
       test: /\.module\.scss$/u,
       use: [
-        {
-          loader: 'style-loader',
-          options: {
-            esModule: false,
-          },
-        },
+        { loader: 'style-loader' },
         {
           loader: 'css-loader',
           options: {
@@ -85,7 +104,12 @@ const config = {
             },
           },
         },
-        { loader: 'sass-loader' },
+        {
+          loader: 'sass-loader',
+          options: {
+            api: 'legacy',
+          },
+        },
       ],
     })
 
@@ -97,6 +121,10 @@ const config = {
         extensions: config.resolve.extensions,
       }),
     ]
+
+    config.plugins.push(new webpack.ProvidePlugin({
+        process: 'process/browser',
+    }))
 
     return config
   },

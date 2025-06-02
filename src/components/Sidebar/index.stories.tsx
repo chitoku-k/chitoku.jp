@@ -1,6 +1,6 @@
 import { IntlProvider } from 'react-intl'
 import { LocationProvider, createHistory, createMemorySource } from '@gatsbyjs/reach-router'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-webpack5'
 
 import messages from 'translations/ja.yml'
 import type { SidebarProps } from 'components/Sidebar'
