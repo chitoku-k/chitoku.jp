@@ -1,5 +1,3 @@
-'use strict'
-
 import webpack from 'webpack'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 
@@ -40,7 +38,7 @@ const config = {
 
     config.module.rules.push({
       test: /\.m?js$/u,
-      include: /node_modules\/(gatsby|gatsby-script)\//u,
+      include: /node_modules\/(?:gatsby|gatsby-script)\//u,
       use: [
         {
           loader: 'babel-loader',
@@ -123,7 +121,7 @@ const config = {
     ]
 
     config.plugins.push(new webpack.ProvidePlugin({
-        process: 'process/browser',
+      process: 'process/browser',
     }))
 
     return config

@@ -13,7 +13,6 @@ export default [
   {
     ignores: [
       '.cache',
-      '.storybook',
       '.yarn',
       'public',
       'static',
@@ -99,6 +98,16 @@ export default [
           named: 'never',
         },
       ],
+    },
+  },
+  {
+    files: [
+      '.storybook/**/*.mjs',
+    ],
+    rules: {
+      'no-empty-function': 'off',
+      'no-shadow': 'off',
+      'no-underscore-dangle': 'off',
     },
   },
   {

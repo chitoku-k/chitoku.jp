@@ -1,5 +1,3 @@
-'use strict'
-
 import { action } from 'storybook/actions'
 import '../src/styles/styles.scss'
 
