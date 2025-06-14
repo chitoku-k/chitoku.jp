@@ -51,7 +51,9 @@ updates:
     stylelint:
       patterns:
       - stylelint
+      - stylelint-config-recess-order
       - stylelint-config-standard-scss
+      - stylelint-order
       - stylelint-scss
   open-pull-requests-limit: 99
   versioning-strategy: increase
