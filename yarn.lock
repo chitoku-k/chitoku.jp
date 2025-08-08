@@ -11989,7 +11989,7 @@ __metadata:
     schema-dts: "npm:^1.1.5"
     storybook: "npm:^9.1.1"
     style-loader: "npm:^4.0.0"
-    stylelint: "npm:^16.23.0"
+    stylelint: "npm:^16.23.1"
     stylelint-config-recess-order: "npm:^7.1.0"
     stylelint-config-standard-scss: "npm:^15.0.1"
     stylelint-order: "npm:^7.0.0"
@@ -19763,9 +19763,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^16.23.0":
-  version: 16.23.0
-  resolution: "stylelint@npm:16.23.0"
+"stylelint@npm:^16.23.1":
+  version: 16.23.1
+  resolution: "stylelint@npm:16.23.1"
   dependencies:
     "@csstools/css-parser-algorithms": "npm:^3.0.5"
     "@csstools/css-tokenizer": "npm:^3.0.4"
@@ -19807,7 +19807,7 @@ __metadata:
     write-file-atomic: "npm:^5.0.1"
   bin:
     stylelint: bin/stylelint.mjs
-  checksum: 10/5a92aaaefbc22aba032d6a08df6d0cc8d72cc36e0cd1210e2ae2b8918b349a12d05d562daa1962b8fe0883835616081a0dd76e3d1440ab0bcda1fffa38cd3312
+  checksum: 10/7e49e1211c7f1cb2eae9f03c1fe1242c8131675ab28a615859b79f4c7c68bb089e20bae111f508ff39dbbc4c9670c1d2414e96e493a2f1e82387af127a1759c8
   languageName: node
   linkType: hard
 
