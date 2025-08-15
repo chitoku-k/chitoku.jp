@@ -11993,7 +11993,7 @@ __metadata:
     storybook: "npm:^9.1.2"
     style-loader: "npm:^4.0.0"
     stylelint: "npm:^16.23.1"
-    stylelint-config-recess-order: "npm:^7.1.0"
+    stylelint-config-recess-order: "npm:^7.2.0"
     stylelint-config-standard-scss: "npm:^15.0.1"
     stylelint-order: "npm:^7.0.0"
     stylelint-scss: "npm:^6.12.1"
@@ -19673,13 +19673,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-config-recess-order@npm:^7.1.0":
-  version: 7.1.0
-  resolution: "stylelint-config-recess-order@npm:7.1.0"
+"stylelint-config-recess-order@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "stylelint-config-recess-order@npm:7.2.0"
   peerDependencies:
     stylelint: ">=16.18"
     stylelint-order: ">=7"
-  checksum: 10/cd1272a13193ecd2d52c9dfa69930b36a4b2d00c2a1570892a31aa62b07bf1d3683eca11ec783600f9fb250fe977d14712143b62ef30a76431b5e6f647fd70a2
+  checksum: 10/c0bd101f51a18cea235d6786b83098a63c07d2f86e6c4eab80dde698a0cab89b53c660536687e0279c1b7aa193db415968f9a2541d21cda01d8e4f6492cdcb8b
   languageName: node
   linkType: hard
 
