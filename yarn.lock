@@ -4424,13 +4424,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/dotenv-safe@npm:^8.1.6":
-  version: 8.1.6
-  resolution: "@types/dotenv-safe@npm:8.1.6"
+"@types/dotenv-safe@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "@types/dotenv-safe@npm:9.1.0"
   dependencies:
     "@types/node": "npm:*"
-    dotenv: "npm:^8.2.0"
-  checksum: 10/fcc2995a3a06d54ecf6589c2ffac83a1e65a90e0dce0b1a116ae58e00feb895588bd1336cad529a221acb4ce6a44e963920f818d0dc84e1eb0e17a4111968623
+  peerDependencies:
+    dotenv: ">=8.2.0"
+  checksum: 10/32acdb4615268113adcd277df3d588a3f6817546e683c038308c14859f9881f84643fb318da68c6910e2bdb494e8ea8f2bdc3f5da4493bcb8c7ade51441d480e
   languageName: node
   linkType: hard
 
@@ -8590,7 +8591,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^8.2.0, dotenv@npm:^8.6.0":
+"dotenv@npm:^8.6.0":
   version: 8.6.0
   resolution: "dotenv@npm:8.6.0"
   checksum: 10/31d7b5c010cebb80046ba6853d703f9573369b00b15129536494f04b0af4ea0060ce8646e3af58b455af2f6f1237879dd261a5831656410ec92561ae1ea44508
@@ -11975,7 +11976,7 @@ __metadata:
     "@storybook/addon-webpack5-compiler-babel": "npm:^3.0.6"
     "@storybook/react-webpack5": "npm:^9.1.4"
     "@svgr/webpack": "npm:^8.1.0"
-    "@types/dotenv-safe": "npm:^8.1.6"
+    "@types/dotenv-safe": "npm:^9.1.0"
     "@types/gatsbyjs__reach-router": "npm:^2.0.5"
     "@types/hast": "npm:^3.0.4"
     "@types/node": "npm:^24.3.1"
