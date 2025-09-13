@@ -291,7 +291,7 @@
 
     *:not(pre) > code[class*="language-"] {
       padding: 2px 4px;
-      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
 
     .monospace {
