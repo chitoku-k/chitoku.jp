@@ -38,7 +38,6 @@ const PspSdkMacro: FunctionComponent<PspSdkMacroProps> = ({
   return (
     <div className={styles.entry}>
       <pre className={clsx(styles.prototype, 'language-c')}>
-        {/* eslint-disable-next-line react/no-danger */}
         <code className="language-c" dangerouslySetInnerHTML={{ __html: highlighted }} />
       </pre>
       <div className={styles.description}>
