@@ -87,9 +87,12 @@ const Mail: FunctionComponent = () => {
       <Alert className={styles.notice} variant="info">
         {formatMessage(messages.contact_me_on_sns)}
         <br />
-        <FormattedMessage {...messages.contact_me_from_about} values={{
-          about: <Link to="/about">{formatMessage(messages.about)}</Link>,
-        }} />
+        <FormattedMessage
+          {...messages.contact_me_from_about}
+          values={{
+            about: <Link to="/about">{formatMessage(messages.about)}</Link>,
+          }}
+        />
       </Alert>
       <form onSubmit={onSubmit}>
         <Form.Group className={styles.group}>

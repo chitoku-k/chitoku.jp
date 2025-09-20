@@ -30,9 +30,12 @@ const About: FunctionComponent<AboutProps> = ({
             <img className={styles.icon} src={about.icon.src} />
             <br />
             <small>
-              <FormattedMessage {...messages.icon} values={{
-                name: <Link to={about.icon.url}>{about.icon.name}</Link>,
-              }} />
+              <FormattedMessage
+                {...messages.icon}
+                values={{
+                  name: <Link to={about.icon.url}>{about.icon.name}</Link>,
+                }}
+              />
             </small>
           </div>
         </Col>
@@ -89,7 +92,6 @@ const About: FunctionComponent<AboutProps> = ({
               <tr>
                 <th>{formatMessage(messages.introduction)}</th>
                 <td>
-                  {/* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion */}
                   <ArticleBody ast={(introduction?.markdown?.htmlAst ?? null) as unknown as Root} />
                 </td>
               </tr>

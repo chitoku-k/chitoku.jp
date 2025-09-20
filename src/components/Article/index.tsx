@@ -72,7 +72,6 @@ const Article: FunctionComponent<ArticleProps> = ({
           </Navbar>
         ) : null}
         <ArticleContext.Provider value={article}>
-          {/* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion */}
           <ArticleBody ast={(excerptAst ?? htmlAst ?? null) as Root} />
         </ArticleContext.Provider>
         {excerpted && excerptAst ? (
@@ -87,7 +86,8 @@ const Article: FunctionComponent<ArticleProps> = ({
           <PaginationContainer>
             <SimplePagination
               prev={prev ? { title: prev.attributes.title, to: prev.path } : null}
-              next={next ? { title: next.attributes.title, to: next.path } : null} />
+              next={next ? { title: next.attributes.title, to: next.path } : null}
+            />
           </PaginationContainer>
         </ArticleContainer>
       ) : null}

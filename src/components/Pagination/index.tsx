@@ -27,14 +27,17 @@ export const PaginationItem: FunctionComponent<Omit<ComponentPropsWithoutRef<'li
   ...rest
 }) => {
   const item = (
-    <BootstrapPagination.Item className={clsx(
-      styles.paginationItem,
-      !visible && styles.hidden,
-      !direction && styles.numbers,
-      direction === 'prev' && styles.prev,
-      direction === 'next' && styles.next,
-      className,
-    )} {...rest} />
+    <BootstrapPagination.Item
+      className={clsx(
+        styles.paginationItem,
+        !visible && styles.hidden,
+        !direction && styles.numbers,
+        direction === 'prev' && styles.prev,
+        direction === 'next' && styles.next,
+        className,
+      )}
+      {...rest}
+    />
   )
   return href ? <LinkContainer to={href}>{item}</LinkContainer> : item
 }
@@ -54,7 +57,8 @@ const Pagination: FunctionComponent<PaginationProps> = ({
           key={i}
           visible
           active={i + 1 === page.current}
-          href={i + 1 === page.current ? undefined : getPagePath(page.base, i + 1)}>
+          href={i + 1 === page.current ? undefined : getPagePath(page.base, i + 1)}
+        >
           {i + 1}
         </PaginationItem>
       ))}

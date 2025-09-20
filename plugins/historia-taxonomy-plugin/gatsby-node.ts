@@ -94,7 +94,6 @@ export const createPages: GatsbyNode['createPages'] = async ({
 const isPluginObject = (plugin: PluginRef): plugin is IPluginRefObject => typeof plugin === 'object'
 
 export const createResolvers: GatsbyNode['createResolvers'] = ({
-  // eslint-disable-next-line @typescript-eslint/no-shadow
   createResolvers,
 }: CreateResolversArgs): void => {
   const plugin = config.plugins?.filter(isPluginObject).find(p => p.resolve === 'gatsby-transformer-remark')
