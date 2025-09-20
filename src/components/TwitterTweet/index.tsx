@@ -70,7 +70,8 @@ const TwitterTweet: FunctionComponent<TwitterTweetProps> = ({
         tweetId={id}
         options={tweetOptions}
         renderError={renderError({ id })}
-        {...rest} />
+        {...rest}
+      />
     </div>
   )
 }

@@ -86,7 +86,8 @@ const Article: FunctionComponent<ArticleProps> = ({
           <PaginationContainer>
             <SimplePagination
               prev={prev ? { title: prev.attributes.title, to: prev.path } : null}
-              next={next ? { title: next.attributes.title, to: next.path } : null} />
+              next={next ? { title: next.attributes.title, to: next.path } : null}
+            />
           </PaginationContainer>
         </ArticleContainer>
       ) : null}

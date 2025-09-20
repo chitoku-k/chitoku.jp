@@ -39,13 +39,16 @@ const ArticleAttribute: FunctionComponent<ArticleAttributeProps> = ({
         </span>
       ) : null}
       {typeof created === 'string' ? (
-        <span className={styles.item} title={formatDate(new Date(created), {
-          year: 'numeric',
-          month: 'narrow',
-          day: 'numeric',
-          hour: 'numeric',
-          minute: 'numeric',
-        })}>
+        <span
+          className={styles.item}
+          title={formatDate(new Date(created), {
+            year: 'numeric',
+            month: 'narrow',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+          })}
+        >
           <FontAwesomeIcon className={styles.icon} icon={faCalendar} />
           {formatDate(new Date(created), {
             year: 'numeric',

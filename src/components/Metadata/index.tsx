@@ -9,13 +9,13 @@ import messages from './messages'
 
 type ThumbnailURL = string
 type ThumbnailFile = string | null | undefined
-type ThumbnailPath<TURL extends string, TFile extends string | null | undefined> =
-  TFile extends string
+type ThumbnailPath<TURL extends string, TFile extends string | null | undefined>
+  = TFile extends string
     ? `${TURL}/thumbnails/${TFile}.png`
     : `${TURL}/thumbnails/default.png`
 
-const thumbnailPath =
-  (url: ThumbnailURL, file: ThumbnailFile): ThumbnailPath<ThumbnailURL, ThumbnailFile> => `${url}/thumbnails/${file ?? 'default'}.png` as ThumbnailPath<ThumbnailURL, ThumbnailFile>
+const thumbnailPath
+  = (url: ThumbnailURL, file: ThumbnailFile): ThumbnailPath<ThumbnailURL, ThumbnailFile> => `${url}/thumbnails/${file ?? 'default'}.png` as ThumbnailPath<ThumbnailURL, ThumbnailFile>
 
 const query = graphql`
   query MetadataItem {
@@ -91,26 +91,30 @@ const Metadata: FunctionComponent<MetadataProps> = ({ ...metadata }) => {
         <link rel="next" href={metadata.next} />
       ) : null}
       {metadata.breadcrumb ? (
-        <JsonLd<BreadcrumbList> item={{
-          '@context': 'https://schema.org',
-          '@type': 'BreadcrumbList',
-          'itemListElement': metadata.breadcrumb.map((item, position) => ({
-            '@type': 'ListItem',
-            position,
-            'item': {
-              '@type': 'Thing',
-              ...item,
-            },
-          })),
-        }} />
+        <JsonLd<BreadcrumbList>
+          item={{
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            'itemListElement': metadata.breadcrumb.map((item, position) => ({
+              '@type': 'ListItem',
+              position,
+              'item': {
+                '@type': 'Thing',
+                ...item,
+              },
+            })),
+          }}
+        />
       ) : null}
       {metadata.created ? (
-        <JsonLd<CreativeWork> item={{
-          '@context': 'https://schema.org',
-          '@type': 'Article',
-          'datePublished': metadata.created,
-          'thumbnailUrl': thumbnailPath(siteUrl, metadata.thumbnail),
-        }} />
+        <JsonLd<CreativeWork>
+          item={{
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            'datePublished': metadata.created,
+            'thumbnailUrl': thumbnailPath(siteUrl, metadata.thumbnail),
+          }}
+        />
       ) : null}
     </>
   )

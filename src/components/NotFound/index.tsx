@@ -18,16 +18,19 @@ const Contact: FunctionComponent<ContactProps> = ({
     accounts,
   },
 }) => (
-  <FormattedMessage {...message} values={{
-    service,
-    account: (
-      <span>
-        {accounts
-          .map(({ url, name }) => url ? <Link to={url} key={url}>{name}</Link> : name)
-          .reduce<ReactNode[]>((prev, curr) => prev.length ? [ prev, ', ', curr ] : [ curr ], [])}
-      </span>
-    ),
-  }} />
+  <FormattedMessage
+    {...message}
+    values={{
+      service,
+      account: (
+        <span>
+          {accounts
+            .map(({ url, name }) => url ? <Link to={url} key={url}>{name}</Link> : name)
+            .reduce<ReactNode[]>((prev, curr) => prev.length ? [ prev, ', ', curr ] : [ curr ], [])}
+        </span>
+      ),
+    }}
+  />
 )
 
 interface ContactProps {
@@ -49,23 +52,32 @@ const NotFound: FunctionComponent<NotFoundProps> = ({ contacts }) => {
       <p>
         {formatMessage(messages.description)}
         <br />
-        <FormattedMessage {...messages.requested} values={{
-          url: <code>{location.href}</code>,
-        }} />
+        <FormattedMessage
+          {...messages.requested}
+          values={{
+            url: <code>{location.href}</code>,
+          }}
+        />
       </p>
       <p>
         {formatMessage(messages.try)}
       </p>
       <ul className={styles.tryList}>
         <li>
-          <FormattedMessage {...messages.go_to_home} values={{
-            home: <a href="/">{formatMessage(messages.home)}</a>,
-          }} />
+          <FormattedMessage
+            {...messages.go_to_home}
+            values={{
+              home: <a href="/">{formatMessage(messages.home)}</a>,
+            }}
+          />
         </li>
         <li>
-          <FormattedMessage {...messages.complain_to_administrator} values={{
-            administrator: <a href="/mail">{formatMessage(messages.administrator)}</a>,
-          }} />
+          <FormattedMessage
+            {...messages.complain_to_administrator}
+            values={{
+              administrator: <a href="/mail">{formatMessage(messages.administrator)}</a>,
+            }}
+          />
         </li>
         <li>
           {formatMessage(messages.give_up)}

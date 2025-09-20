@@ -57,11 +57,16 @@ const Hits: FunctionComponent<HitsProps> = ({
   if (!results.nbHits) {
     return (
       <div className={styles.noHits}>
-        <FormattedMessage {...messages.not_found} values={{
-          text: <strong>{results.query}</strong>,
-        }} />
+        <FormattedMessage
+          {...messages.not_found}
+          values={{
+            text: <strong>{results.query}</strong>,
+          }}
+        />
         <br />
-        <FormattedMessage {...messages.not_found_hints} />
+        <FormattedMessage
+          {...messages.not_found_hints}
+        />
       </div>
     )
   }
@@ -120,12 +125,15 @@ const Search: FunctionComponent<SearchProps> = ({
 
   return (
     <ArticleContainer>
-      <ArticleHeader className={styles.resultHeader} title={
-        <>
-          {title}
-          <PoweredBy classNames={{ logo: styles.logo }} theme={theme} />
-        </>
-      } />
+      <ArticleHeader
+        className={styles.resultHeader}
+        title={
+          <>
+            {title}
+            <PoweredBy classNames={{ logo: styles.logo }} theme={theme} />
+          </>
+        }
+      />
       {searchClient && indexName ? (
         <InstantSearch indexName={indexName} searchClient={searchClient}>
           <Refine query={query} />

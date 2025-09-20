@@ -26,15 +26,21 @@ const Footer: FunctionComponent = () => {
   return (
     <footer className={styles.footer}>
       {commit && repositoryName && repositoryTreeUrl ? (
-        <FormattedMessage {...messages.copyright} values={{
-          link: <Link className={styles.link} to={`${repositoryTreeUrl}${commit.hash}`}>{repositoryName}</Link>,
-          license: <Link className={styles.link} to="/licenses.txt">{formatMessage(messages.license)}</Link>,
-        }} />
+        <FormattedMessage
+          {...messages.copyright}
+          values={{
+            link: <Link className={styles.link} to={`${repositoryTreeUrl}${commit.hash}`}>{repositoryName}</Link>,
+            license: <Link className={styles.link} to="/licenses.txt">{formatMessage(messages.license)}</Link>,
+          }}
+        />
       ) : (
-        <FormattedMessage {...messages.copyright} values={{
-          link: null,
-          license: <Link className={styles.link} to="/licenses.txt">{formatMessage(messages.license)}</Link>,
-        }} />
+        <FormattedMessage
+          {...messages.copyright}
+          values={{
+            link: null,
+            license: <Link className={styles.link} to="/licenses.txt">{formatMessage(messages.license)}</Link>,
+          }}
+        />
       )}
     </footer>
   )

@@ -30,9 +30,12 @@ const About: FunctionComponent<AboutProps> = ({
             <img className={styles.icon} src={about.icon.src} />
             <br />
             <small>
-              <FormattedMessage {...messages.icon} values={{
-                name: <Link to={about.icon.url}>{about.icon.name}</Link>,
-              }} />
+              <FormattedMessage
+                {...messages.icon}
+                values={{
+                  name: <Link to={about.icon.url}>{about.icon.name}</Link>,
+                }}
+              />
             </small>
           </div>
         </Col>
