@@ -3,7 +3,7 @@
   "private": true,
   "author": "ちとく <odango@chitoku.jp>",
   "description": "ちとくのホームページ",
-  "packageManager": "yarn@4.10.2",
+  "packageManager": "yarn@4.10.3",
   "devDependencies": {
     "@babel/core": "^7.28.4",
     "@babel/preset-typescript": "^7.27.1",
