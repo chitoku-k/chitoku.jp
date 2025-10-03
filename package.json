@@ -63,7 +63,7 @@
     "husky": "^9.1.7",
     "is-absolute-url": "^5.0.0",
     "license-webpack-plugin": "^4.0.2",
-    "lint-staged": "^16.2.1",
+    "lint-staged": "^16.2.3",
     "prismjs": "^1.30.0",
     "process": "^0.11.10",
     "react": "^18.3.1",
