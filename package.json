@@ -36,7 +36,7 @@
     "dotenv-safe": "^9.1.0",
     "eslint": "^9.36.0",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-hooks": "^6.1.0",
     "eslint-plugin-storybook": "^9.1.10",
     "extract-react-intl-messages": "^5.0.0",
     "gatsby": "^5.15.0",
