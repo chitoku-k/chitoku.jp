@@ -9156,15 +9156,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-storybook@npm:^9.1.8":
-  version: 9.1.8
-  resolution: "eslint-plugin-storybook@npm:9.1.8"
+"eslint-plugin-storybook@npm:^9.1.10":
+  version: 9.1.10
+  resolution: "eslint-plugin-storybook@npm:9.1.10"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.8.1"
   peerDependencies:
     eslint: ">=8"
-    storybook: ^9.1.8
-  checksum: 10/24ef7b44ba5a748bdc6c6ba8761ceb620f33784150d275e1db56980137a72d43c6e91cad9060769678ce5b091d3fc24c352f8276d3a65a2de92e4e8bc8a3b808
+    storybook: ^9.1.10
+  checksum: 10/d9fbf88e6a40171d2161456d8c05318892e842bb4109a96a1d46a81d188d7c5ff4577f514113983e7660916a2bfc09518d9d510d87dd9c6c6431565df4641946
   languageName: node
   linkType: hard
 
@@ -11794,7 +11794,7 @@ __metadata:
     eslint: "npm:^9.36.0"
     eslint-plugin-react: "npm:^7.37.5"
     eslint-plugin-react-hooks: "npm:^5.2.0"
-    eslint-plugin-storybook: "npm:^9.1.8"
+    eslint-plugin-storybook: "npm:^9.1.10"
     extract-react-intl-messages: "npm:^5.0.0"
     gatsby: "npm:^5.15.0"
     gatsby-plugin-algolia: "npm:^1.0.3"
