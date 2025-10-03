@@ -71,7 +71,7 @@
     "react-dom": "^18.3.1",
     "react-instantsearch": "^7.16.3",
     "react-intl": "^7.1.11",
-    "react-refresh": "^0.17.0",
+    "react-refresh": "^0.18.0",
     "react-schemaorg": "^2.0.0",
     "react-turnstile": "^1.1.4",
     "react-twitter-widgets": "^1.11.0",
