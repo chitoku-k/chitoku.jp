@@ -29,6 +29,6 @@ COPY . /usr/src
 RUN --mount=type=tmpfs,target=/tmp \
     yarn build
 
-FROM nginx:1.29.1
+FROM nginx:1.29.2
 COPY conf /etc/nginx/templates
 COPY --from=build /usr/src/public /usr/share/nginx/html
