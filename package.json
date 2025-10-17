@@ -37,7 +37,7 @@
     "eslint": "^9.37.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.0",
-    "eslint-plugin-storybook": "^9.1.10",
+    "eslint-plugin-storybook": "^9.1.12",
     "extract-react-intl-messages": "^5.0.0",
     "gatsby": "^5.15.0",
     "gatsby-plugin-algolia": "^1.0.3",
