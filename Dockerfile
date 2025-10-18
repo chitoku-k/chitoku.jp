@@ -1,5 +1,5 @@
 # syntax = docker/dockerfile:1
-FROM node:24.10.0-slim AS dependencies
+FROM node:25.0.0-slim AS dependencies
 WORKDIR /usr/src
 ARG CI
 RUN --mount=type=cache,target=/var/cache/apt \
@@ -14,6 +14,7 @@ COPY plugins/historia-remark-plugin/package.json /usr/src/plugins/historia-remar
 COPY plugins/historia-taxonomy-plugin/package.json /usr/src/plugins/historia-taxonomy-plugin/
 RUN --mount=type=tmpfs,target=/tmp \
     --mount=type=cache,target=/usr/local/share/.cache/yarn \
+    npm install -g -f corepack && \
     corepack enable && \
     yarn
 
