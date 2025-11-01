@@ -33,13 +33,13 @@ category: プログラミング
 </div>
 
 ```
-(node:43816) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection
+(node:43816) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): 
 WebDriverError: chrome not reachable
   (Session info: chrome=58.0.3013.3)
-  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),pl
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=M
 ac OS X 10.12.3 x86_64)
-(node:43816) DeprecationWarning: Unhandled promise rejections are deprecated. In the f
-romise rejections that are not handled will terminate the Node.js process with a non-z
+(node:43816) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, p
+romise rejections that are not handled will terminate the Node.js process with a non-zero exit
  code.
 ```
 
