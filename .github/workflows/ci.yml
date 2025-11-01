@@ -50,6 +50,10 @@ jobs:
             ghcr.io/chitoku-k/chitoku.jp:latest
           build-args: |
             CI
+      - name: Run storybook
+        if: ${{ always() && steps.build.conclusion == 'success' }}
+        run: |
+          docker run --rm ${{ steps.build.outputs.imageid }} yarn storybook --smoke-test
       - name: Run eslint
         if: ${{ always() && steps.build.conclusion == 'success' }}
         env:
