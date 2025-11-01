@@ -60,13 +60,39 @@ apt を用いて `google-chrome-stable` をインストールします。
 Travis CI での実行時はディスプレイを持たない環境となるので、`xvfb`（X virtual framebuffer）を用いてヘッドレスで動いてもらう必要があります。
 環境変数 `DISPLAY` をセットしておくといい感じにしてくれます。
 
-`gist:chitoku-k/67068aa62aa3f077f5307ca9a822ce74#.travis.linux.yml`
+```yaml
+os: linux
+node_js: '12'
+sudo: required
+env: DISPLAY=':99.0'
+dist: trusty
+addons:
+  apt:
+    update: true
+    sources:
+      - google-chrome
+    packages:
+      - dpkg
+      - google-chrome-stable
+
+before_script:
+  - sh -e /etc/init.d/xvfb start
+```
 
 ## Travis CI: macOS
 
 brew cask を用いて `google-chrome` を /Applications にインストールします。これだけで動いたので手元の環境とは大違いで割と素直でした。
 
-`gist:chitoku-k/67068aa62aa3f077f5307ca9a822ce74#.travis.macos.yml`
+```yaml
+os: osx
+node_js: '12'
+sudo: required
+env: HOMEBREW_CASK_OPTS='--appdir=/Applications'
+
+before_install:
+  - brew update > /dev/null
+  - brew cask install google-chrome
+```
 
 ## AppVeyor: Windows
 
@@ -78,11 +104,41 @@ package.json では Node.js の chromedriver と selenium-webdriver を使用し
 この chromedriver は Google から最新の ChromeDriver を取得して node_modules に置いてくれることに加えて、selenium-webdriver にもそのパスを渡してくれるスグレモノです。
 npm に依存したくなければ簡単なシェルスクリプトでも良いと思います。
 
-`gist:chitoku-k/67068aa62aa3f077f5307ca9a822ce74#package.json`
+```json
+{
+  "devDependencies": {
+    "chromedriver": "^76.0.1",
+    "selenium-webdriver": "^4.0.0-alpha.5"
+  }
+}
+```
 
 テストを実行する際は Chrome の起動オプションに `--no-sandbox` を追加しないとキー操作などが行えないので注意が必要です。
 
-`gist:chitoku-k/67068aa62aa3f077f5307ca9a822ce74#test.js`
+```javascript
+const webdriver = require("selenium-webdriver");
+const chrome = require("selenium-webdriver/chrome");
+const chromedriver = require("chromedriver");
+
+const until = webdriver.until;
+const By = webdriver.By;
+
+const options = new chrome.Options();
+options.addArguments("no-sandbox");
+
+const builder = new webdriver.Builder();
+builder.forBrowser("chrome");
+builder.setChromeOptions(options);
+
+const driver = builder.build();
+(async () => {
+    await driver.manage().setTimeouts({ implicit: 30000 });
+    await driver.get("https://tweetdeck.twitter.com");
+    await driver.wait(until.titleIs("TweetDeck"));
+    const login = await driver.findElement(By.css("section.form-login a.Button"));
+    await login.click();
+})();
+```
 
 あとはテストを書くだけです！ お疲れさまでした！
 

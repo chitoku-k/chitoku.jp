@@ -49,7 +49,6 @@
     "gatsby-plugin-svgr-svgo": "^2.0.0",
     "gatsby-remark-autolink-headers": "^6.15.0",
     "gatsby-remark-copy-linked-files": "^6.15.0",
-    "gatsby-remark-embed-gist": "^1.2.1",
     "gatsby-remark-grid-tables": "^0.1.0",
     "gatsby-remark-images": "patch:gatsby-remark-images@npm%3A7.15.0#~/.yarn/patches/gatsby-remark-images-npm-7.15.0-b1dfaec456.patch",
     "gatsby-remark-prismjs": "^7.15.0",

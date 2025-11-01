@@ -198,18 +198,6 @@
       margin: 0.9em 0 1.8em;
     }
 
-    .gist {
-      padding: 0 16px;
-
-      @include media-breakpoint-down(lg) {
-        padding: 0 13px;
-      }
-
-      @include media-breakpoint-down(md) {
-        padding: 0;
-      }
-    }
-
     .gatsby-highlight {
       margin: 0.5em 16px 1.8em;
       overflow: auto;

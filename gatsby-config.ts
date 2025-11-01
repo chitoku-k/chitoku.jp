@@ -85,12 +85,6 @@ const config: GatsbyConfig = {
           },
           { resolve: 'gatsby-remark-copy-linked-files' },
           {
-            resolve: 'gatsby-remark-embed-gist',
-            options: {
-              gistCssUrlAddress: 'https://github.githubassets.com/assets/gist-embed-10fe821546f9.css',
-            },
-          },
-          {
             resolve: 'gatsby-remark-images',
             options: {
               linkImagesToOriginal: true,
