@@ -28,7 +28,20 @@ CakePHP にはプラグインの機構が搭載されていますが、公式の
 プラグイン側で必要な作業は Test ディレクトリーに標準的なアプリケーションと同様の構成でファイルを配置し、プラグインを読み込む側から見たコードと同じようにしてテストを記述することです。
 たとえば lampager-cakephp2 では読み込まれる際のディレクトリーの名称を Lampager としているので、テストにおいてプラグインの機能を使うときにはすべて次のようなコードで呼び出します。
 
-`gist:chitoku-k/3ffbb55bb0bb9c24ebdc90ee7b2da72c#LampagerPaginatorTest.php`
+```php
+<?php
+
+// モデルの LampagerPaginator クラスを読み込む例
+App::uses('LampagerPaginator', 'Lampager.Model');
+
+class LampagerPaginatorTest extends CakeTestCase
+{
+    public $fixtures = [
+        // プラグインのフィクスチャーを参照する例
+        'plugin.Lampager.Post',
+    ];
+}
+```
 
 こうすることでプラグイン本体から直接テストを実行する場合と異なり、プラグインの読み込みに関しても自動化されたプロセスで検証することが可能になります。
 
@@ -46,7 +59,14 @@ CakePHP 2 ではバージョン 2.10 以上から、テスト実行に使用で�
 
 もしテスト対象のプラグインが PHPUnit 4.x/5.x 環境下でテストされる場合は、次のように Composer を直接呼び出して必要なバージョンを再インストールすることで対応できます。
 
-`gist:chitoku-k/3ffbb55bb0bb9c24ebdc90ee7b2da72c#before_script.yml`
+```php
+before_script:
+  - git clone https://github.com/FriendsOfCake/travis.git --depth 1 ../travis
+  - ../travis/before_script.sh
+  - composer global remove "phpunit/phpunit"
+  - composer global require "phpunit/phpunit:<6.0.0"
+  - echo "require_once '$PWD/vendor/autoload.php';" >> ../cakephp/app/Config/bootstrap.php
+```
 
 ## CakePHP のバージョン
 
@@ -55,7 +75,14 @@ FriendsOfCake/travis 側の実装では GitHub API を呼び出すことでバ�
 
 次のように `CAKE_REF` 変数を使って有効なブランチ名を指定することで 2.x の最新版を使うといったことはできますが、もしバージョンを厳密に指定したい場合は注意が必要です。
 
-`gist:chitoku-k/3ffbb55bb0bb9c24ebdc90ee7b2da72c#env.yml`
+```php
+env:
+  global:
+    - PLUGIN_NAME=Lampager
+    - CODECOVERAGE=1
+    - CAKE_REF=2.x
+    - DB=mysql
+```
 
 環境変数ではほかに次のような値が指定できます。
 
@@ -69,7 +96,13 @@ FriendsOfCake/travis では Codecov へのカバレッジ送信をサポート�
 
 lampager-cakephp2 では次のように [php-coveralls/php-coveralls](https://github.com/php-coveralls/php-coveralls) を使って Coveralls にカバレッジを反映するように構成しています。
 
-`gist:chitoku-k/3ffbb55bb0bb9c24ebdc90ee7b2da72c#after_success.yml`
+```php
+after_success:
+  - cd ../cakephp/app/Plugin/$PLUGIN_NAME
+  - mkdir -p build/logs
+  - mv ../../clover.xml build/logs
+  - travis_retry $TRAVIS_BUILD_DIR/vendor/bin/coveralls
+```
 
 ## 最後に
 
