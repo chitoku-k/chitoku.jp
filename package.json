@@ -68,7 +68,7 @@
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^18.3.1",
-    "react-instantsearch": "^7.17.0",
+    "react-instantsearch": "^7.18.0",
     "react-intl": "^7.1.14",
     "react-refresh": "^0.18.0",
     "react-schemaorg": "^2.0.0",
