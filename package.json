@@ -92,7 +92,7 @@
     "typescript-eslint": "^8.46.4",
     "typescript-plugin-css-modules": "^5.2.0",
     "unified": "^11.0.5",
-    "webpack": "^5.102.1",
+    "webpack": "^5.103.0",
     "yaml-flat-loader": "^1.0.2"
   },
   "resolutions": {
