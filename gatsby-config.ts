@@ -38,6 +38,7 @@ const config: GatsbyConfig = {
           ? [ process.env.GATSBY_GOOGLE_ANALYTICS_ID ]
           : [],
         gtagConfig: {
+          cookie_domain: 'none',
           cookie_flags: 'samesite=strict; secure',
         },
         pluginConfig: {
