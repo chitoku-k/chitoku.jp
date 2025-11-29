@@ -23,6 +23,13 @@
       "enabled": false
     },
     {
+      "matchDepNames": [
+        "remark",
+        "remark-footnotes"
+      ],
+      "enabled": false
+    },
+    {
       "description": "Update sass when bootstrap comes with a new version that fixes for deprecations, see https://github.com/twbs/bootstrap/issues/40849",
       "matchDepNames": ["sass"],
       "enabled": false
@@ -74,13 +81,6 @@
         "gatsby-transformer-yaml"
       ],
       "groupName": "gatsby"
-    },
-    {
-      "matchDepNames": [
-        "react",
-        "react-dom"
-      ],
-      "groupName": "react"
     },
     {
       "matchDepNames": [
