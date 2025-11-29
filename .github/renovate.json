@@ -1,0 +1,104 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base", ":disableDependencyDashboard"],
+  "schedule": ["0 0 * * 6"],
+  "timezone": "Asia/Tokyo",
+  "labels": ["dependencies"],
+  "commitMessageAction": "Bump",
+  "commitMessageExtra": "",
+  "commitMessageSuffix": "from {{currentVersion}} to {{newVersion}}",
+  "commitMessageTopic": "{{depName}}",
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+  "packageRules": [
+    {
+      "description": "Update react when gatsby becomes compatible with react 19.x, see https://github.com/gatsbyjs/gatsby/issues/39180",
+      "matchDepNames": [
+        "@types/react",
+        "@types/react-dom",
+        "react",
+        "react-dom"
+      ],
+      "matchNewValue": "19.*",
+      "enabled": false
+    },
+    {
+      "description": "Update sass when bootstrap comes with a new version that fixes for deprecations, see https://github.com/twbs/bootstrap/issues/40849",
+      "matchDepNames": ["sass"],
+      "enabled": false
+    },
+    {
+      "matchManagers": ["dockerfile"],
+      "addLabels": ["docker"]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "addLabels": ["github_actions"]
+    },
+    {
+      "matchManagers": ["npm"],
+      "addLabels": ["javascript"]
+    },
+    {
+      "matchDepNames": ["node"],
+      "groupName": "node",
+      "minimumGroupSize": 2
+    },
+    {
+      "matchDepNames": ["@babel/*"],
+      "groupName": "babel"
+    },
+    {
+      "matchDepNames": [
+        "@fortawesome/*-core",
+        "@fortawesome/*-icons"
+      ],
+      "groupName": "fortawesome"
+    },
+    {
+      "matchDepNames": [
+        "babel-plugin-remove-graphql-queries",
+        "babel-preset-gatsby",
+        "gatsby",
+        "gatsby-plugin-google-gtag",
+        "gatsby-plugin-no-sourcemaps",
+        "gatsby-plugin-sass",
+        "gatsby-plugin-sharp",
+        "gatsby-remark-autolink-headers",
+        "gatsby-remark-copy-linked-files",
+        "gatsby-remark-images",
+        "gatsby-remark-prismjs",
+        "gatsby-source-filesystem",
+        "gatsby-transformer-remark",
+        "gatsby-transformer-sharp",
+        "gatsby-transformer-yaml"
+      ],
+      "groupName": "gatsby"
+    },
+    {
+      "matchDepNames": [
+        "react",
+        "react-dom"
+      ],
+      "groupName": "react"
+    },
+    {
+      "matchDepNames": [
+        "storybook",
+        "@storybook/addon-*",
+        "@storybook/react-*"
+      ],
+      "groupName": "storybook"
+    },
+    {
+      "matchDepNames": [
+        "stylelint",
+        "stylelint-config-recess-order",
+        "stylelint-config-standard-scss",
+        "stylelint-order",
+        "stylelint-scss"
+      ],
+      "groupName": "stylelint"
+    }
+  ]
+}
