@@ -19,7 +19,7 @@
         "react",
         "react-dom"
       ],
-      "matchNewValue": "19.*",
+      "matchNewValue": "^19.*",
       "enabled": false
     },
     {
