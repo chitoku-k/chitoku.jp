@@ -1,5 +1,3 @@
-import * as path from 'path'
-
 export interface Paginatable {
   page: {
     base: string
@@ -27,13 +25,7 @@ export const splitPages = <T>(items: T[], limit: number): T[][] => {
   return pages
 }
 
-const getDirectory = (file: File): Directory => file.relativeDirectory.replace(/^posts(?:\/|$)/u, '/')
-
-export const getPath = (file: File, index = '/'): Path => {
-  const directory = getDirectory(file)
-  if (!directory) {
-    return ''
-  }
-
-  return path.join(directory, file.name === 'index' ? index : file.name)
+export const getPath = (file: File, index = ''): Path => {
+  const directory = file.relativeDirectory.replace(/^posts(?=\/|$)/u, '')
+  return `${directory}/${file.name === 'index' ? index : file.name}`
 }
