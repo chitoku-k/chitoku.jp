@@ -149,12 +149,8 @@ export const onPostBuild: GatsbyNode['onPostBuild'] = async ({
       attributes,
     } = article
 
-    const directory = file.directory.replace(/^posts(?:\/|$)/u, '/')
-    if (!directory) {
-      continue
-    }
-
-    const url = siteUrl + path.join(directory, file.name === 'index' ? '/' : file.name)
+    const directory = file.directory.replace(/^posts(?=\/|$)/u, '')
+    const url = `${siteUrl}${directory}/${file.name === 'index' ? '' : file.name}`
     feed.addItem({
       id: url,
       link: url,

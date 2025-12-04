@@ -181,8 +181,8 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({
             return null
           }
 
-          const dirname = path.join('posts', path.dirname(source.frontmatter.prev))
-          const basename = path.basename(source.frontmatter.prev)
+          const dirname = path.posix.join('posts', path.posix.dirname(source.frontmatter.prev))
+          const basename = path.posix.basename(source.frontmatter.prev)
 
           const file = await context.nodeModel.findOne<File>({
             type: 'File',
@@ -214,8 +214,8 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({
             return null
           }
 
-          const dirname = path.join('posts', path.dirname(source.frontmatter.next))
-          const basename = path.basename(source.frontmatter.next)
+          const dirname = path.posix.join('posts', path.posix.dirname(source.frontmatter.next))
+          const basename = path.posix.basename(source.frontmatter.next)
 
           const file = await context.nodeModel.findOne<File>({
             type: 'File',

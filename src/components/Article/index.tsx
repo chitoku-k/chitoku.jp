@@ -16,7 +16,7 @@ import Link from 'components/Link'
 import NavItem from 'components/NavItem'
 import { PaginationContainer, SimplePagination } from 'components/Pagination'
 
-export const getClassNameFromPath = (path: string): string => `page${path.replace(/[/]/ug, '-').replace(/-$/u, '')}`
+export const getClassNameFromPath = (path: string): string => `page${path.replaceAll('/', '-').replace(/-$/u, '')}`
 
 const ArticleContext = createContext<ArticleItem>({
   path: '',
