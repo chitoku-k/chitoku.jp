@@ -6,6 +6,7 @@
   "labels": ["dependencies"],
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
+  "rangeStrategy": "bump",
   "packageRules": [
     {
       "description": "Update react when gatsby becomes compatible with react 19.x, see https://github.com/gatsbyjs/gatsby/issues/39180",
