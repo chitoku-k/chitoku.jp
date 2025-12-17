@@ -69,6 +69,7 @@ jobs:
           ENVFILE: ${{ secrets.ENVFILE }}
       - name: Build
         uses: docker/bake-action@v6
+        id: build
         with:
           set: |
             historia.tags=ghcr.io/${{ github.repository }}
