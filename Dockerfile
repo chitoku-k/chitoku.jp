@@ -2,11 +2,6 @@
 FROM node:25.2.1-slim AS dependencies
 WORKDIR /usr/src
 ARG CI
-RUN --mount=type=cache,target=/var/cache/apt \
-    --mount=type=cache,target=/var/lib/apt/lists \
-    apt-get -y update && \
-    apt-get -y install \
-        git
 COPY .yarn/ /usr/src/.yarn/
 COPY package.json yarn.lock .yarnrc.yml /usr/src/
 COPY plugins/historia-feed-plugin/package.json /usr/src/plugins/historia-feed-plugin/

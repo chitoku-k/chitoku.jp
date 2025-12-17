@@ -71,7 +71,6 @@ const config: GatsbyConfig = {
         path: 'contents/',
       },
     },
-    { resolve: 'gatsby-source-local-git' },
     {
       resolve: 'gatsby-transformer-remark',
       options: {

@@ -5,6 +5,7 @@ node_modules
 *.tsbuildinfo
 .dockerignore
 .editorconfig
+.git
 .github
 .husky
 .ignore
