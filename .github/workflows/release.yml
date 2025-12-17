@@ -25,6 +25,7 @@ jobs:
     uses: ./.github/workflows/publish-image.yml
     permissions:
       packages: write
+    secrets: inherit
     with:
       tags: ${{ github.event.release.tag_name }},latest
       set: |

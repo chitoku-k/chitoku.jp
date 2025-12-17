@@ -21,6 +21,7 @@ jobs:
     uses: ./.github/workflows/build-image.yml
     permissions:
       packages: write
+    secrets: inherit
     with:
       push: true
       set: ${{ inputs.set }}
