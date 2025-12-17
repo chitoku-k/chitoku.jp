@@ -13,16 +13,13 @@ RUN --mount=type=tmpfs,target=/tmp \
     corepack enable && \
     yarn
 
-FROM dependencies AS dev
-RUN --mount=type=cache,target=/mnt/yarn,id=/usr/local/share/.cache/yarn \
-    cp -r /mnt/yarn /usr/local/share/.cache/
-
 FROM dependencies AS build
 ARG CI
 ARG TZ=Asia/Tokyo
 ARG GATSBY_UPDATE_INDEX=false
 COPY . /usr/src
 RUN --mount=type=tmpfs,target=/tmp \
+    --mount=type=secret,id=.env,target=.env,required=true \
     yarn build
 
 FROM nginx:1.29.4

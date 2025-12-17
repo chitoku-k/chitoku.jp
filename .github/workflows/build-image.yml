@@ -1,0 +1,89 @@
+name: Build image
+on:
+  pull_request:
+  workflow_call:
+    secrets:
+      ENVFILE:
+        required: false
+    inputs:
+      push:
+        type: boolean
+        default: false
+      set:
+        type: string
+    outputs:
+      version:
+        value: ${{ jobs.image.outputs.version }}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  image:
+    name: ${{ matrix.platform.os }}/${{ matrix.platform.arch }}
+    runs-on: ${{ matrix.platform.label }}
+    permissions:
+      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        platform:
+          - os: linux
+            arch: amd64
+            label: ubuntu-24.04
+          - os: linux
+            arch: arm64
+            label: ubuntu-24.04-arm
+    outputs:
+      version: ${{ steps.version.outputs.value }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          filter: tree:0
+          submodules: true
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Get version
+        uses: chitoku-k/actions/describe-git-tag@master
+        id: version
+      - name: Log into Container Registry
+        if: ${{ inputs.push || false }}
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ github.token }}
+      - name: Prepare .env
+        run: |
+          if [[ -n $ENVFILE ]]; then
+            echo "$ENVFILE" > .env
+          else
+            cp .env{.example,}
+          fi
+          echo "GATSBY_REPOSITORY_NAME=${{ github.repository }}" >> .env
+          echo "GATSBY_REPOSITORY_URL=${{ github.server_url }}/${{ github.repository }}/tree/${{ github.sha }}" >> .env
+        env:
+          ENVFILE: ${{ secrets.ENVFILE }}
+      - name: Build
+        uses: docker/bake-action@v6
+        with:
+          set: |
+            historia.tags=ghcr.io/${{ github.repository }}
+            historia.args.CI=true
+            historia.secrets=id=.env,src=.env
+            *.cache-from=type=gha
+            *.cache-to=type=gha,mode=max
+            *.output=type=image,push=${{ inputs.push || false }},push-by-digest=${{ inputs.push || false }}
+            *.annotations=org.opencontainers.image.source=${{ github.repositoryUrl }}
+            *.annotations=org.opencontainers.image.revision=${{ github.sha }}
+            *.annotations=org.opencontainers.image.version=${{ steps.version.outputs.value }}
+            ${{ inputs.set }}
+      - name: Upload digest
+        if: ${{ inputs.push || false }}
+        uses: chitoku-k/actions/upload-image-digest@master
+        with:
+          digest: ${{ fromJSON(steps.build.outputs.metadata)['historia']['containerimage.digest'] }}
+          artifact: digests-${{ matrix.platform.os }}-${{ matrix.platform.arch }}

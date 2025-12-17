@@ -1,0 +1,69 @@
+name: Lint
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+  workflow_call:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  eslint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          submodules: true
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+      - name: Prepare .env
+        run: cp .env{.example,}
+      - name: Install corepack
+        run: |
+          npm install -g -f corepack
+          corepack enable
+      - name: Install dependencies
+        run: |
+          yarn install
+      - name: Build
+        run: |
+          yarn build
+      - name: Run eslint
+        uses: reviewdog/action-eslint@v1
+        with:
+          reporter: github-pr-annotations
+          filter_mode: nofilter
+          fail_level: any
+          eslint_flags: '**/*.{js,mjs,ts,tsx}'
+
+  stylelint:
+    name: Stylelint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+      - name: Install corepack
+        run: |
+          npm install -g -f corepack
+          corepack enable
+      - name: Install dependencies
+        run: |
+          yarn install
+      - name: Run stylelint
+        uses: reviewdog/action-stylelint@v1
+        with:
+          reporter: github-pr-annotations
+          filter_mode: nofilter
+          fail_level: any
+          stylelint_input: '**/*.scss'

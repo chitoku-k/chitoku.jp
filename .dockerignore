@@ -1,10 +1,12 @@
 Dockerfile
 LICENSE
 README.md
+docker-bake.hcl
 node_modules
 *.tsbuildinfo
 .dockerignore
 .editorconfig
+.env
 .git
 .github
 .husky
