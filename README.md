@@ -20,8 +20,8 @@ HISTORIA_URL=https://chitoku.jp
 # リポジトリー名称
 GATSBY_REPOSITORY_NAME=chitoku-k/chitoku.jp
 
-# リポジトリーツリー URL
-GATSBY_REPOSITORY_TREE_URL=https://github.com/chitoku-k/chitoku.jp/tree/
+# リポジトリー URL
+GATSBY_REPOSITORY_URL=https://github.com/chitoku-k/chitoku.jp/tree/master
 
 # メール送信先 URL
 GATSBY_MAIL_API=
@@ -43,9 +43,9 @@ GATSBY_ALGOLIA_INDEXNAME=
 
 ```shell
 $ git clone https://github.com/chitoku-k/chitoku.jp.git --recursive
-$ cd chitoku.jp 
-$ docker buildx build .
+$ cd chitoku.jp
+$ docker buildx bake
 ```
 
-[workflow-link]:    https://github.com/chitoku-k/chitoku.jp/actions?query=branch:master                                           
-[workflow-badge]:   https://img.shields.io/github/actions/workflow/status/chitoku-k/chitoku.jp/ci.yml?branch=master&style=flat-square
+[workflow-link]:    https://github.com/chitoku-k/chitoku.jp/actions?query=branch:master
+[workflow-badge]:   https://img.shields.io/github/actions/workflow/status/chitoku-k/chitoku.jp/publish-image.yml?branch=master&style=flat-square

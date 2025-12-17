@@ -1,35 +1,23 @@
 import type { FunctionComponent } from 'react'
 import { FormattedMessage, useIntl } from 'react-intl'
-import { graphql, useStaticQuery } from 'gatsby'
 
 import messages from './messages'
 import * as styles from './styles.module.scss'
 
 import Link from 'components/Link'
 
-const query = graphql`
-  query FooterItem {
-    commit: gitCommit(latest: { eq: true }) {
-      hash
-      message
-      date
-    }
-  }
-`
-
 const Footer: FunctionComponent = () => {
   const { formatMessage } = useIntl()
-  const { commit } = useStaticQuery<FooterQueryResult>(query)
   const repositoryName = process.env.GATSBY_REPOSITORY_NAME
-  const repositoryTreeUrl = process.env.GATSBY_REPOSITORY_TREE_URL
+  const repositoryUrl = process.env.GATSBY_REPOSITORY_URL
 
   return (
     <footer className={styles.footer}>
-      {commit && repositoryName && repositoryTreeUrl ? (
+      {repositoryName && repositoryUrl ? (
         <FormattedMessage
           {...messages.copyright}
           values={{
-            link: <Link className={styles.link} to={`${repositoryTreeUrl}${commit.hash}`}>{repositoryName}</Link>,
+            link: <Link className={styles.link} to={repositoryUrl}>{repositoryName}</Link>,
             license: <Link className={styles.link} to="/licenses.txt">{formatMessage(messages.license)}</Link>,
           }}
         />
@@ -45,7 +33,5 @@ const Footer: FunctionComponent = () => {
     </footer>
   )
 }
-
-type FooterQueryResult = Queries.FooterItemQuery
 
 export default Footer

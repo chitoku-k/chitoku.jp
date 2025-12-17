@@ -1,0 +1,52 @@
+name: Release
+on:
+  release:
+    types:
+      - published
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  lint:
+    name: Lint
+    uses: ./.github/workflows/lint.yml
+
+  test:
+    name: Test
+    uses: ./.github/workflows/test.yml
+
+  publish-image:
+    name: Publish image
+    needs:
+      - lint
+      - test
+    uses: ./.github/workflows/publish-image.yml
+    permissions:
+      packages: write
+    with:
+      tags: ${{ github.event.release.tag_name }},latest
+      set: |
+        historia.args.GATSBY_UPDATE_INDEX=true
+
+  deploy:
+    name: Deploy
+    needs:
+      - publish-image
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v4
+      - name: Set up kubectl context
+        uses: chitoku-k/actions/setup-kubectl-context@master
+      - name: Update images
+        run: |
+          kubectl set image --field-manager=github-actions deployment/chitokujp web=ghcr.io/chitoku-k/chitoku.jp:${{ github.event.release.tag_name }}
+      - name: Purge cache
+        uses: jakejarvis/cloudflare-purge-action@v0.3.0
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}

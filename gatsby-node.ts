@@ -105,18 +105,12 @@ export const onCreatePage: GatsbyNode['onCreatePage'] = ({
     deletePage,
   },
 }) => {
-  const { dir, name } = path.parse(page.path)
-
-  if (page.path === '/') {
-    return
-  }
-
   // Force trailing slash for index pages
-  if (name === 'index') {
+  if (page.path.endsWith('/index')) {
     deletePage(page)
     createPage({
       ...page,
-      path: path.join(dir, '/'),
+      path: page.path.slice(0, -'index'.length),
     })
   }
 }

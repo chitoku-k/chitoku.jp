@@ -7,6 +7,19 @@
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
   "rangeStrategy": "bump",
+  "customManagers": [
+    {
+      "customType": "jsonata",
+      "fileFormat": "yaml",
+      "managerFilePatterns": [".github/workflows/*.yml"],
+      "matchStrings": [
+        "jobs.*.strategy.matrix.platform[label].{\"depName\": $substringBefore(label, \"-\"), \"currentValue\": $substringAfter(label, \"-\")}",
+        "jobs.*.strategy.matrix.exclude.platform[label].{\"depName\": $substringBefore(label, \"-\"), \"currentValue\": $substringAfter(label, \"-\")}",
+        "jobs.*.strategy.matrix.include.platform[label].{\"depName\": $substringBefore(label, \"-\"), \"currentValue\": $substringAfter(label, \"-\")}"
+      ],
+      "datasourceTemplate": "github-runners"
+    }
+  ],
   "packageRules": [
     {
       "description": "Update react when gatsby becomes compatible with react 19.x, see https://github.com/gatsbyjs/gatsby/issues/39180",

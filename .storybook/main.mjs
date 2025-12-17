@@ -38,7 +38,7 @@ const config = {
 
     config.module.rules.push({
       test: /\.m?js$/u,
-      include: /node_modules\/(?:gatsby|gatsby-script)\//u,
+      include: /node_modules[\\/](?:gatsby|gatsby-script)[\\/]/u,
       use: [
         {
           loader: 'babel-loader',

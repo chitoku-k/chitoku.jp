@@ -104,7 +104,7 @@ const createTaxonomies = async ({
 
     for (const [ num, page ] of pages.entries()) {
       taxonomies.push({
-        path: path.join(category.path, num ? String(num + 1) : 'index'),
+        path: `${category.path}${num ? num + 1 : 'index'}`,
         component: path.resolve('src/templates/taxonomy.tsx'),
         context: {
           category,
@@ -126,7 +126,7 @@ const createTaxonomies = async ({
 
     for (const [ num, page ] of pages.entries()) {
       taxonomies.push({
-        path: `/${path.join('tag', tag.slug, num ? String(num + 1) : 'index')}`,
+        path: `/tag/${tag.slug}/${num ? num + 1 : 'index'}`,
         component: path.resolve('src/templates/taxonomy.tsx'),
         context: {
           category: null,
