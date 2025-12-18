@@ -78,7 +78,7 @@
     "sass": "<1.79.0",
     "sass-loader": "^16.0.6",
     "schema-dts": "^1.1.5",
-    "storybook": "^10.1.8",
+    "storybook": "^10.1.10",
     "style-loader": "^4.0.0",
     "stylelint": "^16.26.1",
     "stylelint-config-recess-order": "^7.4.0",
