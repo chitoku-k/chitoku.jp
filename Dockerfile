@@ -1,5 +1,5 @@
 # syntax = docker/dockerfile:1
-FROM node:25.2.1-slim AS dependencies
+FROM node:25.3.0-slim AS dependencies
 WORKDIR /usr/src
 ARG CI
 COPY .yarn/ /usr/src/.yarn/
