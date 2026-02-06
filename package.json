@@ -23,7 +23,7 @@
     "@types/hast": "^3.0.4",
     "@types/node": "^24.10.9",
     "@types/prismjs": "^1.26.5",
-    "@types/react": "^18.3.27",
+    "@types/react": "^18.3.28",
     "@types/react-dom": "^18.3.7",
     "algoliasearch": "^5.47.0",
     "babel-loader": "^10.0.0",
