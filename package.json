@@ -25,7 +25,7 @@
     "@types/prismjs": "^1.26.5",
     "@types/react": "^18.3.28",
     "@types/react-dom": "^18.3.7",
-    "algoliasearch": "^5.47.0",
+    "algoliasearch": "^5.48.0",
     "babel-loader": "^10.0.0",
     "babel-plugin-react-intl-auto": "^3.3.0",
     "babel-plugin-remove-graphql-queries": "^5.16.0",
