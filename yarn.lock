@@ -10477,12 +10477,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"feed@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "feed@npm:5.1.0"
+"feed@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "feed@npm:5.2.0"
   dependencies:
     xml-js: "npm:^1.6.11"
-  checksum: 10/c0b7cd6e6a5d5406f871cdaf4487d273c00e35f3c04975bb9095e10cc5234ec1b797d11a37f6502476d212e1ba0854f3de7302c4750bdeb7aec3aedcd4e50426
+  checksum: 10/caec08981d350188ce0a1c5f92cb303bce51bd5a0538be91c2cad9a7b7cbc7526055f38e14ca2a84d373cad59c2aa2e98c50209dcd58df523542b180d0d2c8bd
   languageName: node
   linkType: hard
 
@@ -12488,7 +12488,7 @@ __metadata:
   resolution: "historia-feed-plugin@workspace:plugins/historia-feed-plugin"
   dependencies:
     "@types/html-to-text": "npm:^9.0.4"
-    feed: "npm:^5.1.0"
+    feed: "npm:^5.2.0"
     html-to-text: "npm:^9.0.5"
   languageName: unknown
   linkType: soft
