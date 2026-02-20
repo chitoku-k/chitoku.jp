@@ -12580,7 +12580,7 @@ __metadata:
     react-instantsearch: "npm:^7.23.2"
     react-intl: "npm:^8.1.3"
     react-refresh: "npm:^0.18.0"
-    react-schemaorg: "npm:^2.0.0"
+    react-schemaorg: "npm:^2.0.1"
     react-turnstile: "npm:^1.1.5"
     react-twitter-widgets: "npm:^1.11.0"
     react-use: "npm:^17.6.0"
@@ -18122,14 +18122,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-schemaorg@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "react-schemaorg@npm:2.0.0"
+"react-schemaorg@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "react-schemaorg@npm:2.0.1"
   peerDependencies:
     react: ">=16.3.0"
     schema-dts: ">=0.7.4"
     typescript: ">=3.1.6"
-  checksum: 10/7bccee0982e3d90188a6ca70eef6705ac75961eb43d090b8e8a56ea1c0105c4eb04970996903c2ad5d75933bb7f5d0b087a109f5536ab5c45d44e7d77805a640
+  checksum: 10/94c0ee4c6786bec3948e6c67e5872856ab1428e5e4bb9a30d46a0f3d4a201c91c4bf59c8f56874f5d3337c40b4b4a394016bd509b6ebfbe655f70fbee81e0e66
   languageName: node
   linkType: hard
 
