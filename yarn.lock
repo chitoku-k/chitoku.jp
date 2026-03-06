@@ -6506,6 +6506,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-loader@npm:^10.1.0":
+  version: 10.1.0
+  resolution: "babel-loader@npm:10.1.0"
+  dependencies:
+    find-up: "npm:^5.0.0"
+  peerDependencies:
+    "@babel/core": ^7.12.0 || ^8.0.0-beta.1
+    "@rspack/core": ^1.0.0 || ^2.0.0-0
+    webpack: ">=5.61.0"
+  peerDependenciesMeta:
+    "@rspack/core":
+      optional: true
+    webpack:
+      optional: true
+  checksum: 10/72f5dff26585051a60bdf8998b63cfdcb92cb2f6127d6c33661659337bebd340ceca51f07f7a2e243721dc83279472a01b1a1d6e7a5803fac435eecbab4a95a4
+  languageName: node
+  linkType: hard
+
 "babel-loader@npm:^8.3.0":
   version: 8.3.0
   resolution: "babel-loader@npm:8.3.0"
@@ -12538,7 +12556,7 @@ __metadata:
     "@types/react": "npm:^18.3.28"
     "@types/react-dom": "npm:^18.3.7"
     algoliasearch: "npm:^5.49.1"
-    babel-loader: "npm:^10.0.0"
+    babel-loader: "npm:^10.1.0"
     babel-plugin-react-intl-auto: "npm:^3.3.0"
     babel-plugin-remove-graphql-queries: "npm:^5.16.0"
     babel-preset-gatsby: "npm:^3.16.0"
