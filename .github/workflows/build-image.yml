@@ -70,7 +70,7 @@ jobs:
         env:
           ENVFILE: ${{ secrets.ENVFILE }}
       - name: Build
-        uses: docker/bake-action@v6
+        uses: docker/bake-action@v7
         id: build
         with:
           set: |
