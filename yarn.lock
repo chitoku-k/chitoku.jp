@@ -12623,7 +12623,7 @@ __metadata:
     stylelint: "npm:^17.4.0"
     stylelint-config-recess-order: "npm:^7.6.1"
     stylelint-config-standard-scss: "npm:^17.0.0"
-    stylelint-order: "npm:^7.0.1"
+    stylelint-order: "npm:^8.0.0"
     stylelint-scss: "npm:^7.0.0"
     tsconfig-paths-webpack-plugin: "npm:^4.2.0"
     turnstile-types: "npm:^1.2.3"
@@ -17465,12 +17465,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-sorting@npm:^9.1.0":
-  version: 9.1.0
-  resolution: "postcss-sorting@npm:9.1.0"
+"postcss-sorting@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "postcss-sorting@npm:10.0.0"
   peerDependencies:
     postcss: ^8.4.20
-  checksum: 10/3da06525f62880f9b62c4c2e9a4e5ce27ac776272c59235a2554c87da9ba9c693a167358a67b16918ec0473c5f5cb544be654c1165ddc0346996b2d02a541c5d
+  checksum: 10/0d1c9fe60cb7c091ff7411d123303b2f874d435d191d759a78b377543da67a3316c27caa4c2ee0d6a1972e46317c12a3a604b5456e174fa35e1ca11966248010
   languageName: node
   linkType: hard
 
@@ -17525,6 +17525,17 @@ __metadata:
     picocolors: "npm:^1.1.1"
     source-map-js: "npm:^1.2.1"
   checksum: 10/9e4fbe97574091e9736d0e82a591e29aa100a0bf60276a926308f8c57249698935f35c5d2f4e80de778d0cbb8dcffab4f383d85fd50c5649aca421c3df729b86
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.5.8":
+  version: 8.5.8
+  resolution: "postcss@npm:8.5.8"
+  dependencies:
+    nanoid: "npm:^3.3.11"
+    picocolors: "npm:^1.1.1"
+    source-map-js: "npm:^1.2.1"
+  checksum: 10/cbacbfd7f767e2c820d4bf09a3a744834dd7d14f69ff08d1f57b1a7defce9ae5efcf31981890d9697a972a64e9965de677932ef28e4c8ba23a87aad45b82c459
   languageName: node
   linkType: hard
 
@@ -20397,15 +20408,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-order@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "stylelint-order@npm:7.0.1"
+"stylelint-order@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "stylelint-order@npm:8.0.0"
   dependencies:
-    postcss: "npm:^8.5.6"
-    postcss-sorting: "npm:^9.1.0"
+    postcss: "npm:^8.5.8"
+    postcss-sorting: "npm:^10.0.0"
   peerDependencies:
     stylelint: ^16.18.0 || ^17.0.0
-  checksum: 10/c50735249c3966c9481fbbf50e4a64ced3e6d37883c44006e65befc185498f912c46e40f5ced89696c9059a42b5e4c51202df16767d1bb3c2316269607ecccb8
+  checksum: 10/ee78a1a3d3e548dd6f12acb361524175fd5af65a2fab089e19774af31cc3016fd2136b7b0f5f943b2c1c6d2092384ca8307bf4c638d2f366f2971aab17eb3fe8
   languageName: node
   linkType: hard
 
