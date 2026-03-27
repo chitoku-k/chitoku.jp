@@ -2816,20 +2816,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/intl@npm:4.1.4":
-  version: 4.1.4
-  resolution: "@formatjs/intl@npm:4.1.4"
+"@formatjs/intl@npm:4.1.5":
+  version: 4.1.5
+  resolution: "@formatjs/intl@npm:4.1.5"
   dependencies:
     "@formatjs/ecma402-abstract": "npm:3.2.0"
     "@formatjs/fast-memoize": "npm:3.1.1"
     "@formatjs/icu-messageformat-parser": "npm:3.5.3"
     intl-messageformat: "npm:11.2.0"
-  peerDependencies:
-    typescript: ^5.6.0
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: 10/a706a4d222ef3042c78214ae45b3b8b04b1c4ec057f77e44443d36a89dabd099899e7cca6bbc5797890e4346d0ad4849cfb46eabea2ad10b874452c5de67cd23
+  checksum: 10/92b2c014c2cf22025ba5c5628516d72dc83d837a0ee31b5b32142e7f72b410b88126eae7fe50621f1ba8d78288ffcd54556dab64932fd252c45004269e517510
   languageName: node
   linkType: hard
 
@@ -12631,7 +12626,7 @@ __metadata:
     react-bootstrap: "npm:^2.10.10"
     react-dom: "npm:^18.3.1"
     react-instantsearch: "npm:^7.28.1"
-    react-intl: "npm:^10.1.0"
+    react-intl: "npm:^10.1.1"
     react-refresh: "npm:^0.18.0"
     react-schemaorg: "npm:^2.0.1"
     react-turnstile: "npm:^1.1.5"
@@ -18096,22 +18091,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intl@npm:^10.1.0":
-  version: 10.1.0
-  resolution: "react-intl@npm:10.1.0"
+"react-intl@npm:^10.1.1":
+  version: 10.1.1
+  resolution: "react-intl@npm:10.1.1"
   dependencies:
     "@formatjs/ecma402-abstract": "npm:3.2.0"
     "@formatjs/icu-messageformat-parser": "npm:3.5.3"
-    "@formatjs/intl": "npm:4.1.4"
+    "@formatjs/intl": "npm:4.1.5"
     intl-messageformat: "npm:11.2.0"
   peerDependencies:
     "@types/react": 19
     react: 19
-    typescript: ^5.6.0
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: 10/079f6b16d9b7195774cd98c460bd480eedab08bf18e09da1cd36e47434171a22131e1acaf6eb97141228bac075c6408f68a97837daa3fe0251c40ff6258aea80
+  checksum: 10/b464d1534079e5b3d2c63f571a5c37ed083b1ab256a073daf3551e3e9acb84ff9284bdc41e78ba420b94891574944e84810967664016c9a201b11a43214abdae
   languageName: node
   linkType: hard
 
