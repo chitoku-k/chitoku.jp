@@ -12640,7 +12640,7 @@ __metadata:
     rehype-react: "npm:^8.0.0"
     sass: "npm:<1.79.0"
     sass-loader: "npm:^16.0.7"
-    schema-dts: "npm:^1.1.5"
+    schema-dts: "npm:^2.0.0"
     storybook: "npm:^10.3.3"
     style-loader: "npm:^4.0.0"
     stylelint: "npm:^17.6.0"
@@ -19140,10 +19140,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"schema-dts@npm:^1.1.5":
-  version: 1.1.5
-  resolution: "schema-dts@npm:1.1.5"
-  checksum: 10/74f8376449241f008349cbd938e30e2174f0c974bb5155c852bdbbb4873a0f151a12601cf2fe115ae0811a0f7ccaefd3525e21c2a8f0fab7ada9c0309230db0a
+"schema-dts-lib@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "schema-dts-lib@npm:1.0.0"
+  peerDependencies:
+    typescript: ">=4.9.5"
+  checksum: 10/1c21734eee830142e98fbe9ecad47dade1c86d800bf9b9523d15e0dc961caf9ec2d5f994ac85f7a2262dc5f4499682255f7e33d505f3f3dc18c609ea94f9a19f
+  languageName: node
+  linkType: hard
+
+"schema-dts@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "schema-dts@npm:2.0.0"
+  dependencies:
+    schema-dts-lib: "npm:^1.0.0"
+  checksum: 10/62c1ecc50ba8228fa87a48398b056b00dd23317230e3d8d6fb89b8244b55e9eeffb44ac825342128a1fd2e776b85408b7c7ac2b33be357a0bcd8be32f139e7cc
   languageName: node
   linkType: hard
 
