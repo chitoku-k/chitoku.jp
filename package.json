@@ -94,6 +94,11 @@
     "webpack": "^5.106.2",
     "yaml-flat-loader": "^1.0.2"
   },
+  "dependenciesMeta": {
+    "sharp": {
+      "built": true
+    }
+  },
   "resolutions": {
     "remark": "^12",
     "remark-footnotes": "^2",
