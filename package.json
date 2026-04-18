@@ -3,7 +3,7 @@
   "private": true,
   "author": "ちとく <odango@chitoku.jp>",
   "description": "ちとくのホームページ",
-  "packageManager": "yarn@4.13.0",
+  "packageManager": "yarn@4.14.1",
   "devDependencies": {
     "@babel/core": "^7.29.0",
     "@babel/preset-typescript": "^7.28.5",
@@ -93,6 +93,11 @@
     "unified": "^11.0.5",
     "webpack": "^5.106.2",
     "yaml-flat-loader": "^1.0.2"
+  },
+  "dependenciesMeta": {
+    "sharp": {
+      "built": true
+    }
   },
   "resolutions": {
     "remark": "^12",
