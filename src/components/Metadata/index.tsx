@@ -15,7 +15,7 @@ type ThumbnailPath<TURL extends string, TFile extends string | null | undefined>
     : `${TURL}/thumbnails/default.png`
 
 const thumbnailPath
-  = (url: ThumbnailURL, file: ThumbnailFile): ThumbnailPath<ThumbnailURL, ThumbnailFile> => `${url}/thumbnails/${file ?? 'default'}.png` as ThumbnailPath<ThumbnailURL, ThumbnailFile>
+  = (url: ThumbnailURL, file: ThumbnailFile): ThumbnailPath<ThumbnailURL, ThumbnailFile> => `${url}/thumbnails/${file ?? 'default'}.png`
 
 const query = graphql`
   query MetadataItem {
