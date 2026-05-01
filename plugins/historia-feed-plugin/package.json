@@ -4,6 +4,6 @@
   "dependencies": {
     "@types/html-to-text": "^9.0.4",
     "feed": "^5.2.1",
-    "html-to-text": "^9.0.5"
+    "html-to-text": "^10.0.0"
   }
 }
