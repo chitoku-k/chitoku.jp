@@ -76,7 +76,7 @@
     "react-use": "^17.6.0",
     "rehype-react": "^8.0.0",
     "sass": "<1.79.0",
-    "sass-loader": "^16.0.8",
+    "sass-loader": "^17.0.0",
     "schema-dts": "^2.0.0",
     "storybook": "^10.4.1",
     "style-loader": "^4.0.0",
