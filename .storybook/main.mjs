@@ -1,3 +1,4 @@
+import path from 'node:path'
 import webpack from 'webpack'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 
@@ -83,7 +84,11 @@ const config = {
         {
           loader: 'sass-loader',
           options: {
-            api: 'legacy',
+            sassOptions: {
+              loadPaths: [
+                path.dirname(import.meta.dirname),
+              ],
+            },
           },
         },
       ],
@@ -105,7 +110,11 @@ const config = {
         {
           loader: 'sass-loader',
           options: {
-            api: 'legacy',
+            sassOptions: {
+              loadPaths: [
+                path.dirname(import.meta.dirname),
+              ],
+            },
           },
         },
       ],
