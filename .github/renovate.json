@@ -22,17 +22,6 @@
   ],
   "packageRules": [
     {
-      "description": "Update react when gatsby becomes compatible with react 19.x, see https://github.com/gatsbyjs/gatsby/issues/39180",
-      "matchDepNames": [
-        "@types/react",
-        "@types/react-dom",
-        "react",
-        "react-dom"
-      ],
-      "matchNewValue": "^19.*",
-      "enabled": false
-    },
-    {
       "matchDepNames": [
         "remark",
         "remark-footnotes"
