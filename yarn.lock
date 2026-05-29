@@ -12982,7 +12982,7 @@ __metadata:
     react: "npm:^18.3.1"
     react-bootstrap: "npm:^2.10.10"
     react-dom: "npm:^18.3.1"
-    react-instantsearch: "npm:^7.33.0"
+    react-instantsearch: "npm:^7.33.1"
     react-intl: "npm:^10.1.9"
     react-refresh: "npm:^0.18.0"
     react-schemaorg: "npm:^2.0.1"
@@ -13534,21 +13534,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"instantsearch-ui-components@npm:0.27.0":
-  version: 0.27.0
-  resolution: "instantsearch-ui-components@npm:0.27.0"
+"instantsearch-ui-components@npm:0.28.0":
+  version: 0.28.0
+  resolution: "instantsearch-ui-components@npm:0.28.0"
   dependencies:
     "@swc/helpers": "npm:0.5.18"
     markdown-to-jsx: "npm:^7.7.15"
-    zod: "npm:^3.25.76 || ^4"
-    zod-to-json-schema: "npm:3.24.6"
-  checksum: 10/dcac96914652f977853a7ab7189333c420b2ca28c428062230228cab06ae7be25ff295605a93d905eb359bfa15af2126765748a00b72e3dd13c2093ba0f965c4
+  checksum: 10/50017fe7443385a04fc6d6a69bde7d7ef016dd1982ee4dc5b8c40f3ec12b79ef19356927c128d7f788fbf5c346e1fac89267d277897ce454915a01d39eb7758b
   languageName: node
   linkType: hard
 
-"instantsearch.js@npm:4.98.0":
-  version: 4.98.0
-  resolution: "instantsearch.js@npm:4.98.0"
+"instantsearch.js@npm:4.99.0":
+  version: 4.99.0
+  resolution: "instantsearch.js@npm:4.99.0"
   dependencies:
     "@algolia/events": "npm:^4.0.1"
     "@swc/helpers": "npm:0.5.18"
@@ -13559,16 +13557,14 @@ __metadata:
     algoliasearch-helper: "npm:3.29.1"
     hogan.js: "npm:^3.0.2"
     htm: "npm:^3.0.0"
-    instantsearch-ui-components: "npm:0.27.0"
+    instantsearch-ui-components: "npm:0.28.0"
     preact: "npm:^10.10.0"
     qs: "npm:^6.5.1"
     react: "npm:>= 0.14.0"
     search-insights: "npm:^2.17.2"
-    zod: "npm:^3.25.76 || ^4"
-    zod-to-json-schema: "npm:3.24.6"
   peerDependencies:
     algoliasearch: ">= 3.1 < 6"
-  checksum: 10/009207a4469e3161a9fa069cae7ced0120be85ef1d429290a527f81a97d010eb96fa2cd3f255d584255b94ddc2363fb8eea86f71764c573f161a6a2dcfbd4369
+  checksum: 10/dd81863607baa4c8ae8a16ee20228936e6b78f2848d709533e507d38bce4611ebef31e1bb510e9dfe8a82658cabbdf80d2d7b1c991035a93b3356e83e986ef8f
   languageName: node
   linkType: hard
 
@@ -18599,36 +18595,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-instantsearch-core@npm:7.33.0":
-  version: 7.33.0
-  resolution: "react-instantsearch-core@npm:7.33.0"
+"react-instantsearch-core@npm:7.33.1":
+  version: 7.33.1
+  resolution: "react-instantsearch-core@npm:7.33.1"
   dependencies:
     "@swc/helpers": "npm:0.5.18"
     algoliasearch-helper: "npm:3.29.1"
-    instantsearch.js: "npm:4.98.0"
+    instantsearch.js: "npm:4.99.0"
     use-sync-external-store: "npm:^1.0.0"
-    zod: "npm:^3.25.76 || ^4"
-    zod-to-json-schema: "npm:3.24.6"
   peerDependencies:
     algoliasearch: ">= 3.1 < 6"
     react: ">= 16.8.0 < 20"
-  checksum: 10/1460b6de5767e14b06c0627b051b5210aa8267f24751c2809a4eeb9dcd01bf11de72c8a5d50bd75f2263e870780a3050a2de30a0e500b1f7e861fc4421afeac7
+  checksum: 10/7af9e7d049a8190c36d22d3a5644d55a09a7dda2e17d9f56e187c4dbda7f8b9adc4e446301035a559ef0c311fb6984fd057eb58915fcaf8216d08e7e7372655e
   languageName: node
   linkType: hard
 
-"react-instantsearch@npm:^7.33.0":
-  version: 7.33.0
-  resolution: "react-instantsearch@npm:7.33.0"
+"react-instantsearch@npm:^7.33.1":
+  version: 7.33.1
+  resolution: "react-instantsearch@npm:7.33.1"
   dependencies:
     "@swc/helpers": "npm:0.5.18"
-    instantsearch-ui-components: "npm:0.27.0"
-    instantsearch.js: "npm:4.98.0"
-    react-instantsearch-core: "npm:7.33.0"
+    instantsearch-ui-components: "npm:0.28.0"
+    instantsearch.js: "npm:4.99.0"
+    react-instantsearch-core: "npm:7.33.1"
   peerDependencies:
     algoliasearch: ">= 3.1 < 6"
     react: ">= 16.8.0 < 20"
     react-dom: ">= 16.8.0 < 20"
-  checksum: 10/de7a92af5427c6cb58e240008e10d9bfabb250f12834b58187ae78f7d8e49472adbc4f1dca499c36420049eb98cfe11702ca9db33a83e9fd5c10cb092e581c1d
+  checksum: 10/f808a1c1c6f573c0e83b2e0f1e416665b239bdfdc1d6f092f3c25b2e8bb56863312fff87373ebb23916ee8be4bfe102905d09904ea8a629f0b65f4c040738970
   languageName: node
   linkType: hard
 
@@ -23317,15 +23311,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod-to-json-schema@npm:3.24.6":
-  version: 3.24.6
-  resolution: "zod-to-json-schema@npm:3.24.6"
-  peerDependencies:
-    zod: ^3.24.1
-  checksum: 10/a2c30cf1f250aa79a7f975e65b4236d1abafafd63b43c43475057f28ce6e13f4c882391553c656fb426fd09665e6ae293c2439b4ed8600863beda43fb1a56922
-  languageName: node
-  linkType: hard
-
 "zod-validation-error@npm:^3.5.0 || ^4.0.0":
   version: 4.0.2
   resolution: "zod-validation-error@npm:4.0.2"
@@ -23335,7 +23320,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.25.0 || ^4.0.0, zod@npm:^3.25.76 || ^4":
+"zod@npm:^3.25.0 || ^4.0.0":
   version: 4.1.12
   resolution: "zod@npm:4.1.12"
   checksum: 10/c5f04e6ac306515c4db6ef73cf7705f521c7a2107c8c8912416a0658d689f361db9bee829b0bf01ef4a22492f1065c5cbcdb523ce532606ac6792fd714f3c326
