@@ -13178,7 +13178,7 @@ __metadata:
     react-bootstrap: "npm:^2.10.10"
     react-dom: "npm:^18.3.1"
     react-instantsearch: "npm:^7.33.1"
-    react-intl: "npm:^10.1.9"
+    react-intl: "npm:^10.1.11"
     react-refresh: "npm:^0.18.0"
     react-schemaorg: "npm:^2.0.1"
     react-turnstile: "npm:^1.1.5"
@@ -18821,9 +18821,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intl@npm:^10.1.9":
-  version: 10.1.9
-  resolution: "react-intl@npm:10.1.9"
+"react-intl@npm:^10.1.11":
+  version: 10.1.11
+  resolution: "react-intl@npm:10.1.11"
   dependencies:
     "@formatjs/icu-messageformat-parser": "npm:3.5.10"
     "@formatjs/intl": "npm:4.1.12"
@@ -18831,7 +18831,7 @@ __metadata:
   peerDependencies:
     "@types/react": 19
     react: 19
-  checksum: 10/0a63842e4661319107a05fbbc0e2c6b193f436b43c9064586dac0a2945e557dbc03b94b5a545bae0e2fe9d6cf3e5bbbac5da56630dda277658d348d19f3745c5
+  checksum: 10/a0916419d41352e504b5ba4a8fca65c1a5a568cd45c7dd14137343815396ab1228b3562de633a818d40df36403e01ec60dc969edad1a607aab044d9f51fcbe32
   languageName: node
   linkType: hard
 
