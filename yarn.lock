@@ -5234,22 +5234,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@twemoji/api@npm:^17.0.2":
-  version: 17.0.2
-  resolution: "@twemoji/api@npm:17.0.2"
+"@twemoji/api@npm:^17.0.3":
+  version: 17.0.3
+  resolution: "@twemoji/api@npm:17.0.3"
   dependencies:
-    "@twemoji/parser": "npm:17.0.1"
+    "@twemoji/parser": "npm:17.0.2"
     fs-extra: "npm:^8.0.1"
     jsonfile: "npm:^5.0.0"
     universalify: "npm:^0.1.2"
-  checksum: 10/62e4fad62bdbe45f2f2ed269313d0bb471befea8562eae66f658c7ea86edf79e48cff4a2a4a0b54184763710ccfec7c5540304c40f8ce6101a66fe5c3e3b2b03
+  checksum: 10/7265f9d2d47c70bef362e87e54a5508e6cdcfdcf0ecf3fbdb370b9f169b98b8d0f492d90caa43dcd7ce47e4825d6da316a0920d3323639e187482524bbaf7798
   languageName: node
   linkType: hard
 
-"@twemoji/parser@npm:17.0.1":
-  version: 17.0.1
-  resolution: "@twemoji/parser@npm:17.0.1"
-  checksum: 10/814922e3e2f229e6ade3229fc8dd69845fd1e7d1a7b882120dbd4e7e5cdf24c36e7c736dc94118eba906983927be89d3de896873dbc075986f030c1449fe8258
+"@twemoji/parser@npm:17.0.2":
+  version: 17.0.2
+  resolution: "@twemoji/parser@npm:17.0.2"
+  checksum: 10/f15127518b89904f130f1f74fea5b5e44b4263c82efd1552143e463f0a9f69eb44a87d9575d8bb0427b429cae4a3c94b527dc31be87da16883c28e7ea5065db2
   languageName: node
   linkType: hard
 
@@ -13096,7 +13096,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "historia-remark-plugin@workspace:plugins/historia-remark-plugin"
   dependencies:
-    "@twemoji/api": "npm:^17.0.2"
+    "@twemoji/api": "npm:^17.0.3"
     unist-util-visit: "npm:^5.1.0"
   languageName: unknown
   linkType: soft
