@@ -5610,12 +5610,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^24.13.0":
-  version: 24.13.0
-  resolution: "@types/node@npm:24.13.0"
+"@types/node@npm:^24.13.2":
+  version: 24.13.2
+  resolution: "@types/node@npm:24.13.2"
   dependencies:
     undici-types: "npm:~7.18.0"
-  checksum: 10/13e69ffde58cfdade78fba370afaa193b5666962a9c9e8bbf0281ba2447e13c36638b8d8abc7be894cc87ab3abf60560bbb65804f5d9e56bcd30aae1e4d4de24
+  checksum: 10/2b8cb95ada191ecc788fef91d7cdb86dff24f6895b510e1fb495cc001832709fa8fc3e1eeb27d64bda52b3f74f9e91acf42431e98e3e6876de1e53acce7f7602
   languageName: node
   linkType: hard
 
@@ -13152,7 +13152,7 @@ __metadata:
     "@types/dotenv-safe": "npm:^9.1.0"
     "@types/gatsbyjs__reach-router": "npm:^2.0.5"
     "@types/hast": "npm:^3.0.4"
-    "@types/node": "npm:^24.13.0"
+    "@types/node": "npm:^24.13.2"
     "@types/prismjs": "npm:^1.26.6"
     "@types/react": "npm:^19.2.16"
     "@types/react-dom": "npm:^19.2.3"
