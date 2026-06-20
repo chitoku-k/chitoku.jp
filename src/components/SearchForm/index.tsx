@@ -1,4 +1,4 @@
-import type { FormEvent, FunctionComponent } from 'react'
+import type { ChangeEvent, FunctionComponent, SubmitEvent } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import { Container, Nav, Popover, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -39,14 +39,14 @@ const SearchForm: FunctionComponent<SearchFormProps> = ({
   const { formatMessage } = useIntl()
   const { query, setQuery } = useSearch()
 
-  const onSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = useCallback((e: SubmitEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
     navigateToSearch(query, pathname)
   }, [ query, pathname ])
 
-  const onChange = useCallback((e: FormEvent<HTMLInputElement>) => {
+  const onChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setQuery(e.currentTarget.value)
   }, [ setQuery ])
 
