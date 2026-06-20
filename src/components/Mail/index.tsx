@@ -1,4 +1,4 @@
-import type { FormEvent, FunctionComponent, ReactNode } from 'react'
+import type { FunctionComponent, ReactNode, SubmitEvent } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import { Alert, Button, Card, Form } from 'react-bootstrap'
 import { FormattedMessage, useIntl } from 'react-intl'
@@ -59,7 +59,7 @@ const Mail: FunctionComponent = () => {
 
   const siteKey = process.env.GATSBY_MAIL_SITE_KEY
 
-  const onSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = useCallback((e: SubmitEvent<HTMLFormElement>) => {
     const form = new FormData(e.currentTarget)
 
     e.preventDefault()
