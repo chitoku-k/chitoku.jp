@@ -100,6 +100,7 @@
     }
   },
   "resolutions": {
+    "gatsby/@babel/core": "7.29.6",
     "remark": "^12",
     "remark-footnotes": "^2",
     "sass": "<1.79.0",
