@@ -22,6 +22,10 @@
   ],
   "packageRules": [
     {
+      "matchDatasources": ["npm"],
+      "minimumReleaseAge": "1 day"
+    },
+    {
       "matchDepNames": [
         "remark",
         "remark-footnotes"
