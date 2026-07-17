@@ -22,6 +22,6 @@ RUN --mount=type=tmpfs,target=/tmp \
     --mount=type=secret,id=.env,target=.env,required=true \
     yarn build
 
-FROM nginx:1.31.2
+FROM nginx:1.31.3
 COPY conf /etc/nginx/templates
 COPY --from=build /usr/src/public /usr/share/nginx/html
