@@ -5368,6 +5368,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/types@npm:^8.48.0":
+  version: 8.64.0
+  resolution: "@typescript-eslint/types@npm:8.64.0"
+  checksum: 10/b8951c00ce9b9702f3201f017354774ea5f39c30c2b6f815cb50d91f53f61c325e30f548329daf731d5169d752095cf102da54b754fb202bcfb619faa56fa9f4
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/typescript-estree@npm:5.62.0":
   version: 5.62.0
   resolution: "@typescript-eslint/typescript-estree@npm:5.62.0"
@@ -9674,15 +9681,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-storybook@npm:^10.4.6":
-  version: 10.4.6
-  resolution: "eslint-plugin-storybook@npm:10.4.6"
+"eslint-plugin-storybook@npm:^10.5.2":
+  version: 10.5.2
+  resolution: "eslint-plugin-storybook@npm:10.5.2"
   dependencies:
+    "@typescript-eslint/types": "npm:^8.48.0"
     "@typescript-eslint/utils": "npm:^8.48.0"
   peerDependencies:
     eslint: ">=8"
-    storybook: ^10.4.6
-  checksum: 10/511e11d3901fa642df41e98c49c60af325a3d40355dce899e5d76113b12c1eebd894ea1c804ae1a5e22b4c9d4b3548de7e0b95841e7c8201ed04ae4a3e9e9c59
+    storybook: ^10.5.2
+  checksum: 10/2934705d7aeb330f70d2b7c8ccc055b1750fa2e11c784df7df0911963c7bbc9e6d7a6cb812e3adb83a2fa5f6e7b7e4e64532d3ff4cdfb85d296c593573668bd7
   languageName: node
   linkType: hard
 
@@ -12292,7 +12300,7 @@ __metadata:
     eslint: "npm:^9.39.5"
     eslint-plugin-react: "npm:^7.37.5"
     eslint-plugin-react-hooks: "npm:^7.1.1"
-    eslint-plugin-storybook: "npm:^10.4.6"
+    eslint-plugin-storybook: "npm:^10.5.2"
     extract-react-intl-messages: "npm:^5.0.0"
     gatsby: "npm:^5.16.1"
     gatsby-plugin-algolia: "npm:^1.0.3"
