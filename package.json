@@ -87,7 +87,7 @@
     "stylelint-scss": "^7.2.0",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
     "turnstile-types": "^1.2.3",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "typescript-eslint": "^8.65.0",
     "typescript-plugin-css-modules": "^5.2.0",
     "unified": "^11.0.5",
