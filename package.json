@@ -5,8 +5,8 @@
   "description": "ちとくのホームページ",
   "packageManager": "yarn@4.17.1",
   "devDependencies": {
-    "@babel/core": "^7.29.7",
-    "@babel/preset-typescript": "^7.29.7",
+    "@babel/core": "^8.0.1",
+    "@babel/preset-typescript": "^8.0.1",
     "@fortawesome/fontawesome-svg-core": "^7.3.1",
     "@fortawesome/free-brands-svg-icons": "^7.3.1",
     "@fortawesome/free-regular-svg-icons": "^7.3.1",
@@ -100,7 +100,7 @@
     }
   },
   "resolutions": {
-    "gatsby/@babel/core": "7.29.6",
+    "gatsby/@babel/core": "8.0.1",
     "remark": "^12",
     "remark-footnotes": "^2",
     "sass": "<1.79.0",
