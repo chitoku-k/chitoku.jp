@@ -2465,14 +2465,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/intl@npm:4.1.19":
-  version: 4.1.19
-  resolution: "@formatjs/intl@npm:4.1.19"
+"@formatjs/intl@npm:4.1.20":
+  version: 4.1.20
+  resolution: "@formatjs/intl@npm:4.1.20"
   dependencies:
     "@formatjs/fast-memoize": "npm:3.1.7"
     "@formatjs/icu-messageformat-parser": "npm:3.5.17"
     intl-messageformat: "npm:11.2.14"
-  checksum: 10/a1d859383ac21dc99ee2bd3157fb6bdba1fba6e5acb747b8304e51d6af5ea3fed396451515ce2afa27a9e4551925d8ed6085f77db7b63173f516c5f363824ae5
+  checksum: 10/2c9e1138616060a207a87f18e11654831253cb2d5f529c24810da236b855d1f8d0108930993d1074aadcd7fb465cb7f2a876e84f7e515e48dfa0184fe2a98acd
   languageName: node
   linkType: hard
 
@@ -12461,7 +12461,7 @@ __metadata:
     react-bootstrap: "npm:^2.10.10"
     react-dom: "npm:^19.2.8"
     react-instantsearch: "npm:^7.46.0"
-    react-intl: "npm:^10.1.23"
+    react-intl: "npm:^10.1.26"
     react-refresh: "npm:^0.18.0"
     react-schemaorg: "npm:^2.0.1"
     react-turnstile: "npm:^1.1.5"
@@ -18095,17 +18095,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intl@npm:^10.1.23":
-  version: 10.1.23
-  resolution: "react-intl@npm:10.1.23"
+"react-intl@npm:^10.1.26":
+  version: 10.1.26
+  resolution: "react-intl@npm:10.1.26"
   dependencies:
     "@formatjs/icu-messageformat-parser": "npm:3.5.17"
-    "@formatjs/intl": "npm:4.1.19"
+    "@formatjs/intl": "npm:4.1.20"
     intl-messageformat: "npm:11.2.14"
   peerDependencies:
     "@types/react": ">=18.0.0"
     react: ">=18.0.0"
-  checksum: 10/73d0567fcd1905b5925ffae119a0fd406d07eb264bd34ad0d52002d23892360a368f9aad854aa488d8e1220e81f877cb645529e425f84e36e9da934a2a2c2674
+  checksum: 10/9e9ebf08a452a56964d05c2a234bd6995921d9673d5ff47833076da8d5e89ee7cf01d64a252bfba53ab3f1c6a8f228d676edd4c325ccb77469843a456030c180
   languageName: node
   linkType: hard
 
