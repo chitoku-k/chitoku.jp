@@ -41,7 +41,7 @@ jobs:
           reporter: github-pr-annotations
           filter_mode: nofilter
           fail_level: any
-          eslint_flags: '**/*.{js,mjs,ts,tsx}'
+          eslint_flags: '"**/*.{js,mjs,ts,tsx}"'
 
   stylelint:
     name: Stylelint
