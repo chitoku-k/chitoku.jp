@@ -40,14 +40,14 @@ jobs:
       id-token: write
     steps:
       - name: Set up kubectl
-        uses: azure/setup-kubectl@v5
+        uses: azure/setup-kubectl@v5.2.0
       - name: Set up kubectl context
         uses: chitoku-k/actions/setup-kubectl-context@master
       - name: Update images
         run: |
           kubectl set image --field-manager=github-actions deployment/chitokujp web=ghcr.io/chitoku-k/chitoku.jp:${{ github.event.release.tag_name }}
       - name: Purge cache
-        uses: NathanVaughn/actions-cloudflare-purge@v4
+        uses: NathanVaughn/actions-cloudflare-purge@v4.0.0
         with:
           cf_zone: ${{ secrets.CLOUDFLARE_ZONE }}
           cf_auth: ${{ secrets.CLOUDFLARE_TOKEN }}
