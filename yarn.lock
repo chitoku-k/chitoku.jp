@@ -7051,12 +7051,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap@npm:^5.3.8":
-  version: 5.3.8
-  resolution: "bootstrap@npm:5.3.8"
+"bootstrap@npm:^5.3.9":
+  version: 5.3.9
+  resolution: "bootstrap@npm:5.3.9"
   peerDependencies:
     "@popperjs/core": ^2.11.8
-  checksum: 10/ca36e1816940ee424b91f3a534e7a359c1f180da00e92c650b92a9c2621a1ca24ee71a0886666675718b58527f9193cd0ead934da7a92108224013fa07bec2d2
+  checksum: 10/bf77688eb50d56de7abd671e9eb0a852df2071c4edc58167c3399eca6d00d7e105d63c80f8064f636675c8ca21b47ac9c835defb0ea533444a119039273d273a
   languageName: node
   linkType: hard
 
@@ -12472,7 +12472,7 @@ __metadata:
     babel-plugin-react-intl-auto: "npm:^3.3.0"
     babel-plugin-remove-graphql-queries: "npm:^5.16.0"
     babel-preset-gatsby: "npm:^3.16.0"
-    bootstrap: "npm:^5.3.8"
+    bootstrap: "npm:^5.3.9"
     clsx: "npm:^2.1.1"
     css-loader: "npm:^7.1.5"
     dotenv-safe: "npm:^9.1.0"
