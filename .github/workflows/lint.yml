@@ -61,7 +61,7 @@ jobs:
         run: |
           yarn install
       - name: Run stylelint
-        uses: reviewdog/action-stylelint@v1.33.0
+        uses: reviewdog/action-stylelint@v1.34.0
         with:
           reporter: github-pr-annotations
           filter_mode: nofilter
