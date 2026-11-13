@@ -16,7 +16,7 @@ workflows:
         - 'actions/checkout@v7.0.1'
         - 'actions/setup-node@v7.1.0'
         - 'reviewdog/action-eslint@v1.37.0'
-        - 'reviewdog/action-stylelint@v1.33.0'
+        - 'reviewdog/action-stylelint@v1.34.0'
     '.github/workflows/publish-image.yml':
         - 'chitoku-k/actions@master'
         - 'docker/login-action@v4.8.0'
@@ -93,8 +93,8 @@ dependencies:
         commit: 'sha1-6dad10dc50476699ad1ddbbb19bf55d36f311a39'
         owner_id: 48765237
         repo_id: 210385198
-    'reviewdog/action-stylelint@v1.33.0':
-        ref: 'v1.33.0'
-        commit: 'sha1-141932ac62d4ea66e15b79de824ff44d0def0b0b'
+    'reviewdog/action-stylelint@v1.34.0':
+        ref: 'v1.34.0'
+        commit: 'sha1-ad3b833fc478b08f547a2d3cecc5d414a4db1b94'
         owner_id: 48765237
         repo_id: 210274153
