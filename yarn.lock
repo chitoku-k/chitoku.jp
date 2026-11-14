@@ -12365,7 +12365,7 @@ __metadata:
     stylelint-config-recess-order: "npm:^7.10.0"
     stylelint-config-standard-scss: "npm:^18.0.0"
     stylelint-order: "npm:^8.1.3"
-    stylelint-scss: "npm:^7.4.0"
+    stylelint-scss: "npm:^7.5.0"
     tsconfig-paths-webpack-plugin: "npm:^4.2.0"
     turnstile-types: "npm:^1.2.3"
     typescript: "npm:^6.0.3"
@@ -20154,27 +20154,6 @@ __metadata:
   peerDependencies:
     stylelint: ^16.18.0 || ^17.0.0 || ^18.0.0
   checksum: 10/91fdb5517f1d22de8924846ed009cf7531fae044e03b9e5a8a16769c201267eef21dffe9c05c8ba1b956221312ea7ed1db78356e4dfd04d0b6bd6755f5239627
-  languageName: node
-  linkType: hard
-
-"stylelint-scss@npm:^7.4.0":
-  version: 7.4.0
-  resolution: "stylelint-scss@npm:7.4.0"
-  dependencies:
-    "@csstools/css-calc": "npm:^3.4.3"
-    "@csstools/css-parser-algorithms": "npm:^4.0.0"
-    "@csstools/css-syntax-patches-for-csstree": "npm:^1.1.15"
-    "@csstools/css-tokenizer": "npm:^4.0.0"
-    css-tree: "npm:^3.2.1"
-    is-plain-object: "npm:^5.1.0"
-    known-css-properties: "npm:^0.37.0"
-    postcss-media-query-parser: "npm:^0.2.3"
-    postcss-resolve-nested-selector: "npm:^0.1.7"
-    postcss-selector-parser: "npm:^7.1.6"
-    postcss-value-parser: "npm:^4.2.0"
-  peerDependencies:
-    stylelint: ^16.8.2 || ^17.0.0
-  checksum: 10/e669fb02354f8fe3b21c1df435094cc00932a4abb51899c1db3670658c7f9c0b80f4796c0e29dbe62ff1bbd047396b25806667ed082547a6d7340bda35e8ad38
   languageName: node
   linkType: hard
 
