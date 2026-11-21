@@ -36,8 +36,19 @@ export default [
   {
     rules: {
       'no-warning-comments': 'warn',
-      '@stylistic/array-bracket-spacing': [ 'error', 'always' ],
       '@stylistic/arrow-parens': [ 'error', 'as-needed' ],
+      '@stylistic/list-style': [
+        'error',
+        {
+          overrides: {
+            '[]': {
+              singleLine: {
+                spacing: 'always',
+              },
+            },
+          },
+        },
+      ],
       '@stylistic/jsx-one-expression-per-line': 'off',
       '@stylistic/jsx-wrap-multilines': [
         'error',

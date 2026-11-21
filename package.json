@@ -16,7 +16,7 @@
     "@storybook/addon-links": "^10.6.7",
     "@storybook/addon-webpack5-compiler-babel": "^4.0.1",
     "@storybook/react-webpack5": "^10.6.7",
-    "@stylistic/eslint-plugin": "^5.10.0",
+    "@stylistic/eslint-plugin": "^6.0.1",
     "@svgr/webpack": "^8.1.0",
     "@types/dotenv-safe": "^9.1.0",
     "@types/gatsbyjs__reach-router": "^2.0.5",
