@@ -12419,7 +12419,7 @@ __metadata:
     turnstile-types: "npm:^1.2.3"
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.74.0"
-    typescript-plugin-css-modules: "npm:^5.3.0"
+    typescript-plugin-css-modules: "npm:^5.3.1"
     unified: "npm:^11.0.5"
     webpack: "npm:^5.113.0"
     yaml-flat-loader: "npm:^1.0.2"
@@ -21039,9 +21039,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-plugin-css-modules@npm:^5.3.0":
-  version: 5.3.0
-  resolution: "typescript-plugin-css-modules@npm:5.3.0"
+"typescript-plugin-css-modules@npm:^5.3.1":
+  version: 5.3.1
+  resolution: "typescript-plugin-css-modules@npm:5.3.1"
   dependencies:
     "@types/postcss-modules-local-by-default": "npm:^4.0.2"
     "@types/postcss-modules-scope": "npm:^3.0.4"
@@ -21064,7 +21064,7 @@ __metadata:
   dependenciesMeta:
     stylus:
       optional: true
-  checksum: 10/3625979a5cf4b77c98d9620af530dc75f90fd85905a94d09e35376e83440e848b68e135ae3e306494375ed20ec82579e1e7abecf117cbd8d93f3cc7eb9bc177c
+  checksum: 10/6707099f95e7d55035ce197cac973edcd39702e087c9e1836dd1b940e301950395612ac4e79b36902ae04e3ad2c5dbf84ba17179e388c5df50b491953377a5eb
   languageName: node
   linkType: hard
 
